@@ -12,6 +12,8 @@
     {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
     {{ partial "adsense" . }}
     {{ end }}
+
+
     <div class="content">
       {{ .Content }}
       {{ if .Site.Params.Info.related }}
@@ -21,11 +23,15 @@
     {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
     {{ partial "adsense" . }}
     {{ end}}
+
+    {{ partial "subscribe" . }}
+
   </div>
 </section>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
 <script src="/js/copycode.js"></script>
 {{ end }}
+
 
 <!-- {{ partial "disqus" . }} -->
 {{ partial "footer" . }}
