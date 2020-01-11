@@ -24,7 +24,8 @@
   </div>
 </section>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
-    <script src="/js/copycode.js"></script>
+<script src="/js/copycode.js"></script>
 {{ end }}
-{{ partial "disqus" . }}
+
+<!-- {{ partial "disqus" . }} -->
 {{ partial "footer" . }}

@@ -1413,6 +1413,10 @@ a.box:active {
   list-style-type: square;
 }
 
+.related {
+  margin-top: 100px;
+}
+
 .content.is-medium {
   font-size: 18px;
 }
@@ -2528,8 +2532,8 @@ a.box:active {
 
 .title.is-3 code,
 .title.is-4 {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 27px;
+  font-weight: 450;
 }
 
 .title.is-4 code,
@@ -4975,6 +4979,10 @@ a.nav-item.is-tab.is-active {
   .nav-menu {
     padding-right: 20px;
   }
+}
+
+.nav-links {
+  padding-right: 10px;
 }
 
 .container>.nav>.nav-right>.nav-item:last-child:not(.is-tab),

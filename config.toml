@@ -5,13 +5,16 @@ theme = "kiss"
 copyright = "&copy; <a href=\"https://github.com/schadokar\">Shubham Chadokar</a> 2020"
 disqusShortname = "schadokar"
 googleAnalytics = ""
+
+enableInlineShortcodes= true
+
 # Number of posts per page
 Paginate = 5
 enableRobotsTXT = true
 enableEmoji=true
 
 [params.features]
-disqusOnDemand = true  # Load Disqus comments on click
+disqusOnDemand = false  # Load Disqus comments on click
 
 [params.assets]
 customCSS = ["css/custom.css"]
@@ -25,7 +28,7 @@ authorEmail = "shubhamchadokar04@gmail.com"
 [params.info]
 adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = false # Adds OpenGraph and Twitter cards
-homeTitle = "" # Title for home page
+homeTitle = "Shubham Chadokar" # Title for home page
 poweredby = true # Adds powered by Hugo and Kiss below Copyright section
 related = true # Includes related articles
 
@@ -35,7 +38,7 @@ appID = ""
 pageID = ""
 
 [params.opengraph.twitter]
-page = "" # Twitter Page username. If not set, params.social.twitter will be used.
+page = "schadokar1" # Twitter Page username. If not set, params.social.twitter will be used.
 
 [params.social]
 
