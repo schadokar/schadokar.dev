@@ -7,13 +7,13 @@ tags: ["golang", "viper", "tutorial"]
 categories: ["Golang", "Tutorial"]
 ---
 
-When it comes to create a production grade application, using environment variable in the application is *de facto*.
+When it comes to creating a production-grade application, using the environment variable in the application is *de facto*.
 
-### Why should we use environment variable?
+### Why should we use the environment variable?
 
-Suppose you have an application with many feature and each feature need to access the Database. You configured all the DB information like `DBURL`, `DBNAME`, `USERNAME` and `PASSWORD` in the each feature.
+Suppose you have an application with many features and each feature need to access the Database. You configured all the DB information like `DBURL`, `DBNAME`, `USERNAME` and `PASSWORD` in each feature.
 
-There are a few major disadvantages of this approach, there can be many.
+There are a few major disadvantages to this approach, there can be many.
 
 - ##### Security Issue: 
   - You're entering all the information in the code. Now, all the unauthorized person also have access to the DB. 
@@ -58,7 +58,7 @@ This module will keep a record of all the packages and their version used in the
 
 ---
 
-Lets start with the easiest one, using `os` package.
+Let's start with the easiest one, using `os` package.
 
 ## os Package
 
@@ -82,25 +82,25 @@ Create a new file `main.go` inside the project.
 package main
 
 import (
-	"fmt"
-	"os"
+  "fmt"
+  "os"
 )
 
 // use os package to get the env variable which is already set
 func envVariable(key string) string {
 
-	// set env variable using os package
-	os.Setenv(key, "gopher")
+  // set env variable using os package
+  os.Setenv(key, "gopher")
 
-	// return the env variable using os package
-	return os.Getenv(key)
+  // return the env variable using os package
+  return os.Getenv(key)
 }
 
 func main() {
     // os package
-	value := envVariable("name")
+  value := envVariable("name")
 
-	fmt.Printf("os package: %s = %s \n", "name", value)
+  fmt.Printf("os package: %s = %s \n", "name", value)
 }
 ```
 
@@ -116,7 +116,7 @@ os package: name = gopher
 
 ## GoDotEnv Package
 
-The easiest way to load the `.env` file is `godotenv` package.
+The easiest way to load the `.env` file is using `godotenv` package.
 
 ### Install
 
@@ -151,7 +151,7 @@ import (
 
     ...
     // Import godotenv
-	"github.com/joho/godotenv"
+  "github.com/joho/godotenv"
 )
 
 
@@ -159,24 +159,24 @@ import (
 // return the value of the key
 func goDotEnvVariable(key string) string {
 
-	// load .env file
-	err := godotenv.Load(".env")
+  // load .env file
+  err := godotenv.Load(".env")
 
-	if err != nil {
-		log.Fatalf("Error loading .env file")
-	}
+  if err != nil {
+    log.Fatalf("Error loading .env file")
+  }
 
-	return os.Getenv(key)
+  return os.Getenv(key)
 }
 
 func main() {
     // os package
     ... 
 
-	// godotenv package
-	dotenv := goDotEnvVariable("STRONGEST_AVENGER")
+  // godotenv package
+  dotenv := goDotEnvVariable("STRONGEST_AVENGER")
 
-	fmt.Printf("godotenv : %s = %s \n", "STRONGEST_AVENGER", dotenv)
+  fmt.Printf("godotenv : %s = %s \n", "STRONGEST_AVENGER", dotenv)
 }
 ```
 
@@ -191,15 +191,15 @@ os package: name = gopher
 godotenv : STRONGEST_AVENGER = Thor
 ```
 
-> Just add the code in the end of the os package in the main function.
+> Just add the code at the end of the os package in the main function.
 
 ---
 
 ## Viper Package
 
-Viper is one of the most popular package in the golang community. Many Go projects are built using Viper including: Hugo, Docker Notary, Mercury.
+Viper is one of the most popular packages in the golang community. Many Go projects are built using Viper including Hugo, Docker Notary, Mercury.
 
-> Viper is a complete configuration solution for Go applications including 12-Factor apps. It is designed to work within an application, and can handle all types of configuration needs and formats. Reading from JSON, TOML, YAML, HCL, envfile and Java properties config files
+> Viper is a complete configuration solution for Go applications including 12-Factor apps. It is designed to work within an application and can handle all types of configuration needs and formats. Reading from JSON, TOML, YAML, HCL, envfile and Java properties config files
 
 > *For more information read the official documentation of [viper](https://github.com/spf13/viper)*
 
@@ -233,43 +233,43 @@ Update the `main.go`.
 
 ```go
 import (
-	"fmt"
-	"log"
-	"os"
+  "fmt"
+  "log"
+  "os"
 
-	"github.com/joho/godotenv"
-	"github.com/spf13/viper"
+  "github.com/joho/godotenv"
+  "github.com/spf13/viper"
 )
 
 // use viper package to read .env file
 // return the value of the key
 func viperEnvVariable(key string) string {
 
-	// SetConfigFile explicitly defines the path, name and extension of the config file.
-	// Viper will use this and not check any of the config paths.
-	// .env - It will search for the .env file in the current directory
-	viper.SetConfigFile(".env")
+  // SetConfigFile explicitly defines the path, name and extension of the config file.
+  // Viper will use this and not check any of the config paths.
+  // .env - It will search for the .env file in the current directory
+  viper.SetConfigFile(".env")
 
-	// Find and read the config file
-	err := viper.ReadInConfig()
+  // Find and read the config file
+  err := viper.ReadInConfig()
 
-	if err != nil {
-		log.Fatalf("Error while reading config file %s", err)
-	}
+  if err != nil {
+    log.Fatalf("Error while reading config file %s", err)
+  }
 
-	// viper.Get() returns an empty interface{}
-	// to get the underlying type of the key,
-	// we have to do the type assertion, we know the underlying value is string
-	// if we type assert to other type it will throw an error
-	value, ok := viper.Get(key).(string)
+  // viper.Get() returns an empty interface{}
+  // to get the underlying type of the key,
+  // we have to do the type assertion, we know the underlying value is string
+  // if we type assert to other type it will throw an error
+  value, ok := viper.Get(key).(string)
 
-	// if type is string then ok will be true
-	// ok will make sure the program not break
-	if !ok {
-		log.Fatalf("Invalid type assertion")
-	}
+  // If the type is a string then ok will be true
+  // ok will make sure the program not break
+  if !ok {
+    log.Fatalf("Invalid type assertion")
+  }
 
-	return value
+  return value
 }
 
 func main() {
@@ -277,13 +277,13 @@ func main() {
     // os package  
     ...
   
-	// godotenv package
-	...
+  // godotenv package
+  ...
 
-	// viper package read .env
-	viperenv := viperEnvVariable("STRONGEST_AVENGER")
+  // viper package read .env
+  viperenv := viperEnvVariable("STRONGEST_AVENGER")
 
-	fmt.Printf("viper : %s = %s \n", "STRONGEST_AVENGER", viperenv)
+  fmt.Printf("viper : %s = %s \n", "STRONGEST_AVENGER", viperenv)
 }
 ```
 
@@ -325,7 +325,7 @@ Create a new `config.yaml` file in the project root directory.
 I_AM_INEVITABLE: "I am Iron Man"
 ```
 
-To set the config file name
+To set the config filename
 
 ```go
 viper.SetConfigName("config")
@@ -351,45 +351,45 @@ Update the `main.go`
 // return the value of the key
 func viperConfigVariable(key string) string {
 
-	// name of config file (without extension)
-	viper.SetConfigName("config")
-	// look for config in the working directory
-	viper.AddConfigPath(".")
+  // name of config file (without extension)
+  viper.SetConfigName("config")
+  // look for config in the working directory
+  viper.AddConfigPath(".")
 
-	// Find and read the config file
-	err := viper.ReadInConfig()
+  // Find and read the config file
+  err := viper.ReadInConfig()
 
-	if err != nil {
-		log.Fatalf("Error while reading config file %s", err)
-	}
+  if err != nil {
+    log.Fatalf("Error while reading config file %s", err)
+  }
 
-	// viper.Get() returns an empty interface{}
-	// to get the underlying type of the key,
-	// we have to do the type assertion, we know the underlying value is string
-	// if we type assert to other type it will throw an error
-	value, ok := viper.Get(key).(string)
+  // viper.Get() returns an empty interface{}
+  // to get the underlying type of the key,
+  // we have to do the type assertion, we know the underlying value is string
+  // if we type assert to other type it will throw an error
+  value, ok := viper.Get(key).(string)
 
-	// if type is string then ok will be true
-	// ok will make sure the program not break
-	if !ok {
-		log.Fatalf("Invalid type assertion")
-	}
+  // If the type is a string then ok will be true
+  // ok will make sure the program not break
+  if !ok {
+    log.Fatalf("Invalid type assertion")
+  }
 
-	return value
+  return value
 }
 
 func main() {
 
-	// os package
-	...
+  // os package
+  ...
 
-	// godotenv package
-	...
+  // godotenv package
+  ...
 
-	// viper package read .env
-	...
+  // viper package read .env
+  ...
 
-	// viper package read config file
+  // viper package read config file
   viperconfig := viperConfigVariable("I_AM_INEVITABLE")  
   
   fmt.Printf("viper config : %s = %s \n", "I_AM_INEVITABLE", viperconfig)  
