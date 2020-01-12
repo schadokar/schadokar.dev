@@ -3,7 +3,7 @@ title: "Create an Ethereum Dapp with React and Docker"
 description: "In this tutorial, we’ll create an Ethereum Dapp and will run its different components in a separate docker container."
 date: "2019-04-14T12:48:24.327Z"
 tags: ["blockchain", "ethereum", "tutorial"]
-categories: ["Tutorial", "Blockchain"]
+categories: ["Tutorial", "Blockchain", "2019"]
 published: true
 canonical_link: https://medium.com/@shubhamchadokar04/create-an-ethereum-dapp-with-react-and-docker-211223005f17
 redirect_from:

@@ -3,7 +3,7 @@ title: "How to create a CLI in golang with cobra"
 description: "Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own."
 date: "2019-11-18T15:09:00.263Z"
 tags: ["golang", "cobra", "tutorial"]
-categories: ["Tutorial", "Golang"]
+categories: ["Tutorial", "Golang", "2019", "Featured"]
 published: true
 canonical_link: https://medium.com/@shubhamchadokar04/how-to-create-a-cli-in-golang-with-cobra-d729641c7177
 redirect_from:
@@ -29,9 +29,9 @@ I know these jobs don’t meet your expectations but trust me, after this, you w
 
 ### What is CLI? (Command Line Interface)
 
-CLI works on the basic principle of software engineering, takes the input, process it and gives the output. In the cli tool instead of a flashing frontend, it takes the input from the **_black window_**. Remember, Matrix Trilogy.
+CLI works on the basic principle of software engineering, takes the input, process it and gives the output. In the cli tool instead of a flashing frontend, it takes the input from the **black window**. *Remember, Matrix Trilogy*.
 
-If you are using **_Windows_** just type `cmd` or `powershell` in the `start`and enter, the black window or blue window is a cli.
+If you are using **Windows** just type `cmd` or `powershell` in the `start`and enter, the black window or blue window is a cli.
 
 ![cmd](./asset-2.png)
 
@@ -86,7 +86,7 @@ The basic structure will be like a simple sentence
 
 ---
 
-Create a new project directory **outside** the **GOPATH**. I have created `**my-calc**` project directory for this tutorial. You can name any of your choices.
+Create a new project directory **outside** the **GOPATH**. I have created `my-calc` project directory for this tutorial. You can name any of your choices.
 
 Creating projects outside the **GOPATH** ease the importing local files. Initialize modules in the project. This module will keep all the libraries and dependency require and used in this project. It is similar to the `package.json` in the nodejs. To read more about the modules, please read this great [article](https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16).
 
@@ -94,29 +94,29 @@ Creating projects outside the **GOPATH** ease the importing local files. Initial
 
 > Modules record precise dependency requirements and create reproducible builds. — [wiki](http://A%20module%20is%20a%20collection%20of%20related%20Go%20packages%20that%20are%20versioned%20together%20as%20a%20single%20unit.%20%20Modules%20record%20precise%20dependency%20requirements%20and%20create%20reproducible%20builds.)
 
-Open the project directory in the command line of your choices. I am using `**bash**`. Once you are inside the project directory, run the below command to initialize the modules.
+Open the project directory in the command line of your choices. I am using `bash`. Once you are inside the project directory, run the below command to initialize the modules.
 
-```
+```go
 go mod init my-calc
 ```
 
-You can notice that it creates a `**go.mod**` file in the project.
+You can notice that it creates a `go.mod` file in the project.
 
-> **Note:** Creating modules inside the `**_$GOPATH_**`is disabled by default. You will get this error if you run above command — `**_go: modules disabled inside GOPATH/src by GO111MODULE=auto; see ‘go help modules’_**` . If you still want to create the go modules inside the `**$GOPATH**` then first set `**_GO111MODULE_**` environment variable to `**_on_**`**.** `**export GO111MODULE=on**`
+> **Note:** Creating modules inside the `$GOPATH`is disabled by default. You will get this error if you run above command — `go: modules disabled inside GOPATH/src by GO111MODULE=auto; see ‘go help modules’` . If you still want to create the go modules inside the `$GOPATH` then first set `GO111MODULE` environment variable to `on`. `export GO111MODULE=on`
 
 Now whenever you use any third-party packages in the project, it’ll save it as a dependency with their version. In this way, even if a breaking change introduces in the new version of the library, your project will work as expected.
 
 ---
 
-If you still haven’t installed the `**cobra**` library, you can install it using below command.
+If you still haven’t installed the `cobra` library, you can install it using below command.
 
-```
+```go
 go get -u github.com/spf13/cobra/cobra
 ```
 
 Initialize the cli scaffolding for the project using `cobra init`command.
 
-```
+```go
 cobra init my-calc
 ```
 
@@ -131,7 +131,7 @@ It will initialize the `my-calc` project with `cobra` library. You can observe t
 
 The `main.go` is the entry point of the `cli` . Inside the `main.go` it is calling the `Execute` function of the `cmd/root.go` .
 
-```
+```go
 // main.go
 package main
 
@@ -146,17 +146,17 @@ Let’s examine the `root.go` .
 
 ### rootCmd
 
-Root command is the base command of any cli. For Ex. `go get URL` — `**go**` is the root command here and `**get**` is the child command of the `**go**`. In the `**root.go**` it is initiating the `**rootCmd**` struct variable with the `cobra` command. All the other commands in the cli will be a child of the `**rootCmd**`** .**
+Root command is the base command of any cli. For Ex. `go get URL` — `go` is the root command here and `get` is the child command of the `go`. In the `root.go` it is initiating the `rootCmd` struct variable with the `cobra` command. All the other commands in the cli will be a child of the `rootCmd`.
 
 Open the `root.go` in the editor and inside the `rootCmd` uncomment the
 
-```
+```go
 Run: func(cmd *cobra.Command, args []string) {},
 ```
 
 And paste the `fmt.Println("Hello CLI")` inside the curly braces.
 
-```
+```go
 Run: func(cmd *cobra.Command, args []string) {fmt.Println("Hello CLI"},
 ```
 
@@ -164,13 +164,13 @@ Run: func(cmd *cobra.Command, args []string) {fmt.Println("Hello CLI"},
 
 Open the terminal inside the `my-calc` project and run
 
-```
+```go
 go install my-calc
 ```
 
-This command will generate the binary or executable file of the project in the `**$GOPATH/bin**` folder.
+This command will generate the binary or executable file of the project in the `$GOPATH/bin` folder.
 
-Now run `**my-calc**` in the terminal. As it is saved in the bin folder you don’t have to set the environment variable for this.
+Now run `my-calc` in the terminal. As it is saved in the bin folder you don’t have to set the environment variable for this.
 
 > The name of cli is the **rootCmd**. **my-calc** is the rootCmd.
 
@@ -182,17 +182,17 @@ You will see the output similar to this.
 
 ### init
 
-This is the first function which gets called whenever a package initialize in the golang. The `**cobra.OnInitialize(funcDeclarations)**` append the user-defined functions in the command’s initialization. **_Whenever the command run or called it will first execute all the functions in the command’s initialization and then it will run the execute method._** This initialization can be used in loading the configuration file or can be used as constructor. It all depends on your use case and your creativity.
+This is the first function which gets called whenever a package initialize in the golang. The `cobra.OnInitialize(funcDeclarations)` append the user-defined functions in the command’s initialization. **_Whenever the command run or called it will first execute all the functions in the command’s initialization and then it will run the execute method._** This initialization can be used in loading the configuration file or can be used as constructor. It all depends on your use case and your creativity.
 
 I believe I lost you here. Let’s understand this with an example.
 
-In the `root.go` , the command is the `**rootCmd**`.
+In the `root.go` , the command is the `rootCmd`.
 
-The `**cobra.OnInitialize(initConfig)**` append the `**initConfig**`function declaration in the `**rootCmd**`’s initialization. So, whenever the `**rootCmd**` ‘s execute method (`**RUN: func**`) run, the `**rootCmd**` will first run the `**initConfig**`function. Once the execution of all the initialize functions over, it will run the `**RUN: func**` execution method of `**rootCmd**`.
+The `cobra.OnInitialize(initConfig)` append the `initConfig`function declaration in the `rootCmd`’s initialization. So, whenever the `rootCmd` ‘s execute method (`RUN: func`) run, the `rootCmd` will first run the `initConfig`function. Once the execution of all the initialize functions over, it will run the `RUN: func` execution method of `rootCmd`.
 
-To visualize it, add a print message in the `**initConfig**` function.
+To visualize it, add a print message in the `initConfig` function.
 
-```
+```go
 func initConfig() {
 
    fmt.Println("inside initConfig")
@@ -201,21 +201,21 @@ func initConfig() {
 
 Save the changes. Open the terminal inside the `my-calc` project.
 
-Rebuild the binary `**go install my-calc**`**.**
+Rebuild the binary `go install my-calc`.
 
-```
+```go
 go install my-calc
 ```
 
-Run `**my-calc**`. Whenever you’ll make any changes in the cli you have to rebuild the binary. Run `**go install my-calc**` to reflect it in the cli commands.
+Run `my-calc`. Whenever you’ll make any changes in the cli you have to rebuild the binary. Run `go install my-calc` to reflect it in the cli commands.
 
 ![initConfig](./asset-4.png)
 
 You can see that `initConfig` run first and later `Hello CLI` .
 
-To understand the complete flow of cli, add a message inside the `**init**` function and a message inside the `**main**` func in the `**main.go**`.
+To understand the complete flow of cli, add a message inside the `init` function and a message inside the `main` func in the `main.go`.
 
-```
+```go
 // root.go
 
 func init() {
@@ -231,7 +231,7 @@ func main() {
 }
 ```
 
-Save the changes. Rebuild the binary `**go install my-calc**` and run `**my-calc**`** .**
+Save the changes. Rebuild the binary `go install my-calc` and run `my-calc`.
 
 ![cli flow](./asset-5.png)
 
@@ -241,7 +241,7 @@ The last thing in the `init` function is `flags` .
 
 Flags are like modifiers to the command. You can think of them as conditional actions. We will learn more about it later in the tutorial.
 
-There are 2 types of flags `**Persistent Flags**` and `**Local Flags**`.
+There are 2 types of flags `Persistent Flags` and `Local Flags`.
 
 - **Persistent Flags:** This flag will be available to the command it is assigned as well as all the child or subcommands of the command.
 - **Local Flags:** This flag is only available to the command which it is assigned to.
@@ -252,21 +252,21 @@ There are 2 types of flags `**Persistent Flags**` and `**Local Flags**`.
 
 This function is setting the configuration path in the home directory and config filename is `.my-calc` . It will use the configuration file if it exists.
 
-The `**viper**` library is famous for configuration solution for go application. It reads from JSON, TOML, YAML, HCL, envfile and Java properties config files. It does much more than reading configuration. To learn more about it, follow this [link](https://github.com/spf13/viper).
+The `viper` library is famous for configuration solution for go application. It reads from JSON, TOML, YAML, HCL, envfile and Java properties config files. It does much more than reading configuration. To learn more about it, follow this [link](https://github.com/spf13/viper).
 
 With this function, we completed the `root.go` examination. It is a bit lengthier, but it is good to understand what we are using.
 
-> **Note:** Now if you want, you can remove all the print statements from the `_root.go_` and `_main.go_` . I have removed all the print statements to keep the code clean.
+> **Note:** Now if you want, you can remove all the print statements from the `root.go` and `main.go` . I have removed all the print statements to keep the code clean.
 
 ---
 
-It’s time to add some commands in our cli. We already created one command which is `**my-calc**` as`rootCmd` which returns **Hello CLI.**
+It’s time to add some commands in our cli. We already created one command which is `my-calc` as`rootCmd` which returns **Hello CLI.**
 
 ### add numbers
 
-Open the terminal inside the project directory and create a command named `**add**` . The cobra command to add a new command is
+Open the terminal inside the project directory and create a command named `add` . The cobra command to add a new command is
 
-`**cobra add <commandName>**`
+`cobra add <commandName>`
 
 ```
 cobra add add
@@ -281,16 +281,16 @@ Open the `add.go` . It is similar to the `root.go` .
 
 First, an `addCmd` struct variable is declared of type `*cobra.Command` .
 
-The `*cobra.Command` have `RUN` which is a func and takes pointer of `***cobra.Command**` and a slice of string `**[]string**`.
+The `*cobra.Command` have `RUN` which is a func and takes pointer of `*cobra.Command` and a slice of string `[]string`.
 
-Then it is initialized in `init` function. In the `init`, it is added to the `**rootCmd**`**.** We can understand it as `**addCmd**`is the sub-command or child command of the `**rootCmd**`.
+Then it is initialized in `init` function. In the `init`, it is added to the `rootCmd`. We can understand it as `addCmd`is the sub-command or child command of the `rootCmd`.
 
-```
+```go
 func init() {
    rootCmd.AddCommand(addCmd)
 ```
 
-In the terminal, rebuild the binary using `**go install my-calc**` command and run `**my-calc add**`** .**
+In the terminal, rebuild the binary using `go install my-calc` command and run `my-calc add`.
 
 ![add called](./asset-6.png)
 
@@ -300,7 +300,7 @@ The commands only take a slice of string as an argument. To add the numbers, we 
 
 Import the `strconv` package.
 
-```
+```go
 import (
    "fmt"
    "strconv"
@@ -309,9 +309,9 @@ import (
 )
 ```
 
-Inside the `add.go`, create a new `**addInt**` function.
+Inside the `add.go`, create a new `addInt` function.
 
-```
+```go
 // add.go
 
 func addInt(args []string) {
@@ -341,7 +341,7 @@ Save the changes.
 
 In the `addCmd` variable, update the `RUN` func. Remove the print message and call the `addInt` function with `args`.
 
-```
+```go
 // addCmd
 Run: func(cmd *cobra.Command, args []string) {
   addInt(args)
@@ -360,9 +360,9 @@ You can pass as many arguments as you want. If you remember the args is a slice 
 
 It is time to introduce a `flag` in the `addCmd` . This flag will help the cli to decide if it is an `int` operation or `float`.
 
-In the `add.go` , inside the `init` func, create a local flag of the bool type, `**Flags().BoolP**`. Its name will be `float` , shortened name `f` , default value `false` and description. The default value is very important. It means even if flag is not called in the command, the flag value will be `false` . For bool type, if a flag is called it will toggle the default.
+In the `add.go` , inside the `init` func, create a local flag of the bool type, `Flags().BoolP`. Its name will be `float` , shortened name `f` , default value `false` and description. The default value is very important. It means even if flag is not called in the command, the flag value will be `false` . For bool type, if a flag is called it will toggle the default.
 
-```
+```go
 // add.go
 
 func init() {
@@ -373,7 +373,7 @@ func init() {
 
 Create a new `addFloat` function in the `add.go`
 
-```
+```go
 // add.go
 
 func addFloat(args []string) {
@@ -394,11 +394,11 @@ func addFloat(args []string) {
 }
 ```
 
-This function is the same as `addInt` except, it is converting `**string**` to `**float64**`.
+This function is the same as `addInt` except, it is converting `string` to `float64`.
 
 In the `addCmd` `RUN` function, it will call the `addInt` or `addFloat` according to the flag. If flag `--float or -f` is passed then it will call `addFloat` .
 
-```
+```go
 // add.go
 // addCmd
 
@@ -414,7 +414,7 @@ Run: func(cmd *cobra.Command, args []string) {
 },
 ```
 
-Save all the changes. Rebuild the binary using `go install my-calc` .
+Save all the changes. Rebuild the binary using `go install my-calc`.
 
 Run `my-calc add 1.2 2.5 -f` or `my-calc add 1.2 2.5 --float`
 
@@ -424,13 +424,13 @@ You can do lots of things with flags. You can even pass values to flags like a s
 
 The basic addition of operation implementation is completed.
 
-Let’s expand it by adding sub-commands to the `addCmd` .
+Let’s expand it by adding sub-commands to the `addCmd`.
 
 ---
 
 ### add even numbers
 
-Open the terminal in the project directory and create a new `**even**` command.
+Open the terminal in the project directory and create a new `even` command.
 
 ```
 cobra add even
@@ -438,9 +438,9 @@ cobra add even
 
 The `even` command as `even.go` added in the `cmd` folder.
 
-Open the `even.go` in the editor. Change `**rootCmd**` to `**addCmd**` in the `init` .
+Open the `even.go` in the editor. Change `rootCmd` to `addCmd` in the `init` .
 
-```
+```go
 // even.go
 func init() {
     addCmd.AddCommand(evenCmd)
@@ -452,7 +452,7 @@ The `addCmd.AddCommand(evenCmd)` will add `evenCmd` as child or subcommand of th
 
 Update the `evenCmd` struct variable’s `RUN` method.
 
-```
+```go
 // even.go
 Run: func(cmd *cobra.Command, args []string) {
 
@@ -472,7 +472,7 @@ It will first convert the `string` into `int` using `strconv` package, then addi
 
 Save all the changes. Rebuild the binary using `go install my-calc` .
 
-Run `**my-calc add even 1 2 3 4 5 6**`
+Run `my-calc add even 1 2 3 4 5 6`
 
 ![add even](./asset-9.png)
 
@@ -492,9 +492,9 @@ cobra add odd
 
 The `odd` command as `odd.go` added in the `cmd` folder.
 
-Open the `odd.go` in the editor. Change `**rootCmd**` to `**addCmd**` in the `init` .
+Open the `odd.go` in the editor. Change `rootCmd` to `addCmd` in the `init`.
 
-```
+```go
 // odd.go
 func init() {
     addCmd.AddCommand(oddCmd)
@@ -502,11 +502,11 @@ func init() {
 }
 ```
 
-The `addCmd.AddCommand(oddCmd)` will add `oddCmd` as child or subcommand of the `addCmd` .
+The `addCmd.AddCommand(oddCmd)` will add `oddCmd` as child or subcommand of the `addCmd`.
 
 Update the `oddCmd` struct variable’s `RUN` method.
 
-```
+```go
 // odd.go
 
 Run: func(cmd *cobra.Command, args []string) {
@@ -524,13 +524,13 @@ Run: func(cmd *cobra.Command, args []string) {
 
 It will first convert the `string` into `int` using `strconv` package, then adding only even numbers.
 
-Save all the changes. Rebuild the binary using `go install my-calc` .
+Save all the changes. Rebuild the binary using `go install my-calc`.
 
-Run `**my-calc add odd 1 2 3 4 5 6**`
+Run `my-calc add odd 1 2 3 4 5 6`
 
 ![](./asset-10.png)
 
-The `my-calc` is the root command, `add` it the command of the `rootCmd` and `odd` is the command (subcommand) of the `addCmd` .
+The `my-calc` is the root command, `add` it the command of the `rootCmd` and `odd` is the command (subcommand) of the `addCmd`.
 
 ---
 

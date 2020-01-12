@@ -3,7 +3,7 @@ title: "Catalyst Network: The first step towards Decentralized Internet"
 description: "What is decentralized internet? Why we need the decentralized Internet?"
 date: "2019-09-17T11:49:11.812Z"
 tags: ["blockchain", "catalyst", "article"]
-categories: ["Article", "Blockchain"]
+categories: ["Article", "Blockchain", "2019"]
 published: true
 canonical_link: https://medium.com/@shubhamchadokar04/catalyst-network-the-first-step-towards-decentralized-internet-63469930e58b
 redirect_from:

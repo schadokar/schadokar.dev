@@ -3,7 +3,7 @@ title: "Hyperledger Fabric Installation Guide!"
 description: "In this guide, we will install Hyperledger Fabric v1.4 on Linux machine and on Windows machine."
 date: "2019-06-05T12:46:01.096Z"
 tags: ["blockchain", "hyperledger-fabric", "tutorial"]
-categories: ["Tutorial", "Blockchain"]
+categories: ["Tutorial", "Blockchain", "2019"]
 published: true
 canonical_link: https://medium.com/@shubhamchadokar04/hyperledger-fabric-installation-guide-74065855eca9
 redirect_from:

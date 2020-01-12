@@ -3,7 +3,7 @@ title: "Are Smart Contract and Chaincode the Same in Hyperledger Fabric"
 description: "It is very often that Hyperledger Fabric users use the terms smart contract and chaincode interchangeably."
 date: "2019-06-10T08:53:55.390Z"
 tags: ["blockchain", "hyperledger-fabric", "article"]
-categories: ["Article", "Blockchain"]
+categories: ["Article", "Blockchain", "2019"]
 published: true
 canonical_link: https://medium.com/@shubhamchadokar04/do-smart-contract-and-chaincode-are-same-in-hyperledger-fabric-1b4c3034d593
 redirect_from:

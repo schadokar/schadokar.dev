@@ -4,7 +4,7 @@ date: 2020-01-12T18:14:49+05:30
 description: "There are multiple ways in golang to use environment variables and files."
 published: true
 tags: ["golang", "viper", "tutorial"]
-categories: ["Golang", "Tutorial"]
+categories: ["Golang", "Tutorial", "2020"]
 ---
 
 When it comes to creating a production-grade application, using the environment variable in the application is *de facto*.

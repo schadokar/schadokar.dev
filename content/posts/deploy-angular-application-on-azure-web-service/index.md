@@ -3,7 +3,7 @@ title: "Deploy Angular application on Azure Web Service"
 description: "Deploying Angular application on Azure Web Service can be pain if you don’t know where to start."
 date: "2018-11-23T11:49:18.107Z"
 tags: ["azure", "angular", "tutorial"]
-categories: ["Tutorial", "Cloud"]
+categories: ["Tutorial", "Cloud", "2018"]
 published: true
 canonical_link: https://medium.com/@shubhamchadokar04/deploy-angular-application-on-azure-web-service-960e441bb13d
 redirect_from:
