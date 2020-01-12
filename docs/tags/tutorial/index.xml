@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on Shubham Chadokar</title>
+    <link>https://schadokar.dev/tags/tutorial/</link>
+    <description>Recent content in tutorial on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/schadokar&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Mon, 18 Nov 2019 15:09:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://schadokar.dev/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to create a CLI in golang with cobra</title>
+      <link>https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra/</link>
+      <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra/</guid>
+      <description>Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
+When you learn golang then it is very often that you’ll come across that ‘golang is great to build cli tools’. This fascinated me too. So, I tried to get my hands dirty and found a few tutorials of creating a cli but most of all are not basic.</description>
+    </item>
+    
+    <item>
+      <title>Build a Todo App in Golang, MongoDB, and React</title>
+      <link>https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react/</link>
+      <pubDate>Tue, 06 Aug 2019 05:41:57 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react/</guid>
+      <description>The main purpose of this tutorial to get hands-on experience in Golang. When I was learning Golang, I realized there are very few tutorials and articles out there which give you a complete end to end hands-on experience.
+This is the GitHub link for the complete code.
+ In this tutorial, we will build a todo app in which the server will be in Golang, the database will be MongoDB, and the frontend will be in React.</description>
+    </item>
+    
+    <item>
+      <title>Hyperledger Fabric Installation Guide!</title>
+      <link>https://schadokar.dev/posts/hyperledger-fabric-installation-guide/</link>
+      <pubDate>Wed, 05 Jun 2019 12:46:01 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/posts/hyperledger-fabric-installation-guide/</guid>
+      <description>When I started learning Hyperledger Fabric, installing it is really a pain in a neck and it turned miserable as I was using Windows.
+The purpose of this article to put all the instructions at one place to set up the Hyperledger Fabric network irrespective of the fact if you’re using Windows or Linux.
+My apologies for macOS readers, instructions for macOS is not included as I don’t have one.</description>
+    </item>
+    
+    <item>
+      <title>Create an Ethereum Dapp with React and Docker</title>
+      <link>https://schadokar.dev/posts/create-an-ethereum-dapp-with-react-and-docker/</link>
+      <pubDate>Sun, 14 Apr 2019 12:48:24 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/posts/create-an-ethereum-dapp-with-react-and-docker/</guid>
+      <description>In this tutorial, we’ll create an Ethereum Dapp and will run its different components in a separate docker container.
+You can clone the project using this GitHub link.
+Thanks to the people who’s article and courses helped a lot:
+Brandon Morelli For HTML and CSS ( Build a Weather Website )
+Stephen Grider For Ethereum and Docker course on Udemy.
+ Before beginning lets understand what we’re going to build and how the structure of our Dapp will look like.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Angular application on Azure Web Service</title>
+      <link>https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/</link>
+      <pubDate>Fri, 23 Nov 2018 11:49:18 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/</guid>
+      <description>Deploying an Angular application on the Azure Web Service can be a pain if you don’t know from where to start.
+This tutorial will consist of the following steps:
+ Create an Azure Web Service Build the Angular application Configure the Web Service and deploy it   Let’s start with creating the Azure Web Service;
+If you don’t have any account, you can sign up for free account and $200 dollars will be credit in your azure account to play with.</description>
+    </item>
+    
+  </channel>
+</rss>

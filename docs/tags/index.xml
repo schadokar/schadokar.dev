@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Shubham Chadokar</title>
+    <link>https://schadokar.dev/tags/</link>
+    <description>Recent content in Tags on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/schadokar&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Mon, 18 Nov 2019 15:09:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://schadokar.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cobra</title>
+      <link>https://schadokar.dev/tags/cobra/</link>
+      <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/cobra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://schadokar.dev/tags/golang/</link>
+      <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://schadokar.dev/tags/tutorial/</link>
+      <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>article</title>
+      <link>https://schadokar.dev/tags/article/</link>
+      <pubDate>Tue, 17 Sep 2019 11:49:11 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blockchain</title>
+      <link>https://schadokar.dev/tags/blockchain/</link>
+      <pubDate>Tue, 17 Sep 2019 11:49:11 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>catalyst</title>
+      <link>https://schadokar.dev/tags/catalyst/</link>
+      <pubDate>Tue, 17 Sep 2019 11:49:11 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/catalyst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://schadokar.dev/tags/development/</link>
+      <pubDate>Tue, 06 Aug 2019 05:41:57 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hyperledger-fabric</title>
+      <link>https://schadokar.dev/tags/hyperledger-fabric/</link>
+      <pubDate>Mon, 10 Jun 2019 08:53:55 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/hyperledger-fabric/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ethereum</title>
+      <link>https://schadokar.dev/tags/ethereum/</link>
+      <pubDate>Sun, 14 Apr 2019 12:48:24 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/ethereum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angular</title>
+      <link>https://schadokar.dev/tags/angular/</link>
+      <pubDate>Fri, 23 Nov 2018 11:49:18 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azure</title>
+      <link>https://schadokar.dev/tags/azure/</link>
+      <pubDate>Fri, 23 Nov 2018 11:49:18 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
