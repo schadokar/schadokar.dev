@@ -6511,7 +6511,7 @@ article+article {
 }
 
 .title {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 450;
 }
 
@@ -6572,11 +6572,12 @@ code {
 
 .content h4 {
   font-size: 22px;
-  font-weight: 350;
+  font-weight: 400;
 }
 
 .content h5 {
   font-size: 17px;
+  font-weight: 400;
 }
 
 .content h6 {
