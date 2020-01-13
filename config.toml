@@ -9,7 +9,7 @@ googleAnalytics = ""
 enableInlineShortcodes= true
 
 # Use docs folder for github pages
-publishDir = "docs"
+# publishDir = "docs"
 
 # Number of posts per page
 Paginate = 5
