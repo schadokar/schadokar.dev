@@ -211,10 +211,11 @@ q:before {
 a {
   font-size: 100%;
   background: 0 0;
-  color: #2077b2;
+  color: #0366d6;
   text-decoration: none;
   -webkit-transition: none 86ms ease-out;
   transition: none 86ms ease-out;
+  font-weight: 500;
 }
 
 del {
@@ -235,7 +236,7 @@ th {
 body,
 code,
 td {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 hr {
@@ -1349,7 +1350,7 @@ a.box:active {
 }
 
 .content a:not(.button):visited {
-  color: #847bb9;
+  color: #0366d6;
 }
 
 .content a:not(.button):hover {
@@ -6471,7 +6472,7 @@ html {
 .content h5:not(:first-child),
 .content h6:not(:first-child),
 article+article {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .content {
@@ -6556,10 +6557,12 @@ code {
 
 .content h1 {
   font-size: 30px;
+  font-weight: 650;
 }
 
 .content h2 {
   font-size: 27px;
+  font-weight: 550;
 }
 
 .content h3 {
