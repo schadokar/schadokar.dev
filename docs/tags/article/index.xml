@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>article on Shubham Chadokar</title>
+    <link>https://schadokar.dev/tags/article/</link>
+    <description>Recent content in article on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/schadokar&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Tue, 17 Sep 2019 11:49:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://schadokar.dev/tags/article/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Catalyst Network: The first step towards Decentralized Internet</title>
+      <link>https://schadokar.dev/posts/catalyst-network-the-first-step-towards-decentralized-internet/</link>
+      <pubDate>Tue, 17 Sep 2019 11:49:11 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/posts/catalyst-network-the-first-step-towards-decentralized-internet/</guid>
+      <description>What is decentralized internet? Why we need the decentralized Internet?
+I know these questions are obvious once you read the title.
+First, understand the current situation of the internet and then we’ll explore the possibilities of the Catalyst Network.
+What is the current situation of the Internet? A global network connecting millions of computers is the Internet. The Internet is decentralized by design. But today’s situation is far from this. The tech giants like Amazon, Google, Microsoft and Facebook dominating the internet.</description>
+    </item>
+    
+    <item>
+      <title>Are Smart Contract and Chaincode the Same in Hyperledger Fabric</title>
+      <link>https://schadokar.dev/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/</link>
+      <pubDate>Mon, 10 Jun 2019 08:53:55 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/</guid>
+      <description>Often Hyperledger Fabric users use the terms smart contract and chaincode interchangeably. Lets first understand what a smart contract is:
+ A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties. These transactions are trackable and irreversible. — Wikipedia
+ Let&#39;s deduce this in simple language — a contract can execute on its own if it satisfies the terms of the contract without any interference from a third party.</description>
+    </item>
+    
+  </channel>
+</rss>

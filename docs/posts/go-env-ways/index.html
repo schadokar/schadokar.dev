@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Use Environment Variable in your next Golang Project | Shubham Chadokar</title>
+
+
+
+<link href="https://schadokar.dev/index.xml" rel="alternate" type="application/rss+xml" title="Shubham Chadokar" />
+
+<link rel="stylesheet" href="/css/style.css"/><link rel='stylesheet' href='https://schadokar.dev/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://schadokar.dev/posts/go-env-ways/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://schadokar.dev">
+          <h1 id="nav-heading" class="title is-4">Shubham Chadokar</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+
+        <nav id="nav-items" class="nav-item level is-mobile">
+          <nav class="nav-links">
+            <a href="/about">About Me</a>
+          </nav>
+          <nav class="nav-links">
+            <a href="/projects">Projects</a>
+          </nav>
+          <nav class="nav-links">
+            <a href="/subscribe">Subscribe</a>
+          </nav>
+          <nav class="nav-links">
+            <a href="/contact">Contact</a>
+          </nav>
+        </nav>
+
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/golang">#golang</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/viper">#viper</a>
+  
+  | <a class="subtitle is-6" href="/tags/tutorial">#tutorial</a>
+  
+
+      
+    </div>
+    <h2 class="subtitle is-6">January 12, 2020</h2>
+    <h1 class="title">Use Environment Variable in your next Golang Project</h1>
+    
+
+
+    <div class="content">
+      <p>When it comes to creating a production-grade application, using the environment variable in the application is <em>de facto</em>.</p>
+<h3 id="why-should-we-use-the-environment-variable">Why should we use the environment variable?</h3>
+<p>Suppose you have an application with many features and each feature need to access the Database. You configured all the DB information like <code>DBURL</code>, <code>DBNAME</code>, <code>USERNAME</code> and <code>PASSWORD</code> in each feature.</p>
+<p>There are a few major disadvantages to this approach, there can be many.</p>
+<ul>
+<li>
+<h5 id="security-issue">Security Issue:</h5>
+<ul>
+<li>You're entering all the information in the code. Now, all the unauthorized person also have access to the DB.</li>
+<li>If you're using code versioning tool like <code>git</code> then the details of your DB will go public once you push the code.</li>
+</ul>
+</li>
+<li>
+<h5 id="code-management">Code Management:</h5>
+<ul>
+<li>If you are changing a single variable then you have to change in all the features. There is a high possibility that you'll miss one or two. 😌 been there</li>
+<li>You can categorize the environment variables like <code>PROD</code>, <code>DEV</code>, or <code>TEST</code>. Just prefix the variable with the environment.</li>
+</ul>
+</li>
+</ul>
+<p>In the start, it might look like some extra work, but this will reward you a lot in your project.</p>
+<blockquote>
+<p>⚠ Just don't forget to include your environment files in the .gitignore. ⚠</p>
+</blockquote>
+<hr>
+<p>It is time for some action. :action:</p>
+<h4 id="what-are-we-going-to-do-in-this-tutorial">What are we going to do in this tutorial?</h4>
+<p>In this tutorial, we will access environment variables in 3 different ways.</p>
+<p>You can use according to your requirement.</p>
+<ul>
+<li><code>os</code> package</li>
+<li><code>godotenv</code> package</li>
+<li><code>viper</code> package</li>
+</ul>
+<h2 id="create-a-project">Create a Project</h2>
+<p>Create a project <code>go-env-ways</code> outside the <code>$GOPATH</code>.</p>
+<h3 id="initialize-the-module">Initialize the module</h3>
+<p>Open the terminal inside the project root directory, and run the below command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">mod</span> <span style="color:#a6e22e">init</span> <span style="color:#66d9ef">go</span><span style="color:#f92672">-</span><span style="color:#a6e22e">env</span><span style="color:#f92672">-</span><span style="color:#a6e22e">ways</span>
+</code></pre></div><p>This module will keep a record of all the packages and their version used in the project. It is similar to <code>package.json</code> in <code>nodejs</code>.</p>
+<hr>
+<p>Let's start with the easiest one, using <code>os</code> package.</p>
+<h2 id="os-package">os Package</h2>
+<p>Golang provides <code>os</code> package, an easy way to configure and access the environment variable.</p>
+<p>To set the environment variable,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Setenv</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>)
+</code></pre></div><p>To get the environment variable,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#a6e22e">key</span>)
+</code></pre></div><p>Create a new file <code>main.go</code> inside the project.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+  <span style="color:#e6db74">&#34;fmt&#34;</span>
+  <span style="color:#e6db74">&#34;os&#34;</span>
+)
+
+<span style="color:#75715e">// use os package to get the env variable which is already set
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">envVariable</span>(<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+
+  <span style="color:#75715e">// set env variable using os package
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Setenv</span>(<span style="color:#a6e22e">key</span>, <span style="color:#e6db74">&#34;gopher&#34;</span>)
+
+  <span style="color:#75715e">// return the env variable using os package
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#a6e22e">key</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#75715e">// os package
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">envVariable</span>(<span style="color:#e6db74">&#34;name&#34;</span>)
+
+  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;os package: %s = %s \n&#34;</span>, <span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#a6e22e">value</span>)
+}
+</code></pre></div><p>Run the below command to check.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+
+<span style="color:#75715e">// Output
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">os</span> <span style="color:#f92672">package</span>: <span style="color:#a6e22e">name</span> = <span style="color:#a6e22e">gopher</span>
+</code></pre></div><hr>
+<h2 id="godotenv-package">GoDotEnv Package</h2>
+<p>The easiest way to load the <code>.env</code> file is using <code>godotenv</code> package.</p>
+<h3 id="install">Install</h3>
+<p>Open the terminal in the project root directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">joho</span><span style="color:#f92672">/</span><span style="color:#a6e22e">godotenv</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// Load the .env file in the current directory
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">godotenv</span>.<span style="color:#a6e22e">Load</span>()
+
+<span style="color:#75715e">// or
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">godotenv</span>.<span style="color:#a6e22e">Load</span>(<span style="color:#e6db74">&#34;.env&#34;</span>)
+</code></pre></div><blockquote>
+<p>Load method can load multiple env files at once. This also supports <code>yaml</code>. For more information check out the <a href="https://github.com/joho/godotenv">documentation</a>.</p>
+</blockquote>
+<p>Create a new <code>.env</code> file in the project root directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">STRONGEST_AVENGER</span>=<span style="color:#a6e22e">Thor</span>
+</code></pre></div><p>Update the <code>main.go</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+
+    <span style="color:#f92672">...</span>
+    <span style="color:#75715e">// Import godotenv
+</span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#34;github.com/joho/godotenv&#34;</span>
+)
+
+
+<span style="color:#75715e">// use godot package to load/read the .env file and
+</span><span style="color:#75715e"></span><span style="color:#75715e">// return the value of the key
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">goDotEnvVariable</span>(<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+
+  <span style="color:#75715e">// load .env file
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">godotenv</span>.<span style="color:#a6e22e">Load</span>(<span style="color:#e6db74">&#34;.env&#34;</span>)
+
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+    <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error loading .env file&#34;</span>)
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#a6e22e">key</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#75715e">// os package
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">...</span> 
+
+  <span style="color:#75715e">// godotenv package
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">dotenv</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goDotEnvVariable</span>(<span style="color:#e6db74">&#34;STRONGEST_AVENGER&#34;</span>)
+
+  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;godotenv : %s = %s \n&#34;</span>, <span style="color:#e6db74">&#34;STRONGEST_AVENGER&#34;</span>, <span style="color:#a6e22e">dotenv</span>)
+}
+</code></pre></div><p>Open the terminal and run the <code>main.go</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+
+<span style="color:#75715e">// Output
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">os</span> <span style="color:#f92672">package</span>: <span style="color:#a6e22e">name</span> = <span style="color:#a6e22e">gopher</span>
+
+<span style="color:#a6e22e">godotenv</span> : <span style="color:#a6e22e">STRONGEST_AVENGER</span> = <span style="color:#a6e22e">Thor</span>
+</code></pre></div><blockquote>
+<p>Just add the code at the end of the os package in the main function.</p>
+</blockquote>
+<hr>
+<h2 id="viper-package">Viper Package</h2>
+<p>Viper is one of the most popular packages in the golang community. Many Go projects are built using Viper including Hugo, Docker Notary, Mercury.</p>
+<blockquote>
+<p>Viper is a complete configuration solution for Go applications including 12-Factor apps. It is designed to work within an application and can handle all types of configuration needs and formats. Reading from JSON, TOML, YAML, HCL, envfile and Java properties config files</p>
+</blockquote>
+<blockquote>
+<p><em>For more information read the official documentation of <a href="https://github.com/spf13/viper">viper</a></em></p>
+</blockquote>
+<h3 id="install-1">Install</h3>
+<p>Open the terminal in the project root directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">spf13</span><span style="color:#f92672">/</span><span style="color:#a6e22e">viper</span>
+</code></pre></div><p>To set the config file and path</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">SetConfigFile</span>(<span style="color:#e6db74">&#34;.env&#34;</span>)
+</code></pre></div><p>To read the config file</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">ReadInConfig</span>()
+</code></pre></div><p>To get the value from the config file using key</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">key</span>)
+</code></pre></div><p>Update the <code>main.go</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> (
+  <span style="color:#e6db74">&#34;fmt&#34;</span>
+  <span style="color:#e6db74">&#34;log&#34;</span>
+  <span style="color:#e6db74">&#34;os&#34;</span>
+
+  <span style="color:#e6db74">&#34;github.com/joho/godotenv&#34;</span>
+  <span style="color:#e6db74">&#34;github.com/spf13/viper&#34;</span>
+)
+
+<span style="color:#75715e">// use viper package to read .env file
+</span><span style="color:#75715e"></span><span style="color:#75715e">// return the value of the key
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">viperEnvVariable</span>(<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+
+  <span style="color:#75715e">// SetConfigFile explicitly defines the path, name and extension of the config file.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Viper will use this and not check any of the config paths.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// .env - It will search for the .env file in the current directory
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">SetConfigFile</span>(<span style="color:#e6db74">&#34;.env&#34;</span>)
+
+  <span style="color:#75715e">// Find and read the config file
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">ReadInConfig</span>()
+
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+    <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while reading config file %s&#34;</span>, <span style="color:#a6e22e">err</span>)
+  }
+
+  <span style="color:#75715e">// viper.Get() returns an empty interface{}
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// to get the underlying type of the key,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// we have to do the type assertion, we know the underlying value is string
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// if we type assert to other type it will throw an error
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">key</span>).(<span style="color:#66d9ef">string</span>)
+
+  <span style="color:#75715e">// If the type is a string then ok will be true
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// ok will make sure the program not break
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">ok</span> {
+    <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Invalid type assertion&#34;</span>)
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+    <span style="color:#75715e">// os package  
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">...</span>
+  
+  <span style="color:#75715e">// godotenv package
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">...</span>
+
+  <span style="color:#75715e">// viper package read .env
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">viperenv</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">viperEnvVariable</span>(<span style="color:#e6db74">&#34;STRONGEST_AVENGER&#34;</span>)
+
+  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;viper : %s = %s \n&#34;</span>, <span style="color:#e6db74">&#34;STRONGEST_AVENGER&#34;</span>, <span style="color:#a6e22e">viperenv</span>)
+}
+</code></pre></div><p>Open the terminal and run the <code>main.go</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+
+<span style="color:#75715e">// Output
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">os</span> <span style="color:#f92672">package</span>: <span style="color:#a6e22e">name</span> = <span style="color:#a6e22e">gopher</span>
+
+<span style="color:#a6e22e">godotenv</span> : <span style="color:#a6e22e">STRONGEST_AVENGER</span> = <span style="color:#a6e22e">Thor</span>
+
+<span style="color:#a6e22e">viper</span> : <span style="color:#a6e22e">STRONGEST_AVENGER</span> = <span style="color:#a6e22e">Thor</span>
+</code></pre></div><hr>
+<h3 id="viper-is-not-limited-to-env-files">Viper is not limited to .env files.</h3>
+<p>It supports:</p>
+<ul>
+<li>setting defaults</li>
+<li>reading from JSON, TOML, YAML, HCL, envfile and Java properties config files</li>
+<li>live watching and re-reading of config files (optional)</li>
+<li>reading from environment variables</li>
+<li>reading from remote config systems (etcd or Consul), and watching changes</li>
+<li>reading from command line flags</li>
+<li>reading from buffer</li>
+<li>setting explicit values</li>
+</ul>
+<p>Viper can be thought of as a registry for all of your applications configuration needs.</p>
+<p>Let's experiment: 💣</p>
+<p>Create a new <code>config.yaml</code> file in the project root directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">I_AM_INEVITABLE: <span style="color:#e6db74">&#34;I am Iron Man&#34;</span>
+</code></pre></div><p>To set the config filename</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">SetConfigName</span>(<span style="color:#e6db74">&#34;config&#34;</span>)
+</code></pre></div><p>To set the config file path</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// Look in the current working directory
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">AddConfigPath</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
+</code></pre></div><p>To read the config file</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">ReadInConfig</span>()
+</code></pre></div><p>Update the <code>main.go</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// use viper package to load/read the config file or .env file and
+</span><span style="color:#75715e"></span><span style="color:#75715e">// return the value of the key
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">viperConfigVariable</span>(<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+
+  <span style="color:#75715e">// name of config file (without extension)
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">SetConfigName</span>(<span style="color:#e6db74">&#34;config&#34;</span>)
+  <span style="color:#75715e">// look for config in the working directory
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">AddConfigPath</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
+
+  <span style="color:#75715e">// Find and read the config file
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">ReadInConfig</span>()
+
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+    <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while reading config file %s&#34;</span>, <span style="color:#a6e22e">err</span>)
+  }
+
+  <span style="color:#75715e">// viper.Get() returns an empty interface{}
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// to get the underlying type of the key,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// we have to do the type assertion, we know the underlying value is string
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// if we type assert to other type it will throw an error
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">viper</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">key</span>).(<span style="color:#66d9ef">string</span>)
+
+  <span style="color:#75715e">// If the type is a string then ok will be true
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// ok will make sure the program not break
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">ok</span> {
+    <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Invalid type assertion&#34;</span>)
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+  <span style="color:#75715e">// os package
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">...</span>
+
+  <span style="color:#75715e">// godotenv package
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">...</span>
+
+  <span style="color:#75715e">// viper package read .env
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">...</span>
+
+  <span style="color:#75715e">// viper package read config file
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">viperconfig</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">viperConfigVariable</span>(<span style="color:#e6db74">&#34;I_AM_INEVITABLE&#34;</span>)  
+  
+  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;viper config : %s = %s \n&#34;</span>, <span style="color:#e6db74">&#34;I_AM_INEVITABLE&#34;</span>, <span style="color:#a6e22e">viperconfig</span>)  
+}
+</code></pre></div><p>Open the terminal and run the <code>main.go</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+
+<span style="color:#75715e">// Output
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">os</span> <span style="color:#f92672">package</span>: <span style="color:#a6e22e">name</span> = <span style="color:#a6e22e">gopher</span>
+
+<span style="color:#a6e22e">godotenv</span> : <span style="color:#a6e22e">STRONGEST_AVENGER</span> = <span style="color:#a6e22e">Thor</span>
+
+<span style="color:#a6e22e">viper</span> : <span style="color:#a6e22e">STRONGEST_AVENGER</span> = <span style="color:#a6e22e">Thor</span>
+
+<span style="color:#a6e22e">viper</span> <span style="color:#a6e22e">config</span> : <span style="color:#a6e22e">I_AM_INEVITABLE</span> = <span style="color:#a6e22e">I</span> <span style="color:#a6e22e">am</span> <span style="color:#a6e22e">Iron</span> <span style="color:#a6e22e">Man</span>
+</code></pre></div><hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>That's it, now you can explore more of their secrets. If you find something worth sharing don't hesitate.</p>
+<p>The complete code is available in the <a href="https://github.com/schadokar/blog-projects/tree/master/go-env-ways">github</a>.</p>
+
+      
+      <div class="related">
+
+<h3>Similar articles:</h3>
+<ul>
+	
+	<li><a href="/posts/how-to-create-a-cli-in-golang-with-cobra/">How to create a CLI in golang with cobra</a></li>
+	
+	<li><a href="/posts/build-a-todo-app-in-golang-mongodb-and-react/">Build a Todo App in Golang, MongoDB, and React</a></li>
+	
+	<li><a href="/posts/etherscan-react/">Create your own Etherscan with React in 5 minutes</a></li>
+	
+	<li><a href="/posts/hyperledger-fabric-installation-guide/">Hyperledger Fabric Installation Guide!</a></li>
+	
+	<li><a href="/posts/create-an-ethereum-dapp-with-react-and-docker/">Create an Ethereum Dapp with React and Docker</a></li>
+	
+</ul>
+</div>
+      
+    </div>
+    
+
+    <div>
+  <iframe style="margin-top: 20px" width="100%" height="200px" src="https://schadokar.substack.com/embed"
+    frameborder="0" scrolling="no"></iframe>
+</div>
+
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  
+  <div class="container">
+    <p>&copy; <a href="https://github.com/schadokar">Shubham Chadokar</a> 2020</p>
+    
+    
+    
+  </div>
+</section>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/matomo.example.com\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+  <img src="//matomo.example.com/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+</noscript>
+
+<script>
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '\/\/fathom.example.com\/tracker.js', 'fathom');
+    fathom('trackPageview');
+</script>
+</body>
+
+</html>
