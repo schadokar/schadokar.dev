@@ -18,12 +18,11 @@
       <pubDate>Tue, 07 Jan 2020 21:23:34 +0530</pubDate>
       
       <guid>https://schadokar.dev/posts/etherscan-react/</guid>
-      <description>In this tutorial, we&#39;ll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing semantic-ui-react which is the official react integration for semantic-ui.
+      <description>Photo by Radek Grzybowski on Unsplash In this tutorial, we&#39;ll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing semantic-ui-react which is the official react integration for semantic-ui.
  You can find the complete code in the github.
  Without wasting any time let&#39;s build it.
  Prerequisite   nodejs
-  Code editor &amp;ndash; (I am using VS Code)
-   I am assuming that you have a basic understanding of reactjs and components.</description>
+  Code editor &amp;ndash; (I am using VS Code)</description>
     </item>
     
     <item>

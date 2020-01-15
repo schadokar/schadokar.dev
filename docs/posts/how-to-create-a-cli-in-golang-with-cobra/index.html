@@ -21,40 +21,40 @@
 </head>
 <body>
 <section class="section">
-  <div class="container">
-    <nav id="nav-main" class="nav">
-      <div id="nav-name" class="nav-left">
-        <a id="nav-anchor" class="nav-item" href="https://schadokar.dev">
-          <h1 id="nav-heading" class="title is-4">Shubham Chadokar</h1>
-        </a>
-      </div>
-      <div class="nav-right">
+  
+  <nav id="nav-main" class="nav">
+    <div id="nav-name" class="nav-left">
+      <a id="nav-anchor" class="nav-item" href="https://schadokar.dev">
+        <h1 id="nav-heading" class="title is-4">Shubham Chadokar</h1>
+      </a>
+    </div>
+    <div class="nav-right">
 
-        <nav id="nav-items" class="nav-item level is-mobile">
-          <nav class="nav-links">
-            <a href="/about">About Me</a>
-          </nav>
-          <nav class="nav-links">
-            <a href="/projects">Projects</a>
-          </nav>
-          <nav class="nav-links">
-            <a href="/subscribe">Subscribe</a>
-          </nav>
-          <nav class="nav-links">
-            <a href="/contact">Contact</a>
-          </nav>
+      <nav id="nav-items" class="nav-item level is-mobile">
+        <nav class="nav-links">
+          <a href="/about">About Me</a>
         </nav>
+        <nav class="nav-links">
+          <a href="/projects">Projects</a>
+        </nav>
+        <nav class="nav-links">
+          <a href="/subscribe">Subscribe</a>
+        </nav>
+        <nav class="nav-links">
+          <a href="/contact">Contact</a>
+        </nav>
+      </nav>
 
-      </div>
-    </nav>
+    </div>
+  </nav>
 
-    <nav class="nav">
-      
+  <nav class="nav">
+    
 
-      
-    </nav>
+    
+  </nav>
 
-  </div>
+  
   <script src="/js/navicon-shift.js"></script>
 </section>
 <section class="section">
@@ -196,7 +196,7 @@
 <p><img src="./asset-3.png" alt="hello-cli"></p>
 <hr>
 <h3 id="init">init</h3>
-<p>This is the first function which gets called whenever a package initialize in the golang. The <code>cobra.OnInitialize(funcDeclarations)</code> append the user-defined functions in the command’s initialization. <strong><em>Whenever the command run or called it will first execute all the functions in the command’s initialization and then it will run the execute method.</em></strong> This initialization can be used in loading the configuration file or can be used as constructor. It all depends on your use case and your creativity.</p>
+<p>This is the first function which gets called whenever a package initialize in the golang. The <code>cobra.OnInitialize(funcDeclarations)</code> append the user-defined functions in the command’s initialization. <em><strong>Whenever the command run or called it will first execute all the functions in the command’s initialization and then it will run the execute method.</strong></em> This initialization can be used in loading the configuration file or can be used as constructor. It all depends on your use case and your creativity.</p>
 <p>I believe I lost you here. Let’s understand this with an example.</p>
 <p>In the <code>root.go</code> , the command is the <code>rootCmd</code>.</p>
 <p>The <code>cobra.OnInitialize(initConfig)</code> append the <code>initConfig</code>function declaration in the <code>rootCmd</code>’s initialization. So, whenever the <code>rootCmd</code> ‘s execute method (<code>RUN: func</code>) run, the <code>rootCmd</code> will first run the <code>initConfig</code>function. Once the execution of all the initialize functions over, it will run the <code>RUN: func</code> execution method of <code>rootCmd</code>.</p>
@@ -427,6 +427,7 @@ add created at C:\Work\golang\my-calc
 <p>Please give your valuable feedback on this tutorial. I’ll make changes accordingly.</p>
 <p>If you like my work and want to support me. You can buy me a coffee.</p>
 <p><a href="https://www.buymeacoffee.com/uTDINEc"><img src="./asset-11.png" alt=""></a></p>
+<hr>
 
       
       <div class="related">

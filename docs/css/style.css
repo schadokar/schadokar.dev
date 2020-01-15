@@ -157,7 +157,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 19px;
   font-weight: 400;
   vertical-align: baseline;
   background: 0 0;
@@ -236,7 +236,7 @@ th {
 body,
 code,
 td {
-  font-weight: 600;
+  font-weight: 300;
 }
 
 hr {
@@ -332,20 +332,19 @@ button,
 input,
 select,
 textarea {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro",
-    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  font-family: 'consolas', 'medium-content-serif-font', Georgia, 'Cambria', "Times New Roman", Times, serif;
 }
 
 code,
 pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: "Source Code Pro", Monaco, Inconsolata, monospace;
+  font-family: 'Menlo', 'Monaco', "Courier New", Courier, monospace;
   line-height: 1.25;
 }
 
 body {
-  color: #42464c;
+  color: rgba(0, 0, 0, 0.84);
   font-size: 1rem;
   line-height: 1.428571428571429;
 }
@@ -359,7 +358,7 @@ code {
 .textarea,
 table td,
 table th {
-  vertical-align: top;
+  vertical-align: baseline;
 }
 
 small {
@@ -1298,8 +1297,8 @@ a.box:active {
 
 .button.is-link:focus,
 .button.is-link:hover {
-  background-color: #d3d6db;
-  color: #222324;
+  /* background-color: #d3d6db; */
+  color:#0074d9;
 }
 
 .button.is-small {
@@ -2501,6 +2500,7 @@ a.box:active {
 
 .title {
   color: #222324;
+  word-break: break-word;
 }
 
 .title code {
@@ -2533,7 +2533,7 @@ a.box:active {
 
 .title.is-3 code,
 .title.is-4 {
-  font-size: 27px;
+  font-size: 38px;
   font-weight: 450;
 }
 
@@ -5050,7 +5050,7 @@ a.nav-item.is-tab.is-active {
 .nav {
   -ms-flex-align: stretch;
   align-items: stretch;
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   position: relative;
   z-index: 2;
@@ -6415,8 +6415,9 @@ a.panel-block:hover {
   flex-grow: 1;
 }
 
+/* color options: #03110900 #ffffa9 for dark: #202020*/
 .section {
-  background-color: #fff;
+  background-color: #03110900;
   padding: 40px 20px;
 }
 
@@ -6476,7 +6477,8 @@ article+article {
 }
 
 .content {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 1.75;
 }
 
@@ -6511,8 +6513,8 @@ article+article {
 }
 
 .title {
-  font-size: 30px;
-  font-weight: 450;
+  font-size: 40px;
+  font-weight: 550;
 }
 
 .title a {
@@ -6576,7 +6578,7 @@ code {
 }
 
 .content h5 {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 400;
 }
 

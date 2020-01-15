@@ -2500,6 +2500,7 @@ a.box:active {
 
 .title {
   color: #222324;
+  word-break: break-word;
 }
 
 .title code {
@@ -2532,7 +2533,7 @@ a.box:active {
 
 .title.is-3 code,
 .title.is-4 {
-  font-size: 27px;
+  font-size: 38px;
   font-weight: 450;
 }
 
@@ -5049,7 +5050,7 @@ a.nav-item.is-tab.is-active {
 .nav {
   -ms-flex-align: stretch;
   align-items: stretch;
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   position: relative;
   z-index: 2;
@@ -6414,8 +6415,9 @@ a.panel-block:hover {
   flex-grow: 1;
 }
 
+/* color options: #03110900 #ffffa9 for dark: #202020*/
 .section {
-  background-color: #fff;
+  background-color: #03110900;
   padding: 40px 20px;
 }
 
