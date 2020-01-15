@@ -352,7 +352,7 @@ You first need to have an account in DockerHub to download the docker desktop. P
 
 Download the docker from this [link](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 
-**_Note: While installing keep the settings default don’t change anything._**
+**Note: While installing keep the settings default don’t change anything.**
 
 **Test the Installation**
 

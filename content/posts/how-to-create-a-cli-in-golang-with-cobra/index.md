@@ -182,7 +182,7 @@ You will see the output similar to this.
 
 ### init
 
-This is the first function which gets called whenever a package initialize in the golang. The `cobra.OnInitialize(funcDeclarations)` append the user-defined functions in the command’s initialization. **_Whenever the command run or called it will first execute all the functions in the command’s initialization and then it will run the execute method._** This initialization can be used in loading the configuration file or can be used as constructor. It all depends on your use case and your creativity.
+This is the first function which gets called whenever a package initialize in the golang. The `cobra.OnInitialize(funcDeclarations)` append the user-defined functions in the command’s initialization. ***Whenever the command run or called it will first execute all the functions in the command’s initialization and then it will run the execute method.*** This initialization can be used in loading the configuration file or can be used as constructor. It all depends on your use case and your creativity.
 
 I believe I lost you here. Let’s understand this with an example.
 

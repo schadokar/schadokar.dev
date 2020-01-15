@@ -7,32 +7,35 @@ tags: ["golang", "viper", "tutorial"]
 categories: ["Golang", "Tutorial", "2020"]
 ---
 
+![Photo by Moja Msanii on Unsplash](asset1.jpg)
+###### [Photo by Moja Msanii on Unsplash](https://unsplash.com/photos/vO9-gal54go)
+
 When it comes to creating a production-grade application, using the environment variable in the application is *de facto*.
 
-### Why should we use the environment variable?
+## Why should we use the environment variable?
 
 Suppose you have an application with many features and each feature need to access the Database. You configured all the DB information like `DBURL`, `DBNAME`, `USERNAME` and `PASSWORD` in each feature.
 
 There are a few major disadvantages to this approach, there can be many.
 
-- ##### Security Issue: 
+- #### Security Issue: 
   - You're entering all the information in the code. Now, all the unauthorized person also have access to the DB. 
   - If you're using code versioning tool like `git` then the details of your DB will go public once you push the code.
 
 
-- ##### Code Management:
+- #### Code Management:
   - If you are changing a single variable then you have to change in all the features. There is a high possibility that you'll miss one or two. :relieved: been there
   - You can categorize the environment variables like `PROD`, `DEV`, or `TEST`. Just prefix the variable with the environment. 
 
 In the start, it might look like some extra work, but this will reward you a lot in your project.
 
-> :warning: Just don't forget to include your environment files in the .gitignore. :warning:
+> ⚠️ Just don't forget to include your environment files in the `.gitignore`.⚠️
 
 ---
 
-It is time for some action. :action:
+It is time for some action. :hammer:
 
-#### What are we going to do in this tutorial?
+### What are we going to do in this tutorial?
 
 In this tutorial, we will access environment variables in 3 different ways.
 
