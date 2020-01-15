@@ -8,7 +8,7 @@ categories: ["Golang", "Tutorial", "2020"]
 ---
 
 ![Photo by Moja Msanii on Unsplash](asset1.jpg)
-###### [Photo by Moja Msanii on Unsplash](https://unsplash.com/photos/vO9-gal54go)
+###### Photo by [Moja Msanii](https://unsplash.com/photos/vO9-gal54go) on [Unsplash](https://unsplash.com/s/photos/security)
 
 When it comes to creating a production-grade application, using the environment variable in the application is *de facto*.
 
@@ -421,3 +421,5 @@ viper config : I_AM_INEVITABLE = I am Iron Man
 That's it, now you can explore more of their secrets. If you find something worth sharing don't hesitate. 
 
 The complete code is available in the [github](https://github.com/schadokar/blog-projects/tree/master/go-env-ways). 
+
+---

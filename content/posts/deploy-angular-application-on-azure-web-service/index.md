@@ -102,6 +102,3 @@ Hurray! The angular application is successfully deployed on Azure Web App. Go to
 Thanks for reading! Any comments and suggestions are most welcome.
 
 ---
-
-[**Learn Angular - Best Angular Tutorials (2019) | gitconnected**  
-\_The top 48 Angular tutorials - learn Angular for free. Courses are submitted and voted on by developers, enabling you…\_gitconnected.com](https://gitconnected.com/learn/angular "https://gitconnected.com/learn/angular")[](https://gitconnected.com/learn/angular)

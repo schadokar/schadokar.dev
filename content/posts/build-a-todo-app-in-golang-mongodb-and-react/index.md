@@ -331,5 +331,4 @@ Congratulations! You just build a To-Do App in Golang.
 
 For the complete code. This is the [Github Link.](https://github.com/schadokar/go-to-do-app/)
 
-[**Learn Go - Best Go Tutorials (2019) | gitconnected**  
-\_Go is a statically-typed, imperative, and compiled language. However, unlike many compiled programming languages, Go is…\_gitconnected.com](https://gitconnected.com/learn/golang "https://gitconnected.com/learn/golang")[](https://gitconnected.com/learn/golang)
+---

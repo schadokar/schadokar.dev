@@ -58,11 +58,10 @@ For a deeper understanding of fabric concepts keep reading.
 
 **References:**
 
-[**Smart Contracts and Chaincode - hyperledger-fabricdocs master documentation**  
-\_From an application developer's perspective, a smart contract, together with the ledger, form the heart of a…\_hyperledger-fabric.readthedocs.io](https://hyperledger-fabric.readthedocs.io/en/release-1.4/smartcontract/smartcontract.html "https://hyperledger-fabric.readthedocs.io/en/release-1.4/smartcontract/smartcontract.html")[](https://hyperledger-fabric.readthedocs.io/en/release-1.4/smartcontract/smartcontract.html)
+[**Smart Contracts and Chaincode - hyperledger-fabricdocs master documentation**](https://hyperledger-fabric.readthedocs.io/en/release-1.4/smartcontract/smartcontract.html)
 
-[**Chaincode Tutorials - hyperledger-fabricdocs master documentation**  
-\_A chaincode typically handles business logic agreed to by members of the network, so it may be considered as a "smart…\_hyperledger-fabric.readthedocs.io](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode.html "https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode.html")[](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode.html)
+[**Chaincode Tutorials - hyperledger-fabricdocs master documentation**](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode.html)
 
-[**Chaincode for Developers - hyperledger-fabricdocs master documentation**  
-\_whose methods are called in response to received transactions. In particular the method is called when a chaincode…\_hyperledger-fabric.readthedocs.io](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4ade.html "https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4ade.html")[](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4ade.html)
+[**Chaincode for Developers - hyperledger-fabricdocs master documentation**](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4ade.html)
+
+---

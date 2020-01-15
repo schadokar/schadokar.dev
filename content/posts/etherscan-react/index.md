@@ -7,6 +7,9 @@ categories: ["Tutorial", "Blockchain","2020"]
 description: "In this tutorial, we'll create a simple single-page etherscan in reactjs."
 ---
 
+![Photo by Radek Grzybowski on Unsplash](asset1.jpg)
+###### Photo by [Radek Grzybowski](https://unsplash.com/@rgrzybowski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
 In this tutorial, we'll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing  `semantic-ui-react` which is the official react integration for `semantic-ui`.
 
 > You can find the complete code in the [github](https://github.com/schadokar/etherscan-react).
@@ -692,10 +695,12 @@ Open the terminal in the project's root directory and run `npm start`.
 
 Go to the browser and run `localhost:3000`. 
 
-![Etherscan Dashboard](./etherscan.PNG)
+![Etherscan Dashboard](asset2.PNG)
 
 Congratulations, you just created your own etherscan dashboard. 
 
 Now, you can integrate other etherscan api and add more feature to your etherscan dashboard.
 
 You can find the complete code in the [GitHub](https://github.com/schadokar/etherscan-react).
+
+---

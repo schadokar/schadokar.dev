@@ -149,3 +149,5 @@ To know more about the Catalyst Network, join the upcoming virtual meetup. This 
 - [Catalyst Consensys Paper](https://catalystnet.org/consensus-paper.pdf)
 - [Catalyst Website](https://catalystnet.org/)
 - [Catalyst Blogs](https://medium.com/catalystnetorg)
+
+---
