@@ -33,6 +33,15 @@
       
       <content>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
 &lt;p&gt;🚀 Hi there, I am Shubham Kumar Chadokar.&lt;/p&gt;
+&lt;img
+  src=&#34;../../about/pic.png&#34;
+  alt=&#34;MISSING GIF&#34;
+  style=&#34;padding-left: 70px;&#34;
+  height=&#34;50%&#34;
+  width=&#34;50%&#34;
+  align=&#34;right&#34;
+/&gt;
+
 &lt;p&gt;I am a Software Engineer 👓.&lt;/p&gt;
 &lt;p&gt;I love to write articles and tutorials on Blockchain, Golang, Nodejs and Reactjs. 
 My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, Reactjs, Docker, Kubernetes.&lt;/p&gt;
@@ -103,11 +112,12 @@ My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, React
       <content>&lt;h2 id=&#34;contact&#34;&gt;Contact&lt;/h2&gt;
 &lt;p&gt;If you have any questions or any queries, you can disturb me using below tricks. 😈 💣 💥&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;📫 &lt;a href=&#34;mailto:shubhamchadokar04@gmail.com&#34;&gt;Email Me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📫 &lt;a href=&#34;mailto:me@schadokar.dev&#34;&gt;Email Me&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/schadokar/&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/schadokar/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@shubhamchadokar04&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://twitter.com/schadokar1&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.to/schadokar&#34;&gt;Dev.to&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
       
