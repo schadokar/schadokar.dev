@@ -3,27 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://schadokar.dev/tags/golang/</loc>
-    <lastmod>2020-01-12T18:14:49+05:30</lastmod>
+    <loc>https://schadokar.dev/tags/couchdb/</loc>
+    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/hyperledger-fabric/</loc>
+    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://schadokar.dev/posts/</loc>
-    <lastmod>2020-01-12T18:14:49+05:30</lastmod>
+    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://schadokar.dev/</loc>
-    <lastmod>2020-01-12T18:14:49+05:30</lastmod>
+    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/posts/couchdb-keyvalue-store-hlf/</loc>
+    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://schadokar.dev/tags/</loc>
-    <lastmod>2020-01-12T18:14:49+05:30</lastmod>
+    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://schadokar.dev/tags/tutorial/</loc>
+    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/golang/</loc>
     <lastmod>2020-01-12T18:14:49+05:30</lastmod>
   </url>
   
@@ -93,11 +108,6 @@
   </url>
   
   <url>
-    <loc>https://schadokar.dev/tags/hyperledger-fabric/</loc>
-    <lastmod>2019-06-10T08:53:55+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://schadokar.dev/posts/hyperledger-fabric-installation-guide/</loc>
     <lastmod>2019-06-05T12:46:01+00:00</lastmod>
   </url>
@@ -136,11 +146,11 @@
   </url>
   
   <url>
-    <loc>https://schadokar.dev/projects/</loc>
+    <loc>https://schadokar.dev/newsletter/</loc>
   </url>
   
   <url>
-    <loc>https://schadokar.dev/subscribe/</loc>
+    <loc>https://schadokar.dev/projects/</loc>
   </url>
   
 </urlset>

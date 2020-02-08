@@ -332,7 +332,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'consolas', 'medium-content-serif-font', Georgia, 'Cambria', "Times New Roman", Times, serif;
+  font-family: "Sitka Text",Georgia,'Calibri','consolas', 'medium-content-serif-font', Georgia, 'Cambria', "Times New Roman", Times, serif;
 }
 
 code,
@@ -2533,8 +2533,8 @@ a.box:active {
 
 .title.is-3 code,
 .title.is-4 {
-  font-size: 30px;
-  font-weight: 450;
+  font-size: 35px;
+  font-weight: 600;
 }
 
 .title.is-4 code,
@@ -6415,9 +6415,9 @@ a.panel-block:hover {
   flex-grow: 1;
 }
 
-/* color options: #03110900 #ffffa9 for dark: #202020*/
+/* color options: #03110900 #ffffa9 for dark: #202020* edge: #f9f5e8 */
 .section {
-  background-color: #03110900;
+  background-color: #f9f5e8;
   padding: 40px 20px;
 }
 
@@ -6513,7 +6513,7 @@ article+article {
 }
 
 .title {
-  font-size: 40px;
+  font-size: 31px;
   font-weight: 550;
 }
 

@@ -14,7 +14,7 @@
     <item>
       <title>Posts</title>
       <link>https://schadokar.dev/posts/</link>
-      <pubDate>Sun, 12 Jan 2020 18:14:49 +0530</pubDate>
+      <pubDate>Sat, 08 Feb 2020 10:02:42 +0530</pubDate>
       <author>Shubham Chadokar</author>
       <guid>https://schadokar.dev/posts/</guid>
       <description></description>
@@ -112,13 +112,27 @@ My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, React
       <content>&lt;h2 id=&#34;contact&#34;&gt;Contact&lt;/h2&gt;
 &lt;p&gt;If you have any questions or any queries, you can disturb me using below tricks. 😈 💣 💥&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;📫 &lt;a href=&#34;mailto:me@schadokar.dev&#34;&gt;Email Me&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/schadokar/&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/schadokar/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/@shubhamchadokar04&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/schadokar1&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dev.to/schadokar&#34;&gt;Dev.to&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:hello@schadokar.dev&#34;&gt;hello@schadokar.dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github: &lt;a href=&#34;https://github.com/schadokar/&#34;&gt;schadokar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/schadokar1&#34;&gt;schadokar1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/schadokar/&#34;&gt;schadokar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Medium: &lt;a href=&#34;https://medium.com/@shubhamchadokar04&#34;&gt;@shubhamchadokar04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Dev.to: &lt;a href=&#34;https://dev.to/schadokar&#34;&gt;schadokar&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://schadokar.dev/newsletter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>Shubham Chadokar</author>
+      <guid>https://schadokar.dev/newsletter/</guid>
+      <description></description>
+      
+      <content>&lt;h2 id=&#34;-newsletter&#34;&gt;👋 Newsletter&lt;/h2&gt;
+&lt;p&gt;Subscribe to my newsletter 📰 get the latest article and tutorial right into your inbox.&lt;/p&gt;
 </content>
       
     </item>
@@ -162,20 +176,6 @@ This project is a simple demonstration of etherscan dashboard.&lt;/p&gt;
 Logistics Project, it is developed on Hyperledger Composer Blockchain Tool. It demonstrate the journey of an item from a manufacturer to a consumer.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://schadokar.dev/subscribe/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>Shubham Chadokar</author>
-      <guid>https://schadokar.dev/subscribe/</guid>
-      <description></description>
-      
-      <content>&lt;h2 id=&#34;-subscribe&#34;&gt;👋 Subscribe&lt;/h2&gt;
-&lt;p&gt;Subscribe to my newsletter get the latest article and tutorial right into your inbox.&lt;/p&gt;
 </content>
       
     </item>

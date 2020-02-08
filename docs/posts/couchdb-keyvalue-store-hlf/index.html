@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Store Hyperledger Fabric certificates and keys in CouchDB | Shubham Chadokar</title>
+
+
+
+<link href="https://schadokar.dev/index.xml" rel="alternate" type="application/rss+xml" title="Shubham Chadokar" />
+
+<link rel="stylesheet" href="/css/style.css"/><link rel='stylesheet' href='https://schadokar.dev/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://schadokar.dev/posts/couchdb-keyvalue-store-hlf/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  
+  <nav id="nav-main" class="nav">
+    <div id="nav-name" class="nav-left">
+      <a id="nav-anchor" class="nav-item" href="https://schadokar.dev">
+        <h1 id="nav-heading" class="title is-4">Shubham Chadokar</h1>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav id="nav-items" class="nav-item level is-mobile">
+        <nav class="nav-links">
+          <a href="/about">About Me</a>
+        </nav>
+        <nav class="nav-links">
+          <a href="/projects">Projects</a>
+        </nav>
+        <nav class="nav-links">
+          <a href="/newsletter">Newsletter</a>
+        </nav>
+        <nav class="nav-links">
+          <a href="/contact">Contact</a>
+        </nav>
+      </nav>
+    </div>
+  </nav>
+
+  <nav class="nav">
+    
+    
+  </nav>
+
+  
+  <script src="/js/navicon-shift.js"></script>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/hyperledger-fabric">#hyperledger-fabric</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/couchdb">#couchdb</a>
+  
+  | <a class="subtitle is-6" href="/tags/tutorial">#tutorial</a>
+  
+
+      
+    </div>
+    <h2 class="subtitle is-6">February 8, 2020</h2>
+    <h1 class="title">Store Hyperledger Fabric certificates and keys in CouchDB</h1>
+    
+
+
+    <div class="content">
+      <p><img src="./cover-pic.jpg" alt=""></p>
+<p>Photo by <a href="https://unsplash.com/@mr_williams_photography?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Micah Williams</a> on <a href="https://unsplash.com/s/photos/safe?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<p>Hyperledger Fabric is all about permissions. These permissions are provided in the form of
+certificates and keys. In broad term, it is known as <a href="https://hyperledger-fabric.readthedocs.io/en/latest/identity/identity.html">Identities</a>.</p>
+<p>When an application interacts with the Hyperledger Fabric Network, it uses this identity to authenticate itself. Fabric network validates the identity and authorizes the application to interact.</p>
+<p>In short, identities are very important and if you don't save them properly, then it may turn into a headache. 😩</p>
+<h2 id="where-can-i-store-the-identities-">Where can I store the Identities? 💼</h2>
+<p>In Hyperledger Fabric, this storage is known as <a href="https://hyperledger-fabric.readthedocs.io/en/latest/developapps/wallet.html"><strong><em>Wallet</em></strong></a>.</p>
+<p>There are three types of wallet:</p>
+<ul>
+<li>
+<h4 id="_file-system_"><em>File System</em></h4>
+This is a simple folder. A local storage wallet. It is a good default choice for wallets. In <code>fabric-samples/balance-transfer</code>, the <code>file system</code> is the default wallet. When you run the <code>balance-transfer</code> it creates a <code>fabric-client-kv-orgName</code> folder and saves all the identities in it. This configuration is defined in the <code>orgname.yaml</code> <a href="https://github.com/hyperledger/fabric-samples/blob/release-1.4/balance-transfer/artifacts/org1.yaml">link</a>.</li>
+<li>
+<h4 id="_in-memory_"><em>In-Memory</em></h4>
+A wallet in application storage. Use this type of wallet when your application is running in a constrained environment without access to a file system; typically a web browser. It’s worth remembering that this type of wallet is volatile; identities will be lost after the application ends normally or crashes. - <a href="https://hyperledger-fabric.readthedocs.io/en/latest/developapps/wallet.html#types">Documentation</a></li>
+<li>
+<h4 id="_couchdb_"><em>CouchDB</em></h4>
+Using couchdb as a wallet. This option is best for production.</li>
+</ul>
+<hr>
+<p>In this tutorial, we will configure the <code>CouchDB</code> as the Wallet. 👨🏻‍💻</p>
+<blockquote>
+<p><em>For the demonstration, I am using <code>Fabric Node SDK</code> and <code>fabric/samples/balance-transfer</code>.</em></p>
+</blockquote>
+<p>The wallet uses 2 stores to save the certificates and keys:</p>
+<h4 id="1-state-store">1. State Store:</h4>
+<p>The state store is used to store the certificates of the enrolled identity. It stores the basic information of the identity:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;test&#34;</span>,
+  <span style="color:#f92672">&#34;mspid&#34;</span>: <span style="color:#e6db74">&#34;org1&#34;</span>,
+  <span style="color:#f92672">&#34;roles&#34;</span>: <span style="color:#66d9ef">null</span>,
+  <span style="color:#f92672">&#34;affiliation&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  <span style="color:#f92672">&#34;enrollmentSecret&#34;</span>: <span style="color:#e6db74">&#34;&lt;ENROLLMENT_SECRET&gt;&#34;</span>,
+  <span style="color:#f92672">&#34;enrollment&#34;</span>: {
+    <span style="color:#f92672">&#34;signingIdentity&#34;</span>: <span style="color:#e6db74">&#34;&lt;PRIVATE_KEY_NAME&gt;&#34;</span>,
+    <span style="color:#f92672">&#34;identity&#34;</span>: {
+      <span style="color:#f92672">&#34;certificate&#34;</span>: <span style="color:#e6db74">&#34;&lt;SIGN_CERT&gt;&#34;</span>
+    }
+  }
+}
+</code></pre></div><blockquote>
+<p>❗️ <em>Note: The signingIdentity is the pointer or the address of the private and public key stored in the crypto-store.</em></p>
+</blockquote>
+<h4 id="2-crypto-store">2. Crypto Store:</h4>
+<p>The crypto store is used to store the public and private key of the identity.</p>
+<hr>
+<p>To configure the couchdb as wallet:</p>
+<h4 id="step-1">Step 1</h4>
+<p>Import the <code>CouchDBKeyValueStore</code> library, which is provided by the <code>Node SDK</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CDBKVS</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fabric-client/lib/impl/CouchDBKeyValueStore.js&#34;</span>);
+</code></pre></div><blockquote>
+<p><em>Do read the <a href="https://github.com/hyperledger/fabric-sdk-node/blob/release-1.4/fabric-client/lib/impl/CouchDBKeyValueStore.js"><code>CouchDBKeyValueStore.js</code></a> it is worth reading.</em></p>
+</blockquote>
+<h4 id="step-2">Step 2</h4>
+<p>Set the <code>state store</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stateStore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CDBKVS</span>({
+  <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&lt;DB_NAME&gt;&#34;</span>
+});
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Client</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fabric-client&#34;</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Client</span>.<span style="color:#a6e22e">loadFromConfig</span>(<span style="color:#e6db74">&#34;path of network.yaml&#34;</span>);
+
+<span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">setStateStore</span>(<span style="color:#a6e22e">stateStore</span>);
+</code></pre></div><ul>
+<li><code>&lt;USERNAME&gt;</code> is the username of the couchdb.</li>
+<li><code>&lt;PASSWORD&gt;</code> is the password of the couchdb.</li>
+<li><code>&lt;URL&gt;</code> is the couchdb URL.</li>
+<li><code>&lt;DB_NAME&gt;</code> (OPTIONAL) is the dbname to use as state store. The default dbname is <code>userdb</code>. It creates the DB if it doesn't exist.</li>
+</ul>
+<blockquote>
+<p><strong><em><a href="https://hyperledger.github.io/fabric-sdk-node/release-1.4/Client.html">Client</a> is the interface between the user and the fabric network.</em></strong></p>
+</blockquote>
+<h4 id="step-3">Step 3</h4>
+<p>Set the <code>crypto store</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cryptoSuite</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Client</span>.<span style="color:#a6e22e">newCryptoSuite</span>();
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cryptoKS</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Client</span>.<span style="color:#a6e22e">newCryptoKeyStore</span>(<span style="color:#a6e22e">CDBKVS</span>, {
+  <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&lt;DB_NAME&gt;&#34;</span>
+});
+
+<span style="color:#a6e22e">cryptoSuite</span>.<span style="color:#a6e22e">setCryptoKeyStore</span>(<span style="color:#a6e22e">cryptoKS</span>);
+
+<span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">setCryptoSuite</span>(<span style="color:#a6e22e">cryptoSuite</span>);
+</code></pre></div><p>You have to update the client according to the above steps to make it use the couchdb.<br>
+In the next section, we'll implement the above steps in the <code>balance-transfer</code> fabric sample.</p>
+<hr>
+<h2 id="implementation-of-couchdb-in-balance-transfer">Implementation of CouchDB in Balance Transfer</h2>
+<p>I am using the <a href="https://github.com/hyperledger/fabric-samples/blob/release-1.4/balance-transfer">balance transfer</a> fabric sample as a reference.</p>
+<blockquote>
+<p><em>I am assuming that you know how to run the balance transfer.</em></p>
+</blockquote>
+<h3 id="start-the-balance-transfer-network">Start the balance transfer network</h3>
+<p>Follow the balance transfer instructions to start the network.</p>
+<p>It will start the network with:</p>
+<ul>
+<li>2 CAs</li>
+<li>A SOLO Orderer</li>
+<li>4 peers (2 peers per Org)</li>
+</ul>
+<h3 id="start-a-couchdb-for-the-wallet">Start a couchdb for the wallet</h3>
+<p>This step is optional if you're using the cloud based couchdb.</p>
+<p><strong>Docker-based Couchdb</strong></p>
+<pre><code>docker run --name couch-userdb -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -p 5984:5984 -d couchdb
+</code></pre><p>Above command will pull the docker image of the <code>couchdb</code> from the docker hub if it doesn't exist.</p>
+<h5 id="couchdb-details">CouchDB Details:</h5>
+<ul>
+<li>Container Name: couch-userdb</li>
+<li>CouchDB Username: admin</li>
+<li>CouchDB Password: password</li>
+<li>URL: localhost:5984</li>
+</ul>
+<p>The CouchDB connection URL is</p>
+<pre><code>https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;
+
+https://admin:password@localhost:5984
+</code></pre><h3 id="update-the-client-in-the-balance-transfer">Update the client in the balance-transfer</h3>
+<p>Open the <code>app/helper.js</code> and update the <code>getClientForOrg</code>.</p>
+<p>In the below code, we just replaced <code>await client.initCredentialStores();</code> with the above couchdb config steps.</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/004b87e24a52f7260bd7cad252353cbb.js"></script>
+
+<p>The changes we made,</p>
+<ul>
+<li><strong><em>Line 13:</em></strong> Import the <code>CouchDBKeyValueStore</code>. Step 1 from above.</li>
+<li><strong><em>Line 31-52:</em></strong> Set the state store and crypto store. Step 2 &amp; 3.</li>
+</ul>
+<p>There is a minor change in the above code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Client variable is used as hfc
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hfc</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fabric-client&#34;</span>);
+
+<span style="color:#75715e">// Instead of Client
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Client</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fabric-client&#34;</span>);
+</code></pre></div><p><strong><em>It is not necessary that db(dbname) of state store and crypto store is the same. Both the stores can have their separate dbs. It depends on the requirement. You can have state store and crypto store db as <code>orgName-state-store</code> and <code>orgName-crypto-store</code> respectively.</em></strong></p>
+<p><strong><em>Each organization must have their state-store and crypto-store db, else it will throw the Authentication Error.</em></strong></p>
+<pre><code>Error: fabric-ca request register failed with errors [[{&quot;code&quot;:20,&quot;message&quot;:&quot;Authentication failure&quot;}]]
+</code></pre><h3 id="register-a-new-user-in-the-balance-transfer">Register a new user in the balance transfer</h3>
+<p>Once you register a user, you can check the state-store and crypto-store using the couchdb apis.</p>
+<h5 id="for-example-register-a-user">For Example: Register a user</h5>
+<p>I used the below arguments to register a user. For <code>org1</code>, I used the same db <code>org1db</code> for both <code>state-store</code> and <code>crypto-store</code>.</p>
+<ul>
+<li>Name: alice</li>
+<li>Org: org1</li>
+<li>DBNAME: org1db</li>
+<li>CouchDB URL: http://admin:password@localhost:5369</li>
+</ul>
+<p>Open the browser, go to <code>http://localhost:5369/org1db/_all_docs</code>. It returns all the docs saved in the <code>org1db</code>.</p>
+<p><img src="./asset1.PNG" alt=""></p>
+<p>The indexes <code>0, 1, 2</code> are the certificates of the <code>admin</code>.</p>
+<p>The index <code>3</code> is the <code>alice</code> certificate stored in the <code>state-store</code>.<br>
+The indexes <code>4-5</code> are the <code>alice</code>'s public and private keys stored in the <code>crypto-store</code>.</p>
+<p>Go to <code>http://localhost:5369/org1db/alice</code>.
+It returns all the details of the <code>alice</code> stored in the state store.</p>
+<p><img src="./asset2.PNG" alt=""></p>
+<p>Check the <code>signingIdentity</code>.</p>
+<pre><code>&quot;signingIdentity&quot;:&quot;d37a97a8c2377c21537801ec1a929d81905ae57963a2f6c8ba0308931a7fc791&quot;
+</code></pre><p>Now, check the id of the indexes <code>4 &amp; 5</code> in the above image. Both are same.</p>
+<p>If you remember, <code>signingIdentity</code> field is a reference of the private and public keys of the identity stored in the crypto store.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>CouchDB wallet is a great choice for a production use case. You can try with other dbs but in that case, you have to write the library accordingly like <code>CouchDBKeyValueStore.js</code>.</p>
+<hr>
+<p>Below are the references I found helpful.<br>
+If you find any resource which you think can be added here, don't feel shy to share. 😉</p>
+<hr>
+<h2 id="references-">References 📌</h2>
+<ul>
+<li><a href="https://developer.ibm.com/tutorials/store-fabric-certificates-keys-ibm-cloudant-fabric-node-sdk/">https://developer.ibm.com/tutorials/store-fabric-certificates-keys-ibm-cloudant-fabric-node-sdk/</a></li>
+<li><a href="https://stackoverflow.com/questions/53639061/hyperledger-fabric-what-is-the-difference-between-state-store-and-crypto-store">https://stackoverflow.com/questions/53639061/hyperledger-fabric-what-is-the-difference-between-state-store-and-crypto-store</a></li>
+<li><a href="https://stackoverflow.com/questions/54305378/hyperledger-fabric-client-credential-store-using-couchdb">https://stackoverflow.com/questions/54305378/hyperledger-fabric-client-credential-store-using-couchdb</a></li>
+<li><a href="https://stackoverflow.com/questions/58371858/hyperledger-fabric-client-credential-store-using-couchdbcouchdbkeyvaluestore">https://stackoverflow.com/questions/58371858/hyperledger-fabric-client-credential-store-using-couchdbcouchdbkeyvaluestore</a></li>
+</ul>
+<hr>
+
+      
+      <div class="related">
+
+<h3>Similar articles:</h3>
+<ul>
+	
+	<li><a href="/posts/hyperledger-fabric-installation-guide/">Hyperledger Fabric Installation Guide!</a></li>
+	
+	<li><a href="/posts/go-env-ways/">Use Environment Variable in your next Golang Project</a></li>
+	
+	<li><a href="/posts/etherscan-react/">Create your own Etherscan with React in 5 minutes</a></li>
+	
+	<li><a href="/posts/how-to-create-a-cli-in-golang-with-cobra/">How to create a CLI in golang with cobra</a></li>
+	
+	<li><a href="/posts/build-a-todo-app-in-golang-mongodb-and-react/">Build a Todo App in Golang, MongoDB, and React</a></li>
+	
+</ul>
+</div>
+      
+    </div>
+    
+
+    <div>
+  <iframe style="margin-top: 20px" width="100%" height="200px" src="https://schadokar.substack.com/embed"
+    frameborder="0" scrolling="no"></iframe>
+</div>
+
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  
+  <div class="container">
+    <p>&copy; <a href="https://github.com/schadokar">Shubham Chadokar</a> 2020</p>
+    
+    
+    
+  </div>
+</section>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/matomo.example.com\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+  <img src="//matomo.example.com/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+</noscript>
+
+<script>
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '\/\/fathom.example.com\/tracker.js', 'fathom');
+    fathom('trackPageview');
+</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>couchdb on Shubham Chadokar</title>
+    <link>https://schadokar.dev/tags/couchdb/</link>
+    <description>Recent content in couchdb on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/schadokar&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Sat, 08 Feb 2020 10:02:42 +0530</lastBuildDate>
+    
+	<atom:link href="https://schadokar.dev/tags/couchdb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Store Hyperledger Fabric certificates and keys in CouchDB</title>
+      <link>https://schadokar.dev/posts/couchdb-keyvalue-store-hlf/</link>
+      <pubDate>Sat, 08 Feb 2020 10:02:42 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/posts/couchdb-keyvalue-store-hlf/</guid>
+      <description>Photo by Micah Williams on Unsplash
+Hyperledger Fabric is all about permissions. These permissions are provided in the form of certificates and keys. In broad term, it is known as Identities.
+When an application interacts with the Hyperledger Fabric Network, it uses this identity to authenticate itself. Fabric network validates the identity and authorizes the application to interact.
+In short, identities are very important and if you don&#39;t save them properly, then it may turn into a headache.</description>
+    </item>
+    
+  </channel>
+</rss>
