@@ -3,22 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://schadokar.dev/posts/</loc>
+    <lastmod>2020-02-13T23:25:31+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/</loc>
+    <lastmod>2020-02-13T23:25:31+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/posts/understand-quicksort-the-easyway-js/</loc>
+    <lastmod>2020-02-13T23:25:31+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://schadokar.dev/tags/couchdb/</loc>
     <lastmod>2020-02-08T10:02:42+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://schadokar.dev/tags/hyperledger-fabric/</loc>
-    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/posts/</loc>
-    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/</loc>
     <lastmod>2020-02-08T10:02:42+05:30</lastmod>
   </url>
   
