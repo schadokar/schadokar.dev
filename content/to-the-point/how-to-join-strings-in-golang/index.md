@@ -2,7 +2,7 @@
 title: "How to Join Strings in Golang?"
 date: 2020-02-27T19:46:51+05:30
 description: "There are multiple ways to join or concat strings in the golang."
-categories: ["2-the-point", "to-the-point"]
+categories: ["Tutorial","2-the-point", "to-the-point"]
 tags: ["golang", "strings"]
 published: true
 ---
