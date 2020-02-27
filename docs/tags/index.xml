@@ -6,11 +6,29 @@
     <description>Recent content in Tags on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/schadokar&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Sat, 08 Feb 2020 10:02:42 +0530</lastBuildDate>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Thu, 27 Feb 2020 19:46:51 +0530</lastBuildDate>
     
 	<atom:link href="https://schadokar.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>golang</title>
+      <link>https://schadokar.dev/tags/golang/</link>
+      <pubDate>Thu, 27 Feb 2020 19:46:51 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strings</title>
+      <link>https://schadokar.dev/tags/strings/</link>
+      <pubDate>Thu, 27 Feb 2020 19:46:51 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/strings/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>couchdb</title>
@@ -36,15 +54,6 @@
       <pubDate>Sat, 08 Feb 2020 10:02:42 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://schadokar.dev/tags/golang/</link>
-      <pubDate>Sun, 12 Jan 2020 18:14:49 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/golang/</guid>
       <description></description>
     </item>
     

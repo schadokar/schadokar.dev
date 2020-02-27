@@ -2,14 +2,14 @@ baseurl = "https://schadokar.dev"
 languageCode = "en"
 title = "Shubham Chadokar"
 theme = "kiss"
-copyright = "&copy; <a href=\"https://github.com/schadokar\">Shubham Chadokar</a> 2020"
+copyright = "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2020"
 disqusShortname = "schadokar"
 googleAnalytics = "UA-158088106-1"
 
 enableInlineShortcodes= true
 
 # Number of posts per page
-Paginate = 5
+Paginate = 7
 enableRobotsTXT = true
 enableEmoji=true
 

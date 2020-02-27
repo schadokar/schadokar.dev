@@ -6,10 +6,22 @@
     <generator>Hugo - gohugo.io</generator>
     <language>en</language>
     <contact>shubhamchadokar04@gmail.com</contact>
-    <copyright>&copy; <a href="https://github.com/schadokar">Shubham Chadokar</a> 2020</copyright>
+    <copyright>&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</copyright>
     
         <atom:link href="https://schadokar.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>To-the-points</title>
+      <link>https://schadokar.dev/to-the-point/</link>
+      <pubDate>Thu, 27 Feb 2020 19:46:51 +0530</pubDate>
+      <author>Shubham Chadokar</author>
+      <guid>https://schadokar.dev/to-the-point/</guid>
+      <description></description>
+      
+      <content></content>
+      
+    </item>
     
     <item>
       <title>Posts</title>

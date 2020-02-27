@@ -2533,7 +2533,7 @@ a.box:active {
 
 .title.is-3 code,
 .title.is-4 {
-  font-size: 35px;
+  font-size: 33px;
   font-weight: 600;
 }
 
@@ -6519,6 +6519,7 @@ article+article {
 
 .title a {
   color: #222324;
+  font-weight: 600;
 }
 
 .title.notfound {

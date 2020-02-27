@@ -3,12 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://schadokar.dev/posts/</loc>
-    <lastmod>2020-02-13T23:25:31+05:30</lastmod>
+    <loc>https://schadokar.dev/tags/golang/</loc>
+    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/how-to-join-strings-in-golang/</loc>
+    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://schadokar.dev/</loc>
+    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/strings/</loc>
+    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/</loc>
+    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/</loc>
+    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/posts/</loc>
     <lastmod>2020-02-13T23:25:31+05:30</lastmod>
   </url>
   
@@ -33,18 +58,8 @@
   </url>
   
   <url>
-    <loc>https://schadokar.dev/tags/</loc>
-    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://schadokar.dev/tags/tutorial/</loc>
     <lastmod>2020-02-08T10:02:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/golang/</loc>
-    <lastmod>2020-01-12T18:14:49+05:30</lastmod>
   </url>
   
   <url>
