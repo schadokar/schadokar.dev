@@ -7,22 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Sat, 29 Feb 2020 11:55:03 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 19:46:51 +0530</lastBuildDate>
     
 	<atom:link href="https://schadokar.dev/tags/strings/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Compare Strings in Golang</title>
-      <link>https://schadokar.dev/to-the-point/compare-strings-in-golang/</link>
-      <pubDate>Sat, 29 Feb 2020 11:55:03 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/to-the-point/compare-strings-in-golang/</guid>
-      <description>A string value is a sequence of bytes.
-Using the Comparison operators == equal != not equal &amp;lt; less &amp;lt;= less or equal &amp;gt; greater &amp;gt;= greater or equal To check if strings are equal or not, you can use == or !=.
-package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;golang&amp;#34; str2 := &amp;#34;gopher&amp;#34; fmt.Println(str1 == str2) fmt.Println(str1 != str2) } Output
-false true To check the Lexicographic Order of 2 strings, you can use &amp;lt;, &amp;lt;=, &amp;gt;, &amp;gt;=.</description>
-    </item>
     
     <item>
       <title>How to Join Strings in Golang?</title>
