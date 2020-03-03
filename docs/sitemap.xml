@@ -3,8 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</loc>
+    <lastmod>2020-03-03T08:25:25+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://schadokar.dev/tags/golang/</loc>
-    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
+    <lastmod>2020-03-03T08:25:25+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/</loc>
+    <lastmod>2020-03-03T08:25:25+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/</loc>
+    <lastmod>2020-03-03T08:25:25+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/to-the-point/</loc>
+    <lastmod>2020-03-03T08:25:25+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/</loc>
+    <lastmod>2020-03-03T08:25:25+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/swapper-in-golang/</loc>
+    <lastmod>2020-03-03T08:17:07+05:30</lastmod>
   </url>
   
   <url>
@@ -13,22 +43,7 @@
   </url>
   
   <url>
-    <loc>https://schadokar.dev/</loc>
-    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://schadokar.dev/tags/strings/</loc>
-    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/</loc>
-    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/to-the-point/</loc>
     <lastmod>2020-02-27T19:46:51+05:30</lastmod>
   </url>
   

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Thu, 27 Feb 2020 19:46:51 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2020 08:25:25 +0530</lastBuildDate>
     
 	<atom:link href="https://schadokar.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,18 @@
     <item>
       <title>golang</title>
       <link>https://schadokar.dev/tags/golang/</link>
-      <pubDate>Thu, 27 Feb 2020 19:46:51 +0530</pubDate>
+      <pubDate>Tue, 03 Mar 2020 08:25:25 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>to-the-point</title>
+      <link>https://schadokar.dev/tags/to-the-point/</link>
+      <pubDate>Tue, 03 Mar 2020 08:25:25 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/to-the-point/</guid>
       <description></description>
     </item>
     
