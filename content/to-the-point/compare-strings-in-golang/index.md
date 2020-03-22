@@ -1,10 +1,10 @@
 ---
 title: "Compare Strings in Golang"
-date: 2020-02-29T11:55:03+05:30
+date: 2020-03-27T11:55:03+05:30
 description: "Learn different ways to compare strings in golang."
-categories: ["Tutorial","2-the-point", "to-the-point"]
-tags: ["golang","strings"]
-draft: true
+categories: ["Tutorial","2-the-point", "to-the-point", "Golang"]
+tags: ["golang","strings","to-the-point"]
+published: true
 ---
 
 A string value is a sequence of bytes.

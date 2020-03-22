@@ -33,7 +33,7 @@ func Atoi(s string) (int, error) It will return type int and type int is system 
       <guid>https://schadokar.dev/to-the-point/swapper-in-golang/</guid>
       <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
 Function Definition func Swapper(slice interface{}) func(i, j int) Let&#39;s try
-package main import ( &amp;quot;fmt&amp;quot; &amp;quot;reflect&amp;quot; ) func main() { s := []int{1, 2, 3} fmt.Printf(&amp;quot;Before swap: %v\n&amp;quot;, s) swapF := reflect.Swapper(s) swapF(0, 1) fmt.</description>
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; ) func main() { s := []int{1, 2, 3} fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) swapF := reflect.Swapper(s) swapF(0, 1) fmt.</description>
     </item>
     
     <item>

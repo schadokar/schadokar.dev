@@ -48,12 +48,27 @@
   </url>
   
   <url>
+    <loc>https://schadokar.dev/tags/algorithm/</loc>
+    <lastmod>2020-02-13T23:25:31+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/js/</loc>
+    <lastmod>2020-02-13T23:25:31+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://schadokar.dev/posts/</loc>
     <lastmod>2020-02-13T23:25:31+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://schadokar.dev/posts/understand-quicksort-the-easyway-js/</loc>
+    <loc>https://schadokar.dev/tags/tutorial/</loc>
+    <lastmod>2020-02-13T23:25:31+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</loc>
     <lastmod>2020-02-13T23:25:31+05:30</lastmod>
   </url>
   
@@ -69,11 +84,6 @@
   
   <url>
     <loc>https://schadokar.dev/posts/couchdb-keyvalue-store-hlf/</loc>
-    <lastmod>2020-02-08T10:02:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/tutorial/</loc>
     <lastmod>2020-02-08T10:02:42+05:30</lastmod>
   </url>
   

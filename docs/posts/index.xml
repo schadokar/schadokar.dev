@@ -13,18 +13,16 @@
     
     
     <item>
-      <title>Understand Quicksort the Easyway in JS</title>
-      <link>https://schadokar.dev/posts/understand-quicksort-the-easyway-js/</link>
+      <title>Understand Quicksort the easy way</title>
+      <link>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</link>
       <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
       
-      <guid>https://schadokar.dev/posts/understand-quicksort-the-easyway-js/</guid>
+      <guid>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</guid>
       <description>Photo by Iñaki del Olmo on Unsplash
-Quicksort is one of the efficient sorting algorithms and the average complexity is O(n log n).
-How quicksort works? 🤔 Gif by Wikimedia
-Quicksort works on the divide and conquer algorithm.
-Select any element in the array and this element is known as pivot.
-Quicksort is all about finding the correct position(index) of this pivot in the array.
-Elements less than pivot must be in the left side of the pivot and elements greater than the pivot must be in the right side of the pivot.</description>
+Data structures and Algorithms are the key skills for a software developer. Recently when I was preparing for a job change, learning sorting algorithms was not smooth.
+The theory is simple and straight but its implementation is just the opposite.
+ I think concept and implementation are inversely proportional. 🤔
+ There are many sorting algorithms like bubblesort, mergesort, quicksort etc. Among all, quicksort is one of the most popular sorting algorithms.</description>
     </item>
     
     <item>

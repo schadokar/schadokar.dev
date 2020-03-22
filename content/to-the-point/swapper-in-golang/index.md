@@ -11,13 +11,13 @@ published: true
 
 ### Function Definition
 
-```
+```go
 func Swapper(slice interface{}) func(i, j int)
 ```
 
 Let's try
 
-```
+```go
 package main
 
 import (
@@ -59,7 +59,7 @@ panic: reflect: call of Swapper on <Type> Value
 
 Swap first element with last element, second element with second last and so on.  
 
-```
+```go
 package main
 
 import (
@@ -93,7 +93,7 @@ After swap: [7 6 5 4 3 2 1]
 
 ### Use Swapper in Bubble sort
 
-```
+```go
 package main
 
 import (
