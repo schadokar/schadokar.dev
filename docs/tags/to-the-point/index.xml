@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Tue, 03 Mar 2020 08:25:25 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 11:13:24 +0530</lastBuildDate>
     
 	<atom:link href="https://schadokar.dev/tags/to-the-point/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Read and Write a File in Golang?</title>
+      <link>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
+      <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
+      <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.
+Write a file using WriteFile The WriteFile function takes 3 arguments, filename, data in a byte array, and filemode.
+func WriteFile(filename string, data []byte, perm os.FileMode) error A FileMode represents a file&#39;s mode and permission bits. Learn more
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; ) func main() { // create a byte array of a string  data := []byte(&amp;#34;Hello Gopher!</description>
+    </item>
     
     <item>
       <title>Convert String to Int and Int to String in Golang</title>
