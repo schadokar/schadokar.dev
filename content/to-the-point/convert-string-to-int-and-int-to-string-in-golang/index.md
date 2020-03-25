@@ -7,6 +7,8 @@ tags: ["golang", "to-the-point"]
 published: true
 ---
 
+![](../images/joshua-bartell-6vvIBTvL90A-unsplash.jpg)
+
 Golang standard library has provided 2 functions [Atoi](https://golang.org/pkg/strconv/#Atoi) and [Itoa](https://golang.org/pkg/strconv/#Itoa) to convert string to int and int to string respectively.
 
 These 2 functions placed inside the [strconv](https://golang.org/pkg/strconv/) package.

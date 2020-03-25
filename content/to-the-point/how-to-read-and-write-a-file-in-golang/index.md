@@ -7,6 +7,8 @@ tags: ["golang","to-the-point"]
 published: true
 ---
 
+![](../images/fabian-grohs-XMFZqrGyV-Q-unsplash.jpg)
+
 In this tutorial, we will learn how to read and write files in the file system using the `io/ioutil` package.
 
 ## Write a file using WriteFile

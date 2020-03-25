@@ -7,6 +7,8 @@ tags: ["golang", "strings","to-the-point"]
 published: true
 ---
 
+![](../images/markus-spiske-iar-afB0QQw-unsplash.jpg)
+
 There are multiple ways to join or concat strings in the golang. 
 
 Let's start with the easy one.
