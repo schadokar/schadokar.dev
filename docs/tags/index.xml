@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Tue, 24 Mar 2020 11:13:24 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2020 09:45:45 +0530</lastBuildDate>
     
 	<atom:link href="https://schadokar.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>aws</title>
+      <link>https://schadokar.dev/tags/aws/</link>
+      <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>to-the-point</title>
+      <link>https://schadokar.dev/tags/to-the-point/</link>
+      <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/to-the-point/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>golang</title>
@@ -18,15 +36,6 @@
       <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>to-the-point</title>
-      <link>https://schadokar.dev/tags/to-the-point/</link>
-      <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/to-the-point/</guid>
       <description></description>
     </item>
     

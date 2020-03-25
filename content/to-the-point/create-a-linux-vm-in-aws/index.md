@@ -1,11 +1,10 @@
 ---
 title: "Create a Linux VM in AWS"
-date: 2020-03-24T22:16:45+05:30
+date: 2020-03-25T09:45:45+05:30
 description: "Learn how to create a ubuntu vm in the aws."
 categories: ["Tutorial", "2-the-point", "to-the-point"]
 tags: ["to-the-point", "aws"]
-published: false
-draft: true
+published: true
 ---
 
 ![](../images/clement-h-95YRwf6CNw8-unsplash.jpg)
