@@ -1,5 +1,5 @@
 ---
-title: "Create a Linux VM in AWS"
+title: "How to create a Linux VM in AWS?"
 date: 2020-03-25T09:45:45+05:30
 description: "Learn how to create a ubuntu vm in the aws."
 categories: ["Tutorial", "2-the-point", "to-the-point", "Cloud"]

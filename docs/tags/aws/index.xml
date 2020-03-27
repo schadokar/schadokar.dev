@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Create a Linux VM in AWS</title>
-      <link>https://schadokar.dev/to-the-point/create-a-linux-vm-in-aws/</link>
+      <title>How to create a Linux VM in AWS?</title>
+      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
       <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/create-a-linux-vm-in-aws/</guid>
+      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
       <description>Create a new aws account.
 Login to your aws account. Select services on top left and search EC2 and select it.
 EC2 Dashboard Scroll down to Launch Instance section and select Launch Instance.

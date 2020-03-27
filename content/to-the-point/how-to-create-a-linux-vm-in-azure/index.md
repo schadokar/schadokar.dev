@@ -1,5 +1,5 @@
 ---
-title: "Create a Linux VM in Azure"
+title: "How to create a Linux VM in Azure?"
 date: 2020-03-27T14:56:35+05:30
 description: "Learn how to create and configure a linux vm in microsoft azure cloud."
 categories: ["Tutorial", "2-the-point", "to-the-point", "Cloud"]

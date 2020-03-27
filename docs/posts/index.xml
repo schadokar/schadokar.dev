@@ -37,10 +37,10 @@ The theory is simple and straight but its implementation is just the opposite.
     
     <item>
       <title>Store Hyperledger Fabric certificates and keys in CouchDB</title>
-      <link>https://schadokar.dev/posts/couchdb-keyvalue-store-hlf/</link>
+      <link>https://schadokar.dev/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/</link>
       <pubDate>Sat, 08 Feb 2020 10:02:42 +0530</pubDate>
       
-      <guid>https://schadokar.dev/posts/couchdb-keyvalue-store-hlf/</guid>
+      <guid>https://schadokar.dev/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/</guid>
       <description>Photo by Micah Williams on Unsplash
 Hyperledger Fabric is all about permissions. These permissions are provided in the form of certificates and keys. In broad term, it is known as Identities.
 When an application interacts with the Hyperledger Fabric Network, it uses this identity to authenticate itself. Fabric network validates the identity and authorizes the application to interact.

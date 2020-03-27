@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Create a Linux VM in Azure</title>
-      <link>https://schadokar.dev/to-the-point/create-a-linux-vm-in-azure/</link>
+      <title>How to create a Linux VM in Azure?</title>
+      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-azure/</link>
       <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/create-a-linux-vm-in-azure/</guid>
+      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-azure/</guid>
       <description>Create a new account in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.
 For students, Microsoft also give away many resources and azure credits. You just have to reach to them by their email.
 Login to your azure account.
