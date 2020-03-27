@@ -25,8 +25,8 @@ A FileMode represents a file's mode and permission bits. [Learn more](https://go
 package main
 
 import (
-    "fmt"
     "io/ioutil"
+    "log"
 )
 
 func main() {
@@ -37,7 +37,7 @@ func main() {
     err := ioutil.WriteFile("hello.txt", data, 0777)
 
     if err != nil {
-        fmt.Println(err)
+        log.Fatalf("%v", err)
     }
 }
 ```
@@ -80,6 +80,7 @@ package main
 import (
     "fmt"
     "io/ioutil"
+    "log"
 )
 
 func main() {
@@ -88,7 +89,7 @@ func main() {
     content, err := ioutil.ReadFile("hello.txt")
 
     if err != nil {
-        fmt.Printf("error while reading %v", err)
+        log.Fatalf("error while reading %v", err)
     }
 
     // convert the byte into string
@@ -112,11 +113,16 @@ package main
 
 import (
     "io/ioutil"
+    "log"
 )
 
 func main() {
     // Read the content
-    content, _ := ioutil.ReadFile("hello.txt")
+    content, err := ioutil.ReadFile("hello.txt")
+
+    if err != nil {
+        log.Fatalf("error while reading the file. %v", err)
+    }
     
     //  new content
     newText := []byte("\nAppended text.")
@@ -125,7 +131,11 @@ func main() {
     content = append(content, newText...)
 
     // overwrite the content of hello.txt
-    _ = ioutil.WriteFile("hello.txt", content, 0777)
+    err = ioutil.WriteFile("hello.txt", content, 0777)
+
+    if err != nil {
+        log.Fatalf("error while writing the file. %v", err)
+    }
 }
 ```
 The 3 dots after `newText...` is a variadic argument. In simple terms it will extract all the array elements. [Learn more](https://medium.com/rungo/variadic-function-in-go-5d9b23f4c01a)
@@ -165,7 +175,7 @@ Example
 package main
 
 import (
-    "fmt"
+    "log"
     "os"
 )
 
@@ -174,12 +184,14 @@ func main() {
     file, err := os.OpenFile("hello.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0777)
 
     if err != nil {
-        fmt.Println(err)
+        log.Fatalf("error while opening the file. %v", err)
     }
-    file.Close()
+
+    // close the file once program execution complete
+    defer file.Close()
 
     if _, err := file.Write([]byte("\nappended data")); err != nil {
-        fmt.Println(err)
+        log.Fatalf("error while writing the file. %v", err)
     }
 }
 
@@ -234,7 +246,7 @@ Save it in `library.json`
     err := ioutil.WriteFile("library.json", libJSON, 0777)
 
     if err != nil {
-        fmt.Printf("Error while writing a file %v", err)
+        log.Fatalf("Error while writing a file %v", err)
     }
 ```
 
@@ -246,7 +258,7 @@ Read the `library.json`.
     content, err := ioutil.ReadFile("library.json")
 
     if err != nil {
-        fmt.Printf("Error while reading a file %v", err)
+        log.Fatalf("Error while reading a file %v", err)
     }
 ```
 
@@ -260,7 +272,7 @@ The data is in byte. Unmarshal it to access the data.
     err = json.Unmarshal(content, &readLib)
 
     if err != nil {
-        fmt.Printf("Error while unmarshal the content  %v", err)
+        log.Fatalf("Error while unmarshal the content  %v", err)
     }
 
     // print all the books
@@ -291,6 +303,7 @@ import (
     "encoding/json"
     "fmt"
     "io/ioutil"
+    "log"
 )
 
 type book struct {
@@ -320,14 +333,14 @@ func main() {
     err := ioutil.WriteFile("library.json", libJSON, 0777)
 
     if err != nil {
-        fmt.Printf("Error while writing a file %v", err)
+        log.Fatalf("Error while writing a file %v", err)
     }
 
     // Read the file
     content, err := ioutil.ReadFile("library.json")
 
     if err != nil {
-        fmt.Printf("Error while reading a file %v", err)
+        log.Fatalf("Error while reading a file %v", err)
     }
 
     // create a new library
@@ -337,7 +350,7 @@ func main() {
     err = json.Unmarshal(content, &readLib)
 
     if err != nil {
-        fmt.Printf("Error while unmarshal the content  %v", err)
+        log.Fatalf("Error while unmarshal the content  %v", err)
     }
 
     // print all the books
@@ -360,6 +373,7 @@ import (
     "encoding/json"
     "fmt"
     "io/ioutil"
+    "log"
 )
 
 type book struct {
@@ -377,7 +391,7 @@ func main() {
     content, err := ioutil.ReadFile("library.json")
 
     if err != nil {
-        fmt.Printf("Error while reading a file %v", err)
+        log.Fatalf("Error while reading a file %v", err)
     }
 
     // create a new library
@@ -387,7 +401,7 @@ func main() {
     err = json.Unmarshal(content, &readLib)
 
     if err != nil {
-        fmt.Printf("Error while unmarshal the content  %v", err)
+        log.Fatalf("Error while unmarshal the content  %v", err)
     }
 
     // before update
@@ -410,13 +424,17 @@ func main() {
 
     // write the book
     // marshal to json or convert to json
-    libJSON, _ := json.Marshal(readLib)
+    libJSON, err := json.Marshal(readLib)
+
+    if err != nil {
+        log.Fatalf("Error while marshal. %v", err)
+    }
 
     // write to library.json
     err = ioutil.WriteFile("library.json", libJSON, 0777)
 
     if err != nil {
-        fmt.Printf("Error while writing a file %v", err)
+        log.Fatalf("Error while writing a file %v", err)
     }
 
     // After Update
@@ -426,14 +444,14 @@ func main() {
     content, err = ioutil.ReadFile("library.json")
 
     if err != nil {
-        fmt.Printf("Error while reading a file %v", err)
+        log.Fatalf("Error while reading a file %v", err)
     }
 
     // unmarshal the json to library
     err = json.Unmarshal(content, &readLib)
 
     if err != nil {
-        fmt.Printf("Error while unmarshal the content  %v", err)
+        log.Fatalf("Error while unmarshal the content  %v", err)
     }
 
     // print all the books

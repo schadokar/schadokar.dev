@@ -2,8 +2,8 @@
 title: "Create a Linux VM in AWS"
 date: 2020-03-25T09:45:45+05:30
 description: "Learn how to create a ubuntu vm in the aws."
-categories: ["Tutorial", "2-the-point", "to-the-point"]
-tags: ["to-the-point", "aws"]
+categories: ["Tutorial", "2-the-point", "to-the-point", "Cloud"]
+tags: ["to-the-point", "aws", "cloud"]
 published: true
 ---
 
@@ -35,6 +35,15 @@ Scroll down and select **Ubuntu Server 16.04 LTS (HVM).
 Select **t2.medium** and click **Configure Instance Details**.
 
 ![Instance Type](./images/aws-instance-type-3.PNG)
+
+Select next step till **Add Storage**.
+
+#### Step 3 Add Storage
+
+By default all the VMs comes with default storage. You can increase the default storage and add an extra disk.
+
+![aws-storage](./images/aws-storage.PNG)
+
 
 Select next step till **Configure Security Group**.
 

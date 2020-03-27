@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://schadokar.dev/tags/azure/</loc>
+    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/cloud/</loc>
+    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/create-a-linux-vm-in-azure/</loc>
+    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/</loc>
+    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/</loc>
+    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/to-the-point/</loc>
+    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/</loc>
+    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/compare-strings-in-golang/</loc>
+    <lastmod>2020-03-27T11:55:03+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/golang/</loc>
+    <lastmod>2020-03-27T11:55:03+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/strings/</loc>
+    <lastmod>2020-03-27T11:55:03+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://schadokar.dev/tags/aws/</loc>
     <lastmod>2020-03-25T09:45:45+05:30</lastmod>
   </url>
@@ -10,31 +60,6 @@
   <url>
     <loc>https://schadokar.dev/to-the-point/create-a-linux-vm-in-aws/</loc>
     <lastmod>2020-03-25T09:45:45+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/</loc>
-    <lastmod>2020-03-25T09:45:45+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/</loc>
-    <lastmod>2020-03-25T09:45:45+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/to-the-point/</loc>
-    <lastmod>2020-03-25T09:45:45+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/to-the-point/</loc>
-    <lastmod>2020-03-25T09:45:45+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/golang/</loc>
-    <lastmod>2020-03-24T11:13:24+05:30</lastmod>
   </url>
   
   <url>
@@ -69,11 +94,6 @@
   
   <url>
     <loc>https://schadokar.dev/to-the-point/how-to-join-strings-in-golang/</loc>
-    <lastmod>2020-02-27T19:46:51+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/strings/</loc>
     <lastmod>2020-02-27T19:46:51+05:30</lastmod>
   </url>
   
@@ -194,11 +214,6 @@
   
   <url>
     <loc>https://schadokar.dev/tags/angular/</loc>
-    <lastmod>2018-11-23T11:49:18+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/azure/</loc>
     <lastmod>2018-11-23T11:49:18+00:00</lastmod>
   </url>
   

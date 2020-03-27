@@ -7,6 +7,8 @@ tags: ["golang","strings","to-the-point"]
 published: true
 ---
 
+![cover](../images/radek-grzybowski-eBRTYyjwpRY-unsplash.jpg)
+
 A string value is a sequence of bytes.
 
 ## Using the Comparison operators
