@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Fri, 27 Mar 2020 14:56:35 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 09:45:27 +0530</lastBuildDate>
     
 	<atom:link href="https://schadokar.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cloud</title>
+      <link>https://schadokar.dev/tags/cloud/</link>
+      <pubDate>Sun, 29 Mar 2020 09:45:27 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gcp</title>
+      <link>https://schadokar.dev/tags/gcp/</link>
+      <pubDate>Sun, 29 Mar 2020 09:45:27 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>to-the-point</title>
+      <link>https://schadokar.dev/tags/to-the-point/</link>
+      <pubDate>Sun, 29 Mar 2020 09:45:27 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/to-the-point/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>azure</title>
@@ -18,24 +45,6 @@
       <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/azure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloud</title>
-      <link>https://schadokar.dev/tags/cloud/</link>
-      <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/cloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>to-the-point</title>
-      <link>https://schadokar.dev/tags/to-the-point/</link>
-      <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/to-the-point/</guid>
       <description></description>
     </item>
     

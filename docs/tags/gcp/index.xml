@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gcp on Shubham Chadokar</title>
+    <link>https://schadokar.dev/tags/gcp/</link>
+    <description>Recent content in gcp on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Sun, 29 Mar 2020 09:45:27 +0530</lastBuildDate>
+    
+	<atom:link href="https://schadokar.dev/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Create a Linux Vm in Gcp</title>
+      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</link>
+      <pubDate>Sun, 29 Mar 2020 09:45:27 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</guid>
+      <description>Create a new account on GCP. For new users, GCP credits $300 dollars in the account for 12 months and with many free services.
+Login to your GCP account.
+Create a new virtual machine Select Compute Engine from the top left menu.
+Menu &amp;gt; Compute &amp;gt; Compute Engine
+Create a new project In GCP, a project is a resource manager. All the related resources of a project place inside it. Create a new project demo.</description>
+    </item>
+    
+  </channel>
+</rss>

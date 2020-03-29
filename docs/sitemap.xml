@@ -3,37 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://schadokar.dev/tags/cloud/</loc>
+    <lastmod>2020-03-29T09:45:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/gcp/</loc>
+    <lastmod>2020-03-29T09:45:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</loc>
+    <lastmod>2020-03-29T09:45:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/</loc>
+    <lastmod>2020-03-29T09:45:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/</loc>
+    <lastmod>2020-03-29T09:45:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/to-the-point/</loc>
+    <lastmod>2020-03-29T09:45:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/to-the-point/</loc>
+    <lastmod>2020-03-29T09:45:27+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://schadokar.dev/tags/azure/</loc>
     <lastmod>2020-03-27T14:56:35+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://schadokar.dev/tags/cloud/</loc>
-    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-azure/</loc>
-    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/</loc>
-    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/</loc>
-    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/to-the-point/</loc>
-    <lastmod>2020-03-27T14:56:35+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/to-the-point/</loc>
     <lastmod>2020-03-27T14:56:35+05:30</lastmod>
   </url>
   
