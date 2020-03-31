@@ -1,7 +1,7 @@
 ---
-title: "How to Create a Linux Vm in Gcp"
+title: "How to Create a Linux VM in GCP"
 date: 2020-03-29T09:45:27+05:30
-description: "Learn how to create a linux vm in gcp."
+description: "Learn how to create a linux vm in GCP."
 categories: ["Tutorial", "2-the-point", "to-the-point", "Cloud", "GCP"]
 tags: ["to-the-point","gcp","cloud"]
 published: true

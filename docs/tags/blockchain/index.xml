@@ -73,5 +73,16 @@ Stephen Grider For Ethereum and Docker course on Udemy.
  Before beginning lets understand what we’re going to build and how the structure of our Dapp will look like.</description>
     </item>
     
+    <item>
+      <title>Run the Ganache Cli Inside the Docker Container</title>
+      <link>https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container/</link>
+      <pubDate>Mon, 01 Apr 2019 10:03:57 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container/</guid>
+      <description>In this article, we’ll run the ganache-cli inside the docker container and then we will connect it to the Metamask and transfer some Ether from one account to another.
+Prerequisites:
+ Docker installed in your machine. Please check out this link and install which fits with your OS. The Metamask plugin installed to your browser. Please check out this link and follow the instructions to install it.  Lets first create the project directory by name docker-ganache.</description>
+    </item>
+    
   </channel>
 </rss>

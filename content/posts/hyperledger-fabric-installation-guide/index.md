@@ -23,8 +23,8 @@ My apologies for macOS readers, instructions for macOS is not included as I don�
 #### **Contents:**
 
 1.  Prerequisites
-2.  [Linux Installation](https://medium.com/p/74065855eca9#c566)
-3.  [Windows Installation](https://medium.com/p/74065855eca9#30f8)
+2.  [Linux Installation](#linux-installation)
+3.  [Windows Installation](#windows-installation)
 
 ---
 
@@ -42,13 +42,13 @@ These prerequisites’ versions are according to the fabric v1.4 [documentation]
 
 ---
 
-### **Linux Installation**
+### Linux Installation
 
 Linux installation is pretty straight forward compared to windows. Few commands and Fabric is ready.
 
 I have provisioned a Linux 16.04 VM from AWS for this article. All the instructions will run in the terminal. I haven’t found any system requirement information in Hyperledger documentation. Please comment if you have a reference for the system requirement.
 
-#### **Step 1: Create a new sudo user**
+#### Step 1: Create a new sudo user
 
 It is recommended that Hyperledger Fabric shouldn’t be installed as a root user. Open the terminal.
 

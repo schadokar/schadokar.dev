@@ -223,6 +223,16 @@
   </url>
   
   <url>
+    <loc>https://schadokar.dev/tags/ganache/</loc>
+    <lastmod>2019-04-01T10:03:57+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container/</loc>
+    <lastmod>2019-04-01T10:03:57+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://schadokar.dev/tags/angular/</loc>
     <lastmod>2018-11-23T11:49:18+00:00</lastmod>
   </url>

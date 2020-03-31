@@ -134,12 +134,7 @@ Catalyst Network has created an ecosystem where everyone can participate in one 
 
 If I have to sum up the Catalyst Network, I can mathematically express it as;
 
-_Catalyst Network = PoW as PoS + Raiden Network + IPFS + Filecoin + etc._
-
-To know more about the Catalyst Network, join the upcoming virtual meetup. This is a monthly virtual meetup.
-
-[**Catalyst**  
-\_Sep 19, 2019 at 5:00 PM (CET) Approx. 40 min The Catalyst Network is a fast, light, secure and decentralised network…\_catalystnet.org](https://catalystnet.org/RegisterNow.html "https://catalystnet.org/RegisterNow.html")[](https://catalystnet.org/RegisterNow.html)
+***Catalyst Network = PoW as PoS + Raiden Network + IPFS + Filecoin + etc.***
 
 ---
 

@@ -28,9 +28,9 @@ Before beginning lets understand what we’re going to build and how the structu
 
 In the Dapp there will be three modules:
 
-1.  ganache-cli
-2.  Ethereum-Dapp and Server
-3.  Client (React App)
+**1.  ganache-cli**
+**2.  Ethereum-Dapp and Server**
+**3.  Client (React App)**
 
 The above 3 modules will run in individual docker containers.
 
@@ -44,27 +44,27 @@ Yeah, all can be build in one container and everything will be straight forward.
 
 ### **Project Setup**
 
-Create a project folder and give it the name **“docker-ethereum”**.
+Create a project folder and give it the name **docker-ethereum**.
 
 **Directory Structure**
 
-```
+```sh
 docker-ethereum
-- client
-- ethereum
-- server
-- .dockerignore
-- docker-compose.yml
-- Dockerfile
-- Dockerfile.ganache
-- package.json
+    - client
+    - ethereum
+    - server
+    - .dockerignore
+    - docker-compose.yml
+    - Dockerfile
+    - Dockerfile.ganache
+    - package.json
 ```
 
 #### package.json
 
 Create a `package.json` and paste the below code:
 
-package.json
+{{< gist schadokar 36140ba36e643ef5f464a31004e80006 >}}
 
 We have finished installing the dependencies for the project.
 
@@ -84,25 +84,25 @@ Inside the project directory, create a `Dockerfile.ganache` .
 
 In this Dockerfile, we’ll write all the instructions to set up and run the ganache-cli inside the container.
 
-Dockerfile.ganache
+{{< gist schadokar d08177076b99a0284d6c7f46b4bb9cc0 >}}
 
-On line 2, to build this ganache-cli image, we’re taking node:alpine as a base image.
+- **Line 2:** to build this ganache-cli image, we’re taking node:alpine as a base image.
 
-On line 5, we’re setting /app folder as the working directory of the image where all our instructions will run.
+- **Line 5:** we’re setting /app folder as the working directory of the image where all our instructions will run.
 
-On line 8, we’re installing **ganache-cli** globally.
+**Line 8:** we’re installing **ganache-cli** globally.
 
-On line 12, we’re setting `ganache-cli -h 0.0.0.0` as the default command of the image.
+**Line 12:** we’re setting `ganache-cli -h 0.0.0.0` as the default command of the image.
 
 > Ganache-cli’s default host is 127.0.0.1 but for docker instance it is 0.0.0.0
 
-I have explained all the above instructions in detail in [my last post](https://medium.com/@shubhamchadokar04/run-the-ganache-cli-inside-the-docker-container-5e70bc962bfe). Please check it, if you find any difficulty here.
+I have explained all the above instructions in detail in [my last post](https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container). Please check it, if you find any difficulty here.
 
 Our network is configured.
 
 ---
 
-### 2\. Ethereum Dapp and Server
+### 2. Ethereum Dapp and Server
 
 #### Ethereum Dapp
 
@@ -110,7 +110,7 @@ Create a `Ethereum`folder in the project directory.
 
 **Directory Structure**
 
-```
+```sh
 Ethereum
 - build
 - contracts
@@ -128,9 +128,12 @@ Inside the Ethereum directory:
 
 Create a new folder `contracts`and a new file `Message.sol` in the contracts folder and paste the below code.
 
-Message.sol
+{{< gist schadokat 339824556db3c6f53d3172ab227cac0b >}}
 
-We’re creating a simple message contract. There will be 3 functions in this smart contract (1) constructor (2) setMessage (3) getMessage
+We’re creating a simple message contract. There will be 3 functions in this smart contract  
+1) constructor 
+2) setMessage 
+3) getMessage
 
 In the Message smart contract when it will run for the first time, that time the `constructor`will set the message as the initial message.
 
@@ -142,21 +145,23 @@ The `getMessage` is a view function and it’ll return the value of the message 
 
 Create a new file `compile.js` and paste the below code in it. This will compile the `Message.sol`smart contract and save the compiled contract in the `build` folder as `Message.json` .
 
-compile.js
+{{< gist schadokar 339824556db3c6f53d3172ab227cac0b >}}
 
 #### web3.js
 
 Create a `web3.js` file which will work as a bridge between the application and the ethereum network.
 
-> web3.js is a collection of libraries which allow you to interact with a local or remote Ethereum node, using an HTTP, WebSocket or IPC connection.
+> **web3.js** is a collection of libraries which allow you to interact with a local or remote Ethereum node, using an HTTP, WebSocket or IPC connection.
 
-web3.js can be used in 2 ways, (1) server-side web3js: transaction signed on the server side (2) client-side web3js: transaction signed on the browser side. In this web3js invoked by third-party like Mist or Metamask. In the client-side web3js invoked in the html pages.
+web3.js can be used in 2 ways, 
+1) **server-side web3js:** transaction signed on the server side 
+2) **client-side web3js:** transaction signed on the browser side. In this web3js invoked by third-party like **Mist or Metamask**. In the client-side web3js invoked in the html pages.
 
 For this project, we’re using server-side web3js.
 
 Copy and paste the below code to the `web3.js`
 
-web3.js
+{{< gist schadokar 2ed83ae1f7a45cff6da974d989f0abcd >}}
 
 > Take note of web3 provider `http://ganache:8545` . Here, **ganache** is the name of the container in which ganache-cli is running.
 
@@ -164,7 +169,7 @@ web3.js
 
 Create a `deploy.js` file and paste the below code in it. It will take the compiled contract `Message.json` and deploy the contract to the network.
 
-deploy.js
+{{< gist schadokar 7ca4cd7655cf27e93432fd4fe60a1689 >}}
 
 From the `web3.js` file, `deploy.js` import the `web3` instance of `ganache-cli` and `web3network` as `ganache` .
 
@@ -172,13 +177,13 @@ From the `web3.js` file, `deploy.js` import the `web3` instance of `ganache-cli`
 
 Create a new file `logic.js` and paste the below code in it. It consists of all the logic to interact with the deployed `Message` contract on the network.
 
-logic.js
+{{< gist schadokar 7ca4cd7655cf27e93432fd4fe60a1689 >}}
 
 There are 3 functions inside the `logic.js`
 
-1.  `getContractObject` it will return the contract object/instance which was deployed on the network using `deploy.js` . This object will then call the smart contract.
-2.  `setMessage` it requires 1 string argument and set this as a message to the `message` variable in the smart contract.
-3.  `getMessage` will return the message set either by `constructor` or `setMessage`
+1.  **getContractObject** it will return the contract object/instance which was deployed on the network using `deploy.js` . This object will then call the smart contract.
+2.  **setMessage** it requires 1 string argument and set this as a message to the `message` variable in the smart contract.
+3.  **getMessage** will return the message set either by `constructor` or `setMessage`
 
 The `ethereum` module is complete.
 
@@ -190,12 +195,12 @@ Create a `server` folder in the project directory.
 
 **Directory Structure**
 
-```
+```sh
 server
-- routes
-  - contract-API.js
-  - smart-contract-API.js
-- index.js
+  - routes
+    - contract-API.js
+    - smart-contract-API.js
+  - index.js
 ```
 
 #### routes
@@ -206,7 +211,7 @@ Create a `routes` folder inside the `server` folder.
 
 Create a `contract-API.js` file and paste the below the code.
 
-contract-API.js
+{{< gist schadokar b921307da98fb5e704698488cba44b5b >}}
 
 To compile and deploy the contract we have created APIs instead of manually compiling and deploying it on the network.
 
@@ -216,13 +221,15 @@ If you remember, our `Message` smart contract’s constructor requires an initia
 
 Create a `smart-contract-API.js` and paste the below code.
 
-smart-contract-API.js
+{{< gist schadokar f560e7d20bdbfb225277124ce8508f25 >}}
 
 `smart-contract-API.js` routers will call `setMessage` and `getMessage` from `logic.js`
 
 #### index.js
 
 Create a `index.js` file in the`server` folder and paste the below code.
+
+{{< gist schadokar 5aeb887f21d71a36bbe6effaf0b3b4bd >}}
 
 This is the server for ethereum dapp.
 
@@ -236,7 +243,7 @@ Let’s dockerize it.
 
 Create a `Dockerfile` in the root project directory and paste the below code.
 
-server Dockerfile
+{{< gist schadokar 7a88016d2992c46c338bd815c095258d >}}
 
 The docker image will create according to Dockerfile.
 
@@ -256,7 +263,7 @@ To ignore the files or folders while building the docker image just like the `.
 
 Create a `.dockerignore` file and paste the below code.
 
-```
+```node
 node_modules/
 
 client/
@@ -278,19 +285,19 @@ For the react application, we’re using `create-react-app` tool for the Dapp.
 
 We need to install the `create-react-app`globally. Open your Terminal or console and run:
 
-```
+```node
 npm install -g create-react-app
 ```
 
 From the project directory, open the terminal or console to create the react app by name `client` and run the below command.
 
-```
+```node
 create-react-app client
 ```
 
 **Directory Structure**
 
-```
+```js
 client
 - public
   - favicon.ico
@@ -323,7 +330,7 @@ For more information on react please follow the below links:
 
 Open `index.html` from the `public` folder and change the title to `Message App` . Add the below link in the `<head>` tag. This is the fonts which are used in the application.
 
-```
+```html
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 ```
 
@@ -337,7 +344,7 @@ Create a `message.js` in the `src` folder and paste the below code. This is the 
 
 > Note: I am not good at React so I can just give details of methods which are used in it.
 
-message.js
+{{< gist schadokar e71322f0e16824363824c19beff01863 >}}
 
 A component is the building block of any react app. To create a component it requires `Component` module from `react`the library. The endpoint is set to `http://localhost:4000` as the server is running at `4000` port.
 
@@ -345,7 +352,7 @@ To make any request to the server `axios` library is used. To learn more about i
 
 Open the terminal from the `client` directory and run the below command:
 
-```
+```node
 npm install axios --save
 ```
 
@@ -371,11 +378,13 @@ Following methods are used in `message.js` :
 
 Open the `App.js` from `src` folder and paste the below code. The application’s `Route` set at `/` . On this route, it will serve the `message.js` component.
 
+{{< gist schadokar 53316a76761d6cb15c280a69185a4341 >}}
+
 To create the route `react-router-dom` library is used.
 
 Open the terminal from `client` directory and run the below command:
 
-```
+```node
 npm install react-router-dom --save
 ```
 
@@ -387,7 +396,7 @@ In this Dockerfile we will write the instruction to create the image of the reac
 
 Create a `Dockerfile` in the `client` directory and paste the below code.
 
-Dockerfile
+{{< gist schadokar f8e954b7d9c39e447ad05e60247e5dcc >}}
 
 All the commands are self-explanatory. According to this Dockerfile, a docker image will build. The client (react-app) will run inside the container using this image.
 
@@ -411,7 +420,7 @@ Everything is set. Now, the last thing we have to do, build these docker images 
 
 Create a `docker-compose.yml` in the root project directory and paste the below code.
 
-docker-compose.yml
+{{< gist schadokar 1852d9d4e7056640c9342b3da01d3dc5 >}}
 
 You might be thinking about why we even need `docker-compose.yml` .
 
@@ -456,7 +465,7 @@ So, the hard part is over. Now, the fun part let’s run the application.
 
 Open the terminal from the root project directory and run the below command:
 
-```
+```docker
 docker-compose up --build
 ```
 
@@ -496,12 +505,10 @@ We successfully created the Ethereum Dapp with React and Docker.
 
 You don’t have to build the `docker-compose.yml` every time. Next time you just have to run the below command to run the application.
 
-```
+```docker
 docker-compose up
 ```
 
 You can clone the complete project from the [GitHub link](https://github.com/schadokar/docker-ethereum.git).
-
-> Hope you like the tutorial. Please comment for any improvement in the article. Please clap and share if you learn something interesting.
 
 ---

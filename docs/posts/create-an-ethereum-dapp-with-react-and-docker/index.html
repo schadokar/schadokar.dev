@@ -102,11 +102,9 @@ if (!doNotTrack) {
 <hr>
 <p>Before beginning lets understand what we’re going to build and how the structure of our Dapp will look like.</p>
 <p>In the Dapp there will be three modules:</p>
-<ol>
-<li>ganache-cli</li>
-<li>Ethereum-Dapp and Server</li>
-<li>Client (React App)</li>
-</ol>
+<p><strong>1.  ganache-cli</strong>
+<strong>2.  Ethereum-Dapp and Server</strong>
+<strong>3.  Client (React App)</strong></p>
 <p>The above 3 modules will run in individual docker containers.</p>
 <p><img src="./asset-2.png" alt="D app"></p>
 <blockquote>
@@ -115,20 +113,21 @@ if (!doNotTrack) {
 <p>Yeah, all can be build in one container and everything will be straight forward. Just for some fun, we’re using different containers.</p>
 <hr>
 <h3 id="project-setup"><strong>Project Setup</strong></h3>
-<p>Create a project folder and give it the name <strong>“docker-ethereum”</strong>.</p>
+<p>Create a project folder and give it the name <strong>docker-ethereum</strong>.</p>
 <p><strong>Directory Structure</strong></p>
-<pre><code>docker-ethereum
-- client
-- ethereum
-- server
-- .dockerignore
-- docker-compose.yml
-- Dockerfile
-- Dockerfile.ganache
-- package.json
-</code></pre><h4 id="packagejson">package.json</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker-ethereum
+    - client
+    - ethereum
+    - server
+    - .dockerignore
+    - docker-compose.yml
+    - Dockerfile
+    - Dockerfile.ganache
+    - package.json
+</code></pre></div><h4 id="packagejson">package.json</h4>
 <p>Create a <code>package.json</code> and paste the below code:</p>
-<p>package.json</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/36140ba36e643ef5f464a31004e80006.js"></script>
+
 <p>We have finished installing the dependencies for the project.</p>
 <hr>
 <p>To build any application our network should be ready. So, let’s first start with our ganache-cli as the network.</p>
@@ -140,22 +139,29 @@ if (!doNotTrack) {
 <p>In our application ganache-cli will run in a docker container.</p>
 <p>Inside the project directory, create a <code>Dockerfile.ganache</code> .</p>
 <p>In this Dockerfile, we’ll write all the instructions to set up and run the ganache-cli inside the container.</p>
-<p>Dockerfile.ganache</p>
-<p>On line 2, to build this ganache-cli image, we’re taking node:alpine as a base image.</p>
-<p>On line 5, we’re setting /app folder as the working directory of the image where all our instructions will run.</p>
-<p>On line 8, we’re installing <strong>ganache-cli</strong> globally.</p>
-<p>On line 12, we’re setting <code>ganache-cli -h 0.0.0.0</code> as the default command of the image.</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/d08177076b99a0284d6c7f46b4bb9cc0.js"></script>
+
+<ul>
+<li>
+<p><strong>Line 2:</strong> to build this ganache-cli image, we’re taking node:alpine as a base image.</p>
+</li>
+<li>
+<p><strong>Line 5:</strong> we’re setting /app folder as the working directory of the image where all our instructions will run.</p>
+</li>
+</ul>
+<p><strong>Line 8:</strong> we’re installing <strong>ganache-cli</strong> globally.</p>
+<p><strong>Line 12:</strong> we’re setting <code>ganache-cli -h 0.0.0.0</code> as the default command of the image.</p>
 <blockquote>
 <p>Ganache-cli’s default host is 127.0.0.1 but for docker instance it is 0.0.0.0</p>
 </blockquote>
-<p>I have explained all the above instructions in detail in <a href="https://medium.com/@shubhamchadokar04/run-the-ganache-cli-inside-the-docker-container-5e70bc962bfe">my last post</a>. Please check it, if you find any difficulty here.</p>
+<p>I have explained all the above instructions in detail in <a href="https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container">my last post</a>. Please check it, if you find any difficulty here.</p>
 <p>Our network is configured.</p>
 <hr>
 <h3 id="2-ethereum-dapp-andserver">2. Ethereum Dapp and Server</h3>
 <h4 id="ethereum-dapp">Ethereum Dapp</h4>
 <p>Create a <code>Ethereum</code>folder in the project directory.</p>
 <p><strong>Directory Structure</strong></p>
-<pre><code>Ethereum
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Ethereum
 - build
 - contracts
   - Message.sol
@@ -164,72 +170,91 @@ if (!doNotTrack) {
 - logic.js
 - receipt-ganache.json
 - web3.js
-</code></pre><p>Inside the Ethereum directory:</p>
+</code></pre></div><p>Inside the Ethereum directory:</p>
 <h4 id="contracts"><strong>contracts</strong></h4>
 <p>Create a new folder <code>contracts</code>and a new file <code>Message.sol</code> in the contracts folder and paste the below code.</p>
-<p>Message.sol</p>
-<p>We’re creating a simple message contract. There will be 3 functions in this smart contract (1) constructor (2) setMessage (3) getMessage</p>
+<script type="application/javascript" src="https://gist.github.com/schadokat/339824556db3c6f53d3172ab227cac0b.js"></script>
+
+<p>We’re creating a simple message contract. There will be 3 functions in this smart contract</p>
+<ol>
+<li>constructor</li>
+<li>setMessage</li>
+<li>getMessage</li>
+</ol>
 <p>In the Message smart contract when it will run for the first time, that time the <code>constructor</code>will set the message as the initial message.</p>
 <p>The <code>setMessage</code> function will set a new message.</p>
 <p>The <code>getMessage</code> is a view function and it’ll return the value of the message variable which was set either by <code>constructor</code> or <code>setMessage</code> .</p>
 <h4 id="compilejs">compile.js</h4>
 <p>Create a new file <code>compile.js</code> and paste the below code in it. This will compile the <code>Message.sol</code>smart contract and save the compiled contract in the <code>build</code> folder as <code>Message.json</code> .</p>
-<p>compile.js</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/339824556db3c6f53d3172ab227cac0b.js"></script>
+
 <h4 id="web3js">web3.js</h4>
 <p>Create a <code>web3.js</code> file which will work as a bridge between the application and the ethereum network.</p>
 <blockquote>
-<p>web3.js is a collection of libraries which allow you to interact with a local or remote Ethereum node, using an HTTP, WebSocket or IPC connection.</p>
+<p><strong>web3.js</strong> is a collection of libraries which allow you to interact with a local or remote Ethereum node, using an HTTP, WebSocket or IPC connection.</p>
 </blockquote>
-<p>web3.js can be used in 2 ways, (1) server-side web3js: transaction signed on the server side (2) client-side web3js: transaction signed on the browser side. In this web3js invoked by third-party like Mist or Metamask. In the client-side web3js invoked in the html pages.</p>
+<p>web3.js can be used in 2 ways,</p>
+<ol>
+<li><strong>server-side web3js:</strong> transaction signed on the server side</li>
+<li><strong>client-side web3js:</strong> transaction signed on the browser side. In this web3js invoked by third-party like <strong>Mist or Metamask</strong>. In the client-side web3js invoked in the html pages.</li>
+</ol>
 <p>For this project, we’re using server-side web3js.</p>
 <p>Copy and paste the below code to the <code>web3.js</code></p>
-<p>web3.js</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/2ed83ae1f7a45cff6da974d989f0abcd.js"></script>
+
 <blockquote>
 <p>Take note of web3 provider <code>http://ganache:8545</code> . Here, <strong>ganache</strong> is the name of the container in which ganache-cli is running.</p>
 </blockquote>
 <h4 id="deployjs">deploy.js</h4>
 <p>Create a <code>deploy.js</code> file and paste the below code in it. It will take the compiled contract <code>Message.json</code> and deploy the contract to the network.</p>
-<p>deploy.js</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/7ca4cd7655cf27e93432fd4fe60a1689.js"></script>
+
 <p>From the <code>web3.js</code> file, <code>deploy.js</code> import the <code>web3</code> instance of <code>ganache-cli</code> and <code>web3network</code> as <code>ganache</code> .</p>
 <h4 id="logicjs">logic.js</h4>
 <p>Create a new file <code>logic.js</code> and paste the below code in it. It consists of all the logic to interact with the deployed <code>Message</code> contract on the network.</p>
-<p>logic.js</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/7ca4cd7655cf27e93432fd4fe60a1689.js"></script>
+
 <p>There are 3 functions inside the <code>logic.js</code></p>
 <ol>
-<li><code>getContractObject</code> it will return the contract object/instance which was deployed on the network using <code>deploy.js</code> . This object will then call the smart contract.</li>
-<li><code>setMessage</code> it requires 1 string argument and set this as a message to the <code>message</code> variable in the smart contract.</li>
-<li><code>getMessage</code> will return the message set either by <code>constructor</code> or <code>setMessage</code></li>
+<li><strong>getContractObject</strong> it will return the contract object/instance which was deployed on the network using <code>deploy.js</code> . This object will then call the smart contract.</li>
+<li><strong>setMessage</strong> it requires 1 string argument and set this as a message to the <code>message</code> variable in the smart contract.</li>
+<li><strong>getMessage</strong> will return the message set either by <code>constructor</code> or <code>setMessage</code></li>
 </ol>
 <p>The <code>ethereum</code> module is complete.</p>
 <p>Now, <code>server</code> needs to be set up which will call the <code>ethereum</code> module.</p>
 <h3 id="server">server</h3>
 <p>Create a <code>server</code> folder in the project directory.</p>
 <p><strong>Directory Structure</strong></p>
-<pre><code>server
-- routes
-  - contract-API.js
-  - smart-contract-API.js
-- index.js
-</code></pre><h4 id="routes">routes</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">server
+  - routes
+    - contract-API.js
+    - smart-contract-API.js
+  - index.js
+</code></pre></div><h4 id="routes">routes</h4>
 <p>Create a <code>routes</code> folder inside the <code>server</code> folder.</p>
 <p><strong>contract-API.js</strong></p>
 <p>Create a <code>contract-API.js</code> file and paste the below the code.</p>
-<p>contract-API.js</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/b921307da98fb5e704698488cba44b5b.js"></script>
+
 <p>To compile and deploy the contract we have created APIs instead of manually compiling and deploying it on the network.</p>
 <p>If you remember, our <code>Message</code> smart contract’s constructor requires an initial message. To keep it simple, by default we’re setting initial message as <code>Hello World!</code> . You can change it in the deploy router.</p>
 <h4 id="smart-contract-apijs">smart-contract-API.js</h4>
 <p>Create a <code>smart-contract-API.js</code> and paste the below code.</p>
-<p>smart-contract-API.js</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/f560e7d20bdbfb225277124ce8508f25.js"></script>
+
 <p><code>smart-contract-API.js</code> routers will call <code>setMessage</code> and <code>getMessage</code> from <code>logic.js</code></p>
 <h4 id="indexjs">index.js</h4>
 <p>Create a <code>index.js</code> file in the<code>server</code> folder and paste the below code.</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/5aeb887f21d71a36bbe6effaf0b3b4bd.js"></script>
+
 <p>This is the server for ethereum dapp.</p>
 <p>At the top, we’re importing routes <code>contract-API.js</code> and <code>smart-contract-API.js</code> . The server is listening at the port <code>4000</code> .</p>
 <p>The server module is complete here.</p>
 <p>Let’s dockerize it.</p>
 <h4 id="dockerfile">Dockerfile</h4>
 <p>Create a <code>Dockerfile</code> in the root project directory and paste the below code.</p>
-<p>server Dockerfile</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/7a88016d2992c46c338bd815c095258d.js"></script>
+
 <p>The docker image will create according to Dockerfile.</p>
 <ul>
 <li><code>node:alpine</code> To create an image we require a base image which comes with some pre-requisite software. Our server and ethereum are dependent on <code>node</code> that’s why we are using <code>node:alpine</code> as a base image. <code>alpine</code> in short, is the minimum required libraries to run a node application.</li>
@@ -244,7 +269,7 @@ if (!doNotTrack) {
 <p>To ignore the files or folders while building the docker image just like the <code>.gitignore</code> in docker there is <code>.dockerignore</code> file.</p>
 <h4 id="dockerignore">.dockerignore</h4>
 <p>Create a <code>.dockerignore</code> file and paste the below code.</p>
-<pre><code>node_modules/
+<pre><code class="language-node" data-lang="node">node_modules/
 
 client/
 </code></pre><p>It will ignore the <code>node_modules</code> and <code>client</code> directory which we’ll create in the next section. If we don’t ignore the <code>client</code> directory then it will copy the client application too.</p>
@@ -257,30 +282,30 @@ client/
 </blockquote>
 <p><strong>Installing Create React App</strong></p>
 <p>We need to install the <code>create-react-app</code>globally. Open your Terminal or console and run:</p>
-<pre><code>npm install -g create-react-app
+<pre><code class="language-node" data-lang="node">npm install -g create-react-app
 </code></pre><p>From the project directory, open the terminal or console to create the react app by name <code>client</code> and run the below command.</p>
-<pre><code>create-react-app client
+<pre><code class="language-node" data-lang="node">create-react-app client
 </code></pre><p><strong>Directory Structure</strong></p>
-<pre><code>client
-- public
-  - favicon.ico
-  - index.html
-  - manifest.json
-- src
-  - App.css
-  - App.js
-  - App.test.js
-  - index.css
-  - index.js
-  - logo.svg
-  - message.js
-  - serviceWorker.js
-- .dockerignore
-- Dockerfile
-- package-lock.json
-- package.json
-- README.md
-</code></pre><p>Once the <code>client</code> is created you will see a folder structure like above except <code>message.js</code> inside the <code>src</code> ,<code>Dockerfile</code> and <code>.dockerignore</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">client</span>
+<span style="color:#f92672">-</span> <span style="color:#66d9ef">public</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">favicon</span>.<span style="color:#a6e22e">ico</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">index</span>.<span style="color:#a6e22e">html</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">manifest</span>.<span style="color:#a6e22e">json</span>
+<span style="color:#f92672">-</span> <span style="color:#a6e22e">src</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">App</span>.<span style="color:#a6e22e">css</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">App</span>.<span style="color:#a6e22e">js</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">App</span>.<span style="color:#a6e22e">test</span>.<span style="color:#a6e22e">js</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">index</span>.<span style="color:#a6e22e">css</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">index</span>.<span style="color:#a6e22e">js</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">logo</span>.<span style="color:#a6e22e">svg</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">js</span>
+  <span style="color:#f92672">-</span> <span style="color:#a6e22e">serviceWorker</span>.<span style="color:#a6e22e">js</span>
+<span style="color:#f92672">-</span> .<span style="color:#a6e22e">dockerignore</span>
+<span style="color:#f92672">-</span> <span style="color:#a6e22e">Dockerfile</span>
+<span style="color:#f92672">-</span> <span style="color:#66d9ef">package</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lock</span>.<span style="color:#a6e22e">json</span>
+<span style="color:#f92672">-</span> <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span>
+<span style="color:#f92672">-</span> <span style="color:#a6e22e">README</span>.<span style="color:#a6e22e">md</span>
+</code></pre></div><p>Once the <code>client</code> is created you will see a folder structure like above except <code>message.js</code> inside the <code>src</code> ,<code>Dockerfile</code> and <code>.dockerignore</code>.</p>
 <p>For more information on react please follow the below links:</p>
 <ul>
 <li><a href="https://facebook.github.io/create-react-app/docs/getting-started">https://facebook.github.io/create-react-app/docs/getting-started</a></li>
@@ -288,19 +313,20 @@ client/
 </ul>
 <h4 id="indexhtml">index.html</h4>
 <p>Open <code>index.html</code> from the <code>public</code> folder and change the title to <code>Message App</code> . Add the below link in the <code>&lt;head&gt;</code> tag. This is the fonts which are used in the application.</p>
-<pre><code>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'&gt;
-</code></pre><h4 id="appcss">App.css</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://fonts.googleapis.com/css?family=Open+Sans:300&#39;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;stylesheet&#39;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/css&#39;</span>&gt;
+</code></pre></div><h4 id="appcss">App.css</h4>
 <p>Open the <code>App.css</code> from the <code>src</code> folder and paste the <code>css</code> from this <a href="https://gist.github.com/schadokar/7635212e2a284bf6055f806f8fc1f664">link</a>.</p>
 <h4 id="messagejs">message.js</h4>
 <p>Create a <code>message.js</code> in the <code>src</code> folder and paste the below code. This is the file which will work as the front-end of the application.</p>
 <blockquote>
 <p>Note: I am not good at React so I can just give details of methods which are used in it.</p>
 </blockquote>
-<p>message.js</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/e71322f0e16824363824c19beff01863.js"></script>
+
 <p>A component is the building block of any react app. To create a component it requires <code>Component</code> module from <code>react</code>the library. The endpoint is set to <code>http://localhost:4000</code> as the server is running at <code>4000</code> port.</p>
 <p>To make any request to the server <code>axios</code> library is used. To learn more about it follow this <a href="https://www.npmjs.com/package/axios">link</a>.</p>
 <p>Open the terminal from the <code>client</code> directory and run the below command:</p>
-<pre><code>npm install axios --save
+<pre><code class="language-node" data-lang="node">npm install axios --save
 </code></pre><p>We have created a <code>Message</code> component by extending the <code>Component</code> and at the bottom exported the <code>Message</code> .</p>
 <p>There are 2 states in the <code>Message</code> component <code>message</code> and <code>output</code> .</p>
 <p>States are the data which defines and control the behaviour of the component. Learn more about states in this <a href="https://facebook.github.io/react-native/docs/state">link</a>.</p>
@@ -316,14 +342,17 @@ client/
 </ul>
 <h4 id="appjs">App.js</h4>
 <p>Open the <code>App.js</code> from <code>src</code> folder and paste the below code. The application’s <code>Route</code> set at <code>/</code> . On this route, it will serve the <code>message.js</code> component.</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/53316a76761d6cb15c280a69185a4341.js"></script>
+
 <p>To create the route <code>react-router-dom</code> library is used.</p>
 <p>Open the terminal from <code>client</code> directory and run the below command:</p>
-<pre><code>npm install react-router-dom --save
+<pre><code class="language-node" data-lang="node">npm install react-router-dom --save
 </code></pre><h4 id="dockerfile-1">Dockerfile</h4>
 <p>With this Dockerfile our client module will complete.</p>
 <p>In this Dockerfile we will write the instruction to create the image of the react application.</p>
 <p>Create a <code>Dockerfile</code> in the <code>client</code> directory and paste the below code.</p>
-<p>Dockerfile</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/f8e954b7d9c39e447ad05e60247e5dcc.js"></script>
+
 <p>All the commands are self-explanatory. According to this Dockerfile, a docker image will build. The client (react-app) will run inside the container using this image.</p>
 <p>The <code>COPY</code> command is copying the <code>node_modules</code> too. Create a <code>.dockerignore</code> .</p>
 <p><strong>.dockerignore</strong></p>
@@ -334,7 +363,8 @@ client/
 <p>Everything is set. Now, the last thing we have to do, build these docker images and run them as individual containers.</p>
 <h4 id="docker-composeyml">docker-compose.yml</h4>
 <p>Create a <code>docker-compose.yml</code> in the root project directory and paste the below code.</p>
-<p>docker-compose.yml</p>
+<script type="application/javascript" src="https://gist.github.com/schadokar/1852d9d4e7056640c9342b3da01d3dc5.js"></script>
+
 <p>You might be thinking about why we even need <code>docker-compose.yml</code> .</p>
 <p>It just makes the application bit smooth. How?</p>
 <blockquote>
@@ -371,8 +401,8 @@ client/
 <hr>
 <p>So, the hard part is over. Now, the fun part let’s run the application.</p>
 <p>Open the terminal from the root project directory and run the below command:</p>
-<pre><code>docker-compose up --build
-</code></pre><p>It will check for <code>docker-compose.yml</code> file in the current directory and will run it. For the first time, it will take some time so have patience.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker">docker-compose up --build<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>It will check for <code>docker-compose.yml</code> file in the current directory and will run it. For the first time, it will take some time so have patience.</p>
 <p>Once everything is running, open the browser and go to <code>localhost:3000</code> you’ll see the react application running.</p>
 <p><img src="./asset-3.png" alt="localhost:3000"></p>
 <ul>
@@ -398,11 +428,8 @@ client/
 <p><img src="./asset-8.png" alt="Get Message"></p>
 <p>We successfully created the Ethereum Dapp with React and Docker.</p>
 <p>You don’t have to build the <code>docker-compose.yml</code> every time. Next time you just have to run the below command to run the application.</p>
-<pre><code>docker-compose up
-</code></pre><p>You can clone the complete project from the <a href="https://github.com/schadokar/docker-ethereum.git">GitHub link</a>.</p>
-<blockquote>
-<p>Hope you like the tutorial. Please comment for any improvement in the article. Please clap and share if you learn something interesting.</p>
-</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker">docker-compose up<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>You can clone the complete project from the <a href="https://github.com/schadokar/docker-ethereum.git">GitHub link</a>.</p>
 <hr>
 
       
@@ -410,6 +437,8 @@ client/
 
 <h3>Similar articles:</h3>
 <ul>
+	
+	<li><a href="/posts/run-the-ganache-cli-inside-the-docker-container/">Run the Ganache Cli Inside the Docker Container</a></li>
 	
 	<li><a href="/posts/deploy-angular-application-on-azure-web-service/">Deploy Angular application on Azure Web Service</a></li>
 	
