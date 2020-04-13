@@ -33,7 +33,7 @@ My apologies for macOS readers, instructions for macOS is not included as I don�
 1.  cURL — latest version
 2.  Docker — version 17.06.2-ce or greater
 3.  Docker Compose — version 1.14.0 or greater
-4.  Golang — version 1.11.x
+4.  Golang — version 1.12.x
 5.  Nodejs — version 8.x (other versions are not in support yet)
 6.  NPM — version 5.x
 7.  Python 2.7
@@ -172,13 +172,13 @@ For more information, please follow this [link](https://www.digitalocean.com/com
 - Install the golang package
 
 ```
-curl -O https://storage.googleapis.com/golang/go1.11.linux-amd64.tar.gz
+curl -O https://storage.googleapis.com/golang/go1.12.linux-amd64.tar.gz
 ```
 
 - Extract the package
 
 ```
-tar xvf go1.11.linux-amd64.tar.gz
+tar xvf go1.12.linux-amd64.tar.gz
 ```
 
 - Set the GOPATH
