@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Thu, 13 Feb 2020 23:25:31 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2020 10:19:00 +0530</lastBuildDate>
     
 	<atom:link href="https://schadokar.dev/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create a To Do App in Reactjs with Github Pages</title>
+      <link>https://schadokar.dev/posts/create-a-to-do-app-in-reactjs/</link>
+      <pubDate>Tue, 14 Apr 2020 10:19:00 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/posts/create-a-to-do-app-in-reactjs/</guid>
+      <description>In this tutorial, we will create a to-do list app in reactjs. We will use browser local storage to save the tasks, which will keep the tasks even after we close the browser. In the end, we will host this application on Github pages.
+Pre-requisites  Nodejs Code editor (I am using VS Code) Github Account   React Application We are going to use create-react-app as our base application.</description>
+    </item>
     
     <item>
       <title>Understand Quicksort the easy way</title>

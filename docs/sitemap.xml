@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://schadokar.dev/posts/create-a-to-do-app-in-reactjs/</loc>
+    <lastmod>2020-04-14T10:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/github-pages/</loc>
+    <lastmod>2020-04-14T10:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/posts/</loc>
+    <lastmod>2020-04-14T10:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/reactjs/</loc>
+    <lastmod>2020-04-14T10:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/</loc>
+    <lastmod>2020-04-14T10:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/</loc>
+    <lastmod>2020-04-14T10:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://schadokar.dev/tags/tutorial/</loc>
+    <lastmod>2020-04-14T10:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://schadokar.dev/tags/cloud/</loc>
     <lastmod>2020-04-13T22:50:46+05:30</lastmod>
   </url>
@@ -14,16 +49,6 @@
   
   <url>
     <loc>https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</loc>
-    <lastmod>2020-04-13T22:50:46+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/</loc>
-    <lastmod>2020-04-13T22:50:46+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/</loc>
     <lastmod>2020-04-13T22:50:46+05:30</lastmod>
   </url>
   
@@ -93,11 +118,6 @@
   </url>
   
   <url>
-    <loc>https://schadokar.dev/posts/</loc>
-    <lastmod>2020-03-23T11:23:56+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</loc>
     <lastmod>2020-03-03T08:25:25+05:30</lastmod>
   </url>
@@ -119,11 +139,6 @@
   
   <url>
     <loc>https://schadokar.dev/tags/js/</loc>
-    <lastmod>2020-02-13T23:25:31+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/tutorial/</loc>
     <lastmod>2020-02-13T23:25:31+05:30</lastmod>
   </url>
   
@@ -164,11 +179,6 @@
   
   <url>
     <loc>https://schadokar.dev/posts/etherscan-react/</loc>
-    <lastmod>2020-01-07T21:23:34+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://schadokar.dev/tags/reactjs/</loc>
     <lastmod>2020-01-07T21:23:34+05:30</lastmod>
   </url>
   
