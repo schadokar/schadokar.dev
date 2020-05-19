@@ -1,7 +1,7 @@
 baseurl = "https://schadokar.dev"
 languageCode = "en"
 title = "Shubham Chadokar"
-theme = "kiss"
+theme = "hugo-notepadium"
 copyright = "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2020"
 disqusShortname = "schadokar"
 googleAnalytics = "UA-158088106-1"
@@ -9,63 +9,35 @@ googleAnalytics = "UA-158088106-1"
 enableInlineShortcodes= true
 
 # Number of posts per page
-Paginate = 7
+Paginate = 10
 enableRobotsTXT = true
 enableEmoji=true
 
-[params.features]
-disqusOnDemand = false  # Load Disqus comments on click
+[params]
+style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
 
-[params.assets]
-customCSS = ["css/custom.css"]
 
-[params.rss]
+[[params.nav.custom]]
+title = "Posts"
+url = "/posts"
 
-includeContent = true # Includes whole content in rss
-authorName = "Shubham Chadokar" # Site author's full name
-authorEmail = "shubhamchadokar04@gmail.com"
+[[params.nav.custom]]
+title = "To-The-Point"
+url = "/to-the-point"
 
-[params.info]
-adsense = "" # Adsense ID (ID only, without ca-pub-)
-enableSocial = false # Adds OpenGraph and Twitter cards
-homeTitle = "Shubham Chadokar" # Title for home page
-poweredby = true # Adds powered by Hugo and Kiss below Copyright section
-related = true # Includes related articles
+[[params.nav.custom]]
+title = "Projects"
+url = "/projects"
 
-[params.opengraph.facebook]
-admins = [] # array of Facebook IDs
-appID = ""
-pageID = ""
+[[params.nav.custom]]
+title = "Ebook"
+url = "/ebooks"
 
-[params.opengraph.twitter]
-page = "schadokar1" # Twitter Page username. If not set, params.social.twitter will be used.
-
-[params.social]
-
-twitter = "schadokar1"
-github = "schadokar"
-email = "shubhamchadokar04@gmail.com"
-linkedin = "schadokar"
-gitlab = "schadokar"
-instagram = ""
-codepen = ""
-facebook = ""
+[[params.nav.custom]]
+title = "About"
+url = "/about"
 
 
 
-[params.social.config]
-platforms = ["github","email","linkedin","twitter"]
-
-[params.matomoAnalytics]
-siteID = 1
-rootURL = "//matomo.example.com/"
-
-[params.fathomAnalytics]
-rootURL = "//fathom.example.com/"
-
-[taxonomies]
-tag ="tags"
-
-[blackfriday]
-hrefTargetBlank = true
 
