@@ -1,0 +1,16 @@
+{{- define "main" -}}
+{{- $justify := false -}}
+{{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
+<div class="article-container">
+    <!-- {{- partial "article-header.html" . -}} -->
+    <article class="article markdown-body" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
+        {{ .Content }}
+    </article>
+    {{- partial "widgets/ebook-download.html" . -}}
+    
+</div>
+<!-- <div class="article bottom">
+  {{- partial "article-bottom-navigation.html" . -}}
+  {{- partial "article-comments.html" . -}}
+</div> -->
+{{- end -}}
