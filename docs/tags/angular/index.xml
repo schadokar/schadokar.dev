@@ -1,27 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>angular on Shubham Chadokar</title>
-    <link>https://schadokar.dev/tags/angular/</link>
+    <link>/tags/angular/</link>
     <description>Recent content in angular on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Fri, 23 Nov 2018 11:49:18 +0000</lastBuildDate>
     
-	<atom:link href="https://schadokar.dev/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deploy Angular application on Azure Web Service</title>
-      <link>https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/</link>
+      <link>/posts/deploy-angular-application-on-azure-web-service/</link>
       <pubDate>Fri, 23 Nov 2018 11:49:18 +0000</pubDate>
       
-      <guid>https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/</guid>
+      <guid>/posts/deploy-angular-application-on-azure-web-service/</guid>
       <description>Deploying an Angular application on the Azure Web Service can be a pain if you don’t know from where to start.
 This tutorial will consist of the following steps:
  Create an Azure Web Service Build the Angular application Configure the Web Service and deploy it   Let’s start with creating the Azure Web Service;
 If you don’t have any account, you can sign up for free account and $200 dollars will be credit in your azure account to play with.</description>
+      
     </item>
     
   </channel>

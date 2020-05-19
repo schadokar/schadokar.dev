@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tutorial on Shubham Chadokar</title>
+    <link>/categories/tutorial/</link>
+    <description>Recent content in Tutorial on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Tue, 14 Apr 2020 10:19:00 +0530</lastBuildDate>
+    
+        <atom:link href="/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create a To Do App in Reactjs with Github Pages</title>
+      <link>/posts/create-a-to-do-app-in-reactjs/</link>
+      <pubDate>Tue, 14 Apr 2020 10:19:00 +0530</pubDate>
+      
+      <guid>/posts/create-a-to-do-app-in-reactjs/</guid>
+      <description>In this tutorial, we will create a to-do list app in reactjs. We will use browser local storage to save the tasks, which will keep the tasks even after we close the browser. In the end, we will host this application on Github pages.
+Pre-requisites  Nodejs Code editor (I am using VS Code) Github Account   React Application We are going to use create-react-app as our base application.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Login as Root in GCP Linux Vm</title>
+      <link>/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</link>
+      <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</guid>
+      <description>In linux, root user is the most privileged user and it has access to all the commands and files. It is also known as the superuser or administrator.
+By default, whenever you login in GCP Linux VM using SSH provided by GCP or using the custom SSH, it login as gcp_username user or as ssh_username respectively.
+To login as the root user, first set the root password.
+To set the root password, use passwd command.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Create a Linux VM in GCP</title>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-gcp/</link>
+      <pubDate>Sun, 29 Mar 2020 09:45:27 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-gcp/</guid>
+      <description>Create a new account on GCP. For new users, GCP credits $300 dollars in the account for 12 months and with many free services.
+Login to your GCP account.
+Create a new virtual machine Select Compute Engine from the top left menu.
+Menu &amp;gt; Compute &amp;gt; Compute Engine
+Create a new project In GCP, a project is a resource manager. All the related resources of a project place inside it. Create a new project demo.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to create a Linux VM in Azure?</title>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-azure/</link>
+      <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-azure/</guid>
+      <description>Create a new account in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.
+For students, Microsoft also give away many resources and azure credits. You just have to reach to them by their email.
+Login to your azure account.
+Step 1 Search for Ubuntu 16.04 LTS In the search bar, search Ubuntu 16.04 LTS and select create.</description>
+      
+    </item>
+    
+    <item>
+      <title>Compare Strings in Golang</title>
+      <link>/to-the-point/compare-strings-in-golang/</link>
+      <pubDate>Fri, 27 Mar 2020 11:55:03 +0530</pubDate>
+      
+      <guid>/to-the-point/compare-strings-in-golang/</guid>
+      <description>A string value is a sequence of bytes.
+Using the Comparison operators == equal != not equal &amp;lt; less &amp;lt;= less or equal &amp;gt; greater &amp;gt;= greater or equal To check if strings are equal or not, you can use == or !=.
+package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;golang&amp;#34; str2 := &amp;#34;gopher&amp;#34; fmt.Println(str1 == str2) fmt.Println(str1 != str2) } Output
+false true To check the Lexicographic Order of 2 strings, you can use &amp;lt;, &amp;lt;=, &amp;gt;, &amp;gt;=.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to create a Linux VM in AWS?</title>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
+      <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
+      <description>Create a new aws account.
+Login to your aws account. Select services on top left and search EC2 and select it.
+EC2 Dashboard Scroll down to Launch Instance section and select Launch Instance.
+Configure Instance Follow the steps to create a Ubuntu 16.04 VM.
+Step 1 Choose an Amazon Machine Image (AMI) Scroll down and select **Ubuntu Server 16.04 LTS (HVM).
+Step 2 Choose an Instance Type Select t2.medium and click Configure Instance Details.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Read and Write a File in Golang?</title>
+      <link>/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
+      <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
+      <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.
+Write a file using WriteFile The WriteFile function takes 3 arguments, filename, data in a byte array, and filemode.
+func WriteFile(filename string, data []byte, perm os.FileMode) error A FileMode represents a file&#39;s mode and permission bits. Learn more
+package main import ( &amp;#34;io/ioutil&amp;#34; &amp;#34;log&amp;#34; ) func main() { // create a byte array of a string  data := []byte(&amp;#34;Hello Gopher!</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Use Json in Golang?</title>
+      <link>/posts/how-to-use-json-in-golang/</link>
+      <pubDate>Mon, 23 Mar 2020 11:23:56 +0530</pubDate>
+      
+      <guid>/posts/how-to-use-json-in-golang/</guid>
+      <description>When you start a project which interacts with the outer world, it requires data exchange. To make a project successful this interaction must be simple and efficient.
+What is Data Exchange?  Data exchange is the process of taking data structured under a source schema and transforming it into data structured under a target schema, so that the target data is an accurate representation of the source data. - Wikipedia</description>
+      
+    </item>
+    
+    <item>
+      <title>Convert String to Int and Int to String in Golang</title>
+      <link>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
+      <pubDate>Tue, 03 Mar 2020 08:25:25 +0530</pubDate>
+      
+      <guid>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
+      <description>Golang standard library has provided 2 functions Atoi and Itoa to convert string to int and int to string respectively.
+These 2 functions placed inside the strconv package.
+ Package strconv implements conversions to and from string representations of basic data types.
+ String to Int The strconv.Atoi function takes a string and returns an int and an error.
+func Atoi(s string) (int, error) It will return type int and type int is system dependent.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to use Swapper in Golang?</title>
+      <link>/to-the-point/swapper-in-golang/</link>
+      <pubDate>Tue, 03 Mar 2020 08:17:07 +0530</pubDate>
+      
+      <guid>/to-the-point/swapper-in-golang/</guid>
+      <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
+Function Definition func Swapper(slice interface{}) func(i, j int) Let&#39;s try
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; ) func main() { s := []int{1, 2, 3} fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) swapF := reflect.Swapper(s) swapF(0, 1) fmt.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Join Strings in Golang?</title>
+      <link>/to-the-point/how-to-join-strings-in-golang/</link>
+      <pubDate>Thu, 27 Feb 2020 19:46:51 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-join-strings-in-golang/</guid>
+      <description>There are multiple ways to join or concat strings in the golang.
+Let&#39;s start with the easy one.
+Using the + operator 🔧 package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;Hello&amp;#34; // there is a space before World 	str2 := &amp;#34; World!&amp;#34; fmt.Println(str1 + str2) } Output
+Hello World!  Using Sprint, Sprintf, Sprintln 🛠 The fmt package has Sprint, Sprintf and Sprintln function which can format the strings using the default or custom formats.</description>
+      
+    </item>
+    
+    <item>
+      <title>Understand Quicksort the easy way</title>
+      <link>/posts/understand-quicksort-the-easy-way/</link>
+      <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
+      
+      <guid>/posts/understand-quicksort-the-easy-way/</guid>
+      <description>Photo by Iñaki del Olmo on Unsplash
+Data structures and Algorithms are the key skills for a software developer. Recently when I was preparing for a job change, learning sorting algorithms was not smooth.
+The theory is simple and straight but its implementation is just the opposite.
+ I think concept and implementation are inversely proportional. 🤔
+ There are many sorting algorithms like bubblesort, mergesort, quicksort etc. Among all, quicksort is one of the most popular sorting algorithms.</description>
+      
+    </item>
+    
+    <item>
+      <title>Store Hyperledger Fabric certificates and keys in CouchDB</title>
+      <link>/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/</link>
+      <pubDate>Sat, 08 Feb 2020 10:02:42 +0530</pubDate>
+      
+      <guid>/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/</guid>
+      <description>Photo by Micah Williams on Unsplash
+Hyperledger Fabric is all about permissions. These permissions are provided in the form of certificates and keys. In broad term, it is known as Identities.
+When an application interacts with the Hyperledger Fabric Network, it uses this identity to authenticate itself. Fabric network validates the identity and authorizes the application to interact.
+In short, identities are very important and if you don&#39;t save them properly, then it may turn into a headache.</description>
+      
+    </item>
+    
+    <item>
+      <title>Use Environment Variable in your next Golang Project</title>
+      <link>/posts/go-env-ways/</link>
+      <pubDate>Sun, 12 Jan 2020 18:14:49 +0530</pubDate>
+      
+      <guid>/posts/go-env-ways/</guid>
+      <description>Photo by Moja Msanii on Unsplash When it comes to creating a production-grade application, using the environment variable in the application is de facto.
+Why should we use the environment variable? Suppose you have an application with many features and each feature need to access the Database. You configured all the DB information like DBURL, DBNAME, USERNAME and PASSWORD in each feature.
+There are a few major disadvantages to this approach, there can be many.</description>
+      
+    </item>
+    
+    <item>
+      <title>Create your own Etherscan with React in 5 minutes</title>
+      <link>/posts/etherscan-react/</link>
+      <pubDate>Tue, 07 Jan 2020 21:23:34 +0530</pubDate>
+      
+      <guid>/posts/etherscan-react/</guid>
+      <description>Photo by Radek Grzybowski on Unsplash In this tutorial, we&#39;ll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing semantic-ui-react which is the official react integration for semantic-ui.
+ You can find the complete code in the github.
+ Without wasting any time let&#39;s build it.
+ Prerequisite   nodejs
+  Code editor &amp;ndash; (I am using VS Code)</description>
+      
+    </item>
+    
+    <item>
+      <title>How to create a CLI in golang with cobra</title>
+      <link>/posts/how-to-create-a-cli-in-golang-with-cobra/</link>
+      <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
+      
+      <guid>/posts/how-to-create-a-cli-in-golang-with-cobra/</guid>
+      <description>Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
+When you learn golang then it is very often that you’ll come across that ‘golang is great to build cli tools’. This fascinated me too. So, I tried to get my hands dirty and found a few tutorials of creating a cli but most of all are not basic.</description>
+      
+    </item>
+    
+    <item>
+      <title>Build a Todo App in Golang, MongoDB, and React</title>
+      <link>/posts/build-a-todo-app-in-golang-mongodb-and-react/</link>
+      <pubDate>Tue, 06 Aug 2019 05:41:57 +0000</pubDate>
+      
+      <guid>/posts/build-a-todo-app-in-golang-mongodb-and-react/</guid>
+      <description>The main purpose of this tutorial to get hands-on experience in Golang. When I was learning Golang, I realized there are very few tutorials and articles out there which give you a complete end to end hands-on experience.
+This is the GitHub link for the complete code.
+ In this tutorial, we will build a todo app in which the server will be in Golang, the database will be MongoDB, and the frontend will be in React.</description>
+      
+    </item>
+    
+    <item>
+      <title>Hyperledger Fabric Installation Guide!</title>
+      <link>/posts/hyperledger-fabric-installation-guide/</link>
+      <pubDate>Wed, 05 Jun 2019 12:46:01 +0000</pubDate>
+      
+      <guid>/posts/hyperledger-fabric-installation-guide/</guid>
+      <description>When I started learning Hyperledger Fabric, installing it is really a pain in a neck and it turned miserable as I was using Windows.
+The purpose of this article to put all the instructions at one place to set up the Hyperledger Fabric network irrespective of the fact if you’re using Windows or Linux.
+My apologies for macOS readers, instructions for macOS is not included as I don’t have one.</description>
+      
+    </item>
+    
+    <item>
+      <title>Create an Ethereum Dapp with React and Docker</title>
+      <link>/posts/create-an-ethereum-dapp-with-react-and-docker/</link>
+      <pubDate>Sun, 14 Apr 2019 12:48:24 +0000</pubDate>
+      
+      <guid>/posts/create-an-ethereum-dapp-with-react-and-docker/</guid>
+      <description>In this tutorial, we’ll create an Ethereum Dapp and will run its different components in a separate docker container.
+You can clone the project using this GitHub link.
+Thanks to the people who’s article and courses helped a lot:
+Brandon Morelli For HTML and CSS ( Build a Weather Website )
+Stephen Grider For Ethereum and Docker course on Udemy.
+ Before beginning lets understand what we’re going to build and how the structure of our Dapp will look like.</description>
+      
+    </item>
+    
+    <item>
+      <title>Run the Ganache Cli Inside the Docker Container</title>
+      <link>/posts/run-the-ganache-cli-inside-the-docker-container/</link>
+      <pubDate>Mon, 01 Apr 2019 10:03:57 +0530</pubDate>
+      
+      <guid>/posts/run-the-ganache-cli-inside-the-docker-container/</guid>
+      <description>In this article, we’ll run the ganache-cli inside the docker container and then we will connect it to the Metamask and transfer some Ether from one account to another.
+Prerequisites:
+ Docker installed in your machine. Please check out this link and install which fits with your OS. The Metamask plugin installed to your browser. Please check out this link and follow the instructions to install it.  Lets first create the project directory by name docker-ganache.</description>
+      
+    </item>
+    
+    <item>
+      <title>Deploy Angular application on Azure Web Service</title>
+      <link>/posts/deploy-angular-application-on-azure-web-service/</link>
+      <pubDate>Fri, 23 Nov 2018 11:49:18 +0000</pubDate>
+      
+      <guid>/posts/deploy-angular-application-on-azure-web-service/</guid>
+      <description>Deploying an Angular application on the Azure Web Service can be a pain if you don’t know from where to start.
+This tutorial will consist of the following steps:
+ Create an Azure Web Service Build the Angular application Configure the Web Service and deploy it   Let’s start with creating the Azure Web Service;
+If you don’t have any account, you can sign up for free account and $200 dollars will be credit in your azure account to play with.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

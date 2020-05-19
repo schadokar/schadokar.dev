@@ -1,231 +1,255 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Shubham Chadokar</title>
-    <link>https://schadokar.dev/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Tue, 14 Apr 2020 10:19:00 +0530</lastBuildDate>
     
-	<atom:link href="https://schadokar.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>github-pages</title>
-      <link>https://schadokar.dev/tags/github-pages/</link>
+      <link>/tags/github-pages/</link>
       <pubDate>Tue, 14 Apr 2020 10:19:00 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/github-pages/</guid>
+      <guid>/tags/github-pages/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>reactjs</title>
-      <link>https://schadokar.dev/tags/reactjs/</link>
+      <link>/tags/reactjs/</link>
       <pubDate>Tue, 14 Apr 2020 10:19:00 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/reactjs/</guid>
+      <guid>/tags/reactjs/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>https://schadokar.dev/tags/tutorial/</link>
+      <link>/tags/tutorial/</link>
       <pubDate>Tue, 14 Apr 2020 10:19:00 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/tutorial/</guid>
+      <guid>/tags/tutorial/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>cloud</title>
-      <link>https://schadokar.dev/tags/cloud/</link>
+      <link>/tags/cloud/</link>
       <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/cloud/</guid>
+      <guid>/tags/cloud/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>gcp</title>
-      <link>https://schadokar.dev/tags/gcp/</link>
+      <link>/tags/gcp/</link>
       <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/gcp/</guid>
+      <guid>/tags/gcp/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>to-the-point</title>
-      <link>https://schadokar.dev/tags/to-the-point/</link>
+      <link>/tags/to-the-point/</link>
       <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/to-the-point/</guid>
+      <guid>/tags/to-the-point/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>azure</title>
-      <link>https://schadokar.dev/tags/azure/</link>
+      <link>/tags/azure/</link>
       <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/azure/</guid>
+      <guid>/tags/azure/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>golang</title>
-      <link>https://schadokar.dev/tags/golang/</link>
+      <link>/tags/golang/</link>
       <pubDate>Fri, 27 Mar 2020 11:55:03 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/golang/</guid>
+      <guid>/tags/golang/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>strings</title>
-      <link>https://schadokar.dev/tags/strings/</link>
+      <link>/tags/strings/</link>
       <pubDate>Fri, 27 Mar 2020 11:55:03 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/strings/</guid>
+      <guid>/tags/strings/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>aws</title>
-      <link>https://schadokar.dev/tags/aws/</link>
+      <link>/tags/aws/</link>
       <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/aws/</guid>
+      <guid>/tags/aws/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>json</title>
-      <link>https://schadokar.dev/tags/json/</link>
+      <link>/tags/json/</link>
       <pubDate>Mon, 23 Mar 2020 11:23:56 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/json/</guid>
+      <guid>/tags/json/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>algorithm</title>
-      <link>https://schadokar.dev/tags/algorithm/</link>
+      <link>/tags/algorithm/</link>
       <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/algorithm/</guid>
+      <guid>/tags/algorithm/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>js</title>
-      <link>https://schadokar.dev/tags/js/</link>
+      <link>/tags/js/</link>
       <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/js/</guid>
+      <guid>/tags/js/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>couchdb</title>
-      <link>https://schadokar.dev/tags/couchdb/</link>
+      <link>/tags/couchdb/</link>
       <pubDate>Sat, 08 Feb 2020 10:02:42 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/couchdb/</guid>
+      <guid>/tags/couchdb/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>hyperledger-fabric</title>
-      <link>https://schadokar.dev/tags/hyperledger-fabric/</link>
+      <link>/tags/hyperledger-fabric/</link>
       <pubDate>Sat, 08 Feb 2020 10:02:42 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/hyperledger-fabric/</guid>
+      <guid>/tags/hyperledger-fabric/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>viper</title>
-      <link>https://schadokar.dev/tags/viper/</link>
+      <link>/tags/viper/</link>
       <pubDate>Sun, 12 Jan 2020 18:14:49 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/viper/</guid>
+      <guid>/tags/viper/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>blockchain</title>
-      <link>https://schadokar.dev/tags/blockchain/</link>
+      <link>/tags/blockchain/</link>
       <pubDate>Tue, 07 Jan 2020 21:23:34 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/blockchain/</guid>
+      <guid>/tags/blockchain/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>cobra</title>
-      <link>https://schadokar.dev/tags/cobra/</link>
+      <link>/tags/cobra/</link>
       <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
       
-      <guid>https://schadokar.dev/tags/cobra/</guid>
+      <guid>/tags/cobra/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>article</title>
-      <link>https://schadokar.dev/tags/article/</link>
+      <link>/tags/article/</link>
       <pubDate>Tue, 17 Sep 2019 11:49:11 +0000</pubDate>
       
-      <guid>https://schadokar.dev/tags/article/</guid>
+      <guid>/tags/article/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>catalyst</title>
-      <link>https://schadokar.dev/tags/catalyst/</link>
+      <link>/tags/catalyst/</link>
       <pubDate>Tue, 17 Sep 2019 11:49:11 +0000</pubDate>
       
-      <guid>https://schadokar.dev/tags/catalyst/</guid>
+      <guid>/tags/catalyst/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>development</title>
-      <link>https://schadokar.dev/tags/development/</link>
+      <link>/tags/development/</link>
       <pubDate>Tue, 06 Aug 2019 05:41:57 +0000</pubDate>
       
-      <guid>https://schadokar.dev/tags/development/</guid>
+      <guid>/tags/development/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>ethereum</title>
-      <link>https://schadokar.dev/tags/ethereum/</link>
+      <link>/tags/ethereum/</link>
       <pubDate>Sun, 14 Apr 2019 12:48:24 +0000</pubDate>
       
-      <guid>https://schadokar.dev/tags/ethereum/</guid>
+      <guid>/tags/ethereum/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>ganache</title>
-      <link>https://schadokar.dev/tags/ganache/</link>
+      <link>/tags/ganache/</link>
       <pubDate>Mon, 01 Apr 2019 10:03:57 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/ganache/</guid>
+      <guid>/tags/ganache/</guid>
       <description></description>
+      
     </item>
     
     <item>
       <title>angular</title>
-      <link>https://schadokar.dev/tags/angular/</link>
+      <link>/tags/angular/</link>
       <pubDate>Fri, 23 Nov 2018 11:49:18 +0000</pubDate>
       
-      <guid>https://schadokar.dev/tags/angular/</guid>
+      <guid>/tags/angular/</guid>
       <description></description>
+      
     </item>
     
   </channel>

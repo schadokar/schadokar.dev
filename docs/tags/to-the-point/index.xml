@@ -1,126 +1,135 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>to-the-point on Shubham Chadokar</title>
-    <link>https://schadokar.dev/tags/to-the-point/</link>
+    <link>/tags/to-the-point/</link>
     <description>Recent content in to-the-point on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Mon, 13 Apr 2020 22:50:46 +0530</lastBuildDate>
     
-	<atom:link href="https://schadokar.dev/tags/to-the-point/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/to-the-point/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to Login as Root in GCP Linux Vm</title>
-      <link>https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</link>
+      <link>/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</link>
       <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</guid>
+      <guid>/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</guid>
       <description>In linux, root user is the most privileged user and it has access to all the commands and files. It is also known as the superuser or administrator.
 By default, whenever you login in GCP Linux VM using SSH provided by GCP or using the custom SSH, it login as gcp_username user or as ssh_username respectively.
 To login as the root user, first set the root password.
 To set the root password, use passwd command.</description>
+      
     </item>
     
     <item>
       <title>How to Create a Linux VM in GCP</title>
-      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</link>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-gcp/</link>
       <pubDate>Sun, 29 Mar 2020 09:45:27 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</guid>
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-gcp/</guid>
       <description>Create a new account on GCP. For new users, GCP credits $300 dollars in the account for 12 months and with many free services.
 Login to your GCP account.
 Create a new virtual machine Select Compute Engine from the top left menu.
 Menu &amp;gt; Compute &amp;gt; Compute Engine
 Create a new project In GCP, a project is a resource manager. All the related resources of a project place inside it. Create a new project demo.</description>
+      
     </item>
     
     <item>
       <title>How to create a Linux VM in Azure?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-azure/</link>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-azure/</link>
       <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-azure/</guid>
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-azure/</guid>
       <description>Create a new account in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.
 For students, Microsoft also give away many resources and azure credits. You just have to reach to them by their email.
 Login to your azure account.
 Step 1 Search for Ubuntu 16.04 LTS In the search bar, search Ubuntu 16.04 LTS and select create.</description>
+      
     </item>
     
     <item>
       <title>Compare Strings in Golang</title>
-      <link>https://schadokar.dev/to-the-point/compare-strings-in-golang/</link>
+      <link>/to-the-point/compare-strings-in-golang/</link>
       <pubDate>Fri, 27 Mar 2020 11:55:03 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/compare-strings-in-golang/</guid>
+      <guid>/to-the-point/compare-strings-in-golang/</guid>
       <description>A string value is a sequence of bytes.
 Using the Comparison operators == equal != not equal &amp;lt; less &amp;lt;= less or equal &amp;gt; greater &amp;gt;= greater or equal To check if strings are equal or not, you can use == or !=.
 package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;golang&amp;#34; str2 := &amp;#34;gopher&amp;#34; fmt.Println(str1 == str2) fmt.Println(str1 != str2) } Output
 false true To check the Lexicographic Order of 2 strings, you can use &amp;lt;, &amp;lt;=, &amp;gt;, &amp;gt;=.</description>
+      
     </item>
     
     <item>
       <title>How to create a Linux VM in AWS?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
       <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
       <description>Create a new aws account.
 Login to your aws account. Select services on top left and search EC2 and select it.
 EC2 Dashboard Scroll down to Launch Instance section and select Launch Instance.
 Configure Instance Follow the steps to create a Ubuntu 16.04 VM.
 Step 1 Choose an Amazon Machine Image (AMI) Scroll down and select **Ubuntu Server 16.04 LTS (HVM).
 Step 2 Choose an Instance Type Select t2.medium and click Configure Instance Details.</description>
+      
     </item>
     
     <item>
       <title>How to Read and Write a File in Golang?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
+      <link>/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
       <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
+      <guid>/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
       <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.
 Write a file using WriteFile The WriteFile function takes 3 arguments, filename, data in a byte array, and filemode.
 func WriteFile(filename string, data []byte, perm os.FileMode) error A FileMode represents a file&#39;s mode and permission bits. Learn more
 package main import ( &amp;#34;io/ioutil&amp;#34; &amp;#34;log&amp;#34; ) func main() { // create a byte array of a string  data := []byte(&amp;#34;Hello Gopher!</description>
+      
     </item>
     
     <item>
       <title>Convert String to Int and Int to String in Golang</title>
-      <link>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
+      <link>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
       <pubDate>Tue, 03 Mar 2020 08:25:25 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
+      <guid>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
       <description>Golang standard library has provided 2 functions Atoi and Itoa to convert string to int and int to string respectively.
 These 2 functions placed inside the strconv package.
  Package strconv implements conversions to and from string representations of basic data types.
  String to Int The strconv.Atoi function takes a string and returns an int and an error.
 func Atoi(s string) (int, error) It will return type int and type int is system dependent.</description>
+      
     </item>
     
     <item>
       <title>How to use Swapper in Golang?</title>
-      <link>https://schadokar.dev/to-the-point/swapper-in-golang/</link>
+      <link>/to-the-point/swapper-in-golang/</link>
       <pubDate>Tue, 03 Mar 2020 08:17:07 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/swapper-in-golang/</guid>
+      <guid>/to-the-point/swapper-in-golang/</guid>
       <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
 Function Definition func Swapper(slice interface{}) func(i, j int) Let&#39;s try
 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; ) func main() { s := []int{1, 2, 3} fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) swapF := reflect.Swapper(s) swapF(0, 1) fmt.</description>
+      
     </item>
     
     <item>
       <title>How to Join Strings in Golang?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-join-strings-in-golang/</link>
+      <link>/to-the-point/how-to-join-strings-in-golang/</link>
       <pubDate>Thu, 27 Feb 2020 19:46:51 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-join-strings-in-golang/</guid>
+      <guid>/to-the-point/how-to-join-strings-in-golang/</guid>
       <description>There are multiple ways to join or concat strings in the golang.
 Let&#39;s start with the easy one.
 Using the + operator 🔧 package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;Hello&amp;#34; // there is a space before World 	str2 := &amp;#34; World!&amp;#34; fmt.Println(str1 + str2) } Output
 Hello World!  Using Sprint, Sprintf, Sprintln 🛠 The fmt package has Sprint, Sprintf and Sprintln function which can format the strings using the default or custom formats.</description>
+      
     </item>
     
   </channel>

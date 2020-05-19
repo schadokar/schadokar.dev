@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>2020 on Shubham Chadokar</title>
+    <link>/categories/2020/</link>
+    <description>Recent content in 2020 on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Tue, 14 Apr 2020 10:19:00 +0530</lastBuildDate>
+    
+        <atom:link href="/categories/2020/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create a To Do App in Reactjs with Github Pages</title>
+      <link>/posts/create-a-to-do-app-in-reactjs/</link>
+      <pubDate>Tue, 14 Apr 2020 10:19:00 +0530</pubDate>
+      
+      <guid>/posts/create-a-to-do-app-in-reactjs/</guid>
+      <description>In this tutorial, we will create a to-do list app in reactjs. We will use browser local storage to save the tasks, which will keep the tasks even after we close the browser. In the end, we will host this application on Github pages.
+Pre-requisites  Nodejs Code editor (I am using VS Code) Github Account   React Application We are going to use create-react-app as our base application.</description>
+      
+    </item>
+    
+    <item>
+      <title>Use Environment Variable in your next Golang Project</title>
+      <link>/posts/go-env-ways/</link>
+      <pubDate>Sun, 12 Jan 2020 18:14:49 +0530</pubDate>
+      
+      <guid>/posts/go-env-ways/</guid>
+      <description>Photo by Moja Msanii on Unsplash When it comes to creating a production-grade application, using the environment variable in the application is de facto.
+Why should we use the environment variable? Suppose you have an application with many features and each feature need to access the Database. You configured all the DB information like DBURL, DBNAME, USERNAME and PASSWORD in each feature.
+There are a few major disadvantages to this approach, there can be many.</description>
+      
+    </item>
+    
+    <item>
+      <title>Create your own Etherscan with React in 5 minutes</title>
+      <link>/posts/etherscan-react/</link>
+      <pubDate>Tue, 07 Jan 2020 21:23:34 +0530</pubDate>
+      
+      <guid>/posts/etherscan-react/</guid>
+      <description>Photo by Radek Grzybowski on Unsplash In this tutorial, we&#39;ll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing semantic-ui-react which is the official react integration for semantic-ui.
+ You can find the complete code in the github.
+ Without wasting any time let&#39;s build it.
+ Prerequisite   nodejs
+  Code editor &amp;ndash; (I am using VS Code)</description>
+      
+    </item>
+    
+  </channel>
+</rss>

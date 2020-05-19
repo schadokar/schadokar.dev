@@ -1,117 +1,126 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>golang on Shubham Chadokar</title>
-    <link>https://schadokar.dev/tags/golang/</link>
+    <link>/tags/golang/</link>
     <description>Recent content in golang on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Fri, 27 Mar 2020 11:55:03 +0530</lastBuildDate>
     
-	<atom:link href="https://schadokar.dev/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Compare Strings in Golang</title>
-      <link>https://schadokar.dev/to-the-point/compare-strings-in-golang/</link>
+      <link>/to-the-point/compare-strings-in-golang/</link>
       <pubDate>Fri, 27 Mar 2020 11:55:03 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/compare-strings-in-golang/</guid>
+      <guid>/to-the-point/compare-strings-in-golang/</guid>
       <description>A string value is a sequence of bytes.
 Using the Comparison operators == equal != not equal &amp;lt; less &amp;lt;= less or equal &amp;gt; greater &amp;gt;= greater or equal To check if strings are equal or not, you can use == or !=.
 package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;golang&amp;#34; str2 := &amp;#34;gopher&amp;#34; fmt.Println(str1 == str2) fmt.Println(str1 != str2) } Output
 false true To check the Lexicographic Order of 2 strings, you can use &amp;lt;, &amp;lt;=, &amp;gt;, &amp;gt;=.</description>
+      
     </item>
     
     <item>
       <title>How to Read and Write a File in Golang?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
+      <link>/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
       <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
+      <guid>/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
       <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.
 Write a file using WriteFile The WriteFile function takes 3 arguments, filename, data in a byte array, and filemode.
 func WriteFile(filename string, data []byte, perm os.FileMode) error A FileMode represents a file&#39;s mode and permission bits. Learn more
 package main import ( &amp;#34;io/ioutil&amp;#34; &amp;#34;log&amp;#34; ) func main() { // create a byte array of a string  data := []byte(&amp;#34;Hello Gopher!</description>
+      
     </item>
     
     <item>
       <title>How to Use Json in Golang?</title>
-      <link>https://schadokar.dev/posts/how-to-use-json-in-golang/</link>
+      <link>/posts/how-to-use-json-in-golang/</link>
       <pubDate>Mon, 23 Mar 2020 11:23:56 +0530</pubDate>
       
-      <guid>https://schadokar.dev/posts/how-to-use-json-in-golang/</guid>
+      <guid>/posts/how-to-use-json-in-golang/</guid>
       <description>When you start a project which interacts with the outer world, it requires data exchange. To make a project successful this interaction must be simple and efficient.
 What is Data Exchange?  Data exchange is the process of taking data structured under a source schema and transforming it into data structured under a target schema, so that the target data is an accurate representation of the source data. - Wikipedia</description>
+      
     </item>
     
     <item>
       <title>Convert String to Int and Int to String in Golang</title>
-      <link>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
+      <link>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
       <pubDate>Tue, 03 Mar 2020 08:25:25 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
+      <guid>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
       <description>Golang standard library has provided 2 functions Atoi and Itoa to convert string to int and int to string respectively.
 These 2 functions placed inside the strconv package.
  Package strconv implements conversions to and from string representations of basic data types.
  String to Int The strconv.Atoi function takes a string and returns an int and an error.
 func Atoi(s string) (int, error) It will return type int and type int is system dependent.</description>
+      
     </item>
     
     <item>
       <title>How to use Swapper in Golang?</title>
-      <link>https://schadokar.dev/to-the-point/swapper-in-golang/</link>
+      <link>/to-the-point/swapper-in-golang/</link>
       <pubDate>Tue, 03 Mar 2020 08:17:07 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/swapper-in-golang/</guid>
+      <guid>/to-the-point/swapper-in-golang/</guid>
       <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
 Function Definition func Swapper(slice interface{}) func(i, j int) Let&#39;s try
 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; ) func main() { s := []int{1, 2, 3} fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) swapF := reflect.Swapper(s) swapF(0, 1) fmt.</description>
+      
     </item>
     
     <item>
       <title>How to Join Strings in Golang?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-join-strings-in-golang/</link>
+      <link>/to-the-point/how-to-join-strings-in-golang/</link>
       <pubDate>Thu, 27 Feb 2020 19:46:51 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-join-strings-in-golang/</guid>
+      <guid>/to-the-point/how-to-join-strings-in-golang/</guid>
       <description>There are multiple ways to join or concat strings in the golang.
 Let&#39;s start with the easy one.
 Using the + operator 🔧 package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;Hello&amp;#34; // there is a space before World 	str2 := &amp;#34; World!&amp;#34; fmt.Println(str1 + str2) } Output
 Hello World!  Using Sprint, Sprintf, Sprintln 🛠 The fmt package has Sprint, Sprintf and Sprintln function which can format the strings using the default or custom formats.</description>
+      
     </item>
     
     <item>
       <title>Use Environment Variable in your next Golang Project</title>
-      <link>https://schadokar.dev/posts/go-env-ways/</link>
+      <link>/posts/go-env-ways/</link>
       <pubDate>Sun, 12 Jan 2020 18:14:49 +0530</pubDate>
       
-      <guid>https://schadokar.dev/posts/go-env-ways/</guid>
+      <guid>/posts/go-env-ways/</guid>
       <description>Photo by Moja Msanii on Unsplash When it comes to creating a production-grade application, using the environment variable in the application is de facto.
 Why should we use the environment variable? Suppose you have an application with many features and each feature need to access the Database. You configured all the DB information like DBURL, DBNAME, USERNAME and PASSWORD in each feature.
 There are a few major disadvantages to this approach, there can be many.</description>
+      
     </item>
     
     <item>
       <title>How to create a CLI in golang with cobra</title>
-      <link>https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra/</link>
+      <link>/posts/how-to-create-a-cli-in-golang-with-cobra/</link>
       <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
       
-      <guid>https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra/</guid>
+      <guid>/posts/how-to-create-a-cli-in-golang-with-cobra/</guid>
       <description>Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
 When you learn golang then it is very often that you’ll come across that ‘golang is great to build cli tools’. This fascinated me too. So, I tried to get my hands dirty and found a few tutorials of creating a cli but most of all are not basic.</description>
+      
     </item>
     
     <item>
       <title>Build a Todo App in Golang, MongoDB, and React</title>
-      <link>https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react/</link>
+      <link>/posts/build-a-todo-app-in-golang-mongodb-and-react/</link>
       <pubDate>Tue, 06 Aug 2019 05:41:57 +0000</pubDate>
       
-      <guid>https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react/</guid>
+      <guid>/posts/build-a-todo-app-in-golang-mongodb-and-react/</guid>
       <description>The main purpose of this tutorial to get hands-on experience in Golang. When I was learning Golang, I realized there are very few tutorials and articles out there which give you a complete end to end hands-on experience.
 This is the GitHub link for the complete code.
  In this tutorial, we will build a todo app in which the server will be in Golang, the database will be MongoDB, and the frontend will be in React.</description>
+      
     </item>
     
   </channel>

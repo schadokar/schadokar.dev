@@ -1,101 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"  lang="en" >
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <title>Build a Todo App in Golang, MongoDB, and React | Shubham Chadokar</title>
-  
-  
-  
-  <link href="https://schadokar.dev/index.xml" rel="alternate" type="application/rss+xml" title="Shubham Chadokar" />
-  
-  <link rel="stylesheet" href="/css/style.css" /><link rel='stylesheet' href='https://schadokar.dev/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="canonical" href="https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react/">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-158088106-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-</head>
-
-<body>
-<section class="section">
-  
-  <nav id="nav-main" class="nav">
-    <div id="nav-name" class="nav-left">
-      <a id="nav-anchor" class="nav-item" href="https://schadokar.dev">
-        <h1 id="nav-heading" class="title is-4">Shubham Chadokar</h1>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav id="nav-items" class="nav-item level is-mobile">
-        <nav class="nav-links">
-          <a href="/about">About Me</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/projects">Projects</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/newsletter">Newsletter</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/contact">Contact</a>
-        </nav>
-      </nav>
-    </div>
-  </nav>
-
-  <nav class="nav">
-    
-    
-  </nav>
-
-  
-  <script src="/js/navicon-shift.js"></script>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="subtitle tags is-6 is-pulled-right">
-      
-      
-<a class="subtitle is-6" href="/tags/golang">#golang</a>
-
-
-
-  
-  | <a class="subtitle is-6" href="/tags/development">#development</a>
-  
-  | <a class="subtitle is-6" href="/tags/tutorial">#tutorial</a>
-  
-
-      
-    </div>
-    <h2 class="subtitle is-6">August 6, 2019</h2>
-    <h1 class="title">Build a Todo App in Golang, MongoDB, and React</h1>
-    
-
-
-    <div class="content">
-      <p><img src="./asset-1.png" alt="Google sources"></p>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Build a Todo App in Golang, MongoDB, and React&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.1d507363701a5f2a3b1ba57bf3629e2c11c41afda9a2b9062ee664eb0b8eddf2dc1ccd7a54c9cb919b37b8c2b3c8eb2d.css" integrity="sha384-HVBzY3AaXyo7G6V782KeLBHEGv2porkGLuZk6wuO3fLcHM16VMnLkZs3uMKzyOst"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Build a Todo App in Golang, MongoDB, and React" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Shubham Chadokar</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/posts">Posts</a><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a></nav></div></span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Build a Todo App in Golang, MongoDB, and React</h1><p class="article date">Tuesday, August 6, 2019</p></section><article class="article markdown-body"><p><img  src="./asset-1.png"
+        alt="Google sources"/></p>
 <p>The main purpose of this tutorial to get hands-on experience in Golang. When I was learning Golang, I realized there are very few tutorials and articles out there which give you a complete end to end hands-on experience.</p>
-<p>This is the <a href="https://github.com/schadokar/go-to-do-app/">GitHub link</a> for the complete code.</p>
+<p>This is the <a href="https://github.com/schadokar/go-to-do-app/"target="_blank">GitHub link</a> for the complete code.</p>
 <hr>
 <p>In this tutorial, we will build a todo app in which the server will be in Golang, the database will be MongoDB, and the frontend will be in React.</p>
 <ol>
@@ -124,10 +37,10 @@ if (!doNotTrack) {
       <span style="color:#f92672">-</span> router.go
     <span style="color:#f92672">-</span> main.go
 </code></pre></div><p>In the server, we require 2 dependencies: the first to connect with MongoDB and the second to create RESTAPIs.</p>
-<p>We are going to use the official <a href="https://github.com/mongodb/mongo-go-driver">MongoDB Go Driver</a> from MongoDB.</p>
+<p>We are going to use the official <a href="https://github.com/mongodb/mongo-go-driver"target="_blank">MongoDB Go Driver</a> from MongoDB.</p>
 <p>To install it run the below command in the terminal or command window.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#66d9ef">go</span>.<span style="color:#a6e22e">mongodb</span>.<span style="color:#a6e22e">org</span><span style="color:#f92672">/</span><span style="color:#a6e22e">mongo</span><span style="color:#f92672">-</span><span style="color:#a6e22e">driver</span>
-</code></pre></div><p>Second, install the <code>gorilla/mux</code> <a href="https://github.com/gorilla/mux">package</a> for the router. <code>mux</code> is one of the most popular packages for the router in the Golang.</p>
+</code></pre></div><p>Second, install the <code>gorilla/mux</code> <a href="https://github.com/gorilla/mux"target="_blank">package</a> for the router. <code>mux</code> is one of the most popular packages for the router in the Golang.</p>
 <p>To install it run the below command in the terminal or command window.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">gorilla</span><span style="color:#f92672">/</span><span style="color:#a6e22e">mux</span>
 </code></pre></div><h4 id="models"><strong>Models</strong></h4>
@@ -143,7 +56,7 @@ if (!doNotTrack) {
   <span style="color:#a6e22e">Task</span>   <span style="color:#66d9ef">string</span>             <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;task,omitempty&#34;</span><span style="color:#e6db74">`</span>
   <span style="color:#a6e22e">Status</span> <span style="color:#66d9ef">bool</span>               <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;status,omitempty&#34;</span><span style="color:#e6db74">`</span>
 }
-</code></pre></div><p>The first line is the package name for this file. To learn more about packages follow this <a href="https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc">link</a>.</p>
+</code></pre></div><p>The first line is the package name for this file. To learn more about packages follow this <a href="https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc"target="_blank">link</a>.</p>
 <p>The second line is <code>import</code> primitive from <code>mongo-driver</code> the package.</p>
 <p>To define how the data will get stored in the database we have to create a <code>model</code>for it. In Golang, we use <code>struct</code> type for this.</p>
 <p>In the <code>ToDoList</code> we have 3 fields:</p>
@@ -163,32 +76,35 @@ if (!doNotTrack) {
 <p><strong>MongoDB Set up</strong></p>
 <p>First set up the MongoDB connection.</p>
 <p>Here I am using MongoDB Atlas for the demo. You can sign up for free tier, it gives you 512MB of storage, that is more than enough for learning purpose.</p>
-<p><a href="https://docs.atlas.mongodb.com/getting-started/">Sign up</a> for MongoDB Atlas. Follow the link instructions.</p>
+<p><a href="https://docs.atlas.mongodb.com/getting-started/"target="_blank">Sign up</a> for MongoDB Atlas. Follow the link instructions.</p>
 <p>Once you have your cluster ready, a few things need to be done.</p>
 <p>First, white list your IP address.</p>
 <ul>
 <li>Click on <strong>Network Access</strong> under <strong>Security</strong>.</li>
 <li>Click <strong>ADD IP ADDRESS</strong> and select <strong>ADD CURRENT IP ADDRESS</strong>. This will allow only your computer to interact with it.</li>
 </ul>
-<p><img src="./asset-2.png" alt="Whitelist IP address"></p>
-<p>Second, create a user. You can learn more about the user in this <a href="https://docs.atlas.mongodb.com/getting-started/#create-a-mongodb-user-for-your-cluster">link</a>.</p>
+<p><img  src="./asset-2.png"
+        alt="Whitelist IP address"/></p>
+<p>Second, create a user. You can learn more about the user in this <a href="https://docs.atlas.mongodb.com/getting-started/#create-a-mongodb-user-for-your-cluster"target="_blank">link</a>.</p>
 <ul>
 <li>Click <strong>Database Access</strong> under <strong>Security</strong> and create a new user.</li>
 <li>I have <code>admin</code> as a user.</li>
 </ul>
-<p><img src="./asset-3.png" alt="atlas user"></p>
+<p><img  src="./asset-3.png"
+        alt="atlas user"/></p>
 <p>Now, its time to get the connection string.</p>
 <ul>
 <li>Go to <strong>Cluster</strong> and click <strong>connect</strong> and then <strong>Connect Your Application</strong>.</li>
 <li>Copy the connection string and paste it in <code>connectionString</code>in <code>middleware.go</code></li>
 </ul>
-<p><img src="./asset-4.png" alt="connection string"></p>
+<p><img  src="./asset-4.png"
+        alt="connection string"/></p>
 <p>Let me explain the functionality. All the functions which are in uppercase are exported and will be used in <code>router.go</code> which we will be writing in some time.</p>
 <ul>
-<li><strong>init():</strong> runs only once throughout the program life. In the init function the connection to the MongoDB will be established. Check out this <a href="https://stackoverflow.com/a/49831018/9790416">answer on StackOverflow</a> to learn more about init.</li>
+<li><strong>init():</strong> runs only once throughout the program life. In the init function the connection to the MongoDB will be established. Check out this <a href="https://stackoverflow.com/a/49831018/9790416"target="_blank">answer on StackOverflow</a> to learn more about init.</li>
 <li><strong>GetAllTask:</strong> First it set the header to tackle the cors issue and then it will call the <code>getAllTask()</code> function. It uses a<code>bson</code> package to get the data from the MongoDB. <code>_bson.M_</code> <em>is used where M is an unordered, concise representation of a BSON document. It should generally be used to Serialize BSON.</em> All the documents returned in <code>primitive.M</code> type. Package <code>primitive</code> contains types similar to Go primitives for BSON types can do not have direct Go primitive representations.</li>
 <li><strong>CreateTask:</strong> It first decodes the request body and store in <code>models.ToDoList</code> type. It is imported from a <code>models</code> package. Then, it will call <code>insertOneTask</code> function and insert the task into the collection.</li>
-<li><strong>TaskComplete:</strong> It is an update request where it will update the task’s status according to task ID. To get the <code>params</code> from the URL, we are using <code>mux</code> package. Using <code>mux</code>, send task id as a string to the <code>taskComplete</code> function. MongoDB assigns ids to the data in ObjectID format. To get the ObjectID from the task id (string), we are using <code>primitive</code> package’s method <code>ObjectIDFromHex</code> . It will return the <code>ObjectID</code> . The <code>updateOne</code> method requires 3 arguments <code>context</code> , <code>filter</code> and <code>update</code> . <code>context</code> is <code>Background</code> you can learn more about context package from this <a href="https://golang.org/pkg/context/#Background">link</a>. The second argument is <code>filter</code> , filter by id and the third one is <code>update</code> where status is updated to <code>true</code> .</li>
+<li><strong>TaskComplete:</strong> It is an update request where it will update the task’s status according to task ID. To get the <code>params</code> from the URL, we are using <code>mux</code> package. Using <code>mux</code>, send task id as a string to the <code>taskComplete</code> function. MongoDB assigns ids to the data in ObjectID format. To get the ObjectID from the task id (string), we are using <code>primitive</code> package’s method <code>ObjectIDFromHex</code> . It will return the <code>ObjectID</code> . The <code>updateOne</code> method requires 3 arguments <code>context</code> , <code>filter</code> and <code>update</code> . <code>context</code> is <code>Background</code> you can learn more about context package from this <a href="https://golang.org/pkg/context/#Background"target="_blank">link</a>. The second argument is <code>filter</code> , filter by id and the third one is <code>update</code> where status is updated to <code>true</code> .</li>
 <li><strong>UndoTask:</strong> This is same as TaskComplete, it only updates the task’s status to <code>false</code></li>
 <li><strong>DeleteTask:</strong> It is a delete request. First, it’ll get the task id from the URL and then pass it to the <code>deleteOneTask</code> . It will retrieve the <code>ObjectID</code> of the task and then it will delete the task by its id from the collection.</li>
 <li><strong>DeleteAllTask:</strong> As its names speak for itself, it deletes all the tasks from the collection.</li>
@@ -255,22 +171,23 @@ if (!doNotTrack) {
 </code></pre></div><p>A<code>log</code> package is used to track logs.</p>
 <p>Open the terminal from the <code>server</code> directory and run the below command to serve the server. You’ll see the output as the image.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
-</code></pre></div><p><img src="./asset-5.png" alt="serve"></p>
+</code></pre></div><p><img  src="./asset-5.png"
+        alt="serve"/></p>
 <p>You can test the APIs using <code>POSTMAN</code> .</p>
 <hr>
 <h4 id="frontend-inreact">Frontend in React</h4>
-<p>We’re using the <code>create-react-app</code> module as a boilerplate for this project. You can learn more about it <a href="https://github.com/facebook/create-react-app">here</a>.</p>
+<p>We’re using the <code>create-react-app</code> module as a boilerplate for this project. You can learn more about it <a href="https://github.com/facebook/create-react-app"target="_blank">here</a>.</p>
 <p>Run the below command from the project directory <code>go-todo</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npx create-react-app client
 </code></pre></div><p>It will take a while to install. Once it is finished, install the following dependencies for the project. Open terminal from the <code>client</code> directory.</p>
 <ol>
 <li><strong>Axios:</strong> For interacting with the server rest APIs.</li>
-<li><strong>semantic-ui-react:</strong> It is a great react component library to quickly build a frontend. Refer to this <a href="https://react.semantic-ui.com/">link</a> to learn more it.</li>
+<li><strong>semantic-ui-react:</strong> It is a great react component library to quickly build a frontend. Refer to this <a href="https://react.semantic-ui.com/"target="_blank">link</a> to learn more it.</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install axios
 
 npm install semantic-ui-react
-</code></pre></div><p>Semantic UI React provides React components while Semantic UI provides themes as CSS stylesheets. Add the stylesheet in <code>index.html</code> inside the <code>public</code> folder. Check the semantic UI version from this <a href="https://react.semantic-ui.com/usage">link</a>.</p>
+</code></pre></div><p>Semantic UI React provides React components while Semantic UI provides themes as CSS stylesheets. Add the stylesheet in <code>index.html</code> inside the <code>public</code> folder. Check the semantic UI version from this <a href="https://react.semantic-ui.com/usage"target="_blank">link</a>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>/&gt;
 </code></pre></div><p>Update the title in the <code>title</code> tag. This will be the title of the tab in the browser. Save the <code>index.html</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">title</span>&gt;ToDo App&lt;/<span style="color:#f92672">title</span>&gt;
@@ -295,7 +212,7 @@ npm install semantic-ui-react
 }
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
 </code></pre></div><p>Create a new file <code>To-Do-List.js</code> inside the <code>src</code> folder. This component will be the frontend.</p>
-<p>You can download the component from the <a href="https://github.com/schadokar/go-to-do-app/blob/master/client/src/To-Do-List.js">GitHub</a>.</p>
+<p>You can download the component from the <a href="https://github.com/schadokar/go-to-do-app/blob/master/client/src/To-Do-List.js"target="_blank">GitHub</a>.</p>
 <p>You can save the file and it is ready to go.</p>
 <hr>
 <p><strong>Run the Application</strong></p>
@@ -310,89 +227,39 @@ npm install semantic-ui-react
 </code></pre></div><ul>
 <li>Go to <code>http://localhost:3000</code></li>
 </ul>
-<p><img src="./asset-6.png" alt="index"></p>
+<p><img  src="./asset-6.png"
+        alt="index"/></p>
 <ul>
 <li><strong>Create tasks</strong></li>
 </ul>
-<p><img src="./asset-7.png" alt="Create Task"></p>
+<p><img  src="./asset-7.png"
+        alt="Create Task"/></p>
 <ul>
 <li><strong>Complete task by clicking</strong> <code>Done</code></li>
 </ul>
-<p><img src="./asset-8.png" alt="Task Complete"></p>
+<p><img  src="./asset-8.png"
+        alt="Task Complete"/></p>
 <ul>
 <li><strong>Undo a task</strong></li>
 </ul>
-<p><img src="./asset-9.png" alt="Undo Task"></p>
+<p><img  src="./asset-9.png"
+        alt="Undo Task"/></p>
 <ul>
 <li><strong>Delete Task</strong></li>
 </ul>
-<p><img src="./asset-10.png" alt="Delete Task"></p>
+<p><img  src="./asset-10.png"
+        alt="Delete Task"/></p>
 <hr>
 <p>Congratulations! You just build a To-Do App in Golang.</p>
-<p>For the complete code. This is the <a href="https://github.com/schadokar/go-to-do-app/">Github Link.</a></p>
+<p>For the complete code. This is the <a href="https://github.com/schadokar/go-to-do-app/"target="_blank">Github Link.</a></p>
 <hr>
-
-      
-      <div class="related">
-
-<h3>Similar articles:</h3>
-<ul>
-	
-	<li><a href="/posts/hyperledger-fabric-installation-guide/">Hyperledger Fabric Installation Guide!</a></li>
-	
-	<li><a href="/posts/create-an-ethereum-dapp-with-react-and-docker/">Create an Ethereum Dapp with React and Docker</a></li>
-	
-	<li><a href="/posts/run-the-ganache-cli-inside-the-docker-container/">Run the Ganache Cli Inside the Docker Container</a></li>
-	
-	<li><a href="/posts/deploy-angular-application-on-azure-web-service/">Deploy Angular application on Azure Web Service</a></li>
-	
-</ul>
-</div>
-      
-    </div>
-    
-
-    <div>
-  <iframe style="margin-top: 20px" width="100%" height="200px" src="https://schadokar.substack.com/embed"
-    frameborder="0" scrolling="no"></iframe>
-</div>
-
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container">
-    <div id="disqus_thread"></div>
-    <script>
-
-      
-
-      
-
-      (function () { 
-        var d = document, s = d.createElement('script');
-        s.src = 'https://schadokar-dev.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-        Disqus.</a></noscript>
-  </div>
-</section>
-<section class="section">
-  
-  <div class="container">
-    <p>&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    
-    
-    
-  </div>
-</section>
-
-
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2019/>2019</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/development/>development</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/catalyst-network-the-first-step-towards-decentralized-internet/"><span class="li iconfont icon-article"></span>Catalyst Network: The first step towards Decentralized Internet</a></p><p><a class="link" href="/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/"><span class="li iconfont icon-article"></span>Are Smart Contract and Chaincode the Same in Hyperledger Fabric</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -403,36 +270,6 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="\/\/matomo.example.com\/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript>
-  <img src="//matomo.example.com/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
-</noscript>
-
-<script>
-    (function(f, a, t, h, o, m){
-        a[h]=a[h]||function(){
-            (a[h].q=a[h].q||[]).push(arguments)
-        };
-        o=f.createElement('script'),
-        m=f.getElementsByTagName('script')[0];
-        o.async=1; o.src=t; o.id='fathom-script';
-        m.parentNode.insertBefore(o,m)
-    })(document, window, '\/\/fathom.example.com\/tracker.js', 'fathom');
-    fathom('trackPageview');
-</script>
 </body>
 
 </html>

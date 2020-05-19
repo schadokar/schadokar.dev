@@ -1,26 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>development on Shubham Chadokar</title>
-    <link>https://schadokar.dev/tags/development/</link>
+    <link>/tags/development/</link>
     <description>Recent content in development on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Tue, 06 Aug 2019 05:41:57 +0000</lastBuildDate>
     
-	<atom:link href="https://schadokar.dev/tags/development/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Build a Todo App in Golang, MongoDB, and React</title>
-      <link>https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react/</link>
+      <link>/posts/build-a-todo-app-in-golang-mongodb-and-react/</link>
       <pubDate>Tue, 06 Aug 2019 05:41:57 +0000</pubDate>
       
-      <guid>https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react/</guid>
+      <guid>/posts/build-a-todo-app-in-golang-mongodb-and-react/</guid>
       <description>The main purpose of this tutorial to get hands-on experience in Golang. When I was learning Golang, I realized there are very few tutorials and articles out there which give you a complete end to end hands-on experience.
 This is the GitHub link for the complete code.
  In this tutorial, we will build a todo app in which the server will be in Golang, the database will be MongoDB, and the frontend will be in React.</description>
+      
     </item>
     
   </channel>

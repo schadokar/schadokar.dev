@@ -1,29 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>aws on Shubham Chadokar</title>
-    <link>https://schadokar.dev/tags/aws/</link>
+    <link>/tags/aws/</link>
     <description>Recent content in aws on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Wed, 25 Mar 2020 09:45:45 +0530</lastBuildDate>
     
-	<atom:link href="https://schadokar.dev/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to create a Linux VM in AWS?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
       <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
       <description>Create a new aws account.
 Login to your aws account. Select services on top left and search EC2 and select it.
 EC2 Dashboard Scroll down to Launch Instance section and select Launch Instance.
 Configure Instance Follow the steps to create a Ubuntu 16.04 VM.
 Step 1 Choose an Amazon Machine Image (AMI) Scroll down and select **Ubuntu Server 16.04 LTS (HVM).
 Step 2 Choose an Instance Type Select t2.medium and click Configure Instance Details.</description>
+      
     </item>
     
   </channel>

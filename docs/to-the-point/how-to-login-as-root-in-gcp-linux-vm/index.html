@@ -1,99 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"  lang="en" >
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <title>How to Login as Root in GCP Linux Vm | Shubham Chadokar</title>
-  
-  
-  
-  <link href="https://schadokar.dev/index.xml" rel="alternate" type="application/rss+xml" title="Shubham Chadokar" />
-  
-  <link rel="stylesheet" href="/css/style.css" /><link rel='stylesheet' href='https://schadokar.dev/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="canonical" href="https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-158088106-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-</head>
-
-<body>
-<section class="section">
-  
-  <nav id="nav-main" class="nav">
-    <div id="nav-name" class="nav-left">
-      <a id="nav-anchor" class="nav-item" href="https://schadokar.dev">
-        <h1 id="nav-heading" class="title is-4">Shubham Chadokar</h1>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav id="nav-items" class="nav-item level is-mobile">
-        <nav class="nav-links">
-          <a href="/about">About Me</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/projects">Projects</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/newsletter">Newsletter</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/contact">Contact</a>
-        </nav>
-      </nav>
-    </div>
-  </nav>
-
-  <nav class="nav">
-    
-    
-  </nav>
-
-  
-  <script src="/js/navicon-shift.js"></script>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="subtitle tags is-6 is-pulled-right">
-      
-      
-<a class="subtitle is-6" href="/tags/gcp">#gcp</a>
-
-
-
-  
-  | <a class="subtitle is-6" href="/tags/cloud">#cloud</a>
-  
-  | <a class="subtitle is-6" href="/tags/to-the-point">#to-the-point</a>
-  
-
-      
-    </div>
-    <h2 class="subtitle is-6">April 13, 2020</h2>
-    <h1 class="title">How to Login as Root in GCP Linux Vm</h1>
-    
-
-
-    <div class="content">
-      <p><img src="../images/gcp-default.png" alt="gcp-default"></p>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>How to Login as Root in GCP Linux Vm&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.1d507363701a5f2a3b1ba57bf3629e2c11c41afda9a2b9062ee664eb0b8eddf2dc1ccd7a54c9cb919b37b8c2b3c8eb2d.css" integrity="sha384-HVBzY3AaXyo7G6V782KeLBHEGv2porkGLuZk6wuO3fLcHM16VMnLkZs3uMKzyOst"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Login as Root in GCP Linux Vm" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Shubham Chadokar</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/posts">Posts</a><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a></nav></div></span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to Login as Root in GCP Linux Vm</h1><p class="article date">Monday, April 13, 2020</p></section><article class="article markdown-body"><p><img  src="../images/gcp-default.png"
+        alt="gcp-default"/></p>
 <p>In linux, <strong>root</strong> user is the most privileged user and it has access to all the commands and files. It is also known as the superuser or administrator.</p>
 <p>By default, whenever you login in GCP Linux VM using <strong>SSH</strong> provided by GCP or using the custom <strong>SSH</strong>, it login as <strong>gcp_username</strong> user or as <strong>ssh_username</strong> respectively.</p>
 <p>To login as the <strong>root</strong> user, first set the root password.</p>
@@ -109,74 +22,18 @@ This command can be used to change current user's password or if the user is mem
 <h3 id="login-as-root-user">Login as root user</h3>
 <p>Use <code>su</code> command to change the user.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">su root
-</code></pre></div><p><img src="./root-password.PNG" alt="root-login"></p>
+</code></pre></div><p><img  src="./root-password.PNG"
+        alt="root-login"/></p>
 <hr>
-<p><a href="https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/">Learn How to create a linux vm in gcp</a></p>
+<p><a href="https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/"target="_blank">Learn How to create a linux vm in gcp</a></p>
 <hr>
-
-      
-      <div class="related">
-
-<h3>Similar articles:</h3>
-<ul>
-	
-	<li><a href="/to-the-point/how-to-create-a-linux-vm-in-gcp/">How to Create a Linux VM in GCP</a></li>
-	
-	<li><a href="/to-the-point/how-to-create-a-linux-vm-in-azure/">How to create a Linux VM in Azure?</a></li>
-	
-	<li><a href="/to-the-point/how-to-create-a-linux-vm-in-aws/">How to create a Linux VM in AWS?</a></li>
-	
-	<li><a href="/to-the-point/compare-strings-in-golang/">Compare Strings in Golang</a></li>
-	
-	<li><a href="/to-the-point/how-to-read-and-write-a-file-in-golang/">How to Read and Write a File in Golang?</a></li>
-	
-</ul>
-</div>
-      
-    </div>
-    
-
-    <div>
-  <iframe style="margin-top: 20px" width="100%" height="200px" src="https://schadokar.substack.com/embed"
-    frameborder="0" scrolling="no"></iframe>
-</div>
-
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container">
-    <div id="disqus_thread"></div>
-    <script>
-
-      
-
-      
-
-      (function () { 
-        var d = document, s = d.createElement('script');
-        s.src = 'https://schadokar-dev.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-        Disqus.</a></noscript>
-  </div>
-</section>
-<section class="section">
-  
-  <div class="container">
-    <p>&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    
-    
-    
-  </div>
-</section>
-
-
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/2-the-point/>2-the-point</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/gcp/>GCP</a><a class="category" href=/categories/cloud/>Cloud</a><a class="tag" href=/tags/gcp/>gcp</a><a class="tag" href=/tags/cloud/>cloud</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-gcp/"><span class="li iconfont icon-article"></span>How to Create a Linux VM in GCP</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -187,36 +44,6 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="\/\/matomo.example.com\/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript>
-  <img src="//matomo.example.com/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
-</noscript>
-
-<script>
-    (function(f, a, t, h, o, m){
-        a[h]=a[h]||function(){
-            (a[h].q=a[h].q||[]).push(arguments)
-        };
-        o=f.createElement('script'),
-        m=f.getElementsByTagName('script')[0];
-        o.async=1; o.src=t; o.id='fathom-script';
-        m.parentNode.insertBefore(o,m)
-    })(document, window, '\/\/fathom.example.com\/tracker.js', 'fathom');
-    fathom('trackPageview');
-</script>
 </body>
 
 </html>

@@ -1,104 +1,17 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"  lang="en" >
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <title>Create an Ethereum Dapp with React and Docker | Shubham Chadokar</title>
-  
-  
-  
-  <link href="https://schadokar.dev/index.xml" rel="alternate" type="application/rss+xml" title="Shubham Chadokar" />
-  
-  <link rel="stylesheet" href="/css/style.css" /><link rel='stylesheet' href='https://schadokar.dev/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="canonical" href="https://schadokar.dev/posts/create-an-ethereum-dapp-with-react-and-docker/">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-158088106-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-</head>
-
-<body>
-<section class="section">
-  
-  <nav id="nav-main" class="nav">
-    <div id="nav-name" class="nav-left">
-      <a id="nav-anchor" class="nav-item" href="https://schadokar.dev">
-        <h1 id="nav-heading" class="title is-4">Shubham Chadokar</h1>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav id="nav-items" class="nav-item level is-mobile">
-        <nav class="nav-links">
-          <a href="/about">About Me</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/projects">Projects</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/newsletter">Newsletter</a>
-        </nav>
-        <nav class="nav-links">
-          <a href="/contact">Contact</a>
-        </nav>
-      </nav>
-    </div>
-  </nav>
-
-  <nav class="nav">
-    
-    
-  </nav>
-
-  
-  <script src="/js/navicon-shift.js"></script>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="subtitle tags is-6 is-pulled-right">
-      
-      
-<a class="subtitle is-6" href="/tags/blockchain">#blockchain</a>
-
-
-
-  
-  | <a class="subtitle is-6" href="/tags/ethereum">#ethereum</a>
-  
-  | <a class="subtitle is-6" href="/tags/tutorial">#tutorial</a>
-  
-
-      
-    </div>
-    <h2 class="subtitle is-6">April 14, 2019</h2>
-    <h1 class="title">Create an Ethereum Dapp with React and Docker</h1>
-    
-
-
-    <div class="content">
-      <p><img src="./asset-1.png" alt="Images Google Sources"></p>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Create an Ethereum Dapp with React and Docker&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.1d507363701a5f2a3b1ba57bf3629e2c11c41afda9a2b9062ee664eb0b8eddf2dc1ccd7a54c9cb919b37b8c2b3c8eb2d.css" integrity="sha384-HVBzY3AaXyo7G6V782KeLBHEGv2porkGLuZk6wuO3fLcHM16VMnLkZs3uMKzyOst"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Create an Ethereum Dapp with React and Docker" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Shubham Chadokar</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/posts">Posts</a><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a></nav></div></span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Create an Ethereum Dapp with React and Docker</h1><p class="article date">Sunday, April 14, 2019</p></section><article class="article markdown-body"><p><img  src="./asset-1.png"
+        alt="Images Google Sources"/></p>
 <p>In this tutorial, we’ll create an Ethereum Dapp and will run its different components in a separate docker container.</p>
-<p>You can clone the project using this <a href="https://github.com/schadokar/docker-ethereum.git">GitHub link</a>.</p>
+<p>You can clone the project using this <a href="https://github.com/schadokar/docker-ethereum.git"target="_blank">GitHub link</a>.</p>
 <p>Thanks to the people who’s article and courses helped a lot:</p>
-<p><a href="https://medium.com/u/e9031892baf5">Brandon Morelli</a> For HTML and CSS ( <a href="https://codeburst.io/build-a-weather-website-in-30-minutes-with-node-js-express-openweather-a317f904897b">Build a Weather Website</a> )</p>
-<p><a href="https://medium.com/u/d058882d8cd2">Stephen Grider</a> For <a href="https://www.udemy.com/share/1000CIAkUTc1xbQng=/">Ethereum</a> and <a href="https://www.udemy.com/share/100r4uAkUTc1xbQng=/">Docker</a> course on Udemy.</p>
+<p><a href="https://medium.com/u/e9031892baf5"target="_blank">Brandon Morelli</a> For HTML and CSS ( <a href="https://codeburst.io/build-a-weather-website-in-30-minutes-with-node-js-express-openweather-a317f904897b"target="_blank">Build a Weather Website</a> )</p>
+<p><a href="https://medium.com/u/d058882d8cd2"target="_blank">Stephen Grider</a> For <a href="https://www.udemy.com/share/1000CIAkUTc1xbQng=/"target="_blank">Ethereum</a> and <a href="https://www.udemy.com/share/100r4uAkUTc1xbQng=/"target="_blank">Docker</a> course on Udemy.</p>
 <hr>
 <p>Before beginning lets understand what we’re going to build and how the structure of our Dapp will look like.</p>
 <p>In the Dapp there will be three modules:</p>
@@ -106,7 +19,8 @@ if (!doNotTrack) {
 <strong>2.  Ethereum-Dapp and Server</strong>
 <strong>3.  Client (React App)</strong></p>
 <p>The above 3 modules will run in individual docker containers.</p>
-<p><img src="./asset-2.png" alt="D app"></p>
+<p><img  src="./asset-2.png"
+        alt="D app"/></p>
 <blockquote>
 <p>Why we’re building individual container for each service when they all can be build in one container?</p>
 </blockquote>
@@ -134,7 +48,7 @@ if (!doNotTrack) {
 <h3 id="1-ganache-cli">1. ganache-cli</h3>
 <p>It is a test network which comes with 10 accounts with 100 ethers each. It is best for development where you don’t have to wait for the transactions to mine.</p>
 <blockquote>
-<p><a href="https://truffleframework.com/ganache">Ganache</a> is a personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests.</p>
+<p><a href="https://truffleframework.com/ganache"target="_blank">Ganache</a> is a personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests.</p>
 </blockquote>
 <p>In our application ganache-cli will run in a docker container.</p>
 <p>Inside the project directory, create a <code>Dockerfile.ganache</code> .</p>
@@ -154,7 +68,7 @@ if (!doNotTrack) {
 <blockquote>
 <p>Ganache-cli’s default host is 127.0.0.1 but for docker instance it is 0.0.0.0</p>
 </blockquote>
-<p>I have explained all the above instructions in detail in <a href="https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container">my last post</a>. Please check it, if you find any difficulty here.</p>
+<p>I have explained all the above instructions in detail in <a href="https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container"target="_blank">my last post</a>. Please check it, if you find any difficulty here.</p>
 <p>Our network is configured.</p>
 <hr>
 <h3 id="2-ethereum-dapp-andserver">2. Ethereum Dapp and Server</h3>
@@ -278,7 +192,7 @@ client/
 <h3 id="3-client-react-application">3. Client (React Application)</h3>
 <p>For the react application, we’re using <code>create-react-app</code> tool for the Dapp.</p>
 <blockquote>
-<p>Create React App is a tool (built by developers at Facebook) that gives you a massive head start when building React apps. It saves you from time-consuming setup and configuration. — <a href="https://blog.teamtreehouse.com/getting-started-create-react-app-tool">treehouse</a></p>
+<p>Create React App is a tool (built by developers at Facebook) that gives you a massive head start when building React apps. It saves you from time-consuming setup and configuration. — <a href="https://blog.teamtreehouse.com/getting-started-create-react-app-tool"target="_blank">treehouse</a></p>
 </blockquote>
 <p><strong>Installing Create React App</strong></p>
 <p>We need to install the <code>create-react-app</code>globally. Open your Terminal or console and run:</p>
@@ -308,14 +222,14 @@ client/
 </code></pre></div><p>Once the <code>client</code> is created you will see a folder structure like above except <code>message.js</code> inside the <code>src</code> ,<code>Dockerfile</code> and <code>.dockerignore</code>.</p>
 <p>For more information on react please follow the below links:</p>
 <ul>
-<li><a href="https://facebook.github.io/create-react-app/docs/getting-started">https://facebook.github.io/create-react-app/docs/getting-started</a></li>
-<li><a href="https://blog.teamtreehouse.com/getting-started-create-react-app-tool">https://blog.teamtreehouse.com/getting-started-create-react-app-tool</a></li>
+<li><a href="https://facebook.github.io/create-react-app/docs/getting-started"target="_blank">https://facebook.github.io/create-react-app/docs/getting-started</a></li>
+<li><a href="https://blog.teamtreehouse.com/getting-started-create-react-app-tool"target="_blank">https://blog.teamtreehouse.com/getting-started-create-react-app-tool</a></li>
 </ul>
 <h4 id="indexhtml">index.html</h4>
 <p>Open <code>index.html</code> from the <code>public</code> folder and change the title to <code>Message App</code> . Add the below link in the <code>&lt;head&gt;</code> tag. This is the fonts which are used in the application.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://fonts.googleapis.com/css?family=Open+Sans:300&#39;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;stylesheet&#39;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/css&#39;</span>&gt;
 </code></pre></div><h4 id="appcss">App.css</h4>
-<p>Open the <code>App.css</code> from the <code>src</code> folder and paste the <code>css</code> from this <a href="https://gist.github.com/schadokar/7635212e2a284bf6055f806f8fc1f664">link</a>.</p>
+<p>Open the <code>App.css</code> from the <code>src</code> folder and paste the <code>css</code> from this <a href="https://gist.github.com/schadokar/7635212e2a284bf6055f806f8fc1f664"target="_blank">link</a>.</p>
 <h4 id="messagejs">message.js</h4>
 <p>Create a <code>message.js</code> in the <code>src</code> folder and paste the below code. This is the file which will work as the front-end of the application.</p>
 <blockquote>
@@ -324,12 +238,12 @@ client/
 <script type="application/javascript" src="https://gist.github.com/schadokar/e71322f0e16824363824c19beff01863.js"></script>
 
 <p>A component is the building block of any react app. To create a component it requires <code>Component</code> module from <code>react</code>the library. The endpoint is set to <code>http://localhost:4000</code> as the server is running at <code>4000</code> port.</p>
-<p>To make any request to the server <code>axios</code> library is used. To learn more about it follow this <a href="https://www.npmjs.com/package/axios">link</a>.</p>
+<p>To make any request to the server <code>axios</code> library is used. To learn more about it follow this <a href="https://www.npmjs.com/package/axios"target="_blank">link</a>.</p>
 <p>Open the terminal from the <code>client</code> directory and run the below command:</p>
 <pre><code class="language-node" data-lang="node">npm install axios --save
 </code></pre><p>We have created a <code>Message</code> component by extending the <code>Component</code> and at the bottom exported the <code>Message</code> .</p>
 <p>There are 2 states in the <code>Message</code> component <code>message</code> and <code>output</code> .</p>
-<p>States are the data which defines and control the behaviour of the component. Learn more about states in this <a href="https://facebook.github.io/react-native/docs/state">link</a>.</p>
+<p>States are the data which defines and control the behaviour of the component. Learn more about states in this <a href="https://facebook.github.io/react-native/docs/state"target="_blank">link</a>.</p>
 <p>The <code>message</code>state will store the message entered in the form and this state will use as an argument to send the POST request to <code>localhost:4000/</code> to <code>setMessage</code>.</p>
 <p>The <code>output</code> state will store the response from the server and display it.</p>
 <p>Following methods are used in <code>message.js</code> :</p>
@@ -397,98 +311,53 @@ client/
 <li><code>ports</code> map the ports at <code>3000:3000</code></li>
 <li><code>depends_on</code> start after the <code>dapp</code></li>
 </ul>
-<p>To learn more about <code>docker-compose.yml</code> follow this <a href="https://docs.docker.com/compose/overview/">link</a>.</p>
+<p>To learn more about <code>docker-compose.yml</code> follow this <a href="https://docs.docker.com/compose/overview/"target="_blank">link</a>.</p>
 <hr>
 <p>So, the hard part is over. Now, the fun part let’s run the application.</p>
 <p>Open the terminal from the root project directory and run the below command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker">docker-compose up --build<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>It will check for <code>docker-compose.yml</code> file in the current directory and will run it. For the first time, it will take some time so have patience.</p>
 <p>Once everything is running, open the browser and go to <code>localhost:3000</code> you’ll see the react application running.</p>
-<p><img src="./asset-3.png" alt="localhost:3000"></p>
+<p><img  src="./asset-3.png"
+        alt="localhost:3000"/></p>
 <ul>
 <li><strong>Compile Contract:</strong> You’ll see the message as compiled successfully.</li>
 </ul>
-<p><img src="./asset-4.png" alt="compile contract"></p>
+<p><img  src="./asset-4.png"
+        alt="compile contract"/></p>
 <ul>
 <li><strong>Deploy contract:</strong> It will send back the address of the contract at which it is deployed.</li>
 </ul>
-<p><img src="./asset-5.png" alt="deploy contract"></p>
+<p><img  src="./asset-5.png"
+        alt="deploy contract"/></p>
 <p><strong><em>Note:</em></strong> <strong><em>After compile or deploy command wait for a couple of seconds before running any other commands as both commands restart the server. Why?</em></strong></p>
 <p><strong><em>On compile, it saves the compiled contract in build, if the server doesn’t restart then it will use the last compiled contract to deploy the contract.</em></strong></p>
 <p><strong><em>On deploy, it saves the receipt in which deployed contract address is saved, if the server doesn’t restart, it will interact with the last deployed contract as the server is still using the last deployed contract’s address.</em></strong></p>
 <ul>
 <li><strong>Get Message:</strong> If you remember we set the initial message as <code>Hello World!</code></li>
 </ul>
-<p><img src="./asset-6.png" alt="Hello World!"></p>
+<p><img  src="./asset-6.png"
+        alt="Hello World!"/></p>
 <ul>
 <li><strong>Set Message:</strong> Set the message and it’ll return the transaction hash of the transaction. I set the message as <strong>“Docker Ethereum Dapp”</strong> and <strong><em>“ 0x464385a1914b0d8ffb48d660aa55d419f0afe040e0def20ff581338bbce545e2”</em></strong> is the transaction hash.</li>
 </ul>
-<p><img src="./asset-7.png" alt="Set Message"></p>
+<p><img  src="./asset-7.png"
+        alt="Set Message"/></p>
 <p>Check the message using “Get Message”</p>
-<p><img src="./asset-8.png" alt="Get Message"></p>
+<p><img  src="./asset-8.png"
+        alt="Get Message"/></p>
 <p>We successfully created the Ethereum Dapp with React and Docker.</p>
 <p>You don’t have to build the <code>docker-compose.yml</code> every time. Next time you just have to run the below command to run the application.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker">docker-compose up<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>You can clone the complete project from the <a href="https://github.com/schadokar/docker-ethereum.git">GitHub link</a>.</p>
+</span></code></pre></div><p>You can clone the complete project from the <a href="https://github.com/schadokar/docker-ethereum.git"target="_blank">GitHub link</a>.</p>
 <hr>
-
-      
-      <div class="related">
-
-<h3>Similar articles:</h3>
-<ul>
-	
-	<li><a href="/posts/run-the-ganache-cli-inside-the-docker-container/">Run the Ganache Cli Inside the Docker Container</a></li>
-	
-	<li><a href="/posts/deploy-angular-application-on-azure-web-service/">Deploy Angular application on Azure Web Service</a></li>
-	
-</ul>
-</div>
-      
-    </div>
-    
-
-    <div>
-  <iframe style="margin-top: 20px" width="100%" height="200px" src="https://schadokar.substack.com/embed"
-    frameborder="0" scrolling="no"></iframe>
-</div>
-
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container">
-    <div id="disqus_thread"></div>
-    <script>
-
-      
-
-      
-
-      (function () { 
-        var d = document, s = d.createElement('script');
-        s.src = 'https://schadokar-dev.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-        Disqus.</a></noscript>
-  </div>
-</section>
-<section class="section">
-  
-  <div class="container">
-    <p>&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    
-    
-    
-  </div>
-</section>
-
-
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="category" href=/categories/2019/>2019</a><a class="tag" href=/tags/blockchain/>blockchain</a><a class="tag" href=/tags/ethereum/>ethereum</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/hyperledger-fabric-installation-guide/"><span class="li iconfont icon-article"></span>Hyperledger Fabric Installation Guide!</a></p><p><a class="link" href="/posts/run-the-ganache-cli-inside-the-docker-container/"><span class="li iconfont icon-article"></span>Run the Ganache Cli Inside the Docker Container</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -499,36 +368,6 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="\/\/matomo.example.com\/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript>
-  <img src="//matomo.example.com/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
-</noscript>
-
-<script>
-    (function(f, a, t, h, o, m){
-        a[h]=a[h]||function(){
-            (a[h].q=a[h].q||[]).push(arguments)
-        };
-        o=f.createElement('script'),
-        m=f.getElementsByTagName('script')[0];
-        o.async=1; o.src=t; o.id='fathom-script';
-        m.parentNode.insertBefore(o,m)
-    })(document, window, '\/\/fathom.example.com\/tracker.js', 'fathom');
-    fathom('trackPageview');
-</script>
 </body>
 
 </html>

@@ -1,66 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>cloud on Shubham Chadokar</title>
-    <link>https://schadokar.dev/tags/cloud/</link>
+    <link>/tags/cloud/</link>
     <description>Recent content in cloud on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Mon, 13 Apr 2020 22:50:46 +0530</lastBuildDate>
     
-	<atom:link href="https://schadokar.dev/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to Login as Root in GCP Linux Vm</title>
-      <link>https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</link>
+      <link>/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</link>
       <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</guid>
+      <guid>/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</guid>
       <description>In linux, root user is the most privileged user and it has access to all the commands and files. It is also known as the superuser or administrator.
 By default, whenever you login in GCP Linux VM using SSH provided by GCP or using the custom SSH, it login as gcp_username user or as ssh_username respectively.
 To login as the root user, first set the root password.
 To set the root password, use passwd command.</description>
+      
     </item>
     
     <item>
       <title>How to Create a Linux VM in GCP</title>
-      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</link>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-gcp/</link>
       <pubDate>Sun, 29 Mar 2020 09:45:27 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</guid>
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-gcp/</guid>
       <description>Create a new account on GCP. For new users, GCP credits $300 dollars in the account for 12 months and with many free services.
 Login to your GCP account.
 Create a new virtual machine Select Compute Engine from the top left menu.
 Menu &amp;gt; Compute &amp;gt; Compute Engine
 Create a new project In GCP, a project is a resource manager. All the related resources of a project place inside it. Create a new project demo.</description>
+      
     </item>
     
     <item>
       <title>How to create a Linux VM in Azure?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-azure/</link>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-azure/</link>
       <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-azure/</guid>
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-azure/</guid>
       <description>Create a new account in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.
 For students, Microsoft also give away many resources and azure credits. You just have to reach to them by their email.
 Login to your azure account.
 Step 1 Search for Ubuntu 16.04 LTS In the search bar, search Ubuntu 16.04 LTS and select create.</description>
+      
     </item>
     
     <item>
       <title>How to create a Linux VM in AWS?</title>
-      <link>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
       <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
       
-      <guid>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
       <description>Create a new aws account.
 Login to your aws account. Select services on top left and search EC2 and select it.
 EC2 Dashboard Scroll down to Launch Instance section and select Launch Instance.
 Configure Instance Follow the steps to create a Ubuntu 16.04 VM.
 Step 1 Choose an Amazon Machine Image (AMI) Scroll down and select **Ubuntu Server 16.04 LTS (HVM).
 Step 2 Choose an Instance Type Select t2.medium and click Configure Instance Details.</description>
+      
     </item>
     
   </channel>

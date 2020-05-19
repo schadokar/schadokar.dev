@@ -1,40 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ethereum on Shubham Chadokar</title>
-    <link>https://schadokar.dev/tags/ethereum/</link>
+    <link>/tags/ethereum/</link>
     <description>Recent content in ethereum on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Sun, 14 Apr 2019 12:48:24 +0000</lastBuildDate>
     
-	<atom:link href="https://schadokar.dev/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Create an Ethereum Dapp with React and Docker</title>
-      <link>https://schadokar.dev/posts/create-an-ethereum-dapp-with-react-and-docker/</link>
+      <link>/posts/create-an-ethereum-dapp-with-react-and-docker/</link>
       <pubDate>Sun, 14 Apr 2019 12:48:24 +0000</pubDate>
       
-      <guid>https://schadokar.dev/posts/create-an-ethereum-dapp-with-react-and-docker/</guid>
+      <guid>/posts/create-an-ethereum-dapp-with-react-and-docker/</guid>
       <description>In this tutorial, we’ll create an Ethereum Dapp and will run its different components in a separate docker container.
 You can clone the project using this GitHub link.
 Thanks to the people who’s article and courses helped a lot:
 Brandon Morelli For HTML and CSS ( Build a Weather Website )
 Stephen Grider For Ethereum and Docker course on Udemy.
  Before beginning lets understand what we’re going to build and how the structure of our Dapp will look like.</description>
+      
     </item>
     
     <item>
       <title>Run the Ganache Cli Inside the Docker Container</title>
-      <link>https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container/</link>
+      <link>/posts/run-the-ganache-cli-inside-the-docker-container/</link>
       <pubDate>Mon, 01 Apr 2019 10:03:57 +0530</pubDate>
       
-      <guid>https://schadokar.dev/posts/run-the-ganache-cli-inside-the-docker-container/</guid>
+      <guid>/posts/run-the-ganache-cli-inside-the-docker-container/</guid>
       <description>In this article, we’ll run the ganache-cli inside the docker container and then we will connect it to the Metamask and transfer some Ether from one account to another.
 Prerequisites:
  Docker installed in your machine. Please check out this link and install which fits with your OS. The Metamask plugin installed to your browser. Please check out this link and follow the instructions to install it.  Lets first create the project directory by name docker-ganache.</description>
+      
     </item>
     
   </channel>
