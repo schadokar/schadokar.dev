@@ -1,5 +1,5 @@
 ---
-hidden: true
+layout: projects
 ---
 
 ## :rocket: Projects

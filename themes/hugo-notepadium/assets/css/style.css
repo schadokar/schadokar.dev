@@ -776,3 +776,11 @@ b {
 .article.markdown-body .lntable tr>:first-child {
   border-right: 1px dashed #e6e6e6;
 }
+
+/* Custom css */
+.frame {
+  width: 250px;
+  border: 1px solid #ccc;
+  background: #000;
+  margin: auto;
+}

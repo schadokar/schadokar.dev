@@ -1,0 +1,11 @@
+<div style="text-align: center;">
+  <div class="frame">
+    {{ with .Params.cover }}
+    <img src="{{ index . }}" style="width: 250px;" alt="cover missing">
+    {{ end }}
+  </div>
+  <div style="margin-top: 20px;">
+    {{ $download := .Params.downloadlink }}
+    <a href="{{ $download }}">Download</a>
+  </div>
+</div>
