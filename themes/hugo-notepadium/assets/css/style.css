@@ -224,8 +224,12 @@ b {
 
 #footer {
   font-size: .75em;
-  margin-top: 48px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: 64px;  
+  /* background-color: #fff; */
 }
 
 .header.wrap {
@@ -288,11 +292,33 @@ b {
   padding: 4px 6px;
 }
 
-.footer-wrap {
+.footer.wrap {
   display: block;
   text-align: center;
 }
 
+.footer.left-side,
+.footer.right-side,
+.footer.center {
+  display: inline-block;
+  text-align: initial;
+}
+
+.footer.left-side {
+  float: left;
+}
+
+.footer.right-side {
+  float: right;
+}
+
+.footer.center {
+  float: center;
+}
+
+.footer.footer-nav {
+  font-size: 1.2em;
+}
 .date {
   font-size: .875em;
 }

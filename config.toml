@@ -16,7 +16,41 @@ enableEmoji=true
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
+readingTime = true
+# slogan = "The Unknown Monk"
 
+[params.profile]
+  enable = false
+  avatar = "/images/pic.png"
+  name = "Shubham Chadokar"
+  bio = "Software Engineer"  # support markdown syntax
+  twitter = "https://twitter.com/schadokar1"  # https://twitter.com/XXX
+  github = "https://github.com/schadokar"  # https://github.com/XXX
+  # docker = "XXX"  # https://hub.docker.com/u/XXX
+  email = "hello@schadokar.dev"  # mailto:XXX@mail.com
+
+[params.comments]
+enable = true
+
+[params.math]
+enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+use = "katex"  # option: "katex", "mathjax". default: "katex"
+
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "xcode"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
+
+[params.share]
+enable = false
+addThisId = ""
+inlineToolId = ""
+
+[params.footer]
+showCategories = true       # /categories/
+showTags = true       # /tags/
+
+# custom navigation items
 
 [[params.nav.custom]]
 title = "Posts"
@@ -38,6 +72,25 @@ url = "/ebooks"
 title = "About"
 url = "/about"
 
-[[params.nav.custom]]
+# custom footer navigation items
+
+[[params.footer.custom]]
 title = "Newsletter"
 url = "/newsletter"
+
+
+[[menu.social]]
+    name = "GitHub"
+    url = "https://github.com/schadokar"
+    pre = "<i class='fab fa-github'></i>"
+
+[[menu.social]]
+    name = "Medium"
+    url = "https://medium.com/@schadokar"
+    pre = "<i class='fab fa-medium'></i>"
+
+[[menu.social]]
+    name = "Twitter"
+    url = "https://twitter.com/schadokar1"
+    pre = "<i class='fab fa-twitter'></i>"
+
