@@ -37,3 +37,7 @@ url = "/ebooks"
 [[params.nav.custom]]
 title = "About"
 url = "/about"
+
+[[params.nav.custom]]
+title = "Newsletter"
+url = "/newsletter"
