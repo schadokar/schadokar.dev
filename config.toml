@@ -13,6 +13,12 @@ Paginate = 10
 enableRobotsTXT = true
 enableEmoji=true
 
+# content management
+[permalinks]
+    enable = true
+    posts = "/posts/:title/"
+    to-the-point = "/to-the-point/:title/"
+
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"

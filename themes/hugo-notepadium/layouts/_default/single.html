@@ -4,7 +4,14 @@
 <div class="article-container">
     {{- partial "article-header.html" . -}}
     <article class="article markdown-body" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
-        {{- with .Params.cover -}}<p><img class="cover" src="{{- . | safeURL -}}" alt></p>{{- end -}}
+        {{- with .Params.cover -}}
+          <p>
+            <img class="cover" src="{{- . | safeURL -}}" alt>
+          </p>
+        {{- end -}}
+        {{ if .Params.draft }}
+          <span>DRAFT {{ .WordCount }} WORDS</span>
+        {{ end }}
         {{- .Content -}}
     </article>
     
