@@ -14,10 +14,10 @@
     
     <item>
       <title>Create a To Do App in Reactjs with Github Pages</title>
-      <link>/posts/create-a-to-do-app-in-reactjs/</link>
+      <link>/posts/create-a-to-do-app-in-reactjs-with-github-pages/</link>
       <pubDate>Tue, 14 Apr 2020 10:19:00 +0530</pubDate>
       
-      <guid>/posts/create-a-to-do-app-in-reactjs/</guid>
+      <guid>/posts/create-a-to-do-app-in-reactjs-with-github-pages/</guid>
       <description>In this tutorial, we will create a to-do list app in reactjs. We will use browser local storage to save the tasks, which will keep the tasks even after we close the browser. In the end, we will host this application on Github pages.
 Pre-requisites  Nodejs Code editor (I am using VS Code) Github Account   React Application We are going to use create-react-app as our base application.</description>
       
@@ -131,10 +131,10 @@ func Atoi(s string) (int, error) It will return type int and type int is system 
     
     <item>
       <title>How to use Swapper in Golang?</title>
-      <link>/to-the-point/swapper-in-golang/</link>
+      <link>/to-the-point/how-to-use-swapper-in-golang/</link>
       <pubDate>Tue, 03 Mar 2020 08:17:07 +0530</pubDate>
       
-      <guid>/to-the-point/swapper-in-golang/</guid>
+      <guid>/to-the-point/how-to-use-swapper-in-golang/</guid>
       <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
 Function Definition func Swapper(slice interface{}) func(i, j int) Let&#39;s try
 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; ) func main() { s := []int{1, 2, 3} fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) swapF := reflect.Swapper(s) swapF(0, 1) fmt.</description>
@@ -183,10 +183,10 @@ In short, identities are very important and if you don&#39;t save them properly,
     
     <item>
       <title>Use Environment Variable in your next Golang Project</title>
-      <link>/posts/go-env-ways/</link>
+      <link>/posts/use-environment-variable-in-your-next-golang-project/</link>
       <pubDate>Sun, 12 Jan 2020 18:14:49 +0530</pubDate>
       
-      <guid>/posts/go-env-ways/</guid>
+      <guid>/posts/use-environment-variable-in-your-next-golang-project/</guid>
       <description>Photo by Moja Msanii on Unsplash When it comes to creating a production-grade application, using the environment variable in the application is de facto.
 Why should we use the environment variable? Suppose you have an application with many features and each feature need to access the Database. You configured all the DB information like DBURL, DBNAME, USERNAME and PASSWORD in each feature.
 There are a few major disadvantages to this approach, there can be many.</description>
@@ -195,10 +195,10 @@ There are a few major disadvantages to this approach, there can be many.</descri
     
     <item>
       <title>Create your own Etherscan with React in 5 minutes</title>
-      <link>/posts/etherscan-react/</link>
+      <link>/posts/create-your-own-etherscan-with-react-in-5-minutes/</link>
       <pubDate>Tue, 07 Jan 2020 21:23:34 +0530</pubDate>
       
-      <guid>/posts/etherscan-react/</guid>
+      <guid>/posts/create-your-own-etherscan-with-react-in-5-minutes/</guid>
       <description>Photo by Radek Grzybowski on Unsplash In this tutorial, we&#39;ll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing semantic-ui-react which is the official react integration for semantic-ui.
  You can find the complete code in the github.
  Without wasting any time let&#39;s build it.
@@ -213,7 +213,8 @@ There are a few major disadvantages to this approach, there can be many.</descri
       <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
       
       <guid>/posts/how-to-create-a-cli-in-golang-with-cobra/</guid>
-      <description>Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
+      <description>Photo by Marvin Meyer on Unsplash
+Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
 When you learn golang then it is very often that you’ll come across that ‘golang is great to build cli tools’. This fascinated me too. So, I tried to get my hands dirty and found a few tutorials of creating a cli but most of all are not basic.</description>
       
     </item>

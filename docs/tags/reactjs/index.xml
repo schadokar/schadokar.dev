@@ -14,10 +14,10 @@
     
     <item>
       <title>Create a To Do App in Reactjs with Github Pages</title>
-      <link>/posts/create-a-to-do-app-in-reactjs/</link>
+      <link>/posts/create-a-to-do-app-in-reactjs-with-github-pages/</link>
       <pubDate>Tue, 14 Apr 2020 10:19:00 +0530</pubDate>
       
-      <guid>/posts/create-a-to-do-app-in-reactjs/</guid>
+      <guid>/posts/create-a-to-do-app-in-reactjs-with-github-pages/</guid>
       <description>In this tutorial, we will create a to-do list app in reactjs. We will use browser local storage to save the tasks, which will keep the tasks even after we close the browser. In the end, we will host this application on Github pages.
 Pre-requisites  Nodejs Code editor (I am using VS Code) Github Account   React Application We are going to use create-react-app as our base application.</description>
       
@@ -25,10 +25,10 @@ Pre-requisites  Nodejs Code editor (I am using VS Code) Github Account   React A
     
     <item>
       <title>Create your own Etherscan with React in 5 minutes</title>
-      <link>/posts/etherscan-react/</link>
+      <link>/posts/create-your-own-etherscan-with-react-in-5-minutes/</link>
       <pubDate>Tue, 07 Jan 2020 21:23:34 +0530</pubDate>
       
-      <guid>/posts/etherscan-react/</guid>
+      <guid>/posts/create-your-own-etherscan-with-react-in-5-minutes/</guid>
       <description>Photo by Radek Grzybowski on Unsplash In this tutorial, we&#39;ll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing semantic-ui-react which is the official react integration for semantic-ui.
  You can find the complete code in the github.
  Without wasting any time let&#39;s build it.

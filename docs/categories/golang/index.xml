@@ -50,11 +50,50 @@ What is Data Exchange?  Data exchange is the process of taking data structured u
     </item>
     
     <item>
+      <title>Convert String to Int and Int to String in Golang</title>
+      <link>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
+      <pubDate>Tue, 03 Mar 2020 08:25:25 +0530</pubDate>
+      
+      <guid>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
+      <description>Golang standard library has provided 2 functions Atoi and Itoa to convert string to int and int to string respectively.
+These 2 functions placed inside the strconv package.
+ Package strconv implements conversions to and from string representations of basic data types.
+ String to Int The strconv.Atoi function takes a string and returns an int and an error.
+func Atoi(s string) (int, error) It will return type int and type int is system dependent.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to use Swapper in Golang?</title>
+      <link>/to-the-point/how-to-use-swapper-in-golang/</link>
+      <pubDate>Tue, 03 Mar 2020 08:17:07 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-use-swapper-in-golang/</guid>
+      <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
+Function Definition func Swapper(slice interface{}) func(i, j int) Let&#39;s try
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; ) func main() { s := []int{1, 2, 3} fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) swapF := reflect.Swapper(s) swapF(0, 1) fmt.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Join Strings in Golang?</title>
+      <link>/to-the-point/how-to-join-strings-in-golang/</link>
+      <pubDate>Thu, 27 Feb 2020 19:46:51 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-join-strings-in-golang/</guid>
+      <description>There are multiple ways to join or concat strings in the golang.
+Let&#39;s start with the easy one.
+Using the + operator 🔧 package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;Hello&amp;#34; // there is a space before World 	str2 := &amp;#34; World!&amp;#34; fmt.Println(str1 + str2) } Output
+Hello World!  Using Sprint, Sprintf, Sprintln 🛠 The fmt package has Sprint, Sprintf and Sprintln function which can format the strings using the default or custom formats.</description>
+      
+    </item>
+    
+    <item>
       <title>Use Environment Variable in your next Golang Project</title>
-      <link>/posts/go-env-ways/</link>
+      <link>/posts/use-environment-variable-in-your-next-golang-project/</link>
       <pubDate>Sun, 12 Jan 2020 18:14:49 +0530</pubDate>
       
-      <guid>/posts/go-env-ways/</guid>
+      <guid>/posts/use-environment-variable-in-your-next-golang-project/</guid>
       <description>Photo by Moja Msanii on Unsplash When it comes to creating a production-grade application, using the environment variable in the application is de facto.
 Why should we use the environment variable? Suppose you have an application with many features and each feature need to access the Database. You configured all the DB information like DBURL, DBNAME, USERNAME and PASSWORD in each feature.
 There are a few major disadvantages to this approach, there can be many.</description>
@@ -67,7 +106,8 @@ There are a few major disadvantages to this approach, there can be many.</descri
       <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
       
       <guid>/posts/how-to-create-a-cli-in-golang-with-cobra/</guid>
-      <description>Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
+      <description>Photo by Marvin Meyer on Unsplash
+Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
 When you learn golang then it is very often that you’ll come across that ‘golang is great to build cli tools’. This fascinated me too. So, I tried to get my hands dirty and found a few tutorials of creating a cli but most of all are not basic.</description>
       
     </item>

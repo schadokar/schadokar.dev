@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script><title>Create your own Etherscan with React in 5 minutes&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.d6952daf9b9e1416674c325169c3a71ceb436c5f824d6ee2013146d3b7206ca6152d067fa14aadb42755d718bc2fdd29.css" integrity="sha384-1pUtr5ueFBZnTDJRacOnHOtDbF&#43;CTW7iATFG07cgbKYVLQZ/oUqttCdV1xi8L90p"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Create your own Etherscan with React in 5 minutes" /><meta name="twitter:image" content="https://schadokar.dev/posts/create-your-own-etherscan-with-react-in-5-minutes/./asset1.jpg" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/posts">Posts</a><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Create your own Etherscan with React in 5 minutes</h1><p class="article date">Tuesday, January 7, 2020<span class="reading-time"> • 10 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="./asset1.jpg" alt>
+          </p><h6 id="photo-by-radek-grzybowskihttpsunsplashcomrgrzybowskiutm_sourceunsplashutm_mediumreferralutm_contentcreditcopytext-on-unsplashhttpsunsplashcomsphotoslaptoputm_sourceunsplashutm_mediumreferralutm_contentcreditcopytext">Photo by <a href="https://unsplash.com/@rgrzybowski?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Radek Grzybowski</a> on <a href="https://unsplash.com/s/photos/laptop?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Unsplash</a></h6>
+<p>In this tutorial, we'll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing  <code>semantic-ui-react</code> which is the official react integration for <code>semantic-ui</code>.</p>
+<blockquote>
+<p>You can find the complete code in the <a href="https://github.com/schadokar/etherscan-react"target="_blank">github</a>.</p>
+</blockquote>
+<p>Without wasting any time let's build it.</p>
+<hr>
+<h2 id="prerequisite">Prerequisite</h2>
+<ul>
+<li>
+<p>nodejs</p>
+</li>
+<li>
+<p>Code editor &ndash; (I am using VS Code)</p>
+</li>
+</ul>
+<hr>
+<p>I am assuming that you have a basic understanding of reactjs and components.</p>
+<h2 id="create-a-react-project">Create a react project</h2>
+<p>We are using <code>create-react-app</code> as a boilerplate. Follow this <a href="https://github.com/facebook/create-react-app"target="_blank">link</a> to learn more about it.</p>
+<p>Open a terminal and run</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// this command will install create-react-app
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">npx</span> <span style="color:#a6e22e">create</span><span style="color:#f92672">-</span><span style="color:#a6e22e">react</span><span style="color:#f92672">-</span><span style="color:#a6e22e">app</span> <span style="color:#a6e22e">etherscan</span><span style="color:#f92672">-</span><span style="color:#a6e22e">react</span>
+</code></pre></div><blockquote>
+<p>If you've previously installed <code>create-react-app</code> globally via <code>npm install -g create-react-app</code>, we recommend you uninstall the package using <code>npm uninstall -g create-react-app</code> to ensure that npx always uses the latest version.</p>
+</blockquote>
+<p><code>etherscan-react</code> is the name of the project. You can name it anything you like.</p>
+<p>Once it is installed, open the terminal in the project and run <code>npm start</code>.</p>
+<p>Go to <code>localhost:3000</code>. You can see the boilerplate homepage.</p>
+<p>Now, our react boilerplate is ready.</p>
+<hr>
+<h2 id="install-dependencies">Install Dependencies</h2>
+<p>Following packages are required in this project.</p>
+<h3 id="semantic-ui-react">semantic-ui-react:</h3>
+<blockquote>
+<p>Semantic UI React is the official React integration for <a href="https://semantic-ui.com/"target="_blank">Semantic UI</a>.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">semantic</span><span style="color:#f92672">-</span><span style="color:#a6e22e">ui</span><span style="color:#f92672">-</span><span style="color:#a6e22e">react</span>
+</code></pre></div><h3 id="axios">axios:</h3>
+<p>To make http request we are using <code>axios</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">axios</span>
+</code></pre></div><hr>
+<h2 id="etherscan-api">Etherscan API</h2>
+<p>We are going to use Etherscan API to get the ethereum blockchain data like the latest block details, transaction detail, ether price etc.</p>
+<p>Follow this <a href="https://etherscan.io/"target="_blank">link</a> to register for an Etherscan account. Sign in if you already registered.</p>
+<p>Go to the API-Keys section on the left side.</p>
+<p>Create a new api key token. Give <code>eth-react</code> as the app name. You can give it any name.</p>
+<p>Note down the API-KEY.</p>
+<hr>
+<h2 id="set-up-the-semantic-ui-react">Set up the semantic-ui-react</h2>
+<p>Open the <code>public/index.html</code> in the editor.</p>
+<p>Import the <code>semantic-ui</code> cdn in the <code>head</code> of the <code>index.html</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span>
+      <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>
+      <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>
+    /&gt;
+</code></pre></div><p>You can check the latest version of semantic-ui from this <a href="https://react.semantic-ui.com/usage"target="_blank">link</a>.</p>
+<p>Change the <code>title</code> of the application.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">title</span>&gt; Ethereum Dashboard &lt;/<span style="color:#f92672">title</span>&gt;
+</code></pre></div><hr>
+<h2 id="lets-start-the-fun-part-the-coding">Let's start the fun part, the coding</h2>
+<p>Open the project in your favourite code editor. I am using VS Code.</p>
+<p>Create a <code>components</code> folder inside the <code>src</code>. Inside the <code>components</code> create the following components.</p>
+<pre><code>- src
+	- components
+		- Eth-Overview
+		- Header
+		- Latest-Blocks
+		- Latest-Txs 
+</code></pre><ul>
+<li>
+<p><strong>Eth-Overview:</strong> The overview of the ethereum blockchain such as ether price, latest block no., difficulty, and market cap.</p>
+</li>
+<li>
+<p><strong>Header:</strong> Simple header of the application.</p>
+</li>
+<li>
+<p><strong>Latest-Blocks:</strong> This component will fetch the latest 5 blocks.</p>
+</li>
+<li>
+<p><strong>Latest-Txs:</strong> This component will fetch all the transactions in the latest block.</p>
+</li>
+</ul>
+<hr>
+<h2 id="header">Header</h2>
+<p>The directory structure of the <code>Header</code></p>
+<pre><code>Header
+	- Header.jsx
+	- header.css
+	- index.js
+</code></pre><h3 id="headerjsx">Header.jsx</h3>
+<p>Open the <code>Header.jsx</code> in the editor and paste the below code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#75715e">// import Header component from the semantic-ui-react
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Header</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;semantic-ui-react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./header.css&#34;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">AppDashboard</span>() {
+  <span style="color:#66d9ef">return</span> (
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">as</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;h2&#34;</span> <span style="color:#a6e22e">block</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#a6e22e">Ethereum</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+  );
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">AppDashboard</span>;
+</code></pre></div><p>Here we are creating a function component by name <code>AppDashboard</code> and then we are exporting it at line 16.</p>
+<ul>
+<li>
+<p><strong>Line 3:</strong> We are using the <code>Header</code> component from the <code>semantic-ui-react</code>.</p>
+</li>
+<li>
+<p><strong>Line 9-11:</strong> We are using a specific header <code>block</code>, <code>as</code> is a props, which defines how the content inside it looks like. The <code>Ethereum</code> is the heading for the dashboard.</p>
+</li>
+</ul>
+<p>To learn more about the <code>Header</code> component, <a href="https://react.semantic-ui.com/elements/header/"target="_blank">check out the official documentation</a>.</p>
+<h3 id="headercss">header.css</h3>
+<p>Open the <code>header.css</code> and paste the below css.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">ui</span>.<span style="color:#a6e22e">block</span>.<span style="color:#a6e22e">header</span> {
+  <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">left</span>;
+  <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">white</span>;
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#1d6fa5</span>;
+  <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">#1d6fa5</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><blockquote>
+<p>In the <code>header.css</code> we are directly overriding the <code>semantic-ui.css</code>. This is not recommended. This is just for demonstration that we can change it.</p>
+</blockquote>
+<h3 id="indexjs">index.js</h3>
+<p>Open the <code>index.js</code>. From the <code>index.js</code> we will export the <code>Header.jsx</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">AppHeader</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Header.jsx&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">AppHeader</span>;
+</code></pre></div><h3 id="appjs">app.js</h3>
+<p>Instead of updating the <code>app.js</code> at once, we'll update as it required.</p>
+<p>Now, Open the <code>app.js</code> in the editor and paste the below code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#75715e">// import the Header component
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./components/Header/index&#34;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+  <span style="color:#66d9ef">return</span> (
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Header</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+  );
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</code></pre></div><p>Open the terminal in the project's root directory and run <code>npm start</code>.</p>
+<p>Go to browser, you will see the Header.</p>
+<hr>
+<h2 id="eth-overview">Eth-Overview</h2>
+<p>The directory structure of the <code>Eth-Overview</code></p>
+<pre><code>Eth-Overview
+	- Eth-Overview.jsx
+	- eth-overview.css
+	- index.js
+</code></pre><h3 id="eth-overviewjsx">Eth-Overview.jsx</h3>
+<p>Open the <code>Eth-Overview.jsx</code> in the editor and paste the below code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">axios</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;axios&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./eth-overview.css&#34;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Card</span>, <span style="color:#a6e22e">Grid</span>, <span style="color:#a6e22e">Icon</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;semantic-ui-react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">LatestBlocks</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;../Latest-Blocks/index&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">LatestTxs</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;../Latest-Txs/index&#34;</span>;
+
+<span style="color:#75715e">// import api key from the env variable
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">apiKey</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">REACT_APP_ETHERSCAN_API_KEY</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">https://api.etherscan.io/api</span><span style="color:#e6db74">`</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EthOverview</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>() {
+    <span style="color:#66d9ef">super</span>();
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">ethUSD</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+      <span style="color:#a6e22e">ethBTC</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+      <span style="color:#a6e22e">blockNo</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+      <span style="color:#a6e22e">latestBlock</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+      <span style="color:#a6e22e">difficulty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+      <span style="color:#a6e22e">marketCap</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
+    };
+  }
+
+  <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">componentDidMount</span>() {
+    <span style="color:#75715e">// get the ethereum price
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">axios</span>
+      .<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">?module=stats&amp;action=ethprice&amp;apikey=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">apiKey</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+      .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span> =&gt; {
+        <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">result</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>(
+          {
+            <span style="color:#a6e22e">ethUSD</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">ethusd</span>,
+            <span style="color:#a6e22e">ethBTC</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">ethbtc</span>
+          },
+          () =&gt; {
+            <span style="color:#75715e">// get the market cap of ether in USD
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">axios</span>
+              .<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">?module=stats&amp;action=ethsupply&amp;apikey=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">apiKey</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+              .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span> =&gt; {
+                <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">result</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>;
+                <span style="color:#75715e">// in wei
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">priceWei</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">toString</span>();
+
+                <span style="color:#75715e">// in ether
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">priceEth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">priceWei</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">priceWei</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">18</span>);
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">priceWei</span>, <span style="color:#a6e22e">priceEth</span>);
+                <span style="color:#75715e">// convert eth in USD
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+                  <span style="color:#a6e22e">marketCap</span><span style="color:#f92672">:</span> parseInt(<span style="color:#a6e22e">priceEth</span>) <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ethUSD</span>
+                });
+              });
+          }
+        );
+      });
+
+    <span style="color:#75715e">// get the latest block number
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">axios</span>
+      .<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">?module=proxy&amp;action=eth_blockNumber&amp;apikey=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">apiKey</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+      .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span> =&gt; {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+          <span style="color:#a6e22e">latestBlock</span><span style="color:#f92672">:</span> parseInt(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">result</span>),
+          <span style="color:#a6e22e">blockNo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">result</span> <span style="color:#75715e">// save block no in hex
+</span><span style="color:#75715e"></span>        });
+
+        <span style="color:#75715e">// get the block difficulty
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">axios</span>
+          .<span style="color:#a6e22e">get</span>(
+            <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">+</span>
+              <span style="color:#e6db74">`</span><span style="color:#e6db74">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">result</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&amp;boolean=true&amp;apikey=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">apiKey</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+          )
+          .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">blockDetail</span> =&gt; {
+            <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">result</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">blockDetail</span>.<span style="color:#a6e22e">data</span>;
+
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">difficulty</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">difficulty</span>).<span style="color:#a6e22e">toString</span>();
+
+            <span style="color:#75715e">// convert difficulty in Terra Hash
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// instead of dividing it with 10^12 we&#39;ll slice it
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">difficultyTH</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">difficulty</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">.</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">difficulty</span>.<span style="color:#a6e22e">slice</span>(
+              <span style="color:#ae81ff">4</span>,
+              <span style="color:#ae81ff">6</span>
+            )<span style="color:#e6db74">}</span><span style="color:#e6db74"> TH</span><span style="color:#e6db74">`</span>;
+
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+              <span style="color:#a6e22e">difficulty</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">difficultyTH</span>
+            });
+          });
+      });
+  }
+
+  <span style="color:#a6e22e">getLatestBlocks</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">latestBlock</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">LatestBlocks</span> <span style="color:#a6e22e">latestBlock</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">latestBlock</span>}<span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">B</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010">;</span>
+    }
+  };
+
+  <span style="color:#a6e22e">getLatestTxs</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">blockNo</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">LatestTxs</span> <span style="color:#a6e22e">blockNo</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">blockNo</span>}<span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010">;</span>
+    }
+  };
+
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">ethUSD</span>, <span style="color:#a6e22e">ethBTC</span>, <span style="color:#a6e22e">latestBlock</span>, <span style="color:#a6e22e">difficulty</span>, <span style="color:#a6e22e">marketCap</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>;
+    <span style="color:#66d9ef">return</span> (
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span>.<span style="color:#a6e22e">Row</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span>.<span style="color:#a6e22e">Column</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">4</span>}<span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Content</span><span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#1d6fa5&#34;</span> }}<span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ethereum&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">E</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">E</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">P</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">E</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Description</span> <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;usd&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                    {<span style="color:#a6e22e">ethUSD</span>} <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;at&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">B</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">}</span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010">}</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bitcoin&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">D</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span>.<span style="color:#a6e22e">Column</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">4</span>}<span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Content</span><span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#1d6fa5&#34;</span> }}<span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list alternate outline&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">A</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">E</span><span style="color:#960050;background-color:#1e0010">S</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">B</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">O</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">K</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Description</span> <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;square&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">B</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">}</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">D</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span>.<span style="color:#a6e22e">Column</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">4</span>}<span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Content</span><span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#1d6fa5&#34;</span> }}<span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;setting&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">D</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">F</span><span style="color:#960050;background-color:#1e0010">F</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">U</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">Y</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Description</span> <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span><span style="color:#f92672">&gt;</span>
+                    {<span style="color:#a6e22e">difficulty</span>}
+                  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">D</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span>.<span style="color:#a6e22e">Column</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">4</span>}<span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Content</span><span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#1d6fa5&#34;</span> }}<span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">M</span><span style="color:#960050;background-color:#1e0010">A</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010">K</span><span style="color:#960050;background-color:#1e0010">E</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">A</span><span style="color:#960050;background-color:#1e0010">P</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Description</span> <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;usd&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">}</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">D</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span> <span style="color:#a6e22e">divided</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vertically&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span>.<span style="color:#a6e22e">Row</span> <span style="color:#a6e22e">columns</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">2</span>}<span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span>.<span style="color:#a6e22e">Column</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getLatestBlocks</span>()}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Grid</span>.<span style="color:#a6e22e">Column</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getLatestTxs</span>()}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    );
+  }
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">EthOverview</span>;
+</code></pre></div><p>Don't panic, let me breakdown the code for you so that you can understand.</p>
+<ul>
+<li>
+<p><strong>Line 4:</strong> Importing <code>Grid</code> component for the dashboard layout. There are 2 rows, the first row will show the <code>etherprice</code> in USD and Bitcoin. The second row is for the latest blocks and the latest transactions. <code>Card</code> component is used to show the ether price, difficulty, latest block and market cap. <code>Icon</code> component is for the icons we require in the dashboard, such as <code>$</code>.</p>
+</li>
+<li>
+<p><strong>Line 5:</strong> <code>LatestBlocks</code> component will return the table of latest 5 blocks using the etherscan api. <code>latestBlock</code> number will send as param to this component.</p>
+</li>
+<li>
+<p><strong>Line 6:</strong> <code>LatestTxs</code> component will return the last 5 transactions of the latest block. <code>blockNo</code> (latestBlock) in hex format will be sent as a param.</p>
+</li>
+<li>
+<p><strong>Line 9:</strong> For testing purpose you can paste your api key and check the functionality. But it is recommended to get the api key from the environment variable.</p>
+</li>
+<li>
+<p><strong>Line 11:</strong> endpoint for all the requests.</p>
+</li>
+<li>
+<p><strong>Line 26:</strong> <code>ComponentDidMount</code> is a special function in the react, which will run first for that particular component. You can think of it as a constructor of the component. The comments explained everything in the code. It is fetching and calculating the basic information like ether price, latest block, difficulty and market cap.</p>
+</li>
+<li>
+<p><strong>Line 92:</strong> The <code>getLatestBlocks</code> method will render the <code>LatestBlocks</code> component.</p>
+</li>
+<li>
+<p><strong>Line 98:</strong> The <code>getLatestTxs</code> method will render the <code>LatestTxs</code> component.</p>
+</li>
+</ul>
+<h3 id="indexjs-1">index.js</h3>
+<p>Open the <code>index.js</code>. From the <code>index.js</code> we will export the <code>Eth-Overview.jsx</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">AppHeader</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Header.jsx&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">AppHeader</span>;
+</code></pre></div><hr>
+<h2 id="latest-blocks">Latest-Blocks</h2>
+<p>The directory structure of the <code>Latest-Blocks</code></p>
+<pre><code>Latest-Blocks
+	- Latest-Blocks.jsx
+	- index.js
+</code></pre><h3 id="latest-blocksjsx">Latest-Blocks.jsx</h3>
+<p>Open the <code>Latest-Blocks.jsx</code> in the code editor and paste the below code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> {
+  <span style="color:#a6e22e">Table</span>,
+  <span style="color:#a6e22e">Label</span>
+} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;semantic-ui-react&#34;</span>;
+
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">axios</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;axios&#34;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">apiKey</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">REACT_APP_ETHERSCAN_API_KEY</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">https://api.etherscan.io/api</span><span style="color:#e6db74">`</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LatestBlocks</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">blocks</span><span style="color:#f92672">:</span> []
+    };
+  }
+
+  <span style="color:#a6e22e">componentDidMount</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getBlocks</span>();
+  };
+
+  <span style="color:#a6e22e">getBlocks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> () =&gt; {
+    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">latestBlock</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>;
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">blocks</span> <span style="color:#f92672">=</span> [];
+
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) {
+      <span style="color:#75715e">// get the block transaction
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">blockDetail</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(
+        <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">+</span>
+          <span style="color:#e6db74">`</span><span style="color:#e6db74">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#e6db74">${</span>(
+            <span style="color:#a6e22e">latestBlock</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">i</span>
+          ).<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">16</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&amp;boolean=true&amp;apikey=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">apiKey</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+      );
+
+      <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">result</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">blockDetail</span>.<span style="color:#a6e22e">data</span>;
+      <span style="color:#a6e22e">blocks</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Row</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">i</span>}<span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Cell</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Label</span> <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Bk</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">B</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">}</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Cell</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#a6e22e">Miner</span> {<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">miner</span>} <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">br</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#a6e22e">Txs</span> {<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">transactions</span>.<span style="color:#a6e22e">length</span>}
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Cell</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Label</span> <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Size</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">I</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">z</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">)</span><span style="color:#960050;background-color:#1e0010">}</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">s</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+      );
+
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+        <span style="color:#a6e22e">blocks</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">blocks</span>
+      });
+    }
+  };
+
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> (
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span> <span style="color:#a6e22e">fixed</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Header</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Row</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Cell</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#1d6fa5&#34;</span> }}<span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h4</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Latest</span> <span style="color:#a6e22e">Blocks</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">4</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Body</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">blocks</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">B</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    );
+  }
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">LatestBlocks</span>;
+</code></pre></div><p>This component will fetch the latest 5 blocks from the etherscan and returns the table. You can increase the no. of blocks to fetch inline 29.</p>
+<h3 id="indexjs-2">index.js</h3>
+<p>Open the <code>index.js</code>. From the <code>index.js</code> we will export the <code>Latest-Blocks.jsx</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">latestBlocks</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Latest-Blocks.jsx&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">latestBlocks</span>;
+</code></pre></div><hr>
+<h2 id="latest-txs">Latest-Txs</h2>
+<p>The directory structure of the <code>Latest-Txs</code></p>
+<pre><code>Latest-Txs
+	- Latest-Txs.jsx
+	- index.js
+</code></pre><h3 id="latest-txsjsx">Latest-Txs.jsx</h3>
+<p>Open the <code>Latest-Txs.jsx</code> in the code editor and paste the below code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> {
+  <span style="color:#a6e22e">Table</span>,
+  <span style="color:#a6e22e">Label</span>
+} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;semantic-ui-react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">axios</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;axios&#34;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">apiKey</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">REACT_APP_ETHERSCAN_API_KEY</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">https://api.etherscan.io/api</span><span style="color:#e6db74">`</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LatestTxs</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">transactions</span><span style="color:#f92672">:</span> []
+    };
+  }
+
+  <span style="color:#a6e22e">componentDidMount</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTxs</span>();
+  };
+
+  <span style="color:#a6e22e">getTxs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> () =&gt; {
+    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">blockNo</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>;
+
+    <span style="color:#75715e">// get the block transaction
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">blockDetail</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(
+      <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">+</span>
+        <span style="color:#e6db74">`</span><span style="color:#e6db74">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">blockNo</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&amp;boolean=true&amp;apikey=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">apiKey</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+    );
+
+    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">transactions</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">blockDetail</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">result</span>;
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">txsDetails</span> <span style="color:#f92672">=</span> [];
+
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">transactions</span>[<span style="color:#a6e22e">i</span>];
+      <span style="color:#a6e22e">txsDetails</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Row</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">i</span>}<span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Cell</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Label</span> <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Tx</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">}</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Cell</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#a6e22e">From</span> {<span style="color:#a6e22e">tx</span>.<span style="color:#a6e22e">from</span>} <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">br</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#a6e22e">To</span> {<span style="color:#a6e22e">tx</span>.<span style="color:#a6e22e">to</span>}
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Cell</span><span style="color:#f92672">&gt;</span>
+            {<span style="color:#e6db74">&#34; &#34;</span>}
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Label</span> <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Eth</span><span style="color:#f92672">&lt;</span><span style="color:#e6db74">/Label&gt; {parseInt(tx.value) /</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span><span style="color:#f92672">*</span> <span style="color:#ae81ff">18</span>}
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+      );
+    }
+
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+      <span style="color:#a6e22e">transactions</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">txsDetails</span>
+    });
+  };
+
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> (
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span> <span style="color:#a6e22e">fixed</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Header</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Row</span><span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Cell</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#1d6fa5&#34;</span> }}<span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h4</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Latest</span> <span style="color:#a6e22e">Transactions</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">4</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">R</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">w</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Table</span>.<span style="color:#a6e22e">Body</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">transactions</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">B</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    );
+  }
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">LatestTxs</span>;
+</code></pre></div><p>This component will fetch the latest 5 transactions of the latest block from the etherscan and returns the table. You can increase the no. of transactions to fetch inline 36.</p>
+<h3 id="indexjs-3">index.js</h3>
+<p>Open the <code>index.js</code>. From the <code>index.js</code> we will export the <code>Latest-Blocks.jsx</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">latestBlocks</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Latest-Blocks.jsx&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">latestBlocks</span>;
+</code></pre></div><h2 id="appjs-1">app.js</h2>
+<p>Now, Open the <code>app.js</code> in the editor and paste the below code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./App.css&#34;</span>;
+<span style="color:#75715e">// import the header component
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./components/Header/index&#34;</span>;
+<span style="color:#75715e">// import the eth-overview component
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">EthOverview</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./components/Eth-Overview/index&#34;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+  <span style="color:#66d9ef">return</span> (
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;App&#34;</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Header</span> <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">EthOverview</span> <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+  );
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</code></pre></div><p>Open the terminal in the project's root directory and run <code>npm start</code>.</p>
+<p>Go to the browser and run <code>localhost:3000</code>.</p>
+<p><img  src="asset2.PNG"
+        alt="Etherscan Dashboard"/></p>
+<p>Congratulations, you just created your own etherscan dashboard.</p>
+<p>Now, you can integrate other etherscan api and add more feature to your etherscan dashboard.</p>
+<p>You can find the complete code in the <a href="https://github.com/schadokar/etherscan-react"target="_blank">GitHub</a>.</p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/reactjs/>reactjs</a><a class="tag" href=/tags/blockchain/>blockchain</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/use-environment-variable-in-your-next-golang-project/"><span class="li iconfont icon-article"></span>Use Environment Variable in your next Golang Project</a></p><p><a class="link" href="/posts/how-to-create-a-cli-in-golang-with-cobra/"><span class="li iconfont icon-article"></span>How to create a CLI in golang with cobra</a></p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "schadokar" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/create-a-to-do-app-in-reactjs/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/create-a-to-do-app-in-reactjs-with-github-pages/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/github-pages/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/reactjs/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
@@ -11,14 +11,13 @@
     <loc>https://schadokar.dev/tags/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/tutorial/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/tutorial/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/2-the-point/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/cloud/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cloud/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/gcp/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/gcp/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</loc><lastmod>2020-03-29T09:45:27+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/azure/</loc><lastmod>2020-03-27T14:56:35+05:30</lastmod></url><url>
@@ -33,7 +32,7 @@
     <loc>https://schadokar.dev/posts/how-to-use-json-in-golang/</loc><lastmod>2020-03-23T11:23:56+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/json/</loc><lastmod>2020-03-23T11:23:56+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</loc><lastmod>2020-03-03T08:25:25+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/to-the-point/swapper-in-golang/</loc><lastmod>2020-03-03T08:17:07+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/how-to-use-swapper-in-golang/</loc><lastmod>2020-03-03T08:17:07+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-join-strings-in-golang/</loc><lastmod>2020-02-27T19:46:51+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/algorithm/</loc><lastmod>2020-02-13T23:25:31+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/algorithm/</loc><lastmod>2020-02-13T23:25:31+05:30</lastmod></url><url>
@@ -44,10 +43,10 @@
     <loc>https://schadokar.dev/tags/couchdb/</loc><lastmod>2020-02-08T10:02:42+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/hyperledger-fabric/</loc><lastmod>2020-02-08T10:02:42+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/</loc><lastmod>2020-02-08T10:02:42+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/go-env-ways/</loc><lastmod>2020-01-12T18:14:49+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/use-environment-variable-in-your-next-golang-project/</loc><lastmod>2020-01-12T18:14:49+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/viper/</loc><lastmod>2020-01-12T18:14:49+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/blockchain/</loc><lastmod>2020-01-07T21:23:34+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/etherscan-react/</loc><lastmod>2020-01-07T21:23:34+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/create-your-own-etherscan-with-react-in-5-minutes/</loc><lastmod>2020-01-07T21:23:34+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/2019/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cobra/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/categories/featured/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>

@@ -18,7 +18,8 @@
       <pubDate>Mon, 18 Nov 2019 15:09:00 +0000</pubDate>
       
       <guid>/posts/how-to-create-a-cli-in-golang-with-cobra/</guid>
-      <description>Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
+      <description>Photo by Marvin Meyer on Unsplash
+Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.
 When you learn golang then it is very often that you’ll come across that ‘golang is great to build cli tools’. This fascinated me too. So, I tried to get my hands dirty and found a few tutorials of creating a cli but most of all are not basic.</description>
       
     </item>

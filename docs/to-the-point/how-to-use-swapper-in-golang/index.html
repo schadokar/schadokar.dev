@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script><title>How to use Swapper in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.d6952daf9b9e1416674c325169c3a71ceb436c5f824d6ee2013146d3b7206ca6152d067fa14aadb42755d718bc2fdd29.css" integrity="sha384-1pUtr5ueFBZnTDJRacOnHOtDbF&#43;CTW7iATFG07cgbKYVLQZ/oUqttCdV1xi8L90p"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to use Swapper in Golang?" /><meta name="twitter:image" content="https://schadokar.dev/to-the-point/how-to-use-swapper-in-golang//images/golang-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/posts">Posts</a><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to use Swapper in Golang?</h1><p class="article date">Tuesday, March 3, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="/images/golang-basic.png" alt>
+          </p><p><a href="https://golang.org/pkg/reflect/#Swapper"target="_blank">Swapper</a> is a function defined in the <a href="https://golang.org/pkg/reflect/"target="_blank">reflect</a> package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.</p>
+<h3 id="function-definition">Function Definition</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Swapper</span>(<span style="color:#a6e22e">slice</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span> <span style="color:#66d9ef">int</span>)
+</code></pre></div><p>Let's try</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;reflect&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Before swap: %v\n&#34;</span>, <span style="color:#a6e22e">s</span>)
+
+	<span style="color:#a6e22e">swapF</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Swapper</span>(<span style="color:#a6e22e">s</span>)
+
+	<span style="color:#a6e22e">swapF</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;After 1 swap: %v\n&#34;</span>, <span style="color:#a6e22e">s</span>)
+
+	<span style="color:#a6e22e">swapF</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;After 2 swap: %v\n&#34;</span>, <span style="color:#a6e22e">s</span>)
+}
+</code></pre></div><p><a href="https://play.golang.org/p/pljUgJ0mEnJ"target="_blank">Try it</a></p>
+<p>Output</p>
+<pre><code>Before swap: [1 2 3]
+After 1 swap: [2 1 3]
+After 2 swap: [3 1 2]
+</code></pre><p><strong>Swapper panics if the provided interface is not a slice.</strong></p>
+<pre><code>panic: reflect: call of Swapper on &lt;Type&gt; Value
+</code></pre><h3 id="reverse-a-slice-using-swapper">Reverse a slice using Swapper</h3>
+<p>Swap first element with last element, second element with second last and so on.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;reflect&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>}
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Before swap: %v\n&#34;</span>, <span style="color:#a6e22e">s</span>)
+
+	<span style="color:#a6e22e">swapF</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Swapper</span>(<span style="color:#a6e22e">s</span>)
+
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">s</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+		<span style="color:#a6e22e">swapF</span>(<span style="color:#a6e22e">i</span>, len(<span style="color:#a6e22e">s</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span><span style="color:#a6e22e">i</span>)
+	}
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;After swap: %v\n&#34;</span>, <span style="color:#a6e22e">s</span>)
+}
+
+</code></pre></div><p><a href="https://play.golang.org/p/yFtphVvgvBN"target="_blank">Try it</a></p>
+<p>Output</p>
+<pre><code>Before swap: [1 2 3 4 5 6 7]
+After swap: [7 6 5 4 3 2 1]
+</code></pre><h3 id="use-swapper-in-bubble-sort">Use Swapper in Bubble sort</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;reflect&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>}
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Before swapper: %v\n&#34;</span>, <span style="color:#a6e22e">s</span>)
+
+	<span style="color:#a6e22e">swapF</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Swapper</span>(<span style="color:#a6e22e">s</span>)
+
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">s</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> &lt; len(<span style="color:#a6e22e">s</span>); <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
+			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">i</span>] &gt; <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">j</span>] {
+				<span style="color:#a6e22e">swapF</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span>)
+			}
+		}
+	}
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;After swapper: %v\n&#34;</span>, <span style="color:#a6e22e">s</span>)
+}
+</code></pre></div><p>Output</p>
+<pre><code>Before swapper: [1 2 6 3 8 0 7 9 5 4]
+After swapper: [0 1 2 3 4 5 6 7 8 9]
+</code></pre><hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/convert-string-to-int-and-int-to-string-in-golang/"><span class="li iconfont icon-article"></span>Convert String to Int and Int to String in Golang</a></p><p><a class="link" href="/to-the-point/how-to-join-strings-in-golang/"><span class="li iconfont icon-article"></span>How to Join Strings in Golang?</a></p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "schadokar" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
