@@ -4,7 +4,7 @@ date: 2020-03-25T09:45:45+05:30
 description: "Learn how to create a ubuntu vm in the aws."
 categories: ["Tutorial", "to-the-point", "Cloud"]
 tags: ["to-the-point", "aws", "cloud"]
-cover: /images/aws-basic.png
+cover: https://schadokar.dev/images/aws-basic.png
 published: true
 ---
 

@@ -4,7 +4,7 @@ date: 2020-03-03T08:17:07+05:30
 description: "Learn how to Swapper function, to swap the array elements."
 categories: ["Tutorial", "to-the-point", "Golang"]
 tags: ["golang","to-the-point"]
-cover: /images/golang-basic.png
+cover: https://schadokar.dev/images/golang-basic.png
 published: true
 ---
 

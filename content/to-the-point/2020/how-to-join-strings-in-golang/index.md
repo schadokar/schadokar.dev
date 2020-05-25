@@ -4,7 +4,7 @@ date: 2020-02-27T19:46:51+05:30
 description: "There are multiple ways to join or concat strings in the golang."
 categories: ["Tutorial", "to-the-point", "Golang"]
 tags: ["golang", "strings","to-the-point"]
-cover: /images/golang-basic.png
+cover: https://schadokar.dev/images/golang-basic.png
 published: true
 ---
 

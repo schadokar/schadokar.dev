@@ -4,7 +4,7 @@ description: "It is very often that Hyperledger Fabric users use the terms smart
 date: "2019-06-10T08:53:55.390Z"
 tags: ["blockchain", "hyperledger-fabric", "article"]
 categories: ["Article", "Blockchain", "2019"]
-cover: ./asset-1.png
+cover: asset-1.png
 published: true
 canonical_link: https://schadokar.dev/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/
 redirect_from:

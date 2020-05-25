@@ -4,7 +4,7 @@ description: "What is decentralized internet? Why we need the decentralized Inte
 date: "2019-09-17T11:49:11.812Z"
 tags: ["blockchain", "catalyst", "article"]
 categories: ["Article", "Blockchain", "2019"]
-cover: ./asset-1.png
+cover: asset-1.png
 published: true
 canonical_link: https://schadokar.dev/posts/catalyst-network-the-first-step-towards-decentralized-internet
 redirect_from:

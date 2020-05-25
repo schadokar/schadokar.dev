@@ -4,7 +4,7 @@ date: 2020-02-08T10:02:42+05:30
 description: "Hyperledger Fabric is all about permissions. These permissions are provided in a form of certificates and keys."
 tags: ["hyperledger-fabric", "couchdb", "tutorial"]
 categories: ["Tutorial", "Blockchain"]
-cover: ./cover-pic.jpg
+cover: cover-pic.jpg
 published: true
 ---
 

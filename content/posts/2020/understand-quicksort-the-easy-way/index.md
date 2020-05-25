@@ -4,7 +4,7 @@ date: 2020-02-13T23:25:31+05:30
 description: "Quicksort is one of the efficient sorting algorithms and the average complexity is `O(n log n)`."
 categories: ["Tutorial","Algorithm", "JS"]
 tags: ["algorithm", "js", "tutorial"]
-cover: ./cover-pic.jpg
+cover: cover-pic.jpg
 published: true
 ---
 

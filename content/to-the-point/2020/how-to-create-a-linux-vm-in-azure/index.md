@@ -4,7 +4,7 @@ date: 2020-03-27T14:56:35+05:30
 description: "Learn how to create and configure a linux vm in microsoft azure cloud."
 categories: ["Tutorial", "to-the-point", "Cloud"]
 tags: ["to-the-point", "azure", "cloud"]
-cover: /images/azure-basic.png
+cover: https://schadokar.dev/images/azure-basic.png
 published: true
 ---
 

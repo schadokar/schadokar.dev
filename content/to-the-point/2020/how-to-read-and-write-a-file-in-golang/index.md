@@ -4,7 +4,7 @@ date: 2020-03-24T11:13:24+05:30
 description: "In this tutorial, we will learn how to read and write files in the file system using the `io/ioutil` package."
 categories: ["Tutorial", "to-the-point", "Golang"]
 tags: ["golang","to-the-point"]
-cover: /images/golang-basic.png
+cover: https://schadokar.dev/images/golang-basic.png
 published: true
 ---
 

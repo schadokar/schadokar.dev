@@ -5,7 +5,7 @@ published: true
 tags: ["reactjs", "blockchain", "tutorial" ]
 categories: ["Tutorial", "Blockchain","2020"]
 description: "In this tutorial, we'll create a simple single-page etherscan in reactjs."
-cover: ./asset1.jpg
+cover: asset1.jpg
 ---
 
 ###### Photo by [Radek Grzybowski](https://unsplash.com/@rgrzybowski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

@@ -4,7 +4,7 @@ description: "Deploying Angular application on Azure Web Service can be pain if 
 date: "2018-11-23T11:49:18.107Z"
 tags: ["azure", "angular", "tutorial"]
 categories: ["Tutorial", "Cloud", "2018"]
-cover: ./asset-1.png
+cover: asset-1.png
 published: true
 canonical_link: https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/
 redirect_from:

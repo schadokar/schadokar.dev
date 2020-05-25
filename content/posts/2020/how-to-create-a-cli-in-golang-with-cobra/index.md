@@ -4,7 +4,7 @@ description: "Have you ever wonder why in the world of GUI, CLI still exist? You
 date: "2019-11-18T15:09:00.263Z"
 tags: ["golang", "cobra", "tutorial"]
 categories: ["Tutorial", "Golang", "2019", "Featured"]
-cover: ./asset-1.jpeg
+cover: asset-1.jpeg
 published: true
 canonical_link: https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra
 redirect_from:

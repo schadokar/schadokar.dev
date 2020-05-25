@@ -4,7 +4,7 @@ date: 2020-03-27T11:55:03+05:30
 description: "Learn different ways to compare strings in golang."
 categories: ["Tutorial", "to-the-point", "Golang"]
 tags: ["golang","strings","to-the-point"]
-cover: /images/golang-basic.png
+cover: https://schadokar.dev/images/golang-basic.png
 published: true
 ---
 

@@ -5,7 +5,7 @@ description: "There are multiple ways in golang to use environment variables and
 published: true
 tags: ["golang", "viper", "tutorial"]
 categories: ["Golang", "Tutorial", "2020"]
-cover: ./asset1.jpg
+cover: asset1.jpg
 ---
 
 ###### Photo by [Moja Msanii](https://unsplash.com/photos/vO9-gal54go) on [Unsplash](https://unsplash.com/s/photos/security)

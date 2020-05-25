@@ -4,11 +4,9 @@ date: 2019-04-01T10:03:57+05:30
 description: "Connect the Metamask to ganache-cli running inside the docker container"
 categories: ["Tutorial", "2019", "Blockchain"]
 tags: ["tutorial", "blockchain", "ganache", "ethereum"]
+cover: https://cdn-images-1.medium.com/max/1800/1*xDXuvZWGToFqqPKEBcwksg.png 
 published: true
 ---
-
-![](https://cdn-images-1.medium.com/max/1800/1*xDXuvZWGToFqqPKEBcwksg.png)
-
 
 In this article, we’ll run the `ganache-cli` inside the docker container and
 then we will connect it to the [Metamask](https://metamask.io/) and transfer some Ether from one account to another.

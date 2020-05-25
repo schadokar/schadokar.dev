@@ -4,7 +4,7 @@ date: 2020-04-13T22:50:46+05:30
 description: "Learn how to login as root user in the GCP."
 categories: ["Tutorial", "to-the-point", "Cloud", "GCP"]
 tags: ["gcp", "cloud","to-the-point"]
-cover: /images/gcp-basic.png
+cover: https://schadokar.dev/images/gcp-basic.png
 published: true
 ---
 

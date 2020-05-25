@@ -4,13 +4,12 @@ description: "In this guide, we will install Hyperledger Fabric v1.4 on Linux ma
 date: "2019-06-05T12:46:01.096Z"
 tags: ["blockchain", "hyperledger-fabric", "tutorial"]
 categories: ["Tutorial", "Blockchain", "2019"]
+cover: asset-1.png
 published: true
-canonical_link: https://medium.com/@shubhamchadokar04/hyperledger-fabric-installation-guide-74065855eca9
+canonical_link: https://schadokar.dev/posts/hyperledger-fabric-installation-guide
 redirect_from:
-  - /hyperledger-fabric-installation-guide-74065855eca9
+  - /hyperledger-fabric-installation-guide
 ---
-
-![Google sources](./asset-1.png)
 
 When I started learning Hyperledger Fabric, installing it is really a pain in a neck and it turned miserable as I was using Windows.
 

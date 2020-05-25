@@ -4,7 +4,7 @@ date: 2020-03-23T11:23:56+05:30
 description: "In this tutorial we'll learn how to use json in golang."
 categories: ["Tutorial", "Golang"]
 tags: ["golang", "json"]
-cover: /images/golang-basic.png
+cover: https://schadokar.dev/images/golang-basic.png
 published: true
 ---
 

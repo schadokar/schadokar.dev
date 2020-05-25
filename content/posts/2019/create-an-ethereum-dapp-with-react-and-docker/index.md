@@ -4,7 +4,7 @@ description: "In this tutorial, we’ll create an Ethereum Dapp and will run its
 date: "2019-04-14T12:48:24.327Z"
 tags: ["blockchain", "ethereum", "tutorial"]
 categories: ["Tutorial", "Blockchain", "2019"]
-cover: ./asset-1.png
+cover: asset-1.png
 published: true
 canonical_link: https://schadokar.dev/posts/create-an-ethereum-dapp-with-react-and-docker
 redirect_from:

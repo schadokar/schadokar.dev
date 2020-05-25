@@ -4,7 +4,7 @@ description: "A complete step by step tutorial on how to create a to-do app in G
 date: "2019-08-06T05:41:57.760Z"
 tags: ["golang", "development", "tutorial"]
 categories: ["Tutorial", "Golang", "2019"]
-cover: ./asset-1.png
+cover: asset-1.png
 published: true
 canonical_link: https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react
 redirect_from:

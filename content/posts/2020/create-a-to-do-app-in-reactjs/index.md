@@ -4,7 +4,7 @@ date: 2020-04-14T10:19:00+05:30
 description: "Build a to-do app in reactjs and host it on github pages."
 categories: ["Tutorial", "Reactjs","2020"]
 tags: ["tutorial", "reactjs", "github-pages"]
-cover: ./images/cover.png
+cover: images/cover.png
 published: true
 
 ---

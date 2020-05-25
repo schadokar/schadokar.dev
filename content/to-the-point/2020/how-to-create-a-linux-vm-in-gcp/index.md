@@ -4,7 +4,7 @@ date: 2020-03-29T09:45:27+05:30
 description: "Learn how to create a linux vm in GCP."
 categories: ["Tutorial", "to-the-point", "Cloud", "GCP"]
 tags: ["to-the-point","gcp","cloud"]
-cover: /images/gcp-basic.png
+cover: https://schadokar.dev/images/gcp-basic.png
 published: true
 
 ---

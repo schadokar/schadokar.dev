@@ -4,7 +4,7 @@ date: 2020-03-03T08:25:25+05:30
 description: "Strconv package comes with 2 handy functions Atoi and Itoa"
 categories: ["Tutorial", "to-the-point", Golang]
 tags: ["golang", "to-the-point"]
-cover: /images/golang-basic.png
+cover: https://schadokar.dev/images/golang-basic.png
 published: true
 ---
 
