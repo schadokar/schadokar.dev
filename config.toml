@@ -84,6 +84,9 @@ url = "/about"
 title = "Newsletter"
 url = "/newsletter"
 
+[[params.footer.custom]]
+title = "Contact"
+url = "/contact"
 
 [[menu.social]]
     name = "GitHub"

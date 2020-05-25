@@ -4,15 +4,11 @@
 <div class="article-container">
     {{- partial "article-header.html" . -}}
     <article class="article markdown-body" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
-        {{- with .Params.cover -}}<p><img class="cover" src="{{- . | safeURL -}}" alt></p>{{- end -}}
-        {{- .Content -}}
+        <!-- {{- with .Params.cover -}}<p><img class="cover" src="{{- . | safeURL -}}" alt></p>{{- end -}} -->
+        {{ .Content }}
     </article>
-    
-    {{- partial "widgets/newsletter.html" . -}}
-    {{- partial "article-labels.html" . -}}
-    {{- partial "article-share.html" . -}}
-    {{- partial "article-license.html" . -}}
-    {{- partial "article-author.html" . -}}
 </div>
-
+<div class="article bottom">
+    {{- partial "widgets/newsletter.html" . -}}
+</div>
 {{- end -}}

@@ -34,31 +34,6 @@
     
     <item>
       <title></title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>About Me 🚀 Hi there, I am Shubham Kumar Chadokar.
-I am a Software Engineer 👓.
-I love to write articles and tutorials on Blockchain, Golang, Nodejs and Reactjs. My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, Reactjs, Docker, Kubernetes.
-I love to do photography 📷 in my me time.
-I like philosophical and mythological novels 📚. My favourites are Meluha and The Kite Runner.
-I love coffee ☕.</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/newsletter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/newsletter/</guid>
-      <description>👋 Newsletter Subscribe to my newsletter 📰 get the latest article and tutorial right into your inbox. You will only get one mail a month or max twice. 😄</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
       <link>/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -81,6 +56,42 @@ A prebuild golang server to work with redis db.</description>
       
       <guid>/ebooks/</guid>
       <description></description>
+      
+    </item>
+    
+    <item>
+      <title>💭 About Me</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>🚀 Hi there, I am Shubham Kumar Chadokar.
+I am a Software Engineer 👓.
+I love to write articles and tutorials on Blockchain, Golang, Nodejs and Reactjs. My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, Reactjs, Docker, Kubernetes.
+I love to do photography 📷 in my me time.
+I like philosophical and mythological novels 📚. My favourites are Meluha and The Kite Runner.
+I love coffee ☕. If you like my work and want to keep me awake 😵 to write more, you can buy me a coffee.</description>
+      
+    </item>
+    
+    <item>
+      <title>📮 Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description>If you have any questions or any queries, you can disturb me using below tricks. 😈 💣 💥
+ Email: hello@schadokar.dev Github: schadokar Twitter: schadokar1 Medium: @schadokar  </description>
+      
+    </item>
+    
+    <item>
+      <title>📰 Newsletter</title>
+      <link>/newsletter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/newsletter/</guid>
+      <description>Subscribe to my newsletter get the latest article and tutorial right into your inbox. You will only get one mail a month or max twice. 😄</description>
       
     </item>
     

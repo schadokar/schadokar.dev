@@ -1,8 +1,8 @@
 ---
 image: /images/pic.png
 layout: about
+title:  💭 About Me
 ---
-## About Me
 
 :rocket: Hi there, I am Shubham Kumar Chadokar. 
 
@@ -25,19 +25,7 @@ I love coffee :coffee:. If you like my work and want to keep me awake :dizzy_fac
 
 ---
 
-## Contact
+Please subscribe to my [Newsletter](/newsletter) for new articles.  
+If you have any queries, please [contact me](/contact).
 
-If you have any questions or any queries, you can disturb me using below tricks. :smiling_imp: :bomb: :boom:
-
- - Email: [hello@schadokar.dev](mailto:hello@schadokar.dev)
- - Github: [schadokar](https://github.com/schadokar/) 
- - Twitter: [schadokar1](https://twitter.com/schadokar1)
- - Medium: [@shubhamchadokar04](https://medium.com/@schadokar)
-
- ---
-
- ## :wave: Newsletter
-
-Subscribe to my newsletter 📰 get the latest article and tutorial right into your inbox.
-
-{{< newsletter >}}
+---
