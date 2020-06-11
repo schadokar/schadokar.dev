@@ -198,10 +198,13 @@ Check your mailbox. You have received a mail. If you could not find the mail che
 
 ![sent-mail](https://schadokar.dev/images/sendinblue/mail-sent-sendinblue.PNG)
 
-To check if sent successfully or not.  
+The `smtp` package does not provide enough information of delivery of the mail. It only confirms if mail sent to server or not.
+
+From server side, there can be many reasons if it is delivered or not. To check if sent successfully or not.  
 Open the sendinblue account and click on the **Transactional** tab.
 
 In this tab, you can check the status of the mail.
+The common reason can be an incorrect mail address. For this it raise a **Hard bounce** event.
 
 # Conclusion
 

@@ -156,9 +156,11 @@ We're going to use the <code>PlainAuth</code> method.</p>
 </code></pre></div><p>Check your mailbox. You have received a mail. If you could not find the mail check in the promotion.</p>
 <p><img  src="https://schadokar.dev/images/sendinblue/mail-sent-sendinblue.PNG"
         alt="sent-mail"/></p>
-<p>To check if sent successfully or not.<br>
+<p>The <code>smtp</code> package does not provide enough information of delivery of the mail. It only confirms if mail sent to server or not.</p>
+<p>From server side, there can be many reasons if it is delivered or not. To check if sent successfully or not.<br>
 Open the sendinblue account and click on the <strong>Transactional</strong> tab.</p>
-<p>In this tab, you can check the status of the mail.</p>
+<p>In this tab, you can check the status of the mail.
+The common reason can be an incorrect mail address. For this it raise a <strong>Hard bounce</strong> event.</p>
 <h1 id="conclusion">Conclusion</h1>
 <p>Hope, you find this tutorial helpful. The complete code is available on my <a href="https://github.com/schadokar/go-sendmail"target="_blank">GitHub</a> repository.</p>
 <p>In the upcoming tutorials, we are going to create API and a frontend.</p>
