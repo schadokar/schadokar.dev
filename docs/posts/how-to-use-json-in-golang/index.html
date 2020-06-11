@@ -30,11 +30,11 @@ To make a project successful this interaction must be simple and efficient.</p>
 <p><strong>JSON (JavaScript Object Notation) is a lightweight format that is used for data interchanging.</strong> It is based on a subset of Javascript language. An object is an unordered set of name/value pairs.</p>
 <p>An Example of JSON</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;How to use JSON in golang?&#34;</span>,
-    <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Tutorial&#34;</span>,
-    <span style="color:#f92672">&#34;publisher&#34;</span>: <span style="color:#e6db74">&#34;codesource.io&#34;</span>,
-    <span style="color:#f92672">&#34;tags&#34;</span>: [ <span style="color:#e6db74">&#34;golang&#34;</span>, <span style="color:#e6db74">&#34;json&#34;</span> ],
-    <span style="color:#f92672">&#34;published&#34;</span>: <span style="color:#66d9ef">true</span>    
+  <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;How to use JSON in golang?&#34;</span>,
+  <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Tutorial&#34;</span>,
+  <span style="color:#f92672">&#34;publisher&#34;</span>: <span style="color:#e6db74">&#34;codesource.io&#34;</span>,
+  <span style="color:#f92672">&#34;tags&#34;</span>: [<span style="color:#e6db74">&#34;golang&#34;</span>, <span style="color:#e6db74">&#34;json&#34;</span>],
+  <span style="color:#f92672">&#34;published&#34;</span>: <span style="color:#66d9ef">true</span>
 }
 </code></pre></div><hr>
 <p>Now, we know what is JSON. It is time to use it with golang.
@@ -51,8 +51,8 @@ In golang</p>
 }
 </code></pre></div><p>In JSON</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
-    <span style="color:#f92672">&#34;employee&#34;</span>: []
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+  <span style="color:#f92672">&#34;employee&#34;</span>: []
 }
 </code></pre></div><p>We will use <code>encode/json</code> package to convert <code>json</code> into <code>struct</code> and <code>struct</code> into <code>json</code>. For this we will use 2 functions:</p>
 <ol>
@@ -102,7 +102,7 @@ In golang</p>
 }
 </code></pre></div><p><a href="https://play.golang.org/p/a7GJlbd_Ddq"target="_blank">Try It</a></p>
 <p>Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#f92672">&#34;Name&#34;</span>:<span style="color:#e6db74">&#34;Jon&#34;</span>,<span style="color:#f92672">&#34;Age&#34;</span>:<span style="color:#ae81ff">27</span>,<span style="color:#f92672">&#34;Location&#34;</span>:<span style="color:#e6db74">&#34;London&#34;</span>}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;Name&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>, <span style="color:#f92672">&#34;Age&#34;</span>: <span style="color:#ae81ff">27</span>, <span style="color:#f92672">&#34;Location&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span> }
 </code></pre></div><p>We are encoding <code>Person</code> struct in JSON format. First, create a new object of <code>Person</code> as <code>person</code>.
 Then, encode the <code>person</code> in JSON using <code>json.Marshal</code>.
 If everything goes well, then the <code>err</code> will be <code>nil</code> and <code>b</code> is the representation of <code>person</code> in <code>[]byte</code> format.</p>
@@ -130,7 +130,7 @@ If everything goes well, then the <code>err</code> will be <code>nil</code> and 
     }
 </code></pre></div><p><a href="https://play.golang.org/p/BEtHJkVw6ca"target="_blank">Try it</a></p>
 <p>Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#f92672">&#34;Name&#34;</span>:<span style="color:#e6db74">&#34;Jon&#34;</span>,<span style="color:#f92672">&#34;Age&#34;</span>:<span style="color:#ae81ff">27</span>}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;Name&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>, <span style="color:#f92672">&#34;Age&#34;</span>: <span style="color:#ae81ff">27</span> }
 </code></pre></div><h4 id="to-map-the-struct-field-to-the-json-tag">To map the struct field to the <code>json</code> tag.</h4>
 <p>For example, you have <code>struct</code> field as <code>Name</code> but you want to map it as <code>firstName</code> in <code>json</code>.
 To do this, you can tag the struct field.</p>
@@ -138,7 +138,7 @@ To do this, you can tag the struct field.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">FieldName</span> <span style="color:#66d9ef">type</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;tagname&#34;</span><span style="color:#e6db74">`</span>
 </code></pre></div><blockquote>
 <p>⚠️ Don't give any space between <code>json:&quot;tagname&quot;</code>, else it will throw an error.
-<code>struct field tag  json: &quot;firstName&quot; not compatible with reflect.StructTag.Get: bad syntax for struct tag value</code></p>
+<code>struct field tag json: &quot;firstName&quot; not compatible with reflect.StructTag.Get: bad syntax for struct tag value</code></p>
 </blockquote>
 <p>Tag the <code>Name</code> field as <code>firstName</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
@@ -148,7 +148,7 @@ To do this, you can tag the struct field.</p>
     }
 </code></pre></div><p><a href="https://play.golang.org/p/f32foy7ULIC"target="_blank">Try it</a></p>
 <p>Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#f92672">&#34;firstName&#34;</span>:<span style="color:#e6db74">&#34;Jon&#34;</span>,<span style="color:#f92672">&#34;Age&#34;</span>:<span style="color:#ae81ff">27</span>,<span style="color:#f92672">&#34;Location&#34;</span>:<span style="color:#e6db74">&#34;London&#34;</span>}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>, <span style="color:#f92672">&#34;Age&#34;</span>: <span style="color:#ae81ff">27</span>, <span style="color:#f92672">&#34;Location&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span> }
 </code></pre></div><h3 id="omitempty">Omitempty</h3>
 <p>We have a special json tag as <code>omitempty</code>. If a field is set as <code>omitempty</code> then it will not encode that field to json if it is empty.</p>
 <p>For example, set <code>Location</code> field as <code>omitempty</code>.</p>
@@ -159,7 +159,7 @@ To do this, you can tag the struct field.</p>
     }
 
 <span style="color:#a6e22e">person</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Person</span>{
-		<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>, 
+		<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>,
 		<span style="color:#a6e22e">Age</span>: <span style="color:#ae81ff">27</span>,
 	}
 </code></pre></div><p><a href="https://play.golang.org/p/29npD-Qv96E"target="_blank">Try it</a></p>
@@ -194,7 +194,7 @@ To do this, you can tag the struct field.</p>
     <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
         <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Unable to decode the json&#34;</span>)
     }
-    
+
     <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">p</span>)
 }
 </code></pre></div><p><a href="https://play.golang.org/p/k25DaMXEQLD"target="_blank">Try it</a></p>
@@ -213,14 +213,14 @@ For example:</p>
     }
 </code></pre></div><p><a href="https://play.golang.org/p/0m7vo90yM8H"target="_blank">Try it</a></p>
 <hr>
-<h2 id="decoding-the-arbitrary-json--">Decoding the arbitrary JSON  👨‍💻</h2>
+<h2 id="decoding-the-arbitrary-json-">Decoding the arbitrary JSON 👨‍💻</h2>
 <p>In the above examples, we knew the JSON structure and we mapped it to the struct.</p>
 <p><strong>What if you don't know the JSON structure?</strong> 🤔</p>
 <p>In the json all the keys must be <code>string</code>. It means we can use the <code>map</code> type for arbitrary data.</p>
 <p>The <code>encoding/json</code> package uses</p>
 <ul>
 <li><code>map[string]interface{}</code> to store the arbitrary JSON objects</li>
-<li><code>[]interface{}</code>  to store the arbitrary JSON arrays.</li>
+<li><code>[]interface{}</code> to store the arbitrary JSON arrays.</li>
 </ul>
 <p>In <code>map[string]interface{}</code> the keys are <code>string</code> and values are <code>interface{}</code>. It is an empty interface. The <code>interface{}</code> (empty interface) type describes an interface with zero methods. In short, it can accept all the types.</p>
 <p>The default Go types are:</p>
@@ -232,12 +232,12 @@ For example:</p>
 </ul>
 <p>Consider the JSON object as</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>,
-    <span style="color:#f92672">&#34;location&#34;</span>: {
-        <span style="color:#f92672">&#34;country&#34;</span>: <span style="color:#e6db74">&#34;England&#34;</span>,
-        <span style="color:#f92672">&#34;city&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span>
-    },
-    <span style="color:#f92672">&#34;hobbies&#34;</span>: [ <span style="color:#e6db74">&#34;photography&#34;</span>, <span style="color:#e6db74">&#34;writing&#34;</span>]
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>,
+  <span style="color:#f92672">&#34;location&#34;</span>: {
+    <span style="color:#f92672">&#34;country&#34;</span>: <span style="color:#e6db74">&#34;England&#34;</span>,
+    <span style="color:#f92672">&#34;city&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span>
+  },
+  <span style="color:#f92672">&#34;hobbies&#34;</span>: [<span style="color:#e6db74">&#34;photography&#34;</span>, <span style="color:#e6db74">&#34;writing&#34;</span>]
 }
 </code></pre></div><p>The <code>Unmarshal</code> function will parse it into a map whose keys are string and values are empty interface.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{} {
@@ -257,7 +257,7 @@ For example:</p>
 <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Jon&#34;</span>
 
 <span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">name</span>.(<span style="color:#66d9ef">string</span>)
-<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">PrintF</span>(<span style="color:#e6db74">&#34;Type is %T, value is %s&#34;</span>, <span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">result</span><span style="color:#960050;background-color:#1e0010">&#34;</span>) 
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">PrintF</span>(<span style="color:#e6db74">&#34;Type is %T, value is %s&#34;</span>, <span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">result</span><span style="color:#960050;background-color:#1e0010">&#34;</span>)
 </code></pre></div><p><a href="https://play.golang.org/p/Vd6zPbtj_9T"target="_blank">Try it</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
@@ -382,7 +382,7 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this tutorial, we explored the <code>json</code> package. There are many other amazing functions provided by the <code>encoding/json</code>. Like <code>MarshalIndent</code>, it will indent the encoded <code>json</code>. Please check out the official website to <a href="https://golang.org/pkg/encoding/json/"target="_blank">learn more</a>.</p>
 <hr>
-</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/json/>json</a></section></div>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/json/>json</a></section></div>
 <div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-a-to-do-app-in-reactjs-with-github-pages/"><span class="li iconfont icon-article"></span>Create a To Do App in Reactjs with Github Pages</a></p><p><a class="link" href="/posts/understand-quicksort-the-easy-way/"><span class="li iconfont icon-article"></span>Understand Quicksort the easy way</a></p></section><section class="article discussion"><div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
