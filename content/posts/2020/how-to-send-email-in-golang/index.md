@@ -22,7 +22,7 @@ In this tutorial, we will send an email using the `main.go` file.
 
 1. go v1.11 or greater - I am using go1.14.3
 2. Code Editor (VSCode, Atom) - I am using VS Code
-3. Sendinblue account - [link](https://www.sendinblue.com/)
+3. Sendinblue account - [link](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
 # Getting Started
 

@@ -21,17 +21,18 @@ enableEmoji=true
 
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+# logo = "/images/pic.png"
 dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
 readingTime = true
 # slogan = "The Unknown Monk"
 
 [params.profile]
-  enable = false
+  enable = true
   avatar = "/images/pic.png"
   name = "Shubham Chadokar"
   bio = "Software Engineer"  # support markdown syntax
-  twitter = "https://twitter.com/schadokar1"  # https://twitter.com/XXX
-  github = "https://github.com/schadokar"  # https://github.com/XXX
+  twitter = "schadokar1"  # https://twitter.com/XXX
+  github = "schadokar"  # https://github.com/XXX
   # docker = "XXX"  # https://hub.docker.com/u/XXX
   email = "hello@schadokar.dev"  # mailto:XXX@mail.com
 
@@ -49,8 +50,8 @@ darkTheme = "xcode-dark"  # apply this theme in dark mode
 
 [params.share]
 enable = false
-addThisId = ""
-inlineToolId = ""
+addThisId = "ra-1234567890"
+inlineToolId = "asd"
 
 [params.footer]
 showCategories = true       # /categories/
@@ -102,4 +103,3 @@ url = "/contact"
     name = "Twitter"
     url = "https://twitter.com/schadokar1"
     pre = "<i class='fab fa-twitter'></i>"
-
