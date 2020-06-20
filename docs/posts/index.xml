@@ -21,7 +21,7 @@
       <description>This is a series of tutorials: sending email in golang. We&#39;ll first start with the basic sending an email using the go command.
 In the upcoming tutorials, we will create an API and a frontend using which we will send emails.
 In this tutorial, we will send an email using the main.go file.
-Pre-requisites  go v1.11 or greater - I am using go1.14.3 Code Editor (VSCode, Atom) - I am using VS Code Sendinblue account - link  Getting Started Create a new directory go-sendinblue.</description>
+Pre-requisites  go v1.11 or greater - I am using go1.14.3 Code Editor (VSCode, Atom) - I am using VS Code Sendinblue account - link   Check out this step by step tutorial Create an account in sendinblue.</description>
       
     </item>
     

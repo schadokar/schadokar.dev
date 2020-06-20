@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/sendinblue/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/tutorial/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/how-to-send-email-in-golang/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/sendemail/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/sendinblue/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/tutorial/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/create-a-to-do-app-in-reactjs-with-github-pages/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/github-pages/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/reactjs/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
@@ -21,9 +25,6 @@
     <loc>https://schadokar.dev/categories/gcp/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/gcp/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-gcp/</loc><lastmod>2020-03-29T09:45:27+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/azure/</loc><lastmod>2020-03-27T14:56:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-create-a-linux-vm-in-azure/</loc><lastmod>2020-03-27T14:56:35+05:30</lastmod></url><url>

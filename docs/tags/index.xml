@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Thu, 11 Jun 2020 11:07:11 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2020 17:43:00 +0530</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>sendinblue</title>
+      <link>/tags/sendinblue/</link>
+      <pubDate>Sat, 20 Jun 2020 17:43:00 +0530</pubDate>
+      
+      <guid>/tags/sendinblue/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>to-the-point</title>
+      <link>/tags/to-the-point/</link>
+      <pubDate>Sat, 20 Jun 2020 17:43:00 +0530</pubDate>
+      
+      <guid>/tags/to-the-point/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>golang</title>
@@ -28,16 +48,6 @@
       <pubDate>Thu, 11 Jun 2020 11:07:11 +0530</pubDate>
       
       <guid>/tags/sendemail/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>sendinblue</title>
-      <link>/tags/sendinblue/</link>
-      <pubDate>Thu, 11 Jun 2020 11:07:11 +0530</pubDate>
-      
-      <guid>/tags/sendinblue/</guid>
       <description></description>
       
     </item>
@@ -88,16 +98,6 @@
       <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
       
       <guid>/tags/gcp/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>to-the-point</title>
-      <link>/tags/to-the-point/</link>
-      <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
-      
-      <guid>/tags/to-the-point/</guid>
       <description></description>
       
     </item>

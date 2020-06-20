@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 22:50:46 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2020 17:43:00 +0530</lastBuildDate>
     
         <atom:link href="/to-the-point/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create an Account in Sendinblue</title>
+      <link>/to-the-point/create-an-account-in-sendinblue/</link>
+      <pubDate>Sat, 20 Jun 2020 17:43:00 +0530</pubDate>
+      
+      <guid>/to-the-point/create-an-account-in-sendinblue/</guid>
+      <description>Sendinblue is a SaaS solution for relationship marketing. It offers a cloud-based marketing communication software suite with email marketing, transactional email, marketing automation, customer-relationship management, landing pages, Facebook ads, retargeting ads, SMS marketing, and more.
+Sendinblue offers 300 mails per day for free account. 😃
+Getting started There are only 3 easy steps to create an account in Sendinblue.
+Step 1 Click on the below Get started link. It will redirect you to the signup page.</description>
+      
+    </item>
     
     <item>
       <title>How to Login as Root in GCP Linux Vm</title>

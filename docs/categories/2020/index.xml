@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Thu, 11 Jun 2020 11:07:11 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2020 17:43:00 +0530</lastBuildDate>
     
         <atom:link href="/categories/2020/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create an Account in Sendinblue</title>
+      <link>/to-the-point/create-an-account-in-sendinblue/</link>
+      <pubDate>Sat, 20 Jun 2020 17:43:00 +0530</pubDate>
+      
+      <guid>/to-the-point/create-an-account-in-sendinblue/</guid>
+      <description>Sendinblue is a SaaS solution for relationship marketing. It offers a cloud-based marketing communication software suite with email marketing, transactional email, marketing automation, customer-relationship management, landing pages, Facebook ads, retargeting ads, SMS marketing, and more.
+Sendinblue offers 300 mails per day for free account. 😃
+Getting started There are only 3 easy steps to create an account in Sendinblue.
+Step 1 Click on the below Get started link. It will redirect you to the signup page.</description>
+      
+    </item>
     
     <item>
       <title>How to Send Email in Golang</title>
@@ -21,7 +34,7 @@
       <description>This is a series of tutorials: sending email in golang. We&#39;ll first start with the basic sending an email using the go command.
 In the upcoming tutorials, we will create an API and a frontend using which we will send emails.
 In this tutorial, we will send an email using the main.go file.
-Pre-requisites  go v1.11 or greater - I am using go1.14.3 Code Editor (VSCode, Atom) - I am using VS Code Sendinblue account - link  Getting Started Create a new directory go-sendinblue.</description>
+Pre-requisites  go v1.11 or greater - I am using go1.14.3 Code Editor (VSCode, Atom) - I am using VS Code Sendinblue account - link   Check out this step by step tutorial Create an account in sendinblue.</description>
       
     </item>
     

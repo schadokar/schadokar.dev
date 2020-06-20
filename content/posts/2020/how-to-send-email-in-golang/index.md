@@ -24,6 +24,8 @@ In this tutorial, we will send an email using the `main.go` file.
 2. Code Editor (VSCode, Atom) - I am using VS Code
 3. Sendinblue account - [link](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
+> Check out this step by step tutorial [Create an account in sendinblue](https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/).
+
 # Getting Started
 
 Create a new directory `go-sendinblue`.
