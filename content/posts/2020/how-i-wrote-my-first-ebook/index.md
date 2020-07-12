@@ -263,6 +263,47 @@ My book title is ***Playtime with Hyperledger Composer*** and sub-title is **Cre
 When you start writing your book, don't spend much time on book title. When your book complete that time you'll be in much better position for the book title, because everything is written, you know what it is all about and what others will get from it. In my case, I changed the book title and book cover at the last moment before publishing it. Previously, it was so boring 🥱.  
 
 ## Design Book Cover  
-I starts the designing the book cover by taking the references from other books, tried to edit them in paint. Result was complete disaster, can't think of anything good. That time I realized, *designing is not my* ☕️. I thought to hire a freelancer for this, I went to the freelancing sites like **UpWork**, **Fiverr**. 
+I starts the designing the book cover by taking the references from other books, tried to edit them in paint. Result was complete disaster, can't think of anything good. That time I realized, *designing is not my* ☕️. I thought to hire a freelancer for this, I went to the freelancing sites like **UpWork**, **Fiverr**.  
 
-## License
+Then, I found [**Canva**](https://canva.com). Such a great tool. Amazing! 🌟 🌟 🌟 🌟  
+
+> Canva is a graphic design platform that allows users to create social media graphics, presentations, posters and other visual content. It is available on web and mobile, and integrates millions of images, fonts, templates and illustrations. [Wikipedia](https://en.wikipedia.org/wiki/Canva)
+
+I used one of the templates from canva book cover section and created my eBook cover. Not bad, isn't it? 😄   
+
+![cover](./images/book-cover.png)
+
+
+## License 📜
+I wrote this book out of curiosity and for fun. So, I want it to be free, open-source, but don't want others to monetize it. Without a license there is no restriction.  
+I searched for a while and found a great answer on stackoverflow regarding free licenses, [Creative Commons Licenses](https://creativecommons.org/licenses/).
+> **Creative Commons is a nonprofit organization that helps overcome legal obstacles to the sharing of knowledge and creativity to address the world’s pressing challenges.**
+
+They have provided a [form](https://creativecommons.org/choose/) with a couple of questions related to what kind of license you want. Fill the form and voila 🎉, your license is ready. Copy and Paste it or use the embeded link.
+
+![License](./images/license.PNG)
+
+# Publish 🚀
+There are many options to publish your book. You can approach to publishing house and send your draft. If they like to publish you can go ahead and secure a deal. After this publishing house take care of other processes like formatting, editing your book, creating an attractive book cover, all the licensing, publishing process and most importantly marketing.
+In short, if you want to monetize your book and expecting a good amount, then publishing house is the best option available.  
+
+The another option is self-publishing. Yes, we can self-publish our book. The Amazon's [Kindle Direct Publishing](https://kdp.amazon.com/en_US/) provides a great platform for this. It is free and it publish the book world wide. You'll get 70% royalty for each sale. The kdp take cares of all the publishing process. You just have to write the book, upload it and format it. Enter the price of the book and basic details of the book and yourself. You can follow their tutorials. They have done a great job.  
+
+As I want to keep my book free and didn't had the patience. I self-published it without using any third party. I converted the book in PDF format and saved the book in AWS S3 Bucket, so that anyone can download it. Then I hosted the book on website. Simple. 😃
+
+[Checkout here](https://schadokar.dev/ebooks/)
+
+# Do's and Don'ts
+
+## Some precautions while adding images as icons
+
+# Final List of Tools I used
+
+- **Editor**: [Visual Studio Code](https://code.visualstudio.com/) with 2 Markdown plugins
+- **Versioning Tool**: [GitHub](https://github.com)
+- **Emojis**: [Copy and Paste emojis](https://getemoji.com/)
+- **Grammar Check**: [Grammarly](https://app.grammarly.com/)
+- **License**: [Creative Commons Licenses](https://creativecommons.org/licenses/)
+- **Cover Design**: [Canva](https://canva.com)
+- **PDF page number**: [online pdf editor](https://www.ilovepdf.com/add_pdf_page_number)
+- **eBook storage**: [AWS S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
