@@ -9,7 +9,6 @@ readingTime: true # show reading time after article date
 toc: true
 comments: true
 published: false
-draft: true
 ---
 
 In this tutorial, we will create a color cli in golang using cobra library. CLI is a standard interface between a software and a user.
