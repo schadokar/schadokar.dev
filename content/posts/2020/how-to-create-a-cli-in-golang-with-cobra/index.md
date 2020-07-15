@@ -118,7 +118,7 @@ go get -u github.com/spf13/cobra/cobra
 Initialize the cli scaffolding for the project using `cobra init`command.
 
 ```go
-cobra init my-calc
+cobra init --pkg-name my-calc
 ```
 
 It will initialize the `my-calc` project with `cobra` library. You can observe that it created a few files in the project.

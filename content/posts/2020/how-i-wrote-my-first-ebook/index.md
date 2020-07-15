@@ -1,7 +1,7 @@
 ---
-title: "How I Wrote My First Ebook"
+title: "How I Wrote My First book"
 date: 2020-06-13T19:58:52+05:30
-description: "In this article, I listed down all the tools and approaches I used to write this ebook and most importantly few dos and don'ts."
+description: "In this article, I listed down all the tools and approaches I used to write this book."
 categories: ["Article", "Ebook", "Writing"]
 tags: []
 cover: https://schadokar.dev/images/basic.png #image show on top
@@ -305,9 +305,7 @@ These are the few platforms I used but limit yourself.
 
 There are many other platforms you can try.  
 
-# Do's and Don'ts
-
-## Some precautions while adding images as icons
+# Conclusion
 
 # Final List of Tools I used
 
