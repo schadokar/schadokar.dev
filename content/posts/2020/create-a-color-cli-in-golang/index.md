@@ -1,14 +1,13 @@
 ---
 title: "Create a Color Cli in Golang"
-date: 2020-07-15T21:59:08+05:30
+date: 2020-07-18T07:59:08+05:30
 description: "Create a color cli. Get the color name of the hex code."
 categories: ["Tutorial", "Golang", "2020"]
 tags: ["golang", "cobra", "cli"]
 cover: https://schadokar.dev/images/golang-basic.png #image show on top
 readingTime: true # show reading time after article date
-toc: true
 comments: true
-published: false
+published: true
 ---
 
 In this tutorial, we will create a color cli in golang using cobra library. CLI is a standard interface between a software and a user.
@@ -36,6 +35,7 @@ Cobra is built on a structure of commands, arguments & flags. [Learn more](https
 - Flags are Adjective
 
 Example:
+
 ```go
 App Command -Flag Argument
 go get -u github.com/spf13/cobra/cobra
@@ -92,7 +92,7 @@ can't load package: package colorcli: cannot find package "colorcli" in any of:
 > You'll not encounter this error if the project is inside the GOPATH.
 
 By default go find the packages inside the `GOROOT` and `GOPATH`.
-We have to initiate the Go modules inside the project to tell `go` to find the package in the project.  
+We have to initiate the Go modules inside the project to tell `go` to find the package in the project.
 
 Go modules is a package manager in the golang. Go module tracks all the packages and their version used in the project. You can consider it similar to `node modules` in the nodejs. [Learn more](https://blog.golang.org/using-go-modules).
 
@@ -109,11 +109,13 @@ Now, try again to build the binary.
 ```go
 go install colorcli
 ```
+
 The binary is generated and saved in the `$GOPATH/bin/`. Now, you can directly run the `colorcli` command without setting the environment variable.
 
 ```go
 colorcli
 ```
+
 Output
 
 ```go
@@ -129,9 +131,11 @@ subcommand is required
 ```
 
 ## Hexcode Color names
+
 We are going to use the [meodai/color-names](https://github.com/meodai/color-names) git repo. This repo has a handpicked list of 18376 unique color names from various sources and thousands of curated user submissions.
 
 ### Download the hexcode to color name json file
+
 Open the terminal in the project directory.
 
 ```sh
@@ -145,6 +149,7 @@ curl -O https://unpkg.com/color-name-list@5.7.0/dist/colornames.min.json
 ## Create a name command in the colorcli
 
 To add a command, we are going to use `add` command of cobra.
+
 ```go
 cobra add name
 ```
@@ -158,6 +163,7 @@ go install colorcli
 ```
 
 Run the `name` command.
+
 ```go
 colorcli name
 ```
@@ -237,6 +243,7 @@ go install colorcli
 ```
 
 Run the cli.
+
 ```go
 colorcli name ffffff
 
@@ -244,6 +251,7 @@ colorcli name fffeee
 ```
 
 Output
+
 ```go
 Name: White, Hex: ffffff
 
@@ -312,6 +320,7 @@ func addColor(args []string) {
     }
 }
 ```
+
 We are using `ioutil` package for updating the file. It is creating a new file instead of just updating the existing one. [Learn more](https://golang.org/pkg/io/ioutil/).
 
 Update the `addcolorCmd`.
@@ -332,25 +341,33 @@ to quickly create a Cobra application.`,
     },
 }
 ```
+
 Build the binary.
+
 ```go
 go install colorcli
 ```
 
 Add a new color. The first argument is hexcode and second is color name.
+
 ```go
 colorcli addcolor fffeee lightcream
 ```
+
 Output
+
 ```go
 Hex to color added successfully!
 ```
+
 Check the color.
+
 ```go
 colorcli name fffeee
 ```
 
 Output
+
 ```go
 Name: lightcream, Hex: fffeee
 ```

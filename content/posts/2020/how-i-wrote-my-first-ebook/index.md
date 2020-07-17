@@ -79,8 +79,7 @@ First, note down all the points on paper. Once you note down everything, read it
 Once you have a **to-do** list on paper, it doesn't have to be complete. Create a soft copy and save all the points in chronological order.   
 This is my **to-do** list use to look like.
 
-```
-# Tasks
+#### Tasks
 
 - [x] Index
 - [x] Cover
@@ -129,7 +128,7 @@ This is my **to-do** list use to look like.
 - [x] Thank You Note
 - [x] License
 - [x] End cover
-```
+
 I used the markdown format for my **to-do** list. You can use any of your choices.  
 
 ## Start Small but Start
@@ -306,6 +305,7 @@ These are the few platforms I used but limit yourself.
 There are many other platforms you can try.  
 
 # Conclusion
+
 
 # Final List of Tools I used
 
