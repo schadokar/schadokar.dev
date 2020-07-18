@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Thu, 11 Jun 2020 11:07:11 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 07:59:08 +0530</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create a Color Cli in Golang</title>
+      <link>/posts/create-a-color-cli-in-golang/</link>
+      <pubDate>Sat, 18 Jul 2020 07:59:08 +0530</pubDate>
+      
+      <guid>/posts/create-a-color-cli-in-golang/</guid>
+      <description>In this tutorial, we will create a color cli in golang using cobra library. CLI is a standard interface between a software and a user.
+ A command-line interface (CLI) processes commands to a computer program in the form of lines of text. - Wikipedia
+ Objective of the color cli The objective of the colorcli is to return the name of the hexcode of the color. If the hexcode doesn&#39;t exist then colorcli can add the color.</description>
+      
+    </item>
     
     <item>
       <title>How to Send Email in Golang</title>

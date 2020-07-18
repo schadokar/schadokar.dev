@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/conversion/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/tutorial/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/cli/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/cobra/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/create-a-color-cli-in-golang/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/sendinblue/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/tutorial/</loc><lastmod>2020-06-20T17:43:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/how-to-send-email-in-golang/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/sendemail/</loc><lastmod>2020-06-11T11:07:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/create-a-to-do-app-in-reactjs-with-github-pages/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/github-pages/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
@@ -52,7 +57,6 @@
     <loc>https://schadokar.dev/tags/blockchain/</loc><lastmod>2020-01-07T21:23:34+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/create-your-own-etherscan-with-react-in-5-minutes/</loc><lastmod>2020-01-07T21:23:34+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/2019/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/cobra/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/categories/featured/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/categories/article/</loc><lastmod>2019-09-17T11:49:11+00:00</lastmod></url><url>
