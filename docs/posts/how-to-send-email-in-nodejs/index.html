@@ -43,7 +43,7 @@ In the first article, we will send an email using the <code>node</code> command.
 <li>OAuth2 authentication</li>
 </ul>
 <p>For the mailing service, we are going to use <a href="https://www.sendinblue.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc"target="_blank">Sendinblue</a>.
-This mailing service offers many different solutions otherthan emails, for ex. sms.<br>
+This mailing service offers many different solutions other than emails, for ex. SMS.<br>
 It provide <strong>300 mails/day</strong> for a free account and paid account is also very cheap and offer more features compared to many other available mailing service provider.</p>
 <h2 id="create-a-new-project">Create a new Project</h2>
 <p>Create a new directory <code>node-email</code>.
@@ -69,12 +69,12 @@ Copy the key and paste it somewhere safe.</p>
 </span><span style="color:#75715e"> * sendEmail
 </span><span style="color:#75715e"> * @param {Object} mailObj - Email meta data and body
 </span><span style="color:#75715e"> * @param {String} from - Email address of the sender
-</span><span style="color:#75715e"> * @param {Array} receipents - Array of receipents email address
+</span><span style="color:#75715e"> * @param {Array} recipients - Array of recipients email address
 </span><span style="color:#75715e"> * @param {String} subject - Subject of the email
 </span><span style="color:#75715e"> * @param {String} message - message
 </span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sendEmail</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">mailObj</span>) =&gt; {
-  <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">receipents</span>, <span style="color:#a6e22e">subject</span>, <span style="color:#a6e22e">message</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">mailObj</span>;
+  <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">recipients</span>, <span style="color:#a6e22e">subject</span>, <span style="color:#a6e22e">message</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">mailObj</span>;
 
   <span style="color:#66d9ef">try</span> {
     <span style="color:#75715e">// Create a transporter
@@ -90,7 +90,7 @@ Copy the key and paste it somewhere safe.</p>
     <span style="color:#75715e">// send mail with defined transport object
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mailStatus</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">transporter</span>.<span style="color:#a6e22e">sendMail</span>({
       <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">from</span>, <span style="color:#75715e">// sender address
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">receipents</span>, <span style="color:#75715e">// list of receipents
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">recipients</span>, <span style="color:#75715e">// list of recipients
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">subject</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">subject</span>, <span style="color:#75715e">// Subject line
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">message</span>, <span style="color:#75715e">// plain text
 </span><span style="color:#75715e"></span>    });
@@ -107,7 +107,7 @@ Copy the key and paste it somewhere safe.</p>
 
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mailObj</span> <span style="color:#f92672">=</span> {
   <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;hello@schadokar.dev&#34;</span>,
-  <span style="color:#a6e22e">receipents</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;me@schadokar.dev&#34;</span>],
+  <span style="color:#a6e22e">recipients</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;me@schadokar.dev&#34;</span>],
   <span style="color:#a6e22e">subject</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Sending email by nodejs&#34;</span>,
   <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hello World;&#34;</span>,
 };
@@ -116,7 +116,7 @@ Copy the key and paste it somewhere safe.</p>
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">res</span>);
 });
 </code></pre></div><p>In the <code>auth</code> object, <code>user</code> will be your email address of sendinblue account and <code>pass</code> will be your SMTP KEY.</p>
-<p>In the <code>mailObj</code>, <code>from</code> will be your email address of sendinblue account, <code>receipents</code> is an array of email addresses, <code>subject</code> is subject of email and <code>message</code> is plain text message.</p>
+<p>In the <code>mailObj</code>, <code>from</code> will be your email address of sendinblue account, <code>recipients</code> is an array of email addresses, <code>subject</code> is subject of email and <code>message</code> is plain text message.</p>
 <p>Open the terminal and run the file.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">node</span> <span style="color:#a6e22e">index</span>.<span style="color:#a6e22e">js</span>
 </code></pre></div><p>On successful run, output will be</p>

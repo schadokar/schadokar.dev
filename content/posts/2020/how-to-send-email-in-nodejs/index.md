@@ -40,7 +40,7 @@ For this series, we are going to use `nodemailer` package. It is an open source 
 - OAuth2 authentication
 
 For the mailing service, we are going to use [Sendinblue](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc).
-This mailing service offers many different solutions otherthan emails, for ex. sms.  
+This mailing service offers many different solutions other than emails, for ex. SMS.  
 It provide **300 mails/day** for a free account and paid account is also very cheap and offer more features compared to many other available mailing service provider.
 
 ## Create a new Project
@@ -81,12 +81,12 @@ const nodemailer = require("nodemailer");
  * sendEmail
  * @param {Object} mailObj - Email meta data and body
  * @param {String} from - Email address of the sender
- * @param {Array} receipents - Array of receipents email address
+ * @param {Array} recipients - Array of recipients email address
  * @param {String} subject - Subject of the email
  * @param {String} message - message
  */
 const sendEmail = async (mailObj) => {
-  const { from, receipents, subject, message } = mailObj;
+  const { from, recipients, subject, message } = mailObj;
 
   try {
     // Create a transporter
@@ -102,7 +102,7 @@ const sendEmail = async (mailObj) => {
     // send mail with defined transport object
     let mailStatus = await transporter.sendMail({
       from: from, // sender address
-      to: receipents, // list of receipents
+      to: recipients, // list of recipients
       subject: subject, // Subject line
       text: message, // plain text
     });
@@ -119,7 +119,7 @@ const sendEmail = async (mailObj) => {
 
 const mailObj = {
   from: "hello@schadokar.dev",
-  receipents: ["me@schadokar.dev"],
+  recipients: ["me@schadokar.dev"],
   subject: "Sending email by nodejs",
   message: "Hello World;",
 };
@@ -131,7 +131,7 @@ sendEmail(mailObj).then((res) => {
 
 In the `auth` object, `user` will be your email address of sendinblue account and `pass` will be your SMTP KEY.
 
-In the `mailObj`, `from` will be your email address of sendinblue account, `receipents` is an array of email addresses, `subject` is subject of email and `message` is plain text message.
+In the `mailObj`, `from` will be your email address of sendinblue account, `recipients` is an array of email addresses, `subject` is subject of email and `message` is plain text message.
 
 Open the terminal and run the file.
 
