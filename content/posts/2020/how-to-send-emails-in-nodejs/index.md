@@ -4,7 +4,7 @@ date: 2020-07-19T18:16:06+05:30
 description: "Learn how to send an email in nodejs."
 categories: ["Tutorial", "Nodejs", "2020"]
 tags: ["sendemail", "nodejs"]
-cover: https://schadokar.dev/images/basic.png #image show on top
+cover: https://schadokar.dev/images/node-basic.png #image show on top
 readingTime: true # show reading time after article date
 toc: true
 comments: true
