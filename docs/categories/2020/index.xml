@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Sat, 18 Jul 2020 13:33:52 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2020 18:16:06 +0530</lastBuildDate>
     
         <atom:link href="/categories/2020/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Send Emails in Nodejs</title>
+      <link>/posts/how-to-send-emails-in-nodejs/</link>
+      <pubDate>Sun, 19 Jul 2020 18:16:06 +0530</pubDate>
+      
+      <guid>/posts/how-to-send-emails-in-nodejs/</guid>
+      <description>This is a series of articles on how to send an email in nodejs.
+In the first article, we will send an email using the node command. Later, we will create a APIs and a frontend.
+Sending emails in nodejs have only 2 requirements:
+ Mail service provider (For ex. Gmail, Sendinblue, Mailchimp) Middleware to connect with mail service (For ex. nodemailer)  Prerequisites  Node.js (&amp;gt;v6.0.0 for nodemailer module) Code Editor (For Ex.</description>
+      
+    </item>
     
     <item>
       <title>Convert Byte to Hex and Hex to Byte in Golang</title>

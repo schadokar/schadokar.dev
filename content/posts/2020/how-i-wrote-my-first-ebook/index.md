@@ -314,6 +314,6 @@ There are many other platforms you can try.
 - **Emojis**: [Copy and Paste emojis](https://getemoji.com/)
 - **Grammar Check**: [Grammarly](https://app.grammarly.com/)
 - **License**: [Creative Commons Licenses](https://creativecommons.org/licenses/)
-- **Cover Design**: [Canva](https://canva.com)
+- **Cover Design**: [Canva](https://www.canva.com/join/medium-seascape-corncob)
 - **PDF page number**: [online pdf editor](https://www.ilovepdf.com/add_pdf_page_number)
 - **eBook storage**: [AWS S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
