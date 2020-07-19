@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>How to Send Emails in Nodejs</title>
-      <link>/posts/how-to-send-emails-in-nodejs/</link>
+      <title>How to Send Email in Nodejs</title>
+      <link>/posts/how-to-send-email-in-nodejs/</link>
       <pubDate>Sun, 19 Jul 2020 18:16:06 +0530</pubDate>
       
-      <guid>/posts/how-to-send-emails-in-nodejs/</guid>
+      <guid>/posts/how-to-send-email-in-nodejs/</guid>
       <description>This is a series of articles on how to send an email in nodejs.
 In the first article, we will send an email using the node command. Later, we will create a APIs and a frontend.
 Sending emails in nodejs have only 2 requirements:

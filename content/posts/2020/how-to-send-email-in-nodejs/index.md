@@ -1,5 +1,5 @@
 ---
-title: "How to Send Emails in Nodejs"
+title: "How to Send Email in Nodejs"
 date: 2020-07-19T18:16:06+05:30
 description: "Learn how to send an email in nodejs."
 categories: ["Tutorial", "Nodejs", "2020"]
