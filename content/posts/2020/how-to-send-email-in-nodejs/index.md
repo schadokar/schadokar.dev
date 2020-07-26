@@ -19,8 +19,11 @@ Sending emails in nodejs have only 2 requirements:
 - Mail service provider (For ex. Gmail, Sendinblue, Mailchimp)
 - Middleware to connect with mail service (For ex. nodemailer)
 
-# Prerequisites
+# Series:
+- [How to Send Email in Nodejs - Part 1](https://schadokar.dev/posts/how-to-send-email-in-nodejs/)  
+- [How to Send Email in Nodejs with Expressjs - Part 2](https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/)
 
+# Prerequisites
 - Node.js (>v6.0.0 for nodemailer module)
 - Code Editor (For Ex. VS Code, Atom)
 - An account in [Sendinblue](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
@@ -152,6 +155,8 @@ Now, go and check your mailbox. You have received a mail. If you could not find 
 
 # Conclusion
 
-In this tutorial, we created a basic sendEmail function to send the email using the nodemailer package. In the next section, we are going to create the server and apis and in the last section we will send the email using the frontend.
+In this tutorial, we created a basic sendEmail function to send the email using the nodemailer package. In the [next section](https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/), we are going to create the server and APIs and in the last section we will send the email using the frontend.
+
+> Cover is designed in [Canva](https://canva.7eqqol.net/KD6B9)
 
 ---

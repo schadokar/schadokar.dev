@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Send Email in Nodejs with Expressjs&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.d6952daf9b9e1416674c325169c3a71ceb436c5f824d6ee2013146d3b7206ca6152d067fa14aadb42755d718bc2fdd29.css" integrity="sha384-1pUtr5ueFBZnTDJRacOnHOtDbF&#43;CTW7iATFG07cgbKYVLQZ/oUqttCdV1xi8L90p"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Send Email in Nodejs with Expressjs" /><meta name="twitter:image" content="https://schadokar.dev/images/node-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/posts">Posts</a><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to Send Email in Nodejs with Expressjs</h1><p class="article date">Sunday, July 26, 2020<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/node-basic.png" alt>
+          </p><p>This is the 2nd part of the <em><strong>How to send email in Nodejs</strong></em> series. In the last section, we created the function to send the email using node cli.</p>
+<p>In this section, we will use the Expressjs and expose the functionality as an API. To test the api, we're going to use 2 options Curl command and Postman.</p>
+<h1 id="series">Series:</h1>
+<ul>
+<li><a href="https://schadokar.dev/posts/how-to-send-email-in-nodejs/"target="_blank">How to Send Email in Nodejs - Part 1</a></li>
+<li><a href="https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/"target="_blank">How to Send Email in Nodejs with Expressjs - Part 2</a></li>
+</ul>
+<h1 id="pre-requisite">Pre-requisite</h1>
+<ul>
+<li>Node.js (&gt;v6.0.0 for nodemailer module)</li>
+<li>Code Editor (For Ex. VS Code, Atom)</li>
+<li>An account in <a href="https://www.sendinblue.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc"target="_blank">Sendinblue</a></li>
+</ul>
+<blockquote>
+<p>Check out this step by step tutorial to <a href="https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/"target="_blank">Create an account in sendinblue</a>.</p>
+</blockquote>
+<h1 id="getting-started">Getting Started</h1>
+<p>Let's first install all the dependencies.</p>
+<ul>
+<li>express - To create routes</li>
+<li>body-parser - To access the parameters passed with API request</li>
+<li>cors - To handle the cross origin resource sharing</li>
+<li>dotenv - To access the .env file which we are going to use to save the credentials</li>
+</ul>
+<p>Open the terminal inside the project and run the below command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">save</span> <span style="color:#a6e22e">express</span> <span style="color:#a6e22e">body</span><span style="color:#f92672">-</span><span style="color:#a6e22e">parser</span> <span style="color:#a6e22e">cors</span> <span style="color:#a6e22e">dotenv</span>
+</code></pre></div><h2 id="project-directory-structure">Project Directory Structure</h2>
+<pre><code>node-email
+  |- routes
+    |- mail-api.js
+  |- src
+    |- send-mail.js
+  |- template
+    |- mail.html
+  |- .env
+  |- index.js
+</code></pre><h3 id="env">.env</h3>
+<p>In the last section, we entered the email and SMTP_KEY in the code, which is not recommended.<br>
+We should always use the environment variables in the code, to keep the secrets safe.
+Create a new file <code>.env</code> and paste your email and SMTP_KEY.</p>
+<pre><code>USER=EMAILADDRESS
+PASS=SMTP_KEY
+</code></pre><h3 id="src">src</h3>
+<p>In the <code>src</code> folder, create a new file <code>send-mail.js</code> and paste the below code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#34;use strict&#34;</span>;
+<span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;dotenv&#34;</span>).<span style="color:#a6e22e">config</span>();
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nodemailer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;nodemailer&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * sendEmail
+</span><span style="color:#75715e"> * @param {Object} mailObj - Email information
+</span><span style="color:#75715e"> * @param {String} from - Email address of the sender
+</span><span style="color:#75715e"> * @param {Array} to - Array of receipents email address
+</span><span style="color:#75715e"> * @param {String} subject - Subject of the email
+</span><span style="color:#75715e"> * @param {String} text - Email body
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sendEmail</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">mailObj</span>) =&gt; {
+  <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">subject</span>, <span style="color:#a6e22e">text</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">mailObj</span>;
+
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#75715e">// Create a transporter
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">transporter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nodemailer</span>.<span style="color:#a6e22e">createTransport</span>({
+      <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;smtp-relay.sendinblue.com&#34;</span>,
+      <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">587</span>,
+      <span style="color:#a6e22e">auth</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USER</span>,
+        <span style="color:#a6e22e">pass</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">PASS</span>,
+      },
+    });
+
+    <span style="color:#75715e">// send mail with defined transport object
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">info</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">transporter</span>.<span style="color:#a6e22e">sendMail</span>({
+      <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">from</span>, <span style="color:#75715e">// sender address
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">to</span>, <span style="color:#75715e">// list of receivers
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">subject</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">subject</span>, <span style="color:#75715e">// Subject line
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">text</span>, <span style="color:#75715e">// plain text body
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">html</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#34;../template/mail.html&#34;</span>),
+      }, <span style="color:#75715e">// html body
+</span><span style="color:#75715e"></span>    });
+
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">Message sent: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">messageId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">Message sent: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">messageId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>);
+    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(
+      <span style="color:#e6db74">`</span><span style="color:#e6db74">Something went wrong in the sendmail method. Error: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+    );
+  }
+};
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sendEmail</span>;
+</code></pre></div><p>Let's understand the code</p>
+<ul>
+<li><code>require(&quot;dotenv&quot;).config();</code> is used to load the <code>.env</code> file, so that using <code>process.env.{KEY}</code> we can access the environment variables defined in the <code>.env</code> file.</li>
+<li>The function takes an object with <code>to</code>, <code>from</code>, <code>subject</code> and <code>text</code> arguments.</li>
+<li><code>nodemailer.createTransport</code> creating a transport object with all the required details of the message service provider and user access to that.</li>
+<li><code>transporter.sendMail</code>: Enter all the details to mail. The <code>text</code> field send a plain text while the <code>html</code> field send the mail in the html format.</li>
+</ul>
+<h3 id="routes">routes</h3>
+<p>Open the <code>routes</code> folder and create a new file <code>mail-api.js</code>. In this file, we will create a send email route.<br>
+This endpoint then triggers the <code>sendEmail</code> function, defined in the <code>src</code> directory.</p>
+<p>Copy and paste the below code in the file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">express</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;express&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">router</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">Router</span>();
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sendMailMethod</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;../src/send-mail&#34;</span>);
+
+<span style="color:#75715e">// Post request to send an email
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#34;/sendmail&#34;</span>, <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">sendMailMethod</span>(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>);
+
+    <span style="color:#75715e">// send the response
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>({
+      <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+      <span style="color:#a6e22e">payload</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">result</span>,
+    });
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span>);
+    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>({
+      <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+      <span style="color:#a6e22e">payload</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Something went wrong in Sendmail Route.&#34;</span>,
+    });
+  }
+});
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">router</span>;
+</code></pre></div><p>Instead of taking out the variables from the <code>req.body</code>, we directly send this to the function as it is accepting an object.<br>
+This approach is optional, if the application requires the input validation, then validate it at route end, instead of at method end. As it is for education purpose not for production.</p>
+<h3 id="template">template</h3>
+<p>In the <code>html</code> field of <code>sendMail</code> method, it can read the pure <code>html</code> code. But this is not recommended.<br>
+Instead you can create a <code>mail.html</code> template and give its path to it.<br>
+Create a new file <code>mail.html</code> and paste the below code in it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-align: center;&#34;</span>&gt;
+  &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: #3584c8;&#34;</span>&gt;Nodemailer Example&lt;/<span style="color:#f92672">h1</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;
+    This is an example html template to demonstrate the sending email using
+    html.
+    &lt;<span style="color:#f92672">br</span> /&gt;
+    🤗 🤗 🤗 🤗 🤗 🤗
+  &lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>You can use a dynamic html template, in which you pass the arguments. But that is out of the scope for this tutorial.</p>
+<h3 id="indexjs">index.js</h3>
+<p>Open the <code>index.js</code> and paste the below code. This <code>index.js</code> is the entry point for this application. It is importing all the application route and creating a express server to host the application on <code>4444</code> port.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#34;use strict&#34;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">express</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;express&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bodyParser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;body-parser&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cors</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;cors&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mailAPI</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./routes/mail-api.js&#34;</span>);
+
+<span style="color:#75715e">// Express body parser
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">cors</span>());
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">bodyParser</span>.<span style="color:#a6e22e">json</span>());
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(
+  <span style="color:#a6e22e">bodyParser</span>.<span style="color:#a6e22e">urlencoded</span>({
+    <span style="color:#a6e22e">limit</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;50mb&#34;</span>,
+    <span style="color:#a6e22e">extended</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+    <span style="color:#a6e22e">parameterLimit</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">50000</span>
+  })
+);
+
+<span style="color:#75715e">// use the routes specified in route folder
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#34;/api/v1&#34;</span>, <span style="color:#a6e22e">mailAPI</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">port</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">PORT</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">4444</span>;
+
+<span style="color:#75715e">//listen to the server
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#a6e22e">port</span>, <span style="color:#66d9ef">function</span> () {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">listening to the port </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">port</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> .....</span><span style="color:#e6db74">`</span>);
+});
+</code></pre></div><h2 id="run-time">Run Time</h2>
+<p>Now, the fun part. Let's send some emails.<br>
+Open the terminal inside the project directory and run the below command.</p>
+<pre><code>node index.js
+</code></pre><p>This will start the server at <code>4444</code> if no <code>PORT</code> environment variable defined.</p>
+<p>Open the Postman and create a <code>POST</code> request to <code>localhost:4444/api/v1/sendmail</code>.<br>
+In the <code>Body</code> tab, select the <code>JSON</code> option. Modify the body accordingly.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+    <span style="color:#e6db74">&#34;from&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;hello@schadokar.dev&#34;</span>,
+    <span style="color:#e6db74">&#34;to&#34;</span><span style="color:#f92672">:</span> [
+        <span style="color:#e6db74">&#34;shubham@schadokar.dev&#34;</span>
+    ],
+    <span style="color:#e6db74">&#34;subject&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Mail from Nodemailer&#34;</span>,
+    <span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Sending an email using nodemailer package.&#34;</span>
+}
+</code></pre></div><p>Hit Send.</p>
+<p><img  src="./images/postman-test.PNG"
+        alt="Postman"/></p>
+<h2 id="check-email">Check Email</h2>
+<p>Open you email and check the inbox. If you could not find it in inbox try to check in promotion.</p>
+<h3 id="text-email">Text email</h3>
+<p>If you haven't used the <code>html</code> field in the <code>sendMail</code> then your mail will look like this.</p>
+<p><img  src="./images/mail-text.PNG"
+        alt="txt"/></p>
+<h3 id="html-email">HTML email</h3>
+<p>When you are using <code>html</code> field then it ignores the <code>text</code> field and only send the <code>html</code> message.</p>
+<p><img  src="./images/mail-html.PNG"
+        alt="html"/></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>We have finished the api part of this application and with this our backend is completed.<br>
+Now, you can use any frontend framework to utilize this API.</p>
+<p>You can find the complete code on the <a href="https://github.com/schadokar/nodemailer-app"target="_blank">GitHub</a>.<br>
+Thanks for reading.</p>
+<blockquote>
+<p>Cover is designed in <a href="https://canva.7eqqol.net/KD6B9"target="_blank">Canva</a></p>
+</blockquote>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/nodejs/>Nodejs</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/tutorial/>tutorial</a><a class="tag" href=/tags/email/>email</a></section><section class="article author"><img class="avatar" src="/images/pic.png" alt><p class="name">Shubham Chadokar</p><div class="bio">Software Engineer</div><div class="details"><a class="item" href="https://github.com/schadokar" target="_blank"><span class="iconfont icon-github"></span>&nbsp;schadokar</a><a class="item" href="https://twitter.com/schadokar1" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@schadokar1</a><a class="item" href="mailto:hello@schadokar.dev" target="_blank"><span class="iconfont icon-email"></span>&nbsp;hello@schadokar.dev</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/how-to-send-email-in-nodejs/"><span class="li iconfont icon-article"></span>How to Send Email in Nodejs</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

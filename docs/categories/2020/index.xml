@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Sun, 19 Jul 2020 18:16:06 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 09:21:13 +0530</lastBuildDate>
     
         <atom:link href="/categories/2020/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Send Email in Nodejs with Expressjs</title>
+      <link>/posts/how-to-send-email-in-nodejs-with-expressjs/</link>
+      <pubDate>Sun, 26 Jul 2020 09:21:13 +0530</pubDate>
+      
+      <guid>/posts/how-to-send-email-in-nodejs-with-expressjs/</guid>
+      <description>This is the 2nd part of the How to send email in Nodejs series. In the last section, we created the function to send the email using node cli.
+In this section, we will use the Expressjs and expose the functionality as an API. To test the api, we&#39;re going to use 2 options Curl command and Postman.
+Series:  How to Send Email in Nodejs - Part 1 How to Send Email in Nodejs with Expressjs - Part 2  Pre-requisite  Node.</description>
+      
+    </item>
     
     <item>
       <title>How to Send Email in Nodejs</title>
@@ -21,7 +33,7 @@
       <description>This is a series of articles on how to send an email in nodejs.
 In the first article, we will send an email using the node command. Later, we will create a APIs and a frontend.
 Sending emails in nodejs have only 2 requirements:
- Mail service provider (For ex. Gmail, Sendinblue, Mailchimp) Middleware to connect with mail service (For ex. nodemailer)  Prerequisites  Node.js (&amp;gt;v6.0.0 for nodemailer module) Code Editor (For Ex.</description>
+ Mail service provider (For ex. Gmail, Sendinblue, Mailchimp) Middleware to connect with mail service (For ex. nodemailer)  Series:  How to Send Email in Nodejs - Part 1 How to Send Email in Nodejs with Expressjs - Part 2  Prerequisites  Node.</description>
       
     </item>
     

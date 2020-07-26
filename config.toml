@@ -3,7 +3,7 @@ languageCode = "en"
 title = "Shubham Chadokar"
 theme = "hugo-notepadium"
 copyright = "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2020"
-disqusShortname = "schadokar"
+# disqusShortname = "schadokar"
 googleAnalytics = "UA-158088106-1"
 
 enableInlineShortcodes= true

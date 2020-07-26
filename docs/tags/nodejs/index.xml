@@ -21,7 +21,7 @@
       <description>This is a series of articles on how to send an email in nodejs.
 In the first article, we will send an email using the node command. Later, we will create a APIs and a frontend.
 Sending emails in nodejs have only 2 requirements:
- Mail service provider (For ex. Gmail, Sendinblue, Mailchimp) Middleware to connect with mail service (For ex. nodemailer)  Prerequisites  Node.js (&amp;gt;v6.0.0 for nodemailer module) Code Editor (For Ex.</description>
+ Mail service provider (For ex. Gmail, Sendinblue, Mailchimp) Middleware to connect with mail service (For ex. nodemailer)  Series:  How to Send Email in Nodejs - Part 1 How to Send Email in Nodejs with Expressjs - Part 2  Prerequisites  Node.</description>
       
     </item>
     
