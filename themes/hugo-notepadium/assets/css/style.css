@@ -8,9 +8,9 @@ html {
     Ubuntu, Roboto, Oxygen, Cantarell, 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', Helvetica, Arial, Verdana, 'Lucida Grande',
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 body {
@@ -44,7 +44,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 h1 {
@@ -105,10 +105,10 @@ pre {
   display: block;
   text-align: left;
   font-size: 85%;
-  line-height: 1.45;
+  line-height: 1.65;
   margin: 0;
   padding: 16px;
-  
+
   border-radius: 3px;
   background-color: #f6f8fa;
 
@@ -212,7 +212,7 @@ b {
   padding-bottom: 20px;
   min-height: 64px;
   margin-bottom: 30px;
-  
+
   background-color: #fff;
 }
 
@@ -228,7 +228,7 @@ b {
   margin-bottom: 80px;
   margin-left: 50px;
   margin-right: 50px;
-  min-height: 64px;  
+  min-height: 64px;
   /* background-color: #fff; */
 }
 
