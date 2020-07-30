@@ -53,9 +53,7 @@ Suppose the Header is <code>algorithm1</code> and <code>algorithm1</code> is the
 When the first party receives the request with the token, it will first validate the token before processing the request.</p>
 <p>As all the details are available in the token it is very easy task for the party to validate the token. It will take the <strong>Payload</strong> and passed it to the <strong>Header</strong> (algorithm1) using the <strong>SecretKey</strong> which it already have to generate the <strong>Signature</strong>. Then it will compare the token Signature with the generated Signature, if it matched <em>Voila</em> go ahead with the request else decline the request. 🔎</p>
 <p>The actual JWT Token looks like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span style="color:#a6e22e">eyJuYW1lIjoiSSBhbSBJcm9uIE1hbi4ifQ</span>.<span style="color:#a6e22e">li</span> <span style="color:#f92672">-</span>
-  <span style="color:#a6e22e">FDEyAdayupFIS5P2EKexN</span> <span style="color:#f92672">-</span>
-  <span style="color:#a6e22e">Rm_SWe4LXO9Xjyja4o</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSSBhbSBJcm9uIE1hbi4ifQ.li<span style="color:#f92672">-</span>FDEyAdayupFIS5P2EKexN<span style="color:#f92672">-</span>Rm_SWe4LXO9Xjyja4o
 </code></pre></div><p>Take a quick look and you can see the token is divided in 3 parts:</p>
 <ul>
 <li><strong>Header</strong>: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</li>
@@ -112,8 +110,8 @@ Open the terminal inside the <code>go-jwt-app</code> and initialize the go modul
 <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">joho</span><span style="color:#f92672">/</span><span style="color:#a6e22e">godotenv</span>
 </code></pre></div><h2 id="environment-variable">Environment Variable</h2>
 <p>Create a new <code>.env</code> file and paste the below code in it.</p>
-<pre><code class="language-env" data-lang="env">SECRET_KEY=secret007
-</code></pre><p>Using the <code>godotenv</code> package, we can read the <code>SECRET_KEY</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">SECRET_KEY<span style="color:#f92672">=</span>secret007
+</code></pre></div><p>Using the <code>godotenv</code> package, we can read the <code>SECRET_KEY</code>.</p>
 <h2 id="jwt-implementation">JWT implementation</h2>
 <p>In this section, we can divide the process in modules to understand clearly.</p>
 <h3 id="create-server-and-routes">Create Server and Routes</h3>

@@ -72,10 +72,8 @@ As all the details are available in the token it is very easy task for the party
 
 The actual JWT Token looks like this.
 
-```js
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSSBhbSBJcm9uIE1hbi4ifQ.li -
-  FDEyAdayupFIS5P2EKexN -
-  Rm_SWe4LXO9Xjyja4o;
+```c
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSSBhbSBJcm9uIE1hbi4ifQ.li-FDEyAdayupFIS5P2EKexN-Rm_SWe4LXO9Xjyja4o
 ```
 
 Take a quick look and you can see the token is divided in 3 parts:
@@ -159,7 +157,7 @@ go get github.com/joho/godotenv
 
 Create a new `.env` file and paste the below code in it.
 
-```env
+```c
 SECRET_KEY=secret007
 ```
 
