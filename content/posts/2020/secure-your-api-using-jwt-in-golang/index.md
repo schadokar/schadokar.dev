@@ -1,6 +1,6 @@
 ---
 title: "Secure Your Api Using Jwt in Golang"
-date: 2020-07-20T11:17:11+05:30
+date: 2020-07-30T11:17:11+05:30
 description: "Learn how to implement jwt in your api in golang."
 categories: [Golang", "2020"]
 tags: ["golang", "jwt"]
