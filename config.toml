@@ -27,7 +27,7 @@ readingTime = true
 # slogan = "The Unknown Monk"
 
 [params.profile]
-  enable = true
+  enable = false
   avatar = "/images/pic.png"
   name = "Shubham Chadokar"
   bio = "Software Engineer"  # support markdown syntax

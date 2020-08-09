@@ -179,4 +179,6 @@ Serverless tool is great. Even for a beginner the learning curve is smooth. In t
 
 Thanks for reading. 😃
 
+> Cover is designed in [Canva](https://canva.7eqqol.net/KD6B9)
+
 ---

@@ -14,4 +14,3 @@ single = false  # display as a single page, hide navigation on bottom, like as a
 license = ""  # CC License
 draft = true
 +++
-
