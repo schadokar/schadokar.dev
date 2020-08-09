@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Thu, 30 Jul 2020 11:17:11 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2020 16:04:50 +0530</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create your first Serverless application</title>
+      <link>/posts/create-your-first-serverless-application/</link>
+      <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
+      
+      <guid>/posts/create-your-first-serverless-application/</guid>
+      <description>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resources consumed by an application, rather than on pre-purchased units of capacity. - Wikipedia
+In simple language, serverless means pay only for what you use. You might think there is already Pay-as-you-go model provided by the cloud providers.</description>
+      
+    </item>
     
     <item>
       <title>Secure Your Api Using Jwt in Golang</title>
