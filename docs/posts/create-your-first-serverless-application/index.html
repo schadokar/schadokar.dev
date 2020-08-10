@@ -17,16 +17,16 @@
     <h1 class="article title">Create your first Serverless application</h1><p class="article date">Sunday, August 9, 2020<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><p>
             <img class="cover" src="images/serverless-aws.png" alt>
           </p><p>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resources consumed by an application, rather than on pre-purchased units of capacity. - <a href="https://en.wikipedia.org/wiki/Serverless_computing"target="_blank">Wikipedia</a></p>
-<p>In simple language, serverless means pay only for what you use. You might think there is already Pay-as-you-go model provided by the cloud providers.<br>
-Let me rephrase it, serverless means pay only for what you execute. Serverless doesn't meant that there will be no server, it means that you don't have to worry about the server and its setup. Only focus on the application logic or in our programming terminology only focus on writing the code or functions.<br>
-You can deploy these individual functions to the cloud and when ever this function will execute, only for that execution you will be charged.<br>
+<p>In simple language, serverless means pay only for what you use. You might think there is already a Pay-as-you-go model provided by the cloud providers.<br>
+Let me rephrase it, serverless means pay only for what you execute. Serverless doesn't mean that there will be no server, it means that you don't have to worry about the server and its setup. Focus on the application logic or in our programming terminology only focus on writing the code or functions.<br>
+You can deploy these individual functions to the cloud and whenever this function will execute, only for that execution you will be charged.<br>
 Isn't it great? 😃</p>
 <p>Serverless computing concept was first introduced in 2010. AWS Lambda, introduced by Amazon in 2014, was the first public cloud infrastructure vendor with an abstract serverless computing offering.</p>
 <p>With the popularity of microservice architecture, serverless is the best option in terms of economics and reliability.</p>
 <h1 id="serverless-framework">Serverless Framework</h1>
-<p><a href="https://serverless.com"target="_blank">Serverless</a> is an open source project, introduced in the 2015. Serverless provides features to deploy the function to almost every cloud. For ex AWS, Azure, GCP. Using serverless you can access and manage other cloud services like storage, api gateway, db etc.</p>
+<p><a href="https://serverless.com"target="_blank">Serverless</a> is an open-source project, introduced in 2015. Serverless provides features to deploy the function to almost every cloud. For ex. AWS, Azure, GCP. Using serverless you can access and manage other cloud services like storage, API gateway, DB etc.</p>
 <blockquote>
-<p>Don't get confused. Serverless computing or serverless is a concept, while there is framework or tool also name as serverless.</p>
+<p>Don't get confused. Serverless computing or serverless is a concept, while there is a framework or tool also name as serverless.</p>
 </blockquote>
 <h1 id="getting-started">Getting Started</h1>
 <p>To install the <code>serverless</code>, first install the <code>nodejs</code> in the machine.</p>
@@ -36,11 +36,11 @@ Isn't it great? 😃</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">global</span> <span style="color:#a6e22e">serverless</span>
 </code></pre></div><h1 id="create-a-nodejs-application-and-deploy-on-aws">Create a nodejs application and deploy on AWS</h1>
 <p>Create a new directory <code>hello-serverless</code>.<br>
-Open terminal in the directory and run the below command.</p>
+Open the terminal in the directory and run the below command.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">serverless</span> <span style="color:#a6e22e">create</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">template</span> <span style="color:#a6e22e">aws</span><span style="color:#f92672">-</span><span style="color:#a6e22e">nodejs</span>
 </code></pre></div><p><img  src="./images/boilerplate.PNG"
         alt="boilerplate"/></p>
-<p>This boilerplate has created 2 files, <code>handler.js</code> where the function is defined and <code>serverless.yml</code> where serverless deployment configuration is defined.</p>
+<p>This template has created 2 files, <code>handler.js</code> where the function is defined and <code>serverless.yml</code> where serverless deployment configuration is defined.</p>
 <p>Open <code>handler.js</code>.</p>
 <p>This is a simple function which will return a message.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">hello</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">event</span>) =&gt; {
@@ -58,14 +58,14 @@ Open terminal in the directory and run the below command.</p>
 };
 </code></pre></div><h2 id="create-an-api-endpoint-for-hello-function">Create an API endpoint for hello function</h2>
 <p>Open <code>serverless.yml</code>.</p>
-<p>In the provider section, it is <code>aws</code> and by default its region is <code>us-east-1</code>. It also provides a staging option, you can deploy the project in different environment like dev, prod or test.</p>
+<p>In the provider section, it is <code>aws</code> and by default, its region is <code>us-east-1</code>. It also provides a staging option, you can deploy the project in a different environment like dev, prod or test.</p>
 <p>Update the provider section:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
   region: us-east<span style="color:#ae81ff">-1</span>
-</code></pre></div><p>In the functions, create a new route for the hello function. It will create a new route in the AWS Api gateway and link it to the AWS lambda function in which <code>hello</code> function will deploy.</p>
+</code></pre></div><p>In the functions, create a new route for the hello function. It will create a new route in the AWS API gateway and link it to the AWS lambda function in which <code>hello</code> function will deploy.</p>
 <p>Update the function section:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">functions:
   hello:
@@ -77,10 +77,10 @@ Open terminal in the directory and run the below command.</p>
 </code></pre></div><p>We have created a <code>http</code> event of <code>GET</code> request type and <code>v1/hello</code> route.</p>
 <p>The function is ready and configured.</p>
 <p>For deploying it, we need to connect AWS account with the serverless.</p>
-<h2 id="create-a-aws-account">Create a AWS account</h2>
+<h2 id="create-an-aws-account">Create an AWS account</h2>
 <p>Create an account in AWS cloud if you don't have.<br>
 Open the AWS account and go to <strong>IAM</strong>.<br>
-Create a new user with <strong>Administrator Access</strong>. Using this user, the serverless can create the lambda function and other required resources on the aws cloud.</p>
+Create a new user with <strong>Administrator Access</strong>. Using this user, the serverless can create the lambda function and other required resources on the AWS cloud.</p>
 <h3 id="create-a-new-user">Create a new User</h3>
 <p>Enter the user name and select the <strong>Programmatic access</strong>.</p>
 <p><img  src="./images/aws-user.PNG"
@@ -94,13 +94,13 @@ This is only for the education purpose, in production configure the access accor
 <p>Now, Click Next till review tab and Create the User.</p>
 <p><img  src="./images/aws-user-creates.PNG"
         alt="aws-create-user"/></p>
-<p>Download the credentials. If you misplace this, then you have to recreate it again. Save it properly. Keep it handy, we need it in next step.</p>
+<p>Download the credentials. If you misplace this, then you have to recreate it again. Save it properly. Keep it handy, we need it in the next step.</p>
 <h2 id="deploy-to-aws">Deploy to AWS</h2>
 <p>Open terminal in the project directory.<br>
-Run the below command to connect serverless cli to AWS account.</p>
+Run the below command to connect serverless CLI to AWS account.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">serverless</span> <span style="color:#a6e22e">config</span> <span style="color:#a6e22e">credentials</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">provider</span> <span style="color:#a6e22e">aws</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">key</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ACCESS</span> <span style="color:#a6e22e">KEY</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">secret</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Secret</span> <span style="color:#a6e22e">Access</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">&gt;</span>
 </code></pre></div><blockquote>
-<p>❗ Don't use shorthand <code>-s</code> for secret, it is reserved keyword and will thrown a serverless error <code>Invalid stage name</code>.</p>
+<p>❗ Don't use the shorthand <code>-s</code> for secret, it is reserved keyword and will throw a serverless error <code>Invalid stage name</code>.</p>
 </blockquote>
 <p>Use the below command to deploy the function to the AWS.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">serverless</span> <span style="color:#a6e22e">deploy</span>
@@ -117,16 +117,16 @@ Run the below command to connect serverless cli to AWS account.</p>
 <img  src="./images/aws-hello.PNG"
         alt="aws-browser"/></p>
 <h1 id="conclusion">Conclusion</h1>
-<p>Serverless computing is economical and reliable but we have should not follow it blindly. All the technologies works best upto a certain limit, if we try it beyond that instead of helping it will increase your workload.</p>
-<p>We should use it according to the usecase and requirement.</p>
-<p>Serverless tool is great. Even for a beginner the learning curve is smooth. In the upcoming tutorials, you will get more projects to play with serverless.</p>
+<p>Serverless computing is economical and reliable but we have should not follow it blindly. All the technologies work best up to a certain limit if we try it beyond that instead of helping it will increase your workload.</p>
+<p>We should use it according to the use case and requirement.</p>
+<p>The serverless tool is great. Even for a beginner, the learning curve is smooth. In the upcoming tutorials, you will get more projects to play with serverless.</p>
 <p>Thanks for reading. 😃</p>
 <blockquote>
 <p>Cover is designed in <a href="https://canva.7eqqol.net/KD6B9"target="_blank">Canva</a></p>
 </blockquote>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/serverless/>Serverless</a><a class="category" href=/categories/cloud/>Cloud</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/serverless/>serverless</a><a class="tag" href=/tags/lambda/>lambda</a><a class="tag" href=/tags/aws/>aws</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/secure-your-api-using-jwt-in-golang/"><span class="li iconfont icon-article"></span>Secure Your Api Using Jwt in Golang</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-a-serverless-application-in-golang-with-aws/"><span class="li iconfont icon-article"></span>Create a Serverless Application in Golang With Aws</a></p><p><a class="link" href="/posts/secure-your-api-using-jwt-in-golang/"><span class="li iconfont icon-article"></span>Secure Your Api Using Jwt in Golang</a></p></section></div></section>
 <section id="footer">
     <div class="footer wrap">
         <span class="footer">

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/cloud/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/serverless/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/aws/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/cloud/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/create-your-first-serverless-application/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/lambda/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/serverless/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/serverless/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-07-30T11:17:11+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-07-30T11:17:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/jwt/</loc><lastmod>2020-07-30T11:17:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/secure-your-api-using-jwt-in-golang/</loc><lastmod>2020-07-30T11:17:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/email/</loc><lastmod>2020-07-26T09:21:13+05:30</lastmod></url><url>
@@ -25,8 +27,8 @@
     <loc>https://schadokar.dev/tags/sendemail/</loc><lastmod>2020-07-19T18:16:06+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/conversion/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cli/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cobra/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>
@@ -38,7 +40,6 @@
     <loc>https://schadokar.dev/tags/github-pages/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/reactjs/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/reactjs/</loc><lastmod>2020-04-14T10:19:00+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/cloud/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/gcp/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/gcp/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</loc><lastmod>2020-04-13T22:50:46+05:30</lastmod></url><url>

@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 22:50:46 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 23:19:26 +0530</lastBuildDate>
     
         <atom:link href="/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create a Serverless Application in Golang With Aws</title>
+      <link>/posts/create-a-serverless-application-in-golang-with-aws/</link>
+      <pubDate>Mon, 10 Aug 2020 23:19:26 +0530</pubDate>
+      
+      <guid>/posts/create-a-serverless-application-in-golang-with-aws/</guid>
+      <description>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.
+Prerequisites  Serverless Installed AWS account Connect AWS account to serverless  All these are covered in detail in the last tutorial.
+Getting Started Create a new directory hello-go-serverless.
+Open the terminal inside the project.
+Run the below command to initiate the serverless application using aws-go-mod template.
+This will create a basic scaffolding of the serverless project.</description>
+      
+    </item>
     
     <item>
       <title>How to Login as Root in GCP Linux Vm</title>
