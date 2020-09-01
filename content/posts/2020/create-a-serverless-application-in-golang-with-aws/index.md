@@ -1,5 +1,5 @@
 ---
-title: "Create a Serverless Application in Golang With Aws"
+title: "Create a Serverless Application in Golang With AWS"
 date: 2020-08-10T23:19:26+05:30
 description: "Deploy the golang serverless application on AWS Lambda service."
 categories: ["Golang", "Serverless", "2020"]

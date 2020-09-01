@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Create a Serverless Application in Golang With Aws</title>
+      <title>Create a Serverless Application in Golang With AWS</title>
       <link>/posts/create-a-serverless-application-in-golang-with-aws/</link>
       <pubDate>Mon, 10 Aug 2020 23:19:26 +0530</pubDate>
       
@@ -274,6 +274,19 @@ Prerequisites:
 This tutorial will consist of the following steps:
  Create an Azure Web Service Build the Angular application Configure the Web Service and deploy it   Let’s start with creating the Azure Web Service;
 If you don’t have any account, you can sign up for free account and $200 dollars will be credit in your azure account to play with.</description>
+      
+    </item>
+    
+    <item>
+      <title>How I Wrote My First Book</title>
+      <link>/posts/how-i-wrote-my-first-book/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/how-i-wrote-my-first-book/</guid>
+      <description>Cover by Thought Catalogon UnsplashRecently, I wrote my first eBook. Yes, I finally wrote it. 🎉
+It was on my list for a long time and when it finally completed and I like to share my experience with everyone.
+In this post, I&#39;ll try to document my complete journey of writing the book. From motivation, hurdles, tips to tools everything.
+I wrote the eBook on Hyperledger Composer Blockchain tool. It is completely free and right now only available in PDF format.</description>
       
     </item>
     

@@ -9,7 +9,7 @@ googleAnalytics = "UA-158088106-1"
 enableInlineShortcodes= true
 
 # Number of posts per page
-Paginate = 10
+Paginate = 15
 enableRobotsTXT = true
 enableEmoji=true
 
