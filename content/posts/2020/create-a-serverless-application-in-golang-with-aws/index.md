@@ -11,6 +11,18 @@ published: true
 
 In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.
 
+**Table of Content**
+
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+    - [Open hello/main.go](#open-hellomaingo)
+    - [Open serverless.yml](#open-serverlessyml)
+- [Build the application](#build-the-application)
+  - [Build](#build)
+- [Deploy](#deploy)
+- [Test the application](#test-the-application)
+- [Conclusion](#conclusion)
+
 # Prerequisites
 
 - Serverless Installed

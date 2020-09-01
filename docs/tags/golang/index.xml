@@ -19,11 +19,9 @@
       
       <guid>/posts/create-a-serverless-application-in-golang-with-aws/</guid>
       <description>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.
-Prerequisites  Serverless Installed AWS account Connect AWS account to serverless  All these are covered in detail in the last tutorial.
-Getting Started Create a new directory hello-go-serverless.
-Open the terminal inside the project.
-Run the below command to initiate the serverless application using aws-go-mod template.
-This will create a basic scaffolding of the serverless project.</description>
+Table of Content
+ Prerequisites Getting Started  Open hello/main.go Open serverless.yml   Build the application  Build   Deploy Test the application Conclusion  Prerequisites  Serverless Installed AWS account Connect AWS account to serverless  All these are covered in detail in the last tutorial.
+Getting Started Create a new directory hello-go-serverless.</description>
       
     </item>
     
@@ -60,7 +58,8 @@ Syntax func EncodeToString(src []byte) string First we will convert a string to 
       <guid>/posts/create-a-color-cli-in-golang/</guid>
       <description>In this tutorial, we will create a color cli in golang using cobra library. CLI is a standard interface between a software and a user.
  A command-line interface (CLI) processes commands to a computer program in the form of lines of text. - Wikipedia
- Objective of the color cli The objective of the colorcli is to return the name of the hexcode of the color. If the hexcode doesn&#39;t exist then colorcli can add the color.</description>
+ Table of Content
+ Objective of the color cli  Pre-requisites Cobra Project Setup  Initiate the go modules   Hexcode Color names  Download the hexcode to color name json file   Create a name command in the colorcli Add a color name to the colornames.</description>
       
     </item>
     

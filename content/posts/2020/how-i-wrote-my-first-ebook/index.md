@@ -23,7 +23,31 @@ I wrote the eBook on Hyperledger Composer Blockchain tool. It is completely free
 
 **Table of Content**
 
-[TOC]
+- [Motivation 🎯](#motivation-)
+- [First Hurdle 🚧](#first-hurdle-)
+  - [Basic](#basic)
+- [Second Hurdle 🚧](#second-hurdle-)
+    - [Ask the questions](#ask-the-questions)
+  - [My approach](#my-approach)
+    - [Create a to-do list 📝](#create-a-to-do-list-)
+      - [Tasks](#tasks)
+  - [Start Small but Start 🧗](#start-small-but-start-)
+  - [Chronological Order](#chronological-order)
+  - [Chronicle of the book journey](#chronicle-of-the-book-journey)
+- [A Glance on the tools and the resources I used 🧰](#a-glance-on-the-tools-and-the-resources-i-used-)
+  - [Writing](#writing)
+  - [Editing](#editing)
+  - [Formatting](#formatting)
+    - [Page break in PDF](#page-break-in-pdf)
+    - [About Me Page](#about-me-page)
+    - [Thank You Page](#thank-you-page)
+  - [Book Title, Sub-title](#book-title-sub-title)
+  - [Designing the Book Cover 🎨](#designing-the-book-cover-)
+  - [License 📜](#license-)
+- [Publish 🚀](#publish-)
+- [Share your work 📤](#share-your-work-)
+- [Conclusion](#conclusion)
+- [Final List of Tools I used 📝](#final-list-of-tools-i-used-)
 
 # Motivation 🎯
 

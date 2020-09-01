@@ -14,6 +14,19 @@ In this tutorial, we will create a color cli in golang using cobra library. CLI 
 
 > A command-line interface (CLI) processes commands to a computer program in the form of lines of text. - [Wikipedia](https://en.wikipedia.org/wiki/Command-line_interface)
 
+**Table of Content**
+
+- [Objective of the color cli](#objective-of-the-color-cli)
+  - [Pre-requisites](#pre-requisites)
+  - [Cobra](#cobra)
+  - [Project Setup](#project-setup)
+    - [Initiate the go modules](#initiate-the-go-modules)
+  - [Hexcode Color names](#hexcode-color-names)
+    - [Download the hexcode to color name json file](#download-the-hexcode-to-color-name-json-file)
+  - [Create a name command in the colorcli](#create-a-name-command-in-the-colorcli)
+  - [Add a color name to the colornames.min.json](#add-a-color-name-to-the-colornamesminjson)
+  - [Conclusion](#conclusion)
+
 # Objective of the color cli
 
 The objective of the `colorcli` is to return the name of the hexcode of the color. If the hexcode doesn't exist then `colorcli` can add the color.

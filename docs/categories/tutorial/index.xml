@@ -57,7 +57,8 @@ Syntax func EncodeToString(src []byte) string First we will convert a string to 
       <guid>/posts/create-a-color-cli-in-golang/</guid>
       <description>In this tutorial, we will create a color cli in golang using cobra library. CLI is a standard interface between a software and a user.
  A command-line interface (CLI) processes commands to a computer program in the form of lines of text. - Wikipedia
- Objective of the color cli The objective of the colorcli is to return the name of the hexcode of the color. If the hexcode doesn&#39;t exist then colorcli can add the color.</description>
+ Table of Content
+ Objective of the color cli  Pre-requisites Cobra Project Setup  Initiate the go modules   Hexcode Color names  Download the hexcode to color name json file   Create a name command in the colorcli Add a color name to the colornames.</description>
       
     </item>
     
