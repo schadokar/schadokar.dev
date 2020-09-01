@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/article/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/ebook/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/how-i-wrote-my-first-book/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/tips/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/writing/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cloud/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/serverless/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/aws/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/cloud/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/create-your-first-serverless-application/</loc><lastmod>2020-08-09T16:04:50+05:30</lastmod></url><url>
@@ -27,8 +32,8 @@
     <loc>https://schadokar.dev/tags/sendemail/</loc><lastmod>2020-07-19T18:16:06+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/conversion/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cli/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cobra/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>
@@ -71,7 +76,6 @@
     <loc>https://schadokar.dev/categories/2019/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/categories/featured/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra/</loc><lastmod>2019-11-18T15:09:00+00:00</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/article/</loc><lastmod>2019-09-17T11:49:11+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/tags/article/</loc><lastmod>2019-09-17T11:49:11+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/tags/catalyst/</loc><lastmod>2019-09-17T11:49:11+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/posts/catalyst-network-the-first-step-towards-decentralized-internet/</loc><lastmod>2019-09-17T11:49:11+00:00</lastmod></url><url>
@@ -87,12 +91,8 @@
     <loc>https://schadokar.dev/tags/angular/</loc><lastmod>2018-11-23T11:49:18+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/</loc><lastmod>2018-11-23T11:49:18+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/projects/</loc></url><url>
-    <loc>https://schadokar.dev/categories/ebook/</loc></url><url>
     <loc>https://schadokar.dev/ebooks/</loc></url><url>
-    <loc>https://schadokar.dev/posts/how-i-wrote-my-first-book/</loc></url><url>
     <loc>https://schadokar.dev/ebooks/playtime-with-hyperledger-composer/</loc></url><url>
-    <loc>https://schadokar.dev/tags/tips/</loc></url><url>
-    <loc>https://schadokar.dev/categories/writing/</loc></url><url>
     <loc>https://schadokar.dev/about/</loc></url><url>
     <loc>https://schadokar.dev/contact/</loc></url><url>
     <loc>https://schadokar.dev/newsletter/</loc></url></urlset>

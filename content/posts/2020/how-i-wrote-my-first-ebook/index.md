@@ -1,6 +1,6 @@
 ---
 title: "How I Wrote My First Book"
-date: 2020-09-1T19:58:52+05:30
+date: 2020-09-01T19:58:52+05:30
 description: "In this article, I listed down all the tools and approaches I used to write this book."
 categories: ["Article", "Ebook", "Writing", "2020"]
 tags: ["tips"]
