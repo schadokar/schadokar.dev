@@ -4,7 +4,7 @@ date: 2020-09-01T19:58:52+05:30
 description: "In this article, I listed down all the tools and approaches I used to write this book."
 categories: ["Article", "Ebook", "Writing", "2020"]
 tags: ["tips"]
-cover: https://schadokar.dev/images/writin-cover.jpg #image show on top
+cover: https://schadokar.dev/images/writing-cover.jpg #image show on top
 readingTime: true # show reading time after article date
 toc: true
 comments: true
