@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/article/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/good-practice/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/nodejs/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/tips/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/array/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/nodejs/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/article/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/ebook/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/how-i-wrote-my-first-book/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/tips/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/writing/</loc><lastmod>2020-09-01T19:58:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cloud/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</loc><lastmod>2020-08-10T23:19:26+05:30</lastmod></url><url>

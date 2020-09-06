@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 19:58:52 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2020 11:51:52 +0530</lastBuildDate>
     
         <atom:link href="/categories/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Basic validations every nodejs developer should know</title>
+      <link>/posts/basic-validations-every-nodejs-developer-should-know/</link>
+      <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
+      
+      <guid>/posts/basic-validations-every-nodejs-developer-should-know/</guid>
+      <description>Validations are the key things to prevent the application&#39;s unexpected behaviour. This is a list of basic validations every nodejs developer should know about.
+I will keep updating this article with new validation and best approaches.
+ typeof operator  Syntax   Number check  Check NaN (not a number) Check if the number is finite   String Check Boolean Check Undefined Check Null Check  Null check using the Object   Function check Object Check  Check using the instanceof   Array Check Buffer Check Conclusion  typeof operator Javascript provides a typeof operator.</description>
+      
+    </item>
     
     <item>
       <title>How I Wrote My First Book</title>
