@@ -20,14 +20,51 @@
 <p>The purpose of this article to put all the instructions at one place to set up the Hyperledger Fabric network irrespective of the fact if you’re using Windows or Linux.</p>
 <p>My apologies for macOS readers, instructions for macOS is not included as I don’t have one.</p>
 <hr>
-<h4 id="contents"><strong>Contents:</strong></h4>
-<ol>
-<li>Prerequisites</li>
-<li><a href="#linux-installation">Linux Installation</a></li>
-<li><a href="#windows-installation">Windows Installation</a></li>
-</ol>
+<p><strong>Table of Content</strong></p>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#linux-installation">Linux Installation</a>
+<ul>
+<li><a href="#step-1-create-a-new-sudouser">Step 1: Create a new sudo user</a></li>
+<li><a href="#step-2curl">Step 2: cURL</a></li>
+<li><a href="#step-3-docker-and-dockercompose">Step 3: Docker and Docker Compose</a>
+<ul>
+<li><a href="#according-to-the-docker-documentation">According to the Docker Documentation</a></li>
+<li><a href="#install-using-a-single-command">Install using a single command</a></li>
+<li><a href="#test-the-docker-installation">Test the Docker Installation</a></li>
+</ul>
+</li>
+<li><a href="#step-3golang">Step 3: Golang</a></li>
+<li><a href="#step-4-nodejs-andnpm">Step 4: Nodejs and npm</a></li>
+<li><a href="#step-5-python-27">Step 5: Python 2.7</a></li>
+<li><a href="#step-6-install-samples-binaries-and-dockerimages">Step 6: Install Samples, Binaries and Docker Images</a></li>
+<li><a href="#step-7-test-the-fabricnetwork">Step 7: Test the fabric network</a></li>
+</ul>
+</li>
+<li><a href="#windows-installation">Windows Installation</a>
+<ul>
+<li><a href="#step-1curl">Step 1: cURL</a></li>
+<li><a href="#step-2-docker-and-dockercompose">Step 2: Docker and Docker Compose</a>
+<ul>
+<li><a href="#test-the-docker-installation-1">Test the Docker Installation</a></li>
+</ul>
+</li>
+<li><a href="#step-3golang-1">Step 3: Golang</a></li>
+<li><a href="#step-4-nodejs-andnpm-1">Step 4: Nodejs and npm</a></li>
+<li><a href="#step-5-python27">Step 5: Python 2.7</a></li>
+<li><a href="#windows-extras">Windows Extras</a>
+<ul>
+<li><a href="#install-windows-build-tools-and-grpc">Install windows-build-tools and grpc</a></li>
+<li><a href="#install-git-to-run-the-bash-commands">Install git to run the bash commands</a></li>
+</ul>
+</li>
+<li><a href="#step-6-install-samples-binaries-and-docker-images">Step 6: Install Samples, Binaries and Docker Images</a></li>
+<li><a href="#step-7-test-the-fabric-network">Step 7: Test the fabric network</a></li>
+</ul>
+</li>
+</ul>
 <hr>
-<h3 id="prerequisites"><strong>Prerequisites</strong></h3>
+<h1 id="prerequisites">Prerequisites</h1>
 <ol>
 <li>cURL — latest version</li>
 <li>Docker — version 17.06.2-ce or greater</li>
@@ -39,174 +76,172 @@
 </ol>
 <p>These prerequisites’ versions are according to the fabric v1.4 <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html"target="_blank">documentation</a>.</p>
 <hr>
-<h3 id="linux-installation">Linux Installation</h3>
+<h1 id="linux-installation">Linux Installation</h1>
 <p>Linux installation is pretty straight forward compared to windows. Few commands and Fabric is ready.</p>
 <p>I have provisioned a Linux 16.04 VM from AWS for this article. All the instructions will run in the terminal. I haven’t found any system requirement information in Hyperledger documentation. Please comment if you have a reference for the system requirement.</p>
-<h4 id="step-1-create-a-new-sudouser">Step 1: Create a new sudo user</h4>
+<h2 id="step-1-create-a-new-sudouser">Step 1: Create a new sudo user</h2>
 <p>It is recommended that Hyperledger Fabric shouldn’t be installed as a root user. Open the terminal.</p>
 <ul>
-<li>Add the new user “fabric”</li>
+<li>Add the new user fabric</li>
 </ul>
-<pre><code>sudo adduser fabric
-</code></pre><ul>
-<li>Add the user “fabric” to the Sudo groups</li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo adduser fabric
+</code></pre></div><ul>
+<li>Add the user fabric to the Sudo groups</li>
 </ul>
-<pre><code>sudo usermod -aG sudo newuser
-</code></pre><ul>
-<li>Login to “fabric” user</li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo usermod -aG sudo newuser
+</code></pre></div><ul>
+<li>Login to fabric user</li>
 </ul>
-<pre><code>su fabric
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">su fabric
+</code></pre></div><ul>
 <li>Test the sudo access</li>
 </ul>
-<pre><code>sudo ls
-</code></pre><p>If you get any error then the user is not added to the sudo group. Follow this <a href="https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04"target="_blank">link</a> for more information.</p>
-<h4 id="step-2curl"><strong>Step 2: cURL</strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo ls
+</code></pre></div><p>If you get any error then the user is not added to the sudo group. Follow this <a href="https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04"target="_blank">link</a> for more information.</p>
+<h2 id="step-2curl">Step 2: cURL</h2>
 <p>Check if your Linux has curl install or not. <code>curl --version</code></p>
 <p>If not follow the below instructions to install:</p>
-<pre><code>sudo apt-get update
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get update
 sudo apt-get install curl
 curl --version
-</code></pre><h4 id="step-3-docker-and-dockercompose"><strong>Step 3: Docker and Docker Compose</strong></h4>
+</code></pre></div><h2 id="step-3-docker-and-dockercompose">Step 3: Docker and Docker Compose</h2>
 <p>Following are the ways to install Docker and Docker-compose.</p>
-<ol>
-<li><strong>According to the Documentation</strong></li>
-</ol>
+<h3 id="according-to-the-docker-documentation">According to the Docker Documentation</h3>
 <ul>
 <li>Install the latest version of Docker from the official Docker repository.</li>
 </ul>
-<pre><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</code></pre></div><ul>
 <li>Add the Docker repository to APT sources</li>
 </ul>
-<pre><code>sudo add-apt-repository “deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable”
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo add-apt-repository “deb <span style="color:#f92672">[</span>arch<span style="color:#f92672">=</span>amd64<span style="color:#f92672">]</span> https://download.docker.com/linux/ubuntu <span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span> stable”
+</code></pre></div><ul>
 <li>Update the package database</li>
 </ul>
-<pre><code>sudo apt-get update
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get update
+</code></pre></div><ul>
 <li>Install Docker</li>
 </ul>
-<pre><code>sudo apt-get install -y docker-ce
-</code></pre><p><strong>2. Install using a command</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install -y docker-ce
+</code></pre></div><h3 id="install-using-a-single-command">Install using a single command</h3>
 <p>This command will install both docker and docker-compose with a single command. Thanks to <a href="https://medium.com/u/32dec75e8ca9"target="_blank">KC Tam</a></p>
-<pre><code>sudo apt-get -y install docker-compose
-</code></pre><p>The above 2 methods will install the docker and docker-compose.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get -y install docker-compose
+</code></pre></div><p>The above 2 methods will install the docker and docker-compose.</p>
 <ul>
 <li>To use docker commands it requires root privileges. Instead of using <code>sudo</code> for all the docker commands, add the user to <code>docker</code> group</li>
 </ul>
-<pre><code>sudo usermod -aG docker fabric
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo usermod -aG docker fabric
+</code></pre></div><ul>
 <li>Logout using <code>exit</code> command and log in again. Check the groups&rsquo; user is part of, using <code>id -nG</code> command.</li>
 </ul>
-<pre><code>Output
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Output
 fabric sudo docker
-</code></pre><p><strong>Test the Installation</strong></p>
+</code></pre></div><h3 id="test-the-docker-installation">Test the Docker Installation</h3>
 <ul>
 <li>Check the docker and docker-compose version</li>
 </ul>
-<pre><code>docker --version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker --version
 Docker version 18.09.7, build 2d0083d
 
 docker-compose --version
 docker-compose version 1.17.1, build unknown
-</code></pre><ul>
+</code></pre></div><ul>
 <li>Pull the <a href="https://hub.docker.com/r/library/hello-world/"target="_blank">hello-world image</a> from Docker Hub and run a container:</li>
 </ul>
-<pre><code>docker run hello-world
-</code></pre><p><img  src="./asset-2.png"
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run hello-world
+</code></pre></div><p><img  src="./asset-2.png"
         alt="docker hello world"/></p>
 <p>If you get this message then docker is successfully installed.</p>
 <p>For more information, please follow this <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04#step-1-%E2%80%94-installing-docker"target="_blank">link</a>.</p>
-<h4 id="step-3golang"><strong>Step 3: Golang</strong></h4>
+<h2 id="step-3golang">Step 3: Golang</h2>
 <ul>
 <li>Install the golang package</li>
 </ul>
-<pre><code>curl -O https://storage.googleapis.com/golang/go1.12.linux-amd64.tar.gz
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -O https://storage.googleapis.com/golang/go1.12.linux-amd64.tar.gz
+</code></pre></div><ul>
 <li>Extract the package</li>
 </ul>
-<pre><code>tar xvf go1.12.linux-amd64.tar.gz
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">tar xvf go1.12.linux-amd64.tar.gz
+</code></pre></div><ul>
 <li>Set the GOPATH</li>
 </ul>
-<pre><code>export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">export GOPATH<span style="color:#f92672">=</span>$HOME/go
+export PATH<span style="color:#f92672">=</span>$PATH:$GOPATH/bin
+</code></pre></div><ul>
 <li>Check the go version</li>
 </ul>
-<pre><code>go version
-</code></pre><p>For more installation information follow this <a href="https://www.digitalocean.com/community/tutorials/how-to-install-go-1-6-on-ubuntu-16-04"target="_blank">link</a> and for GOPATH follow this <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html#go-programming-language"target="_blank">link</a>.</p>
-<h4 id="step-4-nodejs-andnpm"><strong>Step 4: Nodejs and npm</strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go version
+</code></pre></div><p>For more installation information follow this <a href="https://www.digitalocean.com/community/tutorials/how-to-install-go-1-6-on-ubuntu-16-04"target="_blank">link</a> and for GOPATH follow this <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html#go-programming-language"target="_blank">link</a>.</p>
+<h2 id="step-4-nodejs-andnpm">Step 4: Nodejs and npm</h2>
 <ul>
 <li>Download the installation script using curl</li>
 </ul>
-<pre><code>curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+</code></pre></div><ul>
 <li>Run the script under sudo</li>
 </ul>
-<pre><code>sudo bash nodesource_setup.sh
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo bash nodesource_setup.sh
+</code></pre></div><ul>
 <li>Install the nodejs</li>
 </ul>
-<pre><code>sudo apt-get install nodejs
-</code></pre><p>With nodejs, npm also get installed. Check their version</p>
-<pre><code>node -v
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install nodejs
+</code></pre></div><p>With nodejs, npm also get installed. Check their version</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node -v
 Output
 v8.16.0
 
 npm -v
 v6.4.1
-</code></pre><p><strong>Step 5: Python 2.7</strong></p>
+</code></pre></div><h2 id="step-5-python-27">Step 5: Python 2.7</h2>
 <p>By default ubuntu 16.04 comes with Python 3.5.1 installed as python3 binary.</p>
 <ul>
 <li>To install <code>python 2.7</code></li>
 </ul>
-<pre><code>sudo apt-get install python
-</code></pre><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install python
+</code></pre></div><ul>
 <li>Check the python version:</li>
 </ul>
-<pre><code>python --version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">python --version
 Python 2.7.12
-</code></pre><p>All the prerequisites are installed. Now, let's install the Hyperledger Fabric v1.4.</p>
-<h4 id="step-6-install-samples-binaries-and-dockerimages"><strong>Step 6: Install Samples, Binaries and Docker Images</strong></h4>
+</code></pre></div><p>All the prerequisites are installed. Now, let's install the Hyperledger Fabric v1.4.</p>
+<h2 id="step-6-install-samples-binaries-and-dockerimages">Step 6: Install Samples, Binaries and Docker Images</h2>
 <p>Determine the directory where you want to download the fabric samples. Open the directory in terminal and run the below command.</p>
-<pre><code>curl -sSL http://bit.ly/2ysbOFE | bash -s
-</code></pre><p>It will download the latest production release.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s
+</code></pre></div><p>It will download the latest production release.</p>
 <p>If you want a specific release for ex. v1.4.1, follow the below command.</p>
-<pre><code>curl -sSL http://bit.ly/2ysbOFE | bash -s -- &lt;fabric_version&gt; &lt;fabric-ca_version&gt; &lt;thirdparty_version&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s -- &lt;fabric_version&gt; &lt;fabric-ca_version&gt; &lt;thirdparty_version&gt;
 
 curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
-</code></pre><p>It’ll take some time, once it is finished you can see a new directory <strong>“fabric-samples”.</strong></p>
-<p><strong>“fabric-samples”</strong> come with sample examples to start with Hyperledger Fabric. There are many good examples to play within the fabric samples.</p>
+</code></pre></div><p>It’ll take some time, once it is finished you can see a new directory <strong>fabric-samples</strong>.</p>
+<p><strong>fabric-samples</strong> come with sample examples to start with Hyperledger Fabric. There are many good examples to play within the fabric samples.</p>
 <p><img  src="./asset-3.png"
         alt="fabric-samples"/></p>
-<h4 id="step-7-test-the-fabricnetwork"><strong>Step 7: Test the fabric network</strong></h4>
+<h2 id="step-7-test-the-fabricnetwork">Step 7: Test the fabric network</h2>
 <p>As we have successfully completed the setting up the Fabric environment, let’s test it. To test it we’ll use the <strong>first-network</strong> sample in the fabric-samples.</p>
 <p>Open the <strong>fabric-samples</strong> and go to the <strong>first-network</strong>.</p>
-<pre><code>cd fabric-samples/first-network
-</code></pre><p><img  src="./asset-4.png"
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd fabric-samples/first-network
+</code></pre></div><p><img  src="./asset-4.png"
         alt="first-network"/></p>
 <p>To test it, run the <code>byfn.sh</code> . It is a test script, it first set up the network with 2 organizations <code>org1</code> and <code>org2</code> with 2 <code>peers</code> each and an <code>orderer</code> .</p>
-<pre><code>./byfn.sh up
-</code></pre><p><img  src="./asset-5.png"
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn.sh up
+</code></pre></div><p><img  src="./asset-5.png"
         alt="first-network start"/></p>
 <p>On successful execution, you’ll see the below message.</p>
 <p><img  src="./asset-6.png"
         alt="first-network end"/></p>
 <p>If you reach till this point it means you have successfully set up the fabric network.</p>
 <p>Now, we have completed the testing of <strong>first-network,</strong> clean the network.</p>
-<pre><code>./byfn down
-</code></pre><p>Congratulations, we have completed the Hyperledger Fabric installation in <strong>Linux machine.</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn down
+</code></pre></div><p>Congratulations, we have completed the Hyperledger Fabric installation in <strong>Linux machine.</strong></p>
 <hr>
-<h3 id="windows-installation">Windows Installation</h3>
+<h1 id="windows-installation">Windows Installation</h1>
 <p>For Windows installation, you should be prepared for some obstacles as installation on windows is not easy peasy.</p>
 <p>Let's begin the windows installation.</p>
 <p>I am using Windows 10 Pro for the Fabric v1.4 installation.</p>
-<h4 id="step-1curl"><strong>Step 1: cURL</strong></h4>
+<h2 id="step-1curl">Step 1: cURL</h2>
 <p>Please check if cURL is already installed in your PC.</p>
-<pre><code>curl --help
-</code></pre><p>If you don’t get any error it means cURL is installed in your PC and you can go to the next step. For others please follow the below steps.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --help
+</code></pre></div><p>If you don’t get any error it means cURL is installed in your PC and you can go to the next step. For others please follow the below steps.</p>
 <ul>
 <li>To install cURL, download the package according to your Windows 32/64 bit from this <a href="https://curl.haxx.se/download.html"target="_blank">link</a>. Extract the package and run the <code>curl.exe</code> present in the <code>bin</code> folder.</li>
 <li>Add the <code>curl</code> in the environment variable.</li>
@@ -214,7 +249,7 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
 </ul>
 <p>If you don’t get any error it means you curl is installed successfully.</p>
 <p>Follow this <a href="https://stackoverflow.com/questions/9507353/how-do-i-install-and-use-curl-on-windows"target="_blank">link</a> for troubleshooting.</p>
-<h4 id="step-2-docker-and-dockercompose"><strong>Step 2: Docker and Docker Compose</strong></h4>
+<h2 id="step-2-docker-and-dockercompose">Step 2: Docker and Docker Compose</h2>
 <p>Before installing the docker, check if virtualization is Enabled in your PC or not. To check it, open<code>Task Manager &gt;&gt; Performance Tab &gt;&gt; CPU</code></p>
 <p><img  src="./asset-7.png"
         alt="virtualization"/></p>
@@ -225,61 +260,63 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
 <p>Docker Desktop — Windows 10 Pro, Enterprise — 64 bit</p>
 <p>You first need to have an account in DockerHub to download the docker desktop. Please signup if you don’t have one.</p>
 <p>Download the docker from this <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows"target="_blank">link</a>.</p>
-<p><strong>Note: While installing keep the settings default don’t change anything.</strong></p>
-<p><strong>Test the Installation</strong></p>
+<blockquote>
+<p><strong>Note</strong>: While installing keep the settings default don’t change anything.</p>
+</blockquote>
+<h3 id="test-the-docker-installation-1">Test the Docker Installation</h3>
 <ul>
 <li>Open the cmd window</li>
 <li>Run <code>docker --version</code> and <code>docker-compose --version</code></li>
 </ul>
-<pre><code>docker --version
-Docker version 18.09.2, build 6247962
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker --version
+Docker version 18.09.2, build <span style="color:#ae81ff">6247962</span>
 
 docker-compose --version
 docker-compose version 1.23.2, build 1110ad01
-</code></pre><ul>
+</code></pre></div><ul>
 <li>Pull the <a href="https://hub.docker.com/r/library/hello-world/"target="_blank">hello-world image</a> from Docker Hub and run a container:</li>
 </ul>
-<pre><code>docker run hello-world
-</code></pre><p><img  src="./asset-8.png"
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run hello-world
+</code></pre></div><p><img  src="./asset-8.png"
         alt="docker hello-world"/></p>
 <p>If you get this message then the Docker installed successfully in your machine.</p>
 <p>For more information on Docker check <a href="https://docs.docker.com/docker-for-windows/"target="_blank">the official documentation</a>.</p>
-<h4 id="step-3golang-1"><strong>Step 3: Golang</strong></h4>
+<h2 id="step-3golang-1">Step 3: Golang</h2>
 <p>Download the Golang package from the <a href="https://golang.org/dl/"target="_blank">official site</a>.</p>
 <p>Once it is installed open the <code>command prompt</code> and run</p>
-<pre><code>go version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go version
 
 Output
 go version go1.11.5 windows/amd64
-</code></pre><h4 id="step-4-nodejs-andnpm-1"><strong>Step 4: Nodejs and npm</strong></h4>
+</code></pre></div><h2 id="step-4-nodejs-andnpm-1">Step 4: Nodejs and npm</h2>
 <p>Download the node v8.x from this <a href="https://nodejs.org/dist/latest-v8.x/node-v8.16.0-x64.msi"target="_blank">link</a> and install it.</p>
 <p>Check if it is installed correctly.</p>
-<pre><code>node -v
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node -v
 v8.16.0
 
 npm -v
 6.4.1
-</code></pre><h4 id="step-5-python27"><strong>Step 5: Python 2.7</strong></h4>
+</code></pre></div><h2 id="step-5-python27">Step 5: Python 2.7</h2>
 <p>Download the <code>python 2.7</code> from <a href="https://www.python.org/downloads/windows/"target="_blank">its official site</a>.</p>
 <p>While installing add python to the system Path variable. This allows you to type ‘python’ into a command prompt without needing the full path.</p>
 <p>Change <code>Add python.exe to Path</code> to <code>Will be installed on the local hard drive</code></p>
 <p><img  src="./asset-9.png"
         alt="python-path"/></p>
 <p>Check the <code>python</code> installed correctly or not.</p>
-<pre><code>python --version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">python --version
 Python 2.7.16
-</code></pre><p>The Hyperledger Fabric prerequisites are installed. Now, it is time to install the extra windows dependencies.</p>
-<h4 id="windows-extras"><strong>Windows Extras</strong></h4>
-<p><strong>Step 6: Install windows-build-tools and grpc</strong></p>
+</code></pre></div><p>The Hyperledger Fabric prerequisites are installed. Now, it is time to install the extra windows dependencies.</p>
+<h2 id="windows-extras">Windows Extras</h2>
+<h3 id="install-windows-build-tools-and-grpc">Install windows-build-tools and grpc</h3>
 <p>Install the <code>windows-build-tools</code> globally using <code>npm</code> .</p>
 <p>Open the <code>command prompt</code> and run the below command.</p>
-<pre><code>npm install --global windows-build-tools
-</code></pre><p>It will take some time around 15 minutes or more. Once it will complete you will get the below message.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --global windows-build-tools
+</code></pre></div><p>It will take some time around 15 minutes or more. Once it will complete you will get the below message.</p>
 <p><img  src="./asset-10.png"
         alt="windows-build-tools"/></p>
 <p>Once this is done, you should also install the NPM GRPC module with the following command:</p>
-<pre><code>npm install --global grpc
-</code></pre><p><strong>Step 7: Install git to run the bash commands</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --global grpc
+</code></pre></div><h3 id="install-git-to-run-the-bash-commands">Install git to run the bash commands</h3>
 <p>To run the bash commands we have to install <code>git</code> .</p>
 <blockquote>
 <p>Git is a set of command line utility programs that are designed to execute on a Unix style command-line environment. — <a href="https://www.atlassian.com/git/tutorials/git-bash"target="_blank">atlassian</a></p>
@@ -289,39 +326,39 @@ Python 2.7.16
 </blockquote>
 <p>Download the <code>git</code> from this <a href="https://git-scm.com/"target="_blank">link</a>.</p>
 <p>Hang on, for a while we are done with prerequisites and now we are on the final step to install the Hyperledger Fabric.</p>
-<p><strong>Step 8:</strong> <strong>Install Samples, Binaries and Docker Images</strong></p>
+<h2 id="step-6-install-samples-binaries-and-docker-images">Step 6: Install Samples, Binaries and Docker Images</h2>
 <p>Go to the directory where you want to download the fabric samples.</p>
 <p>Once you’re in the directory open <code>git bash</code> . Right-click and select <code>Git Bash Here</code> .</p>
 <p><img  src="./asset-11.png"
         alt="git bash"/></p>
 <p>Run the below command to install Samples, Binaries and Docker Images</p>
-<pre><code>curl -sSL http://bit.ly/2ysbOFE | bash -s
-</code></pre><p>It will download the latest production release.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s
+</code></pre></div><p>It will download the latest production release.</p>
 <p>If you want a specific release for ex. v1.4.1, follow the below command.</p>
-<pre><code>curl -sSL http://bit.ly/2ysbOFE | bash -s -- &lt;fabric_version&gt; &lt;fabric-ca_version&gt; &lt;thirdparty_version&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s -- &lt;fabric_version&gt; &lt;fabric-ca_version&gt; &lt;thirdparty_version&gt;
 
 curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
-</code></pre><p>It’ll take some time, once it is finished you can see a new directory “fabric-samples”.</p>
+</code></pre></div><p>It’ll take some time, once it is finished you can see a new directory <strong>fabric-samples</strong>.</p>
 <p><img  src="./asset-12.png"
         alt="fabric-samples"/></p>
-<p>“fabric-samples” come with sample examples to start with Hyperledger Fabric. There are many good examples to play within the fabric samples.</p>
-<p><strong>Step 7: Test the fabric network</strong></p>
+<p><strong>fabric-samples</strong> come with sample examples to start with Hyperledger Fabric. There are many good examples to play within the fabric samples.</p>
+<h2 id="step-7-test-the-fabric-network">Step 7: Test the fabric network</h2>
 <p>As we have successfully completed the setting up the Fabric environment, it’s time to test it. We are going to use the <strong>first-network</strong> sample from the fabric-samples.</p>
 <p>Open the <strong>fabric-samples</strong> and go to <strong>first-network</strong>.</p>
-<pre><code>cd fabric-samples/first-network
-</code></pre><p><img  src="./asset-13.png"
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd fabric-samples/first-network
+</code></pre></div><p><img  src="./asset-13.png"
         alt="first-network"/></p>
 <p>To test it, run the <code>byfn.sh</code> . It is a test script, it first setup the network with 2 organizations <code>org1</code> and <code>org2</code> with 2 <code>peers</code> each and an <code>orderer</code> .</p>
-<pre><code>./byfn.sh up
-</code></pre><p><img  src="./asset-14.png"
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn.sh up
+</code></pre></div><p><img  src="./asset-14.png"
         alt="first-network start"/></p>
 <p>On successful execution, you’ll see the below message.</p>
 <p><img  src="./asset-15.png"
         alt="first-network end"/></p>
 <p>If you reach till this point it means you have successfully setup the fabric network.</p>
 <p>Now, we have completed the testing of <strong>first-network,</strong> clean the network.</p>
-<pre><code>./byfn down
-</code></pre><p>Here, we have completed the Hyperledger Fabric installation in the <strong>Windows machine.</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn down
+</code></pre></div><p>Here, we have completed the Hyperledger Fabric installation in the <strong>Windows machine.</strong></p>
 <p>Yes, we successfully installed the Fabric on Windows.</p>
 <p>Hope, you like the article and save you some time.</p>
 <hr>
