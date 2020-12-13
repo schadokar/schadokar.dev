@@ -60,10 +60,6 @@ showTags = true       # /tags/
 # custom navigation items
 
 [[params.nav.custom]]
-title = "Posts"
-url = "/posts"
-
-[[params.nav.custom]]
 title = "To-The-Point"
 url = "/to-the-point"
 
@@ -78,6 +74,10 @@ url = "/ebooks"
 [[params.nav.custom]]
 title = "About"
 url = "/about"
+
+[[params.nav.custom]]
+title = "Resume"
+url = "https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf"
 
 # custom footer navigation items
 
