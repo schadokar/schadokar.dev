@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Mon, 10 Aug 2020 23:19:26 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 15 Dec 2020 10:10:29 +0530</lastBuildDate>
     
         <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>String Split in Golang</title>
+      <link>/to-the-point/string-split-in-golang/</link>
+      <pubDate>Tue, 15 Dec 2020 10:10:29 +0530</pubDate>
+      
+      <guid>/to-the-point/string-split-in-golang/</guid>
+      <description>Golang library has provided the split function in strings package to split the string by a separator and return the slice of substrings.
+Split Syntax func Split(s, sep string) []string Split the string by separator , . Don&#39;t forget the white space.
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;strings&amp;#34; ) func main() { var greeting string = &amp;#34;Namaste, India&amp;#34; // separate string using &amp;#39;, &amp;#39; 	arr := strings.Split(greeting, &amp;#34;, &amp;#34;) fmt.</description>
+      
+    </item>
     
     <item>
       <title>Create a Serverless Application in Golang With AWS</title>
