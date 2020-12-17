@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/conversion/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-12-17T22:58:00+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/string/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/string-split-in-golang/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-12-15T10:10:29+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/article/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/good-practice/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
@@ -38,7 +40,6 @@
     <loc>https://schadokar.dev/posts/how-to-send-email-in-nodejs/</loc><lastmod>2020-07-19T18:16:06+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/nodejs/</loc><lastmod>2020-07-19T18:16:06+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/sendemail/</loc><lastmod>2020-07-19T18:16:06+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/conversion/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2020-07-18T13:33:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/cli/</loc><lastmod>2020-07-18T07:59:08+05:30</lastmod></url><url>

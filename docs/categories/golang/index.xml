@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Tue, 15 Dec 2020 10:10:29 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 17 Dec 2020 22:58:00 +0530</lastBuildDate>
     
         <atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</title>
+      <link>/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</link>
+      <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
+      
+      <guid>/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</guid>
+      <description>Decimal Number System Decimal number system is the standard system for denoting integers and non-integers numbers.
+This is also known as base 10 number system.
+0 1 2 3 4 5 6 7 8 9 Hexadecimal Number System Hexadecimal (mostly used as hex) number system use 16 symbols. It is known as base 16 number system, where 10 symbols are same as decimal and value greater than 9 represent as A=10, B=11, C=12, D=13, E=14, F=15.</description>
+      
+    </item>
     
     <item>
       <title>String Split in Golang</title>
