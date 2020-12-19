@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Thu, 17 Dec 2020 22:58:00 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 19 Dec 2020 15:04:55 +0530</lastBuildDate>
     
         <atom:link href="/to-the-point/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Check if a character is a number in Golang</title>
+      <link>/to-the-point/check-if-a-character-is-a-number-in-golang/</link>
+      <pubDate>Sat, 19 Dec 2020 15:04:55 +0530</pubDate>
+      
+      <guid>/to-the-point/check-if-a-character-is-a-number-in-golang/</guid>
+      <description>Unicode is a computing standard for the consistent encoding symbols.
+All the characters and symbols assigned a code.
+For ex.
+A U+0041 अ U+0905 All the Unicode is divided into various categories. Browse all the categories.
+ Ll Lowercase Letters (a, b, µ, ɸ) Nl Letter Number (Ⅰ, ᛯ) Lo Other Letter (अ, ƻ)  Golang package unicode provides a wide range of validation methods on different set of Unicode.</description>
+      
+    </item>
     
     <item>
       <title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</title>
