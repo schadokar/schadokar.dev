@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Sat, 19 Dec 2020 21:15:35 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 21 Dec 2020 10:38:27 +0530</lastBuildDate>
     
         <atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Check if Key Exists in Map in Golang</title>
+      <link>/to-the-point/check-if-key-exists-in-map-in-golang/</link>
+      <pubDate>Mon, 21 Dec 2020 10:38:27 +0530</pubDate>
+      
+      <guid>/to-the-point/check-if-key-exists-in-map-in-golang/</guid>
+      <description>Map Map is a data structure which implements a hash table.
+Map is a simple key-value storage. Map offers fast lookups, adds and deletes.
+Zero Value Table Map don&#39;t explicitly check if a key is created or not, instead if a key doesn&#39;t exists it returns the default value of value type.
+Data type and their Default Value
+   Type Default Value     Numeric type(int, float) 0   Boolean false   String &amp;quot;&amp;rdquo; (empty string)    For Ex.</description>
+      
+    </item>
     
     <item>
       <title>Golang String Replace</title>
