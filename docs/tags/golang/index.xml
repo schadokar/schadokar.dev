@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Mon, 21 Dec 2020 10:38:27 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 23 Dec 2020 22:45:35 +0530</lastBuildDate>
     
         <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Format Golang Project</title>
+      <link>/to-the-point/how-to-format-golang-project/</link>
+      <pubDate>Wed, 23 Dec 2020 22:45:35 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-format-golang-project/</guid>
+      <description>Golang is a strictly typed language. It tells you hw to write clean code and it takes care of formatting.
+Unlike many languages where formatting style is opinionated, in Golang it is defined by design.
+Formatting Golang CLI command fmt is used to format the file or files.
+Format 1 file Open the terminal in the golang project.
+Run the below command.
+go fmt main.go Format all the files in the folder Use .</description>
+      
+    </item>
     
     <item>
       <title>Check if Key Exists in Map in Golang</title>
