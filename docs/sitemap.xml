@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/casual/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/casual/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/flashback-2020/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-format-golang-project/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/check-if-key-exists-in-map-in-golang/</loc><lastmod>2020-12-21T10:38:27+05:30</lastmod></url><url>
@@ -20,7 +24,6 @@
     <loc>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/good-practice/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/nodejs/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/tips/</loc><lastmod>2020-09-06T11:51:52+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/array/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/</loc><lastmod>2020-09-04T09:29:51+05:30</lastmod></url><url>
