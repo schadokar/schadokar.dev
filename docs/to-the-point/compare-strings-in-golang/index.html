@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Compare Strings in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Compare Strings in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Compare Strings in Golang</h1><p class="article date">Friday, March 27, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/golang-basic.png" alt>
+          </p><p>A string value is a sequence of bytes.</p>
+<h2 id="using-the-comparison-operators">Using the Comparison operators</h2>
+<pre><code>==    equal
+!=    not equal
+&lt;     less
+&lt;=    less or equal
+&gt;     greater
+&gt;=    greater or equal
+</code></pre><p>To check if strings are equal or not, you can use <code>==</code> or <code>!=</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+	<span style="color:#a6e22e">str1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;golang&#34;</span>
+	<span style="color:#a6e22e">str2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;gopher&#34;</span>
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">str1</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">str2</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">str1</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">str2</span>)
+
+}
+</code></pre></div><p>Output</p>
+<pre><code>false
+true
+</code></pre><p><strong>To check the <a href="https://chortle.ccsu.edu/java5/Notes/chap92/ch92_2.html"target="_blank">Lexicographic Order</a> of 2 strings, you can use <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>.</strong></p>
+<blockquote>
+<p><strong>Lexicographic Order:</strong> This is dictionary order, except that all the uppercase letters preceed all the lowercase letters.<br>
+Example: Uppercase <code>A</code> comes first then the lowercase <code>a</code>.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+	<span style="color:#a6e22e">str1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;apple&#34;</span>
+	<span style="color:#a6e22e">str2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;banana&#34;</span>
+	<span style="color:#a6e22e">str3</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Apple&#34;</span>
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s &lt; %s = %v\n&#34;</span>, <span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str2</span>, <span style="color:#a6e22e">str1</span> &lt; <span style="color:#a6e22e">str2</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s &lt;= %s = %v\n&#34;</span>, <span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str2</span>, <span style="color:#a6e22e">str1</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">str2</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s &gt; %s = %v\n&#34;</span>, <span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str2</span>, <span style="color:#a6e22e">str1</span> &gt; <span style="color:#a6e22e">str2</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s &gt;= %s = %v\n&#34;</span>, <span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str2</span>, <span style="color:#a6e22e">str1</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">str2</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s &lt; %s = %v\n&#34;</span>, <span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str3</span>, <span style="color:#a6e22e">str1</span> &lt; <span style="color:#a6e22e">str3</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s &gt; %s = %v\n&#34;</span>, <span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str3</span>, <span style="color:#a6e22e">str1</span> &gt; <span style="color:#a6e22e">str3</span>)
+}
+</code></pre></div><p>Output</p>
+<pre><code>apple &lt; banana = true
+apple &lt;= banana = true
+apple &gt; banana = false
+apple &gt;= banana = false
+apple &lt; Apple = false
+apple &gt; Apple = true
+</code></pre><blockquote>
+<p>Note: In Lexicographic Order, Apple comes before apple. 🍏 != 🍎</p>
+</blockquote>
+<hr>
+<h2 id="using-the-compare-function">Using the Compare function</h2>
+<p>Compare returns an integer comparing two strings lexicographically.
+The result will be</p>
+<pre><code> 0 if a == b
+-1 if a &lt; b
++1 if a &gt; b
+</code></pre><p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Compare</span>(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>))
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Compare</span>(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>))
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Compare</span>(<span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>))
+}
+</code></pre></div><p>Output</p>
+<pre><code>-1
+0
+1
+</code></pre><hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/strings/>strings</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-azure/"><span class="li iconfont icon-article"></span>How to create a Linux VM in Azure?</a></p><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-aws/"><span class="li iconfont icon-article"></span>How to create a Linux VM in AWS?</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

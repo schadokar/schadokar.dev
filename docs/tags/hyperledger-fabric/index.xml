@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>hyperledger-fabric on Shubham Chadokar</title>
+    <link>/tags/hyperledger-fabric/</link>
+    <description>Recent content in hyperledger-fabric on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Sat, 08 Feb 2020 10:02:42 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/hyperledger-fabric/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Store Hyperledger Fabric certificates and keys in CouchDB</title>
+      <link>/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/</link>
+      <pubDate>Sat, 08 Feb 2020 10:02:42 +0530</pubDate>
+      
+      <guid>/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/</guid>
+      <description>Photo by Micah Williams on Unsplash
+Hyperledger Fabric is all about permissions. These permissions are provided in the form of certificates and keys. In broad term, it is known as Identities.
+When an application interacts with the Hyperledger Fabric Network, it uses this identity to authenticate itself. Fabric network validates the identity and authorizes the application to interact.
+In short, identities are very important and if you don&#39;t save them properly, then it may turn into a headache.</description>
+      
+    </item>
+    
+    <item>
+      <title>Are Smart Contract and Chaincode the Same in Hyperledger Fabric</title>
+      <link>/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/</link>
+      <pubDate>Mon, 10 Jun 2019 08:53:55 +0000</pubDate>
+      
+      <guid>/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/</guid>
+      <description>Often Hyperledger Fabric users use the terms smart contract and chaincode interchangeably. Lets first understand what a smart contract is:
+ A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties. These transactions are trackable and irreversible. — Wikipedia
+ Let&#39;s deduce this in simple language — a contract can execute on its own if it satisfies the terms of the contract without any interference from a third party.</description>
+      
+    </item>
+    
+    <item>
+      <title>Hyperledger Fabric Installation Guide!</title>
+      <link>/posts/hyperledger-fabric-installation-guide/</link>
+      <pubDate>Wed, 05 Jun 2019 12:46:01 +0000</pubDate>
+      
+      <guid>/posts/hyperledger-fabric-installation-guide/</guid>
+      <description>When I started learning Hyperledger Fabric, installing it is really a pain in a neck and it turned miserable as I was using Windows.
+The purpose of this article to put all the instructions at one place to set up the Hyperledger Fabric network irrespective of the fact if you’re using Windows or Linux.
+My apologies for macOS readers, instructions for macOS is not included as I don’t have one.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

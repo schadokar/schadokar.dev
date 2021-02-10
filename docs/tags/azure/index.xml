@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>azure on Shubham Chadokar</title>
+    <link>/tags/azure/</link>
+    <description>Recent content in azure on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Fri, 27 Mar 2020 14:56:35 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to create a Linux VM in Azure?</title>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-azure/</link>
+      <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-azure/</guid>
+      <description>Create a new account in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.
+For students, Microsoft also give away many resources and azure credits. You just have to reach to them by their email.
+Login to your azure account.
+Step 1 Search for Ubuntu 16.04 LTS In the search bar, search Ubuntu 16.04 LTS and select create.</description>
+      
+    </item>
+    
+    <item>
+      <title>Deploy Angular application on Azure Web Service</title>
+      <link>/posts/deploy-angular-application-on-azure-web-service/</link>
+      <pubDate>Fri, 23 Nov 2018 11:49:18 +0000</pubDate>
+      
+      <guid>/posts/deploy-angular-application-on-azure-web-service/</guid>
+      <description>Deploying an Angular application on the Azure Web Service can be a pain if you don’t know from where to start.
+This tutorial will consist of the following steps:
+ Create an Azure Web Service Build the Angular application Configure the Web Service and deploy it   Let’s start with creating the Azure Web Service;
+If you don’t have any account, you can sign up for free account and $200 dollars will be credit in your azure account to play with.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create a Serverless Application in Golang With AWS&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Create a Serverless Application in Golang With AWS" /><meta name="twitter:image" content="https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/images/go-serverless-aws.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Create a Serverless Application in Golang With AWS</h1><p class="article date">Monday, August 10, 2020<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="images/go-serverless-aws.png" alt>
+          </p><p>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.</p>
+<p><strong>Table of Content</strong></p>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li><a href="#open-hellomaingo">Open hello/main.go</a></li>
+<li><a href="#open-serverlessyml">Open serverless.yml</a></li>
+</ul>
+</li>
+<li><a href="#build-the-application">Build the application</a>
+<ul>
+<li><a href="#build">Build</a></li>
+</ul>
+</li>
+<li><a href="#deploy">Deploy</a></li>
+<li><a href="#test-the-application">Test the application</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+<li>Serverless Installed</li>
+<li>AWS account</li>
+<li>Connect AWS account to serverless</li>
+</ul>
+<p>All these are covered in detail in <a href="https://schadokar.dev/posts/create-your-first-serverless-application/"target="_blank">the last tutorial</a>.</p>
+<h1 id="getting-started">Getting Started</h1>
+<p>Create a new directory <code>hello-go-serverless</code>.<br>
+Open the terminal inside the project.</p>
+<p>Run the below command to initiate the serverless application using <code>aws-go-mod</code> template.<br>
+This will create a basic scaffolding of the serverless project.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">serverless</span> <span style="color:#a6e22e">create</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">template</span> <span style="color:#a6e22e">aws</span><span style="color:#f92672">-</span><span style="color:#a6e22e">go</span><span style="color:#f92672">-</span><span style="color:#a6e22e">mod</span>
+</code></pre></div><p><img  src="./images/boilerplate.PNG"
+        alt="boilerplate"/></p>
+<p>This template has created 2 application <code>hello</code> and <code>world</code>, and <code>serverless.yml</code> where serverless deployment configuration is defined. It also created a couple of deployment scripts.</p>
+<h3 id="open-hellomaingo">Open hello/main.go</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;bytes&#34;</span>
+    <span style="color:#e6db74">&#34;context&#34;</span>
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+
+    <span style="color:#e6db74">&#34;github.com/aws/aws-lambda-go/events&#34;</span>
+    <span style="color:#e6db74">&#34;github.com/aws/aws-lambda-go/lambda&#34;</span>
+)
+
+<span style="color:#75715e">// Response is of type APIGatewayProxyResponse since we&#39;re leveraging the
+</span><span style="color:#75715e"></span><span style="color:#75715e">// AWS Lambda Proxy Request functionality (default behavior)
+</span><span style="color:#75715e"></span><span style="color:#75715e">//
+</span><span style="color:#75715e"></span><span style="color:#75715e">// https://serverless.com/framework/docs/providers/aws/events/apigateway/#lambda-proxy-integration
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Response</span> <span style="color:#a6e22e">events</span>.<span style="color:#a6e22e">APIGatewayProxyResponse</span>
+
+<span style="color:#75715e">// Handler is our lambda handler invoked by the `lambda.Start` function call
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Handler</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>) (<span style="color:#a6e22e">Response</span>, <span style="color:#66d9ef">error</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">buf</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
+
+    <span style="color:#a6e22e">body</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{
+        <span style="color:#e6db74">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Go Serverless v1.0! Your function executed successfully!&#34;</span>,
+    })
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Response</span>{<span style="color:#a6e22e">StatusCode</span>: <span style="color:#ae81ff">404</span>}, <span style="color:#a6e22e">err</span>
+    }
+    <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">HTMLEscape</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">buf</span>, <span style="color:#a6e22e">body</span>)
+
+    <span style="color:#a6e22e">resp</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Response</span>{
+        <span style="color:#a6e22e">StatusCode</span>:      <span style="color:#ae81ff">200</span>,
+        <span style="color:#a6e22e">IsBase64Encoded</span>: <span style="color:#66d9ef">false</span>,
+        <span style="color:#a6e22e">Body</span>:            <span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">String</span>(),
+        <span style="color:#a6e22e">Headers</span>: <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{
+            <span style="color:#e6db74">&#34;Content-Type&#34;</span>:           <span style="color:#e6db74">&#34;application/json&#34;</span>,
+            <span style="color:#e6db74">&#34;X-MyCompany-Func-Reply&#34;</span>: <span style="color:#e6db74">&#34;hello-handler&#34;</span>,
+        },
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">resp</span>, <span style="color:#66d9ef">nil</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#a6e22e">lambda</span>.<span style="color:#a6e22e">Start</span>(<span style="color:#a6e22e">Handler</span>)
+}
+</code></pre></div><p>This function is creating a JSON object using <code>json.Marshal</code> and then sent as a response.<br>
+The <code>lambda</code> package is initiating the <code>Handler</code> function and <code>events</code> package is used to create aws <code>APIGatewayProxyResponse</code> object.</p>
+<p>This function is exposed as an API using the AWS APIGateway service. These APIs are configured in the <code>serverless.yml</code> file.</p>
+<blockquote>
+<p>Check this to learn more about <a href="https://schadokar.dev/posts/how-to-use-json-in-golang/"target="_blank">JSON in golang</a>.</p>
+</blockquote>
+<h3 id="open-serverlessyml">Open serverless.yml</h3>
+<p>In the provider section, the provider is <code>aws</code>, the runtime is <code>go1.x</code>, by default its region is <code>us-east-1</code> and stage is <code>dev</code>. Using the staging option, you can deploy the project in different environments like dev, prod or test.</p>
+<p>Update the provider section.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">provider:
+  name: aws
+  runtime: go1.x
+  stage: dev
+  region: us-east<span style="color:#ae81ff">-1</span>
+</code></pre></div><blockquote>
+<p>You don't have to if you're okay with the defaults. It is just good practice.</p>
+</blockquote>
+<p>In the package section, it is configuring what to include and exclude in the lambda function deployment.<br>
+It is excluding all the files except <code>bin</code> folder. After building the application, the function binary will save in the <code>bin</code> folder.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">package:
+  exclude:
+    - ./<span style="color:#75715e">**</span>
+  include:
+    - ./bin/<span style="color:#75715e">**</span>
+</code></pre></div><p>In the functions, <code>bin/hello</code> is the entry point of hello function. The function can be triggered using the <code>hello</code> route. After deployment, it will create a new route in the AWS API gateway and link it to the AWS lambda function in which <code>hello</code> function will deploy.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">functions:
+  hello:
+    handler: bin/hello
+    events:
+      - http:
+          path: hello
+          method: get
+</code></pre></div><p><code>world</code> function is the same as <code>hello</code>.</p>
+<blockquote>
+<p>You can use the <code>Makefile</code> for the below steps. It is a deployment script, which will run all the below steps for you.</p>
+</blockquote>
+<h1 id="build-the-application">Build the application</h1>
+<p>Open the terminal in the project and execute the <code>gomod.sh</code> file.</p>
+<p><strong>Windows User</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sh gomod.sh
+</code></pre></div><p><strong>Linux User or other UNIX based OS users</strong>
+First, make it executable and then run it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">chmod u+x gomod.sh
+./gomod.sh
+</code></pre></div><p>This will initiate go modules <code>go.mod</code> in the project and add all the project dependencies in it. It is similar to the <code>package.json</code> in the node.js.</p>
+<h2 id="build">Build</h2>
+<p>Create binaries of <code>hello</code> and <code>world</code> application for <strong>Linux</strong> OS.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">export</span> <span style="color:#a6e22e">GO111MODULE</span>=<span style="color:#a6e22e">on</span>
+<span style="color:#a6e22e">env</span> <span style="color:#a6e22e">GOOS</span>=<span style="color:#a6e22e">linux</span> <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">build</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">ldflags</span>=<span style="color:#e6db74">&#34;-s -w&#34;</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">o</span> <span style="color:#a6e22e">bin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">hello</span> <span style="color:#a6e22e">hello</span><span style="color:#f92672">/</span><span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+<span style="color:#a6e22e">env</span> <span style="color:#a6e22e">GOOS</span>=<span style="color:#a6e22e">linux</span> <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">build</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">ldflags</span>=<span style="color:#e6db74">&#34;-s -w&#34;</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">o</span> <span style="color:#a6e22e">bin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">world</span> <span style="color:#a6e22e">world</span><span style="color:#f92672">/</span><span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+</code></pre></div><p>It will generate binaries of the application and save them in the bin folder.</p>
+<h1 id="deploy">Deploy</h1>
+<p>I am assuming that you have an AWS account and it is connected to the Serverless.<br>
+If you not <a href="https://schadokar.dev/posts/create-your-first-serverless-application/"target="_blank">check this to setup</a>.</p>
+<p>Run the below command to deploy it to the AWS lambda.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">serverless deploy
+</code></pre></div><blockquote>
+<p>You can use <code>sls</code> for <code>serverless</code>. It is a shorthand notation.</p>
+</blockquote>
+<p><img  src="./images/deploy.PNG"
+        alt="deploy"/></p>
+<h1 id="test-the-application">Test the application</h1>
+<p>Copy the endpoint from the deployment output and either try it on a browser or use the curl command to check.</p>
+<pre><code class="language-curl" data-lang="curl">$ curl https://616fr92us4.execute-api.us-east-1.amazonaws.com/dev/hello
+</code></pre><p>Output</p>
+<pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    70  100    70    0     0     63      0  0:00:01  0:00:01 --:--:--    63
+{&quot;message&quot;:&quot;Go Serverless v1.0! Your function executed successfully!&quot;}
+</code></pre><p>World</p>
+<pre><code class="language-curl" data-lang="curl">$ curl https://616fr92us4.execute-api.us-east-1.amazonaws.com/dev/world
+</code></pre><p>Output</p>
+<pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    69  100    69    0     0     76      0 --:--:-- --:--:-- --:--:--    76
+{&quot;message&quot;:&quot;Okay so your other function also executed successfully!&quot;}
+
+</code></pre><h1 id="conclusion">Conclusion</h1>
+<p>Serverless is the perfect companion for the golang. In the upcoming tutorials, we will integrate multiple services in serverless like DB, SNS etc.</p>
+<p>Thanks for reading.</p>
+<blockquote>
+<p>Cover is designed in <a href="https://canva.7eqqol.net/KD6B9"target="_blank">Canva</a></p>
+</blockquote>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/serverless/>Serverless</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/cloud/>cloud</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/how-i-wrote-my-first-book/"><span class="li iconfont icon-article"></span>How I Wrote My First Book</a></p><p><a class="link" href="/posts/create-your-first-serverless-application/"><span class="li iconfont icon-article"></span>Create your first Serverless application</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

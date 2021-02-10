@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ebook on Shubham Chadokar</title>
+    <link>/categories/ebook/</link>
+    <description>Recent content in Ebook on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Tue, 01 Sep 2020 19:58:52 +0530</lastBuildDate>
+    
+        <atom:link href="/categories/ebook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How I Wrote My First Book</title>
+      <link>/posts/how-i-wrote-my-first-book/</link>
+      <pubDate>Tue, 01 Sep 2020 19:58:52 +0530</pubDate>
+      
+      <guid>/posts/how-i-wrote-my-first-book/</guid>
+      <description>Cover by Thought Catalogon UnsplashRecently, I wrote my first eBook. Yes, I finally wrote it. 🎉
+It was on my list for a long time and when it finally completed and I like to share my experience with everyone.
+In this post, I&#39;ll try to document my complete journey of writing the book. From motivation, hurdles, tips to tools everything.
+I wrote the eBook on Hyperledger Composer Blockchain tool. It is completely free and right now only available in PDF format.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

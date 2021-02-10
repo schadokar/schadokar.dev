@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>blockchain on Shubham Chadokar</title>
+    <link>/tags/blockchain/</link>
+    <description>Recent content in blockchain on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Tue, 07 Jan 2020 21:23:34 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create your own Etherscan with React in 5 minutes</title>
+      <link>/posts/create-your-own-etherscan-with-react-in-5-minutes/</link>
+      <pubDate>Tue, 07 Jan 2020 21:23:34 +0530</pubDate>
+      
+      <guid>/posts/create-your-own-etherscan-with-react-in-5-minutes/</guid>
+      <description>Photo by Radek Grzybowski on Unsplash In this tutorial, we&#39;ll create a simple single-page etherscan in reactjs. For the clean UI, we are going to use the amazing semantic-ui-react which is the official react integration for semantic-ui.
+ You can find the complete code in the github.
+ Without wasting any time let&#39;s build it.
+ Prerequisite   nodejs
+  Code editor &amp;ndash; (I am using VS Code)</description>
+      
+    </item>
+    
+    <item>
+      <title>Catalyst Network: The first step towards Decentralized Internet</title>
+      <link>/posts/catalyst-network-the-first-step-towards-decentralized-internet/</link>
+      <pubDate>Tue, 17 Sep 2019 11:49:11 +0000</pubDate>
+      
+      <guid>/posts/catalyst-network-the-first-step-towards-decentralized-internet/</guid>
+      <description>What is decentralized internet? Why we need the decentralized Internet?
+Photo by Markus Spiske on I know these questions are obvious once you read the title.
+First, understand the current situation of the internet and then we’ll explore the possibilities of the Catalyst Network.
+What is the current situation of the Internet? A global network connecting millions of computers is the Internet. The Internet is decentralized by design. But today’s situation is far from this.</description>
+      
+    </item>
+    
+    <item>
+      <title>Are Smart Contract and Chaincode the Same in Hyperledger Fabric</title>
+      <link>/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/</link>
+      <pubDate>Mon, 10 Jun 2019 08:53:55 +0000</pubDate>
+      
+      <guid>/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/</guid>
+      <description>Often Hyperledger Fabric users use the terms smart contract and chaincode interchangeably. Lets first understand what a smart contract is:
+ A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties. These transactions are trackable and irreversible. — Wikipedia
+ Let&#39;s deduce this in simple language — a contract can execute on its own if it satisfies the terms of the contract without any interference from a third party.</description>
+      
+    </item>
+    
+    <item>
+      <title>Hyperledger Fabric Installation Guide!</title>
+      <link>/posts/hyperledger-fabric-installation-guide/</link>
+      <pubDate>Wed, 05 Jun 2019 12:46:01 +0000</pubDate>
+      
+      <guid>/posts/hyperledger-fabric-installation-guide/</guid>
+      <description>When I started learning Hyperledger Fabric, installing it is really a pain in a neck and it turned miserable as I was using Windows.
+The purpose of this article to put all the instructions at one place to set up the Hyperledger Fabric network irrespective of the fact if you’re using Windows or Linux.
+My apologies for macOS readers, instructions for macOS is not included as I don’t have one.</description>
+      
+    </item>
+    
+    <item>
+      <title>Create an Ethereum Dapp with React and Docker</title>
+      <link>/posts/create-an-ethereum-dapp-with-react-and-docker/</link>
+      <pubDate>Sun, 14 Apr 2019 12:48:24 +0000</pubDate>
+      
+      <guid>/posts/create-an-ethereum-dapp-with-react-and-docker/</guid>
+      <description>In this tutorial, we’ll create an Ethereum Dapp and will run its different components in a separate docker container.
+You can clone the project using this GitHub link.
+Thanks to the people who’s article and courses helped a lot:
+Brandon Morelli For HTML and CSS ( Build a Weather Website )
+Stephen Grider For Ethereum and Docker course on Udemy.
+ Before beginning lets understand what we’re going to build and how the structure of our Dapp will look like.</description>
+      
+    </item>
+    
+    <item>
+      <title>Run the Ganache Cli Inside the Docker Container</title>
+      <link>/posts/run-the-ganache-cli-inside-the-docker-container/</link>
+      <pubDate>Mon, 01 Apr 2019 10:03:57 +0530</pubDate>
+      
+      <guid>/posts/run-the-ganache-cli-inside-the-docker-container/</guid>
+      <description>In this article, we’ll run the ganache-cli inside the docker container and then we will connect it to the Metamask and transfer some Ether from one account to another.
+Prerequisites:
+ Docker installed in your machine. Please check out this link and install which fits with your OS. The Metamask plugin installed to your browser. Please check out this link and follow the instructions to install it.  Lets first create the project directory by name docker-ganache.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

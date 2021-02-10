@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</h1><p class="article date">Thursday, December 17, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/golang-basic.png" alt>
+          </p><h2 id="decimal-number-system">Decimal Number System</h2>
+<p>Decimal number system is the standard system for denoting integers and non-integers numbers.<br>
+This is also known as <strong>base 10</strong> number system.</p>
+<pre><code>0 1 2 3 4 5 6 7 8 9
+</code></pre><h2 id="hexadecimal-number-system">Hexadecimal Number System</h2>
+<p>Hexadecimal (mostly used as <strong>hex</strong>) number system use 16 symbols. It is known as <strong>base 16</strong> number system, where 10 symbols are same as decimal and value greater than 9 represent as A=10, B=11, C=12, D=13, E=14, F=15.</p>
+<pre><code>0 1 2 3 4 5 6 7 8 9 A B C D E F
+</code></pre><h2 id="convert-hexadecimal-to-decimal">Convert Hexadecimal to Decimal</h2>
+<p>Golang package <code>strconv</code> provides <code>ParseInt</code> and <code>ParseUint</code> to convert the string to the number in the respective base.
+Hexadecimal numbers are commonly use <code>0x</code> or <code>0X</code> in front of the number. It is only to avoid confusion.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ParseInt</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">base</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">bitSize</span> <span style="color:#66d9ef">int</span>) (<span style="color:#a6e22e">i</span> <span style="color:#66d9ef">int64</span>, <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;strconv&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">hexa</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;F1&#34;</span>
+
+	<span style="color:#a6e22e">decimal</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseInt</span>(<span style="color:#a6e22e">hexa</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">32</span>)
+
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+	}
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Hexadecimal %s (base16) = Decimal %v (base10)&#34;</span>, <span style="color:#a6e22e">hexa</span>, <span style="color:#a6e22e">decimal</span>)
+}
+</code></pre></div><p><strong>Output</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">Hexadecimal</span> <span style="color:#a6e22e">F1</span> (<span style="color:#a6e22e">base16</span>) = <span style="color:#a6e22e">Decimal</span> <span style="color:#ae81ff">241</span> (<span style="color:#a6e22e">base10</span>)
+</code></pre></div><blockquote>
+<p>The <code>ParseUint</code> is same as <code>ParseInt</code> but it takes only unsigned integers.
+To remove the <code>0x</code> or <code>0X</code> from the hex number, you can use slices.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">hexa</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;0xfc&#34;</span>
+<span style="color:#a6e22e">hexa</span> = <span style="color:#a6e22e">hexa</span>[<span style="color:#ae81ff">2</span>:]
+</code></pre></div><h2 id="convert-decimal-to-hexadecimal">Convert Decimal to Hexadecimal</h2>
+<p>The same <code>strconv</code> package provides <code>FormatInt</code> and <code>FormatUint</code> to convert the decimal number to a respective base number.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;strconv&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">decimal</span> <span style="color:#66d9ef">int64</span> = <span style="color:#ae81ff">252</span>
+
+	<span style="color:#a6e22e">hexa</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">FormatInt</span>(<span style="color:#a6e22e">decimal</span>, <span style="color:#ae81ff">16</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Decimal %v (base10) = Hexadecimal %s (base16)&#34;</span>, <span style="color:#a6e22e">decimal</span>, <span style="color:#a6e22e">hexa</span>)
+}
+</code></pre></div><blockquote>
+<p>The <code>FormatUint</code> is same as <code>FormatInt</code> but it takes only unsigned integers.</p>
+</blockquote>
+<hr>
+<p>For negative numbers use <code>-</code> minus sign.</p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2020/>2020</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="tag" href=/tags/conversion/>conversion</a><a class="tag" href=/tags/golang/>golang</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/check-if-a-character-is-a-number-in-golang/"><span class="li iconfont icon-article"></span>Check if a character is a number in Golang</a></p><p><a class="link" href="/to-the-point/string-split-in-golang/"><span class="li iconfont icon-article"></span>String Split in Golang</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

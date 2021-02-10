@@ -1,0 +1,105 @@
+baseurl = "https://schadokar.dev"
+languageCode = "en"
+title = "Shubham Chadokar"
+theme = "hugo-notepadium"
+copyright = "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2020"
+# disqusShortname = "schadokar"
+googleAnalytics = "UA-158088106-1"
+
+enableInlineShortcodes= true
+
+# Number of posts per page
+Paginate = 15
+enableRobotsTXT = true
+enableEmoji=true
+
+# content management
+[permalinks]
+    enable = true
+    posts = "/posts/:title/"
+    to-the-point = "/to-the-point/:title/"
+
+[params]
+style = "light"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+# logo = "/images/pic.png"
+dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
+readingTime = true
+# slogan = "The Unknown Monk"
+
+[params.profile]
+  enable = false
+  avatar = "/images/pic.png"
+  name = "Shubham Chadokar"
+  bio = "Software Engineer"  # support markdown syntax
+  twitter = "schadokar1"  # https://twitter.com/XXX
+  github = "schadokar"  # https://github.com/XXX
+  # docker = "XXX"  # https://hub.docker.com/u/XXX
+  email = "hello@schadokar.dev"  # mailto:XXX@mail.com
+
+[params.comments]
+enable = true
+
+[params.math]
+enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+use = "katex"  # option: "katex", "mathjax". default: "katex"
+
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "xcode"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
+
+[params.share]
+enable = false
+addThisId = "ra-1234567890"
+inlineToolId = "asd"
+
+[params.footer]
+showCategories = true       # /categories/
+showTags = true       # /tags/
+
+# custom navigation items
+
+[[params.nav.custom]]
+title = "To-The-Point"
+url = "/to-the-point"
+
+[[params.nav.custom]]
+title = "Projects"
+url = "/projects"
+
+[[params.nav.custom]]
+title = "Ebook"
+url = "/ebooks"
+
+[[params.nav.custom]]
+title = "About"
+url = "/about"
+
+[[params.nav.custom]]
+title = "Resume"
+url = "https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf"
+
+# custom footer navigation items
+
+[[params.footer.custom]]
+title = "Newsletter"
+url = "/newsletter"
+
+[[params.footer.custom]]
+title = "Contact"
+url = "/contact"
+
+[[menu.social]]
+    name = "GitHub"
+    url = "https://github.com/schadokar"
+    pre = "<i class='fab fa-github'></i>"
+
+[[menu.social]]
+    name = "Medium"
+    url = "https://medium.com/@schadokar"
+    pre = "<i class='fab fa-medium'></i>"
+
+[[menu.social]]
+    name = "Twitter"
+    url = "https://twitter.com/schadokar1"
+    pre = "<i class='fab fa-twitter'></i>"

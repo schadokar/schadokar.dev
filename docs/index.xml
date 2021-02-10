@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Shubham Chadokar</title>
+    <link>/</link>
+    <description>Recent content on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Fri, 01 Jan 2021 12:41:41 +0530</lastBuildDate>
+    
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Posts</title>
+      <link>/posts/</link>
+      <pubDate>Fri, 01 Jan 2021 12:41:41 +0530</pubDate>
+      
+      <guid>/posts/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>To-the-points</title>
+      <link>/to-the-point/</link>
+      <pubDate>Wed, 23 Dec 2020 22:45:35 +0530</pubDate>
+      
+      <guid>/to-the-point/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>🚀 Projects   ✏ schadokar.dev
+Personal Website for my articles and tutorials.
+  💻 My Calc
+my-calc cli built in golang using cobra library. It do the basic addition operation.
+  📝 Go To Do App
+This is a to-do list application. It&#39;s server is created in Golang, db is mongodb and client is in React.
+  🐋 Redis Go Server
+A prebuild golang server to work with redis db.</description>
+      
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link></link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ebooks</title>
+      <link>/ebooks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ebooks/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>💭 About Me</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>🚀 Hi there, I am Shubham Kumar Chadokar.
+I am a Software Engineer 👓.
+I love to write articles and tutorials on Blockchain, Golang, Nodejs and Reactjs. My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, Reactjs, Docker, Kubernetes.
+I love to do photography 📷 in my me time.
+I like philosophical and mythological novels 📚. My favourites are Meluha and The Kite Runner.
+Talks 2020  Build a CLI in golang with Cobra @ Pune Gophers - Presentation July London Gophers @ London Gophers - Presentation   Please subscribe to my Newsletter for new articles.</description>
+      
+    </item>
+    
+    <item>
+      <title>📮 Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description>If you have any questions or any queries, you can disturb me using below tricks. 😈 💣 💥
+ Email: hello@schadokar.dev Github: schadokar Twitter: schadokar1 Medium: @schadokar  </description>
+      
+    </item>
+    
+    <item>
+      <title>📰 Newsletter</title>
+      <link>/newsletter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/newsletter/</guid>
+      <description>Subscribe to my newsletter get the latest article and tutorial right into your inbox. You will only get one mail a month or max twice. 😄</description>
+      
+    </item>
+    
+  </channel>
+</rss>

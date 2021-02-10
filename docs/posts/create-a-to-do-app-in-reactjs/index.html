@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script><title>Create a To Do App in Reactjs with Github Pages&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.d6952daf9b9e1416674c325169c3a71ceb436c5f824d6ee2013146d3b7206ca6152d067fa14aadb42755d718bc2fdd29.css" integrity="sha384-1pUtr5ueFBZnTDJRacOnHOtDbF&#43;CTW7iATFG07cgbKYVLQZ/oUqttCdV1xi8L90p"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Create a To Do App in Reactjs with Github Pages" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/posts">Posts</a><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Create a To Do App in Reactjs with Github Pages</h1><p class="article date">Tuesday, April 14, 2020<span class="reading-time"> • 9 minutes to read</span></p></section><article class="article markdown-body"><p><img  src="./images/cover.png"
+        alt="cover"/></p>
+<p>In this tutorial, we will create a to-do list app in reactjs. We will use browser local storage to save the tasks, which will keep the tasks even after we close the browser. In the end, we will host this application on Github pages.</p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<ol>
+<li><a href="https://nodejs.org/en/"target="_blank">Nodejs</a></li>
+<li>Code editor (I am using VS Code)</li>
+<li>Github Account</li>
+</ol>
+<hr>
+<h2 id="react-application">React Application</h2>
+<p>We are going to use <code>create-react-app</code> as our base application.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npx create-react-app my-task-list
+cd my-task-list
+</code></pre></div><blockquote>
+<p>If you've previously installed <code>create-react-app</code> globally via <code>npm install -g create-react-app</code>, we recommend you uninstall the package using <code>npm uninstall -g create-react-app</code> to ensure that <code>npx</code> always uses the latest version.</p>
+</blockquote>
+<h3 id="install-semantic-ui-react">Install semantic-ui-react</h3>
+<p>For this project, we are using <code>semantic-ui</code> css. Using the only css is a bit headache where you have to configure each element in the web page. To make this quick and less hassle, we have <code>semantic-ui-react</code> library. Semantic UI React provides the react component which has already configured semantic-ui css. In short, you don't have to align a component or adjust the margin.</p>
+<blockquote>
+<p><a href="https://react.semantic-ui.com/"target="_blank">Semantic UI React</a> is the official React integration for Semantic UI.</p>
+</blockquote>
+<p>Open the terminal inside the <code>my-task-list</code> project and run the below command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install semantic-ui-react
+</code></pre></div><h3 id="indexhtml">index.html</h3>
+<p>Open the <code>index.html</code> from the public folder and update the title.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">title</span>&gt;My task list&lt;/<span style="color:#f92672">title</span>&gt;
+</code></pre></div><p>We also have to add the cdn of <code>semantic-ui</code> here. Paste the cdn in the <code>head</code> tag.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">link</span>
+      <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>
+      <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>
+    /&gt;
+</code></pre></div><p>You should always use the latest cdn. You can check the latest version <a href="https://react.semantic-ui.com/usage#theme"target="_blank">here</a>.</p>
+<h2 id="my-task-list-component">My-Task-List component</h2>
+<p>Create a new folder <code>component</code> inside the <code>src</code>. Inside the <code>component</code>, create a new folder <code>My-Task-List</code>. Create 3 files inside it, <code>My-Task-List.jsx</code>, <code>my-task-list.css</code> and <code>index.js</code>.</p>
+<h4 id="directory-structure">Directory Structure</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">|- src
+    |- component
+        |- My-Task-List
+            |- My-Task-List.jsx
+            |- my-task-list.css
+            |- index.js
+</code></pre></div><h3 id="my-task-listjsx">My-Task-List.jsx</h3>
+<p>In this file, we are going to define our my-task-list component.
+For storage, we are using the browser's local storage.</p>
+<h4 id="browser-local-storage">Browser Local Storage</h4>
+<p>This local storage stores a key-value pair. The key and value both are strings.
+While saving we have to convert the object into a string and while working on it we have to convert the string into an object.</p>
+<p>To access the local storage we will use the <code>localStorage</code> object.
+<code>localStorage</code> has given to 2 methods to set and get the item.</p>
+<ul>
+<li><strong>setItem</strong>: To save the <code>key-value</code> in the local storage.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>);
+</code></pre></div><ul>
+<li><strong>getItem</strong>: Get the <code>value</code> by its <code>key</code> from the local storage.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">key</span>)
+</code></pre></div><p>Open the <code>My-Task-List.jsx</code> paste the below code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Card</span>, <span style="color:#a6e22e">Header</span>, <span style="color:#a6e22e">Form</span>, <span style="color:#a6e22e">Input</span>, <span style="color:#a6e22e">Icon</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;semantic-ui-react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./my-task-list.css&#34;</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTaskList</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">task</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+      <span style="color:#a6e22e">tasklist</span><span style="color:#f92672">:</span> []
+    };
+  }
+
+  <span style="color:#75715e">// on load get the task list
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">componentDidMount</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+  };
+
+  <span style="color:#a6e22e">onChange</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span> =&gt; {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+      [<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">name</span>]<span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>
+    });
+  };
+
+  <span style="color:#75715e">// add task to the list
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">onSubmit</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#75715e">// check is task is empty string
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">task</span>) {
+      <span style="color:#75715e">// get the task list from the local storage
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
+
+      <span style="color:#75715e">// task list is null means empty
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">// create an empty list
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+        <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> [];
+      }
+
+      <span style="color:#75715e">// create task object
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">// default status is false
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">task</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">📄 </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>,
+        <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+      };
+
+      <span style="color:#75715e">// add the task to the task list
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">tasklist</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">task</span>);
+
+      <span style="color:#75715e">// save the task list in the local storage
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
+
+      <span style="color:#75715e">// clear the form
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({ <span style="color:#a6e22e">task</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span> });
+
+      <span style="color:#75715e">// refresh the tasks
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+    }
+  };
+
+  <span style="color:#75715e">// get all the tasks
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">getTasks</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#75715e">// get the task list from the local storage
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
+
+    <span style="color:#75715e">// check if task list is empty
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">tasklist</span>) {
+      <span style="color:#75715e">// sort all the tasks on the basis of status
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">// completed task will move down
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tasklist</span>.<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">status</span>) {
+          <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">status</span>) {
+          <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+        }
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+      });
+
+      <span style="color:#75715e">// save the task list in the local storage
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
+
+      <span style="color:#75715e">// set the tasklist to the state
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+        <span style="color:#75715e">// default color
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// Incomplete: yellow
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// complete: green
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">tasklist</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tasklist</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;yellow&#34;</span>;
+          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cardBackground</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;white&#34;</span> };
+          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">taskComplete</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">textDecoration</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;none&#34;</span> };
+
+          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">status</span>) {
+            <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;green&#34;</span>;
+            <span style="color:#a6e22e">cardBackground</span>.<span style="color:#a6e22e">background</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;beige&#34;</span>;
+            <span style="color:#a6e22e">taskComplete</span>[<span style="color:#e6db74">&#34;textDecoration&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;line-through&#34;</span>;
+          }
+          <span style="color:#66d9ef">return</span> (
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">index</span>} <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">color</span>} <span style="color:#a6e22e">fluid</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">cardBackground</span>}<span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Content</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">taskComplete</span>}<span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">wordWrap</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;break-word&#34;</span> }}<span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">task</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Meta</span> <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;right&#34;</span><span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span>
+                    <span style="color:#a6e22e">link</span>
+                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;check circle&#34;</span>
+                    <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span>
+                    <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{() =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">updateTask</span>(<span style="color:#a6e22e">index</span>)}
+                  <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">paddingRight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span> }}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Done</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span>
+                    <span style="color:#a6e22e">link</span>
+                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;undo&#34;</span>
+                    <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yellow&#34;</span>
+                    <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{() =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">undoTask</span>(<span style="color:#a6e22e">index</span>)}
+                  <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">paddingRight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span> }}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Undo</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span>
+                    <span style="color:#a6e22e">link</span>
+                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;delete&#34;</span>
+                    <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>
+                    <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{() =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">deleteTask</span>(<span style="color:#a6e22e">index</span>)}
+                  <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
+                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">paddingRight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span> }}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Delete</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">M</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          );
+        })
+      });
+    }
+  };
+
+  <span style="color:#75715e">// update the task status to true
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">updateTask</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span> =&gt; {
+    <span style="color:#75715e">// get the task list from the local storage
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
+    <span style="color:#75715e">// change status to true
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">tasklist</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">status</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+    <span style="color:#75715e">// save the updated task list
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
+    <span style="color:#75715e">// refresh the task list
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+  };
+
+  <span style="color:#75715e">// undone the task status from true to false
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">undoTask</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span> =&gt; {
+    <span style="color:#75715e">// get the task list from the local storage
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
+    <span style="color:#75715e">// change status to false
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">tasklist</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">status</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+    <span style="color:#75715e">// save the updated task list
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
+    <span style="color:#75715e">// refresh the task list
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+  };
+
+  <span style="color:#75715e">// delete the task from the task list
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">deleteTask</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span> =&gt; {
+    <span style="color:#75715e">// get the task list from the local storage
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
+    <span style="color:#75715e">// remove the task from the task list
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">tasklist</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>, <span style="color:#ae81ff">1</span>);
+    <span style="color:#75715e">// save the updated task list
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
+    <span style="color:#75715e">// refresh the task list
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+  };
+
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> (
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">as</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;h1&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app-header&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#960050;background-color:#1e0010">📝</span> <span style="color:#a6e22e">My</span> <span style="color:#a6e22e">Task</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010">}</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app-form&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Form</span> <span style="color:#a6e22e">onSubmit</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onSubmit</span>}<span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Input</span>
+              <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span>
+              <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task&#34;</span>
+              <span style="color:#a6e22e">onChange</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onChange</span>}
+              <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">task</span>}
+              <span style="color:#a6e22e">fluid</span>
+              <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task...&#34;</span>
+            <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">F</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Group</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">tasklist</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    );
+  }
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">MyTaskList</span>;
+
+</code></pre></div><p>The key to the tasks is <code>tasklist</code>.</p>
+<p>A quick explanation of the code.</p>
+<ul>
+<li>For view we are using <a href="https://react.semantic-ui.com/views/card/"target="_blank">Card</a>, <a href="https://react.semantic-ui.com/elements/header/"target="_blank">Header</a>, <a href="https://react.semantic-ui.com/collections/form/"target="_blank">Form</a>, <a href="https://react.semantic-ui.com/elements/input/"target="_blank">Input</a>, <a href="https://react.semantic-ui.com/elements/input/"target="_blank">Icon</a> react components from the <code>semantic-ui-react</code>. Go to the links to learn more.</li>
+<li><strong>getTasks</strong>: This function will get the tasks from the local storage and create the task list using Card component. Each task has 3 actions, <strong>Done</strong>, <strong>Undo</strong>, and <strong>Delete</strong>.</li>
+<li><strong>onSubmit</strong>: This function will save the task in the local storage.</li>
+<li><strong>updateTask</strong>: This function will turn the task status to <strong>true</strong> in the local storage. It means the task is complete. This function will trigger on click of <code>Done</code>.</li>
+<li><strong>undoTask</strong>: This function will turn the task status to <strong>false</strong> in the local storage. It means the task is incomplete. This function will trigger on click of <code>Undo</code>.</li>
+<li><strong>deleteTask</strong>: This function will delete/remove the task from the local storage. This function will trigger on click of <code>Delete</code>.</li>
+</ul>
+<h3 id="my-task-listcss">my-task-list.css</h3>
+<p>Open the <code>my-task-list.css</code> and paste the below code. Even though we are using the <code>semantic-ui</code> css, we can still make the custom changes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">app-header</span> {
+  <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+}
+
+.<span style="color:#a6e22e">app-form</span> {
+  <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><h3 id="indexjs">index.js</h3>
+<p>This <code>index.js</code> will export the <code>MyTaskList</code> component.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MyTaskList</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./My-Task-List&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">MyTaskList</span>;
+</code></pre></div><p>The <code>MyTaskList</code> component is complete. Let's render it in <code>App.js</code>.</p>
+<hr>
+<h3 id="appjs">App.js</h3>
+<p>Open the <code>App.js</code> and update the code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./App.css&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MyTaskList</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./components/My-Task-List&#34;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+  <span style="color:#66d9ef">return</span> (
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyTaskList</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">M</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+  );
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</code></pre></div><h3 id="appcss">App.css</h3>
+<p>Update the <code>App.css</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span> {
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">90</span><span style="color:#66d9ef">%</span>;
+  <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><hr>
+<h2 id="playtime-">Playtime 🎮</h2>
+<p>Open the terminal in the project directory and start the application.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm run start
+</code></pre></div><p>Open the browser and go to <code>http://localhost:3000/</code>.</p>
+<p><img  src="./images/front-page.PNG"
+        alt="Frontpage"/></p>
+<h3 id="create-multiple-tasks-">Create multiple tasks ✏️</h3>
+<ul>
+<li>learn reactjs</li>
+<li>learn golang</li>
+<li>one tutorial a day</li>
+</ul>
+<p><img  src="./images/create-task.PNG"
+        alt="Create-task"/></p>
+<h4 id="check-the-local-storage">Check the local storage</h4>
+<p>On the Chrome Browser:</p>
+<ol>
+<li>Open Inspect. <code>Ctrl + Shift + I</code></li>
+<li>Click on <strong>Application</strong> tab</li>
+<li>On the left side, under the <strong>Storage</strong> section, click on <strong>Local Storage &gt; http://localhost:3000</strong></li>
+</ol>
+<p>All the tasks are saved.</p>
+<p><img  src="./images/local-storage.PNG"
+        alt="Local-storage"/></p>
+<h3 id="complete-a-task-">Complete a task ✔️</h3>
+<p>Click on <code>Done</code> Icon of any task. The completed task will move down.</p>
+<p>In the local storage, you can notice that task status is changed.</p>
+<p><img  src="./images/done-task.PNG"
+        alt="Done"/></p>
+<h3 id="undo-a-task-">Undo a task ↩️</h3>
+<p>Click on <code>Undo</code> Icon of the done task.</p>
+<p><img  src="./images/create-task.PNG"
+        alt="undo-task"/></p>
+<h3 id="delete-a-task-">Delete a task ❌</h3>
+<p>Click on <code>Delete</code> Icon of any task. The task will delete/remove from the task list.</p>
+<p><img  src="./images/delete-task.PNG"
+        alt="delete-task"/></p>
+<h3 id="mobile-view">Mobile View</h3>
+<p>The application is responsive. So, you can use it on mobile.</p>
+<p><img  src="./images/mobile-view.PNG"
+        alt="mobile-view"/></p>
+<hr>
+<h2 id="host-the-application-on-the-github-pages">Host the application on the Github Pages</h2>
+<p>Github Pages is a static site hosting service. You can host your site on GitHub's <code>github.io</code> domain or your custom domain. <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages"target="_blank">Learn more</a>.</p>
+<h3 id="add-github-repository-to-the-project">Add GitHub repository to the project</h3>
+<p>Log in to your GitHub account.</p>
+<p>Create a new repository <code>my-task-list</code>.</p>
+<blockquote>
+<p>Don't initiate anything like readme or license. Create an empty repository, because we will push the existing project.</p>
+</blockquote>
+<p>Open the terminal in the project directory and run the below command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git remote add origin &lt;Repository URL&gt;
+
+// For Example:
+git remote add origin https://github.com/schadokar/my-task-list.git
+</code></pre></div><h4 id="install-the-github-package-as-dev-dependency">Install the Github Package as dev-dependency</h4>
+<p>Open the terminal in the project.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install gh-pages --save-dev
+</code></pre></div><h4 id="update-the-packagejson">Update the package.json</h4>
+<p>Open the <code>package.json</code> and update it.</p>
+<ul>
+<li><strong>Add the homepage</strong>: Add the URL where your application is going to host.</li>
+</ul>
+<p>Github Host your site on <code>https://&lt;YourUserName&gt;.github.io/&lt;Repo-Name&gt;</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;homepage&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;https://&lt;YourUserName&gt;.github.io/my-task-list&#34;</span>
+
+<span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span>
+<span style="color:#e6db74">&#34;homepage&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;https://schadokar.github.io/my-task-list&#34;</span>
+</code></pre></div><ul>
+<li><strong>Add deploy and predeploy scripts</strong>: In the <code>scripts</code> add <code>deploy</code> and <code>predeploy</code> scripts.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;predeploy&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;npm run build&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+<span style="color:#e6db74">&#34;deploy&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;gh-pages -d build&#34;</span>
+</code></pre></div><p>The <code>package.json</code> will look like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;homepage&#34;</span>: <span style="color:#e6db74">&#34;https://schadokar.github.io/my-task-list&#34;</span>,
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;my-task-list&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.1.0&#34;</span>,
+  <span style="color:#f92672">&#34;private&#34;</span>: <span style="color:#66d9ef">true</span>,
+  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+    <span style="color:#f92672">&#34;@testing-library/jest-dom&#34;</span>: <span style="color:#e6db74">&#34;^4.2.4&#34;</span>,
+    <span style="color:#f92672">&#34;@testing-library/react&#34;</span>: <span style="color:#e6db74">&#34;^9.4.1&#34;</span>,
+    <span style="color:#f92672">&#34;@testing-library/user-event&#34;</span>: <span style="color:#e6db74">&#34;^7.2.1&#34;</span>,
+    <span style="color:#f92672">&#34;react&#34;</span>: <span style="color:#e6db74">&#34;^16.13.0&#34;</span>,
+    <span style="color:#f92672">&#34;react-dom&#34;</span>: <span style="color:#e6db74">&#34;^16.13.0&#34;</span>,
+    <span style="color:#f92672">&#34;react-scripts&#34;</span>: <span style="color:#e6db74">&#34;3.4.0&#34;</span>
+  },
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;predeploy&#34;</span>: <span style="color:#e6db74">&#34;npm run build&#34;</span>,
+    <span style="color:#f92672">&#34;deploy&#34;</span>: <span style="color:#e6db74">&#34;gh-pages -d build&#34;</span>,
+    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;react-scripts start&#34;</span>,
+    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;react-scripts build&#34;</span>,
+    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;react-scripts test&#34;</span>,
+    <span style="color:#f92672">&#34;eject&#34;</span>: <span style="color:#e6db74">&#34;react-scripts eject&#34;</span>
+  },
+  <span style="color:#f92672">&#34;eslintConfig&#34;</span>: {
+    <span style="color:#f92672">&#34;extends&#34;</span>: <span style="color:#e6db74">&#34;react-app&#34;</span>
+  },
+  <span style="color:#f92672">&#34;browserslist&#34;</span>: {
+    <span style="color:#f92672">&#34;production&#34;</span>: [
+      <span style="color:#e6db74">&#34;&gt;0.2%&#34;</span>,
+      <span style="color:#e6db74">&#34;not dead&#34;</span>,
+      <span style="color:#e6db74">&#34;not op_mini all&#34;</span>
+    ],
+    <span style="color:#f92672">&#34;development&#34;</span>: [
+      <span style="color:#e6db74">&#34;last 1 chrome version&#34;</span>,
+      <span style="color:#e6db74">&#34;last 1 firefox version&#34;</span>,
+      <span style="color:#e6db74">&#34;last 1 safari version&#34;</span>
+    ]
+  },
+  <span style="color:#f92672">&#34;devDependencies&#34;</span>: {
+    <span style="color:#f92672">&#34;gh-pages&#34;</span>: <span style="color:#e6db74">&#34;^2.2.0&#34;</span>
+  }
+}
+</code></pre></div><h4 id="run-the-deploy">Run the deploy</h4>
+<p>It will create a new branch on <code>gh-pages</code> and push it to the repository. By default, GitHub uses <code>gh-pages</code> branch to host.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm run deploy
+</code></pre></div><h3 id="commit-the-changes-">Commit the changes 🔐</h3>
+<p>Open the terminal in the project. Add, Commit and push the project to the github repository.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git add .
+
+git commit -m <span style="color:#e6db74">&#34;My task list project completed&#34;</span>
+
+git push origin master
+</code></pre></div><h3 id="hosting">Hosting</h3>
+<p>Now, go to your GitHub <code>my-task-list</code> repository.</p>
+<p>Click on <code>Settings</code> and scroll down to <code>Github Pages</code>.</p>
+<p>In the <code>Source</code>, check if it is using <code>gh-pages branch</code>.
+If it is not using it, change it to <code>gh-pages</code> branch.</p>
+<p>Now, on Github Pages section you can see a success message.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> Your site is published at https://&lt;YourUserName&gt;.github.io/my-task-list/
+</code></pre></div><p><img  src="./images/github-pages.png"
+        alt="github-page"/></p>
+<p>Your site is now in action 🎬.<br>
+Go to <code>https://&lt;YourUserName&gt;.github.io/my-task-list/</code> and start managing your tasks.</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>Congratulations! 🎊 🎉<br>
+You successfully created your task list application which is now hosted on Github Pages. Now, you can use this task list on your mobile also.<br>
+Make the changes using <code>semantic-ui-react</code> or using your css. Add new features and make it serve you.<br>
+Share with your friends and push those lazy fellows to quit procrastination. 😉</p>
+<p>The complete GitHub code is available <a href="https://github.com/schadokar/my-task-list"target="_blank">here</a>.</p>
+<hr>
+<blockquote>
+<p>Originally Published at <a href="https://codesource.io/building-an-offline-to-do-app-with-react/"target="_blank">codesource.io</a></p>
+</blockquote>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/reactjs/>Reactjs</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/tutorial/>tutorial</a><a class="tag" href=/tags/reactjs/>reactjs</a><a class="tag" href=/tags/github-pages/>github-pages</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/how-to-use-json-in-golang/"><span class="li iconfont icon-article"></span>How to Use Json in Golang?</a></p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "schadokar" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

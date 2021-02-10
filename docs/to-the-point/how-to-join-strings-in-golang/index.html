@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Join Strings in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Join Strings in Golang?" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to Join Strings in Golang?</h1><p class="article date">Thursday, February 27, 2020<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/golang-basic.png" alt>
+          </p><p><img  src="../images/markus-spiske-iar-afB0QQw-unsplash.jpg"
+        alt/></p>
+<p>There are multiple ways to join or concat strings in the golang.</p>
+<p>Let's start with the easy one.</p>
+<h2 id="using-the--operator-">Using the + operator 🔧</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">str1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>
+	<span style="color:#75715e">// there is a space before World
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">str2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34; World!&#34;</span>
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">str1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">str2</span>)
+}
+</code></pre></div><p>Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span>!
+</code></pre></div><hr>
+<h2 id="using-sprint-sprintf-sprintln-">Using Sprint, Sprintf, Sprintln 🛠</h2>
+<p>The <a href="https://golang.org/pkg/fmt/"target="_blank">fmt</a> package has <a href="https://golang.org/pkg/fmt/#Sprint"target="_blank">Sprint</a>, <a href="https://golang.org/pkg/fmt/#Sprintf"target="_blank">Sprintf</a> and <a href="https://golang.org/pkg/fmt/#Sprintln"target="_blank">Sprintln</a> function which can format the strings using the default or custom formats.</p>
+<p>All the <code>Sprint</code> function are variadic functions.</p>
+<blockquote>
+<p><a href="https://medium.com/rungo/variadic-function-in-go-5d9b23f4c01a"target="_blank">Variadic functions</a> can be called with any number of trailing arguments.</p>
+</blockquote>
+<h3 id="sprint">Sprint</h3>
+<p><code>Sprint</code> formats using the default formats and returns the resulting string.</p>
+<p><code>Sprint</code> accepts an empty interface. It means it can take n elements of any type.<br>
+If no element of type string is passed then the resulting string will add a Space between the elements.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">num</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">26</span>
+
+	<span style="color:#a6e22e">str</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Feb&#34;</span>
+
+	<span style="color:#a6e22e">boolean</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">true</span>
+
+	<span style="color:#a6e22e">withStr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprint</span>(<span style="color:#a6e22e">num</span>, <span style="color:#a6e22e">str</span>, <span style="color:#a6e22e">boolean</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;With string: &#34;</span>, <span style="color:#a6e22e">withStr</span>)
+
+	<span style="color:#a6e22e">withOutStr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprint</span>(<span style="color:#a6e22e">num</span>, <span style="color:#a6e22e">boolean</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Without string: &#34;</span>, <span style="color:#a6e22e">withOutStr</span>)
+}
+
+</code></pre></div><p>Output</p>
+<pre><code>With string:  26Febtrue
+Without string:  26 true
+</code></pre><h3 id="sprintf">Sprintf</h3>
+<p><code>Sprintf</code> formats according to a format specifier and returns the resulting string.</p>
+<p><strong>Format Specifiers</strong></p>
+<pre><code>%v	the value in a default format
+%s	the uninterpreted bytes of the string or slice
+</code></pre><p>Check all the <a href="https://golang.org/pkg/fmt/#hdr-Printing"target="_blank">available format specifier</a> in the <code>fmt</code> package.</p>
+<blockquote>
+<p>You can use the <code>Sprintf</code> function to create the <code>connection string</code> of the DB.</p>
+</blockquote>
+<p>For the example we will create a <em><strong>Postgres Connection URL</strong></em>.</p>
+<blockquote>
+<p>Connection URL format: <strong>postgres://username:password@hostname/databasename</strong></p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+	<span style="color:#a6e22e">dbname</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;testdb&#34;</span>
+
+	<span style="color:#a6e22e">username</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;admin&#34;</span>
+
+	<span style="color:#a6e22e">password</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;test1234&#34;</span>
+
+	<span style="color:#a6e22e">hostname</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>
+
+	<span style="color:#a6e22e">connectionURL</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;postgres://%s:%s@%v/%v&#34;</span>, <span style="color:#a6e22e">username</span>, <span style="color:#a6e22e">password</span>, <span style="color:#a6e22e">hostname</span>, <span style="color:#a6e22e">dbname</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">connectionURL</span>)
+}
+</code></pre></div><p>Output</p>
+<pre><code>postgres://admin:test1234@localhost/testdb
+</code></pre><h3 id="sprintln">Sprintln</h3>
+<p><code>Sprintln</code> formats the elements or arguments using the default formats. Spaces are added between the elements and a new line is added in the end.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+	<span style="color:#a6e22e">str1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>
+	<span style="color:#a6e22e">str2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Gophers!&#34;</span>
+
+	<span style="color:#a6e22e">msg</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintln</span>(<span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str2</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">msg</span>)
+}
+</code></pre></div><p>Output</p>
+<pre><code>Hello Gophers!
+</code></pre><hr>
+<h2 id="using-the-join-function--">Using the Join function  🔩</h2>
+<p>The golang standard library has provided a  <a href="https://golang.org/pkg/strings/#Join"target="_blank">Join</a> function in the <a href="https://golang.org/pkg/strings/"target="_blank">strings</a> package.</p>
+<p>The <code>Join</code> function takes an array of strings and a separator to join them.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Join</span>(<span style="color:#a6e22e">elems</span> []<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">sep</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span>
+</code></pre></div><p>The example has an array of weekdays. The <code>Join</code> function will return a string of weekdays separated by <code>, </code>.</p>
+<blockquote>
+<p>Using <code>Join</code> you can convert an array of string to a string.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">weekdays</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Monday&#34;</span>, <span style="color:#e6db74">&#34;Tuesday&#34;</span>, <span style="color:#e6db74">&#34;Wednesday&#34;</span>, <span style="color:#e6db74">&#34;Thursday&#34;</span>, <span style="color:#e6db74">&#34;Friday&#34;</span>}
+	<span style="color:#75715e">// there is a space after comma
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Join</span>(<span style="color:#a6e22e">weekdays</span>, <span style="color:#e6db74">&#34;, &#34;</span>))
+}
+</code></pre></div><p>Output</p>
+<pre><code>Monday, Tuesday, Wednesday, Thursday, Friday
+</code></pre><hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/strings/>strings</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-use-swapper-in-golang/"><span class="li iconfont icon-article"></span>How to use Swapper in Golang?</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

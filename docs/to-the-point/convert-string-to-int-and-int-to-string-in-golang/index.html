@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Convert String to Int and Int to String in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Convert String to Int and Int to String in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Convert String to Int and Int to String in Golang</h1><p class="article date">Tuesday, March 3, 2020<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/golang-basic.png" alt>
+          </p><p>Golang standard library has provided 2 functions <a href="https://golang.org/pkg/strconv/#Atoi"target="_blank">Atoi</a> and <a href="https://golang.org/pkg/strconv/#Itoa"target="_blank">Itoa</a> to convert string to int and int to string respectively.</p>
+<p>These 2 functions placed inside the <a href="https://golang.org/pkg/strconv/"target="_blank">strconv</a> package.</p>
+<blockquote>
+<p>Package strconv implements conversions to and from string representations of basic data types.</p>
+</blockquote>
+<h2 id="string-to-int">String to Int</h2>
+<p>The <code>strconv.Atoi</code> function takes a string and returns an int and an error.</p>
+<pre><code>func Atoi(s string) (int, error)
+</code></pre><p>It will return type <code>int</code> and type <code>int</code> is system dependent. It is 32 bits on the 32-bit system and 64 bits on the 64-bit system.</p>
+<blockquote>
+<p>💡 Use the term ASCII to Int to remember the func name.</p>
+</blockquote>
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strconv&quot;
+)
+
+func main() {
+
+	str := &quot;1234&quot;
+
+	i, err := strconv.Atoi(str)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Printf(&quot;Type: %T, Value: %v\n&quot;, i, i)
+
+	// convert int to int64
+	i64 := int64(i)
+	fmt.Printf(&quot;Type: %T, Value: %v&quot;, i64, i64)
+}
+</code></pre><p>Output</p>
+<pre><code>Type: int, Value: 1234
+Type: int64, Value: 1234
+</code></pre><h2 id="int-to-string">Int to String</h2>
+<p>The <code>strconv.Itoa</code> takes <code>int</code> as an argument and returns the <code>string</code>.</p>
+<pre><code>func Itoa(i int) string
+</code></pre><p>Example:</p>
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strconv&quot;
+)
+
+func main() {
+	num := 322020
+
+	str := strconv.Itoa(num)
+
+	fmt.Printf(&quot;Type: %T, Value: %v&quot;, str, str)
+}
+</code></pre><p>Output</p>
+<pre><code>Type: string, Value: 322020
+</code></pre></article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-read-and-write-a-file-in-golang/"><span class="li iconfont icon-article"></span>How to Read and Write a File in Golang?</a></p><p><a class="link" href="/to-the-point/how-to-use-swapper-in-golang/"><span class="li iconfont icon-article"></span>How to use Swapper in Golang?</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

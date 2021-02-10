@@ -1,0 +1,27 @@
+
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                {{ range .Site.Menus.social }}
+                    <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}">
+                        <span
+                            class="icon">{{ .Pre }}
+                        </span>
+                    </a>
+                {{ end }}
+            {{- $copyright := site.Copyright -}}
+            {{- if not $copyright -}}
+                {{- $copyright = site.Title | safeHTML -}}
+            {{- end -}}
+            {{- partial "copyright.html" ($copyright | safeHTML) -}}
+        </span>
+        <span class="footer right-side">
+            {{- partial "navigation-items.html" site.Params.footer -}}
+        </span>
+    </div>
+</section>
+
+{{- partial "math.html" . -}}
+{{- partial "syntax.html" . -}}
+{{- template "_internal/google_analytics_async.html" . -}}
+{{- partial "custom-js.html" . -}}

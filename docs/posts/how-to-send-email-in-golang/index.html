@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Send Email in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Send Email in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/sendinblue/go-sendinblue-cover.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to Send Email in Golang</h1><p class="article date">Thursday, June 11, 2020<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/sendinblue/go-sendinblue-cover.png" alt>
+          </p><p>This is a series of tutorials: sending email in golang.
+We'll first start with the basic sending an email using the <code>go</code> command.</p>
+<p>In the upcoming tutorials, we will create an API and a frontend using which we will send emails.</p>
+<p>In this tutorial, we will send an email using the <code>main.go</code> file.</p>
+<h1 id="pre-requisites">Pre-requisites</h1>
+<ol>
+<li>go v1.11 or greater - I am using go1.14.3</li>
+<li>Code Editor (VSCode, Atom) - I am using VS Code</li>
+<li>Sendinblue account - <a href="https://www.sendinblue.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc"target="_blank">link</a></li>
+</ol>
+<blockquote>
+<p>Check out this step by step tutorial <a href="https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/"target="_blank">Create an account in sendinblue</a>.</p>
+</blockquote>
+<h1 id="getting-started">Getting Started</h1>
+<p>Create a new directory <code>go-sendinblue</code>.</p>
+<p>Open the terminal inside the directory and run the below command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">mod</span> <span style="color:#a6e22e">init</span> <span style="color:#66d9ef">go</span><span style="color:#f92672">-</span><span style="color:#a6e22e">sendinblue</span>
+</code></pre></div><p>This command will initiate a module <code>go.mod</code>.<br>
+A module is a collection of dependency modules used in the project. This will list all the dependencies with their version in the <code>go.mod</code> file.</p>
+<h2 id="add-the-dependency">Add the Dependency</h2>
+<p>In this project, we are going to use the environment variables from the <code>.env</code> file. To access the <code>.env</code> file and use it we have to add a dependency <code>godotenv</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">joho</span><span style="color:#f92672">/</span><span style="color:#a6e22e">godotenv</span>
+</code></pre></div><p>This package is simple and clean.<br>
+Learn more about <a href="https://schadokar.dev/posts/use-environment-variable-in-your-next-golang-project/"target="_blank">how to use environment variables in the golang</a>.</p>
+<h2 id="create-a-new-smtp-key">Create a new SMTP Key</h2>
+<p>Sign in to your Sendinblue account and click on SMTP &amp; API from the top-right menu.</p>
+<p>Go to <strong>SMTP</strong> tab and click on <em>CREATE A NEW SMTP KEY</em>.<br>
+Copy the key and paste it somewhere safe.</p>
+<blockquote>
+<p>⚠️ Note: If you lose this key, then you can't retrieve it. Then you have to create a new one and replace it accordingly.</p>
+</blockquote>
+<h2 id="environment-variable">Environment Variable</h2>
+<p>Create a new <code>.env</code> file inside the <code>go-sendinblue</code> project.<br>
+Open the file and enter the following keys and values.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">PASSWORD</span><span style="color:#f92672">=</span><span style="color:#a6e22e">Enter</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">Sendinblue</span> <span style="color:#a6e22e">SMTP</span> <span style="color:#a6e22e">Key</span>
+<span style="color:#a6e22e">SMTP_HOST</span><span style="color:#f92672">=</span><span style="color:#a6e22e">smtp</span><span style="color:#f92672">-</span><span style="color:#a6e22e">relay</span>.<span style="color:#a6e22e">sendinblue</span>.<span style="color:#a6e22e">com</span>
+<span style="color:#a6e22e">SMTP_PORT</span><span style="color:#f92672">=</span><span style="color:#ae81ff">587</span>
+</code></pre></div><p>Verify the <code>SMTP_HOST</code> and <code>SMTP_PORT</code> from the <strong>SMTP &amp; API</strong> section of your account.</p>
+<blockquote>
+<p>⚠️ Caution: If you're using git then don't forget to add <code>.env</code> in the <code>.gitignore</code> file. This will prevent your secrets to access by anyone.</p>
+</blockquote>
+<h2 id="coding-time-">Coding Time 👨‍💻</h2>
+<p>Create a new <code>main.go</code> inside the <code>go-sendinblue</code> project.<br>
+Open the <code>main.go</code> file and paste the below code.
+We are going to use <code>smtp</code> package provided by golang.</p>
+<blockquote>
+<p>Package smtp implements the Simple Mail Transfer Protocol as defined in RFC 5321.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;log&#34;</span>
+    <span style="color:#e6db74">&#34;net/smtp&#34;</span>
+    <span style="color:#e6db74">&#34;os&#34;</span>
+
+    <span style="color:#75715e">// Import godotenv
+</span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;github.com/joho/godotenv&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#75715e">// From address
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">from</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;hello@schadokar.dev&#34;</span>
+
+    <span style="color:#75715e">// Array of recipients address
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">to</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;shubham@schadokar.dev&#34;</span>}
+
+    <span style="color:#75715e">// Create a message and convert it into bytes
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">msg</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;To: shubham@schadokar.dev\r\n&#34;</span> <span style="color:#f92672">+</span>
+        <span style="color:#e6db74">&#34;From: hello@schadokar.dev\r\n&#34;</span> <span style="color:#f92672">+</span>
+        <span style="color:#e6db74">&#34;Subject: Hello Gophers!\r\n&#34;</span> <span style="color:#f92672">+</span>
+        <span style="color:#e6db74">&#34;\r\n&#34;</span> <span style="color:#f92672">+</span>
+        <span style="color:#e6db74">&#34;This is the email is sent using golang and sendinblue.\r\n&#34;</span>)
+
+    <span style="color:#75715e">// Call the sendEmail function
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">status</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sendEmail</span>(<span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">msg</span>)
+
+    <span style="color:#75715e">// check if email sent successfully or not
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">status</span> {
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Email sent successfully.&#34;</span>)
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Email sent failed.&#34;</span>)
+    }
+}
+
+<span style="color:#75715e">// send mail function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sendEmail</span>(<span style="color:#a6e22e">from</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">to</span> []<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">msg</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">bool</span> {
+    <span style="color:#75715e">// Load .env file to use the environment variable
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">godotenv</span>.<span style="color:#a6e22e">Load</span>(<span style="color:#e6db74">&#34;.env&#34;</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error loading .env file&#34;</span>)
+    }
+
+    <span style="color:#75715e">// Set up authentication information.
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">auth</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">smtp</span>.<span style="color:#a6e22e">PlainAuth</span>(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;PASSWORD&#34;</span>), <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;SMTP_HOST&#34;</span>))
+
+    <span style="color:#75715e">// format smtp address
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">smtpAddress</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%s:%v&#34;</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;SMTP_HOST&#34;</span>), <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;SMTP_PORT&#34;</span>))
+
+    <span style="color:#75715e">// Connect to the server, authenticate, set the sender and recipient,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// and send the email all in one step.
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">smtp</span>.<span style="color:#a6e22e">SendMail</span>(<span style="color:#a6e22e">smtpAddress</span>, <span style="color:#a6e22e">auth</span>, <span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">msg</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+    }
+
+    <span style="color:#75715e">// return true on success
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+}
+</code></pre></div><p>Let's understand the code piece by piece.</p>
+<p>In the <code>main</code> function we're first declaring the <strong>from</strong>, <strong>to</strong>, and <strong>msg</strong>.<br>
+<strong>from</strong> is the address from which you created the sendinblue account.
+<strong>to</strong> is an array of string.<br>
+<strong>msg</strong> is an array of bytes.</p>
+<blockquote>
+<p>⚠️ You must define the <strong>From</strong> field in the msg. It is not mentioned in the smtp package documentation. Maybe it is only required for sendinblue. I have not tested with other mail service providers.</p>
+</blockquote>
+<p>In the <code>sendEmail</code> function, it is taking <strong>from</strong>, <strong>to</strong>, and <strong>msg</strong> as arguments and returning a <code>bool</code> status.</p>
+<p>In the import, we have imported the <code>github.com/joho/godotenv</code> package to load the <code>.env</code> file. To load the <code>.env</code> file, use <code>Load</code> method of <code>godoenv</code>.
+From the <code>.env</code> file, we will load <strong>PASSWORD</strong>, <strong>SMTP_HOST</strong> and <strong>SMTP_PORT</strong>.</p>
+<p>The <code>smtp</code> package has 2 methods to authenticate the mail server. <a href="https://golang.org/pkg/net/smtp/#Auth"target="_blank">Read more</a><br>
+We're going to use the <code>PlainAuth</code> method.</p>
+<h4 id="syntax">Syntax</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">PlainAuth</span>(<span style="color:#a6e22e">identity</span>, <span style="color:#a6e22e">username</span>, <span style="color:#a6e22e">password</span>, <span style="color:#a6e22e">host</span> <span style="color:#66d9ef">string</span>) <span style="color:#a6e22e">Auth</span>
+</code></pre></div><blockquote>
+<p>PlainAuth returns an Auth that implements the PLAIN authentication mechanism as defined in RFC 4616. The returned Auth uses the given username and password to authenticate to host and act as identity. Usually, identity should be the empty string, to act as username.</p>
+</blockquote>
+<blockquote>
+<p>PlainAuth will only send the credentials if the connection is using TLS or is connected to localhost. Otherwise, authentication will fail with an error, without sending the credentials.</p>
+</blockquote>
+<p>Now, as the <code>.env</code> is loaded by the <code>godotenv</code> package. We can use <code>os</code> package to read the environment variables.</p>
+<p>Format an SMTP Address.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">587</span>
+</code></pre></div><p>Use <code>os</code> package to read <strong>PASSWORD</strong>, <strong>SMTP_HOST</strong> and <strong>SMTP_PORT</strong>.</p>
+<p>Using the <code>SendMail</code> method of <code>smtp</code> package, it can connect to the server, authenticate and send the email the message to all the recipients by the sender.</p>
+<h2 id="send-the-email">Send the email</h2>
+<p>Open the project in the terminal and run the below command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+</code></pre></div><p>Check your mailbox. You have received a mail. If you could not find the mail check in the promotion.</p>
+<p><img  src="https://schadokar.dev/images/sendinblue/mail-sent-sendinblue.PNG"
+        alt="sent-mail"/></p>
+<p>The <code>smtp</code> package does not provide enough information of delivery of the mail. It only confirms if mail sent to server or not.</p>
+<p>From server side, there can be many reasons if it is delivered or not. To check if sent successfully or not.<br>
+Open the sendinblue account and click on the <strong>Transactional</strong> tab.</p>
+<p>In this tab, you can check the status of the mail.
+The common reason can be an incorrect mail address. For this it raise a <strong>Hard bounce</strong> event.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Hope, you find this tutorial helpful. The complete code is available on my <a href="https://github.com/schadokar/go-sendmail"target="_blank">GitHub</a> repository.</p>
+<p>In the upcoming tutorials, we are going to create API and a frontend.</p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/sendemail/>sendemail</a><a class="tag" href=/tags/sendinblue/>sendinblue</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-a-color-cli-in-golang/"><span class="li iconfont icon-article"></span>Create a Color Cli in Golang</a></p><p><a class="link" href="/posts/create-a-to-do-app-in-reactjs-with-github-pages/"><span class="li iconfont icon-article"></span>Create a To Do App in Reactjs with Github Pages</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

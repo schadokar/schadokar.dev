@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Use Json in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Use Json in Golang?" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to Use Json in Golang?</h1><p class="article date">Monday, March 23, 2020<span class="reading-time"> • 8 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/golang-basic.png" alt>
+          </p><p>When you start a project which interacts with the outer world, it requires data exchange.
+To make a project successful this interaction must be simple and efficient.</p>
+<h3 id="what-is-data-exchange">What is Data Exchange?</h3>
+<blockquote>
+<p><strong>Data exchange</strong> is the process of taking data structured under a source schema and transforming it into data structured under a target schema, so that the target data is an accurate representation of the source data. - <a href="https://en.wikipedia.org/wiki/Data_exchange"target="_blank">Wikipedia</a></p>
+</blockquote>
+<p>In simple terms, convert the data in the format which the receiver understands.</p>
+<p>There are many data exchange formats like XML, JSON, HTML, CSV etc. Among all, JSON has become ubiquitous for web applications.</p>
+<blockquote>
+<p>Originally published on <a href="https://codesource.io/learn-how-to-use-json-in-golang/"target="_blank">codesource.io</a>.</p>
+</blockquote>
+<h3 id="what-is-json">What is JSON?</h3>
+<p><strong>JSON (JavaScript Object Notation) is a lightweight format that is used for data interchanging.</strong> It is based on a subset of Javascript language. An object is an unordered set of name/value pairs.</p>
+<p>An Example of JSON</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;How to use JSON in golang?&#34;</span>,
+  <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Tutorial&#34;</span>,
+  <span style="color:#f92672">&#34;publisher&#34;</span>: <span style="color:#e6db74">&#34;codesource.io&#34;</span>,
+  <span style="color:#f92672">&#34;tags&#34;</span>: [<span style="color:#e6db74">&#34;golang&#34;</span>, <span style="color:#e6db74">&#34;json&#34;</span>],
+  <span style="color:#f92672">&#34;published&#34;</span>: <span style="color:#66d9ef">true</span>
+}
+</code></pre></div><hr>
+<p>Now, we know what is JSON. It is time to use it with golang.
+In this tutorial, we will explore different golang types like string, int, struct, array, slice, maps.</p>
+<h2 id="parse-json-in-golang-">Parse JSON in Golang ⚙️</h2>
+<p>JSON is JavaScript Object Notation and golang can't use it in its original format.
+For this, golang has provided an <code>encoding/json</code> package in the <a href="https://golang.org/pkg/encoding/json/"target="_blank">standard library</a>.</p>
+<p>In golang, we use <code>struct</code> to represent <code>json</code>.</p>
+<p>For example:
+In golang</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Employer</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Name</span> <span style="color:#66d9ef">string</span>
+    <span style="color:#a6e22e">Employee</span> []<span style="color:#66d9ef">int</span>
+}
+</code></pre></div><p>In JSON</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+  <span style="color:#f92672">&#34;employee&#34;</span>: []
+}
+</code></pre></div><p>We will use <code>encode/json</code> package to convert <code>json</code> into <code>struct</code> and <code>struct</code> into <code>json</code>. For this we will use 2 functions:</p>
+<ol>
+<li>Marshal (Encode) : Convert golang <code>struct</code> into <code>json</code> format.</li>
+<li>Unmarshal (Decode): Convert <code>json</code> into golang <code>struct</code></li>
+</ol>
+<p>It is more like mapping the parameters than conversion. The default Go types for decoding and encoding JSON are</p>
+<ul>
+<li>bool for JSON boolean</li>
+<li>string for JSON string</li>
+<li>int/float64 for JSON number</li>
+<li>nil for JSON null</li>
+</ul>
+<h3 id="encode-marshal-">Encode (Marshal) 👨‍💻</h3>
+<p>To encode JSON data we use the <a href="https://golang.org/pkg/encoding/json/#Marshal"target="_blank">Marshal</a> function.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>)
+</code></pre></div><p>Marshal function accepts an empty interface and returns an array of byte and error message.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;log&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Name</span>     <span style="color:#66d9ef">string</span>
+        <span style="color:#a6e22e">Age</span>      <span style="color:#66d9ef">int64</span>
+        <span style="color:#a6e22e">Location</span> <span style="color:#66d9ef">string</span>
+    }
+
+    <span style="color:#a6e22e">person</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Person</span>{
+        <span style="color:#e6db74">&#34;Jon&#34;</span>, <span style="color:#ae81ff">27</span>, <span style="color:#e6db74">&#34;London&#34;</span>,
+    }
+
+    <span style="color:#75715e">// encode into JSON
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">person</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Unable to encode&#34;</span>)
+    }
+
+    <span style="color:#75715e">// Marshal returns []byte
+</span><span style="color:#75715e"></span>
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">b</span>))
+}
+</code></pre></div><p><a href="https://play.golang.org/p/a7GJlbd_Ddq"target="_blank">Try It</a></p>
+<p>Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;Name&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>, <span style="color:#f92672">&#34;Age&#34;</span>: <span style="color:#ae81ff">27</span>, <span style="color:#f92672">&#34;Location&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span> }
+</code></pre></div><p>We are encoding <code>Person</code> struct in JSON format. First, create a new object of <code>Person</code> as <code>person</code>.
+Then, encode the <code>person</code> in JSON using <code>json.Marshal</code>.
+If everything goes well, then the <code>err</code> will be <code>nil</code> and <code>b</code> is the representation of <code>person</code> in <code>[]byte</code> format.</p>
+<p>Only data structures that can be represented as valid JSON will be encoded:</p>
+<ul>
+<li>JSON objects only support strings as keys; to encode a Go map type it must be of the form map[string]T (where T is any Go type supported by the json package).</li>
+<li>Only the exported fields (those that begin with an uppercase letter) of the struct can be encoded in JSON.</li>
+<li>Cyclic data structures are not supported; they will cause Marshal to go into an infinite loop.</li>
+<li>Pointers will be encoded as the values they point to (or &lsquo;null&rsquo; if the pointer is nil).</li>
+</ul>
+<blockquote>
+<p>In golang Uppercase represent that a field is exported or public.</p>
+</blockquote>
+<p>Take a look at the <code>Person</code> struct,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Name</span>     <span style="color:#66d9ef">string</span>
+        <span style="color:#a6e22e">Age</span>      <span style="color:#66d9ef">int64</span>
+        <span style="color:#a6e22e">Location</span> <span style="color:#66d9ef">string</span>
+    }
+</code></pre></div><p>Change the <code>Location</code> field to lowercase <code>location</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Name</span>     <span style="color:#66d9ef">string</span>
+        <span style="color:#a6e22e">Age</span>      <span style="color:#66d9ef">int64</span>
+        <span style="color:#a6e22e">location</span> <span style="color:#66d9ef">string</span>
+    }
+</code></pre></div><p><a href="https://play.golang.org/p/BEtHJkVw6ca"target="_blank">Try it</a></p>
+<p>Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;Name&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>, <span style="color:#f92672">&#34;Age&#34;</span>: <span style="color:#ae81ff">27</span> }
+</code></pre></div><h4 id="to-map-the-struct-field-to-the-json-tag">To map the struct field to the <code>json</code> tag.</h4>
+<p>For example, you have <code>struct</code> field as <code>Name</code> but you want to map it as <code>firstName</code> in <code>json</code>.
+To do this, you can tag the struct field.</p>
+<p>Syntax</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">FieldName</span> <span style="color:#66d9ef">type</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;tagname&#34;</span><span style="color:#e6db74">`</span>
+</code></pre></div><blockquote>
+<p>⚠️ Don't give any space between <code>json:&quot;tagname&quot;</code>, else it will throw an error.
+<code>struct field tag json: &quot;firstName&quot; not compatible with reflect.StructTag.Get: bad syntax for struct tag value</code></p>
+</blockquote>
+<p>Tag the <code>Name</code> field as <code>firstName</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Name</span>     <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;firstName&#34;</span><span style="color:#e6db74">`</span>
+        <span style="color:#a6e22e">Age</span>      <span style="color:#66d9ef">int64</span>
+        <span style="color:#a6e22e">Location</span> <span style="color:#66d9ef">string</span>
+    }
+</code></pre></div><p><a href="https://play.golang.org/p/f32foy7ULIC"target="_blank">Try it</a></p>
+<p>Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>, <span style="color:#f92672">&#34;Age&#34;</span>: <span style="color:#ae81ff">27</span>, <span style="color:#f92672">&#34;Location&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span> }
+</code></pre></div><h3 id="omitempty">Omitempty</h3>
+<p>We have a special json tag as <code>omitempty</code>. If a field is set as <code>omitempty</code> then it will not encode that field to json if it is empty.</p>
+<p>For example, set <code>Location</code> field as <code>omitempty</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Name</span>     <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;firstName&#34;</span><span style="color:#e6db74">`</span>
+        <span style="color:#a6e22e">Age</span>      <span style="color:#66d9ef">int64</span>
+        <span style="color:#a6e22e">Location</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;location, omitempty&#34;</span><span style="color:#e6db74">`</span>
+    }
+
+<span style="color:#a6e22e">person</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Person</span>{
+		<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>,
+		<span style="color:#a6e22e">Age</span>: <span style="color:#ae81ff">27</span>,
+	}
+</code></pre></div><p><a href="https://play.golang.org/p/29npD-Qv96E"target="_blank">Try it</a></p>
+<p>Output</p>
+<pre><code>{&quot;firstName&quot;:&quot;Jon&quot;,&quot;Age&quot;:27}
+</code></pre><hr>
+<h3 id="decode-unmarshal-">Decode (Unmarshal) 👨‍💻</h3>
+<p>To decode JSON data we use the <a href="https://golang.org/pkg/encoding/json/#Unmarshal"target="_blank">Unmarshal</a> function.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">data</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span>
+</code></pre></div><p>Unmarshal accepts an array of byte and an interface and returns the error message. This interface is the struct to which the JSON decode.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;log&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Name</span>     <span style="color:#66d9ef">string</span>
+        <span style="color:#a6e22e">Age</span>      <span style="color:#66d9ef">int64</span>
+        <span style="color:#a6e22e">Location</span> <span style="color:#66d9ef">string</span>
+    }
+
+    <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">`</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#34;name&#34;:&#34;Jon&#34;,&#34;age&#34;:27,&#34;location&#34;:&#34;London&#34;}</span><span style="color:#e6db74">`</span>)
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#a6e22e">Person</span>
+
+    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">j</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">p</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Unable to decode the json&#34;</span>)
+    }
+
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">p</span>)
+}
+</code></pre></div><p><a href="https://play.golang.org/p/k25DaMXEQLD"target="_blank">Try it</a></p>
+<p>Output</p>
+<pre><code>{Jon 27 London}
+</code></pre><blockquote>
+<p>To store the decoded data in the struct, <code>Unmarshal</code> will look the json <strong>case-insensitive</strong> keys in the exported struct fields. As in the above case, <code>name</code> is in lowercase and is mapped to the exported <code>Name</code> field.</p>
+</blockquote>
+<p>Similar, to encoding you can add json tag to the struct field.
+For example:</p>
+<p>Tag the <code>Name</code> field with <code>json:&quot;firstName&quot;</code>. Now, it will map <code>firstName</code> to the <code>Name</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Name</span>     <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;firstName&#34;</span><span style="color:#e6db74">`</span>
+        <span style="color:#a6e22e">Age</span>      <span style="color:#66d9ef">int64</span>
+        <span style="color:#a6e22e">Location</span> <span style="color:#66d9ef">string</span>
+    }
+</code></pre></div><p><a href="https://play.golang.org/p/0m7vo90yM8H"target="_blank">Try it</a></p>
+<hr>
+<h2 id="decoding-the-arbitrary-json-">Decoding the arbitrary JSON 👨‍💻</h2>
+<p>In the above examples, we knew the JSON structure and we mapped it to the struct.</p>
+<p><strong>What if you don't know the JSON structure?</strong> 🤔</p>
+<p>In the json all the keys must be <code>string</code>. It means we can use the <code>map</code> type for arbitrary data.</p>
+<p>The <code>encoding/json</code> package uses</p>
+<ul>
+<li><code>map[string]interface{}</code> to store the arbitrary JSON objects</li>
+<li><code>[]interface{}</code> to store the arbitrary JSON arrays.</li>
+</ul>
+<p>In <code>map[string]interface{}</code> the keys are <code>string</code> and values are <code>interface{}</code>. It is an empty interface. The <code>interface{}</code> (empty interface) type describes an interface with zero methods. In short, it can accept all the types.</p>
+<p>The default Go types are:</p>
+<ul>
+<li>bool for JSON booleans,</li>
+<li>float64 for JSON numbers,</li>
+<li>string for JSON strings, and</li>
+<li>nil for JSON null.</li>
+</ul>
+<p>Consider the JSON object as</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>,
+  <span style="color:#f92672">&#34;location&#34;</span>: {
+    <span style="color:#f92672">&#34;country&#34;</span>: <span style="color:#e6db74">&#34;England&#34;</span>,
+    <span style="color:#f92672">&#34;city&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span>
+  },
+  <span style="color:#f92672">&#34;hobbies&#34;</span>: [<span style="color:#e6db74">&#34;photography&#34;</span>, <span style="color:#e6db74">&#34;writing&#34;</span>]
+}
+</code></pre></div><p>The <code>Unmarshal</code> function will parse it into a map whose keys are string and values are empty interface.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{} {
+    <span style="color:#e6db74">&#34;Name&#34;</span>: <span style="color:#e6db74">&#34;Jon&#34;</span>,
+    <span style="color:#e6db74">&#34;Location&#34;</span>: <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{} {
+        <span style="color:#e6db74">&#34;Country&#34;</span>: <span style="color:#e6db74">&#34;England&#34;</span>,
+        <span style="color:#e6db74">&#34;City&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span>,
+    },
+    <span style="color:#e6db74">&#34;Hobbies&#34;</span>: []<span style="color:#66d9ef">interface</span>{} {
+        <span style="color:#e6db74">&#34;photography&#34;</span>,
+        <span style="color:#e6db74">&#34;writing&#34;</span>,
+    },
+}
+</code></pre></div><p>All the values are of type <code>interface{}</code>. To access the underlying type of interface, we have to use <strong>type assertion</strong>.</p>
+<p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">name</span> <span style="color:#66d9ef">interface</span>{}
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Jon&#34;</span>
+
+<span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">name</span>.(<span style="color:#66d9ef">string</span>)
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">PrintF</span>(<span style="color:#e6db74">&#34;Type is %T, value is %s&#34;</span>, <span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">result</span><span style="color:#960050;background-color:#1e0010">&#34;</span>)
+</code></pre></div><p><a href="https://play.golang.org/p/Vd6zPbtj_9T"target="_blank">Try it</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;log&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+    <span style="color:#a6e22e">jsonObj</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">{</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                &#34;name&#34;: &#34;Jon&#34;,
+</span><span style="color:#e6db74">            &#34;age&#34; : 27,
+</span><span style="color:#e6db74">                &#34;location&#34;: </span><span style="color:#e6db74">{</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                        &#34;country&#34;: &#34;England&#34;,
+</span><span style="color:#e6db74">                  &#34;city&#34;: &#34;London&#34;
+</span><span style="color:#e6db74">                },
+</span><span style="color:#e6db74">               &#34;hobbies&#34;: [ &#34;photography&#34;, &#34;writing&#34;]
+</span><span style="color:#e6db74">        }</span><span style="color:#e6db74">`</span>
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">person</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
+
+    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>([]byte(<span style="color:#a6e22e">jsonObj</span>), <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">person</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Unable to encode&#34;</span>)
+    }
+
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">k</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">person</span> {
+        <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">v</span>.(<span style="color:#66d9ef">type</span>) {
+        <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">string</span>:
+            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">k</span>, <span style="color:#a6e22e">v</span>)
+        <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">float64</span>:
+            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">k</span>, <span style="color:#a6e22e">v</span>)
+        <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}:
+            <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">ival</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">v</span> {
+                <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">ival</span>)
+            }
+        <span style="color:#66d9ef">case</span> []<span style="color:#66d9ef">interface</span>{}:
+            <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">ival</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">v</span> {
+                <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">ival</span>)
+            }
+        <span style="color:#66d9ef">default</span>:
+            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">k</span>, <span style="color:#a6e22e">v</span>)
+        }
+    }
+}
+</code></pre></div><p><a href="https://play.golang.org/p/eadXK7Kstkw"target="_blank">Try it</a></p>
+<p>Output</p>
+<pre><code>country England
+city London
+0 photography
+1 writing
+name Jon
+age 27
+</code></pre><blockquote>
+<p>Map is not indexed, so the order will always be different.</p>
+</blockquote>
+<hr>
+<h2 id="streaming-encoders-and-decoders">Streaming Encoders and Decoders</h2>
+<p>The <code>encoding/json</code> provides <code>Decoder</code> and <code>Encoder</code> types to support the common operation of reading and writing streams of JSON data.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">r</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">Decoder</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Writer</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">Encoder</span>
+</code></pre></div><p>In the below example,</p>
+<ul>
+<li>It will read the stream of JSON data from an <code>io.Reader</code></li>
+<li>removes the <code>Age</code> field from each object</li>
+<li>writes the objects to an <code>io.Writer</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+	<span style="color:#e6db74">&#34;log&#34;</span>
+	<span style="color:#e6db74">&#34;os&#34;</span>
+	<span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+	<span style="color:#a6e22e">jsonStream</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#34;Name&#34;:&#34;Jon&#34;, &#34;Age&#34;:27, &#34;Location&#34;: &#34;London&#34;}
+</span><span style="color:#e6db74">		</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#34;Name&#34;:&#34;Bruce&#34;, &#34;Age&#34;:35, &#34;Location&#34;: &#34;Gotham&#34;}</span><span style="color:#e6db74">`</span>
+
+	<span style="color:#a6e22e">reader</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">jsonStream</span>)
+	<span style="color:#a6e22e">writer</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
+
+	<span style="color:#a6e22e">dec</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">reader</span>)
+	<span style="color:#a6e22e">enc</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">writer</span>)
+
+	<span style="color:#66d9ef">for</span> {
+		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">dec</span>.<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">v</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+			<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+			<span style="color:#66d9ef">return</span>
+		}
+		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">k</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">v</span> {
+			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">k</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Age&#34;</span> {
+				delete(<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">k</span>)
+			}
+		}
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">enc</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">v</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+			<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+		}
+	}
+}
+</code></pre></div><p><a href="https://play.golang.org/p/N9kuKqybSox"target="_blank">Try it</a></p>
+<p>Output</p>
+<pre><code>{&quot;Location&quot;:&quot;London&quot;,&quot;Name&quot;:&quot;Jon&quot;}
+{&quot;Location&quot;:&quot;Gotham&quot;,&quot;Name&quot;:&quot;Bruce&quot;}
+2009/11/10 23:00:00 EOF
+</code></pre><h4 id="code-walkthrough">Code Walkthrough</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">reader</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">jsonStream</span>)
+</code></pre></div><p>Create a type of <code>io.Reader</code> using the <a href="https://golang.org/pkg/strings/#NewReader"target="_blank">strings</a> package.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">dec</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">reader</span>)
+<span style="color:#a6e22e">enc</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">writer</span>)
+</code></pre></div><p>Create a new decoder which reads the data from the <code>reader</code>.
+Create a new encoder which writes the data to the <code>writer</code>.</p>
+<p>Rest of the code is self-explanatory.
+Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this tutorial, we explored the <code>json</code> package. There are many other amazing functions provided by the <code>encoding/json</code>. Like <code>MarshalIndent</code>, it will indent the encoded <code>json</code>. Please check out the official website to <a href="https://golang.org/pkg/encoding/json/"target="_blank">learn more</a>.</p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/json/>json</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-a-to-do-app-in-reactjs-with-github-pages/"><span class="li iconfont icon-article"></span>Create a To Do App in Reactjs with Github Pages</a></p><p><a class="link" href="/posts/understand-quicksort-the-easy-way/"><span class="li iconfont icon-article"></span>Understand Quicksort the easy way</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

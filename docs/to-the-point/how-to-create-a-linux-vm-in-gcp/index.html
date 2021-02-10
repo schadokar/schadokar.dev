@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Create a Linux VM in GCP&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Create a Linux VM in GCP" /><meta name="twitter:image" content="https://schadokar.dev/images/gcp-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to Create a Linux VM in GCP</h1><p class="article date">Sunday, March 29, 2020<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/gcp-basic.png" alt>
+          </p><p>Create a <a href="https://cloud.google.com/free"target="_blank">new account</a> on GCP. For new users, GCP credits $300 dollars in the account for 12 months and with many free services.</p>
+<p>Login to your GCP account.</p>
+<h2 id="create-a-new-virtual-machine">Create a new virtual machine</h2>
+<p>Select <strong>Compute Engine</strong> from the top left menu.</p>
+<p>Menu &gt; Compute &gt; Compute Engine</p>
+<h3 id="create-a-new-project">Create a new project</h3>
+<p>In GCP, a project is a resource manager. All the related resources of a project place inside it.
+Create a new project <strong>demo</strong>. It will take some time to create the project.</p>
+<p><img  src="./images/gcp-create-project.PNG"
+        alt="gcp-project"/></p>
+<h3 id="create-vm-instance">Create VM instance</h3>
+<p>Click on <strong>Create</strong>.</p>
+<blockquote>
+<p><strong>Take the quickstart</strong> it is a small tutorial on how to create the VM.</p>
+</blockquote>
+<p><img  src="./images/gcp-vm-create.PNG"
+        alt="gcp-vm-i"/></p>
+<h3 id="basic-details">Basic Details</h3>
+<p>Enter the virtual machine name. <code>gcp-vm</code>.</p>
+<p>Select the nearest region.</p>
+<p>Select the Series <strong>N1</strong> and machine type <strong>n1-standard-1</strong>.</p>
+<p><img  src="./images/gcp-vm-basic.PNG"
+        alt="gcp-basic"/></p>
+<h3 id="select-the-os-and-disk-size">Select the OS and Disk size</h3>
+<p>Change the OS Image to <strong>Ubuntu 16.04 LTS</strong>.
+Increase the disk size to 40GB.</p>
+<p><img  src="./images/gcp-vm-size.PNG"
+        alt="gcp-size"/></p>
+<h3 id="firewall">Firewall</h3>
+<p>Allow traffic from <strong>http</strong> and <strong>https</strong>.</p>
+<blockquote>
+<p>This step is optional. If you don't want to manage the private key then you can skip this step. If this is not setup then GCP manages the private key on your behalf. This private key is required to remotely connect to the VM.</p>
+</blockquote>
+<p>Click on <strong>security</strong>.</p>
+<p>Configure SSH to remotely connect to the vm using the command line.</p>
+<p>Open the bash or any command line.</p>
+<p>Use <code>ssh-keygen</code> command to create keys. By default, it saves these keys in <code>~/.ssh</code> directory.</p>
+<pre><code>$ ssh-keygen -m PEM -t rsa -b 4096
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/shubh/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/shubh/.ssh/id_rsa.
+Your public key has been saved in /c/Users/shubh/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:5C+NIr1JjM8Oy5R6lgCyRm0EXqhHwToQQPYtN7f0qDY shubh@LAPTOP-BAVLQDM1
+The key's randomart image is:
++---[RSA 4096]----+
+|=*+o             |
+|+.=..            |
+|o+oo + o.        |
+|*..oo +o+        |
+|o=.    oS.       |
+|...  =.  +       |
+|.  .*E= o o      |
+|   +=B.+ .       |
+|  .oo.*          |
++----[SHA256]-----+
+
+</code></pre><p>Enter the absolute path where you want to save the keys or skip it and press Enter.</p>
+<p>The passphrase is required to access the private key while login in the VM. This step is optional. Passphrase length should be 5 or more. Note it down.</p>
+<p>Open the <code>id_rsa.pub</code> file. This is the public key.<br>
+Copy the key and paste it in <strong>Enter public SSH key</strong>.</p>
+<blockquote>
+<p>Remove any leading or trailing spaces while pasting.</p>
+</blockquote>
+<p><img  src="./images/gcp-vm-ssh.PNG"
+        alt="gcp-ssh"/></p>
+<p>Click <strong>Create</strong>. It will take some time to create the VM.</p>
+<h3 id="connect-to-the-vm">Connect to the VM</h3>
+<p>Open the vm. It will show the vm details.</p>
+<p>If you haven't configured the SSH then you can connect to the VM using the SSH provided by the GCP. From SSH drop-down select the <strong>Open in browser window</strong> option.</p>
+<p><img  src="./images/gcp-vm-connect.PNG"
+        alt="gcp-vm-connect"/></p>
+<h4 id="for-ssh-configured">For SSH configured</h4>
+<p>Scroll down and copy the <strong>External IP</strong>.</p>
+<p>Open the bash shell or any command line.</p>
+<pre><code>ssh -i &lt;absolute-private-key-path&gt; username@vmipaddress
+</code></pre><p>Username is the key to the SSH.</p>
+<p><img  src="./images/gcp-vm-username.PNG"
+        alt="gcp-username"/></p>
+<pre><code>ssh -i /c/Users/shubh/.ssh/id_rsa shubh@34.93.244.120
+</code></pre><p>Enter the passphrase if you have set up it while creating the SSH keys.</p>
+<p><img  src="./images/gcp-vm-login.PNG"
+        alt="gcp-vm-login"/></p>
+<h3 id="test-the-vm">Test the VM</h3>
+<p>Install the <strong>nginx</strong> web server.</p>
+<pre><code>sudo apt-get -y update
+sudo apt-get -y install nginx
+</code></pre><p>It will take a few seconds to install it. Once it installs.<br>
+Open the browser and enter the VM IP address.</p>
+<p><img  src="./images/gcp-nginx.PNG"
+        alt="gcp-nginx"/></p>
+<h3 id="stop-the-vm">Stop the VM</h3>
+<p>You can save some money by stopping or deleting the VM when you're not using it.</p>
+<p>From the top, you can <strong>Stop</strong> or <strong>Delete</strong> the VM.</p>
+<p><img  src="./images/gcp-vm-stop.PNG"
+        alt="gcp-stop"/></p>
+<p>Next time when you'll start it only the public IP of the vm will change.</p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/cloud/>Cloud</a><a class="category" href=/categories/gcp/>GCP</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/gcp/>gcp</a><a class="tag" href=/tags/cloud/>cloud</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-login-as-root-in-gcp-linux-vm/"><span class="li iconfont icon-article"></span>How to Login as Root in GCP Linux Vm</a></p><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-azure/"><span class="li iconfont icon-article"></span>How to create a Linux VM in Azure?</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

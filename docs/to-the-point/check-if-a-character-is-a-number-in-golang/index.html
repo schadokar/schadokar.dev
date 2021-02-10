@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Check if a character is a number in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Check if a character is a number in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Check if a character is a number in Golang</h1><p class="article date">Saturday, December 19, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="https://schadokar.dev/images/golang-basic.png" alt>
+          </p><p><a href="https://unicode-table.com/en/"target="_blank">Unicode</a> is a computing standard for the consistent encoding symbols.</p>
+<p>All the characters and symbols assigned a code.</p>
+<p>For ex.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">A</span> <span style="color:#a6e22e">U</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0041</span>
+<span style="color:#a6e22e">अ</span> <span style="color:#a6e22e">U</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0</span><span style="color:#ae81ff">905</span>
+</code></pre></div><p>All the Unicode is divided into various categories. Browse all the <a href="https://www.compart.com/en/unicode/category"target="_blank">categories</a>.</p>
+<ul>
+<li><a href="https://www.compart.com/en/unicode/category/Ll"target="_blank">Ll</a> Lowercase Letters (a, b, µ, ɸ)</li>
+<li><a href="https://www.compart.com/en/unicode/category/Nl"target="_blank">Nl</a> Letter Number (Ⅰ, ᛯ)</li>
+<li><a href="https://www.compart.com/en/unicode/category/Lo"target="_blank">Lo</a> Other Letter (अ, ƻ)</li>
+</ul>
+<p>Golang package <code>unicode</code> provides a wide range of validation methods on different set of Unicode.</p>
+<h2 id="isnumber">IsNumber</h2>
+<p><code>IsNumber</code> function validates the set of Unicode number characters, category N(Nd, Nl, No).</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">IsNumber</span>(<span style="color:#a6e22e">r</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">bool</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;unicode&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">str</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;1b१Ⅰ¼&#34;</span>
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">char</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">str</span> {
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">unicode</span>.<span style="color:#a6e22e">IsNumber</span>(<span style="color:#a6e22e">char</span>) {
+			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">char</span>), <span style="color:#a6e22e">char</span>, <span style="color:#e6db74">&#34;is number rune&#34;</span>)
+		} <span style="color:#66d9ef">else</span> {
+			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">char</span>), <span style="color:#a6e22e">char</span>, <span style="color:#e6db74">&#34;is not a number rune&#34;</span>)
+		}
+	}
+}
+</code></pre></div><p><strong>Output</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">49</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">number</span> <span style="color:#66d9ef">rune</span>
+<span style="color:#a6e22e">b</span> <span style="color:#ae81ff">98</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">number</span> <span style="color:#66d9ef">rune</span>
+<span style="color:#a6e22e">१</span> <span style="color:#ae81ff">2407</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">number</span> <span style="color:#66d9ef">rune</span>
+<span style="color:#960050;background-color:#1e0010">Ⅰ</span> <span style="color:#ae81ff">8544</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">number</span> <span style="color:#66d9ef">rune</span>
+<span style="color:#960050;background-color:#1e0010">¼</span> <span style="color:#ae81ff">188</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">number</span> <span style="color:#66d9ef">rune</span>
+</code></pre></div><p><a href="https://play.golang.org/p/AtA1yCbAvcj"target="_blank">Try it</a></p>
+<h2 id="isdigit">IsDigit</h2>
+<p><code>IsDigit</code> function validates only the <code>Nd</code> Unicode category. It is a subset of <code>IsNumber</code>.</p>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">IsDigit</span>(<span style="color:#a6e22e">r</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">bool</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;unicode&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">str</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;1b१Ⅰ¼&#34;</span>
+
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">char</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">str</span> {
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">unicode</span>.<span style="color:#a6e22e">IsDigit</span>(<span style="color:#a6e22e">char</span>) {
+			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">char</span>), <span style="color:#a6e22e">char</span>, <span style="color:#e6db74">&#34;is digit rune&#34;</span>)
+		} <span style="color:#66d9ef">else</span> {
+			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">char</span>), <span style="color:#a6e22e">char</span>, <span style="color:#e6db74">&#34;is not a digit rune&#34;</span>)
+		}
+	}
+}
+</code></pre></div><p><strong>Output</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">49</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">digit</span> <span style="color:#66d9ef">rune</span>
+<span style="color:#a6e22e">b</span> <span style="color:#ae81ff">98</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">digit</span> <span style="color:#66d9ef">rune</span>
+<span style="color:#a6e22e">१</span> <span style="color:#ae81ff">2407</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">digit</span> <span style="color:#66d9ef">rune</span>
+<span style="color:#960050;background-color:#1e0010">Ⅰ</span> <span style="color:#ae81ff">8544</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">digit</span> <span style="color:#66d9ef">rune</span>
+<span style="color:#960050;background-color:#1e0010">¼</span> <span style="color:#ae81ff">188</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">digit</span> <span style="color:#66d9ef">rune</span>
+</code></pre></div><h2 id="final-words">Final Words</h2>
+<p>You can always use a validation on ASCII values. ASCII value of <code>0</code> is <code>30</code> and <code>9</code> is <code>39</code>.<br>
+If <code>&gt;=</code> 30 and <code>&lt;=</code> 39.</p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2020/>2020</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="tag" href=/tags/golang/>golang</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/golang-string-replace/"><span class="li iconfont icon-article"></span>Golang String Replace</a></p><p><a class="link" href="/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/"><span class="li iconfont icon-article"></span>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

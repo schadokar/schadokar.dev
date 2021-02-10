@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Are Smart Contract and Chaincode the Same in Hyperledger Fabric&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Are Smart Contract and Chaincode the Same in Hyperledger Fabric" /><meta name="twitter:image" content="https://schadokar.dev/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/asset-1.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Are Smart Contract and Chaincode the Same in Hyperledger Fabric</h1><p class="article date">Monday, June 10, 2019<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="asset-1.png" alt>
+          </p><p>Often Hyperledger Fabric users use the terms smart contract and chaincode interchangeably. Lets first understand what a smart contract is:</p>
+<blockquote>
+<p>A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties. These transactions are trackable and irreversible. — <a href="https://en.wikipedia.org/wiki/Smart_contract"target="_blank">Wikipedia</a></p>
+</blockquote>
+<p>Let's deduce this in simple language — a contract can execute on its own if it satisfies the terms of the contract without any interference from a third party.</p>
+<p>In Hyperledger Fabric:</p>
+<blockquote>
+<p>A smart contract defines the transaction logic that controls the lifecycle of a business object contained in the world state.</p>
+</blockquote>
+<p>Too technical? Let's simplify it. Let’s take an example of a Car whose owner is Alice. The object is Car and it is saved in the World State.</p>
+<blockquote>
+<p>World State stores the latest state of any object while the blockchain stores all the history of the object from its creation to its current state.</p>
+</blockquote>
+<ul>
+<li>Now, Alice wants to sell this car to Bob.</li>
+<li>Alice will initiate a transaction proposal to change the ownership from her to Bob.</li>
+<li>The smart contract will change the ownership of the car in the world state according to the transaction logic.</li>
+</ul>
+<p>In Fabric, a smart contract is packaged into the chaincode and then chaincode is deployed to a blockchain network. For simple understanding, you can think of chaincode as the superset of the smart contracts.</p>
+<p>Multiple smart contracts can be defined within the same chaincode.</p>
+<p>There can be a chaincode for a Vehicle and it can have multiple smart contracts such as Car Contract, Bike Contract, and Truck Contract.</p>
+<p><img  src="./asset-2.png"
+        alt="draw.io"/></p>
+<p>Every chaincode has an endorsement policy associated to it while deploying it on a blockchain network. This endorsement policy will apply to all the smart contracts defined in it.</p>
+<blockquote>
+<p>An endorsement policy is the guideline which defines which organizations must sign a transaction to declared the transaction as valid.</p>
+</blockquote>
+<hr>
+<p>In short, the smart contracts manage the transaction logic or business logic while chaincode manages the smart contracts defined in it.</p>
+<p>In the Fabric documentation, chaincode’s definition varies a little bit according to the audience.</p>
+<p>In “Key Concepts”, the definitions are precise and short. Ideal for the beginners. According to key concepts, chaincode is a program which works according to the business logic written in it.</p>
+<p>For developers, a chaincode is typically used by administrators to group related smart contracts for deployment, but can also be used for low-level system programming of Fabric.</p>
+<p>For a deeper understanding of fabric concepts keep reading.</p>
+<hr>
+<p><strong>References:</strong></p>
+<p><a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/smartcontract/smartcontract.html"target="_blank"><strong>Smart Contracts and Chaincode - hyperledger-fabricdocs master documentation</strong></a></p>
+<p><a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode.html"target="_blank"><strong>Chaincode Tutorials - hyperledger-fabricdocs master documentation</strong></a></p>
+<p><a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4ade.html"target="_blank"><strong>Chaincode for Developers - hyperledger-fabricdocs master documentation</strong></a></p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/article/>Article</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="category" href=/categories/2019/>2019</a><a class="tag" href=/tags/blockchain/>blockchain</a><a class="tag" href=/tags/hyperledger-fabric/>hyperledger-fabric</a><a class="tag" href=/tags/article/>article</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/build-a-todo-app-in-golang-mongodb-and-react/"><span class="li iconfont icon-article"></span>Build a Todo App in Golang, MongoDB, and React</a></p><p><a class="link" href="/posts/hyperledger-fabric-installation-guide/"><span class="li iconfont icon-article"></span>Hyperledger Fabric Installation Guide!</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

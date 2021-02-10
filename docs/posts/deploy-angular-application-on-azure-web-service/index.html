@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Deploy Angular application on Azure Web Service&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Deploy Angular application on Azure Web Service" /><meta name="twitter:image" content="https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/asset-1.png" /><body><section id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+        </span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+    </div>
+    
+</section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Deploy Angular application on Azure Web Service</h1><p class="article date">Friday, November 23, 2018<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>
+            <img class="cover" src="asset-1.png" alt>
+          </p><p>Deploying an Angular application on the Azure Web Service can be a pain if you don’t know from where to start.</p>
+<p>This tutorial will consist of the following steps:</p>
+<ol>
+<li><strong>Create an Azure Web Service</strong></li>
+<li><strong>Build the Angular application</strong></li>
+<li><strong>Configure the Web Service and deploy it</strong></li>
+</ol>
+<hr>
+<p>Let’s start with creating the Azure Web Service;</p>
+<p>If you don’t have any account, you can <a href="https://azure.microsoft.com/en-us/free/"target="_blank"><strong><em>sign up for free account</em></strong></a> and $200 dollars will be credit in your azure account to play with.</p>
+<p>Login to your Azure Account.</p>
+<h4 id="step-11-create-a-webapp"><strong>Step: 1.1</strong> Create a Web App</h4>
+<p>Click on Create a resource → Search Web App → Create</p>
+<p><img  src="./asset-2.png"
+        alt="Create a Web App"/></p>
+<h4 id="step-12"><strong>Step: 1.2</strong></h4>
+<p>Give your application a unique name, you can leave the rest of the field as default. Service plan is the host where the application is going to be hosted. It has different plans for that but for our demo let it be the default.</p>
+<p><img  src="./asset-3.png"
+        alt="Create Web App"/></p>
+<p>Once it is created you can check your application in App Service blade or search for your application in the search bar.</p>
+<hr>
+<h4 id="step-21-build-the-angular-application"><strong>Step 2.1:</strong> Build the angular application</h4>
+<p><code>ng build --prod</code></p>
+<p>Once this command runs successfully, a <code>dist</code> folder will be created in your application directory.</p>
+<p><img  src="./asset-4.png"
+        alt="Angular Application Folder"/></p>
+<p>Now we’re ready to deploy our application.</p>
+<blockquote>
+<p>It is worth reading the <a href="https://stackoverflow.com/questions/49065635/inconsistency-in-ng-build-vs-ng-build-prod"target="_blank">difference between</a> <code>[ng build](https://stackoverflow.com/questions/49065635/inconsistency-in-ng-build-vs-ng-build-prod)</code> <a href="https://stackoverflow.com/questions/49065635/inconsistency-in-ng-build-vs-ng-build-prod"target="_blank">and</a> <code>[ng build --prod](https://stackoverflow.com/questions/49065635/inconsistency-in-ng-build-vs-ng-build-prod)</code>.</p>
+</blockquote>
+<hr>
+<h4 id="step-31-open-your-web-app-inazure"><strong>Step 3.1</strong> Open your Web App in Azure</h4>
+<p>There are multiple ways to go to your web app, here we’re using App Service click on it and then select your web app.</p>
+<p><img  src="./asset-5.png"
+        alt/></p>
+<p>Click the URL — it is the URL where the application is hosted. By default, azure serve a default static page.</p>
+<p>Search advanced tools in the web app search bar and click on <code>Go</code>.</p>
+<p><img  src="./asset-6.png"
+        alt="Kudo Advanced Tools"/></p>
+<p>A Kudu window will open. To check the <strong>node version of the Web App</strong> supports click on Runtime Versions. At the time of writing this article, it is supporting <strong>node v8.11.1</strong>.</p>
+<p>To learn more about how to install a specific version <a href="https://blogs.msdn.microsoft.com/azureossds/2016/04/20/nodejs-and-npm-versions-on-azure-app-services/"target="_blank">read this</a>.</p>
+<p><img  src="./asset-7.png"
+        alt/></p>
+<p><strong>Step 3.2:</strong> Now go to CMD console under debug console and follow the below commands:</p>
+<ol>
+<li>Click site &raquo; wwwroot</li>
+<li>Go to Angular Application Folder, Open dist folder &raquo; angularDemoDeploy (In this case)</li>
+<li>Drag and drop this folder to the wwwroot folder (CMD console of Kudo)</li>
+<li>Delete the hostingstart.html</li>
+</ol>
+<p><img  src="./asset-8.png"
+        alt/></p>
+<p>5. Go to Azure Web App and open Application Settings</p>
+<p>6. In <strong>Virtual applications and directories</strong> change the physical path</p>
+<p>from <strong>site\wwwroot</strong> to <strong>site\wwwroot\angularDemoDeploy</strong> and <strong>save.</strong></p>
+<blockquote>
+<p>here angularDemoDeploy is the name of the folder which you uploaded.</p>
+</blockquote>
+<p><img  src="./asset-9.png"
+        alt="change the physical path"/></p>
+<p>Hurray! The angular application is successfully deployed on Azure Web App. Go to your application URL and enjoy!</p>
+<p><img  src="./asset-10.png"
+        alt/></p>
+<p>Thanks for reading! Any comments and suggestions are most welcome.</p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/cloud/>Cloud</a><a class="category" href=/categories/2018/>2018</a><a class="tag" href=/tags/azure/>azure</a><a class="tag" href=/tags/angular/>angular</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/run-the-ganache-cli-inside-the-docker-container/"><span class="li iconfont icon-article"></span>Run the Ganache Cli Inside the Docker Container</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap">
+        <span class="footer">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></span>
+        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+    </div>
+</section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
