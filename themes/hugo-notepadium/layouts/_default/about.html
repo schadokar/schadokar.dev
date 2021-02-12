@@ -1,13 +1,83 @@
 {{- define "main" -}}
-{{- $justify := false -}}
-{{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
-<div class="article-container">
-    {{- partial "article-header.html" . -}}
-    <article class="article markdown-body" {{- if $justify -}}style="text-align: justify;" {{- end -}}>
-        {{- with .Params.cover -}}<p><img class="cover" src="{{- . | safeURL -}}" alt></p>{{- end -}}
-        {{- .Content -}}
-    </article>
-</div>
+<main>
+    <header id="about">
+        <div class="container">
+            {{- partial "article-header.html" . -}}
+            <p class="subtitle">🚀 Hi there, I am Shubham Kumar Chadokar <br> I am a Software Engineer 👓.</p>
+        </div>
+    </header>
+    <section class="imgp">
+        <div class="container">
+            {{- .Content -}}
+            {{- with .Params.cover -}} <div class="img-size">
+               <p><img class="cover" src="{{- . | safeURL -}}" alt></p>
+            </div>
+            {{- end -}} 
+        </div>
+    </section>
+
+    <section class="publications space d-none">
+        <div class="container">
+            <div class="artheader">
+				<h3>Publications</h3>
+            </div>
+
+            <p>A list of some of the articles I've written outside of this website.</p>
+
+            <ul>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+                <li>
+                    <a href="#">How to Code in JavaScript (Tutorial Series)</a>
+                    -
+                    <em>DigitalOcean, 2017–2020</em>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+</main>
+
+
+
 
 
 {{- end -}}

@@ -7,6 +7,7 @@ categories: ["Tutorial", "Cloud", "2018"]
 cover: asset-1.png
 published: true
 canonical_link: https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/
+popular: true
 redirect_from:
   - /deploy-angular-application-on-azure-web-service
 ---

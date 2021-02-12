@@ -1,0 +1,22 @@
+
+
+<section id="projects" class="space">
+    <div class="artheader">
+        <h3>Projects</h3>
+    </div>
+    {{ range first 5 .Site.Data.projects }}
+        <div class="project">
+            <div>
+                <a href="{{.path}}" target="_blank" rel="noreferrer">
+                    <div class="icon"><i class="fa {{.icon}}"></i></div>
+                    <h3>{{.title}}</h3>
+                </a>
+                <div class="description">{{.description}}</div>
+            </div>
+            <div class="flex">
+                <a class="button" href="{{.source}}" target="_blank"
+                    rel="noreferrer">Source</a>
+            </div>
+        </div>
+    {{end}}
+    </section>

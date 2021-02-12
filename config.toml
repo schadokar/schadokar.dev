@@ -30,6 +30,7 @@ readingTime = true
   enable = false
   avatar = "/images/pic.png"
   name = "Shubham Chadokar"
+  description = "I'm a software engineer and writer. This website is my digital garden — a compendium of the things I've learned and created over the years."
   bio = "Software Engineer"  # support markdown syntax
   twitter = "schadokar1"  # https://twitter.com/XXX
   github = "schadokar"  # https://github.com/XXX

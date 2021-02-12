@@ -1,16 +1,16 @@
 <section class="hero">
 	<div class="hero-wrap">
 		<div class="container">
-			<div>
-				<img src="images/pic.png" alt="no image yet" class="avtar">
+			<div class="hero-img">
+				<img src="{{ .Site.Params.profile.avatar}}" alt="{{ .Site.Params.profile.name}}" class="avtar">
 			</div>
 			<div>
-				<h3>I'm Shubham Chadokar</h3>
-				<p>I'm a software engineer and writer. This website is my digital garden — a compendium of the things I've learned and created over the years.</p>
+				<h3>I'm {{ .Site.Params.profile.name}}</h3>
+				<p>{{ .Site.Params.profile.description}}</p>
 				<div class="btntrio">
-					<a href="" class="button">About me</a>
-					<a href="" class="button">Join newsletter</a>
-					<a href="" class="button">GitHub</a>
+					<a href="/about/" class="button">About me</a>
+					<a href="https://twitter.com/{{ .Site.Params.profile.twitter}}" class="button">Twitter</a>
+					<a href="https://github.com/{{ .Site.Params.profile.github}}" class="button">GitHub</a>
 					
 				</div>
 			</div>

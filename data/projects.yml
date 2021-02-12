@@ -1,0 +1,35 @@
+- icon: 'fa-pencil'
+  title: 'schadokar.dev'
+  path: 'https://github.com/schadokar/schadokar.dev'
+  source: 'https://github.com/schadokar/schadokar.dev'
+  description: 'Personal Website for my articles and tutorials.'
+- icon: 'fa-desktop'
+  title: 'My Calc'
+  path: 'https://github.com/schadokar/my-calc'
+  source: 'https://github.com/schadokar/my-calc'
+  description: "my-calc cli built in golang using cobra library. It do the basic addition operation."
+- icon: 'fa-file-text-o'
+  title: 'Go To Do App'
+  path: 'https://github.com/schadokar/go-to-do-app'
+  source: 'https://github.com/schadokar/my-calc'
+  description: "This is a to-do list application. It's server is created in Golang, db is mongodb and client is in React."
+- icon: 'fa-server'
+  title: 'Redis Go Server'
+  path: 'https://github.com/schadokar/'
+  source: 'https://github.com/schadokar/'
+  description: "A prebuild golang server to work with redis db. The docker image is hosted on [Docker Hub](https://hub.docker.com/r/schadokar/redis-go-server)."
+- icon: 'fa-coffee'
+  title: 'Coffee Hai'
+  path: 'https://github.com/schadokar/coffee-hai'
+  source: 'https://github.com/schadokar/coffee-hai'
+  description: "Coffee hai is a project of journey of a coffee. It is microservice project built using golang, reactjs, mysql, redis, docker, restapi, grpc."
+- icon: 'fa-bar-chart'
+  title: 'Etherscan React'
+  path: 'https://github.com/schadokar/etherscan-react'
+  source: 'https://github.com/schadokar/etherscan-react'
+  description: "This project is a simple demonstration of etherscan dashboard."
+- icon: 'fa-truck'
+  title: 'Logistics Blockchain Network'
+  path: 'https://github.com/schadokar/logistics-blockchain-network'
+  source: 'https://github.com/schadokar/logistics-blockchain-network'
+  description: "Logistics Project, it is developed on Hyperledger Composer Blockchain Tool. It demonstrate the journey of an item from a manufacturer to a consumer."

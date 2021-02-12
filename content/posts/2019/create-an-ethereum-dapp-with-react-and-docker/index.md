@@ -7,6 +7,7 @@ categories: ["Tutorial", "Blockchain", "2019"]
 cover: asset-1.png
 published: true
 canonical_link: https://schadokar.dev/posts/create-an-ethereum-dapp-with-react-and-docker
+popular: true
 redirect_from:
   - /create-an-ethereum-dapp-with-react-and-docker
 ---

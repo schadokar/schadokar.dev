@@ -1,8 +1,163 @@
 {{- define "main" -}}
 
+<div id="articles">
+	<div class="container">
+
+		{{- partial "latest.html" .  -}}
+		{{- partial "popular.html" .  -}}
+		{{- partial "projects.html" .  -}}
+		{{- partial "points.html" .  -}}
+		{{- partial "ebook.html" .  -}}
+
+		
+
+		
+		
+	</div>
+</div>
+
+
+<div id="interview" class="d-none">
+	<div class="container">
+		<section class="interview space">
+			<div class="artheader">
+				<h3>Interviews</h3>
+			</div>
+			<div class="guide-page">
+				<div class="guide">
+					<div>
+						<a href="#" class="image-link">
+							<img src="https://www.taniarascia.com/static/techy-65d31428c74d2b107a7b8d7b475fce45.png" alt="techy" height="50" width="50">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="image-link">
+							<h2>Web Developer: Shubham Chadokar</h2>
+						</a>
+						<p class="description">Interview with Ellen Twomey on the You are techY Podcast</p>
+					</div>
+				</div>
+				<div class="guide">
+					<div>
+						<a href="#" class="image-link">
+							<img src="https://www.taniarascia.com/static/techy-65d31428c74d2b107a7b8d7b475fce45.png" alt="techy" height="50" width="50">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="image-link">
+							<h2>Web Developer: Shubham Chadokar</h2>
+						</a>
+						<p class="description">Interview with Ellen Twomey on the You are techY Podcast</p>
+					</div>
+				</div>
+				<div class="guide">
+					<div>
+						<a href="#" class="image-link">
+							<img src="https://www.taniarascia.com/static/techy-65d31428c74d2b107a7b8d7b475fce45.png" alt="techy" height="50" width="50">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="image-link">
+							<h2>Web Developer: Shubham Chadokar</h2>
+						</a>
+						<p class="description">Interview with Ellen Twomey on the You are techY Podcast</p>
+					</div>
+				</div>
+				<div class="guide">
+					<div>
+						<a href="#" class="image-link">
+							<img src="https://www.taniarascia.com/static/techy-65d31428c74d2b107a7b8d7b475fce45.png" alt="techy" height="50" width="50">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="image-link">
+							<h2>Web Developer: Shubham Chadokar</h2>
+						</a>
+						<p class="description">Interview with Ellen Twomey on the You are techY Podcast</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div id="Speaking"  class="d-none">
+	<div class="container">
+		<section class="interview space">
+			<div class="artheader">
+				<h3>Speaking</h3>
+			</div>
+			<div class="guide-page">
+				<div class="guide">
+					<div>
+						<a href="#" class="image-link">
+							<img src="https://www.taniarascia.com/static/techy-65d31428c74d2b107a7b8d7b475fce45.png" alt="techy" height="50" width="50">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="image-link">
+							<h2>Web Developer: Shubham Chadokar</h2>
+						</a>
+						<p class="description">Interview with Ellen Twomey on the You are techY Podcast</p>
+					</div>
+				</div>
+				<div class="guide">
+					<div>
+						<a href="#" class="image-link">
+							<img src="https://www.taniarascia.com/static/techy-65d31428c74d2b107a7b8d7b475fce45.png" alt="techy" height="50" width="50">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="image-link">
+							<h2>Web Developer: Shubham Chadokar</h2>
+						</a>
+						<p class="description">Interview with Ellen Twomey on the You are techY Podcast</p>
+					</div>
+				</div>
+				<div class="guide">
+					<div>
+						<a href="#" class="image-link">
+							<img src="https://www.taniarascia.com/static/techy-65d31428c74d2b107a7b8d7b475fce45.png" alt="techy" height="50" width="50">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="image-link">
+							<h2>Web Developer: Shubham Chadokar</h2>
+						</a>
+						<p class="description">Interview with Ellen Twomey on the You are techY Podcast</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div id="Newsletter">
+	<div class="container">
+		<section class="newsletter space">
+			<div class="artheader">
+				<h3>Newsletter</h3>
+			</div>
+			<div>
+				<p>I send out an email when I create something new.</p>
+				<a href="/newsletter/" class="button"><span class="emoji">💌</span> Get the Newsletter</a>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+
+
+<div class="d-none">
+	
 
 {{- partial "homepage-body.html" . -}}
 {{- $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
 {{- partial "note-list.html" $paginator -}}
 {{- partial "pagination.html" $paginator -}}
+
+
+</div>
+
 {{- end -}}
