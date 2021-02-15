@@ -1,7 +1,11 @@
 {{- define "main" -}}
 {{- $paginator := .Paginator -}}
 
-<section class="article header"><h1>{{- .Title -}}</h1></section>
+<section class="article header"><h1 class="text-left">{{- .Title -}}</h1></section>
+{{if eq .URL "/posts/"}}
+{{ partial "search-form.html" . }}
+{{ partial "search-index.html" . }}
+{{end}}
 {{- partial "section-body.html" . -}}
 <!-- Ranges through content/posts/*.md -->
 

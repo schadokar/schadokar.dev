@@ -1179,6 +1179,20 @@ a.category:hover, a.tag:hover {
   font-weight: 700;
   color: #343a40;
 }
+.search-form #search-input
+{
+  padding: .8rem 1rem;
+    background: #f1f4f8;
+    border: 2px solid #d6d9de;
+    width: 100%;
+    max-width: 400px;
+    border-radius: .35rem;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
 
 
 
