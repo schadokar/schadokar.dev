@@ -7,13 +7,20 @@
     {{- range $paginator.Pages -}}
       {{- $relURL := replace .RelPermalink "#" "%23" -}}
       {{- $relURL = replace $relURL "." "%2e" -}}
-    <li class="item"><a class="note" href="{{- $relURL -}}">
+    <li class="item"><a class="note row" href="{{- $relURL -}}">
             {{ with .Params.cover }}
-              <img src="{{ index . }}" style="width: 150px;" alt="cover missing">
+            <div class="col-4">
+              <img src="{{ index . }}" alt="cover missing" class="img-fluid">
+            </div>
+              
             {{ end }}
-            <p class="note title">{{- .Title | safeHTML -}}</p>
+            <div class="col-8">
+              <p class="note title">{{- .Title | safeHTML -}}</p>
          
             {{- if .Description -}}<p class="note content">{{- .Description | plainify | safeHTML -}}{{- if .Truncated -}}<span class="mldr">&mldr;</span>{{- end -}}</p>{{- end -}}
+
+            </div>
+            
         </a>
         {{- partial "note-labels.html" . -}}
     </li>
