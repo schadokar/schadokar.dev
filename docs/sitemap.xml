@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>https://schadokar.dev/categories/2021/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/data-structures/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/how-to-remove-consecutive-characters-from-a-string/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/casual/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/casual/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/flashback-2020/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-format-golang-project/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/check-if-key-exists-in-map-in-golang/</loc><lastmod>2020-12-21T10:38:27+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/golang-string-replace/</loc><lastmod>2020-12-19T21:15:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/check-if-a-character-is-a-number-in-golang/</loc><lastmod>2020-12-19T15:04:55+05:30</lastmod></url><url>
