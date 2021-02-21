@@ -4,7 +4,10 @@
 }
 
 html {
-  font-family: "Lato", sans-serif;
+  /* font-family: "Lato", sans-serif; */
+  
+  font-family: 'Roboto', sans-serif;
+
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6em;
@@ -15,6 +18,7 @@ body {
   display: block;
   color: rgb(36, 41, 46);
   background-color: #f3f6f9;
+  font-family: 'Roboto', sans-serif !important;
 
   word-break: normal;
   word-wrap: break-word;
@@ -43,6 +47,7 @@ h5,
 h6 {
   font-weight: 700;
   line-height: 1.5;
+  color: #343a40;
 }
 
 h1 {
@@ -319,7 +324,7 @@ b {
   font-size: 1.2em;
 }
 .date {
-  font-size: 0.875em;
+  font-size: 0.775em;
 }
 
 .langs {
@@ -367,7 +372,9 @@ b {
 .title {
   color: rgba(29, 43, 76, 0.85);
 }
-
+.article.header .title{
+  font-weight: 700;
+}
 .note {
   display: block;
   text-decoration: none;
@@ -397,6 +404,7 @@ b {
 
 .note.content {
   color: rgb(36, 41, 46);
+  font-size: 0.9rem;
 }
 
 .note.imgs {
@@ -419,9 +427,13 @@ b {
 }
 
 .article.header {
-  text-align: center;
+  /* text-align: center; */
   margin-top: 4px;
   margin-bottom: 24px;
+  padding-top: 1.5rem;
+}
+.article.header   h1{
+  font-size: 2rem;
 }
 
 .article.date {
@@ -488,6 +500,39 @@ b {
   margin: 30px 0;
   padding: 15px 20px;
   border: 2px dashed #ddd;
+}
+.article.navigation 
+{
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+}
+.article.navigation p
+{
+  flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(50% - 2rem);
+
+}
+.article.navigation p:first-of-type {
+  text-align: right;
+}
+.article.navigation p a
+{
+  margin: .5rem 1rem;
+    border-bottom: none;
+    transition: all .2s ease;
+    padding: 1.5rem;
+    border-radius: .35rem;
+    background: #f1f4f8;
+    color: #343a40;
+    display: block;
+}
+.article.navigation p a span{
+  font-weight: 400;
+    display: block;
+    font-size: .7rem;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .article.author {
@@ -792,7 +837,11 @@ b {
 
 .site.home:hover{opacity: 1;}
 
-.nav.wrap nav a{color: #495057; margin-right: 0.5rem; padding: .5rem;}
+.nav.wrap nav a{color: #495057; margin-right: 0.5rem; padding: .5rem; font-size: 0.9rem;
+  font-weight: 400;
+  color: #495057}
+
+
 .nav.wrap nav a:hover{background: #f1f4f8 !important;
   color: #000 !important;
   border-radius: 5px;
@@ -899,6 +948,20 @@ b {
 
 #article container{
   max-width: 1024px;
+}
+.article {
+  font-size: 0.9rem;
+}
+
+.article h1{
+  font-size: 2rem;
+}
+.article h2{
+  font-size: 1.7rem;
+}
+
+.article h3{
+  font-size: 1.5rem;
 }
 
 .posts{margin-top: 1.55rem;}
@@ -1085,15 +1148,16 @@ a.button:hover{
 /* about section */
 
 #about h1{
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1.2rem;
   font-weight: 800;
+  color: #343a40;
 }
 
 p.subtitle{
   color: #60656c;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
     font-weight: 400;
     margin-bottom: 0;
 }
@@ -1168,6 +1232,11 @@ a.category, a.tag {
   line-height: 1;
 }
 
+ .article.header .labels a.category, .article.header .labels a.tag{
+    padding: .3rem .4rem!important;
+    font-weight: 400;
+  }
+
 a.category:hover, a.tag:hover {
   background: #e6eaf0;
   color: #343a3f;
@@ -1175,7 +1244,7 @@ a.category:hover, a.tag:hover {
 }
 
 .note.title, .site.name {
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   color: #343a40;
 }
@@ -1269,17 +1338,18 @@ a.category:hover, a.tag:hover {
     font-size: 1rem;
   }
   .article.header {
-    /* text-align: left; */
+    text-align: left;
 
   }
   .article.header h1{
     font-size: 1.5rem  !important;
   }
+
+ 
   #content .note.title, #content .site.name {
     font-size: 0.9em;
   }
-  .note.content
-  {font-size: 0.8em;}
+  .note.content  {font-size: 0.8rem;}
 
   p.subtitle{
     font-size: 1rem;
