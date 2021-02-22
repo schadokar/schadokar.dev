@@ -6,15 +6,17 @@
             <p class="subtitle">🚀 Hi there, I am Shubham Kumar Chadokar <br> I am a Software Engineer 👓.</p>
         </div>
     </header>
-    <section class="imgp">
+    <section class="imgp about-page">
         <div class="container">
-            {{- .Content -}}
+            {{- .Content | safeHTML -}}
             {{- with .Params.cover -}} <div class="img-size">
                <p><img class="cover" src="{{- . | safeURL -}}" alt></p>
             </div>
             {{- end -}} 
         </div>
     </section>
+
+    
 
     <section class="publications space d-none">
         <div class="container">

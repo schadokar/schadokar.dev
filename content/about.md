@@ -1,10 +1,10 @@
 ---
 image: /images/pic.png
 layout: about
-title: 💭 About Me
+title: About Me
 ---
 
-:rocket: Hi there, I am Shubham Kumar Chadokar.
+
 
 {{< profilepic >}}
 
@@ -16,6 +16,14 @@ My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, React
 I love to do photography :camera: in my me time.
 
 I like philosophical and mythological novels :books:. My favourites are Meluha and The Kite Runner.
+
+## Open-source projects
+### TakeNote
+A note-taking web app for developers.
+
+- [Demo](#)
+- [Source](#)
+- [Write up](#)
 
 # Talks
 

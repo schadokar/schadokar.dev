@@ -83,7 +83,7 @@ q {
 
 ::selection {
   color: #fff;
-  background-color: #e33e33;
+  background: #3b5bdb;
 }
 
 mark {
@@ -223,7 +223,7 @@ b {
 #content {
   display: block;
   margin: 0 auto;
-  max-width: 50%;
+  max-width: 56%;
 }
 
 #footer {
@@ -1148,10 +1148,10 @@ a.button:hover{
 /* about section */
 
 #about h1{
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-top: 2rem;
   margin-bottom: 1.2rem;
-  font-weight: 800;
+  /* font-weight: 800; */
   color: #343a40;
 }
 
@@ -1159,19 +1159,20 @@ p.subtitle{
   color: #60656c;
   font-size: 1.1rem;
     font-weight: 400;
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
 }
 
 .imgp img{
   width: 100%;
   height: 500px;
   object-fit: cover;
-  margin: 0 auto;
+  margin: 0 0 1.5rem 0 ;
   padding-left: 0px  !important;
 }
 
 .imgp p, .publications p{
-  padding-top: .8rem;
+  /* padding-top: .8rem; */
+  font-size: .9rem;
 }
 
 .img-size{
@@ -1248,20 +1249,113 @@ a.category:hover, a.tag:hover {
   font-weight: 700;
   color: #343a40;
 }
-.search-form #search-input
-{
-  padding: .8rem 1rem;
-    background: #f1f4f8;
-    border: 2px solid #d6d9de;
-    width: 100%;
-    max-width: 400px;
-    border-radius: .35rem;
-    font-size: 1rem;
-    -webkit-appearance: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3rem;
+
+
+.search-form #search-input{
+  padding: .5rem .9rem;
+  background: #f1f4f8;
+  border: 2px solid #d6d9de;
+  width: 100%;
+  max-width: 400px;
+  border-radius: .35rem;
+  font-size: .8rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  /*  */
 }
+
+.search-form .col-12{
+  padding-left: 0;
+}
+
+
+#open-source-projects{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  padding-bottom: .5rem;
+  border-bottom: 4px solid #f1f4f8;
+}
+
+#takenote{
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.38rem;
+  color: #495057;
+  font-weight: 600;
+}
+
+.about-page ul{
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-page ul li a{
+  color: #343a40;
+  border-bottom: 3px solid #b9cdfb;
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.about-page ul li a:hover{
+  color: #101010;
+    border-bottom: 3px solid #96b4f9;
+    text-decoration: none;
+}
+
+
+/* article section */
+
+.article.header h1{
+  font-size: 1.85rem;
+  line-height: 1.1;
+  color: #343a40;
+}
+
+.article.date{
+  margin-top: 1.9rem;
+  margin-bottom: 0;
+  font-size: 0.68rem;
+}
+
+.article.labels{
+  margin-top: .4rem;
+}
+
+a.category{
+  margin-left: 0;
+}
+
+.article.navigation p a{
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.article.navigation p a:hover{
+  transform: translate3D(0,-1px,0);
+  background: #e1e6ed;
+}
+
+.article.markdown-body p{
+  margin: 0 0 0.8rem;
+}
+
+.article.markdown-body h3{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.article.markdown-body h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.highlight pre{
+  border-radius: .35rem;
+  background-color: #353535 !important;
+}
+
 
 
 
