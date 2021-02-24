@@ -1,15 +1,36 @@
 {{- define "main" -}}
-{{- $paginator := .Paginator -}}
+    {{- $paginator := .Paginator -}}
 
-<section class="article header"><h1 class="text-left">{{- .Title -}}</h1></section>
-{{if eq .URL "/posts/"}}
-{{ partial "search-form.html" . }}
-{{ partial "search-index.html" . }}
-{{end}}
-{{- partial "section-body.html" . -}}
-<!-- Ranges through content/posts/*.md -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <section class="article header"><h1 class="text-left">{{- .Title -}} </h1></section>
+            </div>
+        </div>
+    </div>
 
-{{- partial "note-list.html" $paginator -}}
-{{- partial "pagination.html" $paginator -}}
+
+
+
+    {{if eq .URL "/posts/"}}
+    {{ partial "search-form.html" . }}
+    {{ partial "search-index.html" . }}
+    {{end}}
+
+    {{- partial "section-body.html" . -}}
+    <!-- Ranges through content/posts/*.md -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{- partial "note-list.html" $paginator -}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {{- partial "pagination.html" $paginator -}}
+            </div>
+    </div>
+
+    
 
 {{- end -}}
