@@ -192,6 +192,9 @@ b {
   color: rgba(29, 43, 76, 0.85);
 }
 
+.container{
+  max-width: 825px !important;
+}
 .image-container,
 .image-container .link,
 .image-container .caption {
@@ -822,8 +825,9 @@ b {
 
 .site.name{
   font-size: 1.3rem;
-  margin-right: 3rem;
+  margin-right: 1rem;
   padding: .5rem;
+  padding-left: 0px;
   border: none;
   background: transparent!important;
 }
@@ -837,8 +841,8 @@ b {
 
 .site.home:hover{opacity: 1;}
 
-.nav.wrap nav a{color: #495057; margin-right: 0.5rem; padding: .5rem; font-size: 0.9rem;
-  font-weight: 400;
+.nav.wrap nav a{color: #495057; margin-right: 0.5rem; padding: .5rem; font-size: 0.8rem;
+  font-weight: 500;
   color: #495057}
 
 
@@ -1245,7 +1249,7 @@ a.category:hover, a.tag:hover {
 }
 
 .note.title, .site.name {
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: 700;
   color: #343a40;
 }
