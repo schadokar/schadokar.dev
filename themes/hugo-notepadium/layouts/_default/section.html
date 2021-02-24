@@ -13,8 +13,8 @@
 
 
     {{if eq .URL "/posts/"}}
-    {{ partial "search-form.html" . }}
-    {{ partial "search-index.html" . }}
+        {{ partial "search-form.html" . }}
+        {{ partial "search-index.html" . }}
     {{end}}
 
     {{- partial "section-body.html" . -}}
@@ -29,6 +29,7 @@
             <div class="col-12">
                 {{- partial "pagination.html" $paginator -}}
             </div>
+        </div>
     </div>
 
     
