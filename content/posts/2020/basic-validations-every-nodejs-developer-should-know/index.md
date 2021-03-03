@@ -7,6 +7,7 @@ tags: ["good-practice", "tips"]
 cover: https://schadokar.dev/images/node-basic.png #image show on top
 readingTime: true # show reading time after article date
 published: true
+popular: true
 ---
 
 Validations are the key things to prevent the application's unexpected behaviour. This is a list of basic validations every nodejs developer should know about.  

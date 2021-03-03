@@ -4,7 +4,7 @@
         <a class="pill" href="/posts/">View all</a>
     </div>
     <div class="posts">
-        {{ range first 5 ( where (where .Site.Pages "Type" "posts") ".Params.popular" "=" true ) }}
+        {{ range first 10 ( where (where .Site.Pages "Type" "posts") ".Params.popular" "=" true ) }}
             <div class="post">
                 <a href="{{.URL}}">
                     <div class="post-row">
@@ -15,6 +15,6 @@
                     </div>
                 </a>
             </div>
-        {{end}}        
+        {{end}}
     </div>
 </section>
