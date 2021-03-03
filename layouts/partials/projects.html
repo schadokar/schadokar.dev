@@ -1,22 +1,21 @@
-
-
 <section id="projects" class="space container">
-    <div class="artheader">
-        <h3>Projects</h3>
+  <div class="artheader">
+    <h3>Projects</h3>
+    <a class="pill" href="/projects/">View all</a>
+  </div>
+  {{ range first 5 .Site.Data.projects }}
+  <div class="project row">
+    <div class="col-9">
+      <a href="{{.path}}" target="_blank" rel="noreferrer">
+        <div class="icon"><i class="fa {{.icon}}"></i></div>
+        <h3>{{.title}}</h3>
+      </a>
+      <div class="description">{{.description}}</div>
     </div>
-    {{ range first 5 .Site.Data.projects }}
-        <div class="project row">
-            <div class="col-9">
-                <a href="{{.path}}" target="_blank" rel="noreferrer">
-                    <div class="icon"><i class="fa {{.icon}}"></i></div>
-                    <h3>{{.title}}</h3>
-                </a>
-                <div class="description">{{.description}}</div>
-            </div>
-            <div class="flex col-3 text-center">
-                <a class="button m-0" href="{{.source}}" target="_blank"
-                    rel="noreferrer">Source</a>
-            </div>
-        </div>
-    {{end}}
-    </section>
+    <div class="flex col-3 text-center">
+      <a class="button m-0" href="{{.source}}" target="_blank" rel="noreferrer"
+        >Source</a>
+    </div>
+  </div>
+  {{end}}
+</section>

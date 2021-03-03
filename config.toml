@@ -65,18 +65,6 @@ title = "To-The-Point"
 url = "/to-the-point"
 
 [[params.nav.custom]]
-title = "Projects"
-url = "/projects"
-
-[[params.nav.custom]]
-title = "Ebook"
-url = "/ebooks"
-
-[[params.nav.custom]]
-title = "About"
-url = "/about"
-
-[[params.nav.custom]]
 title = "Resume"
 url = "https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf"
 

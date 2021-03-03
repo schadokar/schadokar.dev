@@ -4,25 +4,17 @@
         <a class="pill" href="/ebooks/">View all</a>
     </div>
     <div class="posts">
-
         {{- range ( where site.RegularPages "Section" "ebooks" | first 5 ) }}
-
-            
             <div class="post">
                 <a href="{{.URL}}">
                     <div class="post-row">
                         <time>
-                              {{ dateFormat "Jan 01" .Date }}  
+                              {{ dateFormat "Jan 01" .Date }}
                         </time>
                         <h3>{{.Title}}</h3>
                     </div>
                 </a>
             </div>
-
-            
-
         {{end}}
-
-
     </div>
 </section>
