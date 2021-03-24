@@ -1,0 +1,20 @@
+<section id="latest" class="space">
+    <div class="artheader">
+        <h3>Algorithms</h3>
+        <a class="pill" href="/algorithms/">View all</a>
+    </div>
+    <div class="posts">
+        {{- range ( where site.RegularPages "Section" "algorithms" | first 5 ) }}
+            <div class="post">
+                <a href="{{.URL}}">
+                    <div class="post-row">
+                        <time>
+                              {{ dateFormat "Jan 01" .Date }}
+                        </time>
+                        <h3>{{.Title}}</h3>
+                    </div>
+                </a>
+            </div>
+        {{end}}
+    </div>
+</section>

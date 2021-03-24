@@ -9,6 +9,7 @@ readingTime: true # show reading time after article date
 toc: true
 comments: true
 published: true
+popular: true
 ---
 
 Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resources consumed by an application, rather than on pre-purchased units of capacity. - [Wikipedia](https://en.wikipedia.org/wiki/Serverless_computing)

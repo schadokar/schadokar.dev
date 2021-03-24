@@ -4,6 +4,10 @@
 
 <body>
     {{- partial "header.html" . -}}
+	
+    {{ if .IsHome }}
+	    {{- partial "hero.html" . -}}
+    {{end}}
     <section id="content">
         {{- block "main" . -}}{{- end -}}
     </section>

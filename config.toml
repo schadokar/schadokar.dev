@@ -20,7 +20,7 @@ enableEmoji=true
     to-the-point = "/to-the-point/:title/"
 
 [params]
-style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+style = "light"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 # logo = "/images/pic.png"
 dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
 readingTime = true
@@ -30,6 +30,7 @@ readingTime = true
   enable = false
   avatar = "/images/pic.png"
   name = "Shubham Chadokar"
+  description = "I'm a software engineer and writer. This website is my digital garden — a compendium of the things I've learned and created over the years."
   bio = "Software Engineer"  # support markdown syntax
   twitter = "schadokar1"  # https://twitter.com/XXX
   github = "schadokar"  # https://github.com/XXX
@@ -64,18 +65,6 @@ title = "To-The-Point"
 url = "/to-the-point"
 
 [[params.nav.custom]]
-title = "Projects"
-url = "/projects"
-
-[[params.nav.custom]]
-title = "Ebook"
-url = "/ebooks"
-
-[[params.nav.custom]]
-title = "About"
-url = "/about"
-
-[[params.nav.custom]]
 title = "Resume"
 url = "https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf"
 
@@ -103,3 +92,22 @@ url = "/contact"
     name = "Twitter"
     url = "https://twitter.com/schadokar1"
     pre = "<i class='fab fa-twitter'></i>"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4

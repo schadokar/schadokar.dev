@@ -9,6 +9,7 @@ published: true
 canonical_link: https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra
 redirect_from:
   - /how-to-create-a-cli-in-golang-with-cobra
+popular: true
 ---
 
 *Photo by Marvin Meyer on Unsplash*

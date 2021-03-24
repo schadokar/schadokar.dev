@@ -6,6 +6,7 @@ published: true
 tags: ["golang", "viper", "tutorial"]
 categories: ["Golang", "Tutorial", "2020"]
 cover: asset1.jpg
+popular: true
 ---
 
 ###### Photo by [Moja Msanii](https://unsplash.com/photos/vO9-gal54go) on [Unsplash](https://unsplash.com/s/photos/security)
@@ -18,14 +19,14 @@ Suppose you have an application with many features and each feature need to acce
 
 There are a few major disadvantages to this approach, there can be many.
 
-- #### Security Issue: 
-  - You're entering all the information in the code. Now, all the unauthorized person also have access to the DB. 
+- #### Security Issue:
+  - You're entering all the information in the code. Now, all the unauthorized person also have access to the DB.
   - If you're using code versioning tool like `git` then the details of your DB will go public once you push the code.
 
 
 - #### Code Management:
   - If you are changing a single variable then you have to change in all the features. There is a high possibility that you'll miss one or two. :relieved: been there
-  - You can categorize the environment variables like `PROD`, `DEV`, or `TEST`. Just prefix the variable with the environment. 
+  - You can categorize the environment variables like `PROD`, `DEV`, or `TEST`. Just prefix the variable with the environment.
 
 In the start, it might look like some extra work, but this will reward you a lot in your project.
 
@@ -47,7 +48,7 @@ You can use according to your requirement.
 
 ## Create a Project
 
-Create a project `go-env-ways` outside the `$GOPATH`. 
+Create a project `go-env-ways` outside the `$GOPATH`.
 
 ### Initialize the module
 
@@ -67,7 +68,7 @@ Let's start with the easiest one, using `os` package.
 
 Golang provides `os` package, an easy way to configure and access the environment variable.
 
-To set the environment variable, 
+To set the environment variable,
 
 ```go
 os.Setenv(key, value)
@@ -137,7 +138,7 @@ godotenv.Load()
 
 godotenv.Load(".env")
 ```
-> Load method can load multiple env files at once. This also supports `yaml`. For more information check out the [documentation](https://github.com/joho/godotenv). 
+> Load method can load multiple env files at once. This also supports `yaml`. For more information check out the [documentation](https://github.com/joho/godotenv).
 
 Create a new `.env` file in the project root directory.
 
@@ -174,7 +175,7 @@ func goDotEnvVariable(key string) string {
 
 func main() {
     // os package
-    ... 
+    ...
 
   // godotenv package
   dotenv := goDotEnvVariable("STRONGEST_AVENGER")
@@ -279,7 +280,7 @@ func main() {
 
     // os package  
     ...
-  
+
   // godotenv package
   ...
 
@@ -305,7 +306,7 @@ viper : STRONGEST_AVENGER = Thor
 
 ---
 
-### Viper is not limited to .env files. 
+### Viper is not limited to .env files.
 
 It supports:
 
@@ -320,7 +321,7 @@ It supports:
 
 Viper can be thought of as a registry for all of your applications configuration needs.
 
-Let's experiment: :bomb: 
+Let's experiment: :bomb:
 
 Create a new `config.yaml` file in the project root directory.
 
@@ -394,7 +395,7 @@ func main() {
 
   // viper package read config file
   viperconfig := viperConfigVariable("I_AM_INEVITABLE")  
-  
+
   fmt.Printf("viper config : %s = %s \n", "I_AM_INEVITABLE", viperconfig)  
 }
 ```
@@ -418,8 +419,8 @@ viper config : I_AM_INEVITABLE = I am Iron Man
 
 ## Conclusion
 
-That's it, now you can explore more of their secrets. If you find something worth sharing don't hesitate. 
+That's it, now you can explore more of their secrets. If you find something worth sharing don't hesitate.
 
-The complete code is available in the [github](https://github.com/schadokar/blog-projects/tree/master/go-env-ways). 
+The complete code is available in the [github](https://github.com/schadokar/blog-projects/tree/master/go-env-ways).
 
 ---

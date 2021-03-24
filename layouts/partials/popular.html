@@ -1,0 +1,20 @@
+<section id="latest" class="space">
+    <div class="artheader">
+        <h3>Popular Articles</h3>
+        <a class="pill" href="/posts/">View all</a>
+    </div>
+    <div class="posts">
+        {{ range first 10 ( where (where .Site.Pages "Type" "posts") ".Params.popular" "=" true ) }}
+            <div class="post">
+                <a href="{{.URL}}">
+                    <div class="post-row">
+                        <time>
+                              {{ dateFormat "Jan 01" .Date }}
+                        </time>
+                        <h3>{{.Title}}</h3>
+                    </div>
+                </a>
+            </div>
+        {{end}}
+    </div>
+</section>
