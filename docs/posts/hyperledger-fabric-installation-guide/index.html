@@ -2,21 +2,50 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Hyperledger Fabric Installation Guide!&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Hyperledger Fabric Installation Guide!&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Hyperledger Fabric Installation Guide!" /><meta name="twitter:image" content="https://schadokar.dev/posts/hyperledger-fabric-installation-guide/asset-1.png" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Hyperledger Fabric Installation Guide!</h1><p class="article date">Wednesday, June 5, 2019<span class="reading-time"> • 9 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="asset-1.png" alt>
-          </p><p>When I started learning Hyperledger Fabric, installing it is really a pain in a neck and it turned miserable as I was using Windows.</p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Hyperledger Fabric Installation Guide!</h1><p class="article date">Wednesday, June 5, 2019<span class="reading-time"> • 9 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="category" href=/categories/2019/>2019</a><a class="tag" href=/tags/blockchain/>blockchain</a><a class="tag" href=/tags/hyperledger-fabric/>hyperledger-fabric</a><a class="tag" href=/tags/tutorial/>tutorial</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>When I started learning Hyperledger Fabric, installing it is really a pain in a neck and it turned miserable as I was using Windows.</p>
 <p>The purpose of this article to put all the instructions at one place to set up the Hyperledger Fabric network irrespective of the fact if you’re using Windows or Linux.</p>
 <p>My apologies for macOS readers, instructions for macOS is not included as I don’t have one.</p>
 <hr>
@@ -84,24 +113,24 @@
 <ul>
 <li>Add the new user fabric</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo adduser fabric
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo adduser fabric
 </code></pre></div><ul>
 <li>Add the user fabric to the Sudo groups</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo usermod -aG sudo newuser
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo usermod -aG sudo newuser
 </code></pre></div><ul>
 <li>Login to fabric user</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">su fabric
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">su fabric
 </code></pre></div><ul>
 <li>Test the sudo access</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo ls
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo ls
 </code></pre></div><p>If you get any error then the user is not added to the sudo group. Follow this <a href="https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04"target="_blank">link</a> for more information.</p>
 <h2 id="step-2curl">Step 2: cURL</h2>
 <p>Check if your Linux has curl install or not. <code>curl --version</code></p>
 <p>If not follow the below instructions to install:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get update
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get update
 sudo apt-get install curl
 curl --version
 </code></pre></div><h2 id="step-3-docker-and-dockercompose">Step 3: Docker and Docker Compose</h2>
@@ -110,37 +139,37 @@ curl --version
 <ul>
 <li>Install the latest version of Docker from the official Docker repository.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 </code></pre></div><ul>
 <li>Add the Docker repository to APT sources</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo add-apt-repository “deb <span style="color:#f92672">[</span>arch<span style="color:#f92672">=</span>amd64<span style="color:#f92672">]</span> https://download.docker.com/linux/ubuntu <span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span> stable”
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo add-apt-repository “deb <span style="color:#ff79c6">[</span><span style="color:#8be9fd;font-style:italic">arch</span><span style="color:#ff79c6">=</span>amd64<span style="color:#ff79c6">]</span> https://download.docker.com/linux/ubuntu <span style="color:#ff79c6">$(</span>lsb_release -cs<span style="color:#ff79c6">)</span> stable”
 </code></pre></div><ul>
 <li>Update the package database</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get update
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get update
 </code></pre></div><ul>
 <li>Install Docker</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install -y docker-ce
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install -y docker-ce
 </code></pre></div><h3 id="install-using-a-single-command">Install using a single command</h3>
 <p>This command will install both docker and docker-compose with a single command. Thanks to <a href="https://medium.com/u/32dec75e8ca9"target="_blank">KC Tam</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get -y install docker-compose
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get -y install docker-compose
 </code></pre></div><p>The above 2 methods will install the docker and docker-compose.</p>
 <ul>
 <li>To use docker commands it requires root privileges. Instead of using <code>sudo</code> for all the docker commands, add the user to <code>docker</code> group</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo usermod -aG docker fabric
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo usermod -aG docker fabric
 </code></pre></div><ul>
 <li>Logout using <code>exit</code> command and log in again. Check the groups&rsquo; user is part of, using <code>id -nG</code> command.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Output
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Output
 fabric sudo docker
 </code></pre></div><h3 id="test-the-docker-installation">Test the Docker Installation</h3>
 <ul>
 <li>Check the docker and docker-compose version</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker --version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker --version
 Docker version 18.09.7, build 2d0083d
 
 docker-compose --version
@@ -148,7 +177,7 @@ docker-compose version 1.17.1, build unknown
 </code></pre></div><ul>
 <li>Pull the <a href="https://hub.docker.com/r/library/hello-world/"target="_blank">hello-world image</a> from Docker Hub and run a container:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run hello-world
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run hello-world
 </code></pre></div><p><img  src="./asset-2.png"
         alt="docker hello world"/></p>
 <p>If you get this message then docker is successfully installed.</p>
@@ -157,36 +186,36 @@ docker-compose version 1.17.1, build unknown
 <ul>
 <li>Install the golang package</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -O https://storage.googleapis.com/golang/go1.12.linux-amd64.tar.gz
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -O https://storage.googleapis.com/golang/go1.12.linux-amd64.tar.gz
 </code></pre></div><ul>
 <li>Extract the package</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">tar xvf go1.12.linux-amd64.tar.gz
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">tar xvf go1.12.linux-amd64.tar.gz
 </code></pre></div><ul>
 <li>Set the GOPATH</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">export GOPATH<span style="color:#f92672">=</span>$HOME/go
-export PATH<span style="color:#f92672">=</span>$PATH:$GOPATH/bin
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">GOPATH</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">$HOME</span>/go
+<span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">PATH</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">$PATH</span>:<span style="color:#8be9fd;font-style:italic">$GOPATH</span>/bin
 </code></pre></div><ul>
 <li>Check the go version</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go version
 </code></pre></div><p>For more installation information follow this <a href="https://www.digitalocean.com/community/tutorials/how-to-install-go-1-6-on-ubuntu-16-04"target="_blank">link</a> and for GOPATH follow this <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html#go-programming-language"target="_blank">link</a>.</p>
 <h2 id="step-4-nodejs-andnpm">Step 4: Nodejs and npm</h2>
 <ul>
 <li>Download the installation script using curl</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 </code></pre></div><ul>
 <li>Run the script under sudo</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo bash nodesource_setup.sh
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo bash nodesource_setup.sh
 </code></pre></div><ul>
 <li>Install the nodejs</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install nodejs
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install nodejs
 </code></pre></div><p>With nodejs, npm also get installed. Check their version</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node -v
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node -v
 Output
 v8.16.0
 
@@ -197,19 +226,19 @@ v6.4.1
 <ul>
 <li>To install <code>python 2.7</code></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install python
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install python
 </code></pre></div><ul>
 <li>Check the python version:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">python --version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">python --version
 Python 2.7.12
 </code></pre></div><p>All the prerequisites are installed. Now, let's install the Hyperledger Fabric v1.4.</p>
 <h2 id="step-6-install-samples-binaries-and-dockerimages">Step 6: Install Samples, Binaries and Docker Images</h2>
 <p>Determine the directory where you want to download the fabric samples. Open the directory in terminal and run the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s
 </code></pre></div><p>It will download the latest production release.</p>
 <p>If you want a specific release for ex. v1.4.1, follow the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s -- &lt;fabric_version&gt; &lt;fabric-ca_version&gt; &lt;thirdparty_version&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s -- &lt;fabric_version&gt; &lt;fabric-ca_version&gt; &lt;thirdparty_version&gt;
 
 curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
 </code></pre></div><p>It’ll take some time, once it is finished you can see a new directory <strong>fabric-samples</strong>.</p>
@@ -219,11 +248,11 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
 <h2 id="step-7-test-the-fabricnetwork">Step 7: Test the fabric network</h2>
 <p>As we have successfully completed the setting up the Fabric environment, let’s test it. To test it we’ll use the <strong>first-network</strong> sample in the fabric-samples.</p>
 <p>Open the <strong>fabric-samples</strong> and go to the <strong>first-network</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd fabric-samples/first-network
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8be9fd;font-style:italic">cd</span> fabric-samples/first-network
 </code></pre></div><p><img  src="./asset-4.png"
         alt="first-network"/></p>
 <p>To test it, run the <code>byfn.sh</code> . It is a test script, it first set up the network with 2 organizations <code>org1</code> and <code>org2</code> with 2 <code>peers</code> each and an <code>orderer</code> .</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn.sh up
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn.sh up
 </code></pre></div><p><img  src="./asset-5.png"
         alt="first-network start"/></p>
 <p>On successful execution, you’ll see the below message.</p>
@@ -231,7 +260,7 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
         alt="first-network end"/></p>
 <p>If you reach till this point it means you have successfully set up the fabric network.</p>
 <p>Now, we have completed the testing of <strong>first-network,</strong> clean the network.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn down
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn down
 </code></pre></div><p>Congratulations, we have completed the Hyperledger Fabric installation in <strong>Linux machine.</strong></p>
 <hr>
 <h1 id="windows-installation">Windows Installation</h1>
@@ -240,7 +269,7 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
 <p>I am using Windows 10 Pro for the Fabric v1.4 installation.</p>
 <h2 id="step-1curl">Step 1: cURL</h2>
 <p>Please check if cURL is already installed in your PC.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --help
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --help
 </code></pre></div><p>If you don’t get any error it means cURL is installed in your PC and you can go to the next step. For others please follow the below steps.</p>
 <ul>
 <li>To install cURL, download the package according to your Windows 32/64 bit from this <a href="https://curl.haxx.se/download.html"target="_blank">link</a>. Extract the package and run the <code>curl.exe</code> present in the <code>bin</code> folder.</li>
@@ -268,15 +297,15 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
 <li>Open the cmd window</li>
 <li>Run <code>docker --version</code> and <code>docker-compose --version</code></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker --version
-Docker version 18.09.2, build <span style="color:#ae81ff">6247962</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker --version
+Docker version 18.09.2, build <span style="color:#bd93f9">6247962</span>
 
 docker-compose --version
 docker-compose version 1.23.2, build 1110ad01
 </code></pre></div><ul>
 <li>Pull the <a href="https://hub.docker.com/r/library/hello-world/"target="_blank">hello-world image</a> from Docker Hub and run a container:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run hello-world
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run hello-world
 </code></pre></div><p><img  src="./asset-8.png"
         alt="docker hello-world"/></p>
 <p>If you get this message then the Docker installed successfully in your machine.</p>
@@ -284,14 +313,14 @@ docker-compose version 1.23.2, build 1110ad01
 <h2 id="step-3golang-1">Step 3: Golang</h2>
 <p>Download the Golang package from the <a href="https://golang.org/dl/"target="_blank">official site</a>.</p>
 <p>Once it is installed open the <code>command prompt</code> and run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go version
 
 Output
 go version go1.11.5 windows/amd64
 </code></pre></div><h2 id="step-4-nodejs-andnpm-1">Step 4: Nodejs and npm</h2>
 <p>Download the node v8.x from this <a href="https://nodejs.org/dist/latest-v8.x/node-v8.16.0-x64.msi"target="_blank">link</a> and install it.</p>
 <p>Check if it is installed correctly.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node -v
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node -v
 v8.16.0
 
 npm -v
@@ -303,19 +332,19 @@ npm -v
 <p><img  src="./asset-9.png"
         alt="python-path"/></p>
 <p>Check the <code>python</code> installed correctly or not.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">python --version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">python --version
 Python 2.7.16
 </code></pre></div><p>The Hyperledger Fabric prerequisites are installed. Now, it is time to install the extra windows dependencies.</p>
 <h2 id="windows-extras">Windows Extras</h2>
 <h3 id="install-windows-build-tools-and-grpc">Install windows-build-tools and grpc</h3>
 <p>Install the <code>windows-build-tools</code> globally using <code>npm</code> .</p>
 <p>Open the <code>command prompt</code> and run the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --global windows-build-tools
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --global windows-build-tools
 </code></pre></div><p>It will take some time around 15 minutes or more. Once it will complete you will get the below message.</p>
 <p><img  src="./asset-10.png"
         alt="windows-build-tools"/></p>
 <p>Once this is done, you should also install the NPM GRPC module with the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --global grpc
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --global grpc
 </code></pre></div><h3 id="install-git-to-run-the-bash-commands">Install git to run the bash commands</h3>
 <p>To run the bash commands we have to install <code>git</code> .</p>
 <blockquote>
@@ -332,10 +361,10 @@ Python 2.7.16
 <p><img  src="./asset-11.png"
         alt="git bash"/></p>
 <p>Run the below command to install Samples, Binaries and Docker Images</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s
 </code></pre></div><p>It will download the latest production release.</p>
 <p>If you want a specific release for ex. v1.4.1, follow the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s -- &lt;fabric_version&gt; &lt;fabric-ca_version&gt; &lt;thirdparty_version&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -sSL http://bit.ly/2ysbOFE | bash -s -- &lt;fabric_version&gt; &lt;fabric-ca_version&gt; &lt;thirdparty_version&gt;
 
 curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
 </code></pre></div><p>It’ll take some time, once it is finished you can see a new directory <strong>fabric-samples</strong>.</p>
@@ -345,11 +374,11 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
 <h2 id="step-7-test-the-fabric-network">Step 7: Test the fabric network</h2>
 <p>As we have successfully completed the setting up the Fabric environment, it’s time to test it. We are going to use the <strong>first-network</strong> sample from the fabric-samples.</p>
 <p>Open the <strong>fabric-samples</strong> and go to <strong>first-network</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd fabric-samples/first-network
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8be9fd;font-style:italic">cd</span> fabric-samples/first-network
 </code></pre></div><p><img  src="./asset-13.png"
         alt="first-network"/></p>
 <p>To test it, run the <code>byfn.sh</code> . It is a test script, it first setup the network with 2 organizations <code>org1</code> and <code>org2</code> with 2 <code>peers</code> each and an <code>orderer</code> .</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn.sh up
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn.sh up
 </code></pre></div><p><img  src="./asset-14.png"
         alt="first-network start"/></p>
 <p>On successful execution, you’ll see the below message.</p>
@@ -357,16 +386,27 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
         alt="first-network end"/></p>
 <p>If you reach till this point it means you have successfully setup the fabric network.</p>
 <p>Now, we have completed the testing of <strong>first-network,</strong> clean the network.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn down
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">./byfn down
 </code></pre></div><p>Here, we have completed the Hyperledger Fabric installation in the <strong>Windows machine.</strong></p>
 <p>Yes, we successfully installed the Fabric on Windows.</p>
 <p>Hope, you like the article and save you some time.</p>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="category" href=/categories/2019/>2019</a><a class="tag" href=/tags/blockchain/>blockchain</a><a class="tag" href=/tags/hyperledger-fabric/>hyperledger-fabric</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/"><span class="li iconfont icon-article"></span>Are Smart Contract and Chaincode the Same in Hyperledger Fabric</a></p><p><a class="link" href="/posts/create-an-ethereum-dapp-with-react-and-docker/"><span class="li iconfont icon-article"></span>Create an Ethereum Dapp with React and Docker</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/"><span class="">Previous</span>Are Smart Contract and Chaincode the Same in Hyperledger Fabric</a></p><p><a class="link" href="/posts/create-an-ethereum-dapp-with-react-and-docker/"><span class="">Next</span>Create an Ethereum Dapp with React and Docker</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -387,13 +427,36 @@ curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.1 1.4.1 0.4.15
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -404,6 +467,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

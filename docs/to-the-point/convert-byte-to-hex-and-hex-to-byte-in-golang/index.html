@@ -2,81 +2,121 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Convert Byte to Hex and Hex to Byte in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Convert Byte to Hex and Hex to Byte in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Convert Byte to Hex and Hex to Byte in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Convert Byte to Hex and Hex to Byte in Golang</h1><p class="article date">Saturday, July 18, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="https://schadokar.dev/images/golang-basic.png" alt>
-          </p><p>In this post of <strong><em>to-the-point</em></strong> series, we will convert a hex string to a byte array and vice-versa. For this, we're going to use the <code>encoding/hex</code> package provided by the golang. Package <code>hex</code> implements hexadecimal encoding and decoding.</p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Convert Byte to Hex and Hex to Byte in Golang</h1><p class="article date">Saturday, July 18, 2020<span class="reading-time"> • 2 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/2020/>2020</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/conversion/>conversion</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>In this post of <strong><em>to-the-point</em></strong> series, we will convert a hex string to a byte array and vice-versa. For this, we're going to use the <code>encoding/hex</code> package provided by the golang. Package <code>hex</code> implements hexadecimal encoding and decoding.</p>
 <h1 id="byte-array-to-hex-string">byte array to hex string</h1>
 <p>To convert a byte array to hex string, we will encode the byte array to the hexadecimal string.</p>
 <h3 id="syntax">Syntax</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">EncodeToString</span>(<span style="color:#a6e22e">src</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">string</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">EncodeToString</span>(src []<span style="color:#8be9fd">byte</span>) <span style="color:#8be9fd">string</span>
 </code></pre></div><p>First we will convert a string to a byte array.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;encoding/hex&#34;</span>
-	<span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#ff79c6">import</span> (
+	<span style="color:#f1fa8c">&#34;encoding/hex&#34;</span>
+	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">byteArray</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;Learn Go!&#34;</span>)
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;byteArray: &#34;</span>, <span style="color:#a6e22e">byteArray</span>)
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+	byteArray <span style="color:#ff79c6">:=</span> []<span style="color:#8be9fd;font-style:italic">byte</span>(<span style="color:#f1fa8c">&#34;Learn Go!&#34;</span>)
+	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;byteArray: &#34;</span>, byteArray)
 
-	<span style="color:#a6e22e">encodedString</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">hex</span>.<span style="color:#a6e22e">EncodeToString</span>(<span style="color:#a6e22e">byteArray</span>)
+	encodedString <span style="color:#ff79c6">:=</span> hex.<span style="color:#50fa7b">EncodeToString</span>(byteArray)
 
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Encoded Hex String: &#34;</span>, <span style="color:#a6e22e">encodedString</span>)
+	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Encoded Hex String: &#34;</span>, encodedString)
 }
 </code></pre></div><p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">byteArray</span>: [<span style="color:#ae81ff">76</span> <span style="color:#ae81ff">101</span> <span style="color:#ae81ff">97</span> <span style="color:#ae81ff">114</span> <span style="color:#ae81ff">110</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">71</span> <span style="color:#ae81ff">111</span> <span style="color:#ae81ff">33</span>]
-<span style="color:#a6e22e">Encoded</span> <span style="color:#a6e22e">Hex</span> <span style="color:#a6e22e">String</span>: <span style="color:#ae81ff">4</span><span style="color:#a6e22e">c6561726e20476f21</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">byteArray: [<span style="color:#bd93f9">76</span> <span style="color:#bd93f9">101</span> <span style="color:#bd93f9">97</span> <span style="color:#bd93f9">114</span> <span style="color:#bd93f9">110</span> <span style="color:#bd93f9">32</span> <span style="color:#bd93f9">71</span> <span style="color:#bd93f9">111</span> <span style="color:#bd93f9">33</span>]
+Encoded Hex String: <span style="color:#bd93f9">4</span>c6561726e20476f21
 </code></pre></div><p><a href="https://play.golang.org/p/z9TmK3KoBGy"target="_blank">Try it</a></p>
 <h1 id="hex-string-to-byte-array">hex string to byte array</h1>
 <p>To convert hex string to byte array, we will decode the encoded hex string.</p>
 <h3 id="syntax-1">Syntax</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">DecodeString</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">DecodeString</span>(s <span style="color:#8be9fd">string</span>) ([]<span style="color:#8be9fd">byte</span>, <span style="color:#8be9fd">error</span>)
 </code></pre></div><p>We are going to use the same hex string from above.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;encoding/hex&#34;</span>
-	<span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#ff79c6">import</span> (
+	<span style="color:#f1fa8c">&#34;encoding/hex&#34;</span>
+	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">hexString</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;4c6561726e20476f21&#34;</span>
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+	hexString <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;4c6561726e20476f21&#34;</span>
 
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hex String: &#34;</span>, <span style="color:#a6e22e">hexString</span>)
+	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Hex String: &#34;</span>, hexString)
 
-	<span style="color:#a6e22e">decodedByteArray</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">hex</span>.<span style="color:#a6e22e">DecodeString</span>(<span style="color:#a6e22e">hexString</span>)
+	decodedByteArray, err <span style="color:#ff79c6">:=</span> hex.<span style="color:#50fa7b">DecodeString</span>(hexString)
 
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Unable to convert hex to byte. &#34;</span>, <span style="color:#a6e22e">err</span>)
+	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+		fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Unable to convert hex to byte. &#34;</span>, err)
 	}
 
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Decoded Byte Array: %v \nDecoded String: %s&#34;</span>, <span style="color:#a6e22e">decodedByteArray</span>, <span style="color:#a6e22e">decodedByteArray</span>)
+	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Decoded Byte Array: %v \nDecoded String: %s&#34;</span>, decodedByteArray, decodedByteArray)
 }
 </code></pre></div><p><a href="https://play.golang.org/p/dxuei1X-nyd"target="_blank">Try it</a></p>
 <p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">Hex</span> <span style="color:#a6e22e">String</span>:  <span style="color:#ae81ff">4</span><span style="color:#a6e22e">c6561726e20476f21</span>
-<span style="color:#a6e22e">Decoded</span> <span style="color:#a6e22e">Byte</span> <span style="color:#a6e22e">Array</span>: [<span style="color:#ae81ff">76</span> <span style="color:#ae81ff">101</span> <span style="color:#ae81ff">97</span> <span style="color:#ae81ff">114</span> <span style="color:#ae81ff">110</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">71</span> <span style="color:#ae81ff">111</span> <span style="color:#ae81ff">33</span>]
-<span style="color:#a6e22e">Decoded</span> <span style="color:#a6e22e">String</span>: <span style="color:#a6e22e">Learn</span> <span style="color:#a6e22e">Go</span>!
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Hex String:  <span style="color:#bd93f9">4</span>c6561726e20476f21
+Decoded Byte Array: [<span style="color:#bd93f9">76</span> <span style="color:#bd93f9">101</span> <span style="color:#bd93f9">97</span> <span style="color:#bd93f9">114</span> <span style="color:#bd93f9">110</span> <span style="color:#bd93f9">32</span> <span style="color:#bd93f9">71</span> <span style="color:#bd93f9">111</span> <span style="color:#bd93f9">33</span>]
+Decoded String: Learn Go!
 </code></pre></div><hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/2020/>2020</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/conversion/>conversion</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/"><span class="li iconfont icon-article"></span>Remove an Element From an Array Using Filter in Nodejs</a></p><p><a class="link" href="/to-the-point/create-an-account-in-sendinblue/"><span class="li iconfont icon-article"></span>Create an Account in Sendinblue</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/"><span class="">Previous</span>Remove an Element From an Array Using Filter in Nodejs</a></p><p><a class="link" href="/to-the-point/create-an-account-in-sendinblue/"><span class="">Next</span>Create an Account in Sendinblue</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -97,13 +137,36 @@
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -114,6 +177,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

@@ -1,0 +1,10 @@
+name = "Saral"
+description = "a Hugo implementation of taniarascia.com"
+homepage = "https://schadokar.dev/"
+tags = ["blog"]
+features = ["Minimal", "HighlightJS", "PrismJS"]
+min_version = "0.60.0"
+
+[author]
+  name = "Shubham Chadokar"
+  homepage = "https://schadokar.dev"

@@ -2,21 +2,50 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to create a Linux VM in Azure?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to create a Linux VM in Azure?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to create a Linux VM in Azure?" /><meta name="twitter:image" content="https://schadokar.dev/images/azure-basic.png" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">How to create a Linux VM in Azure?</h1><p class="article date">Friday, March 27, 2020<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="https://schadokar.dev/images/azure-basic.png" alt>
-          </p><p>Create a <a href="https://azure.microsoft.com/en-in/free/"target="_blank">new account</a> in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.</p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to create a Linux VM in Azure?</h1><p class="article date">Friday, March 27, 2020<span class="reading-time"> • 3 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/cloud/>Cloud</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/azure/>azure</a><a class="tag" href=/tags/cloud/>cloud</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>Create a <a href="https://azure.microsoft.com/en-in/free/"target="_blank">new account</a> in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.</p>
 <p>For students, Microsoft also give away many resources and azure credits. You just have to reach to them by their email.</p>
 <p>Login to your azure account.</p>
 <h3 id="step-1-search-for-ubuntu-1604-lts">Step 1 Search for Ubuntu 16.04 LTS</h3>
@@ -44,27 +73,27 @@
 <p>Let's setup the SSH key.</p>
 <p>Open any command line tool. Like bash shell.</p>
 <p>Use <code>ssh-keygen</code> command to create keys. By default it saves these keys in <code>~/.ssh</code> directory.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh-keygen -m PEM -t rsa -b <span style="color:#ae81ff">4096</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh-keygen -m PEM -t rsa -b <span style="color:#bd93f9">4096</span>
 Generating public/private rsa key pair.
-Enter file in which to save the key <span style="color:#f92672">(</span>/c/Users/admin/.ssh/id_rsa<span style="color:#f92672">)</span>:
-Enter passphrase <span style="color:#f92672">(</span>empty <span style="color:#66d9ef">for</span> no passphrase<span style="color:#f92672">)</span>:
+Enter file in which to save the key <span style="color:#ff79c6">(</span>/c/Users/admin/.ssh/id_rsa<span style="color:#ff79c6">)</span>:
+Enter passphrase <span style="color:#ff79c6">(</span>empty <span style="color:#ff79c6">for</span> no passphrase<span style="color:#ff79c6">)</span>:
 Enter same passphrase again:
 Your identification has been saved in /c/Users/admin/.ssh/id_rsa.
 Your public key has been saved in /c/Users/admin/.ssh/id_rsa.pub.
 The key fingerprint is:
 SHA256:9Hl7Wfo6Et4+QfQ7sKrZr2yaO7Dgb4IVLSIpgsY9ftE admin@LAPTOP-BAVLQDM1
-The key<span style="color:#960050;background-color:#1e0010">&#39;</span>s randomart image is:
-+---<span style="color:#f92672">[</span>RSA 4096<span style="color:#f92672">]</span>----+
+The key&#39;s randomart image is:
++---<span style="color:#ff79c6">[</span>RSA 4096<span style="color:#ff79c6">]</span>----+
 |                 |
 |              .  |
 |o o   o .    . . |
-|+<span style="color:#f92672">=</span> + + E . . .. .|
+|+<span style="color:#ff79c6">=</span> + + E . . .. .|
 |+ o o + S o ..o o|
 |   . + .   ..o.* |
-|    <span style="color:#f92672">=</span> . o  .oo+..|
-|   . o o .<span style="color:#f92672">=</span>oo.+. |
+|    <span style="color:#ff79c6">=</span> . o  .oo+..|
+|   . o o .<span style="color:#ff79c6">=</span>oo.+. |
 |      +. **+o+o+.|
-+----<span style="color:#f92672">[</span>SHA256<span style="color:#f92672">]</span>-----+
++----<span style="color:#ff79c6">[</span>SHA256<span style="color:#ff79c6">]</span>-----+
 
 </code></pre></div><p>Enter the absolute path where you want to save the keys or skip it and press Enter.</p>
 <p>Passphrase is required to access the private key while login in the VM.</p>
@@ -118,10 +147,21 @@ Open the browser and enter the VM ip address.</p>
 <p>Next time when you'll start it only the public ip of the vm will change.</p>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/cloud/>Cloud</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/azure/>azure</a><a class="tag" href=/tags/cloud/>cloud</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-gcp/"><span class="li iconfont icon-article"></span>How to Create a Linux VM in GCP</a></p><p><a class="link" href="/to-the-point/compare-strings-in-golang/"><span class="li iconfont icon-article"></span>Compare Strings in Golang</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-gcp/"><span class="">Previous</span>How to Create a Linux VM in GCP</a></p><p><a class="link" href="/to-the-point/compare-strings-in-golang/"><span class="">Next</span>Compare Strings in Golang</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -142,13 +182,36 @@ Open the browser and enter the VM ip address.</p>
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -159,6 +222,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

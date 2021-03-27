@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Fri, 01 Jan 2021 12:41:41 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 00:42:58 +0530</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>To-the-points</title>
+      <link>/to-the-point/</link>
+      <pubDate>Sat, 20 Feb 2021 00:42:58 +0530</pubDate>
+      
+      <guid>/to-the-point/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Posts</title>
@@ -23,12 +33,17 @@
     </item>
     
     <item>
-      <title>To-the-points</title>
-      <link>/to-the-point/</link>
-      <pubDate>Wed, 23 Dec 2020 22:45:35 +0530</pubDate>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/to-the-point/</guid>
-      <description></description>
+      <guid>/about/</guid>
+      <description>About Me Hi there, I am Shubham Kumar Chadokar, I am a Software Engineer 👓.
+I love to write articles and tutorials on Blockchain, Golang, Nodejs and Reactjs. My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, Reactjs, Docker, Kubernetes.
+I love to do photography 📷 in my me time.
+I like philosophical and mythological novels 📚.
+My favourites are Meluha and The Kite Runner.
+Talks 2020 A note-taking web app for developers.</description>
       
     </item>
     
@@ -38,23 +53,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/projects/</guid>
-      <description>🚀 Projects   ✏ schadokar.dev
-Personal Website for my articles and tutorials.
-  💻 My Calc
-my-calc cli built in golang using cobra library. It do the basic addition operation.
-  📝 Go To Do App
-This is a to-do list application. It&#39;s server is created in Golang, db is mongodb and client is in React.
-  🐋 Redis Go Server
-A prebuild golang server to work with redis db.</description>
-      
-    </item>
-    
-    <item>
-      <title>Algorithms</title>
-      <link></link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid></guid>
       <description></description>
       
     </item>
@@ -70,17 +68,12 @@ A prebuild golang server to work with redis db.</description>
     </item>
     
     <item>
-      <title>💭 About Me</title>
-      <link>/about/</link>
+      <title>Search me!</title>
+      <link>/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
-      <description>🚀 Hi there, I am Shubham Kumar Chadokar.
-I am a Software Engineer 👓.
-I love to write articles and tutorials on Blockchain, Golang, Nodejs and Reactjs. My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, Reactjs, Docker, Kubernetes.
-I love to do photography 📷 in my me time.
-I like philosophical and mythological novels 📚. My favourites are Meluha and The Kite Runner.
-Talks 2020  Build a CLI in golang with Cobra @ Pune Gophers - Presentation July London Gophers @ London Gophers - Presentation   Please subscribe to my Newsletter for new articles.</description>
+      <guid>/search/</guid>
+      <description></description>
       
     </item>
     

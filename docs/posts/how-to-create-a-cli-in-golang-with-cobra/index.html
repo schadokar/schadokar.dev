@@ -2,21 +2,50 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to create a CLI in golang with cobra&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to create a CLI in golang with cobra&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to create a CLI in golang with cobra" /><meta name="twitter:image" content="https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra/asset-1.jpeg" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">How to create a CLI in golang with cobra</h1><p class="article date">Monday, November 18, 2019<span class="reading-time"> • 14 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="asset-1.jpeg" alt>
-          </p><p><em>Photo by Marvin Meyer on Unsplash</em></p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to create a CLI in golang with cobra</h1><p class="article date">Monday, November 18, 2019<span class="reading-time"> • 14 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2019/>2019</a><a class="category" href=/categories/featured/>Featured</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/cobra/>cobra</a><a class="tag" href=/tags/tutorial/>tutorial</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p><em>Photo by Marvin Meyer on Unsplash</em></p>
 <p>Have you ever wonder why in the world of GUI, CLI still exist? You’ll better understand it when you build one of your own.</p>
 <p>When you learn golang then it is very often that you’ll come across that ‘golang is great to build cli tools’. This fascinated me too. So, I tried to get my hands dirty and found a few tutorials of creating a cli but most of all are not basic. In this tutorial, I’ll try to smooth the learning curve.</p>
 <p>This is the basic cli application where we are going to cover basic cli operations. I am planning to write another article with advance cli operations but that’s for later.</p>
@@ -87,7 +116,7 @@
 <p>Modules record precise dependency requirements and create reproducible builds. — <a href="http://A%20module%20is%20a%20collection%20of%20related%20Go%20packages%20that%20are%20versioned%20together%20as%20a%20single%20unit.%20%20Modules%20record%20precise%20dependency%20requirements%20and%20create%20reproducible%20builds."target="_blank">wiki</a></p>
 </blockquote>
 <p>Open the project directory in the command line of your choices. I am using <code>bash</code>. Once you are inside the project directory, run the below command to initialize the modules.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">mod</span> <span style="color:#a6e22e">init</span> <span style="color:#a6e22e">my</span><span style="color:#f92672">-</span><span style="color:#a6e22e">calc</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> mod init my<span style="color:#ff79c6">-</span>calc
 </code></pre></div><p>You can notice that it creates a <code>go.mod</code> file in the project.</p>
 <blockquote>
 <p><strong>Note:</strong> Creating modules inside the <code>$GOPATH</code>is disabled by default. You will get this error if you run above command — <code>go: modules disabled inside GOPATH/src by GO111MODULE=auto; see ‘go help modules’</code> . If you still want to create the go modules inside the <code>$GOPATH</code> then first set <code>GO111MODULE</code> environment variable to <code>on</code>. <code>export GO111MODULE=on</code></p>
@@ -95,35 +124,35 @@
 <p>Now whenever you use any third-party packages in the project, it’ll save it as a dependency with their version. In this way, even if a breaking change introduces in the new version of the library, your project will work as expected.</p>
 <hr>
 <p>If you still haven’t installed the <code>cobra</code> library, you can install it using below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">spf13</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cobra</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cobra</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> get <span style="color:#ff79c6">-</span>u github.com<span style="color:#ff79c6">/</span>spf13<span style="color:#ff79c6">/</span>cobra<span style="color:#ff79c6">/</span>cobra
 </code></pre></div><p>Initialize the cli scaffolding for the project using <code>cobra init</code>command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">cobra</span> <span style="color:#a6e22e">init</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">pkg</span><span style="color:#f92672">-</span><span style="color:#a6e22e">name</span> <span style="color:#a6e22e">my</span><span style="color:#f92672">-</span><span style="color:#a6e22e">calc</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">cobra init <span style="color:#ff79c6">--</span>pkg<span style="color:#ff79c6">-</span>name my<span style="color:#ff79c6">-</span>calc
 </code></pre></div><p>It will initialize the <code>my-calc</code> project with <code>cobra</code> library. You can observe that it created a few files in the project.</p>
 <pre><code>▾ my-calc/
   ▾ cmd/
      root.go
    main.go
 </code></pre><p>The <code>main.go</code> is the entry point of the <code>cli</code> . Inside the <code>main.go</code> it is calling the <code>Execute</code> function of the <code>cmd/root.go</code> .</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// main.go
-</span><span style="color:#75715e"></span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// main.go
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;my-calc/cmd&#34;</span>
+<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;my-calc/cmd&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Execute</span>()
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+   cmd.<span style="color:#50fa7b">Execute</span>()
 }
 </code></pre></div><p>Let’s examine the <code>root.go</code> .</p>
 <h3 id="rootcmd">rootCmd</h3>
 <p>Root command is the base command of any cli. For Ex. <code>go get URL</code> — <code>go</code> is the root command here and <code>get</code> is the child command of the <code>go</code>. In the <code>root.go</code> it is initiating the <code>rootCmd</code> struct variable with the <code>cobra</code> command. All the other commands in the cli will be a child of the <code>rootCmd</code>.</p>
 <p>Open the <code>root.go</code> in the editor and inside the <code>rootCmd</code> uncomment the</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">Run</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">cmd</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">cobra</span>.<span style="color:#a6e22e">Command</span>, <span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) {},
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Run: <span style="color:#8be9fd;font-style:italic">func</span>(cmd <span style="color:#ff79c6">*</span>cobra.Command, args []<span style="color:#8be9fd">string</span>) {},
 </code></pre></div><p>And paste the <code>fmt.Println(&quot;Hello CLI&quot;)</code> inside the curly braces.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">Run</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">cmd</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">cobra</span>.<span style="color:#a6e22e">Command</span>, <span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) {<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello CLI&#34;</span>},
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Run: <span style="color:#8be9fd;font-style:italic">func</span>(cmd <span style="color:#ff79c6">*</span>cobra.Command, args []<span style="color:#8be9fd">string</span>) {fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Hello CLI&#34;</span>},
 </code></pre></div><blockquote>
 <p>⚠️ Don’t remove the comma after the closing curly braces. It will throw syntax error.</p>
 </blockquote>
 <p>Open the terminal inside the <code>my-calc</code> project and run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">my</span><span style="color:#f92672">-</span><span style="color:#a6e22e">calc</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> install my<span style="color:#ff79c6">-</span>calc
 </code></pre></div><p>This command will generate the binary or executable file of the project in the <code>$GOPATH/bin</code> folder.</p>
 <p>Now run <code>my-calc</code> in the terminal. As it is saved in the bin folder you don’t have to set the environment variable for this.</p>
 <blockquote>
@@ -139,30 +168,30 @@
 <p>In the <code>root.go</code> , the command is the <code>rootCmd</code>.</p>
 <p>The <code>cobra.OnInitialize(initConfig)</code> append the <code>initConfig</code>function declaration in the <code>rootCmd</code>’s initialization. So, whenever the <code>rootCmd</code> ‘s execute method (<code>RUN: func</code>) run, the <code>rootCmd</code> will first run the <code>initConfig</code>function. Once the execution of all the initialize functions over, it will run the <code>RUN: func</code> execution method of <code>rootCmd</code>.</p>
 <p>To visualize it, add a print message in the <code>initConfig</code> function.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">initConfig</span>() {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">initConfig</span>() {
 
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;inside initConfig&#34;</span>)
-<span style="color:#f92672">...</span>
+   fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;inside initConfig&#34;</span>)
+<span style="color:#ff79c6">...</span>
 </code></pre></div><p>Save the changes. Open the terminal inside the <code>my-calc</code> project.</p>
 <p>Rebuild the binary <code>go install my-calc</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">my</span><span style="color:#f92672">-</span><span style="color:#a6e22e">calc</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> install my<span style="color:#ff79c6">-</span>calc
 </code></pre></div><p>Run <code>my-calc</code>. Whenever you’ll make any changes in the cli you have to rebuild the binary. Run <code>go install my-calc</code> to reflect it in the cli commands.</p>
 <p><img  src="./asset-4.png"
         alt="initConfig"/></p>
 <p>You can see that <code>initConfig</code> run first and later <code>Hello CLI</code> .</p>
 <p>To understand the complete flow of cli, add a message inside the <code>init</code> function and a message inside the <code>main</code> func in the <code>main.go</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// root.go
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
-     <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;inside init&#34;</span>)
-     <span style="color:#a6e22e">cobra</span>.<span style="color:#a6e22e">OnInitialize</span>(<span style="color:#a6e22e">initConfig</span>)
-<span style="color:#f92672">...</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// root.go
+</span><span style="color:#6272a4"></span>
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">init</span>() {
+     fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;inside init&#34;</span>)
+     cobra.<span style="color:#50fa7b">OnInitialize</span>(initConfig)
+<span style="color:#ff79c6">...</span>
 
-<span style="color:#75715e">// main.go
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-     <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;inside main&#34;</span>)
-     <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Execute</span>()
+<span style="color:#6272a4">// main.go
+</span><span style="color:#6272a4"></span>
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+     fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;inside main&#34;</span>)
+     cmd.<span style="color:#50fa7b">Execute</span>()
 }
 </code></pre></div><p>Save the changes. Rebuild the binary <code>go install my-calc</code> and run <code>my-calc</code>.</p>
 <p><img  src="./asset-5.png"
@@ -197,49 +226,49 @@ add created at C:\Work\golang\my-calc
 <p>First, an <code>addCmd</code> struct variable is declared of type <code>*cobra.Command</code> .</p>
 <p>The <code>*cobra.Command</code> have <code>RUN</code> which is a func and takes pointer of <code>*cobra.Command</code> and a slice of string <code>[]string</code>.</p>
 <p>Then it is initialized in <code>init</code> function. In the <code>init</code>, it is added to the <code>rootCmd</code>. We can understand it as <code>addCmd</code>is the sub-command or child command of the <code>rootCmd</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
-   <span style="color:#a6e22e">rootCmd</span>.<span style="color:#a6e22e">AddCommand</span>(<span style="color:#a6e22e">addCmd</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">init</span>() {
+   rootCmd.<span style="color:#50fa7b">AddCommand</span>(addCmd)
 </code></pre></div><p>In the terminal, rebuild the binary using <code>go install my-calc</code> command and run <code>my-calc add</code>.</p>
 <p><img  src="./asset-6.png"
         alt="add called"/></p>
 <p>The <code>add</code> command is working fine. It’s time to modify it to add a series of numbers.</p>
 <p>The commands only take a slice of string as an argument. To add the numbers, we first have to convert the <code>string</code> into <code>int</code> then return the result. We will use <code>strconv</code> library to convert the <code>string</code> to <code>int</code>.</p>
 <p>Import the <code>strconv</code> package.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;strconv&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">import</span> (
+   <span style="color:#f1fa8c">&#34;fmt&#34;</span>
+   <span style="color:#f1fa8c">&#34;strconv&#34;</span>
 
-   <span style="color:#e6db74">&#34;github.com/spf13/cobra&#34;</span>
+   <span style="color:#f1fa8c">&#34;github.com/spf13/cobra&#34;</span>
 )
 </code></pre></div><p>Inside the <code>add.go</code>, create a new <code>addInt</code> function.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// add.go
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addInt</span>(<span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// add.go
+</span><span style="color:#6272a4"></span>
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">addInt</span>(args []<span style="color:#8be9fd">string</span>) {
 
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#66d9ef">int</span>
+   <span style="color:#8be9fd;font-style:italic">var</span> sum <span style="color:#8be9fd">int</span>
 
-  <span style="color:#75715e">// iterate over the arguments
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// the first return value is index of args, we can omit it using _
-</span><span style="color:#75715e"></span>
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">ival</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">args</span> {
+  <span style="color:#6272a4">// iterate over the arguments
+</span><span style="color:#6272a4"></span>  <span style="color:#6272a4">// the first return value is index of args, we can omit it using _
+</span><span style="color:#6272a4"></span>
+   <span style="color:#ff79c6">for</span> _, ival <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> args {
 
- <span style="color:#75715e">// strconv is the library used for type conversion. for string
-</span><span style="color:#75715e"></span> <span style="color:#75715e">// to int conversion Atio method is used.
-</span><span style="color:#75715e"></span>       <span style="color:#a6e22e">itemp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#a6e22e">ival</span>)
+ <span style="color:#6272a4">// strconv is the library used for type conversion. for string
+</span><span style="color:#6272a4"></span> <span style="color:#6272a4">// to int conversion Atio method is used.
+</span><span style="color:#6272a4"></span>       itemp, err <span style="color:#ff79c6">:=</span> strconv.<span style="color:#50fa7b">Atoi</span>(ival)
 
-       <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-           <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+       <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+           fmt.<span style="color:#50fa7b">Println</span>(err)
        }
-       <span style="color:#a6e22e">sum</span> = <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">itemp</span>
+       sum = sum <span style="color:#ff79c6">+</span> itemp
     }
 
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Addition of numbers %s is %d&#34;</span>, <span style="color:#a6e22e">args</span>, <span style="color:#a6e22e">sum</span>)
+   fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Addition of numbers %s is %d&#34;</span>, args, sum)
 }
 </code></pre></div><p>Save the changes.</p>
 <p>In the <code>addCmd</code> variable, update the <code>RUN</code> func. Remove the print message and call the <code>addInt</code> function with <code>args</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// addCmd
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">Run</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">cmd</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">cobra</span>.<span style="color:#a6e22e">Command</span>, <span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) {
-  <span style="color:#a6e22e">addInt</span>(<span style="color:#a6e22e">args</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// addCmd
+</span><span style="color:#6272a4"></span>Run: <span style="color:#8be9fd;font-style:italic">func</span>(cmd <span style="color:#ff79c6">*</span>cobra.Command, args []<span style="color:#8be9fd">string</span>) {
+  <span style="color:#50fa7b">addInt</span>(args)
 },
 </code></pre></div><p>Rebuild the binary using <code>go install my-calc</code> .</p>
 <p>Run <code>my-calc add 2 3</code> .</p>
@@ -251,44 +280,44 @@ add created at C:\Work\golang\my-calc
 <p>You can pass as many arguments as you want. If you remember the args is a slice of string. But there is a limitation in this function. It can only add integers not decimal number. In the <code>addInt</code> function we are converting the string into <code>int</code> not in <code>float32/64</code> .</p>
 <p>It is time to introduce a <code>flag</code> in the <code>addCmd</code> . This flag will help the cli to decide if it is an <code>int</code> operation or <code>float</code>.</p>
 <p>In the <code>add.go</code> , inside the <code>init</code> func, create a local flag of the bool type, <code>Flags().BoolP</code>. Its name will be <code>float</code> , shortened name <code>f</code> , default value <code>false</code> and description. The default value is very important. It means even if flag is not called in the command, the flag value will be <code>false</code> . For bool type, if a flag is called it will toggle the default.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// add.go
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
- <span style="color:#a6e22e">rootCmd</span>.<span style="color:#a6e22e">AddCommand</span>(<span style="color:#a6e22e">addCmd</span>)
- <span style="color:#a6e22e">addCmd</span>.<span style="color:#a6e22e">Flags</span>().<span style="color:#a6e22e">BoolP</span>(<span style="color:#e6db74">&#34;float&#34;</span>, <span style="color:#e6db74">&#34;f&#34;</span>, <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">&#34;Add Floating Numbers&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// add.go
+</span><span style="color:#6272a4"></span>
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">init</span>() {
+ rootCmd.<span style="color:#50fa7b">AddCommand</span>(addCmd)
+ addCmd.<span style="color:#50fa7b">Flags</span>().<span style="color:#50fa7b">BoolP</span>(<span style="color:#f1fa8c">&#34;float&#34;</span>, <span style="color:#f1fa8c">&#34;f&#34;</span>, <span style="color:#ff79c6">false</span>, <span style="color:#f1fa8c">&#34;Add Floating Numbers&#34;</span>)
 }
 </code></pre></div><p>Create a new <code>addFloat</code> function in the <code>add.go</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// add.go
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addFloat</span>(<span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// add.go
+</span><span style="color:#6272a4"></span>
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">addFloat</span>(args []<span style="color:#8be9fd">string</span>) {
 
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#66d9ef">float64</span>
+    <span style="color:#8be9fd;font-style:italic">var</span> sum <span style="color:#8be9fd">float64</span>
 
-    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">fval</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">args</span> {
-    <span style="color:#75715e">// convert string to float64
-</span><span style="color:#75715e"></span>       <span style="color:#a6e22e">ftemp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseFloat</span>(<span style="color:#a6e22e">fval</span>, <span style="color:#ae81ff">64</span>)
+    <span style="color:#ff79c6">for</span> _, fval <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> args {
+    <span style="color:#6272a4">// convert string to float64
+</span><span style="color:#6272a4"></span>       ftemp, err <span style="color:#ff79c6">:=</span> strconv.<span style="color:#50fa7b">ParseFloat</span>(fval, <span style="color:#bd93f9">64</span>)
 
-       <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-          <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+       <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+          fmt.<span style="color:#50fa7b">Println</span>(err)
        }
-       <span style="color:#a6e22e">sum</span> = <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">ftemp</span>
+       sum = sum <span style="color:#ff79c6">+</span> ftemp
     }
 
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Sum of floating numbers %s is %f&#34;</span>, <span style="color:#a6e22e">args</span>, <span style="color:#a6e22e">sum</span>)
+    fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Sum of floating numbers %s is %f&#34;</span>, args, sum)
 }
 </code></pre></div><p>This function is the same as <code>addInt</code> except, it is converting <code>string</code> to <code>float64</code>.</p>
 <p>In the <code>addCmd</code> <code>RUN</code> function, it will call the <code>addInt</code> or <code>addFloat</code> according to the flag. If flag <code>--float or -f</code> is passed then it will call <code>addFloat</code> .</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// add.go
-</span><span style="color:#75715e"></span><span style="color:#75715e">// addCmd
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">Run</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">cmd</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">cobra</span>.<span style="color:#a6e22e">Command</span>, <span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) {
- <span style="color:#75715e">// get the flag value, its default value is false
-</span><span style="color:#75715e"></span> <span style="color:#a6e22e">fstatus</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Flags</span>().<span style="color:#a6e22e">GetBool</span>(<span style="color:#e6db74">&#34;float&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// add.go
+</span><span style="color:#6272a4"></span><span style="color:#6272a4">// addCmd
+</span><span style="color:#6272a4"></span>
+Run: <span style="color:#8be9fd;font-style:italic">func</span>(cmd <span style="color:#ff79c6">*</span>cobra.Command, args []<span style="color:#8be9fd">string</span>) {
+ <span style="color:#6272a4">// get the flag value, its default value is false
+</span><span style="color:#6272a4"></span> fstatus, _ <span style="color:#ff79c6">:=</span> cmd.<span style="color:#50fa7b">Flags</span>().<span style="color:#50fa7b">GetBool</span>(<span style="color:#f1fa8c">&#34;float&#34;</span>)
 
- <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fstatus</span> { <span style="color:#75715e">// if status is true, call addFloat
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">addFloat</span>(<span style="color:#a6e22e">args</span>)
-  } <span style="color:#66d9ef">else</span> {
-    <span style="color:#a6e22e">addInt</span>(<span style="color:#a6e22e">args</span>)
+ <span style="color:#ff79c6">if</span> fstatus { <span style="color:#6272a4">// if status is true, call addFloat
+</span><span style="color:#6272a4"></span>    <span style="color:#50fa7b">addFloat</span>(args)
+  } <span style="color:#ff79c6">else</span> {
+    <span style="color:#50fa7b">addInt</span>(args)
   }
 },
 </code></pre></div><p>Save all the changes. Rebuild the binary using <code>go install my-calc</code>.</p>
@@ -304,25 +333,25 @@ add created at C:\Work\golang\my-calc
 <pre><code>cobra add even
 </code></pre><p>The <code>even</code> command as <code>even.go</code> added in the <code>cmd</code> folder.</p>
 <p>Open the <code>even.go</code> in the editor. Change <code>rootCmd</code> to <code>addCmd</code> in the <code>init</code> .</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// even.go
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
-    <span style="color:#a6e22e">addCmd</span>.<span style="color:#a6e22e">AddCommand</span>(<span style="color:#a6e22e">evenCmd</span>)
-<span style="color:#f92672">...</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// even.go
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">init</span>() {
+    addCmd.<span style="color:#50fa7b">AddCommand</span>(evenCmd)
+<span style="color:#ff79c6">...</span>
 }
 </code></pre></div><p>The <code>addCmd.AddCommand(evenCmd)</code> will add <code>evenCmd</code> as child or subcommand of the <code>addCmd</code> .</p>
 <p>Update the <code>evenCmd</code> struct variable’s <code>RUN</code> method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// even.go
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">Run</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">cmd</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">cobra</span>.<span style="color:#a6e22e">Command</span>, <span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// even.go
+</span><span style="color:#6272a4"></span>Run: <span style="color:#8be9fd;font-style:italic">func</span>(cmd <span style="color:#ff79c6">*</span>cobra.Command, args []<span style="color:#8be9fd">string</span>) {
 
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">evenSum</span> <span style="color:#66d9ef">int</span>
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">ival</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">args</span> {
-      <span style="color:#a6e22e">itemp</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#a6e22e">ival</span>)
-      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">itemp</span><span style="color:#f92672">%</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-         <span style="color:#a6e22e">evenSum</span> = <span style="color:#a6e22e">evenSum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">itemp</span>
+   <span style="color:#8be9fd;font-style:italic">var</span> evenSum <span style="color:#8be9fd">int</span>
+   <span style="color:#ff79c6">for</span> _, ival <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> args {
+      itemp, _ <span style="color:#ff79c6">:=</span> strconv.<span style="color:#50fa7b">Atoi</span>(ival)
+      <span style="color:#ff79c6">if</span> itemp<span style="color:#ff79c6">%</span><span style="color:#bd93f9">2</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span> {
+         evenSum = evenSum <span style="color:#ff79c6">+</span> itemp
       }
    }
 
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;The even addition of %s is %d&#34;</span>, <span style="color:#a6e22e">args</span>, <span style="color:#a6e22e">evenSum</span>)
+   fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;The even addition of %s is %d&#34;</span>, args, evenSum)
 },
 </code></pre></div><p>It will first convert the <code>string</code> into <code>int</code> using <code>strconv</code> package, then adding only even numbers.</p>
 <p>Save all the changes. Rebuild the binary using <code>go install my-calc</code> .</p>
@@ -337,25 +366,25 @@ add created at C:\Work\golang\my-calc
 <pre><code>cobra add odd
 </code></pre><p>The <code>odd</code> command as <code>odd.go</code> added in the <code>cmd</code> folder.</p>
 <p>Open the <code>odd.go</code> in the editor. Change <code>rootCmd</code> to <code>addCmd</code> in the <code>init</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// odd.go
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
-    <span style="color:#a6e22e">addCmd</span>.<span style="color:#a6e22e">AddCommand</span>(<span style="color:#a6e22e">oddCmd</span>)
-<span style="color:#f92672">...</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// odd.go
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">init</span>() {
+    addCmd.<span style="color:#50fa7b">AddCommand</span>(oddCmd)
+<span style="color:#ff79c6">...</span>
 }
 </code></pre></div><p>The <code>addCmd.AddCommand(oddCmd)</code> will add <code>oddCmd</code> as child or subcommand of the <code>addCmd</code>.</p>
 <p>Update the <code>oddCmd</code> struct variable’s <code>RUN</code> method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// odd.go
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">Run</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">cmd</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">cobra</span>.<span style="color:#a6e22e">Command</span>, <span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">oddSum</span> <span style="color:#66d9ef">int</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">ival</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">args</span> {
-      <span style="color:#a6e22e">itemp</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#a6e22e">ival</span>)
-      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">itemp</span><span style="color:#f92672">%</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> {
-         <span style="color:#a6e22e">oddSum</span> = <span style="color:#a6e22e">oddSum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">itemp</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// odd.go
+</span><span style="color:#6272a4"></span>
+Run: <span style="color:#8be9fd;font-style:italic">func</span>(cmd <span style="color:#ff79c6">*</span>cobra.Command, args []<span style="color:#8be9fd">string</span>) {
+    <span style="color:#8be9fd;font-style:italic">var</span> oddSum <span style="color:#8be9fd">int</span>
+    <span style="color:#ff79c6">for</span> _, ival <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> args {
+      itemp, _ <span style="color:#ff79c6">:=</span> strconv.<span style="color:#50fa7b">Atoi</span>(ival)
+      <span style="color:#ff79c6">if</span> itemp<span style="color:#ff79c6">%</span><span style="color:#bd93f9">2</span> <span style="color:#ff79c6">!=</span> <span style="color:#bd93f9">0</span> {
+         oddSum = oddSum <span style="color:#ff79c6">+</span> itemp
       }
     }
 
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;The odd addition of %s is %d&#34;</span>, <span style="color:#a6e22e">args</span>, <span style="color:#a6e22e">oddSum</span>)
+    fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;The odd addition of %s is %d&#34;</span>, args, oddSum)
 },
 </code></pre></div><p>It will first convert the <code>string</code> into <code>int</code> using <code>strconv</code> package, then adding only even numbers.</p>
 <p>Save all the changes. Rebuild the binary using <code>go install my-calc</code>.</p>
@@ -375,10 +404,21 @@ add created at C:\Work\golang\my-calc
         alt/></a></p>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2019/>2019</a><a class="category" href=/categories/featured/>Featured</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/cobra/>cobra</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-your-own-etherscan-with-react-in-5-minutes/"><span class="li iconfont icon-article"></span>Create your own Etherscan with React in 5 minutes</a></p><p><a class="link" href="/posts/catalyst-network-the-first-step-towards-decentralized-internet/"><span class="li iconfont icon-article"></span>Catalyst Network: The first step towards Decentralized Internet</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-your-own-etherscan-with-react-in-5-minutes/"><span class="">Previous</span>Create your own Etherscan with React in 5 minutes</a></p><p><a class="link" href="/posts/catalyst-network-the-first-step-towards-decentralized-internet/"><span class="">Next</span>Catalyst Network: The first step towards Decentralized Internet</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -399,13 +439,36 @@ add created at C:\Work\golang\my-calc
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -416,6 +479,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

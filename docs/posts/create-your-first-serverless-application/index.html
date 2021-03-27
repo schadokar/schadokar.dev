@@ -2,21 +2,50 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create your first Serverless application&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create your first Serverless application&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Create your first Serverless application" /><meta name="twitter:image" content="https://schadokar.dev/posts/create-your-first-serverless-application/images/serverless-aws.png" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Create your first Serverless application</h1><p class="article date">Sunday, August 9, 2020<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="images/serverless-aws.png" alt>
-          </p><p>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resources consumed by an application, rather than on pre-purchased units of capacity. - <a href="https://en.wikipedia.org/wiki/Serverless_computing"target="_blank">Wikipedia</a></p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Create your first Serverless application</h1><p class="article date">Sunday, August 9, 2020<span class="reading-time"> • 4 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/serverless/>Serverless</a><a class="category" href=/categories/cloud/>Cloud</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/serverless/>serverless</a><a class="tag" href=/tags/lambda/>lambda</a><a class="tag" href=/tags/aws/>aws</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resources consumed by an application, rather than on pre-purchased units of capacity. - <a href="https://en.wikipedia.org/wiki/Serverless_computing"target="_blank">Wikipedia</a></p>
 <p>In simple language, serverless means pay only for what you use. You might think there is already a Pay-as-you-go model provided by the cloud providers.<br>
 Let me rephrase it, serverless means pay only for what you execute. Serverless doesn't mean that there will be no server, it means that you don't have to worry about the server and its setup. Focus on the application logic or in our programming terminology only focus on writing the code or functions.<br>
 You can deploy these individual functions to the cloud and whenever this function will execute, only for that execution you will be charged.<br>
@@ -33,26 +62,26 @@ Isn't it great? 😃</p>
 <p>Go to <a href="https://nodejs.org/en/download/"target="_blank">nodejs</a>.</p>
 <h2 id="install-serverless">Install serverless</h2>
 <p>Run the below <code>npm</code> command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">global</span> <span style="color:#a6e22e">serverless</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">npm install <span style="color:#ff79c6">--</span>global serverless
 </code></pre></div><h1 id="create-a-nodejs-application-and-deploy-on-aws">Create a nodejs application and deploy on AWS</h1>
 <p>Create a new directory <code>hello-serverless</code>.<br>
 Open the terminal in the directory and run the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">serverless</span> <span style="color:#a6e22e">create</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">template</span> <span style="color:#a6e22e">aws</span><span style="color:#f92672">-</span><span style="color:#a6e22e">nodejs</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">serverless create <span style="color:#ff79c6">--</span>template aws<span style="color:#ff79c6">-</span>nodejs
 </code></pre></div><p><img  src="./images/boilerplate.PNG"
         alt="boilerplate"/></p>
 <p>This template has created 2 files, <code>handler.js</code> where the function is defined and <code>serverless.yml</code> where serverless deployment configuration is defined.</p>
 <p>Open <code>handler.js</code>.</p>
 <p>This is a simple function which will return a message.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">hello</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">event</span>) =&gt; {
-  <span style="color:#66d9ef">return</span> {
-    <span style="color:#a6e22e">statusCode</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>,
-    <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">module.exports.hello <span style="color:#ff79c6">=</span> async (event) =&gt; {
+  <span style="color:#ff79c6">return</span> {
+    statusCode<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">200</span>,
+    body<span style="color:#ff79c6">:</span> JSON.stringify(
       {
-        <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Go Serverless v1.0! Your function executed successfully!&#34;</span>,
-        <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>,
+        message<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Go Serverless v1.0! Your function executed successfully!&#34;</span>,
+        input<span style="color:#ff79c6">:</span> event,
       },
-      <span style="color:#66d9ef">null</span>,
-      <span style="color:#ae81ff">2</span>
+      <span style="color:#ff79c6">null</span>,
+      <span style="color:#bd93f9">2</span>
     ),
   };
 };
@@ -60,14 +89,14 @@ Open the terminal in the directory and run the below command.</p>
 <p>Open <code>serverless.yml</code>.</p>
 <p>In the provider section, it is <code>aws</code> and by default, its region is <code>us-east-1</code>. It also provides a staging option, you can deploy the project in a different environment like dev, prod or test.</p>
 <p>Update the provider section:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">provider:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
-  region: us-east<span style="color:#ae81ff">-1</span>
+  region: us-east<span style="color:#bd93f9">-1</span>
 </code></pre></div><p>In the functions, create a new route for the hello function. It will create a new route in the AWS API gateway and link it to the AWS lambda function in which <code>hello</code> function will deploy.</p>
 <p>Update the function section:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">functions:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">functions:
   hello:
     handler: handler.hello
     events:
@@ -98,12 +127,12 @@ This is only for the education purpose, in production configure the access accor
 <h2 id="deploy-to-aws">Deploy to AWS</h2>
 <p>Open terminal in the project directory.<br>
 Run the below command to connect serverless CLI to AWS account.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">serverless</span> <span style="color:#a6e22e">config</span> <span style="color:#a6e22e">credentials</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">provider</span> <span style="color:#a6e22e">aws</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">key</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ACCESS</span> <span style="color:#a6e22e">KEY</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">secret</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Secret</span> <span style="color:#a6e22e">Access</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">serverless config credentials <span style="color:#ff79c6">--</span>provider aws <span style="color:#ff79c6">--</span>key <span style="color:#ff79c6">&lt;</span>ACCESS KEY<span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">--</span>secret <span style="color:#ff79c6">&lt;</span>Secret Access key<span style="color:#ff79c6">&gt;</span>
 </code></pre></div><blockquote>
 <p>❗ Don't use the shorthand <code>-s</code> for secret, it is reserved keyword and will throw a serverless error <code>Invalid stage name</code>.</p>
 </blockquote>
 <p>Use the below command to deploy the function to the AWS.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">serverless</span> <span style="color:#a6e22e">deploy</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">serverless deploy
 </code></pre></div><blockquote>
 <p>You can use <code>sls</code> for <code>serverless</code>. It is a shorthand notation.</p>
 </blockquote>
@@ -126,10 +155,21 @@ Run the below command to connect serverless CLI to AWS account.</p>
 </blockquote>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/serverless/>Serverless</a><a class="category" href=/categories/cloud/>Cloud</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/serverless/>serverless</a><a class="tag" href=/tags/lambda/>lambda</a><a class="tag" href=/tags/aws/>aws</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-a-serverless-application-in-golang-with-aws/"><span class="li iconfont icon-article"></span>Create a Serverless Application in Golang With AWS</a></p><p><a class="link" href="/posts/secure-your-api-using-jwt-in-golang/"><span class="li iconfont icon-article"></span>Secure Your Api Using Jwt in Golang</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-a-serverless-application-in-golang-with-aws/"><span class="">Previous</span>Create a Serverless Application in Golang With AWS</a></p><p><a class="link" href="/posts/secure-your-api-using-jwt-in-golang/"><span class="">Next</span>Secure Your Api Using Jwt in Golang</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -150,13 +190,36 @@ Run the below command to connect serverless CLI to AWS account.</p>
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -167,6 +230,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

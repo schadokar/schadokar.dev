@@ -11,13 +11,13 @@
 - icon: 'fa-file-text-o'
   title: 'Go To Do App'
   path: 'https://github.com/schadokar/go-to-do-app'
-  source: 'https://github.com/schadokar/my-calc'
+  source: 'https://github.com/schadokar/go-to-do-app'
   description: "This is a to-do list application. It's server is created in Golang, db is mongodb and client is in React."
 - icon: 'fa-server'
   title: 'Redis Go Server'
-  path: 'https://github.com/schadokar/'
-  source: 'https://github.com/schadokar/'
-  description: "A prebuild golang server to work with redis db. The docker image is hosted on [Docker Hub](https://hub.docker.com/r/schadokar/redis-go-server)."
+  path: 'https://github.com/schadokar/redis-go-server/'
+  source: 'https://github.com/schadokar/redis-go-server/'
+  description: "A prebuild golang server to work with redis db."
 - icon: 'fa-coffee'
   title: 'Coffee Hai'
   path: 'https://github.com/schadokar/coffee-hai'

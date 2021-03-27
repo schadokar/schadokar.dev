@@ -2,41 +2,70 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Read and Write a File in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Read and Write a File in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to Read and Write a File in Golang?" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">How to Read and Write a File in Golang?</h1><p class="article date">Tuesday, March 24, 2020<span class="reading-time"> • 8 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="https://schadokar.dev/images/golang-basic.png" alt>
-          </p><p>In this tutorial, we will learn how to read and write files in the file system using the <code>io/ioutil</code> package.</p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to Read and Write a File in Golang?</h1><p class="article date">Tuesday, March 24, 2020<span class="reading-time"> • 8 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>In this tutorial, we will learn how to read and write files in the file system using the <code>io/ioutil</code> package.</p>
 <h2 id="write-a-file-using-writefile">Write a file using WriteFile</h2>
 <p>The <code>WriteFile</code> function takes 3 arguments, filename, data in a byte array, and filemode.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">WriteFile</span>(<span style="color:#a6e22e">filename</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">data</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">perm</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">FileMode</span>) <span style="color:#66d9ef">error</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">WriteFile</span>(filename <span style="color:#8be9fd">string</span>, data []<span style="color:#8be9fd">byte</span>, perm os.FileMode) <span style="color:#8be9fd">error</span>
 </code></pre></div><p>A FileMode represents a file's mode and permission bits. <a href="https://golang.org/pkg/os/#FileMode"target="_blank">Learn more</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-    <span style="color:#e6db74">&#34;log&#34;</span>
+<span style="color:#ff79c6">import</span> (
+    <span style="color:#f1fa8c">&#34;io/ioutil&#34;</span>
+    <span style="color:#f1fa8c">&#34;log&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#75715e">// create a byte array of a string
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;Hello Gopher!&#34;</span>)
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+    <span style="color:#6272a4">// create a byte array of a string
+</span><span style="color:#6272a4"></span>    data <span style="color:#ff79c6">:=</span> []<span style="color:#8be9fd;font-style:italic">byte</span>(<span style="color:#f1fa8c">&#34;Hello Gopher!&#34;</span>)
 
-    <span style="color:#75715e">// write data to a hello file, with 0777 file permission
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#e6db74">&#34;hello.txt&#34;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#ae81ff">0777</span>)
+    <span style="color:#6272a4">// write data to a hello file, with 0777 file permission
+</span><span style="color:#6272a4"></span>    err <span style="color:#ff79c6">:=</span> ioutil.<span style="color:#50fa7b">WriteFile</span>(<span style="color:#f1fa8c">&#34;hello.txt&#34;</span>, data, <span style="color:#bd93f9">0777</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;%v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;%v&#34;</span>, err)
     }
 }
 </code></pre></div><p>This will create a new file <code>hello.txt</code> in the current directory.</p>
@@ -57,27 +86,27 @@
 </code></pre><hr>
 <h2 id="read-a-file-using-readfile">Read a file using ReadFile</h2>
 <p>The <code>ReadFile</code> function reads the file by its filename and returns the file data in array of byte.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ReadFile</span>(<span style="color:#a6e22e">filename</span> <span style="color:#66d9ef">string</span>) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">ReadFile</span>(filename <span style="color:#8be9fd">string</span>) ([]<span style="color:#8be9fd">byte</span>, <span style="color:#8be9fd">error</span>)
 </code></pre></div><p>We will read the above created <code>hello.txt</code> file. Please create a file if it is not created.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-    <span style="color:#e6db74">&#34;fmt&#34;</span>
-    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-    <span style="color:#e6db74">&#34;log&#34;</span>
+<span style="color:#ff79c6">import</span> (
+    <span style="color:#f1fa8c">&#34;fmt&#34;</span>
+    <span style="color:#f1fa8c">&#34;io/ioutil&#34;</span>
+    <span style="color:#f1fa8c">&#34;log&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
 
-    <span style="color:#75715e">// read the hello.txt
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;hello.txt&#34;</span>)
+    <span style="color:#6272a4">// read the hello.txt
+</span><span style="color:#6272a4"></span>    content, err <span style="color:#ff79c6">:=</span> ioutil.<span style="color:#50fa7b">ReadFile</span>(<span style="color:#f1fa8c">&#34;hello.txt&#34;</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;error while reading %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;error while reading %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// convert the byte into string
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">content</span>))
+    <span style="color:#6272a4">// convert the byte into string
+</span><span style="color:#6272a4"></span>    fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#8be9fd;font-style:italic">string</span>(content))
 }
 </code></pre></div><p>Output</p>
 <pre><code>Hello Gopher!
@@ -85,45 +114,45 @@
 <h2 id="write-to-an-existing-file">Write to an existing file</h2>
 <h3 id="1--using-ioutil">1.  using ioutil</h3>
 <p>First using <code>ReadFile</code>, we will read the content and then we will append the new content.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-    <span style="color:#e6db74">&#34;log&#34;</span>
+<span style="color:#ff79c6">import</span> (
+    <span style="color:#f1fa8c">&#34;io/ioutil&#34;</span>
+    <span style="color:#f1fa8c">&#34;log&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#75715e">// Read the content
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;hello.txt&#34;</span>)
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+    <span style="color:#6272a4">// Read the content
+</span><span style="color:#6272a4"></span>    content, err <span style="color:#ff79c6">:=</span> ioutil.<span style="color:#50fa7b">ReadFile</span>(<span style="color:#f1fa8c">&#34;hello.txt&#34;</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;error while reading the file. %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;error while reading the file. %v&#34;</span>, err)
     }
     
-    <span style="color:#75715e">//  new content
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">newText</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;\nAppended text.&#34;</span>)
+    <span style="color:#6272a4">//  new content
+</span><span style="color:#6272a4"></span>    newText <span style="color:#ff79c6">:=</span> []<span style="color:#8be9fd;font-style:italic">byte</span>(<span style="color:#f1fa8c">&#34;\nAppended text.&#34;</span>)
     
-    <span style="color:#75715e">// append the content
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">content</span> = append(<span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">newText</span><span style="color:#f92672">...</span>)
+    <span style="color:#6272a4">// append the content
+</span><span style="color:#6272a4"></span>    content = <span style="color:#8be9fd;font-style:italic">append</span>(content, newText<span style="color:#ff79c6">...</span>)
 
-    <span style="color:#75715e">// overwrite the content of hello.txt
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#e6db74">&#34;hello.txt&#34;</span>, <span style="color:#a6e22e">content</span>, <span style="color:#ae81ff">0777</span>)
+    <span style="color:#6272a4">// overwrite the content of hello.txt
+</span><span style="color:#6272a4"></span>    err = ioutil.<span style="color:#50fa7b">WriteFile</span>(<span style="color:#f1fa8c">&#34;hello.txt&#34;</span>, content, <span style="color:#bd93f9">0777</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;error while writing the file. %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;error while writing the file. %v&#34;</span>, err)
     }
 }
 </code></pre></div><p>The 3 dots after <code>newText...</code> is a variadic argument. In simple terms it will extract all the array elements. <a href="https://medium.com/rungo/variadic-function-in-go-5d9b23f4c01a"target="_blank">Learn more</a></p>
 <p>For Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">a</span> = [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">if</span> a = [<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">3</span>,<span style="color:#bd93f9">4</span>]
 
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">a</span><span style="color:#f92672">...</span>) =&gt; <span style="color:#66d9ef">func</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)
+<span style="color:#8be9fd;font-style:italic">func</span> (a<span style="color:#ff79c6">...</span>) =&gt; <span style="color:#8be9fd;font-style:italic">func</span> (<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>)
 </code></pre></div><h3 id="2-using-os-package">2. using os package</h3>
 <p>Using <a href="https://golang.org/pkg/os/#OpenFile"target="_blank">OpenFile</a> in the <a href="https://golang.org/pkg/os/"target="_blank">os</a> package we can open the file and append the data in it.</p>
 <blockquote>
 <p>Package os provides a platform-independent interface to operating system functionality.</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">OpenFile</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">flag</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">perm</span> <span style="color:#a6e22e">FileMode</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">File</span>, <span style="color:#66d9ef">error</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">OpenFile</span>(name <span style="color:#8be9fd">string</span>, flag <span style="color:#8be9fd">int</span>, perm FileMode) (<span style="color:#ff79c6">*</span>File, <span style="color:#8be9fd">error</span>)
 </code></pre></div><p>The <a href="https://golang.org/pkg/os/#pkg-constants"target="_blank">flag</a> parameter defines the operation on the file. The available flags are:</p>
 <pre><code>    O_RDONLY int = syscall.O_RDONLY // open the file read-only.
     O_WRONLY int = syscall.O_WRONLY // open the file write-only.
@@ -135,26 +164,26 @@
     O_SYNC   int = syscall.O_SYNC   // open for synchronous I/O.
     O_TRUNC  int = syscall.O_TRUNC  // truncate regular writable file when opened.
 </code></pre><p>Example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-    <span style="color:#e6db74">&#34;log&#34;</span>
-    <span style="color:#e6db74">&#34;os&#34;</span>
+<span style="color:#ff79c6">import</span> (
+    <span style="color:#f1fa8c">&#34;log&#34;</span>
+    <span style="color:#f1fa8c">&#34;os&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#75715e">// If the file doesn&#39;t exist, create it, or append to the file
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">file</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">OpenFile</span>(<span style="color:#e6db74">&#34;hello.txt&#34;</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_APPEND</span>|<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_CREATE</span>|<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_WRONLY</span>, <span style="color:#ae81ff">0777</span>)
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+    <span style="color:#6272a4">// If the file doesn&#39;t exist, create it, or append to the file
+</span><span style="color:#6272a4"></span>    file, err <span style="color:#ff79c6">:=</span> os.<span style="color:#50fa7b">OpenFile</span>(<span style="color:#f1fa8c">&#34;hello.txt&#34;</span>, os.O_APPEND|os.O_CREATE|os.O_WRONLY, <span style="color:#bd93f9">0777</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;error while opening the file. %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;error while opening the file. %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// close the file once program execution complete
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">Close</span>()
+    <span style="color:#6272a4">// close the file once program execution complete
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">defer</span> file.<span style="color:#50fa7b">Close</span>()
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">Write</span>([]byte(<span style="color:#e6db74">&#34;\nappended data&#34;</span>)); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;error while writing the file. %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> _, err <span style="color:#ff79c6">:=</span> file.<span style="color:#50fa7b">Write</span>([]<span style="color:#8be9fd;font-style:italic">byte</span>(<span style="color:#f1fa8c">&#34;\nappended data&#34;</span>)); err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;error while writing the file. %v&#34;</span>, err)
     }
 }
 
@@ -163,58 +192,58 @@
 <p>Reading and writing the JSON file requires to unmarshal and marshal the data respectively.</p>
 <p>Learn more about <a href="">How to use JSON in Golang</a></p>
 <p>We are going to create a library object and a book object. The library stores the array of books.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">book</span> <span style="color:#66d9ef">struct</span> {
-    <span style="color:#a6e22e">Name</span>   <span style="color:#66d9ef">string</span>
-    <span style="color:#a6e22e">Author</span> <span style="color:#66d9ef">string</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">type</span> book <span style="color:#8be9fd;font-style:italic">struct</span> {
+    Name   <span style="color:#8be9fd">string</span>
+    Author <span style="color:#8be9fd">string</span>
 }
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">library</span> <span style="color:#66d9ef">struct</span> {
-    <span style="color:#a6e22e">Books</span> []<span style="color:#a6e22e">book</span>
+<span style="color:#8be9fd;font-style:italic">type</span> library <span style="color:#8be9fd;font-style:italic">struct</span> {
+    Books []book
 }
 </code></pre></div><p>Create books and library</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// create some books
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">books</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">book</span>{
-        {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;An Introduction to programming in Go&#34;</span>, <span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;Caleb Doxsey&#34;</span>},
-        {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Go in Action&#34;</span>, <span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;William Kennedy&#34;</span>},
-        {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;The way to Go&#34;</span>, <span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;IVO BALBAERT&#34;</span>},
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#6272a4">// create some books
+</span><span style="color:#6272a4"></span>    books <span style="color:#ff79c6">:=</span> []book{
+        {Name: <span style="color:#f1fa8c">&#34;An Introduction to programming in Go&#34;</span>, Author: <span style="color:#f1fa8c">&#34;Caleb Doxsey&#34;</span>},
+        {Name: <span style="color:#f1fa8c">&#34;Go in Action&#34;</span>, Author: <span style="color:#f1fa8c">&#34;William Kennedy&#34;</span>},
+        {Name: <span style="color:#f1fa8c">&#34;The way to Go&#34;</span>, Author: <span style="color:#f1fa8c">&#34;IVO BALBAERT&#34;</span>},
     }
 
-    <span style="color:#75715e">// create the library with books
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">lib</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">library</span>{<span style="color:#a6e22e">Books</span>: <span style="color:#a6e22e">books</span>}
+    <span style="color:#6272a4">// create the library with books
+</span><span style="color:#6272a4"></span>    lib <span style="color:#ff79c6">:=</span> library{Books: books}
 </code></pre></div><h3 id="write-json">Write JSON</h3>
 <p>The library is in golang struct format. To convert it JSON we need to marshal it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// marshal to json or convert to json
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">libJSON</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">lib</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#6272a4">// marshal to json or convert to json
+</span><span style="color:#6272a4"></span>    libJSON, _ <span style="color:#ff79c6">:=</span> json.<span style="color:#50fa7b">Marshal</span>(lib)
 </code></pre></div><p>Save it in <code>library.json</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// write to library.json
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#e6db74">&#34;library.json&#34;</span>, <span style="color:#a6e22e">libJSON</span>, <span style="color:#ae81ff">0777</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#6272a4">// write to library.json
+</span><span style="color:#6272a4"></span>    err <span style="color:#ff79c6">:=</span> ioutil.<span style="color:#50fa7b">WriteFile</span>(<span style="color:#f1fa8c">&#34;library.json&#34;</span>, libJSON, <span style="color:#bd93f9">0777</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while writing a file %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while writing a file %v&#34;</span>, err)
     }
 </code></pre></div><h3 id="read-json">Read JSON</h3>
 <p>Read the <code>library.json</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// Read the file
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;library.json&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#6272a4">// Read the file
+</span><span style="color:#6272a4"></span>    content, err <span style="color:#ff79c6">:=</span> ioutil.<span style="color:#50fa7b">ReadFile</span>(<span style="color:#f1fa8c">&#34;library.json&#34;</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while reading a file %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while reading a file %v&#34;</span>, err)
     }
 </code></pre></div><p>The data is in byte. Unmarshal it to access the data.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// create a new library
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">readLib</span> <span style="color:#a6e22e">library</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#6272a4">// create a new library
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">var</span> readLib library
 
-    <span style="color:#75715e">// unmarshal the json to library
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">content</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">readLib</span>)
+    <span style="color:#6272a4">// unmarshal the json to library
+</span><span style="color:#6272a4"></span>    err = json.<span style="color:#50fa7b">Unmarshal</span>(content, <span style="color:#ff79c6">&amp;</span>readLib)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while unmarshal the content  %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while unmarshal the content  %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// print all the books
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">readLib</span>.<span style="color:#a6e22e">Books</span> {
+    <span style="color:#6272a4">// print all the books
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">for</span> i, book <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> readLib.Books {
 
-        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%v| Name: %-40s | Author: %s\n&#34;</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Author</span>)
+        fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%v| Name: %-40s | Author: %s\n&#34;</span>, i, book.Name, book.Author)
     }
 </code></pre></div><p>Output</p>
 <pre><code>0| Name: An Introduction to programming in Go     | Author: Caleb Doxsey
@@ -227,161 +256,161 @@ In the <code>Printf</code>, we have used <code>%-40s</code>.  <code>40</code> is
 For most values, width is the minimum number of runes to output, padding the formatted form with spaces if necessary.</p>
 </blockquote>
 <p>The complete code will look like this</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
-    <span style="color:#e6db74">&#34;fmt&#34;</span>
-    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-    <span style="color:#e6db74">&#34;log&#34;</span>
+<span style="color:#ff79c6">import</span> (
+    <span style="color:#f1fa8c">&#34;encoding/json&#34;</span>
+    <span style="color:#f1fa8c">&#34;fmt&#34;</span>
+    <span style="color:#f1fa8c">&#34;io/ioutil&#34;</span>
+    <span style="color:#f1fa8c">&#34;log&#34;</span>
 )
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">book</span> <span style="color:#66d9ef">struct</span> {
-    <span style="color:#a6e22e">Name</span>   <span style="color:#66d9ef">string</span>
-    <span style="color:#a6e22e">Author</span> <span style="color:#66d9ef">string</span>
+<span style="color:#8be9fd;font-style:italic">type</span> book <span style="color:#8be9fd;font-style:italic">struct</span> {
+    Name   <span style="color:#8be9fd">string</span>
+    Author <span style="color:#8be9fd">string</span>
 }
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">library</span> <span style="color:#66d9ef">struct</span> {
-    <span style="color:#a6e22e">Books</span> []<span style="color:#a6e22e">book</span>
+<span style="color:#8be9fd;font-style:italic">type</span> library <span style="color:#8be9fd;font-style:italic">struct</span> {
+    Books []book
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#75715e">// create some books
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">books</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">book</span>{
-        {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;An Introduction to programming in Go&#34;</span>, <span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;Caleb Doxsey&#34;</span>},
-        {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Go in Action&#34;</span>, <span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;William Kennedy&#34;</span>},
-        {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;The way to Go&#34;</span>, <span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;IVO BALBAERT&#34;</span>},
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+    <span style="color:#6272a4">// create some books
+</span><span style="color:#6272a4"></span>    books <span style="color:#ff79c6">:=</span> []book{
+        {Name: <span style="color:#f1fa8c">&#34;An Introduction to programming in Go&#34;</span>, Author: <span style="color:#f1fa8c">&#34;Caleb Doxsey&#34;</span>},
+        {Name: <span style="color:#f1fa8c">&#34;Go in Action&#34;</span>, Author: <span style="color:#f1fa8c">&#34;William Kennedy&#34;</span>},
+        {Name: <span style="color:#f1fa8c">&#34;The way to Go&#34;</span>, Author: <span style="color:#f1fa8c">&#34;IVO BALBAERT&#34;</span>},
     }
 
-    <span style="color:#75715e">// create the library with books
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">lib</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">library</span>{<span style="color:#a6e22e">Books</span>: <span style="color:#a6e22e">books</span>}
+    <span style="color:#6272a4">// create the library with books
+</span><span style="color:#6272a4"></span>    lib <span style="color:#ff79c6">:=</span> library{Books: books}
 
-    <span style="color:#75715e">// marshal to json or convert to json
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">libJSON</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">lib</span>)
+    <span style="color:#6272a4">// marshal to json or convert to json
+</span><span style="color:#6272a4"></span>    libJSON, _ <span style="color:#ff79c6">:=</span> json.<span style="color:#50fa7b">Marshal</span>(lib)
 
-    <span style="color:#75715e">// write to library.json
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#e6db74">&#34;library.json&#34;</span>, <span style="color:#a6e22e">libJSON</span>, <span style="color:#ae81ff">0777</span>)
+    <span style="color:#6272a4">// write to library.json
+</span><span style="color:#6272a4"></span>    err <span style="color:#ff79c6">:=</span> ioutil.<span style="color:#50fa7b">WriteFile</span>(<span style="color:#f1fa8c">&#34;library.json&#34;</span>, libJSON, <span style="color:#bd93f9">0777</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while writing a file %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while writing a file %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// Read the file
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;library.json&#34;</span>)
+    <span style="color:#6272a4">// Read the file
+</span><span style="color:#6272a4"></span>    content, err <span style="color:#ff79c6">:=</span> ioutil.<span style="color:#50fa7b">ReadFile</span>(<span style="color:#f1fa8c">&#34;library.json&#34;</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while reading a file %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while reading a file %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// create a new library
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">readLib</span> <span style="color:#a6e22e">library</span>
+    <span style="color:#6272a4">// create a new library
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">var</span> readLib library
 
-    <span style="color:#75715e">// unmarshal the json to library
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">content</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">readLib</span>)
+    <span style="color:#6272a4">// unmarshal the json to library
+</span><span style="color:#6272a4"></span>    err = json.<span style="color:#50fa7b">Unmarshal</span>(content, <span style="color:#ff79c6">&amp;</span>readLib)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while unmarshal the content  %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while unmarshal the content  %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// print all the books
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">readLib</span>.<span style="color:#a6e22e">Books</span> {
+    <span style="color:#6272a4">// print all the books
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">for</span> i, book <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> readLib.Books {
 
-        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%v| Name: %-40s | Author: %s\n&#34;</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Author</span>)
+        fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%v| Name: %-40s | Author: %s\n&#34;</span>, i, book.Name, book.Author)
     }
 
 }
 </code></pre></div><h3 id="update-the-existing-json-file">Update the existing JSON file</h3>
 <p>We will use <code>ioutil</code> for this. First, we will read <code>library.json</code> and then we add a new book in it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
-    <span style="color:#e6db74">&#34;fmt&#34;</span>
-    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-    <span style="color:#e6db74">&#34;log&#34;</span>
+<span style="color:#ff79c6">import</span> (
+    <span style="color:#f1fa8c">&#34;encoding/json&#34;</span>
+    <span style="color:#f1fa8c">&#34;fmt&#34;</span>
+    <span style="color:#f1fa8c">&#34;io/ioutil&#34;</span>
+    <span style="color:#f1fa8c">&#34;log&#34;</span>
 )
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">book</span> <span style="color:#66d9ef">struct</span> {
-    <span style="color:#a6e22e">Name</span>   <span style="color:#66d9ef">string</span>
-    <span style="color:#a6e22e">Author</span> <span style="color:#66d9ef">string</span>
+<span style="color:#8be9fd;font-style:italic">type</span> book <span style="color:#8be9fd;font-style:italic">struct</span> {
+    Name   <span style="color:#8be9fd">string</span>
+    Author <span style="color:#8be9fd">string</span>
 }
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">library</span> <span style="color:#66d9ef">struct</span> {
-    <span style="color:#a6e22e">Books</span> []<span style="color:#a6e22e">book</span>
+<span style="color:#8be9fd;font-style:italic">type</span> library <span style="color:#8be9fd;font-style:italic">struct</span> {
+    Books []book
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
 
-    <span style="color:#75715e">// Read the file
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;library.json&#34;</span>)
+    <span style="color:#6272a4">// Read the file
+</span><span style="color:#6272a4"></span>    content, err <span style="color:#ff79c6">:=</span> ioutil.<span style="color:#50fa7b">ReadFile</span>(<span style="color:#f1fa8c">&#34;library.json&#34;</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while reading a file %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while reading a file %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// create a new library
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">readLib</span> <span style="color:#a6e22e">library</span>
+    <span style="color:#6272a4">// create a new library
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">var</span> readLib library
 
-    <span style="color:#75715e">// unmarshal the json to library
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">content</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">readLib</span>)
+    <span style="color:#6272a4">// unmarshal the json to library
+</span><span style="color:#6272a4"></span>    err = json.<span style="color:#50fa7b">Unmarshal</span>(content, <span style="color:#ff79c6">&amp;</span>readLib)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while unmarshal the content  %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while unmarshal the content  %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// before update
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Before Update&#34;</span>)
+    <span style="color:#6272a4">// before update
+</span><span style="color:#6272a4"></span>    fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Before Update&#34;</span>)
 
-    <span style="color:#75715e">// print all the books
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">readLib</span>.<span style="color:#a6e22e">Books</span> {
+    <span style="color:#6272a4">// print all the books
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">for</span> i, book <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> readLib.Books {
 
-        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%v| Name: %-40s | Author: %s\n&#34;</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Author</span>)
+        fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%v| Name: %-40s | Author: %s\n&#34;</span>, i, book.Name, book.Author)
     }
 
-    <span style="color:#75715e">// Update
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">newBook</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">book</span>{
-        <span style="color:#a6e22e">Name</span>:   <span style="color:#e6db74">&#34;Go Web Programming&#34;</span>,
-        <span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;Sau Sheong Chang&#34;</span>,
+    <span style="color:#6272a4">// Update
+</span><span style="color:#6272a4"></span>    newBook <span style="color:#ff79c6">:=</span> book{
+        Name:   <span style="color:#f1fa8c">&#34;Go Web Programming&#34;</span>,
+        Author: <span style="color:#f1fa8c">&#34;Sau Sheong Chang&#34;</span>,
     }
 
-    <span style="color:#75715e">// append the new book
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">readLib</span>.<span style="color:#a6e22e">Books</span> = append(<span style="color:#a6e22e">readLib</span>.<span style="color:#a6e22e">Books</span>, <span style="color:#a6e22e">newBook</span>)
+    <span style="color:#6272a4">// append the new book
+</span><span style="color:#6272a4"></span>    readLib.Books = <span style="color:#8be9fd;font-style:italic">append</span>(readLib.Books, newBook)
 
-    <span style="color:#75715e">// write the book
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// marshal to json or convert to json
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">libJSON</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">readLib</span>)
+    <span style="color:#6272a4">// write the book
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// marshal to json or convert to json
+</span><span style="color:#6272a4"></span>    libJSON, err <span style="color:#ff79c6">:=</span> json.<span style="color:#50fa7b">Marshal</span>(readLib)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while marshal. %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while marshal. %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// write to library.json
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#e6db74">&#34;library.json&#34;</span>, <span style="color:#a6e22e">libJSON</span>, <span style="color:#ae81ff">0777</span>)
+    <span style="color:#6272a4">// write to library.json
+</span><span style="color:#6272a4"></span>    err = ioutil.<span style="color:#50fa7b">WriteFile</span>(<span style="color:#f1fa8c">&#34;library.json&#34;</span>, libJSON, <span style="color:#bd93f9">0777</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while writing a file %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while writing a file %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// After Update
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;After update&#34;</span>)
+    <span style="color:#6272a4">// After Update
+</span><span style="color:#6272a4"></span>    fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;After update&#34;</span>)
 
-    <span style="color:#75715e">// Read the file
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;library.json&#34;</span>)
+    <span style="color:#6272a4">// Read the file
+</span><span style="color:#6272a4"></span>    content, err = ioutil.<span style="color:#50fa7b">ReadFile</span>(<span style="color:#f1fa8c">&#34;library.json&#34;</span>)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while reading a file %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while reading a file %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// unmarshal the json to library
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">content</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">readLib</span>)
+    <span style="color:#6272a4">// unmarshal the json to library
+</span><span style="color:#6272a4"></span>    err = json.<span style="color:#50fa7b">Unmarshal</span>(content, <span style="color:#ff79c6">&amp;</span>readLib)
 
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;Error while unmarshal the content  %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+        log.<span style="color:#50fa7b">Fatalf</span>(<span style="color:#f1fa8c">&#34;Error while unmarshal the content  %v&#34;</span>, err)
     }
 
-    <span style="color:#75715e">// print all the books
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">readLib</span>.<span style="color:#a6e22e">Books</span> {
-        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%v| Name: %-40s | Author: %s\n&#34;</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Author</span>)
+    <span style="color:#6272a4">// print all the books
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">for</span> i, book <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> readLib.Books {
+        fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%v| Name: %-40s | Author: %s\n&#34;</span>, i, book.Name, book.Author)
     }
 }
 </code></pre></div><p>Output</p>
@@ -403,10 +432,21 @@ After update
 </ul>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-aws/"><span class="li iconfont icon-article"></span>How to create a Linux VM in AWS?</a></p><p><a class="link" href="/to-the-point/convert-string-to-int-and-int-to-string-in-golang/"><span class="li iconfont icon-article"></span>Convert String to Int and Int to String in Golang</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-aws/"><span class="">Previous</span>How to create a Linux VM in AWS?</a></p><p><a class="link" href="/to-the-point/convert-string-to-int-and-int-to-string-in-golang/"><span class="">Next</span>Convert String to Int and Int to String in Golang</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -427,13 +467,36 @@ After update
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -444,6 +507,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

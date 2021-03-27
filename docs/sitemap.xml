@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>https://schadokar.dev/categories/2021/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/data-structures/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/how-to-remove-consecutive-characters-from-a-string/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2021-02-20T00:42:58+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/2020/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/casual/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/casual/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/flashback-2020/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-format-golang-project/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/check-if-key-exists-in-map-in-golang/</loc><lastmod>2020-12-21T10:38:27+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/golang-string-replace/</loc><lastmod>2020-12-19T21:15:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/check-if-a-character-is-a-number-in-golang/</loc><lastmod>2020-12-19T15:04:55+05:30</lastmod></url><url>
@@ -104,9 +107,10 @@
     <loc>https://schadokar.dev/categories/2018/</loc><lastmod>2018-11-23T11:49:18+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/tags/angular/</loc><lastmod>2018-11-23T11:49:18+00:00</lastmod></url><url>
     <loc>https://schadokar.dev/posts/deploy-angular-application-on-azure-web-service/</loc><lastmod>2018-11-23T11:49:18+00:00</lastmod></url><url>
+    <loc>https://schadokar.dev/about/</loc><priority>0</priority></url><url>
     <loc>https://schadokar.dev/projects/</loc></url><url>
     <loc>https://schadokar.dev/ebooks/</loc></url><url>
     <loc>https://schadokar.dev/ebooks/playtime-with-hyperledger-composer/</loc></url><url>
-    <loc>https://schadokar.dev/about/</loc></url><url>
+    <loc>https://schadokar.dev/search/</loc></url><url>
     <loc>https://schadokar.dev/contact/</loc></url><url>
     <loc>https://schadokar.dev/newsletter/</loc></url></urlset>

@@ -2,21 +2,50 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Understand Quicksort the easy way&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Understand Quicksort the easy way&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Understand Quicksort the easy way" /><meta name="twitter:image" content="https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic.jpg" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Understand Quicksort the easy way</h1><p class="article date">Thursday, February 13, 2020<span class="reading-time"> • 6 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="cover-pic.jpg" alt>
-          </p><p>Photo by <a href="https://unsplash.com/@inakihxz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Iñaki del Olmo</a> on <a href="https://unsplash.com/s/photos/bookshelf?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Unsplash</a></p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Understand Quicksort the easy way</h1><p class="article date">Thursday, February 13, 2020<span class="reading-time"> • 6 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/algorithm/>Algorithm</a><a class="category" href=/categories/js/>JS</a><a class="tag" href=/tags/algorithm/>algorithm</a><a class="tag" href=/tags/js/>js</a><a class="tag" href=/tags/tutorial/>tutorial</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>Photo by <a href="https://unsplash.com/@inakihxz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Iñaki del Olmo</a> on <a href="https://unsplash.com/s/photos/bookshelf?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Unsplash</a></p>
 <p>Data structures and Algorithms are the key skills for a software developer. Recently when I was preparing for a job change, learning sorting algorithms was not smooth.<br>
 The theory is simple and straight but its implementation is just the opposite.</p>
 <blockquote>
@@ -45,48 +74,48 @@ Quicksort is all about finding the correct position(index) of this <code>pivot</
 Elements less than pivot must be in the left side of the pivot and elements greater than the pivot must be in the right side of the pivot.</p>
 <h3 id="example-explains-better-">Example explains better 😉</h3>
 <p>We have an array</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">7</span>];
 </code></pre></div><p>Any element can be selected as a pivot.<br>
 For this example, the first element of the array is the <code>pivot</code> ⚓</p>
 <p>The <code>pivot</code> is <code>3</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">pivot</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>, [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">pivot<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">3</span>, [<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">7</span>];
 </code></pre></div><p>Elements less than pivot: 2, 1<br>
 Elements greater than pivot: 6, 5, 4, 7</p>
 <p>Move the elements less than pivot to the left side of pivot and elements greater than pivot to the right side of the pivot.
 Now, the correct position of the pivot (3) in the array is at index 2.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">7</span>];
 </code></pre></div><p>Once, the pivot is in the correct position, divide the array. The elements on the left and the right side of the pivot will be the sub-array.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>];
-       <span style="color:#f92672">^</span> <span style="color:#a6e22e">last</span> <span style="color:#a6e22e">pivot</span> <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">correct</span> <span style="color:#a6e22e">position</span>
-[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>]   [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">7</span>];
+       <span style="color:#ff79c6">^</span> last pivot at the correct position
+[<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>]   [<span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">7</span>];
 </code></pre></div><p>Sub-array 1: <code>[2, 1]</code><br>
 Sub-array 2: <code>[6, 5, 4, 7]</code></p>
 <h4 id="sub-array-1">Sub-array 1</h4>
 <p>Select the first element <code>2</code> as <code>pivot</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">pivot</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">pivot<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">2</span>, [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>];
 </code></pre></div><p>Elements less than the pivot: 1<br>
 Elements greater than the pivot: No elements</p>
 <p>Again, move the elements less than pivot to the left side of pivot and elements greater than pivot to the right side of the pivot.
 The correct position of the pivot (2) in the sub-array is at index 1.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>];
 </code></pre></div><p>Now, again divide the array. Elements on the left side and the right side will be sub-array.</p>
 <p>There is no need to create a sub-array if there is only 1 element in the sub-array. It means pivot is already at the correct position in the array.</p>
 <h4 id="sub-array-2">Sub-array 2</h4>
 <p>Select the first element <code>6</code> as <code>pivot</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">pivot</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">6</span>, [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">pivot<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">6</span>, [<span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">7</span>];
 </code></pre></div><p>Elements less than the pivot: 5, 4<br>
 Elements greater than the pivot: 7</p>
 <p>Again, move the elements less than pivot to the left side of pivot and elements greater than pivot to the right side of the pivot.
 The correct position of the pivot (6) in the sub-array is at index 2.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">7</span>];
 </code></pre></div><p>Now, again divide the array. Elements on the left side and the right side of the pivot will be sub-array.</p>
 <p>Sub-array 21: [5, 4]<br>
 Sub-array 22: [7]</p>
 <p>We have to keep dividing the array by the time all the pivot will be on its correct index.</p>
 <p>After finding the correct position of pivot in <code>sub-array 21</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>];
 </code></pre></div><p>The final array with all its pivot at the correct position.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">7</span>];
 </code></pre></div><p>Now, we understood the quicksort's process, let's implement it in <code>javascript</code>.</p>
 <hr>
 <h2 id="js-implementation">JS implementation</h2>
@@ -148,10 +177,21 @@ Sub-array 22: [7]</p>
 </ul>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/algorithm/>Algorithm</a><a class="category" href=/categories/js/>JS</a><a class="tag" href=/tags/algorithm/>algorithm</a><a class="tag" href=/tags/js/>js</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/how-to-use-json-in-golang/"><span class="li iconfont icon-article"></span>How to Use Json in Golang?</a></p><p><a class="link" href="/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/"><span class="li iconfont icon-article"></span>Store Hyperledger Fabric certificates and keys in CouchDB</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/how-to-use-json-in-golang/"><span class="">Previous</span>How to Use Json in Golang?</a></p><p><a class="link" href="/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/"><span class="">Next</span>Store Hyperledger Fabric certificates and keys in CouchDB</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -172,13 +212,36 @@ Sub-array 22: [7]</p>
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -189,6 +252,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

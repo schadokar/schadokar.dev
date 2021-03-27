@@ -2,21 +2,50 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create a To Do App in Reactjs with Github Pages&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create a To Do App in Reactjs with Github Pages&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Create a To Do App in Reactjs with Github Pages" /><meta name="twitter:image" content="https://schadokar.dev/posts/create-a-to-do-app-in-reactjs-with-github-pages/images/cover.png" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Create a To Do App in Reactjs with Github Pages</h1><p class="article date">Tuesday, April 14, 2020<span class="reading-time"> • 9 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="images/cover.png" alt>
-          </p><p>In this tutorial, we will create a to-do list app in reactjs. We will use browser local storage to save the tasks, which will keep the tasks even after we close the browser. In the end, we will host this application on Github pages.</p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Create a To Do App in Reactjs with Github Pages</h1><p class="article date">Tuesday, April 14, 2020<span class="reading-time"> • 9 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/reactjs/>Reactjs</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/tutorial/>tutorial</a><a class="tag" href=/tags/reactjs/>reactjs</a><a class="tag" href=/tags/github-pages/>github-pages</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>In this tutorial, we will create a to-do list app in reactjs. We will use browser local storage to save the tasks, which will keep the tasks even after we close the browser. In the end, we will host this application on Github pages.</p>
 <h2 id="pre-requisites">Pre-requisites</h2>
 <ol>
 <li><a href="https://nodejs.org/en/"target="_blank">Nodejs</a></li>
@@ -26,8 +55,8 @@
 <hr>
 <h2 id="react-application">React Application</h2>
 <p>We are going to use <code>create-react-app</code> as our base application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npx create-react-app my-task-list
-cd my-task-list
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npx create-react-app my-task-list
+<span style="color:#8be9fd;font-style:italic">cd</span> my-task-list
 </code></pre></div><blockquote>
 <p>If you've previously installed <code>create-react-app</code> globally via <code>npm install -g create-react-app</code>, we recommend you uninstall the package using <code>npm uninstall -g create-react-app</code> to ensure that <code>npx</code> always uses the latest version.</p>
 </blockquote>
@@ -37,20 +66,20 @@ cd my-task-list
 <p><a href="https://react.semantic-ui.com/"target="_blank">Semantic UI React</a> is the official React integration for Semantic UI.</p>
 </blockquote>
 <p>Open the terminal inside the <code>my-task-list</code> project and run the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install semantic-ui-react
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install semantic-ui-react
 </code></pre></div><h3 id="indexhtml">index.html</h3>
 <p>Open the <code>index.html</code> from the public folder and update the title.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">title</span>&gt;My task list&lt;/<span style="color:#f92672">title</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">title</span>&gt;My task list&lt;/<span style="color:#ff79c6">title</span>&gt;
 </code></pre></div><p>We also have to add the cdn of <code>semantic-ui</code> here. Paste the cdn in the <code>head</code> tag.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">link</span>
-      <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>
-      <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#ff79c6">link</span>
+      <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span>
+      <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>
     /&gt;
 </code></pre></div><p>You should always use the latest cdn. You can check the latest version <a href="https://react.semantic-ui.com/usage#theme"target="_blank">here</a>.</p>
 <h2 id="my-task-list-component">My-Task-List component</h2>
 <p>Create a new folder <code>component</code> inside the <code>src</code>. Inside the <code>component</code>, create a new folder <code>My-Task-List</code>. Create 3 files inside it, <code>My-Task-List.jsx</code>, <code>my-task-list.css</code> and <code>index.js</code>.</p>
 <h4 id="directory-structure">Directory Structure</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">|- src
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">|- src
     |- component
         |- My-Task-List
             |- My-Task-List.jsx
@@ -67,210 +96,210 @@ While saving we have to convert the object into a string and while working on it
 <ul>
 <li><strong>setItem</strong>: To save the <code>key-value</code> in the local storage.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">localStorage.setItem(key, value);
 </code></pre></div><ul>
 <li><strong>getItem</strong>: Get the <code>value</code> by its <code>key</code> from the local storage.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">key</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">localStorage.getItem(key)
 </code></pre></div><p>Open the <code>My-Task-List.jsx</code> paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Card</span>, <span style="color:#a6e22e">Header</span>, <span style="color:#a6e22e">Form</span>, <span style="color:#a6e22e">Input</span>, <span style="color:#a6e22e">Icon</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;semantic-ui-react&#34;</span>;
-<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./my-task-list.css&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React, { Component } from <span style="color:#f1fa8c">&#34;react&#34;</span>;
+<span style="color:#ff79c6">import</span> { Card, Header, Form, Input, Icon } from <span style="color:#f1fa8c">&#34;semantic-ui-react&#34;</span>;
+<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;./my-task-list.css&#34;</span>;
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTaskList</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
-    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+<span style="color:#ff79c6">class</span> MyTaskList <span style="color:#ff79c6">extends</span> Component {
+  constructor(props) {
+    <span style="color:#ff79c6">super</span>(props);
 
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
-      <span style="color:#a6e22e">task</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
-      <span style="color:#a6e22e">tasklist</span><span style="color:#f92672">:</span> []
+    <span style="color:#ff79c6">this</span>.state <span style="color:#ff79c6">=</span> {
+      task<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>,
+      tasklist<span style="color:#ff79c6">:</span> []
     };
   }
 
-  <span style="color:#75715e">// on load get the task list
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">componentDidMount</span> <span style="color:#f92672">=</span> () =&gt; {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+  <span style="color:#6272a4">// on load get the task list
+</span><span style="color:#6272a4"></span>  componentDidMount <span style="color:#ff79c6">=</span> () =&gt; {
+    <span style="color:#ff79c6">this</span>.getTasks();
   };
 
-  <span style="color:#a6e22e">onChange</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span> =&gt; {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
-      [<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">name</span>]<span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>
+  onChange <span style="color:#ff79c6">=</span> event =&gt; {
+    <span style="color:#ff79c6">this</span>.setState({
+      [event.target.name]<span style="color:#ff79c6">:</span> event.target.value
     });
   };
 
-  <span style="color:#75715e">// add task to the list
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">onSubmit</span> <span style="color:#f92672">=</span> () =&gt; {
-    <span style="color:#75715e">// check is task is empty string
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">task</span>) {
-      <span style="color:#75715e">// get the task list from the local storage
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
+  <span style="color:#6272a4">// add task to the list
+</span><span style="color:#6272a4"></span>  onSubmit <span style="color:#ff79c6">=</span> () =&gt; {
+    <span style="color:#6272a4">// check is task is empty string
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">this</span>.state.task) {
+      <span style="color:#6272a4">// get the task list from the local storage
+</span><span style="color:#6272a4"></span>      <span style="color:#8be9fd;font-style:italic">let</span> tasklist <span style="color:#ff79c6">=</span> JSON.parse(localStorage.getItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>));
 
-      <span style="color:#75715e">// task list is null means empty
-</span><span style="color:#75715e"></span>      <span style="color:#75715e">// create an empty list
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-        <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> [];
+      <span style="color:#6272a4">// task list is null means empty
+</span><span style="color:#6272a4"></span>      <span style="color:#6272a4">// create an empty list
+</span><span style="color:#6272a4"></span>      <span style="color:#ff79c6">if</span> (tasklist <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">null</span>) {
+        tasklist <span style="color:#ff79c6">=</span> [];
       }
 
-      <span style="color:#75715e">// create task object
-</span><span style="color:#75715e"></span>      <span style="color:#75715e">// default status is false
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> {
-        <span style="color:#a6e22e">task</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">📄 </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>,
-        <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+      <span style="color:#6272a4">// create task object
+</span><span style="color:#6272a4"></span>      <span style="color:#6272a4">// default status is false
+</span><span style="color:#6272a4"></span>      <span style="color:#8be9fd;font-style:italic">let</span> task <span style="color:#ff79c6">=</span> {
+        task<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">📄 </span><span style="color:#f1fa8c">${</span><span style="color:#ff79c6">this</span>.state.task<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>,
+        status<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
       };
 
-      <span style="color:#75715e">// add the task to the task list
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">tasklist</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">task</span>);
+      <span style="color:#6272a4">// add the task to the task list
+</span><span style="color:#6272a4"></span>      tasklist.push(task);
 
-      <span style="color:#75715e">// save the task list in the local storage
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
+      <span style="color:#6272a4">// save the task list in the local storage
+</span><span style="color:#6272a4"></span>      localStorage.setItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>, JSON.stringify(tasklist));
 
-      <span style="color:#75715e">// clear the form
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({ <span style="color:#a6e22e">task</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span> });
+      <span style="color:#6272a4">// clear the form
+</span><span style="color:#6272a4"></span>      <span style="color:#ff79c6">this</span>.setState({ task<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span> });
 
-      <span style="color:#75715e">// refresh the tasks
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+      <span style="color:#6272a4">// refresh the tasks
+</span><span style="color:#6272a4"></span>      <span style="color:#ff79c6">this</span>.getTasks();
     }
   };
 
-  <span style="color:#75715e">// get all the tasks
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">getTasks</span> <span style="color:#f92672">=</span> () =&gt; {
-    <span style="color:#75715e">// get the task list from the local storage
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
+  <span style="color:#6272a4">// get all the tasks
+</span><span style="color:#6272a4"></span>  getTasks <span style="color:#ff79c6">=</span> () =&gt; {
+    <span style="color:#6272a4">// get the task list from the local storage
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> tasklist <span style="color:#ff79c6">=</span> JSON.parse(localStorage.getItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>));
 
-    <span style="color:#75715e">// check if task list is empty
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">tasklist</span>) {
-      <span style="color:#75715e">// sort all the tasks on the basis of status
-</span><span style="color:#75715e"></span>      <span style="color:#75715e">// completed task will move down
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tasklist</span>.<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; {
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">status</span>) {
-          <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">status</span>) {
-          <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    <span style="color:#6272a4">// check if task list is empty
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (tasklist) {
+      <span style="color:#6272a4">// sort all the tasks on the basis of status
+</span><span style="color:#6272a4"></span>      <span style="color:#6272a4">// completed task will move down
+</span><span style="color:#6272a4"></span>      tasklist <span style="color:#ff79c6">=</span> tasklist.sort((a, b) =&gt; {
+        <span style="color:#ff79c6">if</span> (a.status) {
+          <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">1</span>;
+        } <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> (b.status) {
+          <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>;
         }
-        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0</span>;
       });
 
-      <span style="color:#75715e">// save the task list in the local storage
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
+      <span style="color:#6272a4">// save the task list in the local storage
+</span><span style="color:#6272a4"></span>      localStorage.setItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>, JSON.stringify(tasklist));
 
-      <span style="color:#75715e">// set the tasklist to the state
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
-        <span style="color:#75715e">// default color
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// Incomplete: yellow
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// complete: green
-</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">tasklist</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tasklist</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>) =&gt; {
-          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;yellow&#34;</span>;
-          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cardBackground</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;white&#34;</span> };
-          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">taskComplete</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">textDecoration</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;none&#34;</span> };
+      <span style="color:#6272a4">// set the tasklist to the state
+</span><span style="color:#6272a4"></span>      <span style="color:#ff79c6">this</span>.setState({
+        <span style="color:#6272a4">// default color
+</span><span style="color:#6272a4"></span>        <span style="color:#6272a4">// Incomplete: yellow
+</span><span style="color:#6272a4"></span>        <span style="color:#6272a4">// complete: green
+</span><span style="color:#6272a4"></span>        tasklist<span style="color:#ff79c6">:</span> tasklist.map((item, index) =&gt; {
+          <span style="color:#8be9fd;font-style:italic">let</span> color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;yellow&#34;</span>;
+          <span style="color:#8be9fd;font-style:italic">let</span> cardBackground <span style="color:#ff79c6">=</span> { background<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;white&#34;</span> };
+          <span style="color:#8be9fd;font-style:italic">let</span> taskComplete <span style="color:#ff79c6">=</span> { textDecoration<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;none&#34;</span> };
 
-          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">status</span>) {
-            <span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;green&#34;</span>;
-            <span style="color:#a6e22e">cardBackground</span>.<span style="color:#a6e22e">background</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;beige&#34;</span>;
-            <span style="color:#a6e22e">taskComplete</span>[<span style="color:#e6db74">&#34;textDecoration&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;line-through&#34;</span>;
+          <span style="color:#ff79c6">if</span> (item.status) {
+            color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;green&#34;</span>;
+            cardBackground.background <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;beige&#34;</span>;
+            taskComplete[<span style="color:#f1fa8c">&#34;textDecoration&#34;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;line-through&#34;</span>;
           }
-          <span style="color:#66d9ef">return</span> (
-            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">index</span>} <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">color</span>} <span style="color:#a6e22e">fluid</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">cardBackground</span>}<span style="color:#f92672">&gt;</span>
-              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Content</span><span style="color:#f92672">&gt;</span>
-                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">taskComplete</span>}<span style="color:#f92672">&gt;</span>
-                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">wordWrap</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;break-word&#34;</span> }}<span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">task</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+          <span style="color:#ff79c6">return</span> (
+            <span style="color:#ff79c6">&lt;</span>Card key<span style="color:#ff79c6">=</span>{index} color<span style="color:#ff79c6">=</span>{color} fluid style<span style="color:#ff79c6">=</span>{cardBackground}<span style="color:#ff79c6">&gt;</span>
+              <span style="color:#ff79c6">&lt;</span>Card.Content<span style="color:#ff79c6">&gt;</span>
+                <span style="color:#ff79c6">&lt;</span>Card.Header textAlign<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;left&#34;</span> style<span style="color:#ff79c6">=</span>{taskComplete}<span style="color:#ff79c6">&gt;</span>
+                  <span style="color:#ff79c6">&lt;</span>div style<span style="color:#ff79c6">=</span>{{ wordWrap<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;break-word&#34;</span> }}<span style="color:#ff79c6">&gt;</span>{item.task}<span style="color:#ff79c6">&lt;</span>/div&gt;
+                <span style="color:#ff79c6">&lt;</span>/Card.Header&gt;
 
-                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Meta</span> <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;right&#34;</span><span style="color:#f92672">&gt;</span>
-                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span>
-                    <span style="color:#a6e22e">link</span>
-                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;check circle&#34;</span>
-                    <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span>
-                    <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{() =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">updateTask</span>(<span style="color:#a6e22e">index</span>)}
-                  <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
-                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">paddingRight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span> }}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Done</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span>
-                    <span style="color:#a6e22e">link</span>
-                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;undo&#34;</span>
-                    <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yellow&#34;</span>
-                    <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{() =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">undoTask</span>(<span style="color:#a6e22e">index</span>)}
-                  <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
-                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">paddingRight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span> }}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Undo</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Icon</span>
-                    <span style="color:#a6e22e">link</span>
-                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;delete&#34;</span>
-                    <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>
-                    <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{() =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">deleteTask</span>(<span style="color:#a6e22e">index</span>)}
-                  <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
-                  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">paddingRight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span> }}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Delete</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">M</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+                <span style="color:#ff79c6">&lt;</span>Card.Meta textAlign<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;right&#34;</span><span style="color:#ff79c6">&gt;</span>
+                  <span style="color:#ff79c6">&lt;</span>Icon
+                    link
+                    name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;check circle&#34;</span>
+                    color<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;green&#34;</span>
+                    onClick<span style="color:#ff79c6">=</span>{() =&gt; <span style="color:#ff79c6">this</span>.updateTask(index)}
+                  <span style="color:#ff79c6">/</span><span style="color:#ff79c6">&gt;</span>
+                  <span style="color:#ff79c6">&lt;</span>span style<span style="color:#ff79c6">=</span>{{ paddingRight<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">10</span> }}<span style="color:#ff79c6">&gt;</span>Done<span style="color:#ff79c6">&lt;</span>/span&gt;
+                  <span style="color:#ff79c6">&lt;</span>Icon
+                    link
+                    name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;undo&#34;</span>
+                    color<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;yellow&#34;</span>
+                    onClick<span style="color:#ff79c6">=</span>{() =&gt; <span style="color:#ff79c6">this</span>.undoTask(index)}
+                  <span style="color:#ff79c6">/</span><span style="color:#ff79c6">&gt;</span>
+                  <span style="color:#ff79c6">&lt;</span>span style<span style="color:#ff79c6">=</span>{{ paddingRight<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">10</span> }}<span style="color:#ff79c6">&gt;</span>Undo<span style="color:#ff79c6">&lt;</span>/span&gt;
+                  <span style="color:#ff79c6">&lt;</span>Icon
+                    link
+                    name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;delete&#34;</span>
+                    color<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;red&#34;</span>
+                    onClick<span style="color:#ff79c6">=</span>{() =&gt; <span style="color:#ff79c6">this</span>.deleteTask(index)}
+                  <span style="color:#ff79c6">/</span><span style="color:#ff79c6">&gt;</span>
+                  <span style="color:#ff79c6">&lt;</span>span style<span style="color:#ff79c6">=</span>{{ paddingRight<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">10</span> }}<span style="color:#ff79c6">&gt;</span>Delete<span style="color:#ff79c6">&lt;</span>/span&gt;
+                <span style="color:#ff79c6">&lt;</span>/Card.Meta&gt;
+              <span style="color:#ff79c6">&lt;</span>/Card.Content&gt;
+            <span style="color:#ff79c6">&lt;</span>/Card&gt;
           );
         })
       });
     }
   };
 
-  <span style="color:#75715e">// update the task status to true
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">updateTask</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span> =&gt; {
-    <span style="color:#75715e">// get the task list from the local storage
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
-    <span style="color:#75715e">// change status to true
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">tasklist</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">status</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-    <span style="color:#75715e">// save the updated task list
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
-    <span style="color:#75715e">// refresh the task list
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+  <span style="color:#6272a4">// update the task status to true
+</span><span style="color:#6272a4"></span>  updateTask <span style="color:#ff79c6">=</span> index =&gt; {
+    <span style="color:#6272a4">// get the task list from the local storage
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> tasklist <span style="color:#ff79c6">=</span> JSON.parse(localStorage.getItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>));
+    <span style="color:#6272a4">// change status to true
+</span><span style="color:#6272a4"></span>    tasklist[index].status <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
+    <span style="color:#6272a4">// save the updated task list
+</span><span style="color:#6272a4"></span>    localStorage.setItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>, JSON.stringify(tasklist));
+    <span style="color:#6272a4">// refresh the task list
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">this</span>.getTasks();
   };
 
-  <span style="color:#75715e">// undone the task status from true to false
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">undoTask</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span> =&gt; {
-    <span style="color:#75715e">// get the task list from the local storage
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
-    <span style="color:#75715e">// change status to false
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">tasklist</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">status</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-    <span style="color:#75715e">// save the updated task list
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
-    <span style="color:#75715e">// refresh the task list
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+  <span style="color:#6272a4">// undone the task status from true to false
+</span><span style="color:#6272a4"></span>  undoTask <span style="color:#ff79c6">=</span> index =&gt; {
+    <span style="color:#6272a4">// get the task list from the local storage
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> tasklist <span style="color:#ff79c6">=</span> JSON.parse(localStorage.getItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>));
+    <span style="color:#6272a4">// change status to false
+</span><span style="color:#6272a4"></span>    tasklist[index].status <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
+    <span style="color:#6272a4">// save the updated task list
+</span><span style="color:#6272a4"></span>    localStorage.setItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>, JSON.stringify(tasklist));
+    <span style="color:#6272a4">// refresh the task list
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">this</span>.getTasks();
   };
 
-  <span style="color:#75715e">// delete the task from the task list
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">deleteTask</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span> =&gt; {
-    <span style="color:#75715e">// get the task list from the local storage
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tasklist</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>));
-    <span style="color:#75715e">// remove the task from the task list
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">tasklist</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>, <span style="color:#ae81ff">1</span>);
-    <span style="color:#75715e">// save the updated task list
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;tasklist&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasklist</span>));
-    <span style="color:#75715e">// refresh the task list
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTasks</span>();
+  <span style="color:#6272a4">// delete the task from the task list
+</span><span style="color:#6272a4"></span>  deleteTask <span style="color:#ff79c6">=</span> index =&gt; {
+    <span style="color:#6272a4">// get the task list from the local storage
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> tasklist <span style="color:#ff79c6">=</span> JSON.parse(localStorage.getItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>));
+    <span style="color:#6272a4">// remove the task from the task list
+</span><span style="color:#6272a4"></span>    tasklist.splice(index, <span style="color:#bd93f9">1</span>);
+    <span style="color:#6272a4">// save the updated task list
+</span><span style="color:#6272a4"></span>    localStorage.setItem(<span style="color:#f1fa8c">&#34;tasklist&#34;</span>, JSON.stringify(tasklist));
+    <span style="color:#6272a4">// refresh the task list
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">this</span>.getTasks();
   };
 
-  <span style="color:#a6e22e">render</span>() {
-    <span style="color:#66d9ef">return</span> (
-      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
-          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">as</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;h1&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app-header&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#960050;background-color:#1e0010">📝</span> <span style="color:#a6e22e">My</span> <span style="color:#a6e22e">Task</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010">}</span>
-          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">H</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app-form&#34;</span><span style="color:#f92672">&gt;</span>
-          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Form</span> <span style="color:#a6e22e">onSubmit</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onSubmit</span>}<span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Input</span>
-              <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span>
-              <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task&#34;</span>
-              <span style="color:#a6e22e">onChange</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onChange</span>}
-              <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">task</span>}
-              <span style="color:#a6e22e">fluid</span>
-              <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task...&#34;</span>
-            <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
-          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">F</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
-          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Card</span>.<span style="color:#a6e22e">Group</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">tasklist</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#960050;background-color:#1e0010">G</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">u</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+  render() {
+    <span style="color:#ff79c6">return</span> (
+      <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
+        <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
+          <span style="color:#ff79c6">&lt;</span>Header as<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;h1&#34;</span><span style="color:#ff79c6">&gt;</span>
+            <span style="color:#ff79c6">&lt;</span>div className<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;app-header&#34;</span><span style="color:#ff79c6">&gt;</span>📝 My Task List<span style="color:#ff79c6">&lt;</span>/div&gt;{&#34; &#34;}
+          <span style="color:#ff79c6">&lt;</span>/Header&gt;
+        <span style="color:#ff79c6">&lt;</span>/div&gt;
+        <span style="color:#ff79c6">&lt;</span>div className<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;app-form&#34;</span><span style="color:#ff79c6">&gt;</span>
+          <span style="color:#ff79c6">&lt;</span>Form onSubmit<span style="color:#ff79c6">=</span>{<span style="color:#ff79c6">this</span>.onSubmit}<span style="color:#ff79c6">&gt;</span>
+            <span style="color:#ff79c6">&lt;</span>Input
+              type<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text&#34;</span>
+              name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;task&#34;</span>
+              onChange<span style="color:#ff79c6">=</span>{<span style="color:#ff79c6">this</span>.onChange}
+              value<span style="color:#ff79c6">=</span>{<span style="color:#ff79c6">this</span>.state.task}
+              fluid
+              placeholder<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;task...&#34;</span>
+            <span style="color:#ff79c6">/</span><span style="color:#ff79c6">&gt;</span>
+          <span style="color:#ff79c6">&lt;</span>/Form&gt;
+        <span style="color:#ff79c6">&lt;</span>/div&gt;
+        <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
+          <span style="color:#ff79c6">&lt;</span>Card.Group<span style="color:#ff79c6">&gt;</span>{<span style="color:#ff79c6">this</span>.state.tasklist}<span style="color:#ff79c6">&lt;</span>/Card.Group&gt;
+        <span style="color:#ff79c6">&lt;</span>/div&gt;
+      <span style="color:#ff79c6">&lt;</span>/div&gt;
     );
   }
 }
 
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">MyTaskList</span>;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> MyTaskList;
 
 </code></pre></div><p>The key to the tasks is <code>tasklist</code>.</p>
 <p>A quick explanation of the code.</p>
@@ -284,46 +313,46 @@ While saving we have to convert the object into a string and while working on it
 </ul>
 <h3 id="my-task-listcss">my-task-list.css</h3>
 <p>Open the <code>my-task-list.css</code> and paste the below code. Even though we are using the <code>semantic-ui</code> css, we can still make the custom changes.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">app-header</span> {
-  <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
-  <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#50fa7b">app-header</span> {
+  <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+  <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
 }
 
-.<span style="color:#a6e22e">app-form</span> {
-  <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+.<span style="color:#50fa7b">app-form</span> {
+  <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
 }
 </code></pre></div><h3 id="indexjs">index.js</h3>
 <p>This <code>index.js</code> will export the <code>MyTaskList</code> component.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MyTaskList</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./My-Task-List&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> MyTaskList from <span style="color:#f1fa8c">&#34;./My-Task-List&#34;</span>;
 
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">MyTaskList</span>;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> MyTaskList;
 </code></pre></div><p>The <code>MyTaskList</code> component is complete. Let's render it in <code>App.js</code>.</p>
 <hr>
 <h3 id="appjs">App.js</h3>
 <p>Open the <code>App.js</code> and update the code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
-<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./App.css&#34;</span>;
-<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MyTaskList</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./components/My-Task-List&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React from <span style="color:#f1fa8c">&#34;react&#34;</span>;
+<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;./App.css&#34;</span>;
+<span style="color:#ff79c6">import</span> MyTaskList from <span style="color:#f1fa8c">&#34;./components/My-Task-List&#34;</span>;
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
-  <span style="color:#66d9ef">return</span> (
-    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyTaskList</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">M</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">T</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">k</span><span style="color:#960050;background-color:#1e0010">L</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#8be9fd;font-style:italic">function</span> App() {
+  <span style="color:#ff79c6">return</span> (
+    <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
+      <span style="color:#ff79c6">&lt;</span>MyTaskList<span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/MyTaskList&gt;
+    <span style="color:#ff79c6">&lt;</span>/div&gt;
   );
 }
 
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> App;
 </code></pre></div><h3 id="appcss">App.css</h3>
 <p>Update the <code>App.css</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span> {
-  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">90</span><span style="color:#66d9ef">%</span>;
-  <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#ff79c6">body</span> {
+  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">90</span><span style="color:#8be9fd">%</span>;
+  <span style="color:#ff79c6">margin-left</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
 }
 </code></pre></div><hr>
 <h2 id="playtime-">Playtime 🎮</h2>
 <p>Open the terminal in the project directory and start the application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm run start
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm run start
 </code></pre></div><p>Open the browser and go to <code>http://localhost:3000/</code>.</p>
 <p><img  src="./images/front-page.PNG"
         alt="Frontpage"/></p>
@@ -372,77 +401,77 @@ While saving we have to convert the object into a string and while working on it
 <p>Don't initiate anything like readme or license. Create an empty repository, because we will push the existing project.</p>
 </blockquote>
 <p>Open the terminal in the project directory and run the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git remote add origin &lt;Repository URL&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git remote add origin &lt;Repository URL&gt;
 
 // For Example:
 git remote add origin https://github.com/schadokar/my-task-list.git
 </code></pre></div><h4 id="install-the-github-package-as-dev-dependency">Install the Github Package as dev-dependency</h4>
 <p>Open the terminal in the project.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install gh-pages --save-dev
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install gh-pages --save-dev
 </code></pre></div><h4 id="update-the-packagejson">Update the package.json</h4>
 <p>Open the <code>package.json</code> and update it.</p>
 <ul>
 <li><strong>Add the homepage</strong>: Add the URL where your application is going to host.</li>
 </ul>
 <p>Github Host your site on <code>https://&lt;YourUserName&gt;.github.io/&lt;Repo-Name&gt;</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;homepage&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;https://&lt;YourUserName&gt;.github.io/my-task-list&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#f1fa8c">&#34;homepage&#34;</span>: <span style="color:#f1fa8c">&#34;https://&lt;YourUserName&gt;.github.io/my-task-list&#34;</span>
 
-<span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">r</span> <span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">m</span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span>
-<span style="color:#e6db74">&#34;homepage&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;https://schadokar.github.io/my-task-list&#34;</span>
+// for example
+<span style="color:#f1fa8c">&#34;homepage&#34;</span>: <span style="color:#f1fa8c">&#34;https://schadokar.github.io/my-task-list&#34;</span>
 </code></pre></div><ul>
 <li><strong>Add deploy and predeploy scripts</strong>: In the <code>scripts</code> add <code>deploy</code> and <code>predeploy</code> scripts.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;predeploy&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;npm run build&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
-<span style="color:#e6db74">&#34;deploy&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;gh-pages -d build&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#f1fa8c">&#34;predeploy&#34;</span>: <span style="color:#f1fa8c">&#34;npm run build&#34;</span>,
+<span style="color:#f1fa8c">&#34;deploy&#34;</span>: <span style="color:#f1fa8c">&#34;gh-pages -d build&#34;</span>
 </code></pre></div><p>The <code>package.json</code> will look like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;homepage&#34;</span>: <span style="color:#e6db74">&#34;https://schadokar.github.io/my-task-list&#34;</span>,
-  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;my-task-list&#34;</span>,
-  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.1.0&#34;</span>,
-  <span style="color:#f92672">&#34;private&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
-    <span style="color:#f92672">&#34;@testing-library/jest-dom&#34;</span>: <span style="color:#e6db74">&#34;^4.2.4&#34;</span>,
-    <span style="color:#f92672">&#34;@testing-library/react&#34;</span>: <span style="color:#e6db74">&#34;^9.4.1&#34;</span>,
-    <span style="color:#f92672">&#34;@testing-library/user-event&#34;</span>: <span style="color:#e6db74">&#34;^7.2.1&#34;</span>,
-    <span style="color:#f92672">&#34;react&#34;</span>: <span style="color:#e6db74">&#34;^16.13.0&#34;</span>,
-    <span style="color:#f92672">&#34;react-dom&#34;</span>: <span style="color:#e6db74">&#34;^16.13.0&#34;</span>,
-    <span style="color:#f92672">&#34;react-scripts&#34;</span>: <span style="color:#e6db74">&#34;3.4.0&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;homepage&#34;</span>: <span style="color:#f1fa8c">&#34;https://schadokar.github.io/my-task-list&#34;</span>,
+  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;my-task-list&#34;</span>,
+  <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;0.1.0&#34;</span>,
+  <span style="color:#ff79c6">&#34;private&#34;</span>: <span style="color:#ff79c6">true</span>,
+  <span style="color:#ff79c6">&#34;dependencies&#34;</span>: {
+    <span style="color:#ff79c6">&#34;@testing-library/jest-dom&#34;</span>: <span style="color:#f1fa8c">&#34;^4.2.4&#34;</span>,
+    <span style="color:#ff79c6">&#34;@testing-library/react&#34;</span>: <span style="color:#f1fa8c">&#34;^9.4.1&#34;</span>,
+    <span style="color:#ff79c6">&#34;@testing-library/user-event&#34;</span>: <span style="color:#f1fa8c">&#34;^7.2.1&#34;</span>,
+    <span style="color:#ff79c6">&#34;react&#34;</span>: <span style="color:#f1fa8c">&#34;^16.13.0&#34;</span>,
+    <span style="color:#ff79c6">&#34;react-dom&#34;</span>: <span style="color:#f1fa8c">&#34;^16.13.0&#34;</span>,
+    <span style="color:#ff79c6">&#34;react-scripts&#34;</span>: <span style="color:#f1fa8c">&#34;3.4.0&#34;</span>
   },
-  <span style="color:#f92672">&#34;scripts&#34;</span>: {
-    <span style="color:#f92672">&#34;predeploy&#34;</span>: <span style="color:#e6db74">&#34;npm run build&#34;</span>,
-    <span style="color:#f92672">&#34;deploy&#34;</span>: <span style="color:#e6db74">&#34;gh-pages -d build&#34;</span>,
-    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;react-scripts start&#34;</span>,
-    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;react-scripts build&#34;</span>,
-    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;react-scripts test&#34;</span>,
-    <span style="color:#f92672">&#34;eject&#34;</span>: <span style="color:#e6db74">&#34;react-scripts eject&#34;</span>
+  <span style="color:#ff79c6">&#34;scripts&#34;</span>: {
+    <span style="color:#ff79c6">&#34;predeploy&#34;</span>: <span style="color:#f1fa8c">&#34;npm run build&#34;</span>,
+    <span style="color:#ff79c6">&#34;deploy&#34;</span>: <span style="color:#f1fa8c">&#34;gh-pages -d build&#34;</span>,
+    <span style="color:#ff79c6">&#34;start&#34;</span>: <span style="color:#f1fa8c">&#34;react-scripts start&#34;</span>,
+    <span style="color:#ff79c6">&#34;build&#34;</span>: <span style="color:#f1fa8c">&#34;react-scripts build&#34;</span>,
+    <span style="color:#ff79c6">&#34;test&#34;</span>: <span style="color:#f1fa8c">&#34;react-scripts test&#34;</span>,
+    <span style="color:#ff79c6">&#34;eject&#34;</span>: <span style="color:#f1fa8c">&#34;react-scripts eject&#34;</span>
   },
-  <span style="color:#f92672">&#34;eslintConfig&#34;</span>: {
-    <span style="color:#f92672">&#34;extends&#34;</span>: <span style="color:#e6db74">&#34;react-app&#34;</span>
+  <span style="color:#ff79c6">&#34;eslintConfig&#34;</span>: {
+    <span style="color:#ff79c6">&#34;extends&#34;</span>: <span style="color:#f1fa8c">&#34;react-app&#34;</span>
   },
-  <span style="color:#f92672">&#34;browserslist&#34;</span>: {
-    <span style="color:#f92672">&#34;production&#34;</span>: [
-      <span style="color:#e6db74">&#34;&gt;0.2%&#34;</span>,
-      <span style="color:#e6db74">&#34;not dead&#34;</span>,
-      <span style="color:#e6db74">&#34;not op_mini all&#34;</span>
+  <span style="color:#ff79c6">&#34;browserslist&#34;</span>: {
+    <span style="color:#ff79c6">&#34;production&#34;</span>: [
+      <span style="color:#f1fa8c">&#34;&gt;0.2%&#34;</span>,
+      <span style="color:#f1fa8c">&#34;not dead&#34;</span>,
+      <span style="color:#f1fa8c">&#34;not op_mini all&#34;</span>
     ],
-    <span style="color:#f92672">&#34;development&#34;</span>: [
-      <span style="color:#e6db74">&#34;last 1 chrome version&#34;</span>,
-      <span style="color:#e6db74">&#34;last 1 firefox version&#34;</span>,
-      <span style="color:#e6db74">&#34;last 1 safari version&#34;</span>
+    <span style="color:#ff79c6">&#34;development&#34;</span>: [
+      <span style="color:#f1fa8c">&#34;last 1 chrome version&#34;</span>,
+      <span style="color:#f1fa8c">&#34;last 1 firefox version&#34;</span>,
+      <span style="color:#f1fa8c">&#34;last 1 safari version&#34;</span>
     ]
   },
-  <span style="color:#f92672">&#34;devDependencies&#34;</span>: {
-    <span style="color:#f92672">&#34;gh-pages&#34;</span>: <span style="color:#e6db74">&#34;^2.2.0&#34;</span>
+  <span style="color:#ff79c6">&#34;devDependencies&#34;</span>: {
+    <span style="color:#ff79c6">&#34;gh-pages&#34;</span>: <span style="color:#f1fa8c">&#34;^2.2.0&#34;</span>
   }
 }
 </code></pre></div><h4 id="run-the-deploy">Run the deploy</h4>
 <p>It will create a new branch on <code>gh-pages</code> and push it to the repository. By default, GitHub uses <code>gh-pages</code> branch to host.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm run deploy
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm run deploy
 </code></pre></div><h3 id="commit-the-changes-">Commit the changes 🔐</h3>
 <p>Open the terminal in the project. Add, Commit and push the project to the github repository.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git add .
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git add .
 
-git commit -m <span style="color:#e6db74">&#34;My task list project completed&#34;</span>
+git commit -m <span style="color:#f1fa8c">&#34;My task list project completed&#34;</span>
 
 git push origin master
 </code></pre></div><h3 id="hosting">Hosting</h3>
@@ -451,7 +480,7 @@ git push origin master
 <p>In the <code>Source</code>, check if it is using <code>gh-pages branch</code>.
 If it is not using it, change it to <code>gh-pages</code> branch.</p>
 <p>Now, on Github Pages section you can see a success message.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> Your site is published at https://&lt;YourUserName&gt;.github.io/my-task-list/
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> Your site is published at https://&lt;YourUserName&gt;.github.io/my-task-list/
 </code></pre></div><p><img  src="./images/github-pages.png"
         alt="github-page"/></p>
 <p>Your site is now in action 🎬.<br>
@@ -469,10 +498,21 @@ Share with your friends and push those lazy fellows to quit procrastination. �
 </blockquote>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/reactjs/>Reactjs</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/tutorial/>tutorial</a><a class="tag" href=/tags/reactjs/>reactjs</a><a class="tag" href=/tags/github-pages/>github-pages</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/how-to-send-email-in-golang/"><span class="li iconfont icon-article"></span>How to Send Email in Golang</a></p><p><a class="link" href="/posts/how-to-use-json-in-golang/"><span class="li iconfont icon-article"></span>How to Use Json in Golang?</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/how-to-send-email-in-golang/"><span class="">Previous</span>How to Send Email in Golang</a></p><p><a class="link" href="/posts/how-to-use-json-in-golang/"><span class="">Next</span>How to Use Json in Golang?</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -493,13 +533,36 @@ Share with your friends and push those lazy fellows to quit procrastination. �
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -510,6 +573,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

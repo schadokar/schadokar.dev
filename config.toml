@@ -1,7 +1,7 @@
 baseurl = "https://schadokar.dev"
 languageCode = "en"
 title = "Shubham Chadokar"
-theme = "hugo-notepadium"
+theme = "saral"
 copyright = "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2020"
 # disqusShortname = "schadokar"
 googleAnalytics = "UA-158088106-1"
@@ -30,7 +30,7 @@ readingTime = true
   enable = false
   avatar = "/images/pic.png"
   name = "Shubham Chadokar"
-  description = "I'm a software engineer and writer. This website is my digital garden — a compendium of the things I've learned and created over the years."
+  description = "I'm a software engineer and a learner. This is a documentation website of my learnings for my future self."
   bio = "Software Engineer"  # support markdown syntax
   twitter = "schadokar1"  # https://twitter.com/XXX
   github = "schadokar"  # https://github.com/XXX

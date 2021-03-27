@@ -2,21 +2,50 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Build a Todo App in Golang, MongoDB, and React&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Build a Todo App in Golang, MongoDB, and React&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Build a Todo App in Golang, MongoDB, and React" /><meta name="twitter:image" content="https://schadokar.dev/posts/build-a-todo-app-in-golang-mongodb-and-react/asset-1.png" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Build a Todo App in Golang, MongoDB, and React</h1><p class="article date">Tuesday, August 6, 2019<span class="reading-time"> • 8 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="asset-1.png" alt>
-          </p><p>The main purpose of this tutorial to get hands-on experience in Golang. When I was learning Golang, I realized there are very few tutorials and articles out there which give you a complete end to end hands-on experience.</p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Build a Todo App in Golang, MongoDB, and React</h1><p class="article date">Tuesday, August 6, 2019<span class="reading-time"> • 8 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2019/>2019</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/development/>development</a><a class="tag" href=/tags/tutorial/>tutorial</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>The main purpose of this tutorial to get hands-on experience in Golang. When I was learning Golang, I realized there are very few tutorials and articles out there which give you a complete end to end hands-on experience.</p>
 <p>This is the <a href="https://github.com/schadokar/go-to-do-app/"target="_blank">GitHub link</a> for the complete code.</p>
 <hr>
 <p>In this tutorial, we will build a todo app in which the server will be in Golang, the database will be MongoDB, and the frontend will be in React.</p>
@@ -36,34 +65,34 @@
 <h4 id="server-ingolang">Server in Golang</h4>
 <p>Create a <code>server</code> directory inside the <code>go-todo</code> .</p>
 <p>The <code>server</code> directory structure will be:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">go<span style="color:#f92672">-</span>todo
-  <span style="color:#f92672">-</span> server
-    <span style="color:#f92672">-</span> middleware
-      <span style="color:#f92672">-</span> middleware.go
-    <span style="color:#f92672">-</span> models
-      <span style="color:#f92672">-</span> models.go
-    <span style="color:#f92672">-</span> router
-      <span style="color:#f92672">-</span> router.go
-    <span style="color:#f92672">-</span> main.go
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">go<span style="color:#ff79c6">-</span>todo
+  <span style="color:#ff79c6">-</span> server
+    <span style="color:#ff79c6">-</span> middleware
+      <span style="color:#ff79c6">-</span> middleware.go
+    <span style="color:#ff79c6">-</span> models
+      <span style="color:#ff79c6">-</span> models.go
+    <span style="color:#ff79c6">-</span> router
+      <span style="color:#ff79c6">-</span> router.go
+    <span style="color:#ff79c6">-</span> main.go
 </code></pre></div><p>In the server, we require 2 dependencies: the first to connect with MongoDB and the second to create RESTAPIs.</p>
 <p>We are going to use the official <a href="https://github.com/mongodb/mongo-go-driver"target="_blank">MongoDB Go Driver</a> from MongoDB.</p>
 <p>To install it run the below command in the terminal or command window.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#66d9ef">go</span>.<span style="color:#a6e22e">mongodb</span>.<span style="color:#a6e22e">org</span><span style="color:#f92672">/</span><span style="color:#a6e22e">mongo</span><span style="color:#f92672">-</span><span style="color:#a6e22e">driver</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> get <span style="color:#ff79c6">go</span>.mongodb.org<span style="color:#ff79c6">/</span>mongo<span style="color:#ff79c6">-</span>driver
 </code></pre></div><p>Second, install the <code>gorilla/mux</code> <a href="https://github.com/gorilla/mux"target="_blank">package</a> for the router. <code>mux</code> is one of the most popular packages for the router in the Golang.</p>
 <p>To install it run the below command in the terminal or command window.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">gorilla</span><span style="color:#f92672">/</span><span style="color:#a6e22e">mux</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> get <span style="color:#ff79c6">-</span>u github.com<span style="color:#ff79c6">/</span>gorilla<span style="color:#ff79c6">/</span>mux
 </code></pre></div><h4 id="models"><strong>Models</strong></h4>
 <p>Once both the packages installed successfully, create a <code>models</code> directory and <code>models.go</code> file inside it and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">models</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> models
 
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;go.mongodb.org/mongo-driver/bson/primitive&#34;</span>
+<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;go.mongodb.org/mongo-driver/bson/primitive&#34;</span>
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">ToDoList</span> <span style="color:#66d9ef">struct</span> {
+<span style="color:#8be9fd;font-style:italic">type</span> ToDoList <span style="color:#8be9fd;font-style:italic">struct</span> {
 
-  <span style="color:#a6e22e">ID</span>     <span style="color:#a6e22e">primitive</span>.<span style="color:#a6e22e">ObjectID</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;_id,omitempty&#34; bson:&#34;_id,omitempty&#34;</span><span style="color:#e6db74">`</span>
+  ID     primitive.ObjectID <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;_id,omitempty&#34; bson:&#34;_id,omitempty&#34;</span><span style="color:#f1fa8c">`</span>
 
-  <span style="color:#a6e22e">Task</span>   <span style="color:#66d9ef">string</span>             <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;task,omitempty&#34;</span><span style="color:#e6db74">`</span>
-  <span style="color:#a6e22e">Status</span> <span style="color:#66d9ef">bool</span>               <span style="color:#e6db74">`</span><span style="color:#e6db74">json:&#34;status,omitempty&#34;</span><span style="color:#e6db74">`</span>
+  Task   <span style="color:#8be9fd">string</span>             <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;task,omitempty&#34;</span><span style="color:#f1fa8c">`</span>
+  Status <span style="color:#8be9fd">bool</span>               <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;status,omitempty&#34;</span><span style="color:#f1fa8c">`</span>
 }
 </code></pre></div><p>The first line is the package name for this file. To learn more about packages follow this <a href="https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc"target="_blank">link</a>.</p>
 <p>The second line is <code>import</code> primitive from <code>mongo-driver</code> the package.</p>
@@ -121,25 +150,25 @@
 <p>The middleware is complete.</p>
 <h4 id="router">Router</h4>
 <p>Create a <code>router</code> folder in the <code>server</code> directory and then create a new file <code>router.go</code> in it. Paste the below code in the file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">router</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> router
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;../middleware&#34;</span>
-	<span style="color:#e6db74">&#34;github.com/gorilla/mux&#34;</span>
+<span style="color:#ff79c6">import</span> (
+	<span style="color:#f1fa8c">&#34;../middleware&#34;</span>
+	<span style="color:#f1fa8c">&#34;github.com/gorilla/mux&#34;</span>
 )
 
-<span style="color:#75715e">// Router is exported and used in main.go
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Router</span>() <span style="color:#f92672">*</span><span style="color:#a6e22e">mux</span>.<span style="color:#a6e22e">Router</span> {
+<span style="color:#6272a4">// Router is exported and used in main.go
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">Router</span>() <span style="color:#ff79c6">*</span>mux.Router {
 
-	<span style="color:#a6e22e">router</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">mux</span>.<span style="color:#a6e22e">NewRouter</span>()
+	router <span style="color:#ff79c6">:=</span> mux.<span style="color:#50fa7b">NewRouter</span>()
 
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/api/task&#34;</span>, <span style="color:#a6e22e">middleware</span>.<span style="color:#a6e22e">GetAllTask</span>).<span style="color:#a6e22e">Methods</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;OPTIONS&#34;</span>)
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/api/task&#34;</span>, <span style="color:#a6e22e">middleware</span>.<span style="color:#a6e22e">CreateTask</span>).<span style="color:#a6e22e">Methods</span>(<span style="color:#e6db74">&#34;POST&#34;</span>, <span style="color:#e6db74">&#34;OPTIONS&#34;</span>)
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/api/task/{id}&#34;</span>, <span style="color:#a6e22e">middleware</span>.<span style="color:#a6e22e">TaskComplete</span>).<span style="color:#a6e22e">Methods</span>(<span style="color:#e6db74">&#34;PUT&#34;</span>, <span style="color:#e6db74">&#34;OPTIONS&#34;</span>)
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/api/undoTask/{id}&#34;</span>, <span style="color:#a6e22e">middleware</span>.<span style="color:#a6e22e">UndoTask</span>).<span style="color:#a6e22e">Methods</span>(<span style="color:#e6db74">&#34;PUT&#34;</span>, <span style="color:#e6db74">&#34;OPTIONS&#34;</span>)
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/api/deleteTask/{id}&#34;</span>, <span style="color:#a6e22e">middleware</span>.<span style="color:#a6e22e">DeleteTask</span>).<span style="color:#a6e22e">Methods</span>(<span style="color:#e6db74">&#34;DELETE&#34;</span>, <span style="color:#e6db74">&#34;OPTIONS&#34;</span>)
-	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/api/deleteAllTask&#34;</span>, <span style="color:#a6e22e">middleware</span>.<span style="color:#a6e22e">DeleteAllTask</span>).<span style="color:#a6e22e">Methods</span>(<span style="color:#e6db74">&#34;DELETE&#34;</span>, <span style="color:#e6db74">&#34;OPTIONS&#34;</span>)
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">router</span>
+	router.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/api/task&#34;</span>, middleware.GetAllTask).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;GET&#34;</span>, <span style="color:#f1fa8c">&#34;OPTIONS&#34;</span>)
+	router.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/api/task&#34;</span>, middleware.CreateTask).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;POST&#34;</span>, <span style="color:#f1fa8c">&#34;OPTIONS&#34;</span>)
+	router.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/api/task/{id}&#34;</span>, middleware.TaskComplete).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;PUT&#34;</span>, <span style="color:#f1fa8c">&#34;OPTIONS&#34;</span>)
+	router.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/api/undoTask/{id}&#34;</span>, middleware.UndoTask).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;PUT&#34;</span>, <span style="color:#f1fa8c">&#34;OPTIONS&#34;</span>)
+	router.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/api/deleteTask/{id}&#34;</span>, middleware.DeleteTask).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;DELETE&#34;</span>, <span style="color:#f1fa8c">&#34;OPTIONS&#34;</span>)
+	router.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/api/deleteAllTask&#34;</span>, middleware.DeleteAllTask).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;DELETE&#34;</span>, <span style="color:#f1fa8c">&#34;OPTIONS&#34;</span>)
+	<span style="color:#ff79c6">return</span> router
 }
 </code></pre></div><p>First, we’re importing all task functions from the <code>middleware</code> package.</p>
 <p>Second, we’re using <code>mux</code> package to create routes.</p>
@@ -155,31 +184,31 @@
 </ul>
 <h4 id="maingo">main.go</h4>
 <p>Create a <code>main.go</code> file in the <code>server</code> directory. Paste the below code in it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
 
-<span style="color:#f92672">import</span> (
-    <span style="color:#e6db74">&#34;fmt&#34;</span>
-    <span style="color:#e6db74">&#34;log&#34;</span>
-    <span style="color:#e6db74">&#34;net/http&#34;</span>
-    <span style="color:#e6db74">&#34;./router&#34;</span>
+<span style="color:#ff79c6">import</span> (
+    <span style="color:#f1fa8c">&#34;fmt&#34;</span>
+    <span style="color:#f1fa8c">&#34;log&#34;</span>
+    <span style="color:#f1fa8c">&#34;net/http&#34;</span>
+    <span style="color:#f1fa8c">&#34;./router&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
 
-    <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">Router</span>()
+    r <span style="color:#ff79c6">:=</span> router.<span style="color:#50fa7b">Router</span>()
 
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Starting server on the port 8080...&#34;</span>)
+    fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Starting server on the port 8080...&#34;</span>)
 
-    <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:8080&#34;</span>, <span style="color:#a6e22e">r</span>))
+    log.<span style="color:#50fa7b">Fatal</span>(http.<span style="color:#50fa7b">ListenAndServe</span>(<span style="color:#f1fa8c">&#34;:8080&#34;</span>, r))
 }
 </code></pre></div><p>Import <code>net/http</code> package to serve the routes at <code>8080</code> port and <code>./router</code>to import <code>router</code> package.</p>
 <p>Create an instance of <code>router</code> package.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">Router</span>()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">r <span style="color:#ff79c6">:=</span> router.<span style="color:#50fa7b">Router</span>()
 </code></pre></div><p>Serve/host the application on the <code>8080</code> port.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:8080&#34;</span>, <span style="color:#a6e22e">r</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">http.<span style="color:#50fa7b">ListenAndServe</span>(<span style="color:#f1fa8c">&#34;:8080&#34;</span>, r)
 </code></pre></div><p>A<code>log</code> package is used to track logs.</p>
 <p>Open the terminal from the <code>server</code> directory and run the below command to serve the server. You’ll see the output as the image.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> run main.<span style="color:#ff79c6">go</span>
 </code></pre></div><p><img  src="./asset-5.png"
         alt="serve"/></p>
 <p>You can test the APIs using <code>POSTMAN</code> .</p>
@@ -187,39 +216,39 @@
 <h4 id="frontend-inreact">Frontend in React</h4>
 <p>We’re using the <code>create-react-app</code> module as a boilerplate for this project. You can learn more about it <a href="https://github.com/facebook/create-react-app"target="_blank">here</a>.</p>
 <p>Run the below command from the project directory <code>go-todo</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npx create-react-app client
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npx create-react-app client
 </code></pre></div><p>It will take a while to install. Once it is finished, install the following dependencies for the project. Open terminal from the <code>client</code> directory.</p>
 <ol>
 <li><strong>Axios:</strong> For interacting with the server rest APIs.</li>
 <li><strong>semantic-ui-react:</strong> It is a great react component library to quickly build a frontend. Refer to this <a href="https://react.semantic-ui.com/"target="_blank">link</a> to learn more it.</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install axios
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install axios
 
 npm install semantic-ui-react
 </code></pre></div><p>Semantic UI React provides React components while Semantic UI provides themes as CSS stylesheets. Add the stylesheet in <code>index.html</code> inside the <code>public</code> folder. Check the semantic UI version from this <a href="https://react.semantic-ui.com/usage"target="_blank">link</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>/&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>/&gt;
 </code></pre></div><p>Update the title in the <code>title</code> tag. This will be the title of the tab in the browser. Save the <code>index.html</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">title</span>&gt;ToDo App&lt;/<span style="color:#f92672">title</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">title</span>&gt;ToDo App&lt;/<span style="color:#ff79c6">title</span>&gt;
 </code></pre></div><p>Go to the <code>src</code> folder and open <code>App.js</code> . Delete the content in it and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
-<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./App.css&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React from <span style="color:#f1fa8c">&#34;react&#34;</span>;
+<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;./App.css&#34;</span>;
 
-<span style="color:#75715e">// import the Container Component from the semantic-ui-react
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Container</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;semantic-ui-react&#34;</span>;
+<span style="color:#6272a4">// import the Container Component from the semantic-ui-react
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">import</span> { Container } from <span style="color:#f1fa8c">&#34;semantic-ui-react&#34;</span>;
 
-<span style="color:#75715e">// import the ToDoList component
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ToDoList</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./To-Do-List&#34;</span>;
+<span style="color:#6272a4">// import the ToDoList component
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">import</span> ToDoList from <span style="color:#f1fa8c">&#34;./To-Do-List&#34;</span>;
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
-  <span style="color:#66d9ef">return</span> (
-    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Container</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ToDoList</span> <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">C</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
-    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#8be9fd;font-style:italic">function</span> App() {
+  <span style="color:#ff79c6">return</span> (
+    <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
+      <span style="color:#ff79c6">&lt;</span>Container<span style="color:#ff79c6">&gt;</span>
+        <span style="color:#ff79c6">&lt;</span>ToDoList <span style="color:#ff79c6">/</span><span style="color:#ff79c6">&gt;</span>
+      <span style="color:#ff79c6">&lt;</span>/Container&gt;
+    <span style="color:#ff79c6">&lt;</span>/div&gt;
   );
 }
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> App;
 </code></pre></div><p>Create a new file <code>To-Do-List.js</code> inside the <code>src</code> folder. This component will be the frontend.</p>
 <p>You can download the component from the <a href="https://github.com/schadokar/go-to-do-app/blob/master/client/src/To-Do-List.js"target="_blank">GitHub</a>.</p>
 <p>You can save the file and it is ready to go.</p>
@@ -228,11 +257,11 @@ npm install semantic-ui-react
 <ul>
 <li>Open the terminal and start the <code>server</code> from the server directory.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">main</span>.<span style="color:#66d9ef">go</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> run main.<span style="color:#ff79c6">go</span>
 </code></pre></div><ul>
 <li>Open the terminal and start the react application from the client directory.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm start
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm start
 </code></pre></div><ul>
 <li>Go to <code>http://localhost:3000</code></li>
 </ul>
@@ -263,10 +292,21 @@ npm install semantic-ui-react
 <p>For the complete code. This is the <a href="https://github.com/schadokar/go-to-do-app/"target="_blank">Github Link.</a></p>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2019/>2019</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/development/>development</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/catalyst-network-the-first-step-towards-decentralized-internet/"><span class="li iconfont icon-article"></span>Catalyst Network: The first step towards Decentralized Internet</a></p><p><a class="link" href="/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/"><span class="li iconfont icon-article"></span>Are Smart Contract and Chaincode the Same in Hyperledger Fabric</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/catalyst-network-the-first-step-towards-decentralized-internet/"><span class="">Previous</span>Catalyst Network: The first step towards Decentralized Internet</a></p><p><a class="link" href="/posts/are-smart-contract-and-chaincode-the-same-in-hyperledger-fabric/"><span class="">Next</span>Are Smart Contract and Chaincode the Same in Hyperledger Fabric</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -287,13 +327,36 @@ npm install semantic-ui-react
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -304,6 +367,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>

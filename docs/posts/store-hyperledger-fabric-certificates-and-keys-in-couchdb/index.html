@@ -2,21 +2,50 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Store Hyperledger Fabric certificates and keys in CouchDB&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.08aded1f121f2e99d9ab5fb0b39c074e55586b7bcbb36bd06c8a3747d5b6c6d9d54422644ac410979a8f30a669ade497.css" integrity="sha384-CK3tHxIfLpnZq1&#43;ws5wHTlVYa3vLs2vQbIo3R9W2xtnVRCJkSsQQl5qPMKZpreSX"><meta name="twitter:card" content="summary" />
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Store Hyperledger Fabric certificates and keys in CouchDB&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Store Hyperledger Fabric certificates and keys in CouchDB" /><meta name="twitter:image" content="https://schadokar.dev/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/cover-pic.jpg" /><body><section id="header">
-    <div class="header wrap">
-        <span class="header left-side">
-            <a class="site home" href="/"><span class="site name">Shubham Chadokar</span>
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
             </a>
-        </span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/to-the-point">To-The-Point</a><a class="nav item" href="/projects">Projects</a><a class="nav item" href="/ebooks">Ebook</a><a class="nav item" href="/about">About</a><a class="nav item" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a></nav></div></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
     </div>
     
-</section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Store Hyperledger Fabric certificates and keys in CouchDB</h1><p class="article date">Saturday, February 8, 2020<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><p>
-            <img class="cover" src="cover-pic.jpg" alt>
-          </p><p>Photo by <a href="https://unsplash.com/@mr_williams_photography?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Micah Williams</a> on <a href="https://unsplash.com/s/photos/safe?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Unsplash</a></p>
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Store Hyperledger Fabric certificates and keys in CouchDB</h1><p class="article date">Saturday, February 8, 2020<span class="reading-time"> • 5 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="tag" href=/tags/hyperledger-fabric/>hyperledger-fabric</a><a class="tag" href=/tags/couchdb/>couchdb</a><a class="tag" href=/tags/tutorial/>tutorial</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>Photo by <a href="https://unsplash.com/@mr_williams_photography?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Micah Williams</a> on <a href="https://unsplash.com/s/photos/safe?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"target="_blank">Unsplash</a></p>
 <p>Hyperledger Fabric is all about permissions. These permissions are provided in the form of
 certificates and keys. In broad term, it is known as <a href="https://hyperledger-fabric.readthedocs.io/en/latest/identity/identity.html"target="_blank">Identities</a>.</p>
 <p>When an application interacts with the Hyperledger Fabric Network, it uses this identity to authenticate itself. Fabric network validates the identity and authorizes the application to interact.</p>
@@ -43,16 +72,16 @@ Using couchdb as a wallet. This option is best for production.</li>
 <p>The wallet uses 2 stores to save the certificates and keys:</p>
 <h4 id="1-state-store">1. State Store:</h4>
 <p>The state store is used to store the certificates of the enrolled identity. It stores the basic information of the identity:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;test&#34;</span>,
-  <span style="color:#f92672">&#34;mspid&#34;</span>: <span style="color:#e6db74">&#34;org1&#34;</span>,
-  <span style="color:#f92672">&#34;roles&#34;</span>: <span style="color:#66d9ef">null</span>,
-  <span style="color:#f92672">&#34;affiliation&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-  <span style="color:#f92672">&#34;enrollmentSecret&#34;</span>: <span style="color:#e6db74">&#34;&lt;ENROLLMENT_SECRET&gt;&#34;</span>,
-  <span style="color:#f92672">&#34;enrollment&#34;</span>: {
-    <span style="color:#f92672">&#34;signingIdentity&#34;</span>: <span style="color:#e6db74">&#34;&lt;PRIVATE_KEY_NAME&gt;&#34;</span>,
-    <span style="color:#f92672">&#34;identity&#34;</span>: {
-      <span style="color:#f92672">&#34;certificate&#34;</span>: <span style="color:#e6db74">&#34;&lt;SIGN_CERT&gt;&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;test&#34;</span>,
+  <span style="color:#ff79c6">&#34;mspid&#34;</span>: <span style="color:#f1fa8c">&#34;org1&#34;</span>,
+  <span style="color:#ff79c6">&#34;roles&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;affiliation&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+  <span style="color:#ff79c6">&#34;enrollmentSecret&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;ENROLLMENT_SECRET&gt;&#34;</span>,
+  <span style="color:#ff79c6">&#34;enrollment&#34;</span>: {
+    <span style="color:#ff79c6">&#34;signingIdentity&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;PRIVATE_KEY_NAME&gt;&#34;</span>,
+    <span style="color:#ff79c6">&#34;identity&#34;</span>: {
+      <span style="color:#ff79c6">&#34;certificate&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;SIGN_CERT&gt;&#34;</span>
     }
   }
 }
@@ -65,22 +94,22 @@ Using couchdb as a wallet. This option is best for production.</li>
 <p>To configure the couchdb as wallet:</p>
 <h4 id="step-1">Step 1</h4>
 <p>Import the <code>CouchDBKeyValueStore</code> library, which is provided by the <code>Node SDK</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CDBKVS</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fabric-client/lib/impl/CouchDBKeyValueStore.js&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> CDBKVS <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fabric-client/lib/impl/CouchDBKeyValueStore.js&#34;</span>);
 </code></pre></div><blockquote>
 <p><em>Do read the <a href="https://github.com/hyperledger/fabric-sdk-node/blob/release-1.4/fabric-client/lib/impl/CouchDBKeyValueStore.js"target="_blank"><code>CouchDBKeyValueStore.js</code></a> it is worth reading.</em></p>
 </blockquote>
 <h4 id="step-2">Step 2</h4>
 <p>Set the <code>state store</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stateStore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CDBKVS</span>({
-  <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
-  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&lt;DB_NAME&gt;&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8be9fd;font-style:italic">let</span> stateStore <span style="color:#ff79c6">=</span> await <span style="color:#ff79c6">new</span> CDBKVS({
+  url<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
+  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;DB_NAME&gt;&#34;</span>
 });
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Client</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fabric-client&#34;</span>);
+<span style="color:#ff79c6">const</span> Client <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fabric-client&#34;</span>);
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Client</span>.<span style="color:#a6e22e">loadFromConfig</span>(<span style="color:#e6db74">&#34;path of network.yaml&#34;</span>);
+<span style="color:#ff79c6">const</span> client <span style="color:#ff79c6">=</span> Client.loadFromConfig(<span style="color:#f1fa8c">&#34;path of network.yaml&#34;</span>);
 
-<span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">setStateStore</span>(<span style="color:#a6e22e">stateStore</span>);
+client.setStateStore(stateStore);
 </code></pre></div><ul>
 <li><code>&lt;USERNAME&gt;</code> is the username of the couchdb.</li>
 <li><code>&lt;PASSWORD&gt;</code> is the password of the couchdb.</li>
@@ -92,16 +121,16 @@ Using couchdb as a wallet. This option is best for production.</li>
 </blockquote>
 <h4 id="step-3">Step 3</h4>
 <p>Set the <code>crypto store</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cryptoSuite</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Client</span>.<span style="color:#a6e22e">newCryptoSuite</span>();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> cryptoSuite <span style="color:#ff79c6">=</span> Client.newCryptoSuite();
 
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cryptoKS</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Client</span>.<span style="color:#a6e22e">newCryptoKeyStore</span>(<span style="color:#a6e22e">CDBKVS</span>, {
-  <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
-  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&lt;DB_NAME&gt;&#34;</span>
+<span style="color:#8be9fd;font-style:italic">let</span> cryptoKS <span style="color:#ff79c6">=</span> Client.newCryptoKeyStore(CDBKVS, {
+  url<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
+  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;DB_NAME&gt;&#34;</span>
 });
 
-<span style="color:#a6e22e">cryptoSuite</span>.<span style="color:#a6e22e">setCryptoKeyStore</span>(<span style="color:#a6e22e">cryptoKS</span>);
+cryptoSuite.setCryptoKeyStore(cryptoKS);
 
-<span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">setCryptoSuite</span>(<span style="color:#a6e22e">cryptoSuite</span>);
+client.setCryptoSuite(cryptoSuite);
 </code></pre></div><p>You have to update the client according to the above steps to make it use the couchdb.<br>
 In the next section, we'll implement the above steps in the <code>balance-transfer</code> fabric sample.</p>
 <hr>
@@ -145,11 +174,11 @@ https://admin:password@localhost:5984
 <li><strong><em>Line 31-52:</em></strong> Set the state store and crypto store. Step 2 &amp; 3.</li>
 </ul>
 <p>There is a minor change in the above code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Client variable is used as hfc
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hfc</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fabric-client&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// Client variable is used as hfc
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> hfc <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fabric-client&#34;</span>);
 
-<span style="color:#75715e">// Instead of Client
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Client</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fabric-client&#34;</span>);
+<span style="color:#6272a4">// Instead of Client
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> Client <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fabric-client&#34;</span>);
 </code></pre></div><p><strong><em>It is not necessary that db(dbname) of state store and crypto store is the same. Both the stores can have their separate dbs. It depends on the requirement. You can have state store and crypto store db as <code>orgName-state-store</code> and <code>orgName-crypto-store</code> respectively.</em></strong></p>
 <p><strong><em>Each organization must have their state-store and crypto-store db, else it will throw the Authentication Error.</em></strong></p>
 <pre><code>Error: fabric-ca request register failed with errors [[{&quot;code&quot;:20,&quot;message&quot;:&quot;Authentication failure&quot;}]]
@@ -192,10 +221,21 @@ If you find any resource which you think can be added here, don't feel shy to sh
 </ul>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="tag" href=/tags/hyperledger-fabric/>hyperledger-fabric</a><a class="tag" href=/tags/couchdb/>couchdb</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/understand-quicksort-the-easy-way/"><span class="li iconfont icon-article"></span>Understand Quicksort the easy way</a></p><p><a class="link" href="/posts/use-environment-variable-in-your-next-golang-project/"><span class="li iconfont icon-article"></span>Use Environment Variable in your next Golang Project</a></p></section></div></section>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/understand-quicksort-the-easy-way/"><span class="">Previous</span>Understand Quicksort the easy way</a></p><p><a class="link" href="/posts/use-environment-variable-in-your-next-golang-project/"><span class="">Next</span>Use Environment Variable in your next Golang Project</a></p></section></div></section>
 <section id="footer">
-    <div class="footer wrap">
-        <span class="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
                 
                     <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
                         <span
@@ -216,13 +256,36 @@ If you find any resource which you think can be added here, don't feel shy to sh
                     </a>
                 <div class="footer-wrap">
     <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
 </div></span>
-        <span class="footer right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/newsletter">Newsletter</a><a class="nav item" href="/contact">Contact</a></nav></div></span>
+        
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -233,6 +296,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
 
 </html>
