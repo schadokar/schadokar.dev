@@ -761,6 +761,7 @@ b {
 
 .article.markdown-body li + li {
   margin-top: 20px;
+  list-style-type: '👉';
 }
 
 .article.markdown-body > *,
@@ -769,6 +770,7 @@ b {
 .article.markdown-body .footnotes > * {
   margin-top: 0;
   margin-bottom: 20px;
+  list-style-type: '👉';
 }
 
 .article.markdown-body > :first-child,
@@ -1394,7 +1396,6 @@ a.category {
 
 .highlight pre {
   border-radius: 0.35rem;
-  background-color: #353535 !important;
 }
 
 /* mathjax & katex patch */
