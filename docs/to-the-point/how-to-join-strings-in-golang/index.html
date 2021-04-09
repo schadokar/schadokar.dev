@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Join Strings in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Join Strings in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to Join Strings in Golang?" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
@@ -50,21 +50,21 @@
 <p>There are multiple ways to join or concat strings in the golang.</p>
 <p>Let's start with the easy one.</p>
 <h2 id="using-the--operator-">Using the + operator 🔧</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	str1 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>
-	<span style="color:#6272a4">// there is a space before World
-</span><span style="color:#6272a4"></span>	str2 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34; World!&#34;</span>
-
-	fmt.<span style="color:#50fa7b">Println</span>(str1 <span style="color:#ff79c6">+</span> str2)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>	<span style="color:#268bd2">str1</span> := <span style="color:#2aa198">&#34;Hello&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#93a1a1;font-style:italic">// there is a space before World
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">str2</span> := <span style="color:#2aa198">&#34; World!&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">str1</span> + <span style="color:#268bd2">str2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>}
 </code></pre></div><p>Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Hello World!
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Hello</span> <span style="color:#268bd2">World</span>!
 </code></pre></div><hr>
 <h2 id="using-sprint-sprintf-sprintln-">Using Sprint, Sprintf, Sprintln 🛠</h2>
 <p>The <a href="https://golang.org/pkg/fmt/"target="_blank">fmt</a> package has <a href="https://golang.org/pkg/fmt/#Sprint"target="_blank">Sprint</a>, <a href="https://golang.org/pkg/fmt/#Sprintf"target="_blank">Sprintf</a> and <a href="https://golang.org/pkg/fmt/#Sprintln"target="_blank">Sprintln</a> function which can format the strings using the default or custom formats.</p>
@@ -76,28 +76,28 @@
 <p><code>Sprint</code> formats using the default formats and returns the resulting string.</p>
 <p><code>Sprint</code> accepts an empty interface. It means it can take n elements of any type.<br>
 If no element of type string is passed then the resulting string will add a Space between the elements.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	num <span style="color:#ff79c6">:=</span> <span style="color:#bd93f9">26</span>
-
-	str <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;Feb&#34;</span>
-
-	boolean <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">true</span>
-
-	withStr <span style="color:#ff79c6">:=</span> fmt.<span style="color:#50fa7b">Sprint</span>(num, str, boolean)
-
-	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;With string: &#34;</span>, withStr)
-
-	withOutStr <span style="color:#ff79c6">:=</span> fmt.<span style="color:#50fa7b">Sprint</span>(num, boolean)
-
-	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Without string: &#34;</span>, withOutStr)
-}
-
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>	<span style="color:#268bd2">num</span> := <span style="color:#2aa198;font-weight:bold">26</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#268bd2">str</span> := <span style="color:#2aa198">&#34;Feb&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	<span style="color:#268bd2">boolean</span> := <span style="color:#859900;font-weight:bold">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#268bd2">withStr</span> := <span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Sprint</span>(<span style="color:#268bd2">num</span>, <span style="color:#268bd2">str</span>, <span style="color:#268bd2">boolean</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;With string: &#34;</span>, <span style="color:#268bd2">withStr</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>	<span style="color:#268bd2">withOutStr</span> := <span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Sprint</span>(<span style="color:#268bd2">num</span>, <span style="color:#268bd2">boolean</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Without string: &#34;</span>, <span style="color:#268bd2">withOutStr</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>
 </code></pre></div><p>Output</p>
 <pre><code>With string:  26Febtrue
 Without string:  26 true
@@ -114,68 +114,68 @@ Without string:  26 true
 <blockquote>
 <p>Connection URL format: <strong>postgres://username:password@hostname/databasename</strong></p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-
-	dbname <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;testdb&#34;</span>
-
-	username <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;admin&#34;</span>
-
-	password <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;test1234&#34;</span>
-
-	hostname <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;localhost&#34;</span>
-
-	connectionURL <span style="color:#ff79c6">:=</span> fmt.<span style="color:#50fa7b">Sprintf</span>(<span style="color:#f1fa8c">&#34;postgres://%s:%s@%v/%v&#34;</span>, username, password, hostname, dbname)
-
-	fmt.<span style="color:#50fa7b">Println</span>(connectionURL)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">dbname</span> := <span style="color:#2aa198">&#34;testdb&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">username</span> := <span style="color:#2aa198">&#34;admin&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">password</span> := <span style="color:#2aa198">&#34;test1234&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>	<span style="color:#268bd2">hostname</span> := <span style="color:#2aa198">&#34;localhost&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>	<span style="color:#268bd2">connectionURL</span> := <span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Sprintf</span>(<span style="color:#2aa198">&#34;postgres://%s:%s@%v/%v&#34;</span>, <span style="color:#268bd2">username</span>, <span style="color:#268bd2">password</span>, <span style="color:#268bd2">hostname</span>, <span style="color:#268bd2">dbname</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">connectionURL</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>}
 </code></pre></div><p>Output</p>
 <pre><code>postgres://admin:test1234@localhost/testdb
 </code></pre><h3 id="sprintln">Sprintln</h3>
 <p><code>Sprintln</code> formats the elements or arguments using the default formats. Spaces are added between the elements and a new line is added in the end.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-
-	str1 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>
-	str2 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;Gophers!&#34;</span>
-
-	msg <span style="color:#ff79c6">:=</span> fmt.<span style="color:#50fa7b">Sprintln</span>(str1, str2)
-
-	fmt.<span style="color:#50fa7b">Println</span>(msg)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">str1</span> := <span style="color:#2aa198">&#34;Hello&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#268bd2">str2</span> := <span style="color:#2aa198">&#34;Gophers!&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	<span style="color:#268bd2">msg</span> := <span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Sprintln</span>(<span style="color:#268bd2">str1</span>, <span style="color:#268bd2">str2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">msg</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>}
 </code></pre></div><p>Output</p>
 <pre><code>Hello Gophers!
 </code></pre><hr>
 <h2 id="using-the-join-function--">Using the Join function  🔩</h2>
 <p>The golang standard library has provided a  <a href="https://golang.org/pkg/strings/#Join"target="_blank">Join</a> function in the <a href="https://golang.org/pkg/strings/"target="_blank">strings</a> package.</p>
 <p>The <code>Join</code> function takes an array of strings and a separator to join them.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">Join</span>(elems []<span style="color:#8be9fd">string</span>, sep <span style="color:#8be9fd">string</span>) <span style="color:#8be9fd">string</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">Join</span>(<span style="color:#268bd2">elems</span> []<span style="color:#859900;font-weight:bold">string</span>, <span style="color:#268bd2">sep</span> <span style="color:#859900;font-weight:bold">string</span>) <span style="color:#859900;font-weight:bold">string</span>
 </code></pre></div><p>The example has an array of weekdays. The <code>Join</code> function will return a string of weekdays separated by <code>, </code>.</p>
 <blockquote>
 <p>Using <code>Join</code> you can convert an array of string to a string.</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;strings&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	weekdays <span style="color:#ff79c6">:=</span> []<span style="color:#8be9fd">string</span>{<span style="color:#f1fa8c">&#34;Monday&#34;</span>, <span style="color:#f1fa8c">&#34;Tuesday&#34;</span>, <span style="color:#f1fa8c">&#34;Wednesday&#34;</span>, <span style="color:#f1fa8c">&#34;Thursday&#34;</span>, <span style="color:#f1fa8c">&#34;Friday&#34;</span>}
-	<span style="color:#6272a4">// there is a space after comma
-</span><span style="color:#6272a4"></span>	fmt.<span style="color:#50fa7b">Println</span>(strings.<span style="color:#50fa7b">Join</span>(weekdays, <span style="color:#f1fa8c">&#34;, &#34;</span>))
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;strings&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">weekdays</span> := []<span style="color:#859900;font-weight:bold">string</span>{<span style="color:#2aa198">&#34;Monday&#34;</span>, <span style="color:#2aa198">&#34;Tuesday&#34;</span>, <span style="color:#2aa198">&#34;Wednesday&#34;</span>, <span style="color:#2aa198">&#34;Thursday&#34;</span>, <span style="color:#2aa198">&#34;Friday&#34;</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#93a1a1;font-style:italic">// there is a space after comma
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">strings</span>.<span style="color:#268bd2">Join</span>(<span style="color:#268bd2">weekdays</span>, <span style="color:#2aa198">&#34;, &#34;</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>}
 </code></pre></div><p>Output</p>
 <pre><code>Monday, Tuesday, Wednesday, Thursday, Friday
 </code></pre><hr>

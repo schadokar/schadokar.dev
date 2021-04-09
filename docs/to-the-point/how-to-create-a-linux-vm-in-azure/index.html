@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to create a Linux VM in Azure?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to create a Linux VM in Azure?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to create a Linux VM in Azure?" /><meta name="twitter:image" content="https://schadokar.dev/images/azure-basic.png" /><body><section id="header">
@@ -73,28 +73,28 @@
 <p>Let's setup the SSH key.</p>
 <p>Open any command line tool. Like bash shell.</p>
 <p>Use <code>ssh-keygen</code> command to create keys. By default it saves these keys in <code>~/.ssh</code> directory.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh-keygen -m PEM -t rsa -b <span style="color:#bd93f9">4096</span>
-Generating public/private rsa key pair.
-Enter file in which to save the key <span style="color:#ff79c6">(</span>/c/Users/admin/.ssh/id_rsa<span style="color:#ff79c6">)</span>:
-Enter passphrase <span style="color:#ff79c6">(</span>empty <span style="color:#ff79c6">for</span> no passphrase<span style="color:#ff79c6">)</span>:
-Enter same passphrase again:
-Your identification has been saved in /c/Users/admin/.ssh/id_rsa.
-Your public key has been saved in /c/Users/admin/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:9Hl7Wfo6Et4+QfQ7sKrZr2yaO7Dgb4IVLSIpgsY9ftE admin@LAPTOP-BAVLQDM1
-The key&#39;s randomart image is:
-+---<span style="color:#ff79c6">[</span>RSA 4096<span style="color:#ff79c6">]</span>----+
-|                 |
-|              .  |
-|o o   o .    . . |
-|+<span style="color:#ff79c6">=</span> + + E . . .. .|
-|+ o o + S o ..o o|
-|   . + .   ..o.* |
-|    <span style="color:#ff79c6">=</span> . o  .oo+..|
-|   . o o .<span style="color:#ff79c6">=</span>oo.+. |
-|      +. **+o+o+.|
-+----<span style="color:#ff79c6">[</span>SHA256<span style="color:#ff79c6">]</span>-----+
-
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>$ ssh-keygen -m PEM -t rsa -b <span style="color:#2aa198;font-weight:bold">4096</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>Generating public/private rsa key pair.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>Enter file in which to save the key (/c/Users/admin/.ssh/id_rsa):
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>Enter passphrase (empty <span style="color:#859900">for</span> no passphrase):
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>Enter same passphrase again:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>Your identification has been saved in /c/Users/admin/.ssh/id_rsa.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>Your public key has been saved in /c/Users/admin/.ssh/id_rsa.pub.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>The key fingerprint is:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>SHA256:9Hl7Wfo6Et4+QfQ7sKrZr2yaO7Dgb4IVLSIpgsY9ftE admin@LAPTOP-BAVLQDM1
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>The key&#39;s randomart image is:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>+---[RSA 4096]----+
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>|                 |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>|              .  |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>|o o   o .    . . |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>|+= + + E . . .. .|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>|+ o o + S o ..o o|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>|   . + .   ..o.* |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>|    = . o  .oo+..|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>|   . o o .=oo.+. |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>|      +. **+o+o+.|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>+----[SHA256]-----+
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>
 </code></pre></div><p>Enter the absolute path where you want to save the keys or skip it and press Enter.</p>
 <p>Passphrase is required to access the private key while login in the VM.</p>
 <p>Enter Username <code>azuredemo</code>.<br>

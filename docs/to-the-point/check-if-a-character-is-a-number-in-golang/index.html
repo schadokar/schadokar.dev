@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Check if a character is a number in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Check if a character is a number in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Check if a character is a number in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
@@ -48,8 +48,8 @@
         <p><a href="https://unicode-table.com/en/"target="_blank">Unicode</a> is a computing standard for the consistent encoding symbols.</p>
 <p>All the characters and symbols assigned a code.</p>
 <p>For ex.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">A U<span style="color:#ff79c6">+</span><span style="color:#bd93f9">0041</span>
-अ U<span style="color:#ff79c6">+</span><span style="color:#bd93f9">0</span><span style="color:#bd93f9">905</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">A</span> <span style="color:#268bd2">U</span>+<span style="color:#2aa198;font-weight:bold">0041</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">अ</span> <span style="color:#268bd2">U</span>+<span style="color:#2aa198;font-weight:bold">0</span><span style="color:#2aa198;font-weight:bold">905</span>
 </code></pre></div><p>All the Unicode is divided into various categories. Browse all the <a href="https://www.compart.com/en/unicode/category"target="_blank">categories</a>.</p>
 <ul>
 <li><a href="https://www.compart.com/en/unicode/category/Ll"target="_blank">Ll</a> Lowercase Letters (a, b, µ, ɸ)</li>
@@ -60,59 +60,59 @@
 <h2 id="isnumber">IsNumber</h2>
 <p><code>IsNumber</code> function validates the set of Unicode number characters, category N(Nd, Nl, No).</p>
 <p><strong>Syntax</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">IsNumber</span>(r <span style="color:#8be9fd">rune</span>) <span style="color:#8be9fd">bool</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;unicode&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	str <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;1b१Ⅰ¼&#34;</span>
-	<span style="color:#ff79c6">for</span> _, char <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> str {
-		<span style="color:#ff79c6">if</span> unicode.<span style="color:#50fa7b">IsNumber</span>(char) {
-			fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#8be9fd;font-style:italic">string</span>(char), char, <span style="color:#f1fa8c">&#34;is number rune&#34;</span>)
-		} <span style="color:#ff79c6">else</span> {
-			fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#8be9fd;font-style:italic">string</span>(char), char, <span style="color:#f1fa8c">&#34;is not a number rune&#34;</span>)
-		}
-	}
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">IsNumber</span>(<span style="color:#268bd2">r</span> <span style="color:#859900;font-weight:bold">rune</span>) <span style="color:#859900;font-weight:bold">bool</span>
+</code></pre></div><div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;unicode&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">str</span> := <span style="color:#2aa198">&#34;1b१Ⅰ¼&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#859900">for</span> <span style="color:#268bd2">_</span>, <span style="color:#268bd2">char</span> := <span style="color:#859900">range</span> <span style="color:#268bd2">str</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>		<span style="color:#859900">if</span> <span style="color:#268bd2">unicode</span>.<span style="color:#268bd2">IsNumber</span>(<span style="color:#268bd2">char</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>			<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#cb4b16">string</span>(<span style="color:#268bd2">char</span>), <span style="color:#268bd2">char</span>, <span style="color:#2aa198">&#34;is number rune&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>		} <span style="color:#859900">else</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>			<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#cb4b16">string</span>(<span style="color:#268bd2">char</span>), <span style="color:#268bd2">char</span>, <span style="color:#2aa198">&#34;is not a number rune&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>		}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>}
 </code></pre></div><p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#bd93f9">1</span> <span style="color:#bd93f9">49</span> is number <span style="color:#8be9fd">rune</span>
-b <span style="color:#bd93f9">98</span> is not a number <span style="color:#8be9fd">rune</span>
-१ <span style="color:#bd93f9">2407</span> is number <span style="color:#8be9fd">rune</span>
-Ⅰ <span style="color:#bd93f9">8544</span> is number <span style="color:#8be9fd">rune</span>
-¼ <span style="color:#bd93f9">188</span> is number <span style="color:#8be9fd">rune</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#2aa198;font-weight:bold">1</span> <span style="color:#2aa198;font-weight:bold">49</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">number</span> <span style="color:#859900;font-weight:bold">rune</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">b</span> <span style="color:#2aa198;font-weight:bold">98</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">not</span> <span style="color:#268bd2">a</span> <span style="color:#268bd2">number</span> <span style="color:#859900;font-weight:bold">rune</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#268bd2">१</span> <span style="color:#2aa198;font-weight:bold">2407</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">number</span> <span style="color:#859900;font-weight:bold">rune</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>Ⅰ <span style="color:#2aa198;font-weight:bold">8544</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">number</span> <span style="color:#859900;font-weight:bold">rune</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>¼ <span style="color:#2aa198;font-weight:bold">188</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">number</span> <span style="color:#859900;font-weight:bold">rune</span>
 </code></pre></div><p><a href="https://play.golang.org/p/AtA1yCbAvcj"target="_blank">Try it</a></p>
 <h2 id="isdigit">IsDigit</h2>
 <p><code>IsDigit</code> function validates only the <code>Nd</code> Unicode category. It is a subset of <code>IsNumber</code>.</p>
 <p><strong>Syntax</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">IsDigit</span>(r <span style="color:#8be9fd">rune</span>) <span style="color:#8be9fd">bool</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;unicode&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	str <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;1b१Ⅰ¼&#34;</span>
-
-	<span style="color:#ff79c6">for</span> _, char <span style="color:#ff79c6">:=</span> <span style="color:#ff79c6">range</span> str {
-		<span style="color:#ff79c6">if</span> unicode.<span style="color:#50fa7b">IsDigit</span>(char) {
-			fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#8be9fd;font-style:italic">string</span>(char), char, <span style="color:#f1fa8c">&#34;is digit rune&#34;</span>)
-		} <span style="color:#ff79c6">else</span> {
-			fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#8be9fd;font-style:italic">string</span>(char), char, <span style="color:#f1fa8c">&#34;is not a digit rune&#34;</span>)
-		}
-	}
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">IsDigit</span>(<span style="color:#268bd2">r</span> <span style="color:#859900;font-weight:bold">rune</span>) <span style="color:#859900;font-weight:bold">bool</span>
+</code></pre></div><div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;unicode&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">str</span> := <span style="color:#2aa198">&#34;1b१Ⅰ¼&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#859900">for</span> <span style="color:#268bd2">_</span>, <span style="color:#268bd2">char</span> := <span style="color:#859900">range</span> <span style="color:#268bd2">str</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>		<span style="color:#859900">if</span> <span style="color:#268bd2">unicode</span>.<span style="color:#268bd2">IsDigit</span>(<span style="color:#268bd2">char</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>			<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#cb4b16">string</span>(<span style="color:#268bd2">char</span>), <span style="color:#268bd2">char</span>, <span style="color:#2aa198">&#34;is digit rune&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>		} <span style="color:#859900">else</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>			<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#cb4b16">string</span>(<span style="color:#268bd2">char</span>), <span style="color:#268bd2">char</span>, <span style="color:#2aa198">&#34;is not a digit rune&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>		}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>}
 </code></pre></div><p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#bd93f9">1</span> <span style="color:#bd93f9">49</span> is digit <span style="color:#8be9fd">rune</span>
-b <span style="color:#bd93f9">98</span> is not a digit <span style="color:#8be9fd">rune</span>
-१ <span style="color:#bd93f9">2407</span> is digit <span style="color:#8be9fd">rune</span>
-Ⅰ <span style="color:#bd93f9">8544</span> is not a digit <span style="color:#8be9fd">rune</span>
-¼ <span style="color:#bd93f9">188</span> is not a digit <span style="color:#8be9fd">rune</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#2aa198;font-weight:bold">1</span> <span style="color:#2aa198;font-weight:bold">49</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">digit</span> <span style="color:#859900;font-weight:bold">rune</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">b</span> <span style="color:#2aa198;font-weight:bold">98</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">not</span> <span style="color:#268bd2">a</span> <span style="color:#268bd2">digit</span> <span style="color:#859900;font-weight:bold">rune</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#268bd2">१</span> <span style="color:#2aa198;font-weight:bold">2407</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">digit</span> <span style="color:#859900;font-weight:bold">rune</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>Ⅰ <span style="color:#2aa198;font-weight:bold">8544</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">not</span> <span style="color:#268bd2">a</span> <span style="color:#268bd2">digit</span> <span style="color:#859900;font-weight:bold">rune</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>¼ <span style="color:#2aa198;font-weight:bold">188</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">not</span> <span style="color:#268bd2">a</span> <span style="color:#268bd2">digit</span> <span style="color:#859900;font-weight:bold">rune</span>
 </code></pre></div><h2 id="final-words">Final Words</h2>
 <p>You can always use a validation on ASCII values. ASCII value of <code>0</code> is <code>30</code> and <code>9</code> is <code>39</code>.<br>
 If <code>&gt;=</code> 30 and <code>&lt;=</code> 39.</p>

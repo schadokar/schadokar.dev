@@ -32,7 +32,7 @@ This is also known as base 10 number system.
       <guid>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
       <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa. For this, we&#39;re going to use the encoding/hex package provided by the golang. Package hex implements hexadecimal encoding and decoding.
 byte array to hex string To convert a byte array to hex string, we will encode the byte array to the hexadecimal string.
-Syntax func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
+Syntax 1func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
       
     </item>
     

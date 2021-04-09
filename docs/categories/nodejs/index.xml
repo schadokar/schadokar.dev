@@ -33,7 +33,7 @@ I will keep updating this article with new validation and best approaches.
       <description>In nodejs, there are many options to remove an element from an array, one of them is using the filter.
 filter method on array returns a new array based on the filtering condition.
 For ex. return the even values in the array
-const arr1 = [1, 2, 3, 4, 5, 6]; const arr2 = arr1.filter((n) =&amp;gt; n % 2 === 0); console.log(arr2); Output
+1const arr1 = [1, 2, 3, 4, 5, 6]; 2 3const arr2 = arr1.filter((n) =&amp;gt; n % 2 === 0); 4 5console.log(arr2); Output
 [2, 4, 6] Remove an element from the array Remove 5 from the array.</description>
       
     </item>

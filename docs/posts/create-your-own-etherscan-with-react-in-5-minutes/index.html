@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create your own Etherscan with React in 5 minutes&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create your own Etherscan with React in 5 minutes&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Create your own Etherscan with React in 5 minutes" /><meta name="twitter:image" content="https://schadokar.dev/posts/create-your-own-etherscan-with-react-in-5-minutes/asset1.jpg" /><body><section id="header">
@@ -40,7 +40,7 @@
 </section>
 
     <section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Create your own Etherscan with React in 5 minutes</h1><p class="article date">Tuesday, January 7, 2020<span class="reading-time"> • 10 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/reactjs/>reactjs</a><a class="tag" href=/tags/blockchain/>blockchain</a><a class="tag" href=/tags/tutorial/>tutorial</a></section>
+    <h1 class="article title">Create your own Etherscan with React in 5 minutes</h1><p class="article date">Tuesday, January 7, 2020<span class="reading-time"> • 11 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/reactjs/>reactjs</a><a class="tag" href=/tags/blockchain/>blockchain</a><a class="tag" href=/tags/tutorial/>tutorial</a></section>
 </section>
 <article class="article markdown-body">
         
@@ -66,8 +66,8 @@
 <h2 id="create-a-react-project">Create a react project</h2>
 <p>We are using <code>create-react-app</code> as a boilerplate. Follow this <a href="https://github.com/facebook/create-react-app"target="_blank">link</a> to learn more about it.</p>
 <p>Open a terminal and run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// this command will install create-react-app
-</span><span style="color:#6272a4"></span>npx create<span style="color:#ff79c6">-</span>react<span style="color:#ff79c6">-</span>app etherscan<span style="color:#ff79c6">-</span>react
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#93a1a1;font-style:italic">// this command will install create-react-app
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#268bd2">npx</span> <span style="color:#268bd2">create</span>-<span style="color:#268bd2">react</span>-<span style="color:#268bd2">app</span> <span style="color:#268bd2">etherscan</span>-<span style="color:#268bd2">react</span>
 </code></pre></div><blockquote>
 <p>If you've previously installed <code>create-react-app</code> globally via <code>npm install -g create-react-app</code>, we recommend you uninstall the package using <code>npm uninstall -g create-react-app</code> to ensure that npx always uses the latest version.</p>
 </blockquote>
@@ -82,10 +82,10 @@
 <blockquote>
 <p>Semantic UI React is the official React integration for <a href="https://semantic-ui.com/"target="_blank">Semantic UI</a>.</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">npm install semantic<span style="color:#ff79c6">-</span>ui<span style="color:#ff79c6">-</span>react
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">npm</span> <span style="color:#268bd2">install</span> <span style="color:#268bd2">semantic</span>-<span style="color:#268bd2">ui</span>-<span style="color:#268bd2">react</span>
 </code></pre></div><h3 id="axios">axios:</h3>
 <p>To make http request we are using <code>axios</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">npm install axios
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">npm</span> <span style="color:#268bd2">install</span> <span style="color:#268bd2">axios</span>
 </code></pre></div><hr>
 <h2 id="etherscan-api">Etherscan API</h2>
 <p>We are going to use Etherscan API to get the ethereum blockchain data like the latest block details, transaction detail, ether price etc.</p>
@@ -97,13 +97,13 @@
 <h2 id="set-up-the-semantic-ui-react">Set up the semantic-ui-react</h2>
 <p>Open the <code>public/index.html</code> in the editor.</p>
 <p>Import the <code>semantic-ui</code> cdn in the <code>head</code> of the <code>index.html</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">link</span>
-      <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span>
-      <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>
-    /&gt;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>&lt;<span style="color:#268bd2;font-weight:bold">link</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>      <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;stylesheet&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>      <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>    /&gt;
 </code></pre></div><p>You can check the latest version of semantic-ui from this <a href="https://react.semantic-ui.com/usage"target="_blank">link</a>.</p>
 <p>Change the <code>title</code> of the application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">title</span>&gt; Ethereum Dashboard &lt;/<span style="color:#ff79c6">title</span>&gt;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>&lt;<span style="color:#268bd2;font-weight:bold">title</span>&gt; Ethereum Dashboard &lt;/<span style="color:#268bd2;font-weight:bold">title</span>&gt;
 </code></pre></div><hr>
 <h2 id="lets-start-the-fun-part-the-coding">Let's start the fun part, the coding</h2>
 <p>Open the project in your favourite code editor. I am using VS Code.</p>
@@ -137,22 +137,22 @@
 	- index.js
 </code></pre><h3 id="headerjsx">Header.jsx</h3>
 <p>Open the <code>Header.jsx</code> in the editor and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React from <span style="color:#f1fa8c">&#34;react&#34;</span>;
-<span style="color:#6272a4">// import Header component from the semantic-ui-react
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">import</span> { Header } from <span style="color:#f1fa8c">&#34;semantic-ui-react&#34;</span>;
-<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;./header.css&#34;</span>;
-
-<span style="color:#8be9fd;font-style:italic">function</span> AppDashboard() {
-  <span style="color:#ff79c6">return</span> (
-    <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
-      <span style="color:#ff79c6">&lt;</span>Header as<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;h2&#34;</span> block<span style="color:#ff79c6">&gt;</span>
-        Ethereum
-      <span style="color:#ff79c6">&lt;</span>/Header&gt;
-    <span style="color:#ff79c6">&lt;</span>/div&gt;
-  );
-}
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> AppDashboard;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">import</span> <span style="color:#268bd2">React</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#93a1a1;font-style:italic">// import Header component from the semantic-ui-react
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">import</span> { <span style="color:#268bd2">Header</span> } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;semantic-ui-react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#859900">import</span> <span style="color:#2aa198">&#34;./header.css&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#859900">function</span> <span style="color:#268bd2">AppDashboard</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>  <span style="color:#859900">return</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>    &lt;<span style="color:#268bd2">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>      &lt;<span style="color:#268bd2">Header</span> <span style="color:#268bd2">as</span>=<span style="color:#2aa198">&#34;h2&#34;</span> <span style="color:#268bd2">block</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>        <span style="color:#268bd2">Ethereum</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>      &lt;/Header&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>    &lt;/div&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>  );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">AppDashboard</span>;
 </code></pre></div><p>Here we are creating a function component by name <code>AppDashboard</code> and then we are exporting it at line 16.</p>
 <ul>
 <li>
@@ -165,37 +165,37 @@
 <p>To learn more about the <code>Header</code> component, <a href="https://react.semantic-ui.com/elements/header/"target="_blank">check out the official documentation</a>.</p>
 <h3 id="headercss">header.css</h3>
 <p>Open the <code>header.css</code> and paste the below css.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#50fa7b">ui</span>.<span style="color:#50fa7b">block</span>.<span style="color:#50fa7b">header</span> {
-  <span style="color:#ff79c6">text-align</span>: <span style="color:#ff79c6">left</span>;
-  <span style="color:#ff79c6">background</span>: <span style="color:#ff79c6">white</span>;
-  <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#1d6fa5</span>;
-  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">#1d6fa5</span>;
-  <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>.<span style="color:#cb4b16">ui</span>.<span style="color:#cb4b16">block</span>.<span style="color:#cb4b16">header</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  <span style="color:#859900">text-align</span>: <span style="color:#859900;font-weight:bold">left</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>  <span style="color:#859900">background</span>: <span style="color:#859900;font-weight:bold">white</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>  <span style="color:#859900">color</span>: <span style="color:#2aa198;font-weight:bold">#1d6fa5</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>  <span style="color:#859900">box-shadow</span>: <span style="color:#2aa198;font-weight:bold">1</span><span style="color:#859900;font-weight:bold">px</span> <span style="color:#2aa198;font-weight:bold">1</span><span style="color:#859900;font-weight:bold">px</span> <span style="color:#2aa198;font-weight:bold">#1d6fa5</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>  <span style="color:#859900">margin</span>: <span style="color:#2aa198;font-weight:bold">10</span><span style="color:#859900;font-weight:bold">px</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>}
 </code></pre></div><blockquote>
 <p>In the <code>header.css</code> we are directly overriding the <code>semantic-ui.css</code>. This is not recommended. This is just for demonstration that we can change it.</p>
 </blockquote>
 <h3 id="indexjs">index.js</h3>
 <p>Open the <code>index.js</code>. From the <code>index.js</code> we will export the <code>Header.jsx</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> AppHeader from <span style="color:#f1fa8c">&#34;./Header.jsx&#34;</span>;
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> AppHeader;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">import</span> <span style="color:#268bd2">AppHeader</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;./Header.jsx&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">AppHeader</span>;
 </code></pre></div><h3 id="appjs">app.js</h3>
 <p>Instead of updating the <code>app.js</code> at once, we'll update as it required.</p>
 <p>Now, Open the <code>app.js</code> in the editor and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React from <span style="color:#f1fa8c">&#34;react&#34;</span>;
-<span style="color:#6272a4">// import the Header component
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">import</span> Header from <span style="color:#f1fa8c">&#34;./components/Header/index&#34;</span>;
-
-<span style="color:#8be9fd;font-style:italic">function</span> App() {
-  <span style="color:#ff79c6">return</span> (
-    <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
-      <span style="color:#ff79c6">&lt;</span>Header<span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Header&gt;
-    <span style="color:#ff79c6">&lt;</span>/div&gt;
-  );
-}
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> App;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">import</span> <span style="color:#268bd2">React</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#93a1a1;font-style:italic">// import the Header component
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">import</span> <span style="color:#268bd2">Header</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;./components/Header/index&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#859900">function</span> <span style="color:#268bd2">App</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>  <span style="color:#859900">return</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>    &lt;<span style="color:#268bd2">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>      &lt;<span style="color:#268bd2">Header</span>&gt;&lt;/Header&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>    &lt;/div&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>  );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">App</span>;
 </code></pre></div><p>Open the terminal in the project's root directory and run <code>npm start</code>.</p>
 <p>Go to browser, you will see the Header.</p>
 <hr>
@@ -207,180 +207,180 @@
 	- index.js
 </code></pre><h3 id="eth-overviewjsx">Eth-Overview.jsx</h3>
 <p>Open the <code>Eth-Overview.jsx</code> in the editor and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React, { Component } from <span style="color:#f1fa8c">&#34;react&#34;</span>;
-<span style="color:#ff79c6">import</span> axios from <span style="color:#f1fa8c">&#34;axios&#34;</span>;
-<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;./eth-overview.css&#34;</span>;
-<span style="color:#ff79c6">import</span> { Card, Grid, Icon } from <span style="color:#f1fa8c">&#34;semantic-ui-react&#34;</span>;
-<span style="color:#ff79c6">import</span> LatestBlocks from <span style="color:#f1fa8c">&#34;../Latest-Blocks/index&#34;</span>;
-<span style="color:#ff79c6">import</span> LatestTxs from <span style="color:#f1fa8c">&#34;../Latest-Txs/index&#34;</span>;
-
-<span style="color:#6272a4">// import api key from the env variable
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> apiKey <span style="color:#ff79c6">=</span> process.env.REACT_APP_ETHERSCAN_API_KEY;
-
-<span style="color:#ff79c6">const</span> endpoint <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">https://api.etherscan.io/api</span><span style="color:#f1fa8c">`</span>;
-
-<span style="color:#ff79c6">class</span> EthOverview <span style="color:#ff79c6">extends</span> Component {
-  constructor() {
-    <span style="color:#ff79c6">super</span>();
-    <span style="color:#ff79c6">this</span>.state <span style="color:#ff79c6">=</span> {
-      ethUSD<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>,
-      ethBTC<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>,
-      blockNo<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>,
-      latestBlock<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
-      difficulty<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>,
-      marketCap<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>
-    };
-  }
-
-  async componentDidMount() {
-    <span style="color:#6272a4">// get the ethereum price
-</span><span style="color:#6272a4"></span>    axios
-      .get(endpoint <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">?module=stats&amp;action=ethprice&amp;apikey=</span><span style="color:#f1fa8c">${</span>apiKey<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>)
-      .then(res =&gt; {
-        <span style="color:#ff79c6">const</span> { result } <span style="color:#ff79c6">=</span> res.data;
-        <span style="color:#ff79c6">this</span>.setState(
-          {
-            ethUSD<span style="color:#ff79c6">:</span> result.ethusd,
-            ethBTC<span style="color:#ff79c6">:</span> result.ethbtc
-          },
-          () =&gt; {
-            <span style="color:#6272a4">// get the market cap of ether in USD
-</span><span style="color:#6272a4"></span>            axios
-              .get(endpoint <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">?module=stats&amp;action=ethsupply&amp;apikey=</span><span style="color:#f1fa8c">${</span>apiKey<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>)
-              .then(res =&gt; {
-                <span style="color:#ff79c6">const</span> { result } <span style="color:#ff79c6">=</span> res.data;
-                <span style="color:#6272a4">// in wei
-</span><span style="color:#6272a4"></span>                <span style="color:#ff79c6">const</span> priceWei <span style="color:#ff79c6">=</span> result.toString();
-
-                <span style="color:#6272a4">// in ether
-</span><span style="color:#6272a4"></span>                <span style="color:#ff79c6">const</span> priceEth <span style="color:#ff79c6">=</span> priceWei.slice(<span style="color:#bd93f9">0</span>, priceWei.length <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">18</span>);
-                console.log(result, priceWei, priceEth);
-                <span style="color:#6272a4">// convert eth in USD
-</span><span style="color:#6272a4"></span>                <span style="color:#ff79c6">this</span>.setState({
-                  marketCap<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">parseInt</span>(priceEth) <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">this</span>.state.ethUSD
-                });
-              });
-          }
-        );
-      });
-
-    <span style="color:#6272a4">// get the latest block number
-</span><span style="color:#6272a4"></span>    axios
-      .get(endpoint <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">?module=proxy&amp;action=eth_blockNumber&amp;apikey=</span><span style="color:#f1fa8c">${</span>apiKey<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>)
-      .then(res =&gt; {
-        <span style="color:#ff79c6">this</span>.setState({
-          latestBlock<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">parseInt</span>(res.data.result),
-          blockNo<span style="color:#ff79c6">:</span> res.data.result <span style="color:#6272a4">// save block no in hex
-</span><span style="color:#6272a4"></span>        });
-
-        <span style="color:#6272a4">// get the block difficulty
-</span><span style="color:#6272a4"></span>        axios
-          .get(
-            endpoint <span style="color:#ff79c6">+</span>
-              <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#f1fa8c">${</span>res.data.result<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&amp;boolean=true&amp;apikey=</span><span style="color:#f1fa8c">${</span>apiKey<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>
-          )
-          .then(blockDetail =&gt; {
-            <span style="color:#ff79c6">const</span> { result } <span style="color:#ff79c6">=</span> blockDetail.data;
-
-            <span style="color:#ff79c6">const</span> difficulty <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">parseInt</span>(result.difficulty).toString();
-
-            <span style="color:#6272a4">// convert difficulty in Terra Hash
-</span><span style="color:#6272a4"></span>            <span style="color:#6272a4">// instead of dividing it with 10^12 we&#39;ll slice it
-</span><span style="color:#6272a4"></span>            <span style="color:#ff79c6">const</span> difficultyTH <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">${</span>difficulty.slice(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">4</span>)<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.</span><span style="color:#f1fa8c">${</span>difficulty.slice(
-              <span style="color:#bd93f9">4</span>,
-              <span style="color:#bd93f9">6</span>
-            )<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> TH</span><span style="color:#f1fa8c">`</span>;
-
-            <span style="color:#ff79c6">this</span>.setState({
-              difficulty<span style="color:#ff79c6">:</span> difficultyTH
-            });
-          });
-      });
-  }
-
-  getLatestBlocks <span style="color:#ff79c6">=</span> () =&gt; {
-    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">this</span>.state.latestBlock) {
-      <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">&lt;</span>LatestBlocks latestBlock<span style="color:#ff79c6">=</span>{<span style="color:#ff79c6">this</span>.state.latestBlock}<span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/LatestBlocks&gt;;
-    }
-  };
-
-  getLatestTxs <span style="color:#ff79c6">=</span> () =&gt; {
-    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">this</span>.state.blockNo) {
-      <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">&lt;</span>LatestTxs blockNo<span style="color:#ff79c6">=</span>{<span style="color:#ff79c6">this</span>.state.blockNo}<span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/LatestTxs&gt;;
-    }
-  };
-
-  render() {
-    <span style="color:#ff79c6">const</span> { ethUSD, ethBTC, latestBlock, difficulty, marketCap } <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span>.state;
-    <span style="color:#ff79c6">return</span> (
-      <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
-        <span style="color:#ff79c6">&lt;</span>Grid<span style="color:#ff79c6">&gt;</span>
-          <span style="color:#ff79c6">&lt;</span>Grid.Row<span style="color:#ff79c6">&gt;</span>
-            <span style="color:#ff79c6">&lt;</span>Grid.Column width<span style="color:#ff79c6">=</span>{<span style="color:#bd93f9">4</span>}<span style="color:#ff79c6">&gt;</span>
-              <span style="color:#ff79c6">&lt;</span>Card<span style="color:#ff79c6">&gt;</span>
-                <span style="color:#ff79c6">&lt;</span>Card.Content<span style="color:#ff79c6">&gt;</span>
-                  <span style="color:#ff79c6">&lt;</span>Card.Header style<span style="color:#ff79c6">=</span>{{ color<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;#1d6fa5&#34;</span> }}<span style="color:#ff79c6">&gt;</span>
-                    <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;ethereum&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt; ETHER PRICE
-                  <span style="color:#ff79c6">&lt;</span>/Card.Header&gt;
-                  <span style="color:#ff79c6">&lt;</span>Card.Description textAlign<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;left&#34;</span><span style="color:#ff79c6">&gt;</span>
-                    <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;usd&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt;
-                    {ethUSD} <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;at&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt; {ethBTC}{&#34; &#34;}
-                    <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;bitcoin&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt;
-                  <span style="color:#ff79c6">&lt;</span>/Card.Description&gt;
-                <span style="color:#ff79c6">&lt;</span>/Card.Content&gt;
-              <span style="color:#ff79c6">&lt;</span>/Card&gt;
-            <span style="color:#ff79c6">&lt;</span>/Grid.Column&gt;
-            <span style="color:#ff79c6">&lt;</span>Grid.Column width<span style="color:#ff79c6">=</span>{<span style="color:#bd93f9">4</span>}<span style="color:#ff79c6">&gt;</span>
-              <span style="color:#ff79c6">&lt;</span>Card<span style="color:#ff79c6">&gt;</span>
-                <span style="color:#ff79c6">&lt;</span>Card.Content<span style="color:#ff79c6">&gt;</span>
-                  <span style="color:#ff79c6">&lt;</span>Card.Header style<span style="color:#ff79c6">=</span>{{ color<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;#1d6fa5&#34;</span> }}<span style="color:#ff79c6">&gt;</span>
-                    <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;list alternate outline&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt; LATEST BLOCK
-                  <span style="color:#ff79c6">&lt;</span>/Card.Header&gt;
-                  <span style="color:#ff79c6">&lt;</span>Card.Description textAlign<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;left&#34;</span><span style="color:#ff79c6">&gt;</span>
-                    <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;square&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt; {latestBlock}
-                  <span style="color:#ff79c6">&lt;</span>/Card.Description&gt;
-                <span style="color:#ff79c6">&lt;</span>/Card.Content&gt;
-              <span style="color:#ff79c6">&lt;</span>/Card&gt;
-            <span style="color:#ff79c6">&lt;</span>/Grid.Column&gt;
-            <span style="color:#ff79c6">&lt;</span>Grid.Column width<span style="color:#ff79c6">=</span>{<span style="color:#bd93f9">4</span>}<span style="color:#ff79c6">&gt;</span>
-              <span style="color:#ff79c6">&lt;</span>Card<span style="color:#ff79c6">&gt;</span>
-                <span style="color:#ff79c6">&lt;</span>Card.Content<span style="color:#ff79c6">&gt;</span>
-                  <span style="color:#ff79c6">&lt;</span>Card.Header style<span style="color:#ff79c6">=</span>{{ color<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;#1d6fa5&#34;</span> }}<span style="color:#ff79c6">&gt;</span>
-                    <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;setting&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt; DIFFICULTY
-                  <span style="color:#ff79c6">&lt;</span>/Card.Header&gt;
-                  <span style="color:#ff79c6">&lt;</span>Card.Description textAlign<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;left&#34;</span><span style="color:#ff79c6">&gt;</span>
-                    {difficulty}
-                  <span style="color:#ff79c6">&lt;</span>/Card.Description&gt;
-                <span style="color:#ff79c6">&lt;</span>/Card.Content&gt;
-              <span style="color:#ff79c6">&lt;</span>/Card&gt;
-            <span style="color:#ff79c6">&lt;</span>/Grid.Column&gt;
-            <span style="color:#ff79c6">&lt;</span>Grid.Column width<span style="color:#ff79c6">=</span>{<span style="color:#bd93f9">4</span>}<span style="color:#ff79c6">&gt;</span>
-              <span style="color:#ff79c6">&lt;</span>Card<span style="color:#ff79c6">&gt;</span>
-                <span style="color:#ff79c6">&lt;</span>Card.Content<span style="color:#ff79c6">&gt;</span>
-                  <span style="color:#ff79c6">&lt;</span>Card.Header style<span style="color:#ff79c6">=</span>{{ color<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;#1d6fa5&#34;</span> }}<span style="color:#ff79c6">&gt;</span>
-                    <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;world&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt; MARKET CAP
-                  <span style="color:#ff79c6">&lt;</span>/Card.Header&gt;
-                  <span style="color:#ff79c6">&lt;</span>Card.Description textAlign<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;left&#34;</span><span style="color:#ff79c6">&gt;</span>
-                    <span style="color:#ff79c6">&lt;</span>Icon name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;usd&#34;</span><span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/Icon&gt; {marketCap}
-                  <span style="color:#ff79c6">&lt;</span>/Card.Description&gt;
-                <span style="color:#ff79c6">&lt;</span>/Card.Content&gt;
-              <span style="color:#ff79c6">&lt;</span>/Card&gt;
-            <span style="color:#ff79c6">&lt;</span>/Grid.Column&gt;
-          <span style="color:#ff79c6">&lt;</span>/Grid.Row&gt;
-        <span style="color:#ff79c6">&lt;</span>/Grid&gt;
-
-        <span style="color:#ff79c6">&lt;</span>Grid divided<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;vertically&#34;</span><span style="color:#ff79c6">&gt;</span>
-          <span style="color:#ff79c6">&lt;</span>Grid.Row columns<span style="color:#ff79c6">=</span>{<span style="color:#bd93f9">2</span>}<span style="color:#ff79c6">&gt;</span>
-            <span style="color:#ff79c6">&lt;</span>Grid.Column<span style="color:#ff79c6">&gt;</span>{<span style="color:#ff79c6">this</span>.getLatestBlocks()}<span style="color:#ff79c6">&lt;</span>/Grid.Column&gt;
-            <span style="color:#ff79c6">&lt;</span>Grid.Column<span style="color:#ff79c6">&gt;</span>{<span style="color:#ff79c6">this</span>.getLatestTxs()}<span style="color:#ff79c6">&lt;</span>/Grid.Column&gt;
-          <span style="color:#ff79c6">&lt;</span>/Grid.Row&gt;
-        <span style="color:#ff79c6">&lt;</span>/Grid&gt;
-      <span style="color:#ff79c6">&lt;</span>/div&gt;
-    );
-  }
-}
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> EthOverview;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span style="color:#859900">import</span> <span style="color:#268bd2">React</span>, { <span style="color:#268bd2">Component</span> } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span><span style="color:#859900">import</span> <span style="color:#268bd2">axios</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;axios&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3</span><span style="color:#859900">import</span> <span style="color:#2aa198">&#34;./eth-overview.css&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4</span><span style="color:#859900">import</span> { <span style="color:#268bd2">Card</span>, <span style="color:#268bd2">Grid</span>, <span style="color:#268bd2">Icon</span> } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;semantic-ui-react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5</span><span style="color:#859900">import</span> <span style="color:#268bd2">LatestBlocks</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;../Latest-Blocks/index&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6</span><span style="color:#859900">import</span> <span style="color:#268bd2">LatestTxs</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;../Latest-Txs/index&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8</span><span style="color:#93a1a1;font-style:italic">// import api key from the env variable
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">const</span> <span style="color:#268bd2">apiKey</span> = <span style="color:#268bd2">process</span>.<span style="color:#268bd2">env</span>.<span style="color:#268bd2">REACT_APP_ETHERSCAN_API_KEY</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11</span><span style="color:#859900">const</span> <span style="color:#268bd2">endpoint</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">https://api.etherscan.io/api</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13</span><span style="color:#859900">class</span> <span style="color:#268bd2">EthOverview</span> <span style="color:#859900">extends</span> <span style="color:#268bd2">Component</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14</span>  <span style="color:#268bd2">constructor</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15</span>    <span style="color:#859900">super</span>();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16</span>    <span style="color:#859900">this</span>.<span style="color:#268bd2">state</span> = {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17</span>      <span style="color:#268bd2">ethUSD</span>: <span style="color:#2aa198">&#34;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18</span>      <span style="color:#268bd2">ethBTC</span>: <span style="color:#2aa198">&#34;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19</span>      <span style="color:#268bd2">blockNo</span>: <span style="color:#2aa198">&#34;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20</span>      <span style="color:#268bd2">latestBlock</span>: <span style="color:#2aa198;font-weight:bold">0</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21</span>      <span style="color:#268bd2">difficulty</span>: <span style="color:#2aa198">&#34;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22</span>      <span style="color:#268bd2">marketCap</span>: <span style="color:#2aa198;font-weight:bold">0</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23</span>    };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26</span>  <span style="color:#268bd2">async</span> <span style="color:#268bd2">componentDidMount</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27</span>    <span style="color:#93a1a1;font-style:italic">// get the ethereum price
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#268bd2">axios</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29</span>      .<span style="color:#268bd2">get</span>(<span style="color:#268bd2">endpoint</span> + <span style="color:#2aa198">`</span><span style="color:#2aa198">?module=stats&amp;action=ethprice&amp;apikey=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">apiKey</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30</span>      .<span style="color:#268bd2">then</span>(<span style="color:#268bd2">res</span> =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31</span>        <span style="color:#859900">const</span> { <span style="color:#268bd2">result</span> } = <span style="color:#268bd2">res</span>.<span style="color:#268bd2">data</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32</span>        <span style="color:#859900">this</span>.<span style="color:#268bd2">setState</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33</span>          {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34</span>            <span style="color:#268bd2">ethUSD</span>: <span style="color:#268bd2">result</span>.<span style="color:#268bd2">ethusd</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35</span>            <span style="color:#268bd2">ethBTC</span>: <span style="color:#268bd2">result</span>.<span style="color:#268bd2">ethbtc</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36</span>          },
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37</span>          () =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38</span>            <span style="color:#93a1a1;font-style:italic">// get the market cap of ether in USD
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39</span><span style="color:#93a1a1;font-style:italic"></span>            <span style="color:#268bd2">axios</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40</span>              .<span style="color:#268bd2">get</span>(<span style="color:#268bd2">endpoint</span> + <span style="color:#2aa198">`</span><span style="color:#2aa198">?module=stats&amp;action=ethsupply&amp;apikey=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">apiKey</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41</span>              .<span style="color:#268bd2">then</span>(<span style="color:#268bd2">res</span> =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42</span>                <span style="color:#859900">const</span> { <span style="color:#268bd2">result</span> } = <span style="color:#268bd2">res</span>.<span style="color:#268bd2">data</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43</span>                <span style="color:#93a1a1;font-style:italic">// in wei
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44</span><span style="color:#93a1a1;font-style:italic"></span>                <span style="color:#859900">const</span> <span style="color:#268bd2">priceWei</span> = <span style="color:#268bd2">result</span>.<span style="color:#268bd2">toString</span>();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46</span>                <span style="color:#93a1a1;font-style:italic">// in ether
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47</span><span style="color:#93a1a1;font-style:italic"></span>                <span style="color:#859900">const</span> <span style="color:#268bd2">priceEth</span> = <span style="color:#268bd2">priceWei</span>.<span style="color:#268bd2">slice</span>(<span style="color:#2aa198;font-weight:bold">0</span>, <span style="color:#268bd2">priceWei</span>.<span style="color:#268bd2">length</span> - <span style="color:#2aa198;font-weight:bold">18</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48</span>                <span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">result</span>, <span style="color:#268bd2">priceWei</span>, <span style="color:#268bd2">priceEth</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49</span>                <span style="color:#93a1a1;font-style:italic">// convert eth in USD
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50</span><span style="color:#93a1a1;font-style:italic"></span>                <span style="color:#859900">this</span>.<span style="color:#268bd2">setState</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51</span>                  <span style="color:#268bd2">marketCap</span>: <span style="color:#cb4b16">parseInt</span>(<span style="color:#268bd2">priceEth</span>) * <span style="color:#859900">this</span>.<span style="color:#268bd2">state</span>.<span style="color:#268bd2">ethUSD</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52</span>                });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53</span>              });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54</span>          }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55</span>        );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56</span>      });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58</span>    <span style="color:#93a1a1;font-style:italic">// get the latest block number
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#268bd2">axios</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60</span>      .<span style="color:#268bd2">get</span>(<span style="color:#268bd2">endpoint</span> + <span style="color:#2aa198">`</span><span style="color:#2aa198">?module=proxy&amp;action=eth_blockNumber&amp;apikey=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">apiKey</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61</span>      .<span style="color:#268bd2">then</span>(<span style="color:#268bd2">res</span> =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62</span>        <span style="color:#859900">this</span>.<span style="color:#268bd2">setState</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63</span>          <span style="color:#268bd2">latestBlock</span>: <span style="color:#cb4b16">parseInt</span>(<span style="color:#268bd2">res</span>.<span style="color:#268bd2">data</span>.<span style="color:#268bd2">result</span>),
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64</span>          <span style="color:#268bd2">blockNo</span>: <span style="color:#268bd2">res</span>.<span style="color:#268bd2">data</span>.<span style="color:#268bd2">result</span> <span style="color:#93a1a1;font-style:italic">// save block no in hex
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65</span><span style="color:#93a1a1;font-style:italic"></span>        });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67</span>        <span style="color:#93a1a1;font-style:italic">// get the block difficulty
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68</span><span style="color:#93a1a1;font-style:italic"></span>        <span style="color:#268bd2">axios</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69</span>          .<span style="color:#268bd2">get</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70</span>            <span style="color:#268bd2">endpoint</span> +
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71</span>              <span style="color:#2aa198">`</span><span style="color:#2aa198">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">res</span>.<span style="color:#268bd2">data</span>.<span style="color:#268bd2">result</span><span style="color:#2aa198">}</span><span style="color:#2aa198">&amp;boolean=true&amp;apikey=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">apiKey</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72</span>          )
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73</span>          .<span style="color:#268bd2">then</span>(<span style="color:#268bd2">blockDetail</span> =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74</span>            <span style="color:#859900">const</span> { <span style="color:#268bd2">result</span> } = <span style="color:#268bd2">blockDetail</span>.<span style="color:#268bd2">data</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76</span>            <span style="color:#859900">const</span> <span style="color:#268bd2">difficulty</span> = <span style="color:#cb4b16">parseInt</span>(<span style="color:#268bd2">result</span>.<span style="color:#268bd2">difficulty</span>).<span style="color:#268bd2">toString</span>();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78</span>            <span style="color:#93a1a1;font-style:italic">// convert difficulty in Terra Hash
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79</span><span style="color:#93a1a1;font-style:italic"></span>            <span style="color:#93a1a1;font-style:italic">// instead of dividing it with 10^12 we&#39;ll slice it
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80</span><span style="color:#93a1a1;font-style:italic"></span>            <span style="color:#859900">const</span> <span style="color:#268bd2">difficultyTH</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">${</span><span style="color:#268bd2">difficulty</span>.<span style="color:#268bd2">slice</span>(<span style="color:#2aa198;font-weight:bold">0</span>, <span style="color:#2aa198;font-weight:bold">4</span>)<span style="color:#2aa198">}</span><span style="color:#2aa198">.</span><span style="color:#2aa198">${</span><span style="color:#268bd2">difficulty</span>.<span style="color:#268bd2">slice</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81</span>              <span style="color:#2aa198;font-weight:bold">4</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82</span>              <span style="color:#2aa198;font-weight:bold">6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83</span>            )<span style="color:#2aa198">}</span><span style="color:#2aa198"> TH</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85</span>            <span style="color:#859900">this</span>.<span style="color:#268bd2">setState</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86</span>              <span style="color:#268bd2">difficulty</span>: <span style="color:#268bd2">difficultyTH</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87</span>            });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88</span>          });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89</span>      });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92</span>  <span style="color:#268bd2">getLatestBlocks</span> = () =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93</span>    <span style="color:#859900">if</span> (<span style="color:#859900">this</span>.<span style="color:#268bd2">state</span>.<span style="color:#268bd2">latestBlock</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94</span>      <span style="color:#859900">return</span> &lt;<span style="color:#268bd2">LatestBlocks</span> <span style="color:#268bd2">latestBlock</span>={<span style="color:#859900">this</span>.<span style="color:#268bd2">state</span>.<span style="color:#268bd2">latestBlock</span>}&gt;&lt;/LatestBlocks&gt;;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96</span>  };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98</span>  <span style="color:#268bd2">getLatestTxs</span> = () =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99</span>    <span style="color:#859900">if</span> (<span style="color:#859900">this</span>.<span style="color:#268bd2">state</span>.<span style="color:#268bd2">blockNo</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100</span>      <span style="color:#859900">return</span> &lt;<span style="color:#268bd2">LatestTxs</span> <span style="color:#268bd2">blockNo</span>={<span style="color:#859900">this</span>.<span style="color:#268bd2">state</span>.<span style="color:#268bd2">blockNo</span>}&gt;&lt;/LatestTxs&gt;;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102</span>  };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104</span>  <span style="color:#268bd2">render</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105</span>    <span style="color:#859900">const</span> { <span style="color:#268bd2">ethUSD</span>, <span style="color:#268bd2">ethBTC</span>, <span style="color:#268bd2">latestBlock</span>, <span style="color:#268bd2">difficulty</span>, <span style="color:#268bd2">marketCap</span> } = <span style="color:#859900">this</span>.<span style="color:#268bd2">state</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106</span>    <span style="color:#859900">return</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107</span>      &lt;<span style="color:#268bd2">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108</span>        &lt;<span style="color:#268bd2">Grid</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109</span>          &lt;<span style="color:#268bd2">Grid</span>.<span style="color:#268bd2">Row</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110</span>            &lt;<span style="color:#268bd2">Grid</span>.<span style="color:#268bd2">Column</span> <span style="color:#268bd2">width</span>={<span style="color:#2aa198;font-weight:bold">4</span>}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111</span>              &lt;<span style="color:#268bd2">Card</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112</span>                &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Content</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113</span>                  &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Header</span> <span style="color:#268bd2">style</span>={{ <span style="color:#268bd2">color</span>: <span style="color:#2aa198">&#34;#1d6fa5&#34;</span> }}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114</span>                    &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;ethereum&#34;</span>&gt;&lt;/Icon&gt; ETHER PRICE
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115</span>                  &lt;/Card.Header&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116</span>                  &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Description</span> <span style="color:#268bd2">textAlign</span>=<span style="color:#2aa198">&#34;left&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117</span>                    &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;usd&#34;</span>&gt;&lt;/Icon&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118</span>                    {<span style="color:#268bd2">ethUSD</span>} &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;at&#34;</span>&gt;&lt;/Icon&gt; {ethBTC}{&#34; &#34;}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119</span>                    &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;bitcoin&#34;</span>&gt;&lt;/Icon&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120</span>                  &lt;/Card.Description&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121</span>                &lt;/Card.Content&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122</span>              &lt;/Card&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123</span>            &lt;/Grid.Column&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124</span>            &lt;<span style="color:#268bd2">Grid</span>.<span style="color:#268bd2">Column</span> <span style="color:#268bd2">width</span>={<span style="color:#2aa198;font-weight:bold">4</span>}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125</span>              &lt;<span style="color:#268bd2">Card</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126</span>                &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Content</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127</span>                  &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Header</span> <span style="color:#268bd2">style</span>={{ <span style="color:#268bd2">color</span>: <span style="color:#2aa198">&#34;#1d6fa5&#34;</span> }}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128</span>                    &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;list alternate outline&#34;</span>&gt;&lt;/Icon&gt; LATEST BLOCK
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129</span>                  &lt;/Card.Header&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130</span>                  &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Description</span> <span style="color:#268bd2">textAlign</span>=<span style="color:#2aa198">&#34;left&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131</span>                    &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;square&#34;</span>&gt;&lt;/Icon&gt; {latestBlock}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132</span>                  &lt;/Card.Description&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133</span>                &lt;/Card.Content&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134</span>              &lt;/Card&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135</span>            &lt;/Grid.Column&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136</span>            &lt;<span style="color:#268bd2">Grid</span>.<span style="color:#268bd2">Column</span> <span style="color:#268bd2">width</span>={<span style="color:#2aa198;font-weight:bold">4</span>}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137</span>              &lt;<span style="color:#268bd2">Card</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138</span>                &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Content</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139</span>                  &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Header</span> <span style="color:#268bd2">style</span>={{ <span style="color:#268bd2">color</span>: <span style="color:#2aa198">&#34;#1d6fa5&#34;</span> }}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140</span>                    &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;setting&#34;</span>&gt;&lt;/Icon&gt; DIFFICULTY
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141</span>                  &lt;/Card.Header&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142</span>                  &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Description</span> <span style="color:#268bd2">textAlign</span>=<span style="color:#2aa198">&#34;left&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143</span>                    {<span style="color:#268bd2">difficulty</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144</span>                  &lt;/Card.Description&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145</span>                &lt;/Card.Content&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146</span>              &lt;/Card&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">147</span>            &lt;/Grid.Column&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">148</span>            &lt;<span style="color:#268bd2">Grid</span>.<span style="color:#268bd2">Column</span> <span style="color:#268bd2">width</span>={<span style="color:#2aa198;font-weight:bold">4</span>}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">149</span>              &lt;<span style="color:#268bd2">Card</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">150</span>                &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Content</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">151</span>                  &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Header</span> <span style="color:#268bd2">style</span>={{ <span style="color:#268bd2">color</span>: <span style="color:#2aa198">&#34;#1d6fa5&#34;</span> }}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">152</span>                    &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;world&#34;</span>&gt;&lt;/Icon&gt; MARKET CAP
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">153</span>                  &lt;/Card.Header&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">154</span>                  &lt;<span style="color:#268bd2">Card</span>.<span style="color:#268bd2">Description</span> <span style="color:#268bd2">textAlign</span>=<span style="color:#2aa198">&#34;left&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">155</span>                    &lt;<span style="color:#268bd2">Icon</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;usd&#34;</span>&gt;&lt;/Icon&gt; {marketCap}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">156</span>                  &lt;/Card.Description&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">157</span>                &lt;/Card.Content&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">158</span>              &lt;/Card&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">159</span>            &lt;/Grid.Column&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">160</span>          &lt;/Grid.Row&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">161</span>        &lt;/Grid&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">162</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">163</span>        &lt;<span style="color:#268bd2">Grid</span> <span style="color:#268bd2">divided</span>=<span style="color:#2aa198">&#34;vertically&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">164</span>          &lt;<span style="color:#268bd2">Grid</span>.<span style="color:#268bd2">Row</span> <span style="color:#268bd2">columns</span>={<span style="color:#2aa198;font-weight:bold">2</span>}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">165</span>            &lt;<span style="color:#268bd2">Grid</span>.<span style="color:#268bd2">Column</span>&gt;{<span style="color:#859900">this</span>.<span style="color:#268bd2">getLatestBlocks</span>()}&lt;/Grid.Column&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">166</span>            &lt;<span style="color:#268bd2">Grid</span>.<span style="color:#268bd2">Column</span>&gt;{<span style="color:#859900">this</span>.<span style="color:#268bd2">getLatestTxs</span>()}&lt;/Grid.Column&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">167</span>          &lt;/Grid.Row&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">168</span>        &lt;/Grid&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">169</span>      &lt;/div&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">170</span>    );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">171</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">172</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">173</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">174</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">EthOverview</span>;
 </code></pre></div><p>Don't panic, let me breakdown the code for you so that you can understand.</p>
 <ul>
 <li>
@@ -410,9 +410,9 @@
 </ul>
 <h3 id="indexjs-1">index.js</h3>
 <p>Open the <code>index.js</code>. From the <code>index.js</code> we will export the <code>Eth-Overview.jsx</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> AppHeader from <span style="color:#f1fa8c">&#34;./Header.jsx&#34;</span>;
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> AppHeader;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">import</span> <span style="color:#268bd2">AppHeader</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;./Header.jsx&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">AppHeader</span>;
 </code></pre></div><hr>
 <h2 id="latest-blocks">Latest-Blocks</h2>
 <p>The directory structure of the <code>Latest-Blocks</code></p>
@@ -421,89 +421,89 @@
 	- index.js
 </code></pre><h3 id="latest-blocksjsx">Latest-Blocks.jsx</h3>
 <p>Open the <code>Latest-Blocks.jsx</code> in the code editor and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React, { Component } from <span style="color:#f1fa8c">&#34;react&#34;</span>;
-<span style="color:#ff79c6">import</span> {
-  Table,
-  Label
-} from <span style="color:#f1fa8c">&#34;semantic-ui-react&#34;</span>;
-
-<span style="color:#ff79c6">import</span> axios from <span style="color:#f1fa8c">&#34;axios&#34;</span>;
-
-<span style="color:#ff79c6">const</span> apiKey <span style="color:#ff79c6">=</span> process.env.REACT_APP_ETHERSCAN_API_KEY;
-<span style="color:#ff79c6">const</span> endpoint <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">https://api.etherscan.io/api</span><span style="color:#f1fa8c">`</span>;
-
-<span style="color:#ff79c6">class</span> LatestBlocks <span style="color:#ff79c6">extends</span> Component {
-  constructor(props) {
-    <span style="color:#ff79c6">super</span>(props);
-    <span style="color:#ff79c6">this</span>.state <span style="color:#ff79c6">=</span> {
-      blocks<span style="color:#ff79c6">:</span> []
-    };
-  }
-
-  componentDidMount <span style="color:#ff79c6">=</span> () =&gt; {
-    <span style="color:#ff79c6">this</span>.getBlocks();
-  };
-
-  getBlocks <span style="color:#ff79c6">=</span> async () =&gt; {
-    <span style="color:#ff79c6">const</span> { latestBlock } <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span>.props;
-
-    <span style="color:#8be9fd;font-style:italic">let</span> blocks <span style="color:#ff79c6">=</span> [];
-
-    <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">5</span>; i <span style="color:#ff79c6">=</span> i <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>) {
-      <span style="color:#6272a4">// get the block transaction
-</span><span style="color:#6272a4"></span>      <span style="color:#ff79c6">const</span> blockDetail <span style="color:#ff79c6">=</span> await axios.get(
-        endpoint <span style="color:#ff79c6">+</span>
-          <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#f1fa8c">${</span>(
-            latestBlock <span style="color:#ff79c6">-</span> i
-          ).toString(<span style="color:#bd93f9">16</span>)<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&amp;boolean=true&amp;apikey=</span><span style="color:#f1fa8c">${</span>apiKey<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>
-      );
-
-      <span style="color:#ff79c6">const</span> { result } <span style="color:#ff79c6">=</span> blockDetail.data;
-      blocks.push(
-        <span style="color:#ff79c6">&lt;</span>Table.Row key<span style="color:#ff79c6">=</span>{i}<span style="color:#ff79c6">&gt;</span>
-          <span style="color:#ff79c6">&lt;</span>Table.Cell<span style="color:#ff79c6">&gt;</span>
-            <span style="color:#ff79c6">&lt;</span>Label color<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;blue&#34;</span><span style="color:#ff79c6">&gt;</span>Bk<span style="color:#ff79c6">&lt;</span>/Label&gt; {latestBlock - i}
-          <span style="color:#ff79c6">&lt;</span>/Table.Cell&gt;
-          <span style="color:#ff79c6">&lt;</span>Table.Cell<span style="color:#ff79c6">&gt;</span>
-            Miner {result.miner} <span style="color:#ff79c6">&lt;</span>br<span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/br&gt;
-            Txs {result.transactions.length}
-          <span style="color:#ff79c6">&lt;</span>/Table.Cell&gt;
-          <span style="color:#ff79c6">&lt;</span>Table.Cell<span style="color:#ff79c6">&gt;</span>
-            <span style="color:#ff79c6">&lt;</span>Label color<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;blue&#34;</span><span style="color:#ff79c6">&gt;</span>Size <span style="color:#ff79c6">&lt;</span>/Label&gt; {parseInt(result.size)} bytes
-          <span style="color:#ff79c6">&lt;</span>/Table.Cell&gt;
-        <span style="color:#ff79c6">&lt;</span>/Table.Row&gt;
-      );
-
-      <span style="color:#ff79c6">this</span>.setState({
-        blocks<span style="color:#ff79c6">:</span> blocks
-      });
-    }
-  };
-
-  render() {
-    <span style="color:#ff79c6">return</span> (
-      <span style="color:#ff79c6">&lt;</span>Table fixed<span style="color:#ff79c6">&gt;</span>
-        <span style="color:#ff79c6">&lt;</span>Table.Header<span style="color:#ff79c6">&gt;</span>
-          <span style="color:#ff79c6">&lt;</span>Table.Row<span style="color:#ff79c6">&gt;</span>
-            <span style="color:#ff79c6">&lt;</span>Table.Cell style<span style="color:#ff79c6">=</span>{{ color<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;#1d6fa5&#34;</span> }}<span style="color:#ff79c6">&gt;</span>
-              <span style="color:#ff79c6">&lt;</span>h4<span style="color:#ff79c6">&gt;</span>Latest Blocks<span style="color:#ff79c6">&lt;</span>/h4&gt;
-            <span style="color:#ff79c6">&lt;</span>/Table.Cell&gt;
-          <span style="color:#ff79c6">&lt;</span>/Table.Row&gt;
-        <span style="color:#ff79c6">&lt;</span>/Table.Header&gt;
-
-        <span style="color:#ff79c6">&lt;</span>Table.Body<span style="color:#ff79c6">&gt;</span>{<span style="color:#ff79c6">this</span>.state.blocks}<span style="color:#ff79c6">&lt;</span>/Table.Body&gt;
-      <span style="color:#ff79c6">&lt;</span>/Table&gt;
-    );
-  }
-}
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> LatestBlocks;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">import</span> <span style="color:#268bd2">React</span>, { <span style="color:#268bd2">Component</span> } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#859900">import</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>  <span style="color:#268bd2">Table</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  <span style="color:#268bd2">Label</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>} <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;semantic-ui-react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#859900">import</span> <span style="color:#268bd2">axios</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;axios&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span style="color:#859900">const</span> <span style="color:#268bd2">apiKey</span> = <span style="color:#268bd2">process</span>.<span style="color:#268bd2">env</span>.<span style="color:#268bd2">REACT_APP_ETHERSCAN_API_KEY</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#859900">const</span> <span style="color:#268bd2">endpoint</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">https://api.etherscan.io/api</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span style="color:#859900">class</span> <span style="color:#268bd2">LatestBlocks</span> <span style="color:#859900">extends</span> <span style="color:#268bd2">Component</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>  <span style="color:#268bd2">constructor</span>(<span style="color:#268bd2">props</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>    <span style="color:#859900">super</span>(<span style="color:#268bd2">props</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>    <span style="color:#859900">this</span>.<span style="color:#268bd2">state</span> = {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>      <span style="color:#268bd2">blocks</span>: []
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>    };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>  <span style="color:#268bd2">componentDidMount</span> = () =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>    <span style="color:#859900">this</span>.<span style="color:#268bd2">getBlocks</span>();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>  };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>  <span style="color:#268bd2">getBlocks</span> = <span style="color:#268bd2">async</span> () =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>    <span style="color:#859900">const</span> { <span style="color:#268bd2">latestBlock</span> } = <span style="color:#859900">this</span>.<span style="color:#268bd2">props</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>    <span style="color:#859900">let</span> <span style="color:#268bd2">blocks</span> = [];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>    <span style="color:#859900">for</span> (<span style="color:#859900">let</span> <span style="color:#268bd2">i</span> = <span style="color:#2aa198;font-weight:bold">0</span>; <span style="color:#268bd2">i</span> &lt; <span style="color:#2aa198;font-weight:bold">5</span>; <span style="color:#268bd2">i</span> = <span style="color:#268bd2">i</span> + <span style="color:#2aa198;font-weight:bold">1</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>      <span style="color:#93a1a1;font-style:italic">// get the block transaction
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#859900">const</span> <span style="color:#268bd2">blockDetail</span> = <span style="color:#268bd2">await</span> <span style="color:#268bd2">axios</span>.<span style="color:#268bd2">get</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span>        <span style="color:#268bd2">endpoint</span> +
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>          <span style="color:#2aa198">`</span><span style="color:#2aa198">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#2aa198">${</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>            <span style="color:#268bd2">latestBlock</span> - <span style="color:#268bd2">i</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>          ).<span style="color:#268bd2">toString</span>(<span style="color:#2aa198;font-weight:bold">16</span>)<span style="color:#2aa198">}</span><span style="color:#2aa198">&amp;boolean=true&amp;apikey=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">apiKey</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span>      );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span>      <span style="color:#859900">const</span> { <span style="color:#268bd2">result</span> } = <span style="color:#268bd2">blockDetail</span>.<span style="color:#268bd2">data</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span>      <span style="color:#268bd2">blocks</span>.<span style="color:#268bd2">push</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span>        &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Row</span> <span style="color:#268bd2">key</span>={<span style="color:#268bd2">i</span>}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Cell</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span>            &lt;<span style="color:#268bd2">Label</span> <span style="color:#268bd2">color</span>=<span style="color:#2aa198">&#34;blue&#34;</span>&gt;<span style="color:#268bd2">Bk</span>&lt;/Label&gt; {latestBlock - i}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span>          &lt;/Table.Cell&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Cell</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>            <span style="color:#268bd2">Miner</span> {<span style="color:#268bd2">result</span>.<span style="color:#268bd2">miner</span>} &lt;<span style="color:#268bd2">br</span>&gt;&lt;/br&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span>            <span style="color:#268bd2">Txs</span> {<span style="color:#268bd2">result</span>.<span style="color:#268bd2">transactions</span>.<span style="color:#268bd2">length</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span>          &lt;/Table.Cell&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Cell</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span>            &lt;<span style="color:#268bd2">Label</span> <span style="color:#268bd2">color</span>=<span style="color:#2aa198">&#34;blue&#34;</span>&gt;<span style="color:#268bd2">Size</span> &lt;/Label&gt; {parseInt(result.size)} bytes
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span>          &lt;/Table.Cell&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span>        &lt;/Table.Row&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span>      );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span>      <span style="color:#859900">this</span>.<span style="color:#268bd2">setState</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span>        <span style="color:#268bd2">blocks</span>: <span style="color:#268bd2">blocks</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span>      });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span>  };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span>  <span style="color:#268bd2">render</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span>    <span style="color:#859900">return</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span>      &lt;<span style="color:#268bd2">Table</span> <span style="color:#268bd2">fixed</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63</span>        &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Header</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Row</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65</span>            &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Cell</span> <span style="color:#268bd2">style</span>={{ <span style="color:#268bd2">color</span>: <span style="color:#2aa198">&#34;#1d6fa5&#34;</span> }}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66</span>              &lt;<span style="color:#268bd2">h4</span>&gt;<span style="color:#268bd2">Latest</span> <span style="color:#268bd2">Blocks</span>&lt;/h4&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67</span>            &lt;/Table.Cell&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68</span>          &lt;/Table.Row&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69</span>        &lt;/Table.Header&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span>        &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Body</span>&gt;{<span style="color:#859900">this</span>.<span style="color:#268bd2">state</span>.<span style="color:#268bd2">blocks</span>}&lt;/Table.Body&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72</span>      &lt;/Table&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73</span>    );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">LatestBlocks</span>;
 </code></pre></div><p>This component will fetch the latest 5 blocks from the etherscan and returns the table. You can increase the no. of blocks to fetch inline 29.</p>
 <h3 id="indexjs-2">index.js</h3>
 <p>Open the <code>index.js</code>. From the <code>index.js</code> we will export the <code>Latest-Blocks.jsx</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> latestBlocks from <span style="color:#f1fa8c">&#34;./Latest-Blocks.jsx&#34;</span>;
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> latestBlocks;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">import</span> <span style="color:#268bd2">latestBlocks</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;./Latest-Blocks.jsx&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">latestBlocks</span>;
 </code></pre></div><hr>
 <h2 id="latest-txs">Latest-Txs</h2>
 <p>The directory structure of the <code>Latest-Txs</code></p>
@@ -512,110 +512,110 @@
 	- index.js
 </code></pre><h3 id="latest-txsjsx">Latest-Txs.jsx</h3>
 <p>Open the <code>Latest-Txs.jsx</code> in the code editor and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React, { Component } from <span style="color:#f1fa8c">&#34;react&#34;</span>;
-<span style="color:#ff79c6">import</span> {
-  Table,
-  Label
-} from <span style="color:#f1fa8c">&#34;semantic-ui-react&#34;</span>;
-<span style="color:#ff79c6">import</span> axios from <span style="color:#f1fa8c">&#34;axios&#34;</span>;
-
-<span style="color:#ff79c6">const</span> apiKey <span style="color:#ff79c6">=</span> process.env.REACT_APP_ETHERSCAN_API_KEY;
-<span style="color:#ff79c6">const</span> endpoint <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">https://api.etherscan.io/api</span><span style="color:#f1fa8c">`</span>;
-
-<span style="color:#ff79c6">class</span> LatestTxs <span style="color:#ff79c6">extends</span> Component {
-  constructor(props) {
-    <span style="color:#ff79c6">super</span>(props);
-    <span style="color:#ff79c6">this</span>.state <span style="color:#ff79c6">=</span> {
-      transactions<span style="color:#ff79c6">:</span> []
-    };
-  }
-
-  componentDidMount <span style="color:#ff79c6">=</span> () =&gt; {
-    <span style="color:#ff79c6">this</span>.getTxs();
-  };
-
-  getTxs <span style="color:#ff79c6">=</span> async () =&gt; {
-    <span style="color:#ff79c6">const</span> { blockNo } <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span>.props;
-
-    <span style="color:#6272a4">// get the block transaction
-</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> blockDetail <span style="color:#ff79c6">=</span> await axios.get(
-      endpoint <span style="color:#ff79c6">+</span>
-        <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#f1fa8c">${</span>blockNo<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&amp;boolean=true&amp;apikey=</span><span style="color:#f1fa8c">${</span>apiKey<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>
-    );
-
-    <span style="color:#ff79c6">const</span> { transactions } <span style="color:#ff79c6">=</span> blockDetail.data.result;
-
-    <span style="color:#8be9fd;font-style:italic">let</span> txsDetails <span style="color:#ff79c6">=</span> [];
-
-    <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">5</span>; i <span style="color:#ff79c6">=</span> i <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>) {
-      <span style="color:#ff79c6">const</span> tx <span style="color:#ff79c6">=</span> transactions[i];
-      txsDetails.push(
-        <span style="color:#ff79c6">&lt;</span>Table.Row key<span style="color:#ff79c6">=</span>{i}<span style="color:#ff79c6">&gt;</span>
-          <span style="color:#ff79c6">&lt;</span>Table.Cell<span style="color:#ff79c6">&gt;</span>
-            <span style="color:#ff79c6">&lt;</span>Label color<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;blue&#34;</span><span style="color:#ff79c6">&gt;</span>Tx<span style="color:#ff79c6">&lt;</span>/Label&gt; {tx.hash}
-          <span style="color:#ff79c6">&lt;</span>/Table.Cell&gt;
-          <span style="color:#ff79c6">&lt;</span>Table.Cell<span style="color:#ff79c6">&gt;</span>
-            From {tx.from} <span style="color:#ff79c6">&lt;</span>br<span style="color:#ff79c6">&gt;</span><span style="color:#ff79c6">&lt;</span>/br&gt;
-            To {tx.to}
-          <span style="color:#ff79c6">&lt;</span>/Table.Cell&gt;
-          <span style="color:#ff79c6">&lt;</span>Table.Cell<span style="color:#ff79c6">&gt;</span>
-            {<span style="color:#f1fa8c">&#34; &#34;</span>}
-            <span style="color:#ff79c6">&lt;</span>Label color<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;blue&#34;</span><span style="color:#ff79c6">&gt;</span>Eth<span style="color:#ff79c6">&lt;</span><span style="color:#f1fa8c">/Label&gt; {parseInt(tx.value) /</span> <span style="color:#bd93f9">10</span> <span style="color:#ff79c6">*</span><span style="color:#ff79c6">*</span> <span style="color:#bd93f9">18</span>}
-          <span style="color:#ff79c6">&lt;</span>/Table.Cell&gt;
-        <span style="color:#ff79c6">&lt;</span>/Table.Row&gt;
-      );
-    }
-
-    <span style="color:#ff79c6">this</span>.setState({
-      transactions<span style="color:#ff79c6">:</span> txsDetails
-    });
-  };
-
-  render() {
-    <span style="color:#ff79c6">return</span> (
-      <span style="color:#ff79c6">&lt;</span>div<span style="color:#ff79c6">&gt;</span>
-        <span style="color:#ff79c6">&lt;</span>Table fixed<span style="color:#ff79c6">&gt;</span>
-          <span style="color:#ff79c6">&lt;</span>Table.Header<span style="color:#ff79c6">&gt;</span>
-            <span style="color:#ff79c6">&lt;</span>Table.Row<span style="color:#ff79c6">&gt;</span>
-              <span style="color:#ff79c6">&lt;</span>Table.Cell style<span style="color:#ff79c6">=</span>{{ color<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;#1d6fa5&#34;</span> }}<span style="color:#ff79c6">&gt;</span>
-                <span style="color:#ff79c6">&lt;</span>h4<span style="color:#ff79c6">&gt;</span> Latest Transactions<span style="color:#ff79c6">&lt;</span>/h4&gt;
-              <span style="color:#ff79c6">&lt;</span>/Table.Cell&gt;
-            <span style="color:#ff79c6">&lt;</span>/Table.Row&gt;
-          <span style="color:#ff79c6">&lt;</span>/Table.Header&gt;
-
-          <span style="color:#ff79c6">&lt;</span>Table.Body<span style="color:#ff79c6">&gt;</span>{<span style="color:#ff79c6">this</span>.state.transactions}<span style="color:#ff79c6">&lt;</span>/Table.Body&gt;
-        <span style="color:#ff79c6">&lt;</span>/Table&gt;
-      <span style="color:#ff79c6">&lt;</span>/div&gt;
-    );
-  }
-}
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> LatestTxs;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">import</span> <span style="color:#268bd2">React</span>, { <span style="color:#268bd2">Component</span> } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#859900">import</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>  <span style="color:#268bd2">Table</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  <span style="color:#268bd2">Label</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>} <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;semantic-ui-react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#859900">import</span> <span style="color:#268bd2">axios</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;axios&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">const</span> <span style="color:#268bd2">apiKey</span> = <span style="color:#268bd2">process</span>.<span style="color:#268bd2">env</span>.<span style="color:#268bd2">REACT_APP_ETHERSCAN_API_KEY</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span style="color:#859900">const</span> <span style="color:#268bd2">endpoint</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">https://api.etherscan.io/api</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span style="color:#859900">class</span> <span style="color:#268bd2">LatestTxs</span> <span style="color:#859900">extends</span> <span style="color:#268bd2">Component</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>  <span style="color:#268bd2">constructor</span>(<span style="color:#268bd2">props</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>    <span style="color:#859900">super</span>(<span style="color:#268bd2">props</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>    <span style="color:#859900">this</span>.<span style="color:#268bd2">state</span> = {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>      <span style="color:#268bd2">transactions</span>: []
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>    };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>  <span style="color:#268bd2">componentDidMount</span> = () =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>    <span style="color:#859900">this</span>.<span style="color:#268bd2">getTxs</span>();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>  };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>  <span style="color:#268bd2">getTxs</span> = <span style="color:#268bd2">async</span> () =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>    <span style="color:#859900">const</span> { <span style="color:#268bd2">blockNo</span> } = <span style="color:#859900">this</span>.<span style="color:#268bd2">props</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>    <span style="color:#93a1a1;font-style:italic">// get the block transaction
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">const</span> <span style="color:#268bd2">blockDetail</span> = <span style="color:#268bd2">await</span> <span style="color:#268bd2">axios</span>.<span style="color:#268bd2">get</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>      <span style="color:#268bd2">endpoint</span> +
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>        <span style="color:#2aa198">`</span><span style="color:#2aa198">?module=proxy&amp;action=eth_getBlockByNumber&amp;tag=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">blockNo</span><span style="color:#2aa198">}</span><span style="color:#2aa198">&amp;boolean=true&amp;apikey=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">apiKey</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>    );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span>    <span style="color:#859900">const</span> { <span style="color:#268bd2">transactions</span> } = <span style="color:#268bd2">blockDetail</span>.<span style="color:#268bd2">data</span>.<span style="color:#268bd2">result</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>    <span style="color:#859900">let</span> <span style="color:#268bd2">txsDetails</span> = [];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span>    <span style="color:#859900">for</span> (<span style="color:#859900">let</span> <span style="color:#268bd2">i</span> = <span style="color:#2aa198;font-weight:bold">0</span>; <span style="color:#268bd2">i</span> &lt; <span style="color:#2aa198;font-weight:bold">5</span>; <span style="color:#268bd2">i</span> = <span style="color:#268bd2">i</span> + <span style="color:#2aa198;font-weight:bold">1</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span>      <span style="color:#859900">const</span> <span style="color:#268bd2">tx</span> = <span style="color:#268bd2">transactions</span>[<span style="color:#268bd2">i</span>];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span>      <span style="color:#268bd2">txsDetails</span>.<span style="color:#268bd2">push</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span>        &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Row</span> <span style="color:#268bd2">key</span>={<span style="color:#268bd2">i</span>}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Cell</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span>            &lt;<span style="color:#268bd2">Label</span> <span style="color:#268bd2">color</span>=<span style="color:#2aa198">&#34;blue&#34;</span>&gt;<span style="color:#268bd2">Tx</span>&lt;/Label&gt; {tx.hash}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span>          &lt;/Table.Cell&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Cell</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span>            <span style="color:#268bd2">From</span> {<span style="color:#268bd2">tx</span>.<span style="color:#268bd2">from</span>} &lt;<span style="color:#268bd2">br</span>&gt;&lt;/br&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>            <span style="color:#268bd2">To</span> {<span style="color:#268bd2">tx</span>.<span style="color:#268bd2">to</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span>          &lt;/Table.Cell&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Cell</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span>            {<span style="color:#2aa198">&#34; &#34;</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span>            &lt;<span style="color:#268bd2">Label</span> <span style="color:#268bd2">color</span>=<span style="color:#2aa198">&#34;blue&#34;</span>&gt;<span style="color:#268bd2">Eth</span>&lt;<span style="color:#2aa198">/Label&gt; {parseInt(tx.value) /</span> <span style="color:#2aa198;font-weight:bold">10</span> ** <span style="color:#2aa198;font-weight:bold">18</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span>          &lt;/Table.Cell&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span>        &lt;/Table.Row&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span>      );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span>    <span style="color:#859900">this</span>.<span style="color:#268bd2">setState</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span>      <span style="color:#268bd2">transactions</span>: <span style="color:#268bd2">txsDetails</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span>    });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span>  };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span>  <span style="color:#268bd2">render</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span>    <span style="color:#859900">return</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span>      &lt;<span style="color:#268bd2">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63</span>        &lt;<span style="color:#268bd2">Table</span> <span style="color:#268bd2">fixed</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Header</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65</span>            &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Row</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66</span>              &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Cell</span> <span style="color:#268bd2">style</span>={{ <span style="color:#268bd2">color</span>: <span style="color:#2aa198">&#34;#1d6fa5&#34;</span> }}&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67</span>                &lt;<span style="color:#268bd2">h4</span>&gt; <span style="color:#268bd2">Latest</span> <span style="color:#268bd2">Transactions</span>&lt;/h4&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68</span>              &lt;/Table.Cell&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69</span>            &lt;/Table.Row&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70</span>          &lt;/Table.Header&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72</span>          &lt;<span style="color:#268bd2">Table</span>.<span style="color:#268bd2">Body</span>&gt;{<span style="color:#859900">this</span>.<span style="color:#268bd2">state</span>.<span style="color:#268bd2">transactions</span>}&lt;/Table.Body&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73</span>        &lt;/Table&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74</span>      &lt;/div&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75</span>    );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">LatestTxs</span>;
 </code></pre></div><p>This component will fetch the latest 5 transactions of the latest block from the etherscan and returns the table. You can increase the no. of transactions to fetch inline 36.</p>
 <h3 id="indexjs-3">index.js</h3>
 <p>Open the <code>index.js</code>. From the <code>index.js</code> we will export the <code>Latest-Blocks.jsx</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> latestBlocks from <span style="color:#f1fa8c">&#34;./Latest-Blocks.jsx&#34;</span>;
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> latestBlocks;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">import</span> <span style="color:#268bd2">latestBlocks</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;./Latest-Blocks.jsx&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">latestBlocks</span>;
 </code></pre></div><h2 id="appjs-1">app.js</h2>
 <p>Now, Open the <code>app.js</code> in the editor and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">import</span> React from <span style="color:#f1fa8c">&#34;react&#34;</span>;
-<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;./App.css&#34;</span>;
-<span style="color:#6272a4">// import the header component
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">import</span> Header from <span style="color:#f1fa8c">&#34;./components/Header/index&#34;</span>;
-<span style="color:#6272a4">// import the eth-overview component
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">import</span> EthOverview from <span style="color:#f1fa8c">&#34;./components/Eth-Overview/index&#34;</span>;
-
-<span style="color:#8be9fd;font-style:italic">function</span> App() {
-  <span style="color:#ff79c6">return</span> (
-    <span style="color:#ff79c6">&lt;</span>div className<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;App&#34;</span><span style="color:#ff79c6">&gt;</span>
-      <span style="color:#ff79c6">&lt;</span>Header <span style="color:#ff79c6">/</span><span style="color:#ff79c6">&gt;</span>
-      <span style="color:#ff79c6">&lt;</span>EthOverview <span style="color:#ff79c6">/</span><span style="color:#ff79c6">&gt;</span>
-    <span style="color:#ff79c6">&lt;</span>/div&gt;
-  );
-}
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> App;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">import</span> <span style="color:#268bd2">React</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;react&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#859900">import</span> <span style="color:#2aa198">&#34;./App.css&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#93a1a1;font-style:italic">// import the header component
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">import</span> <span style="color:#268bd2">Header</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;./components/Header/index&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#93a1a1;font-style:italic">// import the eth-overview component
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">import</span> <span style="color:#268bd2">EthOverview</span> <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;./components/Eth-Overview/index&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">function</span> <span style="color:#268bd2">App</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>  <span style="color:#859900">return</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>    &lt;<span style="color:#268bd2">div</span> <span style="color:#268bd2">className</span>=<span style="color:#2aa198">&#34;App&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>      &lt;<span style="color:#268bd2">Header</span> /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>      &lt;<span style="color:#268bd2">EthOverview</span> /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>    &lt;/div&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>  );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span style="color:#859900">export</span> <span style="color:#859900">default</span> <span style="color:#268bd2">App</span>;
 </code></pre></div><p>Open the terminal in the project's root directory and run <code>npm start</code>.</p>
 <p>Go to the browser and run <code>localhost:3000</code>.</p>
 <p><img  src="asset2.PNG"

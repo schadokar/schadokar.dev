@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Send Email in Nodejs&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Send Email in Nodejs&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to Send Email in Nodejs" /><meta name="twitter:image" content="https://schadokar.dev/images/node-basic.png" /><body><section id="header">
@@ -85,7 +85,7 @@ Open the terminal or cmd inside the directory.</p>
 <p>Initiate the nodejs project using the <code>npm init -y</code> command. <code>-y</code> flag is optional, by passing this flag it uses the default arguments.</p>
 <h3 id="install-nodejs-dependencies">Install Nodejs Dependencies</h3>
 <p>Install <code>nodemailer</code> package.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">npm install <span style="color:#ff79c6">--</span>save nodemailer
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">npm</span> <span style="color:#268bd2">install</span> --<span style="color:#268bd2">save</span> <span style="color:#268bd2">nodemailer</span>
 </code></pre></div><h3 id="create-a-new-smtp-key-in-sendinblue">Create a new SMTP Key in Sendinblue</h3>
 <p>This key will be used for authentication and sending the email via your sendinblue account.</p>
 <p>Sign in to your Sendinblue account and click on SMTP &amp; API from the top-right menu.</p>
@@ -96,63 +96,63 @@ Copy the key and paste it somewhere safe.</p>
 </blockquote>
 <h3 id="send-email">Send Email</h3>
 <p>Create a <code>index.js</code> file and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f1fa8c">&#34;use strict&#34;</span>;
-<span style="color:#ff79c6">const</span> nodemailer <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;nodemailer&#34;</span>);
-
-<span style="color:#6272a4">/**
-</span><span style="color:#6272a4"> * sendEmail
-</span><span style="color:#6272a4"> * @param {Object} mailObj - Email meta data and body
-</span><span style="color:#6272a4"> * @param {String} from - Email address of the sender
-</span><span style="color:#6272a4"> * @param {Array} recipients - Array of recipients email address
-</span><span style="color:#6272a4"> * @param {String} subject - Subject of the email
-</span><span style="color:#6272a4"> * @param {String} message - message
-</span><span style="color:#6272a4"> */</span>
-<span style="color:#ff79c6">const</span> sendEmail <span style="color:#ff79c6">=</span> async (mailObj) =&gt; {
-  <span style="color:#ff79c6">const</span> { from, recipients, subject, message } <span style="color:#ff79c6">=</span> mailObj;
-
-  <span style="color:#ff79c6">try</span> {
-    <span style="color:#6272a4">// Create a transporter
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> transporter <span style="color:#ff79c6">=</span> nodemailer.createTransport({
-      host<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;smtp-relay.sendinblue.com&#34;</span>,
-      port<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">587</span>,
-      auth<span style="color:#ff79c6">:</span> {
-        user<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;hello@schadokar.dev&#34;</span>,
-        pass<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;SMTP-KEY&#34;</span>,
-      },
-    });
-
-    <span style="color:#6272a4">// send mail with defined transport object
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> mailStatus <span style="color:#ff79c6">=</span> await transporter.sendMail({
-      from<span style="color:#ff79c6">:</span> from, <span style="color:#6272a4">// sender address
-</span><span style="color:#6272a4"></span>      to<span style="color:#ff79c6">:</span> recipients, <span style="color:#6272a4">// list of recipients
-</span><span style="color:#6272a4"></span>      subject<span style="color:#ff79c6">:</span> subject, <span style="color:#6272a4">// Subject line
-</span><span style="color:#6272a4"></span>      text<span style="color:#ff79c6">:</span> message, <span style="color:#6272a4">// plain text
-</span><span style="color:#6272a4"></span>    });
-
-    console.log(<span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">Message sent: </span><span style="color:#f1fa8c">${</span>mailStatus.messageId<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>);
-    <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">Message sent: </span><span style="color:#f1fa8c">${</span>mailStatus.messageId<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
-  } <span style="color:#ff79c6">catch</span> (error) {
-    console.error(error);
-    <span style="color:#ff79c6">throw</span> <span style="color:#ff79c6">new</span> <span style="color:#8be9fd;font-style:italic">Error</span>(
-      <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">Something went wrong in the sendmail method. Error: </span><span style="color:#f1fa8c">${</span>error.message<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>
-    );
-  }
-};
-
-<span style="color:#ff79c6">const</span> mailObj <span style="color:#ff79c6">=</span> {
-  from<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;hello@schadokar.dev&#34;</span>,
-  recipients<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#34;me@schadokar.dev&#34;</span>],
-  subject<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Sending email by nodejs&#34;</span>,
-  message<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Hello World;&#34;</span>,
-};
-
-sendEmail(mailObj).then((res) =&gt; {
-  console.log(res);
-});
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#2aa198">&#34;use strict&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#859900">const</span> <span style="color:#268bd2">nodemailer</span> = <span style="color:#268bd2">require</span>(<span style="color:#2aa198">&#34;nodemailer&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#93a1a1;font-style:italic">/**
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#93a1a1;font-style:italic"> * sendEmail
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#93a1a1;font-style:italic"> * @param {Object} mailObj - Email meta data and body
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#93a1a1;font-style:italic"> * @param {String} from - Email address of the sender
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#93a1a1;font-style:italic"> * @param {Array} recipients - Array of recipients email address
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span style="color:#93a1a1;font-style:italic"> * @param {String} subject - Subject of the email
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#93a1a1;font-style:italic"> * @param {String} message - message
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span style="color:#93a1a1;font-style:italic"> */</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span style="color:#859900">const</span> <span style="color:#268bd2">sendEmail</span> = <span style="color:#268bd2">async</span> (<span style="color:#268bd2">mailObj</span>) =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>  <span style="color:#859900">const</span> { <span style="color:#268bd2">from</span>, <span style="color:#268bd2">recipients</span>, <span style="color:#268bd2">subject</span>, <span style="color:#268bd2">message</span> } = <span style="color:#268bd2">mailObj</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>  <span style="color:#859900">try</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>    <span style="color:#93a1a1;font-style:italic">// Create a transporter
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">let</span> <span style="color:#268bd2">transporter</span> = <span style="color:#268bd2">nodemailer</span>.<span style="color:#268bd2">createTransport</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>      <span style="color:#268bd2">host</span>: <span style="color:#2aa198">&#34;smtp-relay.sendinblue.com&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>      <span style="color:#268bd2">port</span>: <span style="color:#2aa198;font-weight:bold">587</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>      <span style="color:#268bd2">auth</span>: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>        <span style="color:#268bd2">user</span>: <span style="color:#2aa198">&#34;hello@schadokar.dev&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>        <span style="color:#268bd2">pass</span>: <span style="color:#2aa198">&#34;SMTP-KEY&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>      },
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>    });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>    <span style="color:#93a1a1;font-style:italic">// send mail with defined transport object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">let</span> <span style="color:#268bd2">mailStatus</span> = <span style="color:#268bd2">await</span> <span style="color:#268bd2">transporter</span>.<span style="color:#268bd2">sendMail</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>      <span style="color:#268bd2">from</span>: <span style="color:#268bd2">from</span>, <span style="color:#93a1a1;font-style:italic">// sender address
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">to</span>: <span style="color:#268bd2">recipients</span>, <span style="color:#93a1a1;font-style:italic">// list of recipients
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">subject</span>: <span style="color:#268bd2">subject</span>, <span style="color:#93a1a1;font-style:italic">// Subject line
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">text</span>: <span style="color:#268bd2">message</span>, <span style="color:#93a1a1;font-style:italic">// plain text
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span style="color:#93a1a1;font-style:italic"></span>    });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>    <span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#2aa198">`</span><span style="color:#2aa198">Message sent: </span><span style="color:#2aa198">${</span><span style="color:#268bd2">mailStatus</span>.<span style="color:#268bd2">messageId</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>    <span style="color:#859900">return</span> <span style="color:#2aa198">`</span><span style="color:#2aa198">Message sent: </span><span style="color:#2aa198">${</span><span style="color:#268bd2">mailStatus</span>.<span style="color:#268bd2">messageId</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span>  } <span style="color:#859900">catch</span> (<span style="color:#268bd2">error</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span>    <span style="color:#268bd2">console</span>.<span style="color:#268bd2">error</span>(<span style="color:#268bd2">error</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span>    <span style="color:#859900">throw</span> <span style="color:#859900">new</span> <span style="color:#cb4b16">Error</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span>      <span style="color:#2aa198">`</span><span style="color:#2aa198">Something went wrong in the sendmail method. Error: </span><span style="color:#2aa198">${</span><span style="color:#268bd2">error</span>.<span style="color:#268bd2">message</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span>    );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span>};
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span style="color:#859900">const</span> <span style="color:#268bd2">mailObj</span> = {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>  <span style="color:#268bd2">from</span>: <span style="color:#2aa198">&#34;hello@schadokar.dev&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span>  <span style="color:#268bd2">recipients</span>: [<span style="color:#2aa198">&#34;me@schadokar.dev&#34;</span>],
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span>  <span style="color:#268bd2">subject</span>: <span style="color:#2aa198">&#34;Sending email by nodejs&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span>  <span style="color:#268bd2">message</span>: <span style="color:#2aa198">&#34;Hello World;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span>};
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span style="color:#268bd2">sendEmail</span>(<span style="color:#268bd2">mailObj</span>).<span style="color:#268bd2">then</span>((<span style="color:#268bd2">res</span>) =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span>  <span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">res</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span>});
 </code></pre></div><p>In the <code>auth</code> object, <code>user</code> will be your email address of sendinblue account and <code>pass</code> will be your SMTP KEY.</p>
 <p>In the <code>mailObj</code>, <code>from</code> will be your email address of sendinblue account, <code>recipients</code> is an array of email addresses, <code>subject</code> is subject of email and <code>message</code> is plain text message.</p>
 <p>Open the terminal and run the file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">node index.js
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">node</span> <span style="color:#268bd2">index</span>.<span style="color:#268bd2">js</span>
 </code></pre></div><p>On successful run, output will be</p>
 <pre><code>Message sent: &lt;72ff9668-8200-831b-e585-afbeaeeea09d@schadokar.dev&gt;
 Message sent: &lt;72ff9668-8200-831b-e585-afbeaeeea09d@schadokar.dev&gt;

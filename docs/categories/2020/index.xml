@@ -36,7 +36,7 @@ Unlike many languages where formatting style is opinionated, in Golang it is def
 Formatting Golang CLI command fmt is used to format the file or files.
 Format 1 file Open the terminal in the golang project.
 Run the below command.
-go fmt main.go Format all the files in the folder Use .</description>
+1go fmt main.go Format all the files in the folder Use .</description>
       
     </item>
     
@@ -62,10 +62,10 @@ Data type and their Default Value
       <guid>/to-the-point/golang-string-replace/</guid>
       <description>Golang package strings provides Replace and ReplaceAll functions to replace the substring in the string.
 Replace Syntax
-func Replace(s, old, new string, n int) string n is the number of first occurrence of the substring.
+1func Replace(s, old, new string, n int) string n is the number of first occurrence of the substring.
 Replace n first occurrence of the substring.
 If n &amp;lt; 0, then it will replace all the occurrence.
-package main import ( &amp;#34;fmt&amp;#34; &amp;#34;strings&amp;#34; ) func main() { str := &amp;#34;Th0is is an en0c0oded 0000 message&amp;#34; newStr := strings.</description>
+1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;strings&amp;#34; 6) 7 8func main() { 9 str := &amp;#34;Th0is is an en0c0oded 0000 message&amp;#34; 10 11	newStr := strings.</description>
       
     </item>
     
@@ -78,7 +78,7 @@ package main import ( &amp;#34;fmt&amp;#34; &amp;#34;strings&amp;#34; ) func mai
       <description>Unicode is a computing standard for the consistent encoding symbols.
 All the characters and symbols assigned a code.
 For ex.
-A U+0041 अ U+0905 All the Unicode is divided into various categories. Browse all the categories.
+1A U+0041 2अ U+0905 All the Unicode is divided into various categories. Browse all the categories.
  Ll Lowercase Letters (a, b, µ, ɸ) Nl Letter Number (Ⅰ, ᛯ) Lo Other Letter (अ, ƻ)  Golang package unicode provides a wide range of validation methods on different set of Unicode.</description>
       
     </item>
@@ -116,7 +116,7 @@ I will keep updating this article with new validation and best approaches.
       <description>In nodejs, there are many options to remove an element from an array, one of them is using the filter.
 filter method on array returns a new array based on the filtering condition.
 For ex. return the even values in the array
-const arr1 = [1, 2, 3, 4, 5, 6]; const arr2 = arr1.filter((n) =&amp;gt; n % 2 === 0); console.log(arr2); Output
+1const arr1 = [1, 2, 3, 4, 5, 6]; 2 3const arr2 = arr1.filter((n) =&amp;gt; n % 2 === 0); 4 5console.log(arr2); Output
 [2, 4, 6] Remove an element from the array Remove 5 from the array.</description>
       
     </item>
@@ -205,7 +205,7 @@ Sending emails in nodejs have only 2 requirements:
       <guid>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
       <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa. For this, we&#39;re going to use the encoding/hex package provided by the golang. Package hex implements hexadecimal encoding and decoding.
 byte array to hex string To convert a byte array to hex string, we will encode the byte array to the hexadecimal string.
-Syntax func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
+Syntax 1func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
       
     </item>
     

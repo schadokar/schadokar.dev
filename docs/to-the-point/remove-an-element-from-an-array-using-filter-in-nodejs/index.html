@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Remove an Element From an Array Using Filter in Nodejs&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Remove an Element From an Array Using Filter in Nodejs&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Remove an Element From an Array Using Filter in Nodejs" /><meta name="twitter:image" content="https://schadokar.dev/images/node-basic.png" /><body><section id="header">
@@ -48,24 +48,24 @@
         <p>In nodejs, there are many options to remove an element from an array, one of them is using the filter.</p>
 <p>filter method on array returns a new array based on the filtering condition.</p>
 <p>For ex. return the even values in the array</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> arr1 <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>];
-
-<span style="color:#ff79c6">const</span> arr2 <span style="color:#ff79c6">=</span> arr1.filter((n) =&gt; n <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">===</span> <span style="color:#bd93f9">0</span>);
-
-console.log(arr2);
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">const</span> <span style="color:#268bd2">arr1</span> = [<span style="color:#2aa198;font-weight:bold">1</span>, <span style="color:#2aa198;font-weight:bold">2</span>, <span style="color:#2aa198;font-weight:bold">3</span>, <span style="color:#2aa198;font-weight:bold">4</span>, <span style="color:#2aa198;font-weight:bold">5</span>, <span style="color:#2aa198;font-weight:bold">6</span>];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#859900">const</span> <span style="color:#268bd2">arr2</span> = <span style="color:#268bd2">arr1</span>.<span style="color:#268bd2">filter</span>((<span style="color:#268bd2">n</span>) =&gt; <span style="color:#268bd2">n</span> % <span style="color:#2aa198;font-weight:bold">2</span> === <span style="color:#2aa198;font-weight:bold">0</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">arr2</span>);
 </code></pre></div><p><strong>Output</strong></p>
 <pre><code>[2, 4, 6]
 </code></pre><h2 id="remove-an-element-from-the-array">Remove an element from the array</h2>
 <p>Remove 5 from the array.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> arr1 <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>];
-
-<span style="color:#ff79c6">const</span> arr2 <span style="color:#ff79c6">=</span> arr1.filter((n) =&gt; n <span style="color:#ff79c6">!=</span> <span style="color:#bd93f9">5</span>);
-
-console.log(arr1);
-console.log(arr2);
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">const</span> <span style="color:#268bd2">arr1</span> = [<span style="color:#2aa198;font-weight:bold">1</span>, <span style="color:#2aa198;font-weight:bold">2</span>, <span style="color:#2aa198;font-weight:bold">3</span>, <span style="color:#2aa198;font-weight:bold">4</span>, <span style="color:#2aa198;font-weight:bold">5</span>, <span style="color:#2aa198;font-weight:bold">6</span>];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#859900">const</span> <span style="color:#268bd2">arr2</span> = <span style="color:#268bd2">arr1</span>.<span style="color:#268bd2">filter</span>((<span style="color:#268bd2">n</span>) =&gt; <span style="color:#268bd2">n</span> != <span style="color:#2aa198;font-weight:bold">5</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">arr1</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">arr2</span>);
 </code></pre></div><p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">arr1<span style="color:#ff79c6">:</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>];
-arr2<span style="color:#ff79c6">:</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">6</span>];
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">arr1</span>: [<span style="color:#2aa198;font-weight:bold">1</span>, <span style="color:#2aa198;font-weight:bold">2</span>, <span style="color:#2aa198;font-weight:bold">3</span>, <span style="color:#2aa198;font-weight:bold">4</span>, <span style="color:#2aa198;font-weight:bold">5</span>, <span style="color:#2aa198;font-weight:bold">6</span>];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">arr2</span>: [<span style="color:#2aa198;font-weight:bold">1</span>, <span style="color:#2aa198;font-weight:bold">2</span>, <span style="color:#2aa198;font-weight:bold">3</span>, <span style="color:#2aa198;font-weight:bold">4</span>, <span style="color:#2aa198;font-weight:bold">6</span>];
 </code></pre></div><p>There are many other ways available in the nodejs to remove an element from the array, this method makes the code look clean and still get the job done.</p>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/2020/>2020</a><a class="category" href=/categories/nodejs/>Nodejs</a><a class="tag" href=/tags/array/>array</a></section></div>

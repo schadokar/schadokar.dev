@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Remove Consecutive Characters From a String&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Remove Consecutive Characters From a String&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to Remove Consecutive Characters From a String" /><meta name="twitter:image" content="https://schadokar.dev/images/basic.png" /><body><section id="header">
@@ -48,39 +48,39 @@
         <h2 id="problem-statement">Problem Statement</h2>
 <p>Remove n consecutive characters from a string and return the final string.</p>
 <p>For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Input <span style="color:#8be9fd;font-style:italic">String</span><span style="color:#ff79c6">:</span> abccdeeef
-
-Output <span style="color:#8be9fd;font-style:italic">String</span><span style="color:#ff79c6">:</span> abdf
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Input</span> <span style="color:#cb4b16">String</span>: <span style="color:#268bd2">abccdeeef</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#268bd2">Output</span> <span style="color:#cb4b16">String</span>: <span style="color:#268bd2">abdf</span>
 </code></pre></div><h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> str <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;abccdeeef&#34;</span>;
-<span style="color:#6272a4">//-----------012345678
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">let</span> finalStr <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>;
-
-<span style="color:#8be9fd;font-style:italic">let</span> isConsecutive <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-
-<span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> str.length <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>; i<span style="color:#ff79c6">++</span>) {
-  <span style="color:#6272a4">// check if characters are consecutive
-</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">if</span> (str[i] <span style="color:#ff79c6">===</span> str[i <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>]) {
-    isConsecutive <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
-  } <span style="color:#ff79c6">else</span> {
-    <span style="color:#6272a4">// check if the last character was consecutive
-</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>isConsecutive) {
-      <span style="color:#6272a4">// add the character to new string
-</span><span style="color:#6272a4"></span>      finalStr <span style="color:#ff79c6">+=</span> str[i];
-    }
-    <span style="color:#6272a4">// reset the flag
-</span><span style="color:#6272a4"></span>    isConsecutive <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-  }
-}
-
-<span style="color:#6272a4">// check for last character
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>isConsecutive) {
-  finalStr <span style="color:#ff79c6">+=</span> str[str.length <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>];
-}
-
-console.log(finalStr);
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">const</span> <span style="color:#268bd2">str</span> = <span style="color:#2aa198">&#34;abccdeeef&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#93a1a1;font-style:italic">//-----------012345678
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">let</span> <span style="color:#268bd2">finalStr</span> = <span style="color:#2aa198">&#34;&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#859900">let</span> <span style="color:#268bd2">isConsecutive</span> = <span style="color:#859900;font-weight:bold">false</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#859900">for</span> (<span style="color:#859900">let</span> <span style="color:#268bd2">i</span> = <span style="color:#2aa198;font-weight:bold">0</span>; <span style="color:#268bd2">i</span> &lt; <span style="color:#268bd2">str</span>.<span style="color:#268bd2">length</span> - <span style="color:#2aa198;font-weight:bold">1</span>; <span style="color:#268bd2">i</span>++) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>  <span style="color:#93a1a1;font-style:italic">// check if characters are consecutive
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span style="color:#93a1a1;font-style:italic"></span>  <span style="color:#859900">if</span> (<span style="color:#268bd2">str</span>[<span style="color:#268bd2">i</span>] === <span style="color:#268bd2">str</span>[<span style="color:#268bd2">i</span> + <span style="color:#2aa198;font-weight:bold">1</span>]) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>    <span style="color:#268bd2">isConsecutive</span> = <span style="color:#859900;font-weight:bold">true</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>  } <span style="color:#859900">else</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>    <span style="color:#93a1a1;font-style:italic">// check if the last character was consecutive
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">if</span> (!<span style="color:#268bd2">isConsecutive</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>      <span style="color:#93a1a1;font-style:italic">// add the character to new string
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">finalStr</span> += <span style="color:#268bd2">str</span>[<span style="color:#268bd2">i</span>];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>    <span style="color:#93a1a1;font-style:italic">// reset the flag
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#268bd2">isConsecutive</span> = <span style="color:#859900;font-weight:bold">false</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span style="color:#93a1a1;font-style:italic">// check for last character
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">if</span> (!<span style="color:#268bd2">isConsecutive</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>  <span style="color:#268bd2">finalStr</span> += <span style="color:#268bd2">str</span>[<span style="color:#268bd2">str</span>.<span style="color:#268bd2">length</span> - <span style="color:#2aa198;font-weight:bold">1</span>];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">finalStr</span>);
 </code></pre></div><p>Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">abdf;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">abdf</span>;
 </code></pre></div><h2 id="final-words">Final words</h2>
 <p>This is one of very common interview question can be asked in the interview. The solution is easy but in interviews due to time frame, interviewee can get confused.
 Always go for easy solution and then work on complexity.</p>

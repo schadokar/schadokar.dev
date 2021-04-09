@@ -20,7 +20,7 @@
       <guid>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</guid>
       <description>Problem Statement Remove n consecutive characters from a string and return the final string.
 For example:
-Input String: abccdeeef Output String: abdf Solution const str = &amp;#34;abccdeeef&amp;#34;; //-----------012345678 let finalStr = &amp;#34;&amp;#34;; let isConsecutive = false; for (let i = 0; i &amp;lt; str.length - 1; i++) { // check if characters are consecutive  if (str[i] === str[i + 1]) { isConsecutive = true; } else { // check if the last character was consecutive  if (!</description>
+1Input String: abccdeeef 2 3Output String: abdf Solution 1const str = &amp;#34;abccdeeef&amp;#34;; 2//-----------012345678 3let finalStr = &amp;#34;&amp;#34;; 4 5let isConsecutive = false; 6 7for (let i = 0; i &amp;lt; str.length - 1; i++) { 8 // check if characters are consecutive 9 if (str[i] === str[i + 1]) { 10 isConsecutive = true; 11 } else { 12 // check if the last character was consecutive 13 if (!</description>
       
     </item>
     

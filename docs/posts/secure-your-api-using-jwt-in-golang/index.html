@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Secure Your Api Using Jwt in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Secure Your Api Using Jwt in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Secure Your Api Using Jwt in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
@@ -40,7 +40,7 @@
 </section>
 
     <section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Secure Your Api Using Jwt in Golang</h1><p class="article date">Thursday, July 30, 2020<span class="reading-time"> • 12 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/jwt/>jwt</a></section>
+    <h1 class="article title">Secure Your Api Using Jwt in Golang</h1><p class="article date">Thursday, July 30, 2020<span class="reading-time"> • 13 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/jwt/>jwt</a></section>
 </section>
 <article class="article markdown-body">
         
@@ -71,18 +71,18 @@ For Ex:
 <strong><em>Header.Payload.Signature</em></strong></p>
 <p>Let's understand it with an example.
 Suppose the Header is <code>algorithm1</code> and <code>algorithm1</code> is the below equation.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Signature = Payload <span style="color:#ff79c6">*</span> SecretKey
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Signature</span> = <span style="color:#268bd2">Payload</span> * <span style="color:#268bd2">SecretKey</span>
 </code></pre></div><p>Then, the <strong>Payload</strong> is <code>11</code> and the <strong>SecretKey</strong> is <code>5</code>.</p>
 <p>When the <strong>Payload</strong> and <strong>SecretKey</strong> is passed to the <code>algorithm1</code> it will generate a unique <strong>Signature</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Signature = Payload <span style="color:#ff79c6">*</span> SecretKey = <span style="color:#bd93f9">11</span> <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">5</span> = <span style="color:#bd93f9">55</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Signature</span> = <span style="color:#268bd2">Payload</span> * <span style="color:#268bd2">SecretKey</span> = <span style="color:#2aa198;font-weight:bold">11</span> * <span style="color:#2aa198;font-weight:bold">5</span> = <span style="color:#2aa198;font-weight:bold">55</span>
 </code></pre></div><p>The <strong>Signature</strong> is <code>55</code>.</p>
 <p>Then the JWT token will look like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">algorithm1<span style="color:#bd93f9">.11</span><span style="color:#bd93f9">.55</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">algorithm1</span><span style="color:#2aa198;font-weight:bold">.11</span><span style="color:#2aa198;font-weight:bold">.55</span>
 </code></pre></div><p>This JWT token will be shared with the requested party. After this whenever this party raise a request to this party, it will also share this token to authenticate itself.<br>
 When the first party receives the request with the token, it will first validate the token before processing the request.</p>
 <p>As all the details are available in the token it is very easy task for the party to validate the token. It will take the <strong>Payload</strong> and passed it to the <strong>Header</strong> (algorithm1) using the <strong>SecretKey</strong> which it already have to generate the <strong>Signature</strong>. Then it will compare the token Signature with the generated Signature, if it matched <em>Voila</em> go ahead with the request else decline the request. 🔎</p>
 <p>The actual JWT Token looks like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSSBhbSBJcm9uIE1hbi4ifQ.li<span style="color:#ff79c6">-</span>FDEyAdayupFIS5P2EKexN<span style="color:#ff79c6">-</span>Rm_SWe4LXO9Xjyja4o
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span style="color:#268bd2">eyJuYW1lIjoiSSBhbSBJcm9uIE1hbi4ifQ</span>.<span style="color:#268bd2">li</span>-<span style="color:#268bd2">FDEyAdayupFIS5P2EKexN</span>-<span style="color:#268bd2">Rm_SWe4LXO9Xjyja4o</span>
 </code></pre></div><p>Take a quick look and you can see the token is divided in 3 parts:</p>
 <ul>
 <li><strong>Header</strong>: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</li>
@@ -90,27 +90,27 @@ When the first party receives the request with the token, it will first validate
 <li><strong>Signature</strong>: li-FDEyAdayupFIS5P2EKexN-Rm_SWe4LXO9Xjyja4o</li>
 </ul>
 <p>The <strong>Header</strong> and <strong>Payload</strong> are base64 encoded.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	b64 <span style="color:#f1fa8c">&#34;encoding/base64&#34;</span>
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	header <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9&#34;</span>
-	payload <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;eyJuYW1lIjoiSSBhbSBJcm9uIE1hbi4ifQ&#34;</span>
-
-	decodedHeader, _ <span style="color:#ff79c6">:=</span> b64.StdEncoding.<span style="color:#50fa7b">DecodeString</span>(header)
-	decodedPayload, _ <span style="color:#ff79c6">:=</span> b64.StdEncoding.<span style="color:#50fa7b">DecodeString</span>(payload)
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Decoded Header: %s\nDecoded Payload:%s&#34;</span>, decodedHeader, decodedPayload)
-
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#268bd2">b64</span> <span style="color:#2aa198">&#34;encoding/base64&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">header</span> := <span style="color:#2aa198">&#34;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#268bd2">payload</span> := <span style="color:#2aa198">&#34;eyJuYW1lIjoiSSBhbSBJcm9uIE1hbi4ifQ&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	<span style="color:#268bd2">decodedHeader</span>, <span style="color:#268bd2">_</span> := <span style="color:#268bd2">b64</span>.<span style="color:#268bd2">StdEncoding</span>.<span style="color:#268bd2">DecodeString</span>(<span style="color:#268bd2">header</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">decodedPayload</span>, <span style="color:#268bd2">_</span> := <span style="color:#268bd2">b64</span>.<span style="color:#268bd2">StdEncoding</span>.<span style="color:#268bd2">DecodeString</span>(<span style="color:#268bd2">payload</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Decoded Header: %s\nDecoded Payload:%s&#34;</span>, <span style="color:#268bd2">decodedHeader</span>, <span style="color:#268bd2">decodedPayload</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>}
 </code></pre></div><p><a href="https://play.golang.org/p/IssyQPPmkJG"target="_blank">Try it</a></p>
 <p>Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Decoded Header<span style="color:#ff79c6">:</span> {<span style="color:#f1fa8c">&#34;alg&#34;</span><span style="color:#ff79c6">:</span><span style="color:#f1fa8c">&#34;HS256&#34;</span>,<span style="color:#f1fa8c">&#34;typ&#34;</span><span style="color:#ff79c6">:</span><span style="color:#f1fa8c">&#34;JWT&#34;</span>}
-Decoded Payload<span style="color:#ff79c6">:</span>{<span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span><span style="color:#f1fa8c">&#34;I am Iron Man.&#34;</span>}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Decoded</span> <span style="color:#268bd2">Header</span>: {<span style="color:#2aa198">&#34;alg&#34;</span>:<span style="color:#2aa198">&#34;HS256&#34;</span>,<span style="color:#2aa198">&#34;typ&#34;</span>:<span style="color:#2aa198">&#34;JWT&#34;</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">Decoded</span> <span style="color:#268bd2">Payload</span>:{<span style="color:#2aa198">&#34;name&#34;</span>:<span style="color:#2aa198">&#34;I am Iron Man.&#34;</span>}
 </code></pre></div><p>The algorithm in Header is <strong>HS256</strong> which is used to sign the Payload.<br>
 The Payload is a JSON object with a key as <code>name</code> and <code>value</code> as <code>I am Iron Man.</code></p>
 <p>To sign this payload, the SecretKey is <code>secretKey</code>. 😅</p>
@@ -125,7 +125,7 @@ The Payload is a JSON object with a key as <code>name</code> and <code>value</co
 <h2 id="project-structure">Project Structure</h2>
 <p>Create a new project <code>go-jwt-app</code>.<br>
 Open the terminal inside the <code>go-jwt-app</code> and initialize the go modules using the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> mod init <span style="color:#ff79c6">go</span><span style="color:#ff79c6">-</span>jwt<span style="color:#ff79c6">-</span>app
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">go</span> <span style="color:#268bd2">mod</span> <span style="color:#268bd2">init</span> <span style="color:#859900">go</span>-<span style="color:#268bd2">jwt</span>-<span style="color:#268bd2">app</span>
 </code></pre></div><p>Go modules is a dependency manager or a package manager. It will track all the dependencies used in the project with their version. You can read more about it <a href="https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16"target="_blank">here</a>.</p>
 <h3 id="install-the-dependencies">Install the dependencies</h3>
 <p>There are 3 packages used in this Project.</p>
@@ -134,34 +134,34 @@ Open the terminal inside the <code>go-jwt-app</code> and initialize the go modul
 <li><a href="https://github.com/dgrijalva/jwt-go"target="_blank">jwt-go</a>: It is a Golang implementation of JSON Web Token(JWT). Using this package, we can create and verify the JWT tokens.</li>
 <li><a href="https://github.com/joho/godotenv"target="_blank">godotenv</a>: Using this package, we can access the <code>.env</code> file in which environment variables can be saved.</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> get github.com<span style="color:#ff79c6">/</span>gorilla<span style="color:#ff79c6">/</span>mux
-<span style="color:#ff79c6">go</span> get github.com<span style="color:#ff79c6">/</span>dgrijalva<span style="color:#ff79c6">/</span>jwt<span style="color:#ff79c6">-</span><span style="color:#ff79c6">go</span>
-<span style="color:#ff79c6">go</span> get github.com<span style="color:#ff79c6">/</span>joho<span style="color:#ff79c6">/</span>godotenv
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">go</span> <span style="color:#268bd2">get</span> <span style="color:#268bd2">github</span>.<span style="color:#268bd2">com</span>/<span style="color:#268bd2">gorilla</span>/<span style="color:#268bd2">mux</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#859900">go</span> <span style="color:#268bd2">get</span> <span style="color:#268bd2">github</span>.<span style="color:#268bd2">com</span>/<span style="color:#268bd2">dgrijalva</span>/<span style="color:#268bd2">jwt</span>-<span style="color:#859900">go</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#859900">go</span> <span style="color:#268bd2">get</span> <span style="color:#268bd2">github</span>.<span style="color:#268bd2">com</span>/<span style="color:#268bd2">joho</span>/<span style="color:#268bd2">godotenv</span>
 </code></pre></div><h2 id="environment-variable">Environment Variable</h2>
 <p>Create a new <code>.env</code> file and paste the below code in it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">SECRET_KEY<span style="color:#ff79c6">=</span>secret007
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">SECRET_KEY</span>=<span style="color:#268bd2">secret007</span>
 </code></pre></div><p>Using the <code>godotenv</code> package, we can read the <code>SECRET_KEY</code>.</p>
 <h2 id="jwt-implementation">JWT implementation</h2>
 <p>In this section, we can divide the process in modules to understand clearly.</p>
 <h3 id="create-server-and-routes">Create Server and Routes</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;log&#34;</span>
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#f1fa8c">&#34;github.com/gorilla/mux&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	r <span style="color:#ff79c6">:=</span> mux.<span style="color:#50fa7b">NewRouter</span>()
-
-	r.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/login&#34;</span>, login).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;POST&#34;</span>)
-	r.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/me&#34;</span>, dashboard).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;GET&#34;</span>)
-
-	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Starting server on the port 8000...&#34;</span>)
-	log.<span style="color:#50fa7b">Fatal</span>(http.<span style="color:#50fa7b">ListenAndServe</span>(<span style="color:#f1fa8c">&#34;:8000&#34;</span>, r))
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;log&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>	...
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>	<span style="color:#2aa198">&#34;github.com/gorilla/mux&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">r</span> := <span style="color:#268bd2">mux</span>.<span style="color:#268bd2">NewRouter</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">r</span>.<span style="color:#268bd2">HandleFunc</span>(<span style="color:#2aa198">&#34;/login&#34;</span>, <span style="color:#268bd2">login</span>).<span style="color:#268bd2">Methods</span>(<span style="color:#2aa198">&#34;POST&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#268bd2">r</span>.<span style="color:#268bd2">HandleFunc</span>(<span style="color:#2aa198">&#34;/me&#34;</span>, <span style="color:#268bd2">dashboard</span>).<span style="color:#268bd2">Methods</span>(<span style="color:#2aa198">&#34;GET&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Starting server on the port 8000...&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>	<span style="color:#268bd2">log</span>.<span style="color:#268bd2">Fatal</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">ListenAndServe</span>(<span style="color:#2aa198">&#34;:8000&#34;</span>, <span style="color:#268bd2">r</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>}
 </code></pre></div><p>First, create a new instance of mux router using the <code>mux.NewRouter()</code> method.</p>
 <p>Using the <code>HandleFunc</code> create 2 routes. <code>/login</code> as a <code>POST</code> request and <code>/me</code> as a <code>GET</code> request.<br>
 The <code>/login</code> endpoint will execute <code>login</code> function and <code>/me</code> will execute the <code>dashboard</code> function.</p>
@@ -169,93 +169,93 @@ The <code>/login</code> endpoint will execute <code>login</code> function and <c
 <p>In this <code>login</code> function, when a user will enter its <code>username</code> and <code>password</code>, it will first validate if the user registered or not. To validate, we will create a local user db using the <code>map</code>.</p>
 <p>On successful, verification it will generate a Token using the <code>jwt-go</code> package and send to the request as a response.</p>
 <p>To generate the JWT token, we are going to use the <code>HS256</code> algorithm.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;encoding/json&#34;</span>
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;log&#34;</span>
-	<span style="color:#f1fa8c">&#34;net/http&#34;</span>
-	<span style="color:#f1fa8c">&#34;os&#34;</span>
-	<span style="color:#f1fa8c">&#34;strings&#34;</span>
-	<span style="color:#f1fa8c">&#34;time&#34;</span>
-
-	jwt <span style="color:#f1fa8c">&#34;github.com/dgrijalva/jwt-go&#34;</span>
-	<span style="color:#f1fa8c">&#34;github.com/gorilla/mux&#34;</span>
-	<span style="color:#f1fa8c">&#34;github.com/joho/godotenv&#34;</span>
-)
-
-<span style="color:#6272a4">// Secret key to uniquely sign the token
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> key []<span style="color:#8be9fd">byte</span>
-
-<span style="color:#6272a4">// Credential User&#39;s login information
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">type</span> Credential <span style="color:#8be9fd;font-style:italic">struct</span>{
-	Username <span style="color:#8be9fd">string</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;username&#34;</span><span style="color:#f1fa8c">`</span>
-	Password <span style="color:#8be9fd">string</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;password&#34;</span><span style="color:#f1fa8c">`</span>
-}
-
-<span style="color:#6272a4">// Token jwt Standard Claim Object
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">type</span> Token <span style="color:#8be9fd;font-style:italic">struct</span> {
-	Username <span style="color:#8be9fd">string</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;username&#34;</span><span style="color:#f1fa8c">`</span>
-	jwt.StandardClaims
-}
-
-<span style="color:#6272a4">// Create a dummy local db instance as a key value pair
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> userdb = <span style="color:#8be9fd;font-style:italic">map</span>[<span style="color:#8be9fd">string</span>]<span style="color:#8be9fd">string</span>{
-	<span style="color:#f1fa8c">&#34;user1&#34;</span>: <span style="color:#f1fa8c">&#34;password123&#34;</span>,
-}
-
-<span style="color:#6272a4">// assign the secret key to key variable on program&#39;s first run
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">init</span>() {
-	<span style="color:#6272a4">// Load the .env file to access the environment variable
-</span><span style="color:#6272a4"></span>	err <span style="color:#ff79c6">:=</span> godotenv.<span style="color:#50fa7b">Load</span>()
-
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		log.<span style="color:#50fa7b">Fatal</span>(<span style="color:#f1fa8c">&#34;Error loading .env file&#34;</span>)
-	}
-
-	<span style="color:#6272a4">// read the secret_key from the .env file
-</span><span style="color:#6272a4"></span>	key = []<span style="color:#8be9fd;font-style:italic">byte</span>(os.<span style="color:#50fa7b">Getenv</span>(<span style="color:#f1fa8c">&#34;SECRET_KEY&#34;</span>))
-}
-
-<span style="color:#6272a4">// login user login function
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">login</span>(w http.ResponseWriter, r <span style="color:#ff79c6">*</span>http.Request) {
-	<span style="color:#6272a4">// create a Credentials object
-</span><span style="color:#6272a4"></span>	<span style="color:#8be9fd;font-style:italic">var</span> creds Credential
-	<span style="color:#6272a4">// decode json to struct
-</span><span style="color:#6272a4"></span>	err <span style="color:#ff79c6">:=</span> json.<span style="color:#50fa7b">NewDecoder</span>(r.Body).<span style="color:#50fa7b">Decode</span>(<span style="color:#ff79c6">&amp;</span>creds)
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusBadRequest)
-		<span style="color:#ff79c6">return</span>
-	}
-	<span style="color:#6272a4">// verify if user exist or not
-</span><span style="color:#6272a4"></span>	userPassword, ok <span style="color:#ff79c6">:=</span> userdb[creds.Username]
-
-	<span style="color:#6272a4">// if user exist, verify the password
-</span><span style="color:#6272a4"></span>	<span style="color:#ff79c6">if</span> !ok <span style="color:#ff79c6">||</span> userPassword <span style="color:#ff79c6">!=</span> creds.Password {
-		w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusUnauthorized)
-		<span style="color:#ff79c6">return</span>
-	}
-
-	<span style="color:#6272a4">// Create a token object and add the Username and StandardClaims
-</span><span style="color:#6272a4"></span>	<span style="color:#8be9fd;font-style:italic">var</span> tokenClaim = Token {
-		Username: creds.Username,
-		StandardClaims: jwt.StandardClaims{
-			<span style="color:#6272a4">// Enter expiration in milisecond
-</span><span style="color:#6272a4"></span>			ExpiresAt: time.<span style="color:#50fa7b">Now</span>().<span style="color:#50fa7b">Add</span>(<span style="color:#bd93f9">10</span> <span style="color:#ff79c6">*</span> time.Minute).<span style="color:#50fa7b">Unix</span>(),
-		},
-	}
-
-	<span style="color:#6272a4">// Create a new claim with HS256 algorithm and token claim
-</span><span style="color:#6272a4"></span>	token <span style="color:#ff79c6">:=</span> jwt.<span style="color:#50fa7b">NewWithClaims</span>(jwt.SigningMethodHS256, tokenClaim )
-
-	tokenString, err <span style="color:#ff79c6">:=</span> token.<span style="color:#50fa7b">SignedString</span>(key)
-
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		log.<span style="color:#50fa7b">Fatal</span>(err)
-	}
-	json.<span style="color:#50fa7b">NewEncoder</span>(w).<span style="color:#50fa7b">Encode</span>(tokenString)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;encoding/json&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>	<span style="color:#2aa198">&#34;log&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>	<span style="color:#2aa198">&#34;net/http&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>	<span style="color:#2aa198">&#34;os&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#2aa198">&#34;strings&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#2aa198">&#34;time&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	<span style="color:#268bd2">jwt</span> <span style="color:#2aa198">&#34;github.com/dgrijalva/jwt-go&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#2aa198">&#34;github.com/gorilla/mux&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#2aa198">&#34;github.com/joho/godotenv&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span style="color:#93a1a1;font-style:italic">// Secret key to uniquely sign the token
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">var</span> <span style="color:#268bd2">key</span> []<span style="color:#859900;font-weight:bold">byte</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span style="color:#93a1a1;font-style:italic">// Credential User&#39;s login information
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">type</span> <span style="color:#268bd2">Credential</span> <span style="color:#859900">struct</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>	<span style="color:#268bd2">Username</span> <span style="color:#859900;font-weight:bold">string</span> <span style="color:#2aa198">`</span><span style="color:#2aa198">json:&#34;username&#34;</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>	<span style="color:#268bd2">Password</span> <span style="color:#859900;font-weight:bold">string</span> <span style="color:#2aa198">`</span><span style="color:#2aa198">json:&#34;password&#34;</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span style="color:#93a1a1;font-style:italic">// Token jwt Standard Claim Object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">type</span> <span style="color:#268bd2">Token</span> <span style="color:#859900">struct</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>	<span style="color:#268bd2">Username</span> <span style="color:#859900;font-weight:bold">string</span> <span style="color:#2aa198">`</span><span style="color:#2aa198">json:&#34;username&#34;</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>	<span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">StandardClaims</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span style="color:#93a1a1;font-style:italic">// Create a dummy local db instance as a key value pair
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">var</span> <span style="color:#268bd2">userdb</span> = <span style="color:#859900">map</span>[<span style="color:#859900;font-weight:bold">string</span>]<span style="color:#859900;font-weight:bold">string</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>	<span style="color:#2aa198">&#34;user1&#34;</span>: <span style="color:#2aa198">&#34;password123&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span style="color:#93a1a1;font-style:italic">// assign the secret key to key variable on program&#39;s first run
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">init</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span>	<span style="color:#93a1a1;font-style:italic">// Load the .env file to access the environment variable
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">err</span> := <span style="color:#268bd2">godotenv</span>.<span style="color:#268bd2">Load</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span>		<span style="color:#268bd2">log</span>.<span style="color:#268bd2">Fatal</span>(<span style="color:#2aa198">&#34;Error loading .env file&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span>	<span style="color:#93a1a1;font-style:italic">// read the secret_key from the .env file
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">key</span> = []<span style="color:#cb4b16">byte</span>(<span style="color:#268bd2">os</span>.<span style="color:#268bd2">Getenv</span>(<span style="color:#2aa198">&#34;SECRET_KEY&#34;</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span style="color:#93a1a1;font-style:italic">// login user login function
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">login</span>(<span style="color:#268bd2">w</span> <span style="color:#268bd2">http</span>.<span style="color:#268bd2">ResponseWriter</span>, <span style="color:#268bd2">r</span> *<span style="color:#268bd2">http</span>.<span style="color:#268bd2">Request</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span>	<span style="color:#93a1a1;font-style:italic">// create a Credentials object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">var</span> <span style="color:#268bd2">creds</span> <span style="color:#268bd2">Credential</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span>	<span style="color:#93a1a1;font-style:italic">// decode json to struct
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">err</span> := <span style="color:#268bd2">json</span>.<span style="color:#268bd2">NewDecoder</span>(<span style="color:#268bd2">r</span>.<span style="color:#268bd2">Body</span>).<span style="color:#268bd2">Decode</span>(&amp;<span style="color:#268bd2">creds</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span>		<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusBadRequest</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span>		<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span>	<span style="color:#93a1a1;font-style:italic">// verify if user exist or not
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">userPassword</span>, <span style="color:#268bd2">ok</span> := <span style="color:#268bd2">userdb</span>[<span style="color:#268bd2">creds</span>.<span style="color:#268bd2">Username</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63</span>	<span style="color:#93a1a1;font-style:italic">// if user exist, verify the password
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">if</span> !<span style="color:#268bd2">ok</span> || <span style="color:#268bd2">userPassword</span> != <span style="color:#268bd2">creds</span>.<span style="color:#268bd2">Password</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65</span>		<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusUnauthorized</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66</span>		<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69</span>	<span style="color:#93a1a1;font-style:italic">// Create a token object and add the Username and StandardClaims
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">var</span> <span style="color:#268bd2">tokenClaim</span> = <span style="color:#268bd2">Token</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span>		<span style="color:#268bd2">Username</span>: <span style="color:#268bd2">creds</span>.<span style="color:#268bd2">Username</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72</span>		<span style="color:#268bd2">StandardClaims</span>: <span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">StandardClaims</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73</span>			<span style="color:#93a1a1;font-style:italic">// Enter expiration in milisecond
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74</span><span style="color:#93a1a1;font-style:italic"></span>			<span style="color:#268bd2">ExpiresAt</span>: <span style="color:#268bd2">time</span>.<span style="color:#268bd2">Now</span>().<span style="color:#268bd2">Add</span>(<span style="color:#2aa198;font-weight:bold">10</span> * <span style="color:#268bd2">time</span>.<span style="color:#268bd2">Minute</span>).<span style="color:#268bd2">Unix</span>(),
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75</span>		},
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78</span>	<span style="color:#93a1a1;font-style:italic">// Create a new claim with HS256 algorithm and token claim
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">token</span> := <span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">NewWithClaims</span>(<span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">SigningMethodHS256</span>, <span style="color:#268bd2">tokenClaim</span> )
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81</span>	<span style="color:#268bd2">tokenString</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">token</span>.<span style="color:#268bd2">SignedString</span>(<span style="color:#268bd2">key</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84</span>		<span style="color:#268bd2">log</span>.<span style="color:#268bd2">Fatal</span>(<span style="color:#268bd2">err</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">86</span>	<span style="color:#268bd2">json</span>.<span style="color:#268bd2">NewEncoder</span>(<span style="color:#268bd2">w</span>).<span style="color:#268bd2">Encode</span>(<span style="color:#268bd2">tokenString</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">87</span>}
 </code></pre></div><p>In the <code>init</code> function, using the <code>godotenv</code> package load the <code>.env</code> file to read the <code>SECRET_KEY</code>.<br>
 Check this to learn more on <a href="https://schadokar.dev/posts/use-environment-variable-in-your-next-golang-project/"target="_blank">environment variables in Golang</a>.</p>
 <p>In the <code>login</code> function, first read the request body to get the <code>username</code> and <code>password</code>. The request body is in JSON format. Read the JSON using the <code>encoding/json</code> package.<br>
@@ -272,216 +272,216 @@ Check this to learn more on <a href="https://schadokar.dev/posts/how-to-use-json
 <p>When the <code>/me</code> endpoint hit, it will execute the <code>dashboard</code> function.<br>
 We are going to send the token as <strong>Bearer Token</strong>. You can also send it as a key value pair in the request object.</p>
 <p>In simple language, Bearer token is the same token with <strong>Bearer</strong> prefixed to it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">Bearer <span style="color:#ff79c6">&lt;</span>Token<span style="color:#ff79c6">&gt;</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6272a4">// dashboard User&#39;s personalized dashboard
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">dashboard</span>(w http.ResponseWriter, r <span style="color:#ff79c6">*</span>http.Request) {
-	<span style="color:#6272a4">// get the bearer token from the reuest header
-</span><span style="color:#6272a4"></span>	bearerToken <span style="color:#ff79c6">:=</span> r.Header.<span style="color:#50fa7b">Get</span>(<span style="color:#f1fa8c">&#34;Authorization&#34;</span>)
-
-	<span style="color:#6272a4">// validate token, it will return Token and error
-</span><span style="color:#6272a4"></span>	token, err <span style="color:#ff79c6">:=</span> <span style="color:#50fa7b">ValidateToken</span>(bearerToken)
-
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		<span style="color:#6272a4">// check if Error is Signature Invalid Error
-</span><span style="color:#6272a4"></span>		<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">==</span> jwt.ErrSignatureInvalid {
-			<span style="color:#6272a4">// return the Unauthorized Status
-</span><span style="color:#6272a4"></span>			w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusUnauthorized)
-			<span style="color:#ff79c6">return</span>
-		}
-		<span style="color:#6272a4">// Return the Bad Request for any other error
-</span><span style="color:#6272a4"></span>		w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusBadRequest)
-		<span style="color:#ff79c6">return</span>
-	}
-	<span style="color:#6272a4">// Validate the token if it expired or not
-</span><span style="color:#6272a4"></span>	<span style="color:#ff79c6">if</span> !token.Valid {
-		<span style="color:#6272a4">// return the Unauthoried Status for expired token
-</span><span style="color:#6272a4"></span>		w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusUnauthorized)
-		<span style="color:#ff79c6">return</span>
-	}
-
-	<span style="color:#6272a4">// Type cast the Claims to *Token type
-</span><span style="color:#6272a4"></span>	user <span style="color:#ff79c6">:=</span> token.Claims.(<span style="color:#ff79c6">*</span>Token)
-
-	<span style="color:#6272a4">// send the username Dashboard message
-</span><span style="color:#6272a4"></span>	json.<span style="color:#50fa7b">NewEncoder</span>(w).<span style="color:#50fa7b">Encode</span>(fmt.<span style="color:#50fa7b">Sprintf</span>(<span style="color:#f1fa8c">&#34;%s Dashboard&#34;</span>, user.Username))
-}
-
-
-
-<span style="color:#6272a4">// ValidateToken validates the token with the secret key and return the object
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">ValidateToken</span>(bearerToken <span style="color:#8be9fd">string</span>) (<span style="color:#ff79c6">*</span>jwt.Token, <span style="color:#8be9fd">error</span>) {
-
-	<span style="color:#6272a4">// format the token string
-</span><span style="color:#6272a4"></span>	tokenString <span style="color:#ff79c6">:=</span> strings.<span style="color:#50fa7b">Split</span>(bearerToken, <span style="color:#f1fa8c">&#34; &#34;</span>)[<span style="color:#bd93f9">1</span>]
-
-	<span style="color:#6272a4">// Parse the token with tokenObj
-</span><span style="color:#6272a4"></span>	token, err <span style="color:#ff79c6">:=</span> jwt.<span style="color:#50fa7b">ParseWithClaims</span>(tokenString, <span style="color:#ff79c6">&amp;</span>Token{}, <span style="color:#8be9fd;font-style:italic">func</span>(token <span style="color:#ff79c6">*</span>jwt.Token)(<span style="color:#8be9fd;font-style:italic">interface</span>{}, <span style="color:#8be9fd">error</span>) {
-		<span style="color:#ff79c6">return</span> key, <span style="color:#ff79c6">nil</span>
-	})
-
-	<span style="color:#6272a4">// return token and err
-</span><span style="color:#6272a4"></span>	<span style="color:#ff79c6">return</span> token, err
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Bearer</span> &lt;<span style="color:#268bd2">Token</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#93a1a1;font-style:italic">// dashboard User&#39;s personalized dashboard
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">dashboard</span>(<span style="color:#268bd2">w</span> <span style="color:#268bd2">http</span>.<span style="color:#268bd2">ResponseWriter</span>, <span style="color:#268bd2">r</span> *<span style="color:#268bd2">http</span>.<span style="color:#268bd2">Request</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>	<span style="color:#93a1a1;font-style:italic">// get the bearer token from the reuest header
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">bearerToken</span> := <span style="color:#268bd2">r</span>.<span style="color:#268bd2">Header</span>.<span style="color:#268bd2">Get</span>(<span style="color:#2aa198">&#34;Authorization&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>	<span style="color:#93a1a1;font-style:italic">// validate token, it will return Token and error
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">token</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">ValidateToken</span>(<span style="color:#268bd2">bearerToken</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>		<span style="color:#93a1a1;font-style:italic">// check if Error is Signature Invalid Error
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span style="color:#93a1a1;font-style:italic"></span>		<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> == <span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">ErrSignatureInvalid</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>			<span style="color:#93a1a1;font-style:italic">// return the Unauthorized Status
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span style="color:#93a1a1;font-style:italic"></span>			<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusUnauthorized</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>			<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>		}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>		<span style="color:#93a1a1;font-style:italic">// Return the Bad Request for any other error
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span style="color:#93a1a1;font-style:italic"></span>		<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusBadRequest</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>		<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>	<span style="color:#93a1a1;font-style:italic">// Validate the token if it expired or not
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">if</span> !<span style="color:#268bd2">token</span>.<span style="color:#268bd2">Valid</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>		<span style="color:#93a1a1;font-style:italic">// return the Unauthoried Status for expired token
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span style="color:#93a1a1;font-style:italic"></span>		<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusUnauthorized</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>		<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>	<span style="color:#93a1a1;font-style:italic">// Type cast the Claims to *Token type
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">user</span> := <span style="color:#268bd2">token</span>.<span style="color:#268bd2">Claims</span>.(*<span style="color:#268bd2">Token</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>	<span style="color:#93a1a1;font-style:italic">// send the username Dashboard message
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">json</span>.<span style="color:#268bd2">NewEncoder</span>(<span style="color:#268bd2">w</span>).<span style="color:#268bd2">Encode</span>(<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Sprintf</span>(<span style="color:#2aa198">&#34;%s Dashboard&#34;</span>, <span style="color:#268bd2">user</span>.<span style="color:#268bd2">Username</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span style="color:#93a1a1;font-style:italic">// ValidateToken validates the token with the secret key and return the object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">ValidateToken</span>(<span style="color:#268bd2">bearerToken</span> <span style="color:#859900;font-weight:bold">string</span>) (*<span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">Token</span>, <span style="color:#859900;font-weight:bold">error</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span>	<span style="color:#93a1a1;font-style:italic">// format the token string
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">tokenString</span> := <span style="color:#268bd2">strings</span>.<span style="color:#268bd2">Split</span>(<span style="color:#268bd2">bearerToken</span>, <span style="color:#2aa198">&#34; &#34;</span>)[<span style="color:#2aa198;font-weight:bold">1</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span>	<span style="color:#93a1a1;font-style:italic">// Parse the token with tokenObj
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">token</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">ParseWithClaims</span>(<span style="color:#268bd2">tokenString</span>, &amp;<span style="color:#268bd2">Token</span>{}, <span style="color:#859900">func</span>(<span style="color:#268bd2">token</span> *<span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">Token</span>)(<span style="color:#859900">interface</span>{}, <span style="color:#859900;font-weight:bold">error</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span>		<span style="color:#859900">return</span> <span style="color:#268bd2">key</span>, <span style="color:#859900;font-weight:bold">nil</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>	})
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span>	<span style="color:#93a1a1;font-style:italic">// return token and err
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">return</span> <span style="color:#268bd2">token</span>, <span style="color:#268bd2">err</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span>}
 </code></pre></div><p>Get the Bearer Token from the request header. The Bearer token's key is <strong>Authorization</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">bearerToken <span style="color:#ff79c6">:=</span> r.Header.<span style="color:#50fa7b">Get</span>(<span style="color:#f1fa8c">&#34;Authorization&#34;</span>)
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">bearerToken</span> := <span style="color:#268bd2">r</span>.<span style="color:#268bd2">Header</span>.<span style="color:#268bd2">Get</span>(<span style="color:#2aa198">&#34;Authorization&#34;</span>)
 </code></pre></div><p>Pass the <code>bearerToken</code> to the <code>ValidateToken</code> function. This function will validate the token if it is valid or not.<br>
 Using the <code>ParseWithClaims</code> method from the <code>jwt-go</code> package, it will validate the token and returns a <code>*jwt.Token</code> object and an error.</p>
 <p>To get the user information from the <code>*jwt.Token</code> object, type cast it to (*Token).</p>
 <h2 id="complete-code">Complete Code</h2>
 <p>Create a new file <code>main.go</code> and paste the below code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;encoding/json&#34;</span>
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;log&#34;</span>
-	<span style="color:#f1fa8c">&#34;net/http&#34;</span>
-	<span style="color:#f1fa8c">&#34;os&#34;</span>
-	<span style="color:#f1fa8c">&#34;strings&#34;</span>
-	<span style="color:#f1fa8c">&#34;time&#34;</span>
-
-	jwt <span style="color:#f1fa8c">&#34;github.com/dgrijalva/jwt-go&#34;</span>
-	<span style="color:#f1fa8c">&#34;github.com/gorilla/mux&#34;</span>
-	<span style="color:#f1fa8c">&#34;github.com/joho/godotenv&#34;</span>
-)
-
-<span style="color:#6272a4">// Secret key to uniquely sign the token
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> key []<span style="color:#8be9fd">byte</span>
-
-<span style="color:#6272a4">// Credential User&#39;s login information
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">type</span> Credential <span style="color:#8be9fd;font-style:italic">struct</span>{
-	Username <span style="color:#8be9fd">string</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;username&#34;</span><span style="color:#f1fa8c">`</span>
-	Password <span style="color:#8be9fd">string</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;password&#34;</span><span style="color:#f1fa8c">`</span>
-}
-
-<span style="color:#6272a4">// Token jwt Standard Claim Object
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">type</span> Token <span style="color:#8be9fd;font-style:italic">struct</span> {
-	Username <span style="color:#8be9fd">string</span> <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">json:&#34;username&#34;</span><span style="color:#f1fa8c">`</span>
-	jwt.StandardClaims
-}
-
-<span style="color:#6272a4">// Create a dummy local db instance as a key value pair
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> userdb = <span style="color:#8be9fd;font-style:italic">map</span>[<span style="color:#8be9fd">string</span>]<span style="color:#8be9fd">string</span>{
-	<span style="color:#f1fa8c">&#34;user1&#34;</span>: <span style="color:#f1fa8c">&#34;password123&#34;</span>,
-}
-
-<span style="color:#6272a4">// assign the secret key to key variable on program&#39;s first run
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">init</span>() {
-	<span style="color:#6272a4">// Load the .env file to access the environment variable
-</span><span style="color:#6272a4"></span>	err <span style="color:#ff79c6">:=</span> godotenv.<span style="color:#50fa7b">Load</span>()
-
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		log.<span style="color:#50fa7b">Fatal</span>(<span style="color:#f1fa8c">&#34;Error loading .env file&#34;</span>)
-	}
-
-	<span style="color:#6272a4">// read the secret_key from the .env file
-</span><span style="color:#6272a4"></span>	key = []<span style="color:#8be9fd;font-style:italic">byte</span>(os.<span style="color:#50fa7b">Getenv</span>(<span style="color:#f1fa8c">&#34;SECRET_KEY&#34;</span>))
-}
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	r <span style="color:#ff79c6">:=</span> mux.<span style="color:#50fa7b">NewRouter</span>()
-
-	r.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/login&#34;</span>, login).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;POST&#34;</span>)
-	r.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/me&#34;</span>, dashboard).<span style="color:#50fa7b">Methods</span>(<span style="color:#f1fa8c">&#34;GET&#34;</span>)
-
-	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Starting server on the port 8000...&#34;</span>)
-	log.<span style="color:#50fa7b">Fatal</span>(http.<span style="color:#50fa7b">ListenAndServe</span>(<span style="color:#f1fa8c">&#34;:8000&#34;</span>, r))
-}
-
-<span style="color:#6272a4">// login user login function
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">login</span>(w http.ResponseWriter, r <span style="color:#ff79c6">*</span>http.Request) {
-	<span style="color:#6272a4">// create a Credentials object
-</span><span style="color:#6272a4"></span>	<span style="color:#8be9fd;font-style:italic">var</span> creds Credential
-	<span style="color:#6272a4">// decode json to struct
-</span><span style="color:#6272a4"></span>	err <span style="color:#ff79c6">:=</span> json.<span style="color:#50fa7b">NewDecoder</span>(r.Body).<span style="color:#50fa7b">Decode</span>(<span style="color:#ff79c6">&amp;</span>creds)
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusBadRequest)
-		<span style="color:#ff79c6">return</span>
-	}
-	<span style="color:#6272a4">// verify if user exist or not
-</span><span style="color:#6272a4"></span>	userPassword, ok <span style="color:#ff79c6">:=</span> userdb[creds.Username]
-
-	<span style="color:#6272a4">// if user exist, verify the password
-</span><span style="color:#6272a4"></span>	<span style="color:#ff79c6">if</span> !ok <span style="color:#ff79c6">||</span> userPassword <span style="color:#ff79c6">!=</span> creds.Password {
-		w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusUnauthorized)
-		<span style="color:#ff79c6">return</span>
-	}
-
-	<span style="color:#6272a4">// Create a token object
-</span><span style="color:#6272a4"></span>	<span style="color:#8be9fd;font-style:italic">var</span> tokenObj = Token {
-		Username: creds.Username,
-		StandardClaims: jwt.StandardClaims{
-			<span style="color:#6272a4">// Enter expiration in milisecond
-</span><span style="color:#6272a4"></span>			ExpiresAt: time.<span style="color:#50fa7b">Now</span>().<span style="color:#50fa7b">Add</span>(<span style="color:#bd93f9">10</span> <span style="color:#ff79c6">*</span> time.Minute).<span style="color:#50fa7b">Unix</span>(),
-		},
-	}
-
-	token <span style="color:#ff79c6">:=</span> jwt.<span style="color:#50fa7b">NewWithClaims</span>(jwt.SigningMethodHS256, tokenObj )
-
-	tokenString, err <span style="color:#ff79c6">:=</span> token.<span style="color:#50fa7b">SignedString</span>(key)
-
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		log.<span style="color:#50fa7b">Fatal</span>(err)
-	}
-	json.<span style="color:#50fa7b">NewEncoder</span>(w).<span style="color:#50fa7b">Encode</span>(tokenString)
-}
-
-<span style="color:#6272a4">// dashboard User&#39;s personalized dashboard
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">dashboard</span>(w http.ResponseWriter, r <span style="color:#ff79c6">*</span>http.Request) {
-	<span style="color:#6272a4">// get the bearer token from the reuest header
-</span><span style="color:#6272a4"></span>	bearerToken <span style="color:#ff79c6">:=</span> r.Header.<span style="color:#50fa7b">Get</span>(<span style="color:#f1fa8c">&#34;Authorization&#34;</span>)
-
-	<span style="color:#6272a4">// validate token, it will return Token and error
-</span><span style="color:#6272a4"></span>	token, err <span style="color:#ff79c6">:=</span> <span style="color:#50fa7b">ValidateToken</span>(bearerToken)
-
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		<span style="color:#6272a4">// check if Error is Signature Invalid Error
-</span><span style="color:#6272a4"></span>		<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">==</span> jwt.ErrSignatureInvalid {
-			<span style="color:#6272a4">// return the Unauthorized Status
-</span><span style="color:#6272a4"></span>			w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusUnauthorized)
-			<span style="color:#ff79c6">return</span>
-		}
-		<span style="color:#6272a4">// Return the Bad Request for any other error
-</span><span style="color:#6272a4"></span>		w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusBadRequest)
-		<span style="color:#ff79c6">return</span>
-	}
-	<span style="color:#6272a4">// Validate the token if it expired or not
-</span><span style="color:#6272a4"></span>	<span style="color:#ff79c6">if</span> !token.Valid {
-		<span style="color:#6272a4">// return the Unauthoried Status for expired token
-</span><span style="color:#6272a4"></span>		w.<span style="color:#50fa7b">WriteHeader</span>(http.StatusUnauthorized)
-		<span style="color:#ff79c6">return</span>
-	}
-
-	<span style="color:#6272a4">// Type cast the Claims to *Token type
-</span><span style="color:#6272a4"></span>	user <span style="color:#ff79c6">:=</span> token.Claims.(<span style="color:#ff79c6">*</span>Token)
-
-	<span style="color:#6272a4">// send the username Dashboard message
-</span><span style="color:#6272a4"></span>	json.<span style="color:#50fa7b">NewEncoder</span>(w).<span style="color:#50fa7b">Encode</span>(fmt.<span style="color:#50fa7b">Sprintf</span>(<span style="color:#f1fa8c">&#34;%s Dashboard&#34;</span>, user.Username))
-}
-
-
-
-<span style="color:#6272a4">// ValidateToken validates the token with the secret key and return the object
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">ValidateToken</span>(bearerToken <span style="color:#8be9fd">string</span>) (<span style="color:#ff79c6">*</span>jwt.Token, <span style="color:#8be9fd">error</span>) {
-
-	<span style="color:#6272a4">// format the token string
-</span><span style="color:#6272a4"></span>	tokenString <span style="color:#ff79c6">:=</span> strings.<span style="color:#50fa7b">Split</span>(bearerToken, <span style="color:#f1fa8c">&#34; &#34;</span>)[<span style="color:#bd93f9">1</span>]
-
-	<span style="color:#6272a4">// Parse the token with tokenObj
-</span><span style="color:#6272a4"></span>	token, err <span style="color:#ff79c6">:=</span> jwt.<span style="color:#50fa7b">ParseWithClaims</span>(tokenString, <span style="color:#ff79c6">&amp;</span>Token{}, <span style="color:#8be9fd;font-style:italic">func</span>(token <span style="color:#ff79c6">*</span>jwt.Token)(<span style="color:#8be9fd;font-style:italic">interface</span>{}, <span style="color:#8be9fd">error</span>) {
-		<span style="color:#ff79c6">return</span> key, <span style="color:#ff79c6">nil</span>
-	})
-
-	<span style="color:#6272a4">// return token and err
-</span><span style="color:#6272a4"></span>	<span style="color:#ff79c6">return</span> token, err
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4</span>	<span style="color:#2aa198">&#34;encoding/json&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6</span>	<span style="color:#2aa198">&#34;log&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7</span>	<span style="color:#2aa198">&#34;net/http&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8</span>	<span style="color:#2aa198">&#34;os&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9</span>	<span style="color:#2aa198">&#34;strings&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10</span>	<span style="color:#2aa198">&#34;time&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12</span>	<span style="color:#268bd2">jwt</span> <span style="color:#2aa198">&#34;github.com/dgrijalva/jwt-go&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13</span>	<span style="color:#2aa198">&#34;github.com/gorilla/mux&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14</span>	<span style="color:#2aa198">&#34;github.com/joho/godotenv&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17</span><span style="color:#93a1a1;font-style:italic">// Secret key to uniquely sign the token
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">var</span> <span style="color:#268bd2">key</span> []<span style="color:#859900;font-weight:bold">byte</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20</span><span style="color:#93a1a1;font-style:italic">// Credential User&#39;s login information
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">type</span> <span style="color:#268bd2">Credential</span> <span style="color:#859900">struct</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22</span>	<span style="color:#268bd2">Username</span> <span style="color:#859900;font-weight:bold">string</span> <span style="color:#2aa198">`</span><span style="color:#2aa198">json:&#34;username&#34;</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23</span>	<span style="color:#268bd2">Password</span> <span style="color:#859900;font-weight:bold">string</span> <span style="color:#2aa198">`</span><span style="color:#2aa198">json:&#34;password&#34;</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26</span><span style="color:#93a1a1;font-style:italic">// Token jwt Standard Claim Object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">type</span> <span style="color:#268bd2">Token</span> <span style="color:#859900">struct</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28</span>	<span style="color:#268bd2">Username</span> <span style="color:#859900;font-weight:bold">string</span> <span style="color:#2aa198">`</span><span style="color:#2aa198">json:&#34;username&#34;</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29</span>	<span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">StandardClaims</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32</span><span style="color:#93a1a1;font-style:italic">// Create a dummy local db instance as a key value pair
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">var</span> <span style="color:#268bd2">userdb</span> = <span style="color:#859900">map</span>[<span style="color:#859900;font-weight:bold">string</span>]<span style="color:#859900;font-weight:bold">string</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34</span>	<span style="color:#2aa198">&#34;user1&#34;</span>: <span style="color:#2aa198">&#34;password123&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37</span><span style="color:#93a1a1;font-style:italic">// assign the secret key to key variable on program&#39;s first run
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">init</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39</span>	<span style="color:#93a1a1;font-style:italic">// Load the .env file to access the environment variable
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">err</span> := <span style="color:#268bd2">godotenv</span>.<span style="color:#268bd2">Load</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43</span>		<span style="color:#268bd2">log</span>.<span style="color:#268bd2">Fatal</span>(<span style="color:#2aa198">&#34;Error loading .env file&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46</span>	<span style="color:#93a1a1;font-style:italic">// read the secret_key from the .env file
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">key</span> = []<span style="color:#cb4b16">byte</span>(<span style="color:#268bd2">os</span>.<span style="color:#268bd2">Getenv</span>(<span style="color:#2aa198">&#34;SECRET_KEY&#34;</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51</span>	<span style="color:#268bd2">r</span> := <span style="color:#268bd2">mux</span>.<span style="color:#268bd2">NewRouter</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53</span>	<span style="color:#268bd2">r</span>.<span style="color:#268bd2">HandleFunc</span>(<span style="color:#2aa198">&#34;/login&#34;</span>, <span style="color:#268bd2">login</span>).<span style="color:#268bd2">Methods</span>(<span style="color:#2aa198">&#34;POST&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54</span>	<span style="color:#268bd2">r</span>.<span style="color:#268bd2">HandleFunc</span>(<span style="color:#2aa198">&#34;/me&#34;</span>, <span style="color:#268bd2">dashboard</span>).<span style="color:#268bd2">Methods</span>(<span style="color:#2aa198">&#34;GET&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Starting server on the port 8000...&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57</span>	<span style="color:#268bd2">log</span>.<span style="color:#268bd2">Fatal</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">ListenAndServe</span>(<span style="color:#2aa198">&#34;:8000&#34;</span>, <span style="color:#268bd2">r</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60</span><span style="color:#93a1a1;font-style:italic">// login user login function
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">login</span>(<span style="color:#268bd2">w</span> <span style="color:#268bd2">http</span>.<span style="color:#268bd2">ResponseWriter</span>, <span style="color:#268bd2">r</span> *<span style="color:#268bd2">http</span>.<span style="color:#268bd2">Request</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62</span>	<span style="color:#93a1a1;font-style:italic">// create a Credentials object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">var</span> <span style="color:#268bd2">creds</span> <span style="color:#268bd2">Credential</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64</span>	<span style="color:#93a1a1;font-style:italic">// decode json to struct
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">err</span> := <span style="color:#268bd2">json</span>.<span style="color:#268bd2">NewDecoder</span>(<span style="color:#268bd2">r</span>.<span style="color:#268bd2">Body</span>).<span style="color:#268bd2">Decode</span>(&amp;<span style="color:#268bd2">creds</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67</span>		<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusBadRequest</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68</span>		<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70</span>	<span style="color:#93a1a1;font-style:italic">// verify if user exist or not
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">userPassword</span>, <span style="color:#268bd2">ok</span> := <span style="color:#268bd2">userdb</span>[<span style="color:#268bd2">creds</span>.<span style="color:#268bd2">Username</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73</span>	<span style="color:#93a1a1;font-style:italic">// if user exist, verify the password
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">if</span> !<span style="color:#268bd2">ok</span> || <span style="color:#268bd2">userPassword</span> != <span style="color:#268bd2">creds</span>.<span style="color:#268bd2">Password</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75</span>		<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusUnauthorized</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76</span>		<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79</span>	<span style="color:#93a1a1;font-style:italic">// Create a token object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">var</span> <span style="color:#268bd2">tokenObj</span> = <span style="color:#268bd2">Token</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81</span>		<span style="color:#268bd2">Username</span>: <span style="color:#268bd2">creds</span>.<span style="color:#268bd2">Username</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82</span>		<span style="color:#268bd2">StandardClaims</span>: <span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">StandardClaims</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83</span>			<span style="color:#93a1a1;font-style:italic">// Enter expiration in milisecond
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84</span><span style="color:#93a1a1;font-style:italic"></span>			<span style="color:#268bd2">ExpiresAt</span>: <span style="color:#268bd2">time</span>.<span style="color:#268bd2">Now</span>().<span style="color:#268bd2">Add</span>(<span style="color:#2aa198;font-weight:bold">10</span> * <span style="color:#268bd2">time</span>.<span style="color:#268bd2">Minute</span>).<span style="color:#268bd2">Unix</span>(),
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85</span>		},
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88</span>	<span style="color:#268bd2">token</span> := <span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">NewWithClaims</span>(<span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">SigningMethodHS256</span>, <span style="color:#268bd2">tokenObj</span> )
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90</span>	<span style="color:#268bd2">tokenString</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">token</span>.<span style="color:#268bd2">SignedString</span>(<span style="color:#268bd2">key</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93</span>		<span style="color:#268bd2">log</span>.<span style="color:#268bd2">Fatal</span>(<span style="color:#268bd2">err</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95</span>	<span style="color:#268bd2">json</span>.<span style="color:#268bd2">NewEncoder</span>(<span style="color:#268bd2">w</span>).<span style="color:#268bd2">Encode</span>(<span style="color:#268bd2">tokenString</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98</span><span style="color:#93a1a1;font-style:italic">// dashboard User&#39;s personalized dashboard
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">dashboard</span>(<span style="color:#268bd2">w</span> <span style="color:#268bd2">http</span>.<span style="color:#268bd2">ResponseWriter</span>, <span style="color:#268bd2">r</span> *<span style="color:#268bd2">http</span>.<span style="color:#268bd2">Request</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100</span>	<span style="color:#93a1a1;font-style:italic">// get the bearer token from the reuest header
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">bearerToken</span> := <span style="color:#268bd2">r</span>.<span style="color:#268bd2">Header</span>.<span style="color:#268bd2">Get</span>(<span style="color:#2aa198">&#34;Authorization&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103</span>	<span style="color:#93a1a1;font-style:italic">// validate token, it will return Token and error
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">token</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">ValidateToken</span>(<span style="color:#268bd2">bearerToken</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107</span>		<span style="color:#93a1a1;font-style:italic">// check if Error is Signature Invalid Error
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108</span><span style="color:#93a1a1;font-style:italic"></span>		<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> == <span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">ErrSignatureInvalid</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109</span>			<span style="color:#93a1a1;font-style:italic">// return the Unauthorized Status
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110</span><span style="color:#93a1a1;font-style:italic"></span>			<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusUnauthorized</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111</span>			<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112</span>		}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113</span>		<span style="color:#93a1a1;font-style:italic">// Return the Bad Request for any other error
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114</span><span style="color:#93a1a1;font-style:italic"></span>		<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusBadRequest</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115</span>		<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117</span>	<span style="color:#93a1a1;font-style:italic">// Validate the token if it expired or not
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">if</span> !<span style="color:#268bd2">token</span>.<span style="color:#268bd2">Valid</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119</span>		<span style="color:#93a1a1;font-style:italic">// return the Unauthoried Status for expired token
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120</span><span style="color:#93a1a1;font-style:italic"></span>		<span style="color:#268bd2">w</span>.<span style="color:#268bd2">WriteHeader</span>(<span style="color:#268bd2">http</span>.<span style="color:#268bd2">StatusUnauthorized</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121</span>		<span style="color:#859900">return</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124</span>	<span style="color:#93a1a1;font-style:italic">// Type cast the Claims to *Token type
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">user</span> := <span style="color:#268bd2">token</span>.<span style="color:#268bd2">Claims</span>.(*<span style="color:#268bd2">Token</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127</span>	<span style="color:#93a1a1;font-style:italic">// send the username Dashboard message
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">json</span>.<span style="color:#268bd2">NewEncoder</span>(<span style="color:#268bd2">w</span>).<span style="color:#268bd2">Encode</span>(<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Sprintf</span>(<span style="color:#2aa198">&#34;%s Dashboard&#34;</span>, <span style="color:#268bd2">user</span>.<span style="color:#268bd2">Username</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133</span><span style="color:#93a1a1;font-style:italic">// ValidateToken validates the token with the secret key and return the object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">ValidateToken</span>(<span style="color:#268bd2">bearerToken</span> <span style="color:#859900;font-weight:bold">string</span>) (*<span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">Token</span>, <span style="color:#859900;font-weight:bold">error</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136</span>	<span style="color:#93a1a1;font-style:italic">// format the token string
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">tokenString</span> := <span style="color:#268bd2">strings</span>.<span style="color:#268bd2">Split</span>(<span style="color:#268bd2">bearerToken</span>, <span style="color:#2aa198">&#34; &#34;</span>)[<span style="color:#2aa198;font-weight:bold">1</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139</span>	<span style="color:#93a1a1;font-style:italic">// Parse the token with tokenObj
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">token</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">ParseWithClaims</span>(<span style="color:#268bd2">tokenString</span>, &amp;<span style="color:#268bd2">Token</span>{}, <span style="color:#859900">func</span>(<span style="color:#268bd2">token</span> *<span style="color:#268bd2">jwt</span>.<span style="color:#268bd2">Token</span>)(<span style="color:#859900">interface</span>{}, <span style="color:#859900;font-weight:bold">error</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141</span>		<span style="color:#859900">return</span> <span style="color:#268bd2">key</span>, <span style="color:#859900;font-weight:bold">nil</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142</span>	})
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144</span>	<span style="color:#93a1a1;font-style:italic">// return token and err
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#859900">return</span> <span style="color:#268bd2">token</span>, <span style="color:#268bd2">err</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146</span>}
 </code></pre></div><h2 id="run-the-server">Run the server</h2>
 <p>Open the terminal and first build the application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">go</span> build
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">go</span> <span style="color:#268bd2">build</span>
 </code></pre></div><p>It will generate a <code>go-jwt-app.exe</code> executable file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">.<span style="color:#ff79c6">/</span><span style="color:#ff79c6">go</span><span style="color:#ff79c6">-</span>jwt<span style="color:#ff79c6">-</span>app.exe
-
-Starting server on the port <span style="color:#bd93f9">8000.</span>..
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>./<span style="color:#859900">go</span>-<span style="color:#268bd2">jwt</span>-<span style="color:#268bd2">app</span>.<span style="color:#268bd2">exe</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#268bd2">Starting</span> <span style="color:#268bd2">server</span> <span style="color:#268bd2">on</span> <span style="color:#268bd2">the</span> <span style="color:#268bd2">port</span> <span style="color:#2aa198;font-weight:bold">8000.</span>..
 </code></pre></div><p>The server is started on the port 8000.</p>
 <h2 id="test-the-application">Test the application</h2>
 <p>Open the Postman and create a new POST request.</p>
@@ -489,10 +489,10 @@ Starting server on the port <span style="color:#bd93f9">8000.</span>..
 <li><strong>URL</strong>: <code>http://localhost:8000/login</code></li>
 <li><strong>Body</strong>: raw/JSON</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
-   <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;user1&#34;</span>,
-   <span style="color:#f1fa8c">&#34;password&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;password123&#34;</span>
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>   <span style="color:#2aa198">&#34;username&#34;</span>: <span style="color:#2aa198">&#34;user1&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>   <span style="color:#2aa198">&#34;password&#34;</span>: <span style="color:#2aa198">&#34;password123&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>}
 </code></pre></div><p>Send the request. It will send a JWT token in the response.<br>
 Copy the JWT Token.<br>
 <img  src="./images/login-postman.PNG"

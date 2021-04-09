@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to use Swapper in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to use Swapper in Golang?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to use Swapper in Golang?" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
@@ -47,29 +47,29 @@
         
         <p><a href="https://golang.org/pkg/reflect/#Swapper"target="_blank">Swapper</a> is a function defined in the <a href="https://golang.org/pkg/reflect/"target="_blank">reflect</a> package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.</p>
 <h3 id="function-definition">Function Definition</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">Swapper</span>(slice <span style="color:#8be9fd;font-style:italic">interface</span>{}) <span style="color:#8be9fd;font-style:italic">func</span>(i, j <span style="color:#8be9fd">int</span>)
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">Swapper</span>(<span style="color:#268bd2">slice</span> <span style="color:#859900">interface</span>{}) <span style="color:#859900">func</span>(<span style="color:#268bd2">i</span>, <span style="color:#268bd2">j</span> <span style="color:#859900;font-weight:bold">int</span>)
 </code></pre></div><p>Let's try</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;reflect&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	s <span style="color:#ff79c6">:=</span> []<span style="color:#8be9fd">int</span>{<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>}
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Before swap: %v\n&#34;</span>, s)
-
-	swapF <span style="color:#ff79c6">:=</span> reflect.<span style="color:#50fa7b">Swapper</span>(s)
-
-	<span style="color:#50fa7b">swapF</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>)
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;After 1 swap: %v\n&#34;</span>, s)
-
-	<span style="color:#50fa7b">swapF</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">2</span>)
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;After 2 swap: %v\n&#34;</span>, s)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;reflect&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">s</span> := []<span style="color:#859900;font-weight:bold">int</span>{<span style="color:#2aa198;font-weight:bold">1</span>, <span style="color:#2aa198;font-weight:bold">2</span>, <span style="color:#2aa198;font-weight:bold">3</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Before swap: %v\n&#34;</span>, <span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	<span style="color:#268bd2">swapF</span> := <span style="color:#268bd2">reflect</span>.<span style="color:#268bd2">Swapper</span>(<span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#268bd2">swapF</span>(<span style="color:#2aa198;font-weight:bold">0</span>, <span style="color:#2aa198;font-weight:bold">1</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;After 1 swap: %v\n&#34;</span>, <span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>	<span style="color:#268bd2">swapF</span>(<span style="color:#2aa198;font-weight:bold">0</span>, <span style="color:#2aa198;font-weight:bold">2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;After 2 swap: %v\n&#34;</span>, <span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>}
 </code></pre></div><p><a href="https://play.golang.org/p/pljUgJ0mEnJ"target="_blank">Try it</a></p>
 <p>Output</p>
 <pre><code>Before swap: [1 2 3]
@@ -79,56 +79,56 @@ After 2 swap: [3 1 2]
 <pre><code>panic: reflect: call of Swapper on &lt;Type&gt; Value
 </code></pre><h3 id="reverse-a-slice-using-swapper">Reverse a slice using Swapper</h3>
 <p>Swap first element with last element, second element with second last and so on.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;reflect&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	s <span style="color:#ff79c6">:=</span> []<span style="color:#8be9fd">int</span>{<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">7</span>}
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Before swap: %v\n&#34;</span>, s)
-
-	swapF <span style="color:#ff79c6">:=</span> reflect.<span style="color:#50fa7b">Swapper</span>(s)
-
-	<span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">:=</span> <span style="color:#bd93f9">0</span>; i &lt; <span style="color:#8be9fd;font-style:italic">len</span>(s)<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>; i<span style="color:#ff79c6">++</span> {
-		<span style="color:#50fa7b">swapF</span>(i, <span style="color:#8be9fd;font-style:italic">len</span>(s)<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span><span style="color:#ff79c6">-</span>i)
-	}
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;After swap: %v\n&#34;</span>, s)
-}
-
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;reflect&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">s</span> := []<span style="color:#859900;font-weight:bold">int</span>{<span style="color:#2aa198;font-weight:bold">1</span>, <span style="color:#2aa198;font-weight:bold">2</span>, <span style="color:#2aa198;font-weight:bold">3</span>, <span style="color:#2aa198;font-weight:bold">4</span>, <span style="color:#2aa198;font-weight:bold">5</span>, <span style="color:#2aa198;font-weight:bold">6</span>, <span style="color:#2aa198;font-weight:bold">7</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Before swap: %v\n&#34;</span>, <span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">swapF</span> := <span style="color:#268bd2">reflect</span>.<span style="color:#268bd2">Swapper</span>(<span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>	<span style="color:#859900">for</span> <span style="color:#268bd2">i</span> := <span style="color:#2aa198;font-weight:bold">0</span>; <span style="color:#268bd2">i</span> &lt; <span style="color:#cb4b16">len</span>(<span style="color:#268bd2">s</span>)/<span style="color:#2aa198;font-weight:bold">2</span>; <span style="color:#268bd2">i</span>++ {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>		<span style="color:#268bd2">swapF</span>(<span style="color:#268bd2">i</span>, <span style="color:#cb4b16">len</span>(<span style="color:#268bd2">s</span>)-<span style="color:#2aa198;font-weight:bold">1</span>-<span style="color:#268bd2">i</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;After swap: %v\n&#34;</span>, <span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>
 </code></pre></div><p><a href="https://play.golang.org/p/yFtphVvgvBN"target="_blank">Try it</a></p>
 <p>Output</p>
 <pre><code>Before swap: [1 2 3 4 5 6 7]
 After swap: [7 6 5 4 3 2 1]
 </code></pre><h3 id="use-swapper-in-bubble-sort">Use Swapper in Bubble sort</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;reflect&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	s <span style="color:#ff79c6">:=</span> []<span style="color:#8be9fd">int</span>{<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">7</span>, <span style="color:#bd93f9">9</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">4</span>}
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Before swapper: %v\n&#34;</span>, s)
-
-	swapF <span style="color:#ff79c6">:=</span> reflect.<span style="color:#50fa7b">Swapper</span>(s)
-
-	<span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">:=</span> <span style="color:#bd93f9">0</span>; i &lt; <span style="color:#8be9fd;font-style:italic">len</span>(s)<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>; i<span style="color:#ff79c6">++</span> {
-		<span style="color:#ff79c6">for</span> j <span style="color:#ff79c6">:=</span> i <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>; j &lt; <span style="color:#8be9fd;font-style:italic">len</span>(s); j<span style="color:#ff79c6">++</span> {
-			<span style="color:#ff79c6">if</span> s[i] &gt; s[j] {
-				<span style="color:#50fa7b">swapF</span>(i, j)
-			}
-		}
-	}
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;After swapper: %v\n&#34;</span>, s)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;reflect&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">s</span> := []<span style="color:#859900;font-weight:bold">int</span>{<span style="color:#2aa198;font-weight:bold">1</span>, <span style="color:#2aa198;font-weight:bold">2</span>, <span style="color:#2aa198;font-weight:bold">6</span>, <span style="color:#2aa198;font-weight:bold">3</span>, <span style="color:#2aa198;font-weight:bold">8</span>, <span style="color:#2aa198;font-weight:bold">0</span>, <span style="color:#2aa198;font-weight:bold">7</span>, <span style="color:#2aa198;font-weight:bold">9</span>, <span style="color:#2aa198;font-weight:bold">5</span>, <span style="color:#2aa198;font-weight:bold">4</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Before swapper: %v\n&#34;</span>, <span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">swapF</span> := <span style="color:#268bd2">reflect</span>.<span style="color:#268bd2">Swapper</span>(<span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>	<span style="color:#859900">for</span> <span style="color:#268bd2">i</span> := <span style="color:#2aa198;font-weight:bold">0</span>; <span style="color:#268bd2">i</span> &lt; <span style="color:#cb4b16">len</span>(<span style="color:#268bd2">s</span>)-<span style="color:#2aa198;font-weight:bold">1</span>; <span style="color:#268bd2">i</span>++ {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>		<span style="color:#859900">for</span> <span style="color:#268bd2">j</span> := <span style="color:#268bd2">i</span> + <span style="color:#2aa198;font-weight:bold">1</span>; <span style="color:#268bd2">j</span> &lt; <span style="color:#cb4b16">len</span>(<span style="color:#268bd2">s</span>); <span style="color:#268bd2">j</span>++ {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>			<span style="color:#859900">if</span> <span style="color:#268bd2">s</span>[<span style="color:#268bd2">i</span>] &gt; <span style="color:#268bd2">s</span>[<span style="color:#268bd2">j</span>] {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>				<span style="color:#268bd2">swapF</span>(<span style="color:#268bd2">i</span>, <span style="color:#268bd2">j</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>			}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>		}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;After swapper: %v\n&#34;</span>, <span style="color:#268bd2">s</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>}
 </code></pre></div><p>Output</p>
 <pre><code>Before swapper: [1 2 6 3 8 0 7 9 5 4]
 After swapper: [0 1 2 3 4 5 6 7 8 9]

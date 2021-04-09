@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Golang String Replace&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Golang String Replace&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Golang String Replace" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
@@ -40,7 +40,7 @@
 </section>
 
     <section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Golang String Replace</h1><p class="article date">Saturday, December 19, 2020<span class="reading-time"> • One minute to read</span></p><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2020/>2020</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="tag" href=/tags/golang/>golang</a></section>
+    <h1 class="article title">Golang String Replace</h1><p class="article date">Saturday, December 19, 2020<span class="reading-time"> • 2 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/2020/>2020</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="tag" href=/tags/golang/>golang</a></section>
 </section>
 <article class="article markdown-body">
         
@@ -48,43 +48,43 @@
         <p>Golang package <code>strings</code> provides <code>Replace</code> and <code>ReplaceAll</code> functions to replace the substring in the string.</p>
 <h2 id="replace">Replace</h2>
 <p><strong>Syntax</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">Replace</span>(s, old, new <span style="color:#8be9fd">string</span>, n <span style="color:#8be9fd">int</span>) <span style="color:#8be9fd">string</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">Replace</span>(<span style="color:#268bd2">s</span>, <span style="color:#268bd2">old</span>, <span style="color:#268bd2">new</span> <span style="color:#859900;font-weight:bold">string</span>, <span style="color:#268bd2">n</span> <span style="color:#859900;font-weight:bold">int</span>) <span style="color:#859900;font-weight:bold">string</span>
 </code></pre></div><p><code>n</code> is the number of first occurrence of the substring.<br>
 Replace <code>n</code> first occurrence of the substring.</p>
 <p>If <code>n &lt; 0</code>, then it will replace all the occurrence.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;strings&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-    str <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;Th0is is an en0c0oded 0000 message&#34;</span>
-
-	newStr <span style="color:#ff79c6">:=</span> strings.<span style="color:#50fa7b">Replace</span>(str, <span style="color:#f1fa8c">&#34;0&#34;</span>, <span style="color:#f1fa8c">&#34;&#34;</span>, <span style="color:#bd93f9">3</span>)
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Original String: %s\nAfter Replace: %s\n&#34;</span>, str, newStr)
-
-	<span style="color:#6272a4">// n = -1
-</span><span style="color:#6272a4"></span>	newStr =  strings.<span style="color:#50fa7b">Replace</span>(str, <span style="color:#f1fa8c">&#34;0&#34;</span>, <span style="color:#f1fa8c">&#34;&#34;</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>)
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;After Replace with -1: %s&#34;</span>, newStr)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;strings&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>    <span style="color:#268bd2">str</span> := <span style="color:#2aa198">&#34;Th0is is an en0c0oded 0000 message&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">newStr</span> := <span style="color:#268bd2">strings</span>.<span style="color:#268bd2">Replace</span>(<span style="color:#268bd2">str</span>, <span style="color:#2aa198">&#34;0&#34;</span>, <span style="color:#2aa198">&#34;&#34;</span>, <span style="color:#2aa198;font-weight:bold">3</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Original String: %s\nAfter Replace: %s\n&#34;</span>, <span style="color:#268bd2">str</span>, <span style="color:#268bd2">newStr</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>	<span style="color:#93a1a1;font-style:italic">// n = -1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span style="color:#93a1a1;font-style:italic"></span>	<span style="color:#268bd2">newStr</span> =  <span style="color:#268bd2">strings</span>.<span style="color:#268bd2">Replace</span>(<span style="color:#268bd2">str</span>, <span style="color:#2aa198">&#34;0&#34;</span>, <span style="color:#2aa198">&#34;&#34;</span>, -<span style="color:#2aa198;font-weight:bold">1</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;After Replace with -1: %s&#34;</span>, <span style="color:#268bd2">newStr</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>}
 </code></pre></div><p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Original String: Th0is is an en0c0oded <span style="color:#bd93f9">0000</span> message
-After Replace: This is an encoded <span style="color:#bd93f9">0000</span> message
-After Replace with <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>: This is an encoded  message
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Original</span> <span style="color:#268bd2">String</span>: <span style="color:#268bd2">Th0is</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">an</span> <span style="color:#268bd2">en0c0oded</span> <span style="color:#2aa198;font-weight:bold">0000</span> <span style="color:#268bd2">message</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">After</span> <span style="color:#268bd2">Replace</span>: <span style="color:#268bd2">This</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">an</span> <span style="color:#268bd2">encoded</span> <span style="color:#2aa198;font-weight:bold">0000</span> <span style="color:#268bd2">message</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#268bd2">After</span> <span style="color:#268bd2">Replace</span> <span style="color:#268bd2">with</span> -<span style="color:#2aa198;font-weight:bold">1</span>: <span style="color:#268bd2">This</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">an</span> <span style="color:#268bd2">encoded</span>  <span style="color:#268bd2">message</span>
 </code></pre></div><h2 id="replaceall">ReplaceAll</h2>
 <p><strong>Syntax</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">ReplaceAll</span>(s, old, new <span style="color:#8be9fd">string</span>) <span style="color:#8be9fd">string</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">str <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;Th0is is an en0c0oded 0000 message&#34;</span>
-
-newStr <span style="color:#ff79c6">:=</span> strings.<span style="color:#50fa7b">ReplaceAll</span>(str, <span style="color:#f1fa8c">&#34;0&#34;</span>, <span style="color:#f1fa8c">&#34;&#34;</span>)
-
-fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Original String: %s\nAfter Replace: %s\n&#34;</span>, str, newStr)
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">ReplaceAll</span>(<span style="color:#268bd2">s</span>, <span style="color:#268bd2">old</span>, <span style="color:#268bd2">new</span> <span style="color:#859900;font-weight:bold">string</span>) <span style="color:#859900;font-weight:bold">string</span>
+</code></pre></div><div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">str</span> := <span style="color:#2aa198">&#34;Th0is is an en0c0oded 0000 message&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#268bd2">newStr</span> := <span style="color:#268bd2">strings</span>.<span style="color:#268bd2">ReplaceAll</span>(<span style="color:#268bd2">str</span>, <span style="color:#2aa198">&#34;0&#34;</span>, <span style="color:#2aa198">&#34;&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Original String: %s\nAfter Replace: %s\n&#34;</span>, <span style="color:#268bd2">str</span>, <span style="color:#268bd2">newStr</span>)
 </code></pre></div><p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Original String: Th0is is an en0c0oded <span style="color:#bd93f9">0000</span> message
-After Replace: This is an encoded  message
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Original</span> <span style="color:#268bd2">String</span>: <span style="color:#268bd2">Th0is</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">an</span> <span style="color:#268bd2">en0c0oded</span> <span style="color:#2aa198;font-weight:bold">0000</span> <span style="color:#268bd2">message</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">After</span> <span style="color:#268bd2">Replace</span>: <span style="color:#268bd2">This</span> <span style="color:#268bd2">is</span> <span style="color:#268bd2">an</span> <span style="color:#268bd2">encoded</span>  <span style="color:#268bd2">message</span>
 </code></pre></div><h2 id="final-words">Final Words</h2>
 <p>It was always suggested to use <code>ReplaceAll</code> instead of <code>Replace</code> with <code>-1</code>. To support your <code>-1</code> you might need to add a comment.<br>
 Keep the code self explanatory.</p>

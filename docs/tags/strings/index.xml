@@ -20,8 +20,7 @@
       <guid>/to-the-point/compare-strings-in-golang/</guid>
       <description>A string value is a sequence of bytes.
 Using the Comparison operators == equal != not equal &amp;lt; less &amp;lt;= less or equal &amp;gt; greater &amp;gt;= greater or equal To check if strings are equal or not, you can use == or !=.
-package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;golang&amp;#34; str2 := &amp;#34;gopher&amp;#34; fmt.Println(str1 == str2) fmt.Println(str1 != str2) } Output
-false true To check the Lexicographic Order of 2 strings, you can use &amp;lt;, &amp;lt;=, &amp;gt;, &amp;gt;=.</description>
+1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5) 6 7func main() { 8 9	str1 := &amp;#34;golang&amp;#34; 10	str2 := &amp;#34;gopher&amp;#34; 11 12	fmt.Println(str1 == str2) 13	fmt.</description>
       
     </item>
     
@@ -33,8 +32,8 @@ false true To check the Lexicographic Order of 2 strings, you can use &amp;lt;, 
       <guid>/to-the-point/how-to-join-strings-in-golang/</guid>
       <description>There are multiple ways to join or concat strings in the golang.
 Let&#39;s start with the easy one.
-Using the + operator 🔧 package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;Hello&amp;#34; // there is a space before World 	str2 := &amp;#34; World!&amp;#34; fmt.Println(str1 + str2) } Output
-Hello World!  Using Sprint, Sprintf, Sprintln 🛠 The fmt package has Sprint, Sprintf and Sprintln function which can format the strings using the default or custom formats.</description>
+Using the + operator 🔧 1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5) 6 7func main() { 8	str1 := &amp;#34;Hello&amp;#34; 9	// there is a space before World 10	str2 := &amp;#34; World!&amp;#34; 11 12	fmt.Println(str1 + str2) 13} Output
+1Hello World!  Using Sprint, Sprintf, Sprintln 🛠 The fmt package has Sprint, Sprintf and Sprintln function which can format the strings using the default or custom formats.</description>
       
     </item>
     

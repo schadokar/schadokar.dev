@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create your first Serverless application&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create your first Serverless application&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Create your first Serverless application" /><meta name="twitter:image" content="https://schadokar.dev/posts/create-your-first-serverless-application/images/serverless-aws.png" /><body><section id="header">
@@ -62,47 +62,47 @@ Isn't it great? 😃</p>
 <p>Go to <a href="https://nodejs.org/en/download/"target="_blank">nodejs</a>.</p>
 <h2 id="install-serverless">Install serverless</h2>
 <p>Run the below <code>npm</code> command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">npm install <span style="color:#ff79c6">--</span>global serverless
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">npm</span> <span style="color:#268bd2">install</span> --<span style="color:#268bd2">global</span> <span style="color:#268bd2">serverless</span>
 </code></pre></div><h1 id="create-a-nodejs-application-and-deploy-on-aws">Create a nodejs application and deploy on AWS</h1>
 <p>Create a new directory <code>hello-serverless</code>.<br>
 Open the terminal in the directory and run the below command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">serverless create <span style="color:#ff79c6">--</span>template aws<span style="color:#ff79c6">-</span>nodejs
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">serverless</span> <span style="color:#268bd2">create</span> --<span style="color:#268bd2">template</span> <span style="color:#268bd2">aws</span>-<span style="color:#268bd2">nodejs</span>
 </code></pre></div><p><img  src="./images/boilerplate.PNG"
         alt="boilerplate"/></p>
 <p>This template has created 2 files, <code>handler.js</code> where the function is defined and <code>serverless.yml</code> where serverless deployment configuration is defined.</p>
 <p>Open <code>handler.js</code>.</p>
 <p>This is a simple function which will return a message.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">module.exports.hello <span style="color:#ff79c6">=</span> async (event) =&gt; {
-  <span style="color:#ff79c6">return</span> {
-    statusCode<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">200</span>,
-    body<span style="color:#ff79c6">:</span> JSON.stringify(
-      {
-        message<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Go Serverless v1.0! Your function executed successfully!&#34;</span>,
-        input<span style="color:#ff79c6">:</span> event,
-      },
-      <span style="color:#ff79c6">null</span>,
-      <span style="color:#bd93f9">2</span>
-    ),
-  };
-};
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#268bd2">module</span>.<span style="color:#268bd2">exports</span>.<span style="color:#268bd2">hello</span> = <span style="color:#268bd2">async</span> (<span style="color:#268bd2">event</span>) =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#859900">return</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    <span style="color:#268bd2">statusCode</span>: <span style="color:#2aa198;font-weight:bold">200</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>    <span style="color:#268bd2">body</span>: <span style="color:#268bd2">JSON</span>.<span style="color:#268bd2">stringify</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>      {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>        <span style="color:#268bd2">message</span>: <span style="color:#2aa198">&#34;Go Serverless v1.0! Your function executed successfully!&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>        <span style="color:#268bd2">input</span>: <span style="color:#268bd2">event</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>      },
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>      <span style="color:#859900;font-weight:bold">null</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>      <span style="color:#2aa198;font-weight:bold">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    ),
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>  };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>};
 </code></pre></div><h2 id="create-an-api-endpoint-for-hello-function">Create an API endpoint for hello function</h2>
 <p>Open <code>serverless.yml</code>.</p>
 <p>In the provider section, it is <code>aws</code> and by default, its region is <code>us-east-1</code>. It also provides a staging option, you can deploy the project in a different environment like dev, prod or test.</p>
 <p>Update the provider section:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">provider:
-  name: aws
-  runtime: nodejs12.x
-  stage: dev
-  region: us-east<span style="color:#bd93f9">-1</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>provider:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  name: aws
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>  runtime: nodejs12.x
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>  stage: dev
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>  region: us-east<span style="color:#2aa198;font-weight:bold">-1</span>
 </code></pre></div><p>In the functions, create a new route for the hello function. It will create a new route in the AWS API gateway and link it to the AWS lambda function in which <code>hello</code> function will deploy.</p>
 <p>Update the function section:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          path: v1/hello
-          method: get
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>functions:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  hello:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>    handler: handler.hello
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>    events:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>      - http:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>          path: v1/hello
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>          method: get
 </code></pre></div><p>We have created a <code>http</code> event of <code>GET</code> request type and <code>v1/hello</code> route.</p>
 <p>The function is ready and configured.</p>
 <p>For deploying it, we need to connect AWS account with the serverless.</p>
@@ -127,12 +127,12 @@ This is only for the education purpose, in production configure the access accor
 <h2 id="deploy-to-aws">Deploy to AWS</h2>
 <p>Open terminal in the project directory.<br>
 Run the below command to connect serverless CLI to AWS account.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">serverless config credentials <span style="color:#ff79c6">--</span>provider aws <span style="color:#ff79c6">--</span>key <span style="color:#ff79c6">&lt;</span>ACCESS KEY<span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">--</span>secret <span style="color:#ff79c6">&lt;</span>Secret Access key<span style="color:#ff79c6">&gt;</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">serverless</span> <span style="color:#268bd2">config</span> <span style="color:#268bd2">credentials</span> --<span style="color:#268bd2">provider</span> <span style="color:#268bd2">aws</span> --<span style="color:#268bd2">key</span> &lt;<span style="color:#268bd2">ACCESS</span> <span style="color:#268bd2">KEY</span>&gt; --<span style="color:#268bd2">secret</span> &lt;<span style="color:#268bd2">Secret</span> <span style="color:#268bd2">Access</span> <span style="color:#268bd2">key</span>&gt;
 </code></pre></div><blockquote>
 <p>❗ Don't use the shorthand <code>-s</code> for secret, it is reserved keyword and will throw a serverless error <code>Invalid stage name</code>.</p>
 </blockquote>
 <p>Use the below command to deploy the function to the AWS.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">serverless deploy
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">serverless</span> <span style="color:#268bd2">deploy</span>
 </code></pre></div><blockquote>
 <p>You can use <code>sls</code> for <code>serverless</code>. It is a shorthand notation.</p>
 </blockquote>

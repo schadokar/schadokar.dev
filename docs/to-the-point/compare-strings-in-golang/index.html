@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Compare Strings in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Compare Strings in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Compare Strings in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
@@ -54,21 +54,21 @@
 &gt;     greater
 &gt;=    greater or equal
 </code></pre><p>To check if strings are equal or not, you can use <code>==</code> or <code>!=</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-
-	str1 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;golang&#34;</span>
-	str2 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;gopher&#34;</span>
-
-	fmt.<span style="color:#50fa7b">Println</span>(str1 <span style="color:#ff79c6">==</span> str2)
-	fmt.<span style="color:#50fa7b">Println</span>(str1 <span style="color:#ff79c6">!=</span> str2)
-
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">str1</span> := <span style="color:#2aa198">&#34;golang&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#268bd2">str2</span> := <span style="color:#2aa198">&#34;gopher&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">str1</span> == <span style="color:#268bd2">str2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">str1</span> != <span style="color:#268bd2">str2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>}
 </code></pre></div><p>Output</p>
 <pre><code>false
 true
@@ -77,25 +77,25 @@ true
 <p><strong>Lexicographic Order:</strong> This is dictionary order, except that all the uppercase letters preceed all the lowercase letters.<br>
 Example: Uppercase <code>A</code> comes first then the lowercase <code>a</code>.</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-
-	str1 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;apple&#34;</span>
-	str2 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;banana&#34;</span>
-	str3 <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;Apple&#34;</span>
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%s &lt; %s = %v\n&#34;</span>, str1, str2, str1 &lt; str2)
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%s &lt;= %s = %v\n&#34;</span>, str1, str2, str1 <span style="color:#ff79c6">&lt;=</span> str2)
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%s &gt; %s = %v\n&#34;</span>, str1, str2, str1 &gt; str2)
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%s &gt;= %s = %v\n&#34;</span>, str1, str2, str1 <span style="color:#ff79c6">&gt;=</span> str2)
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%s &lt; %s = %v\n&#34;</span>, str1, str3, str1 &lt; str3)
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;%s &gt; %s = %v\n&#34;</span>, str1, str3, str1 &gt; str3)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">str1</span> := <span style="color:#2aa198">&#34;apple&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#268bd2">str2</span> := <span style="color:#2aa198">&#34;banana&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">str3</span> := <span style="color:#2aa198">&#34;Apple&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;%s &lt; %s = %v\n&#34;</span>, <span style="color:#268bd2">str1</span>, <span style="color:#268bd2">str2</span>, <span style="color:#268bd2">str1</span> &lt; <span style="color:#268bd2">str2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;%s &lt;= %s = %v\n&#34;</span>, <span style="color:#268bd2">str1</span>, <span style="color:#268bd2">str2</span>, <span style="color:#268bd2">str1</span> &lt;= <span style="color:#268bd2">str2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;%s &gt; %s = %v\n&#34;</span>, <span style="color:#268bd2">str1</span>, <span style="color:#268bd2">str2</span>, <span style="color:#268bd2">str1</span> &gt; <span style="color:#268bd2">str2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;%s &gt;= %s = %v\n&#34;</span>, <span style="color:#268bd2">str1</span>, <span style="color:#268bd2">str2</span>, <span style="color:#268bd2">str1</span> &gt;= <span style="color:#268bd2">str2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;%s &lt; %s = %v\n&#34;</span>, <span style="color:#268bd2">str1</span>, <span style="color:#268bd2">str3</span>, <span style="color:#268bd2">str1</span> &lt; <span style="color:#268bd2">str3</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;%s &gt; %s = %v\n&#34;</span>, <span style="color:#268bd2">str1</span>, <span style="color:#268bd2">str3</span>, <span style="color:#268bd2">str1</span> &gt; <span style="color:#268bd2">str3</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>}
 </code></pre></div><p>Output</p>
 <pre><code>apple &lt; banana = true
 apple &lt;= banana = true
@@ -114,18 +114,18 @@ The result will be</p>
 -1 if a &lt; b
 +1 if a &gt; b
 </code></pre><p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;strings&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	fmt.<span style="color:#50fa7b">Println</span>(strings.<span style="color:#50fa7b">Compare</span>(<span style="color:#f1fa8c">&#34;a&#34;</span>, <span style="color:#f1fa8c">&#34;b&#34;</span>))
-	fmt.<span style="color:#50fa7b">Println</span>(strings.<span style="color:#50fa7b">Compare</span>(<span style="color:#f1fa8c">&#34;a&#34;</span>, <span style="color:#f1fa8c">&#34;a&#34;</span>))
-	fmt.<span style="color:#50fa7b">Println</span>(strings.<span style="color:#50fa7b">Compare</span>(<span style="color:#f1fa8c">&#34;b&#34;</span>, <span style="color:#f1fa8c">&#34;a&#34;</span>))
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;strings&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">strings</span>.<span style="color:#268bd2">Compare</span>(<span style="color:#2aa198">&#34;a&#34;</span>, <span style="color:#2aa198">&#34;b&#34;</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">strings</span>.<span style="color:#268bd2">Compare</span>(<span style="color:#2aa198">&#34;a&#34;</span>, <span style="color:#2aa198">&#34;a&#34;</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">strings</span>.<span style="color:#268bd2">Compare</span>(<span style="color:#2aa198">&#34;b&#34;</span>, <span style="color:#2aa198">&#34;a&#34;</span>))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>}
 </code></pre></div><p>Output</p>
 <pre><code>-1
 0

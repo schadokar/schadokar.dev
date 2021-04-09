@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Convert Byte to Hex and Hex to Byte in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Convert Byte to Hex and Hex to Byte in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Convert Byte to Hex and Hex to Byte in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
@@ -49,57 +49,57 @@
 <h1 id="byte-array-to-hex-string">byte array to hex string</h1>
 <p>To convert a byte array to hex string, we will encode the byte array to the hexadecimal string.</p>
 <h3 id="syntax">Syntax</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">EncodeToString</span>(src []<span style="color:#8be9fd">byte</span>) <span style="color:#8be9fd">string</span>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">EncodeToString</span>(<span style="color:#268bd2">src</span> []<span style="color:#859900;font-weight:bold">byte</span>) <span style="color:#859900;font-weight:bold">string</span>
 </code></pre></div><p>First we will convert a string to a byte array.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;encoding/hex&#34;</span>
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	byteArray <span style="color:#ff79c6">:=</span> []<span style="color:#8be9fd;font-style:italic">byte</span>(<span style="color:#f1fa8c">&#34;Learn Go!&#34;</span>)
-	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;byteArray: &#34;</span>, byteArray)
-
-	encodedString <span style="color:#ff79c6">:=</span> hex.<span style="color:#50fa7b">EncodeToString</span>(byteArray)
-
-	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Encoded Hex String: &#34;</span>, encodedString)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;encoding/hex&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">byteArray</span> := []<span style="color:#cb4b16">byte</span>(<span style="color:#2aa198">&#34;Learn Go!&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;byteArray: &#34;</span>, <span style="color:#268bd2">byteArray</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	<span style="color:#268bd2">encodedString</span> := <span style="color:#268bd2">hex</span>.<span style="color:#268bd2">EncodeToString</span>(<span style="color:#268bd2">byteArray</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Encoded Hex String: &#34;</span>, <span style="color:#268bd2">encodedString</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>}
 </code></pre></div><p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">byteArray: [<span style="color:#bd93f9">76</span> <span style="color:#bd93f9">101</span> <span style="color:#bd93f9">97</span> <span style="color:#bd93f9">114</span> <span style="color:#bd93f9">110</span> <span style="color:#bd93f9">32</span> <span style="color:#bd93f9">71</span> <span style="color:#bd93f9">111</span> <span style="color:#bd93f9">33</span>]
-Encoded Hex String: <span style="color:#bd93f9">4</span>c6561726e20476f21
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">byteArray</span>: [<span style="color:#2aa198;font-weight:bold">76</span> <span style="color:#2aa198;font-weight:bold">101</span> <span style="color:#2aa198;font-weight:bold">97</span> <span style="color:#2aa198;font-weight:bold">114</span> <span style="color:#2aa198;font-weight:bold">110</span> <span style="color:#2aa198;font-weight:bold">32</span> <span style="color:#2aa198;font-weight:bold">71</span> <span style="color:#2aa198;font-weight:bold">111</span> <span style="color:#2aa198;font-weight:bold">33</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">Encoded</span> <span style="color:#268bd2">Hex</span> <span style="color:#268bd2">String</span>: <span style="color:#2aa198;font-weight:bold">4</span><span style="color:#268bd2">c6561726e20476f21</span>
 </code></pre></div><p><a href="https://play.golang.org/p/z9TmK3KoBGy"target="_blank">Try it</a></p>
 <h1 id="hex-string-to-byte-array">hex string to byte array</h1>
 <p>To convert hex string to byte array, we will decode the encoded hex string.</p>
 <h3 id="syntax-1">Syntax</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">DecodeString</span>(s <span style="color:#8be9fd">string</span>) ([]<span style="color:#8be9fd">byte</span>, <span style="color:#8be9fd">error</span>)
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">DecodeString</span>(<span style="color:#268bd2">s</span> <span style="color:#859900;font-weight:bold">string</span>) ([]<span style="color:#859900;font-weight:bold">byte</span>, <span style="color:#859900;font-weight:bold">error</span>)
 </code></pre></div><p>We are going to use the same hex string from above.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;encoding/hex&#34;</span>
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	hexString <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;4c6561726e20476f21&#34;</span>
-
-	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Hex String: &#34;</span>, hexString)
-
-	decodedByteArray, err <span style="color:#ff79c6">:=</span> hex.<span style="color:#50fa7b">DecodeString</span>(hexString)
-
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Unable to convert hex to byte. &#34;</span>, err)
-	}
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Decoded Byte Array: %v \nDecoded String: %s&#34;</span>, decodedByteArray, decodedByteArray)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;encoding/hex&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">hexString</span> := <span style="color:#2aa198">&#34;4c6561726e20476f21&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Hex String: &#34;</span>, <span style="color:#268bd2">hexString</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">decodedByteArray</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">hex</span>.<span style="color:#268bd2">DecodeString</span>(<span style="color:#268bd2">hexString</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>		<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Unable to convert hex to byte. &#34;</span>, <span style="color:#268bd2">err</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Decoded Byte Array: %v \nDecoded String: %s&#34;</span>, <span style="color:#268bd2">decodedByteArray</span>, <span style="color:#268bd2">decodedByteArray</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>}
 </code></pre></div><p><a href="https://play.golang.org/p/dxuei1X-nyd"target="_blank">Try it</a></p>
 <p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Hex String:  <span style="color:#bd93f9">4</span>c6561726e20476f21
-Decoded Byte Array: [<span style="color:#bd93f9">76</span> <span style="color:#bd93f9">101</span> <span style="color:#bd93f9">97</span> <span style="color:#bd93f9">114</span> <span style="color:#bd93f9">110</span> <span style="color:#bd93f9">32</span> <span style="color:#bd93f9">71</span> <span style="color:#bd93f9">111</span> <span style="color:#bd93f9">33</span>]
-Decoded String: Learn Go!
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Hex</span> <span style="color:#268bd2">String</span>:  <span style="color:#2aa198;font-weight:bold">4</span><span style="color:#268bd2">c6561726e20476f21</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">Decoded</span> <span style="color:#268bd2">Byte</span> <span style="color:#268bd2">Array</span>: [<span style="color:#2aa198;font-weight:bold">76</span> <span style="color:#2aa198;font-weight:bold">101</span> <span style="color:#2aa198;font-weight:bold">97</span> <span style="color:#2aa198;font-weight:bold">114</span> <span style="color:#2aa198;font-weight:bold">110</span> <span style="color:#2aa198;font-weight:bold">32</span> <span style="color:#2aa198;font-weight:bold">71</span> <span style="color:#2aa198;font-weight:bold">111</span> <span style="color:#2aa198;font-weight:bold">33</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#268bd2">Decoded</span> <span style="color:#268bd2">String</span>: <span style="color:#268bd2">Learn</span> <span style="color:#268bd2">Go</span>!
 </code></pre></div><hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/2020/>2020</a><a class="category" href=/categories/golang/>Golang</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/conversion/>conversion</a></section></div>
 <div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/"><span class="">Previous</span>Remove an Element From an Array Using Filter in Nodejs</a></p><p><a class="link" href="/to-the-point/create-an-account-in-sendinblue/"><span class="">Next</span>Create an Account in Sendinblue</a></p></section></div></section>

@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create an Ethereum Dapp with React and Docker&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create an Ethereum Dapp with React and Docker&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Create an Ethereum Dapp with React and Docker" /><meta name="twitter:image" content="https://schadokar.dev/posts/create-an-ethereum-dapp-with-react-and-docker/asset-1.png" /><body><section id="header">
@@ -67,15 +67,15 @@
 <h3 id="project-setup"><strong>Project Setup</strong></h3>
 <p>Create a project folder and give it the name <strong>docker-ethereum</strong>.</p>
 <p><strong>Directory Structure</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker-ethereum
-    - client
-    - ethereum
-    - server
-    - .dockerignore
-    - docker-compose.yml
-    - Dockerfile
-    - Dockerfile.ganache
-    - package.json
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>docker-ethereum
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>    - client
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>    - ethereum
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>    - server
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>    - .dockerignore
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>    - docker-compose.yml
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>    - Dockerfile
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span>    - Dockerfile.ganache
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span>    - package.json
 </code></pre></div><h4 id="packagejson">package.json</h4>
 <p>Create a <code>package.json</code> and paste the below code:</p>
 <script type="application/javascript" src="https://gist.github.com/schadokar/36140ba36e643ef5f464a31004e80006.js"></script>
@@ -113,15 +113,15 @@
 <h4 id="ethereum-dapp">Ethereum Dapp</h4>
 <p>Create a <code>Ethereum</code>folder in the project directory.</p>
 <p><strong>Directory Structure</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Ethereum
-- build
-- contracts
-  - Message.sol
-- compile.js
-- deploy.js
-- logic.js
-- receipt-ganache.json
-- web3.js
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>Ethereum
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>- build
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>- contracts
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>  - Message.sol
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>- compile.js
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>- deploy.js
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>- logic.js
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span>- receipt-ganache.json
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span>- web3.js
 </code></pre></div><p>Inside the Ethereum directory:</p>
 <h4 id="contracts"><strong>contracts</strong></h4>
 <p>Create a new folder <code>contracts</code>and a new file <code>Message.sol</code> in the contracts folder and paste the below code.</p>
@@ -177,11 +177,11 @@
 <h3 id="server">server</h3>
 <p>Create a <code>server</code> folder in the project directory.</p>
 <p><strong>Directory Structure</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">server
-  - routes
-    - contract-API.js
-    - smart-contract-API.js
-  - index.js
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>server
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  - routes
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>    - contract-API.js
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>    - smart-contract-API.js
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>  - index.js
 </code></pre></div><h4 id="routes">routes</h4>
 <p>Create a <code>routes</code> folder inside the <code>server</code> folder.</p>
 <p><strong>contract-API.js</strong></p>
@@ -238,25 +238,25 @@ client/
 </code></pre><p>From the project directory, open the terminal or console to create the react app by name <code>client</code> and run the below command.</p>
 <pre><code class="language-node" data-lang="node">create-react-app client
 </code></pre><p><strong>Directory Structure</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">client
-<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">public</span>
-  <span style="color:#ff79c6">-</span> favicon.ico
-  <span style="color:#ff79c6">-</span> index.html
-  <span style="color:#ff79c6">-</span> manifest.json
-<span style="color:#ff79c6">-</span> src
-  <span style="color:#ff79c6">-</span> App.css
-  <span style="color:#ff79c6">-</span> App.js
-  <span style="color:#ff79c6">-</span> App.test.js
-  <span style="color:#ff79c6">-</span> index.css
-  <span style="color:#ff79c6">-</span> index.js
-  <span style="color:#ff79c6">-</span> logo.svg
-  <span style="color:#ff79c6">-</span> message.js
-  <span style="color:#ff79c6">-</span> serviceWorker.js
-<span style="color:#ff79c6">-</span> .dockerignore
-<span style="color:#ff79c6">-</span> Dockerfile
-<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">package</span><span style="color:#ff79c6">-</span>lock.json
-<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">package</span>.json
-<span style="color:#ff79c6">-</span> README.md
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#268bd2">client</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>- <span style="color:#859900">public</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>  - <span style="color:#268bd2">favicon</span>.<span style="color:#268bd2">ico</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  - <span style="color:#268bd2">index</span>.<span style="color:#268bd2">html</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>  - <span style="color:#268bd2">manifest</span>.<span style="color:#268bd2">json</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>- <span style="color:#268bd2">src</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>  - <span style="color:#268bd2">App</span>.<span style="color:#268bd2">css</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>  - <span style="color:#268bd2">App</span>.<span style="color:#268bd2">js</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>  - <span style="color:#268bd2">App</span>.<span style="color:#268bd2">test</span>.<span style="color:#268bd2">js</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>  - <span style="color:#268bd2">index</span>.<span style="color:#268bd2">css</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>  - <span style="color:#268bd2">index</span>.<span style="color:#268bd2">js</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>  - <span style="color:#268bd2">logo</span>.<span style="color:#268bd2">svg</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>  - <span style="color:#268bd2">message</span>.<span style="color:#268bd2">js</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>  - <span style="color:#268bd2">serviceWorker</span>.<span style="color:#268bd2">js</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>- .<span style="color:#268bd2">dockerignore</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>- <span style="color:#268bd2">Dockerfile</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>- <span style="color:#859900">package</span>-<span style="color:#268bd2">lock</span>.<span style="color:#268bd2">json</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>- <span style="color:#859900">package</span>.<span style="color:#268bd2">json</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>- <span style="color:#268bd2">README</span>.<span style="color:#268bd2">md</span>
 </code></pre></div><p>Once the <code>client</code> is created you will see a folder structure like above except <code>message.js</code> inside the <code>src</code> ,<code>Dockerfile</code> and <code>.dockerignore</code>.</p>
 <p>For more information on react please follow the below links:</p>
 <ul>
@@ -265,7 +265,7 @@ client/
 </ul>
 <h4 id="indexhtml">index.html</h4>
 <p>Open <code>index.html</code> from the <code>public</code> folder and change the title to <code>Message App</code> . Add the below link in the <code>&lt;head&gt;</code> tag. This is the fonts which are used in the application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;https://fonts.googleapis.com/css?family=Open+Sans:300&#39;</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;stylesheet&#39;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;text/css&#39;</span>&gt;
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>&lt;<span style="color:#268bd2;font-weight:bold">link</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#39;https://fonts.googleapis.com/css?family=Open+Sans:300&#39;</span> <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#39;stylesheet&#39;</span> <span style="color:#268bd2">type</span>=<span style="color:#2aa198">&#39;text/css&#39;</span>&gt;
 </code></pre></div><h4 id="appcss">App.css</h4>
 <p>Open the <code>App.css</code> from the <code>src</code> folder and paste the <code>css</code> from this <a href="https://gist.github.com/schadokar/7635212e2a284bf6055f806f8fc1f664"target="_blank">link</a>.</p>
 <h4 id="messagejs">message.js</h4>
@@ -353,7 +353,7 @@ client/
 <hr>
 <p>So, the hard part is over. Now, the fun part let’s run the application.</p>
 <p>Open the terminal from the root project directory and run the below command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker">docker-compose up --build
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>docker-compose up --build
 </code></pre></div><p>It will check for <code>docker-compose.yml</code> file in the current directory and will run it. For the first time, it will take some time so have patience.</p>
 <p>Once everything is running, open the browser and go to <code>localhost:3000</code> you’ll see the react application running.</p>
 <p><img  src="./asset-3.png"
@@ -386,7 +386,7 @@ client/
         alt="Get Message"/></p>
 <p>We successfully created the Ethereum Dapp with React and Docker.</p>
 <p>You don’t have to build the <code>docker-compose.yml</code> every time. Next time you just have to run the below command to run the application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker">docker-compose up
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>docker-compose up
 </code></pre></div><p>You can clone the complete project from the <a href="https://github.com/schadokar/docker-ethereum.git"target="_blank">GitHub link</a>.</p>
 <hr>
 </article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/blockchain/>Blockchain</a><a class="category" href=/categories/2019/>2019</a><a class="tag" href=/tags/blockchain/>blockchain</a><a class="tag" href=/tags/ethereum/>ethereum</a><a class="tag" href=/tags/tutorial/>tutorial</a></section></div>

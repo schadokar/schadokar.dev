@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Store Hyperledger Fabric certificates and keys in CouchDB&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Store Hyperledger Fabric certificates and keys in CouchDB&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Store Hyperledger Fabric certificates and keys in CouchDB" /><meta name="twitter:image" content="https://schadokar.dev/posts/store-hyperledger-fabric-certificates-and-keys-in-couchdb/cover-pic.jpg" /><body><section id="header">
@@ -72,19 +72,19 @@ Using couchdb as a wallet. This option is best for production.</li>
 <p>The wallet uses 2 stores to save the certificates and keys:</p>
 <h4 id="1-state-store">1. State Store:</h4>
 <p>The state store is used to store the certificates of the enrolled identity. It stores the basic information of the identity:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;test&#34;</span>,
-  <span style="color:#ff79c6">&#34;mspid&#34;</span>: <span style="color:#f1fa8c">&#34;org1&#34;</span>,
-  <span style="color:#ff79c6">&#34;roles&#34;</span>: <span style="color:#ff79c6">null</span>,
-  <span style="color:#ff79c6">&#34;affiliation&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
-  <span style="color:#ff79c6">&#34;enrollmentSecret&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;ENROLLMENT_SECRET&gt;&#34;</span>,
-  <span style="color:#ff79c6">&#34;enrollment&#34;</span>: {
-    <span style="color:#ff79c6">&#34;signingIdentity&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;PRIVATE_KEY_NAME&gt;&#34;</span>,
-    <span style="color:#ff79c6">&#34;identity&#34;</span>: {
-      <span style="color:#ff79c6">&#34;certificate&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;SIGN_CERT&gt;&#34;</span>
-    }
-  }
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#268bd2;font-weight:bold">&#34;name&#34;</span>: <span style="color:#2aa198">&#34;test&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>  <span style="color:#268bd2;font-weight:bold">&#34;mspid&#34;</span>: <span style="color:#2aa198">&#34;org1&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  <span style="color:#268bd2;font-weight:bold">&#34;roles&#34;</span>: <span style="color:#859900;font-weight:bold">null</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>  <span style="color:#268bd2;font-weight:bold">&#34;affiliation&#34;</span>: <span style="color:#2aa198">&#34;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>  <span style="color:#268bd2;font-weight:bold">&#34;enrollmentSecret&#34;</span>: <span style="color:#2aa198">&#34;&lt;ENROLLMENT_SECRET&gt;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>  <span style="color:#268bd2;font-weight:bold">&#34;enrollment&#34;</span>: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>    <span style="color:#268bd2;font-weight:bold">&#34;signingIdentity&#34;</span>: <span style="color:#2aa198">&#34;&lt;PRIVATE_KEY_NAME&gt;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>    <span style="color:#268bd2;font-weight:bold">&#34;identity&#34;</span>: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>      <span style="color:#268bd2;font-weight:bold">&#34;certificate&#34;</span>: <span style="color:#2aa198">&#34;&lt;SIGN_CERT&gt;&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>}
 </code></pre></div><blockquote>
 <p>❗️ <em>Note: The signingIdentity is the pointer or the address of the private and public key stored in the crypto-store.</em></p>
 </blockquote>
@@ -94,22 +94,22 @@ Using couchdb as a wallet. This option is best for production.</li>
 <p>To configure the couchdb as wallet:</p>
 <h4 id="step-1">Step 1</h4>
 <p>Import the <code>CouchDBKeyValueStore</code> library, which is provided by the <code>Node SDK</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> CDBKVS <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fabric-client/lib/impl/CouchDBKeyValueStore.js&#34;</span>);
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">const</span> <span style="color:#268bd2">CDBKVS</span> = <span style="color:#268bd2">require</span>(<span style="color:#2aa198">&#34;fabric-client/lib/impl/CouchDBKeyValueStore.js&#34;</span>);
 </code></pre></div><blockquote>
 <p><em>Do read the <a href="https://github.com/hyperledger/fabric-sdk-node/blob/release-1.4/fabric-client/lib/impl/CouchDBKeyValueStore.js"target="_blank"><code>CouchDBKeyValueStore.js</code></a> it is worth reading.</em></p>
 </blockquote>
 <h4 id="step-2">Step 2</h4>
 <p>Set the <code>state store</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8be9fd;font-style:italic">let</span> stateStore <span style="color:#ff79c6">=</span> await <span style="color:#ff79c6">new</span> CDBKVS({
-  url<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
-  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;DB_NAME&gt;&#34;</span>
-});
-
-<span style="color:#ff79c6">const</span> Client <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fabric-client&#34;</span>);
-
-<span style="color:#ff79c6">const</span> client <span style="color:#ff79c6">=</span> Client.loadFromConfig(<span style="color:#f1fa8c">&#34;path of network.yaml&#34;</span>);
-
-client.setStateStore(stateStore);
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">let</span> <span style="color:#268bd2">stateStore</span> = <span style="color:#268bd2">await</span> <span style="color:#859900">new</span> <span style="color:#268bd2">CDBKVS</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#268bd2">url</span>: <span style="color:#2aa198">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>  <span style="color:#268bd2">name</span>: <span style="color:#2aa198">&#34;&lt;DB_NAME&gt;&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>});
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#859900">const</span> <span style="color:#268bd2">Client</span> = <span style="color:#268bd2">require</span>(<span style="color:#2aa198">&#34;fabric-client&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">const</span> <span style="color:#268bd2">client</span> = <span style="color:#268bd2">Client</span>.<span style="color:#268bd2">loadFromConfig</span>(<span style="color:#2aa198">&#34;path of network.yaml&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#268bd2">client</span>.<span style="color:#268bd2">setStateStore</span>(<span style="color:#268bd2">stateStore</span>);
 </code></pre></div><ul>
 <li><code>&lt;USERNAME&gt;</code> is the username of the couchdb.</li>
 <li><code>&lt;PASSWORD&gt;</code> is the password of the couchdb.</li>
@@ -121,16 +121,16 @@ client.setStateStore(stateStore);
 </blockquote>
 <h4 id="step-3">Step 3</h4>
 <p>Set the <code>crypto store</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> cryptoSuite <span style="color:#ff79c6">=</span> Client.newCryptoSuite();
-
-<span style="color:#8be9fd;font-style:italic">let</span> cryptoKS <span style="color:#ff79c6">=</span> Client.newCryptoKeyStore(CDBKVS, {
-  url<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
-  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;DB_NAME&gt;&#34;</span>
-});
-
-cryptoSuite.setCryptoKeyStore(cryptoKS);
-
-client.setCryptoSuite(cryptoSuite);
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">const</span> <span style="color:#268bd2">cryptoSuite</span> = <span style="color:#268bd2">Client</span>.<span style="color:#268bd2">newCryptoSuite</span>();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#859900">let</span> <span style="color:#268bd2">cryptoKS</span> = <span style="color:#268bd2">Client</span>.<span style="color:#268bd2">newCryptoKeyStore</span>(<span style="color:#268bd2">CDBKVS</span>, {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  <span style="color:#268bd2">url</span>: <span style="color:#2aa198">&#34;https://&lt;USERNAME&gt;:&lt;PASSWORD&gt;@&lt;URL&gt;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>  <span style="color:#268bd2">name</span>: <span style="color:#2aa198">&#34;&lt;DB_NAME&gt;&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>});
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#268bd2">cryptoSuite</span>.<span style="color:#268bd2">setCryptoKeyStore</span>(<span style="color:#268bd2">cryptoKS</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#268bd2">client</span>.<span style="color:#268bd2">setCryptoSuite</span>(<span style="color:#268bd2">cryptoSuite</span>);
 </code></pre></div><p>You have to update the client according to the above steps to make it use the couchdb.<br>
 In the next section, we'll implement the above steps in the <code>balance-transfer</code> fabric sample.</p>
 <hr>
@@ -174,11 +174,11 @@ https://admin:password@localhost:5984
 <li><strong><em>Line 31-52:</em></strong> Set the state store and crypto store. Step 2 &amp; 3.</li>
 </ul>
 <p>There is a minor change in the above code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// Client variable is used as hfc
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> hfc <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fabric-client&#34;</span>);
-
-<span style="color:#6272a4">// Instead of Client
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> Client <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fabric-client&#34;</span>);
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#93a1a1;font-style:italic">// Client variable is used as hfc
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">var</span> <span style="color:#268bd2">hfc</span> = <span style="color:#268bd2">require</span>(<span style="color:#2aa198">&#34;fabric-client&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span style="color:#93a1a1;font-style:italic">// Instead of Client
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">const</span> <span style="color:#268bd2">Client</span> = <span style="color:#268bd2">require</span>(<span style="color:#2aa198">&#34;fabric-client&#34;</span>);
 </code></pre></div><p><strong><em>It is not necessary that db(dbname) of state store and crypto store is the same. Both the stores can have their separate dbs. It depends on the requirement. You can have state store and crypto store db as <code>orgName-state-store</code> and <code>orgName-crypto-store</code> respectively.</em></strong></p>
 <p><strong><em>Each organization must have their state-store and crypto-store db, else it will throw the Authentication Error.</em></strong></p>
 <pre><code>Error: fabric-ca request register failed with errors [[{&quot;code&quot;:20,&quot;message&quot;:&quot;Authentication failure&quot;}]]

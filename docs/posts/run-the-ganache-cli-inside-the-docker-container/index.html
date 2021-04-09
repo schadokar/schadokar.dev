@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Run the Ganache Cli Inside the Docker Container&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Run the Ganache Cli Inside the Docker Container&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Run the Ganache Cli Inside the Docker Container" /><meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1800/1*xdxuvzwgtofqqpkebcwksg.png" /><body><section id="header">
@@ -57,25 +57,25 @@ then we will connect it to the <a href="https://metamask.io/"target="_blank">Met
 <p>Inside the <code>docker-ganache</code>, create a file named <code>Dockerfile</code>.</p>
 <p>The <code>Dockerfile</code> doesn’t require a file extension and <strong>D</strong> must be uppercase.</p>
 <p>Our file structure will look like this</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">- docker-ganache
-  - Dockerfile
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>- docker-ganache
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  - Dockerfile
 </code></pre></div><p><code>Dockerfile</code> is the file where we’ll define all the commands required to create a <code>ganache-cli</code> docker image.</p>
 <blockquote>
 <p>Docker can build images automatically by reading the instructions from a <code>Dockerfile</code>.</p>
 </blockquote>
 <hr>
 <p>Open the Dockerfile in any editor and paste the below code</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#6272a4"># node:alpine will be our base image to create this image</span>
-<span style="color:#ff79c6">FROM</span><span style="color:#f1fa8c"> node:alpine</span>
-
-<span style="color:#6272a4"># Set the /app directory as working directory</span>
-<span style="color:#ff79c6">WORKDIR</span><span style="color:#f1fa8c"> /app</span>
-
-<span style="color:#6272a4"># Install ganache-cli globally</span>
-<span style="color:#ff79c6">RUN</span> npm install -g ganache-cli
-
-<span style="color:#6272a4"># Set the default command for the image</span>
-<span style="color:#ff79c6">CMD</span> [<span style="color:#f1fa8c">&#34;ganache-cli&#34;</span>, <span style="color:#f1fa8c">&#34;-h&#34;</span>, <span style="color:#f1fa8c">&#34;0.0.0.0&#34;</span>]
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#93a1a1;font-style:italic"># node:alpine will be our base image to create this image</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#859900">FROM</span><span style="color:#2aa198"> node:alpine</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#93a1a1;font-style:italic"># Set the /app directory as working directory</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#859900">WORKDIR</span><span style="color:#2aa198"> /app</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#93a1a1;font-style:italic"># Install ganache-cli globally</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">RUN</span> npm install -g ganache-cli
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#93a1a1;font-style:italic"># Set the default command for the image</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span style="color:#859900">CMD</span> [<span style="color:#2aa198">&#34;ganache-cli&#34;</span>, <span style="color:#2aa198">&#34;-h&#34;</span>, <span style="color:#2aa198">&#34;0.0.0.0&#34;</span>]
 </code></pre></div><p>Let’s take a dip into the code and explore what it is actually doing.</p>
 <p>The Docker container requires Node.js installed in it to install the
 <code>ganache-cli</code>.</p>

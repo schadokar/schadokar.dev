@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.f6c4e8d74298ad5ec80382828077e919496093f45533660642b5cb1bbd0d68540d80b48d1ef3c389a8ddf5ffc661dee7.css" integrity="sha384-9sTo10KYrV7IA4KCgHfpGUlgk/RVM2YGQrXLG70NaFQNgLSNHvPDiajd9f/GYd7n">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.40b56efabbe3d2ffd84f83355769468d3db4ab48018514f44bf187a1c9894ed05c98a3f1987aaebddbee5c4e36d9b985.css" integrity="sha384-QLVu&#43;rvj0v/YT4M1V2lGjT20q0gBhRT0S/GHocmJTtBcmKPxmHquvdvuXE422bmF">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang" /><meta name="twitter:image" content="https://schadokar.dev/images/golang-basic.png" /><body><section id="header">
@@ -56,49 +56,49 @@ This is also known as <strong>base 10</strong> number system.</p>
 <p>Golang package <code>strconv</code> provides <code>ParseInt</code> and <code>ParseUint</code> to convert the string to the number in the respective base.
 Hexadecimal numbers are commonly use <code>0x</code> or <code>0X</code> in front of the number. It is only to avoid confusion.</p>
 <p><strong>Syntax</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">ParseInt</span>(s <span style="color:#8be9fd">string</span>, base <span style="color:#8be9fd">int</span>, bitSize <span style="color:#8be9fd">int</span>) (i <span style="color:#8be9fd">int64</span>, err <span style="color:#8be9fd">error</span>)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;strconv&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	hexa <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;F1&#34;</span>
-
-	decimal, err <span style="color:#ff79c6">:=</span> strconv.<span style="color:#50fa7b">ParseInt</span>(hexa, <span style="color:#bd93f9">16</span>, <span style="color:#bd93f9">32</span>)
-
-	<span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
-		fmt.<span style="color:#50fa7b">Println</span>(err)
-	}
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Hexadecimal %s (base16) = Decimal %v (base10)&#34;</span>, hexa, decimal)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">func</span> <span style="color:#268bd2">ParseInt</span>(<span style="color:#268bd2">s</span> <span style="color:#859900;font-weight:bold">string</span>, <span style="color:#268bd2">base</span> <span style="color:#859900;font-weight:bold">int</span>, <span style="color:#268bd2">bitSize</span> <span style="color:#859900;font-weight:bold">int</span>) (<span style="color:#268bd2">i</span> <span style="color:#859900;font-weight:bold">int64</span>, <span style="color:#268bd2">err</span> <span style="color:#859900;font-weight:bold">error</span>)
+</code></pre></div><div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;strconv&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#268bd2">hexa</span> := <span style="color:#2aa198">&#34;F1&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">decimal</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">strconv</span>.<span style="color:#268bd2">ParseInt</span>(<span style="color:#268bd2">hexa</span>, <span style="color:#2aa198;font-weight:bold">16</span>, <span style="color:#2aa198;font-weight:bold">32</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>		<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Println</span>(<span style="color:#268bd2">err</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Hexadecimal %s (base16) = Decimal %v (base10)&#34;</span>, <span style="color:#268bd2">hexa</span>, <span style="color:#268bd2">decimal</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>}
 </code></pre></div><p><strong>Output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">Hexadecimal <span style="color:#50fa7b">F1</span> (base16) = Decimal <span style="color:#bd93f9">241</span> (base10)
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Hexadecimal</span> <span style="color:#268bd2">F1</span> (<span style="color:#268bd2">base16</span>) = <span style="color:#268bd2">Decimal</span> <span style="color:#2aa198;font-weight:bold">241</span> (<span style="color:#268bd2">base10</span>)
 </code></pre></div><blockquote>
 <p>The <code>ParseUint</code> is same as <code>ParseInt</code> but it takes only unsigned integers.
 To remove the <code>0x</code> or <code>0X</code> from the hex number, you can use slices.</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">hexa <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;0xfc&#34;</span>
-hexa = hexa[<span style="color:#bd93f9">2</span>:]
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">hexa</span> := <span style="color:#2aa198">&#34;0xfc&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">hexa</span> = <span style="color:#268bd2">hexa</span>[<span style="color:#2aa198;font-weight:bold">2</span>:]
 </code></pre></div><h2 id="convert-decimal-to-hexadecimal">Convert Decimal to Hexadecimal</h2>
 <p>The same <code>strconv</code> package provides <code>FormatInt</code> and <code>FormatUint</code> to convert the decimal number to a respective base number.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
-
-<span style="color:#ff79c6">import</span> (
-	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-	<span style="color:#f1fa8c">&#34;strconv&#34;</span>
-)
-
-<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-	<span style="color:#8be9fd;font-style:italic">var</span> decimal <span style="color:#8be9fd">int64</span> = <span style="color:#bd93f9">252</span>
-
-	hexa <span style="color:#ff79c6">:=</span> strconv.<span style="color:#50fa7b">FormatInt</span>(decimal, <span style="color:#bd93f9">16</span>)
-
-	fmt.<span style="color:#50fa7b">Printf</span>(<span style="color:#f1fa8c">&#34;Decimal %v (base10) = Hexadecimal %s (base16)&#34;</span>, decimal, hexa)
-}
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>	<span style="color:#2aa198">&#34;strconv&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#859900">var</span> <span style="color:#268bd2">decimal</span> <span style="color:#859900;font-weight:bold">int64</span> = <span style="color:#2aa198;font-weight:bold">252</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#268bd2">hexa</span> := <span style="color:#268bd2">strconv</span>.<span style="color:#268bd2">FormatInt</span>(<span style="color:#268bd2">decimal</span>, <span style="color:#2aa198;font-weight:bold">16</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#268bd2">fmt</span>.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;Decimal %v (base10) = Hexadecimal %s (base16)&#34;</span>, <span style="color:#268bd2">decimal</span>, <span style="color:#268bd2">hexa</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>}
 </code></pre></div><blockquote>
 <p>The <code>FormatUint</code> is same as <code>FormatInt</code> but it takes only unsigned integers.</p>
 </blockquote>

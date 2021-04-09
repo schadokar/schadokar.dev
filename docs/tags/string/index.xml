@@ -19,8 +19,8 @@
       
       <guid>/to-the-point/string-split-in-golang/</guid>
       <description>Golang library has provided the split function in strings package to split the string by a separator and return the slice of substrings.
-Split Syntax func Split(s, sep string) []string Split the string by separator , . Don&#39;t forget the white space.
-package main import ( &amp;#34;fmt&amp;#34; &amp;#34;strings&amp;#34; ) func main() { var greeting string = &amp;#34;Namaste, India&amp;#34; // separate string using &amp;#39;, &amp;#39; 	arr := strings.Split(greeting, &amp;#34;, &amp;#34;) fmt.</description>
+Split Syntax 1func Split(s, sep string) []string Split the string by separator , . Don&#39;t forget the white space.
+1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;strings&amp;#34; 6) 7 8func main() { 9	var greeting string = &amp;#34;Namaste, India&amp;#34; 10 11	// separate string using &amp;#39;, &amp;#39; 12	arr := strings.</description>
       
     </item>
     

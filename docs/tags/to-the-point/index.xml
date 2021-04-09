@@ -20,7 +20,7 @@
       <guid>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
       <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa. For this, we&#39;re going to use the encoding/hex package provided by the golang. Package hex implements hexadecimal encoding and decoding.
 byte array to hex string To convert a byte array to hex string, we will encode the byte array to the hexadecimal string.
-Syntax func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
+Syntax 1func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
       
     </item>
     
@@ -85,8 +85,7 @@ Step 1 Search for Ubuntu 16.04 LTS In the search bar, search Ubuntu 16.04 LTS an
       <guid>/to-the-point/compare-strings-in-golang/</guid>
       <description>A string value is a sequence of bytes.
 Using the Comparison operators == equal != not equal &amp;lt; less &amp;lt;= less or equal &amp;gt; greater &amp;gt;= greater or equal To check if strings are equal or not, you can use == or !=.
-package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;golang&amp;#34; str2 := &amp;#34;gopher&amp;#34; fmt.Println(str1 == str2) fmt.Println(str1 != str2) } Output
-false true To check the Lexicographic Order of 2 strings, you can use &amp;lt;, &amp;lt;=, &amp;gt;, &amp;gt;=.</description>
+1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5) 6 7func main() { 8 9	str1 := &amp;#34;golang&amp;#34; 10	str2 := &amp;#34;gopher&amp;#34; 11 12	fmt.Println(str1 == str2) 13	fmt.</description>
       
     </item>
     
@@ -113,8 +112,8 @@ Step 2 Choose an Instance Type Select t2.medium and click Configure Instance Det
       <guid>/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
       <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.
 Write a file using WriteFile The WriteFile function takes 3 arguments, filename, data in a byte array, and filemode.
-func WriteFile(filename string, data []byte, perm os.FileMode) error A FileMode represents a file&#39;s mode and permission bits. Learn more
-package main import ( &amp;#34;io/ioutil&amp;#34; &amp;#34;log&amp;#34; ) func main() { // create a byte array of a string  data := []byte(&amp;#34;Hello Gopher!</description>
+1func WriteFile(filename string, data []byte, perm os.FileMode) error A FileMode represents a file&#39;s mode and permission bits. Learn more
+1package main 2 3import ( 4 &amp;#34;io/ioutil&amp;#34; 5 &amp;#34;log&amp;#34; 6) 7 8func main() { 9 // create a byte array of a string 10 data := []byte(&amp;#34;Hello Gopher!</description>
       
     </item>
     
@@ -139,8 +138,8 @@ func Atoi(s string) (int, error) It will return type int and type int is system 
       
       <guid>/to-the-point/how-to-use-swapper-in-golang/</guid>
       <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
-Function Definition func Swapper(slice interface{}) func(i, j int) Let&#39;s try
-package main import ( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; ) func main() { s := []int{1, 2, 3} fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) swapF := reflect.Swapper(s) swapF(0, 1) fmt.</description>
+Function Definition 1func Swapper(slice interface{}) func(i, j int) Let&#39;s try
+1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;reflect&amp;#34; 6) 7 8func main() { 9	s := []int{1, 2, 3} 10	fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) 11 12	swapF := reflect.</description>
       
     </item>
     
@@ -152,8 +151,8 @@ package main import ( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; ) func mai
       <guid>/to-the-point/how-to-join-strings-in-golang/</guid>
       <description>There are multiple ways to join or concat strings in the golang.
 Let&#39;s start with the easy one.
-Using the + operator 🔧 package main import ( &amp;#34;fmt&amp;#34; ) func main() { str1 := &amp;#34;Hello&amp;#34; // there is a space before World 	str2 := &amp;#34; World!&amp;#34; fmt.Println(str1 + str2) } Output
-Hello World!  Using Sprint, Sprintf, Sprintln 🛠 The fmt package has Sprint, Sprintf and Sprintln function which can format the strings using the default or custom formats.</description>
+Using the + operator 🔧 1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5) 6 7func main() { 8	str1 := &amp;#34;Hello&amp;#34; 9	// there is a space before World 10	str2 := &amp;#34; World!&amp;#34; 11 12	fmt.Println(str1 + str2) 13} Output
+1Hello World!  Using Sprint, Sprintf, Sprintln 🛠 The fmt package has Sprint, Sprintf and Sprintln function which can format the strings using the default or custom formats.</description>
       
     </item>
     
