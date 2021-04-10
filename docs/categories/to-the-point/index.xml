@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>to-the-point on Shubham Chadokar</title>
+    <link>/categories/to-the-point/</link>
+    <description>Recent content in to-the-point on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Sat, 20 Feb 2021 00:42:58 +0530</lastBuildDate>
+    
+        <atom:link href="/categories/to-the-point/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Remove Consecutive Characters From a String</title>
+      <link>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</link>
+      <pubDate>Sat, 20 Feb 2021 00:42:58 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</guid>
+      <description>Problem Statement Remove n consecutive characters from a string and return the final string.
+For example:
+1Input String: abccdeeef 2 3Output String: abdf Solution 1const str = &amp;#34;abccdeeef&amp;#34;; 2//-----------012345678 3let finalStr = &amp;#34;&amp;#34;; 4 5let isConsecutive = false; 6 7for (let i = 0; i &amp;lt; str.length - 1; i++) { 8 // check if characters are consecutive 9 if (str[i] === str[i + 1]) { 10 isConsecutive = true; 11 } else { 12 // check if the last character was consecutive 13 if (!</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Format Golang Project</title>
+      <link>/to-the-point/how-to-format-golang-project/</link>
+      <pubDate>Wed, 23 Dec 2020 22:45:35 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-format-golang-project/</guid>
+      <description>Golang is a strictly typed language. It tells you hw to write clean code and it takes care of formatting.
+Unlike many languages where formatting style is opinionated, in Golang it is defined by design.
+Formatting Golang CLI command fmt is used to format the file or files.
+Format 1 file Open the terminal in the golang project.
+Run the below command.
+1go fmt main.go Format all the files in the folder Use .</description>
+      
+    </item>
+    
+    <item>
+      <title>Check if Key Exists in Map in Golang</title>
+      <link>/to-the-point/check-if-key-exists-in-map-in-golang/</link>
+      <pubDate>Mon, 21 Dec 2020 10:38:27 +0530</pubDate>
+      
+      <guid>/to-the-point/check-if-key-exists-in-map-in-golang/</guid>
+      <description>Map Map is a data structure which implements a hash table.
+Map is a simple key-value storage. Map offers fast lookups, adds and deletes.
+Zero Value Table Map don&#39;t explicitly check if a key is created or not, instead if a key doesn&#39;t exists it returns the default value of value type.
+Data type and their Default Value
+   Type Default Value     Numeric type(int, float) 0   Boolean false   String &amp;quot;&amp;rdquo; (empty string)    For Ex.</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang String Replace</title>
+      <link>/to-the-point/golang-string-replace/</link>
+      <pubDate>Sat, 19 Dec 2020 21:15:35 +0530</pubDate>
+      
+      <guid>/to-the-point/golang-string-replace/</guid>
+      <description>Golang package strings provides Replace and ReplaceAll functions to replace the substring in the string.
+Replace Syntax
+1func Replace(s, old, new string, n int) string n is the number of first occurrence of the substring.
+Replace n first occurrence of the substring.
+If n &amp;lt; 0, then it will replace all the occurrence.
+1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;strings&amp;#34; 6) 7 8func main() { 9 str := &amp;#34;Th0is is an en0c0oded 0000 message&amp;#34; 10 11	newStr := strings.</description>
+      
+    </item>
+    
+    <item>
+      <title>Check if a character is a number in Golang</title>
+      <link>/to-the-point/check-if-a-character-is-a-number-in-golang/</link>
+      <pubDate>Sat, 19 Dec 2020 15:04:55 +0530</pubDate>
+      
+      <guid>/to-the-point/check-if-a-character-is-a-number-in-golang/</guid>
+      <description>Unicode is a computing standard for the consistent encoding symbols.
+All the characters and symbols assigned a code.
+For ex.
+1A U+0041 2अ U+0905 All the Unicode is divided into various categories. Browse all the categories.
+ Ll Lowercase Letters (a, b, µ, ɸ) Nl Letter Number (Ⅰ, ᛯ) Lo Other Letter (अ, ƻ)  Golang package unicode provides a wide range of validation methods on different set of Unicode.</description>
+      
+    </item>
+    
+    <item>
+      <title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</title>
+      <link>/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</link>
+      <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
+      
+      <guid>/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</guid>
+      <description>Decimal Number System Decimal number system is the standard system for denoting integers and non-integers numbers.
+This is also known as base 10 number system.
+0 1 2 3 4 5 6 7 8 9 Hexadecimal Number System Hexadecimal (mostly used as hex) number system use 16 symbols. It is known as base 16 number system, where 10 symbols are same as decimal and value greater than 9 represent as A=10, B=11, C=12, D=13, E=14, F=15.</description>
+      
+    </item>
+    
+    <item>
+      <title>String Split in Golang</title>
+      <link>/to-the-point/string-split-in-golang/</link>
+      <pubDate>Tue, 15 Dec 2020 10:10:29 +0530</pubDate>
+      
+      <guid>/to-the-point/string-split-in-golang/</guid>
+      <description>Golang library has provided the split function in strings package to split the string by a separator and return the slice of substrings.
+Split Syntax 1func Split(s, sep string) []string Split the string by separator , . Don&#39;t forget the white space.
+1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;strings&amp;#34; 6) 7 8func main() { 9	var greeting string = &amp;#34;Namaste, India&amp;#34; 10 11	// separate string using &amp;#39;, &amp;#39; 12	arr := strings.</description>
+      
+    </item>
+    
+    <item>
+      <title>Remove an Element From an Array Using Filter in Nodejs</title>
+      <link>/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/</link>
+      <pubDate>Fri, 04 Sep 2020 09:29:51 +0530</pubDate>
+      
+      <guid>/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/</guid>
+      <description>In nodejs, there are many options to remove an element from an array, one of them is using the filter.
+filter method on array returns a new array based on the filtering condition.
+For ex. return the even values in the array
+1const arr1 = [1, 2, 3, 4, 5, 6]; 2 3const arr2 = arr1.filter((n) =&amp;gt; n % 2 === 0); 4 5console.log(arr2); Output
+[2, 4, 6] Remove an element from the array Remove 5 from the array.</description>
+      
+    </item>
+    
+    <item>
+      <title>Convert Byte to Hex and Hex to Byte in Golang</title>
+      <link>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</link>
+      <pubDate>Sat, 18 Jul 2020 13:33:52 +0530</pubDate>
+      
+      <guid>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
+      <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa. For this, we&#39;re going to use the encoding/hex package provided by the golang. Package hex implements hexadecimal encoding and decoding.
+byte array to hex string To convert a byte array to hex string, we will encode the byte array to the hexadecimal string.
+Syntax 1func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
+      
+    </item>
+    
+    <item>
+      <title>Create an Account in Sendinblue</title>
+      <link>/to-the-point/create-an-account-in-sendinblue/</link>
+      <pubDate>Sat, 20 Jun 2020 17:43:00 +0530</pubDate>
+      
+      <guid>/to-the-point/create-an-account-in-sendinblue/</guid>
+      <description>Sendinblue is a SaaS solution for relationship marketing. It offers a cloud-based marketing communication software suite with email marketing, transactional email, marketing automation, customer-relationship management, landing pages, Facebook ads, retargeting ads, SMS marketing, and more.
+Sendinblue offers 300 mails per day for free account. 😃
+Getting started There are only 3 easy steps to create an account in Sendinblue.
+Step 1 Click on the below Get started link. It will redirect you to the signup page.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Login as Root in GCP Linux Vm</title>
+      <link>/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</link>
+      <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-login-as-root-in-gcp-linux-vm/</guid>
+      <description>In linux, root user is the most privileged user and it has access to all the commands and files. It is also known as the superuser or administrator.
+By default, whenever you login in GCP Linux VM using SSH provided by GCP or using the custom SSH, it login as gcp_username user or as ssh_username respectively.
+To login as the root user, first set the root password.
+To set the root password, use passwd command.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Create a Linux VM in GCP</title>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-gcp/</link>
+      <pubDate>Sun, 29 Mar 2020 09:45:27 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-gcp/</guid>
+      <description>Create a new account on GCP. For new users, GCP credits $300 dollars in the account for 12 months and with many free services.
+Login to your GCP account.
+Create a new virtual machine Select Compute Engine from the top left menu.
+Menu &amp;gt; Compute &amp;gt; Compute Engine
+Create a new project In GCP, a project is a resource manager. All the related resources of a project place inside it. Create a new project demo.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to create a Linux VM in Azure?</title>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-azure/</link>
+      <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-azure/</guid>
+      <description>Create a new account in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.
+For students, Microsoft also give away many resources and azure credits. You just have to reach to them by their email.
+Login to your azure account.
+Step 1 Search for Ubuntu 16.04 LTS In the search bar, search Ubuntu 16.04 LTS and select create.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to create a Linux VM in AWS?</title>
+      <link>/to-the-point/how-to-create-a-linux-vm-in-aws/</link>
+      <pubDate>Wed, 25 Mar 2020 09:45:45 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-create-a-linux-vm-in-aws/</guid>
+      <description>Create a new aws account.
+Login to your aws account. Select services on top left and search EC2 and select it.
+EC2 Dashboard Scroll down to Launch Instance section and select Launch Instance.
+Configure Instance Follow the steps to create a Ubuntu 16.04 VM.
+Step 1 Choose an Amazon Machine Image (AMI) Scroll down and select **Ubuntu Server 16.04 LTS (HVM).
+Step 2 Choose an Instance Type Select t2.medium and click Configure Instance Details.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Read and Write a File in Golang?</title>
+      <link>/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
+      <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
+      <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.
+Write a file using WriteFile The WriteFile function takes 3 arguments, filename, data in a byte array, and filemode.
+1func WriteFile(filename string, data []byte, perm os.FileMode) error A FileMode represents a file&#39;s mode and permission bits. Learn more
+1package main 2 3import ( 4 &amp;#34;io/ioutil&amp;#34; 5 &amp;#34;log&amp;#34; 6) 7 8func main() { 9 // create a byte array of a string 10 data := []byte(&amp;#34;Hello Gopher!</description>
+      
+    </item>
+    
+    <item>
+      <title>Convert String to Int and Int to String in Golang</title>
+      <link>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
+      <pubDate>Tue, 03 Mar 2020 08:25:25 +0530</pubDate>
+      
+      <guid>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
+      <description>Golang standard library has provided 2 functions Atoi and Itoa to convert string to int and int to string respectively.
+These 2 functions placed inside the strconv package.
+ Package strconv implements conversions to and from string representations of basic data types.
+ String to Int The strconv.Atoi function takes a string and returns an int and an error.
+func Atoi(s string) (int, error) It will return type int and type int is system dependent.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to use Swapper in Golang?</title>
+      <link>/to-the-point/how-to-use-swapper-in-golang/</link>
+      <pubDate>Tue, 03 Mar 2020 08:17:07 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-use-swapper-in-golang/</guid>
+      <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
+Function Definition 1func Swapper(slice interface{}) func(i, j int) Let&#39;s try
+1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;reflect&amp;#34; 6) 7 8func main() { 9	s := []int{1, 2, 3} 10	fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) 11 12	swapF := reflect.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

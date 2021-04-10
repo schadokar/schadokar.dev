@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Send Email in Nodejs&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.7c93b038dc3a90b0083f9777c93f5fab25ce2d2a2363105514ba0d58d9536f05606f49fe7d05afe5d9e33cb24b22005a.css" integrity="sha384-fJOwONw6kLAIP5d3yT9fqyXOLSojYxBVFLoNWNlTbwVgb0n&#43;fQWv5dnjPLJLIgBa">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Send Email in Nodejs" /><meta name="twitter:image" content="https://schadokar.dev/images/node-basic.png" /><body><section id="header">
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
+    </div>
+    
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to Send Email in Nodejs</h1><p class="article date">Sunday, July 19, 2020<span class="reading-time"> • 4 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/nodejs/>Nodejs</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/sendemail/>sendemail</a><a class="tag" href=/tags/nodejs/>nodejs</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>This is a series of articles on how to send an email in nodejs.<br>
+In the first article, we will send an email using the <code>node</code> command. Later, we will create a APIs and a frontend.</p>
+<p>Sending emails in nodejs have only 2 requirements:</p>
+<ul>
+<li>Mail service provider (For ex. Gmail, Sendinblue, Mailchimp)</li>
+<li>Middleware to connect with mail service (For ex. nodemailer)</li>
+</ul>
+<h1 id="series">Series:</h1>
+<ul>
+<li><a href="https://schadokar.dev/posts/how-to-send-email-in-nodejs/"target="_blank">How to Send Email in Nodejs - Part 1</a></li>
+<li><a href="https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/"target="_blank">How to Send Email in Nodejs with Expressjs - Part 2</a></li>
+</ul>
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+<li>Node.js (&gt;v6.0.0 for nodemailer module)</li>
+<li>Code Editor (For Ex. VS Code, Atom)</li>
+<li>An account in <a href="https://www.sendinblue.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc"target="_blank">Sendinblue</a></li>
+</ul>
+<blockquote>
+<p>Check out this step by step tutorial to <a href="https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/"target="_blank">Create an account in sendinblue</a>.</p>
+</blockquote>
+<h1 id="getting-started">Getting Started</h1>
+<p>For this series, we are going to use <code>nodemailer</code> package. It is an open source project.</p>
+<h3 id="nodemailer-features">Nodemailer Features</h3>
+<ul>
+<li>A single module with Zero dependencies</li>
+<li>Support HTML Content</li>
+<li>Add attachments to messages</li>
+<li>Supports SMTP as default transport method. Other supported transport methods are SES, Sendmail, Stream.</li>
+<li>OAuth2 authentication</li>
+</ul>
+<p>For the mailing service, we are going to use <a href="https://www.sendinblue.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc"target="_blank">Sendinblue</a>.
+This mailing service offers many different solutions other than emails, for ex. SMS.<br>
+It provide <strong>300 mails/day</strong> for a free account and paid account is also very cheap and offer more features compared to many other available mailing service provider.</p>
+<h2 id="create-a-new-project">Create a new Project</h2>
+<p>Create a new directory <code>node-email</code>.
+Open the terminal or cmd inside the directory.</p>
+<p>Initiate the nodejs project using the <code>npm init -y</code> command. <code>-y</code> flag is optional, by passing this flag it uses the default arguments.</p>
+<h3 id="install-nodejs-dependencies">Install Nodejs Dependencies</h3>
+<p>Install <code>nodemailer</code> package.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">npm</span> <span style="color:#268bd2">install</span> --<span style="color:#268bd2">save</span> <span style="color:#268bd2">nodemailer</span>
+</code></pre></div><h3 id="create-a-new-smtp-key-in-sendinblue">Create a new SMTP Key in Sendinblue</h3>
+<p>This key will be used for authentication and sending the email via your sendinblue account.</p>
+<p>Sign in to your Sendinblue account and click on SMTP &amp; API from the top-right menu.</p>
+<p>Go to <strong>SMTP</strong> tab and click on <em>CREATE A NEW SMTP KEY</em>.
+Copy the key and paste it somewhere safe.</p>
+<blockquote>
+<p>⚠️ Note: If you lose this key, then you can't retrieve it. Then you have to create a new one and replace it accordingly.</p>
+</blockquote>
+<h3 id="send-email">Send Email</h3>
+<p>Create a <code>index.js</code> file and paste the below code.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#2aa198">&#34;use strict&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#859900">const</span> <span style="color:#268bd2">nodemailer</span> = <span style="color:#268bd2">require</span>(<span style="color:#2aa198">&#34;nodemailer&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#93a1a1;font-style:italic">/**
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#93a1a1;font-style:italic"> * sendEmail
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#93a1a1;font-style:italic"> * @param {Object} mailObj - Email meta data and body
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#93a1a1;font-style:italic"> * @param {String} from - Email address of the sender
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#93a1a1;font-style:italic"> * @param {Array} recipients - Array of recipients email address
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span style="color:#93a1a1;font-style:italic"> * @param {String} subject - Subject of the email
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#93a1a1;font-style:italic"> * @param {String} message - message
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span style="color:#93a1a1;font-style:italic"> */</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span style="color:#859900">const</span> <span style="color:#268bd2">sendEmail</span> = <span style="color:#268bd2">async</span> (<span style="color:#268bd2">mailObj</span>) =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>  <span style="color:#859900">const</span> { <span style="color:#268bd2">from</span>, <span style="color:#268bd2">recipients</span>, <span style="color:#268bd2">subject</span>, <span style="color:#268bd2">message</span> } = <span style="color:#268bd2">mailObj</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>  <span style="color:#859900">try</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>    <span style="color:#93a1a1;font-style:italic">// Create a transporter
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">let</span> <span style="color:#268bd2">transporter</span> = <span style="color:#268bd2">nodemailer</span>.<span style="color:#268bd2">createTransport</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>      <span style="color:#268bd2">host</span>: <span style="color:#2aa198">&#34;smtp-relay.sendinblue.com&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>      <span style="color:#268bd2">port</span>: <span style="color:#2aa198;font-weight:bold">587</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>      <span style="color:#268bd2">auth</span>: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>        <span style="color:#268bd2">user</span>: <span style="color:#2aa198">&#34;hello@schadokar.dev&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>        <span style="color:#268bd2">pass</span>: <span style="color:#2aa198">&#34;SMTP-KEY&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>      },
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>    });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>    <span style="color:#93a1a1;font-style:italic">// send mail with defined transport object
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">let</span> <span style="color:#268bd2">mailStatus</span> = <span style="color:#268bd2">await</span> <span style="color:#268bd2">transporter</span>.<span style="color:#268bd2">sendMail</span>({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>      <span style="color:#268bd2">from</span>: <span style="color:#268bd2">from</span>, <span style="color:#93a1a1;font-style:italic">// sender address
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">to</span>: <span style="color:#268bd2">recipients</span>, <span style="color:#93a1a1;font-style:italic">// list of recipients
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">subject</span>: <span style="color:#268bd2">subject</span>, <span style="color:#93a1a1;font-style:italic">// Subject line
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">text</span>: <span style="color:#268bd2">message</span>, <span style="color:#93a1a1;font-style:italic">// plain text
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span style="color:#93a1a1;font-style:italic"></span>    });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>    <span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#2aa198">`</span><span style="color:#2aa198">Message sent: </span><span style="color:#2aa198">${</span><span style="color:#268bd2">mailStatus</span>.<span style="color:#268bd2">messageId</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>    <span style="color:#859900">return</span> <span style="color:#2aa198">`</span><span style="color:#2aa198">Message sent: </span><span style="color:#2aa198">${</span><span style="color:#268bd2">mailStatus</span>.<span style="color:#268bd2">messageId</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span>  } <span style="color:#859900">catch</span> (<span style="color:#268bd2">error</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span>    <span style="color:#268bd2">console</span>.<span style="color:#268bd2">error</span>(<span style="color:#268bd2">error</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span>    <span style="color:#859900">throw</span> <span style="color:#859900">new</span> <span style="color:#cb4b16">Error</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span>      <span style="color:#2aa198">`</span><span style="color:#2aa198">Something went wrong in the sendmail method. Error: </span><span style="color:#2aa198">${</span><span style="color:#268bd2">error</span>.<span style="color:#268bd2">message</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span>    );
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span>};
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span style="color:#859900">const</span> <span style="color:#268bd2">mailObj</span> = {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>  <span style="color:#268bd2">from</span>: <span style="color:#2aa198">&#34;hello@schadokar.dev&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span>  <span style="color:#268bd2">recipients</span>: [<span style="color:#2aa198">&#34;me@schadokar.dev&#34;</span>],
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span>  <span style="color:#268bd2">subject</span>: <span style="color:#2aa198">&#34;Sending email by nodejs&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span>  <span style="color:#268bd2">message</span>: <span style="color:#2aa198">&#34;Hello World;&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span>};
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span style="color:#268bd2">sendEmail</span>(<span style="color:#268bd2">mailObj</span>).<span style="color:#268bd2">then</span>((<span style="color:#268bd2">res</span>) =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span>  <span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">res</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span>});
+</code></pre></div><p>In the <code>auth</code> object, <code>user</code> will be your email address of sendinblue account and <code>pass</code> will be your SMTP KEY.</p>
+<p>In the <code>mailObj</code>, <code>from</code> will be your email address of sendinblue account, <code>recipients</code> is an array of email addresses, <code>subject</code> is subject of email and <code>message</code> is plain text message.</p>
+<p>Open the terminal and run the file.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">node</span> <span style="color:#268bd2">index</span>.<span style="color:#268bd2">js</span>
+</code></pre></div><p>On successful run, output will be</p>
+<pre><code>Message sent: &lt;72ff9668-8200-831b-e585-afbeaeeea09d@schadokar.dev&gt;
+Message sent: &lt;72ff9668-8200-831b-e585-afbeaeeea09d@schadokar.dev&gt;
+</code></pre><p>Now, go and check your mailbox. You have received a mail. If you could not find the mail, check in the promotion.</p>
+<p><img  src="./images/sendemail.PNG"
+        alt="sendemail"/></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In this tutorial, we created a basic sendEmail function to send the email using the nodemailer package. In the <a href="https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/"target="_blank">next section</a>, we are going to create the server and APIs and in the last section we will send the email using the frontend.</p>
+<blockquote>
+<p>Cover is designed in <a href="https://canva.7eqqol.net/KD6B9"target="_blank">Canva</a></p>
+</blockquote>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/nodejs/>Nodejs</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/sendemail/>sendemail</a><a class="tag" href=/tags/nodejs/>nodejs</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/how-to-send-email-in-nodejs-with-expressjs/"><span class="">Previous</span>How to Send Email in Nodejs with Expressjs</a></p><p><a class="link" href="/posts/how-to-send-email-in-golang/"><span class="">Next</span>How to Send Email in Golang</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
+</div></span>
+        
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
+
+</html>

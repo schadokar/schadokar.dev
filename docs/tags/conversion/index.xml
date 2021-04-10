@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>conversion on Shubham Chadokar</title>
+    <link>/tags/conversion/</link>
+    <description>Recent content in conversion on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Thu, 17 Dec 2020 22:58:00 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/conversion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</title>
+      <link>/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</link>
+      <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
+      
+      <guid>/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</guid>
+      <description>Decimal Number System Decimal number system is the standard system for denoting integers and non-integers numbers.
+This is also known as base 10 number system.
+0 1 2 3 4 5 6 7 8 9 Hexadecimal Number System Hexadecimal (mostly used as hex) number system use 16 symbols. It is known as base 16 number system, where 10 symbols are same as decimal and value greater than 9 represent as A=10, B=11, C=12, D=13, E=14, F=15.</description>
+      
+    </item>
+    
+    <item>
+      <title>Convert Byte to Hex and Hex to Byte in Golang</title>
+      <link>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</link>
+      <pubDate>Sat, 18 Jul 2020 13:33:52 +0530</pubDate>
+      
+      <guid>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
+      <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa. For this, we&#39;re going to use the encoding/hex package provided by the golang. Package hex implements hexadecimal encoding and decoding.
+byte array to hex string To convert a byte array to hex string, we will encode the byte array to the hexadecimal string.
+Syntax 1func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

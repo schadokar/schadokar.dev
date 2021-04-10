@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>data structures on Shubham Chadokar</title>
+    <link>/tags/data-structures/</link>
+    <description>Recent content in data structures on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Sat, 20 Feb 2021 00:42:58 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Remove Consecutive Characters From a String</title>
+      <link>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</link>
+      <pubDate>Sat, 20 Feb 2021 00:42:58 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</guid>
+      <description>Problem Statement Remove n consecutive characters from a string and return the final string.
+For example:
+1Input String: abccdeeef 2 3Output String: abdf Solution 1const str = &amp;#34;abccdeeef&amp;#34;; 2//-----------012345678 3let finalStr = &amp;#34;&amp;#34;; 4 5let isConsecutive = false; 6 7for (let i = 0; i &amp;lt; str.length - 1; i++) { 8 // check if characters are consecutive 9 if (str[i] === str[i + 1]) { 10 isConsecutive = true; 11 } else { 12 // check if the last character was consecutive 13 if (!</description>
+      
+    </item>
+    
+  </channel>
+</rss>

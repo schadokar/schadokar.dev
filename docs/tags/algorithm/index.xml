@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>algorithm on Shubham Chadokar</title>
+    <link>/tags/algorithm/</link>
+    <description>Recent content in algorithm on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Thu, 13 Feb 2020 23:25:31 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understand Quicksort the easy way</title>
+      <link>/posts/understand-quicksort-the-easy-way/</link>
+      <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
+      
+      <guid>/posts/understand-quicksort-the-easy-way/</guid>
+      <description>Photo by Iñaki del Olmo on Unsplash
+Data structures and Algorithms are the key skills for a software developer. Recently when I was preparing for a job change, learning sorting algorithms was not smooth.
+The theory is simple and straight but its implementation is just the opposite.
+ I think concept and implementation are inversely proportional. 🤔
+ There are many sorting algorithms like bubblesort, mergesort, quicksort etc. Among all, quicksort is one of the most popular sorting algorithms.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Shubham Chadokar</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Sat, 20 Feb 2021 00:42:58 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>data structures</title>
+      <link>/tags/data-structures/</link>
+      <pubDate>Sat, 20 Feb 2021 00:42:58 +0530</pubDate>
+      
+      <guid>/tags/data-structures/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>casual</title>
+      <link>/tags/casual/</link>
+      <pubDate>Fri, 01 Jan 2021 12:41:41 +0530</pubDate>
+      
+      <guid>/tags/casual/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Wed, 23 Dec 2020 22:45:35 +0530</pubDate>
+      
+      <guid>/tags/golang/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>conversion</title>
+      <link>/tags/conversion/</link>
+      <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
+      
+      <guid>/tags/conversion/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>string</title>
+      <link>/tags/string/</link>
+      <pubDate>Tue, 15 Dec 2020 10:10:29 +0530</pubDate>
+      
+      <guid>/tags/string/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>good-practice</title>
+      <link>/tags/good-practice/</link>
+      <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
+      
+      <guid>/tags/good-practice/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>/tags/tips/</link>
+      <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
+      
+      <guid>/tags/tips/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>array</title>
+      <link>/tags/array/</link>
+      <pubDate>Fri, 04 Sep 2020 09:29:51 +0530</pubDate>
+      
+      <guid>/tags/array/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>/tags/cloud/</link>
+      <pubDate>Mon, 10 Aug 2020 23:19:26 +0530</pubDate>
+      
+      <guid>/tags/cloud/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>/tags/aws/</link>
+      <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
+      
+      <guid>/tags/aws/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>lambda</title>
+      <link>/tags/lambda/</link>
+      <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
+      
+      <guid>/tags/lambda/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>/tags/serverless/</link>
+      <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
+      
+      <guid>/tags/serverless/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>jwt</title>
+      <link>/tags/jwt/</link>
+      <pubDate>Thu, 30 Jul 2020 11:17:11 +0530</pubDate>
+      
+      <guid>/tags/jwt/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>email</title>
+      <link>/tags/email/</link>
+      <pubDate>Sun, 26 Jul 2020 09:21:13 +0530</pubDate>
+      
+      <guid>/tags/email/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>/tags/tutorial/</link>
+      <pubDate>Sun, 26 Jul 2020 09:21:13 +0530</pubDate>
+      
+      <guid>/tags/tutorial/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>/tags/nodejs/</link>
+      <pubDate>Sun, 19 Jul 2020 18:16:06 +0530</pubDate>
+      
+      <guid>/tags/nodejs/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>sendemail</title>
+      <link>/tags/sendemail/</link>
+      <pubDate>Sun, 19 Jul 2020 18:16:06 +0530</pubDate>
+      
+      <guid>/tags/sendemail/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>to-the-point</title>
+      <link>/tags/to-the-point/</link>
+      <pubDate>Sat, 18 Jul 2020 13:33:52 +0530</pubDate>
+      
+      <guid>/tags/to-the-point/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>sendinblue</title>
+      <link>/tags/sendinblue/</link>
+      <pubDate>Sat, 20 Jun 2020 17:43:00 +0530</pubDate>
+      
+      <guid>/tags/sendinblue/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>gcp</title>
+      <link>/tags/gcp/</link>
+      <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
+      
+      <guid>/tags/gcp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>azure</title>
+      <link>/tags/azure/</link>
+      <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
+      
+      <guid>/tags/azure/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>json</title>
+      <link>/tags/json/</link>
+      <pubDate>Mon, 23 Mar 2020 11:23:56 +0530</pubDate>
+      
+      <guid>/tags/json/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>/tags/algorithm/</link>
+      <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
+      
+      <guid>/tags/algorithm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>js</title>
+      <link>/tags/js/</link>
+      <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
+      
+      <guid>/tags/js/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

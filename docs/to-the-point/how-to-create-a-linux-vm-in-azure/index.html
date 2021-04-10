@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to create a Linux VM in Azure?&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.7c93b038dc3a90b0083f9777c93f5fab25ce2d2a2363105514ba0d58d9536f05606f49fe7d05afe5d9e33cb24b22005a.css" integrity="sha384-fJOwONw6kLAIP5d3yT9fqyXOLSojYxBVFLoNWNlTbwVgb0n&#43;fQWv5dnjPLJLIgBa">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to create a Linux VM in Azure?" /><meta name="twitter:image" content="https://schadokar.dev/images/azure-basic.png" /><body><section id="header">
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
+    </div>
+    
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to create a Linux VM in Azure?</h1><p class="article date">Friday, March 27, 2020<span class="reading-time"> • 3 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/cloud/>Cloud</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/azure/>azure</a><a class="tag" href=/tags/cloud/>cloud</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>Create a <a href="https://azure.microsoft.com/en-in/free/"target="_blank">new account</a> in Microsoft Azure. For new users, Azure gives free credits for 30 days and many services free of cost upto a limit for 12 months.</p>
+<p>For students, Microsoft also give away many resources and azure credits. You just have to reach to them by their email.</p>
+<p>Login to your azure account.</p>
+<h3 id="step-1-search-for-ubuntu-1604-lts">Step 1 Search for Ubuntu 16.04 LTS</h3>
+<p>In the search bar, search <strong>Ubuntu 16.04 LTS</strong> and select create.</p>
+<p><img  src="./images/azure-ubuntu.PNG"
+        alt="azure-ubuntu"/></p>
+<h3 id="step-2-enter-the-project-details">Step 2 Enter the Project details</h3>
+<p>In azure, all the related resources must be in a container, this container is known as Resource Group.</p>
+<p>Create a new resource group <strong>demo</strong>.</p>
+<p><img  src="./images/azure-rg.PNG"
+        alt="azure-resource-group"/></p>
+<h4 id="enter-instance-details">Enter Instance Details</h4>
+<p>Enter the virtual machine name <strong>azure-vm</strong>.</p>
+<p>Change the VM size to <strong>Standard B2s</strong>.</p>
+<p><img  src="./images/azure-vm-size.PNG"
+        alt="azure-size"/></p>
+<blockquote>
+<p>The VM's price or default configuration may vary region to region.</p>
+</blockquote>
+<h4 id="administrator-account">Administrator account</h4>
+<p>There are 2 options to login in the VM, using the SSH key or the password.</p>
+<blockquote>
+<p>Azure currently supports SSH protocol 2 (SSH-2) RSA public-private key pairs with a minimum length of 2048 bits.</p>
+</blockquote>
+<p>Let's setup the SSH key.</p>
+<p>Open any command line tool. Like bash shell.</p>
+<p>Use <code>ssh-keygen</code> command to create keys. By default it saves these keys in <code>~/.ssh</code> directory.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>$ ssh-keygen -m PEM -t rsa -b <span style="color:#2aa198;font-weight:bold">4096</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>Generating public/private rsa key pair.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>Enter file in which to save the key (/c/Users/admin/.ssh/id_rsa):
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>Enter passphrase (empty <span style="color:#859900">for</span> no passphrase):
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>Enter same passphrase again:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>Your identification has been saved in /c/Users/admin/.ssh/id_rsa.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>Your public key has been saved in /c/Users/admin/.ssh/id_rsa.pub.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>The key fingerprint is:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>SHA256:9Hl7Wfo6Et4+QfQ7sKrZr2yaO7Dgb4IVLSIpgsY9ftE admin@LAPTOP-BAVLQDM1
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>The key&#39;s randomart image is:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>+---[RSA 4096]----+
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>|                 |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>|              .  |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>|o o   o .    . . |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>|+= + + E . . .. .|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>|+ o o + S o ..o o|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>|   . + .   ..o.* |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>|    = . o  .oo+..|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>|   . o o .=oo.+. |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>|      +. **+o+o+.|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>+----[SHA256]-----+
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>
+</code></pre></div><p>Enter the absolute path where you want to save the keys or skip it and press Enter.</p>
+<p>Passphrase is required to access the private key while login in the VM.</p>
+<p>Enter Username <code>azuredemo</code>.<br>
+Open the <code>id_rsa.pub</code> file. This is the public key.<br>
+Copy the key and paste it in <strong>SSH public key</strong>.</p>
+<p><img  src="./images/azure-ssh.PNG"
+        alt="azure-ssh"/></p>
+<p>Click <strong>Next</strong>.</p>
+<h3 id="step-3-disk">Step 3 Disk</h3>
+<p>In the Disk section, you can add extra disk space as per your requirement. The Standard B2s VM comes with 32 GB temporary storage.</p>
+<p><img  src="./images/azure-disk.PNG"
+        alt="azure-disk"/></p>
+<blockquote>
+<p>For the demo purpose, we don't need extra storage.</p>
+</blockquote>
+<p>Click <strong>Next</strong> to Networking.</p>
+<h3 id="step-4-networking">Step 4 Networking</h3>
+<p>In the networking, you can define network connectivity for the virtual machine.</p>
+<p>For the demo purpose, we are not defining network restriction. Anyone can reach the VM.</p>
+<p>Create a new <strong>Network Security Group</strong>.</p>
+<p>Add an inbound rule where any ip can access the VM.</p>
+<p><img  src="./images/azure-vm-nsg.PNG"
+        alt="azure-nsg"/></p>
+<p>Leave the remaining to defaults setting and click <strong>Review + create</strong>.</p>
+<h3 id="step-5-review--create">Step 5 Review + create</h3>
+<p>In the review, it will take some time to validate all the configuration. On pass you can see <strong>Validation Passed</strong> message.</p>
+<p><img  src="./images/azure-vm-validation.PNG"
+        alt="azure-validation"/></p>
+<p>Click <strong>Create</strong>. It will take some time create the virtual machine.</p>
+<h3 id="step-6-connect-to-the-vm">Step 6 Connect to the VM</h3>
+<p>Go to the vm overview and click <strong>Connect</strong> and select <strong>SSH</strong>.</p>
+<p>Open the bash or any other command line.</p>
+<pre><code>ssh -i &lt;private key path&gt; azuredemo@52.172.178.61
+
+ssh -i ~/.ssh/id_rsa azuredemo@52.172.178.61
+</code></pre><p>Enter passphrase.</p>
+<p><img  src="./images/azure-vm-connect.PNG"
+        alt="azure-connect"/></p>
+<p>You're connected to the VM.</p>
+<h3 id="step-7-test-it">Step 7 Test it.</h3>
+<p>Install <code>nginx</code> web server in it.</p>
+<pre><code>sudo apt-get -y update
+sudo apt-get -y install nginx
+</code></pre><p>It will take a few seconds to install it. Once it install.<br>
+Open the browser and enter the VM ip address.</p>
+<p><img  src="./images/azure-nginx.PNG"
+        alt="azure-ngx"/></p>
+<h3 id="step-8-stop-the-vm">Step 8 Stop the VM</h3>
+<p>You can save some money by stopping the VM when you're not using it. Go to VM overview and stop it.</p>
+<p>Next time when you'll start it only the public ip of the vm will change.</p>
+<hr>
+</article><section class="article labels"><a class="category" href=/categories/tutorial/>Tutorial</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/cloud/>Cloud</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/azure/>azure</a><a class="tag" href=/tags/cloud/>cloud</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-gcp/"><span class="">Previous</span>How to Create a Linux VM in GCP</a></p><p><a class="link" href="/to-the-point/how-to-create-a-linux-vm-in-aws/"><span class="">Next</span>How to create a Linux VM in AWS?</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
+</div></span>
+        
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
+
+</html>
