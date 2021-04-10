@@ -1,5 +1,4 @@
 ---
-layout: projects
 title:  📮 Contact
 ---
 

@@ -1,6 +1,13 @@
+---
+layout: about
+---
+
 ## About Me
 
+{{< connect >}}
+
 *Hi there, I am Shubham Kumar Chadokar, I am a Software Engineer 👓.*
+> This is a documentation website of my learnings for my future self.
 
 I love to write articles and tutorials on Blockchain, Golang, Nodejs and Reactjs.
 My skill set is Blockchain (Ethereum, Hyperledger Fabric), Golang, Nodejs, Reactjs, Docker, Kubernetes.
@@ -10,18 +17,37 @@ I love to do photography :camera: in my me time.
 I like philosophical and mythological novels :books:.  
 My favourites are Meluha and The Kite Runner.
 
-## Talks
-### 2020
+### Talks
+
+**2020**
+
 A note-taking web app for developers.
 
 - **Build a CLI in golang with Cobra** @ [Pune Gophers](https://twitter.com/punegophers?lang=en) - [Presentation](https://docs.google.com/presentation/d/1knPYGk3SWjssZ9DBVfkUurATVoHJ9WkGyU_htBam-as/edit?usp=sharing)
 - [July London Gophers](https://www.youtube.com/watch?v=RMuSLjRracc) @ [London Gophers](https://twitter.com/LondonGophers) - [Presentation](https://docs.google.com/presentation/d/1YfE729FYfMggoT0__htseG3r6UOm2vDwMVSK0Ydy9S0/edit?usp=sharing)
 
----  
+### Publications
 
-Subscribe to my [Newsletter](/newsletter) to get my new articles directly in your mailbox.  
-If you have any queries, you can [contact me](/contact).  
+**freecodecamp**
 
-*This website is a Hugo version of [Tania's](https://taniarascia.com) website.*
+- [How to Write Your First Technical Book: Tools, Techniques, and Resources for First-time Developer Authors](https://www.freecodecamp.org/news/how-to-write-your-first-technical-book/)
 
----
+**codesource.io**
+- [Create a CLI in golang with Cobra](https://codesource.io/create-a-cli-in-golang-with-cobra/)
+- [Build a CRUD application in Golang with PostgreSQL](https://codesource.io/build-a-crud-application-in-golang-with-postgresql/)
+- [Learn How to use JSON in Golang](https://codesource.io/learn-how-to-use-json-in-golang/)
+- [Learn how to compare strings in the golang](https://codesource.io/learn-how-to-compare-strings-in-the-golang/)
+- [Building an offline To-Do App with React](https://codesource.io/building-an-offline-to-do-app-with-react/)
+
+**newline**
+- [Create your own Etherscan with React in 5 minutes](https://www.newline.co/@schadokar/create-your-own-etherscan-with-react-in-5-minutes--4626addd)
+
+**medium**
+- [Medium articles](https://medium.com/@schadokar)
+
+## 
+> Subscribe to my [Newsletter](/newsletter) to get my new articles directly in your mailbox.  
+> If you have any queries, you can [contact me](/contact).  
+> *This website is a Hugo version of [Tania's](https://taniarascia.com) website.*
+
+

@@ -10,7 +10,7 @@ html {
 
   font-size: 1.3rem;
   font-weight: 400;
-  line-height: 1.6em;
+  line-height: 1.75rem;
   font-style: normal;
 }
 
@@ -19,7 +19,7 @@ body {
   color: rgb(36, 41, 46);
   background-color: #f3f6f9;
   font-family: "Roboto", sans-serif !important;
-
+  line-height: 1.75rem !important;
   word-break: normal;
   word-wrap: break-word;
 
@@ -46,7 +46,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.75rem;
   color: #343a40;
 }
 
@@ -109,7 +109,7 @@ pre {
   display: block;
   text-align: left;
   font-size: 85%;
-  line-height: 1.65;
+  line-height: 1.75rem;
   margin: 0;
   padding: 16px;
 
@@ -650,7 +650,8 @@ b {
 }
 
 .article.markdown-body h1,
-.article.markdown-body h2 {
+.article.markdown-body h2,
+.article.markdown-body h3 {
   padding-bottom: 0.3em;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -761,7 +762,7 @@ b {
 
 .article.markdown-body li + li {
   margin-top: 20px;
-  list-style-type: '👉';
+  /* list-style-type: '👉'; */
 }
 
 .article.markdown-body > *,
@@ -770,7 +771,7 @@ b {
 .article.markdown-body .footnotes > * {
   margin-top: 0;
   margin-bottom: 20px;
-  list-style-type: '👉';
+  /* list-style-type: '👉'; */
 }
 
 .article.markdown-body > :first-child,
@@ -877,7 +878,7 @@ b {
 .hero-wrap p {
   color: #000;
   font-size: 24px;
-  line-height: 1.5;
+  line-height: 1.75rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
   margin-top: 1rem;
@@ -1211,7 +1212,7 @@ a.button:hover {
 
 #about h1 {
   font-size: 2.3rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   margin-bottom: 1.2rem;
   /* font-weight: 800; */
   color: #343a40;
@@ -1242,6 +1243,43 @@ p.subtitle {
   height: 519px;
   object-fit: cover;
 }
+
+/* Connect Section */
+.link-label:hover::after {
+  display: block;
+  content: "asd";
+}
+
+.connect {
+  /* float: right; */
+  text-align: right;
+}
+
+.connect a {
+  color: slategrey;
+  padding-right: 5px;
+}
+
+/* About */
+blockquote  {
+  border-left: 3px solid black;
+  color: #1a1a1a;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.8em;
+  margin: 1.1em -4em;
+  padding: 1em 2em;
+  position: relative;
+  transition: .2s border ease-in-out;
+} 
+
+cite  {
+  display: block;
+  font-size: 0.75em;
+  line-height: 1.8em;
+  margin-top: 1em;
+} 
 
 /* publication section */
 .publications h3 {
@@ -1461,17 +1499,16 @@ a.category {
 .about-page h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 3rem;
   padding-bottom: 0.5rem;
   border-bottom: 4px solid #f1f4f8;
 }
 
 .about-page h3 {
-  margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-size: 1.38rem;
   color: #495057;
   font-weight: 600;
+  border-bottom: 4px solid #f1f4f8;
 }
 
 @media (max-width: 720px) {
