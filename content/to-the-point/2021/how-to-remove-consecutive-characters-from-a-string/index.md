@@ -3,7 +3,7 @@ title: "How to Remove Consecutive Characters From a String"
 date: 2021-02-20T00:42:58+05:30
 description: "Basic Data structures and algorithms."
 categories: ["to-the-point", "2021"]
-tags: ["data structures"]
+tags: ["data structures", "javascript"]
 cover: https://schadokar.dev/images/basic.png #image show on top
 readingTime: true # show reading time after article date
 toc: true

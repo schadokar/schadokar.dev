@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Sat, 20 Feb 2021 00:42:58 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 12 Apr 2021 16:20:56 +0530</lastBuildDate>
     
         <atom:link href="/categories/to-the-point/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Sort an Array of Objects in Javascript</title>
+      <link>/to-the-point/how-to-sort-an-array-of-objects-in-javascript/</link>
+      <pubDate>Mon, 12 Apr 2021 16:20:56 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-sort-an-array-of-objects-in-javascript/</guid>
+      <description>Using the sort method, we can sort the array of objects by the property of the object.
+The sort method will change the persons array instead of creating a copy of it. sort works by reference not by value.
+1const persons = [ 2 {name: &amp;#34;John&amp;#34;, age: 35}, 3 {name: &amp;#34;Steve&amp;#34;, age: 24}, 4 {name: &amp;#34;Ben&amp;#34;, age: 49} 5] Syntax 1array.sort(function (arg1, arg2) { 2	// arg1 is smaller than arg2 3	// example: (2-4) = negative (less than 0) 4	if(arg1 &amp;lt; arg2) { 5	return -1; // in ascending order 6 // return 1; // in descening order 7	} 8	// arg1 is larger than arg2 9	// example: (6-2) = positive (greater than 0) 10	else if (arg1 &amp;gt; arg2) { 11	return 1; // in ascending order 12 // return -1; // in descening order 13	} 14	// arg1 is equal to arg2 15	return 0; 16} ) Sort the object by name 1persons.</description>
+      
+    </item>
     
     <item>
       <title>How to Remove Consecutive Characters From a String</title>

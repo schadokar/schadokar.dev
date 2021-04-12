@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>2021 on Shubham Chadokar</title>
-    <link>/categories/2021/</link>
-    <description>Recent content in 2021 on Shubham Chadokar</description>
+    <title>javascript on Shubham Chadokar</title>
+    <link>/tags/javascript/</link>
+    <description>Recent content in javascript on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Mon, 12 Apr 2021 16:20:56 +0530</lastBuildDate>
     
-        <atom:link href="/categories/2021/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

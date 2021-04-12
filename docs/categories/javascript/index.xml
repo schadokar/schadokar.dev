@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>2021 on Shubham Chadokar</title>
-    <link>/categories/2021/</link>
-    <description>Recent content in 2021 on Shubham Chadokar</description>
+    <title>Javascript on Shubham Chadokar</title>
+    <link>/categories/javascript/</link>
+    <description>Recent content in Javascript on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Mon, 12 Apr 2021 16:20:56 +0530</lastBuildDate>
     
-        <atom:link href="/categories/2021/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,18 +21,6 @@
       <description>Using the sort method, we can sort the array of objects by the property of the object.
 The sort method will change the persons array instead of creating a copy of it. sort works by reference not by value.
 1const persons = [ 2 {name: &amp;#34;John&amp;#34;, age: 35}, 3 {name: &amp;#34;Steve&amp;#34;, age: 24}, 4 {name: &amp;#34;Ben&amp;#34;, age: 49} 5] Syntax 1array.sort(function (arg1, arg2) { 2	// arg1 is smaller than arg2 3	// example: (2-4) = negative (less than 0) 4	if(arg1 &amp;lt; arg2) { 5	return -1; // in ascending order 6 // return 1; // in descening order 7	} 8	// arg1 is larger than arg2 9	// example: (6-2) = positive (greater than 0) 10	else if (arg1 &amp;gt; arg2) { 11	return 1; // in ascending order 12 // return -1; // in descening order 13	} 14	// arg1 is equal to arg2 15	return 0; 16} ) Sort the object by name 1persons.</description>
-      
-    </item>
-    
-    <item>
-      <title>How to Remove Consecutive Characters From a String</title>
-      <link>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</link>
-      <pubDate>Sat, 20 Feb 2021 00:42:58 +0530</pubDate>
-      
-      <guid>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</guid>
-      <description>Problem Statement Remove n consecutive characters from a string and return the final string.
-For example:
-1Input String: abccdeeef 2 3Output String: abdf Solution 1const str = &amp;#34;abccdeeef&amp;#34;; 2//-----------012345678 3let finalStr = &amp;#34;&amp;#34;; 4 5let isConsecutive = false; 6 7for (let i = 0; i &amp;lt; str.length - 1; i++) { 8 // check if characters are consecutive 9 if (str[i] === str[i + 1]) { 10 isConsecutive = true; 11 } else { 12 // check if the last character was consecutive 13 if (!</description>
       
     </item>
     
