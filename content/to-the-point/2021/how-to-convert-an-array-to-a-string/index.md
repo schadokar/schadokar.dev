@@ -1,5 +1,5 @@
 ---
-title: "How to Convert an Array to a String"
+title: "How to Convert an Array to a String in Javascript"
 date: 2021-04-13T18:21:35+05:30
 description: ""
 categories: ["Javascript","to-the-point","2021"]
@@ -8,7 +8,7 @@ cover: https://schadokar.dev/images/basic.png #image show on top
 readingTime: true # show reading time after article date
 toc: true
 comments: true
-draft: true
+published: true
 ---
 
 This post will answer the below questions
