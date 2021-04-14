@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://schadokar.dev/categories/2021/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/2021/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/create-a-weather-app-in-html/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/github-pages/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/html/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/material-ui/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/posts/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/tags/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
+    <loc>https://schadokar.dev/categories/tutorial/</loc><lastmod>2021-04-14T19:33:42+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-convert-an-array-to-a-string-in-javascript/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/javascript/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/javascript/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/tags/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/to-the-point/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/to-the-point/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/</loc><lastmod>2021-04-13T14:21:35+05:30</lastmod></url><url>
@@ -17,7 +23,6 @@
     <loc>https://schadokar.dev/categories/casual/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/casual/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/flashback-2020/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/posts/</loc><lastmod>2021-01-01T12:41:41+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/categories/golang/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/golang/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/to-the-point/how-to-format-golang-project/</loc><lastmod>2020-12-23T22:45:35+05:30</lastmod></url><url>
@@ -47,7 +52,6 @@
     <loc>https://schadokar.dev/posts/secure-your-api-using-jwt-in-golang/</loc><lastmod>2020-07-30T11:17:11+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/email/</loc><lastmod>2020-07-26T09:21:13+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</loc><lastmod>2020-07-26T09:21:13+05:30</lastmod></url><url>
-    <loc>https://schadokar.dev/categories/tutorial/</loc><lastmod>2020-07-26T09:21:13+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/tutorial/</loc><lastmod>2020-07-26T09:21:13+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/posts/how-to-send-email-in-nodejs/</loc><lastmod>2020-07-19T18:16:06+05:30</lastmod></url><url>
     <loc>https://schadokar.dev/tags/nodejs/</loc><lastmod>2020-07-19T18:16:06+05:30</lastmod></url><url>
