@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>tips on Shubham Chadokar</title>
-    <link>/tags/tips/</link>
-    <description>Recent content in tips on Shubham Chadokar</description>
+    <title>2021 on Shubham Chadokar</title>
+    <link>/tags/2021/</link>
+    <description>Recent content in 2021 on Shubham Chadokar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
     <lastBuildDate>Thu, 15 Apr 2021 16:01:12 +0530</lastBuildDate>
     
-        <atom:link href="/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,18 +24,6 @@ Browser Console The best way to test a piece of code is Browser console.
 Open any browser except Internet Explorer as it doesn&#39;t support many modern javascript feature.
 Press ctrl+shift+I or right click and select Inspect.
 In the console tab you can write the javascript code and run.</description>
-      
-    </item>
-    
-    <item>
-      <title>Basic validations every nodejs developer should know</title>
-      <link>/posts/basic-validations-every-nodejs-developer-should-know/</link>
-      <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
-      
-      <guid>/posts/basic-validations-every-nodejs-developer-should-know/</guid>
-      <description>Validations are the key things to prevent the application&#39;s unexpected behaviour. This is a list of basic validations every nodejs developer should know about.
-I will keep updating this article with new validation and best approaches.
- typeof operator  Syntax   Number check  Check NaN (not a number) Check if the number is finite   String Check Boolean Check Undefined Check Null Check  Null check using the Object   Function check Object Check  Check using the instanceof   Array Check Buffer Check Conclusion  typeof operator Javascript provides a typeof operator.</description>
       
     </item>
     

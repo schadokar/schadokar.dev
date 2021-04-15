@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Wed, 14 Apr 2021 19:33:42 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 15 Apr 2021 16:01:12 +0530</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Run Javascript Code</title>
+      <link>/posts/how-to-run-javascript-code/</link>
+      <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
+      
+      <guid>/posts/how-to-run-javascript-code/</guid>
+      <description>In this post, I will try to document the different ways to run the javascript code.
+As a beginner, you always need a simple way to run the code and test it.
+Browser Console The best way to test a piece of code is Browser console.
+Open any browser except Internet Explorer as it doesn&#39;t support many modern javascript feature.
+Press ctrl+shift+I or right click and select Inspect.
+In the console tab you can write the javascript code and run.</description>
+      
+    </item>
     
     <item>
       <title>Create a Weather App in Html</title>
