@@ -7,10 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Thu, 15 Apr 2021 16:01:12 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 16 Apr 2021 15:49:50 +0530</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>github-pages</title>
+      <link>/tags/github-pages/</link>
+      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
+      
+      <guid>/tags/github-pages/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>/tags/html/</link>
+      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
+      
+      <guid>/tags/html/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>material-ui</title>
+      <link>/tags/material-ui/</link>
+      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
+      
+      <guid>/tags/material-ui/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>2021</title>
@@ -38,36 +68,6 @@
       <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
       
       <guid>/tags/tips/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>github-pages</title>
-      <link>/tags/github-pages/</link>
-      <pubDate>Wed, 14 Apr 2021 19:33:42 +0530</pubDate>
-      
-      <guid>/tags/github-pages/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>/tags/html/</link>
-      <pubDate>Wed, 14 Apr 2021 19:33:42 +0530</pubDate>
-      
-      <guid>/tags/html/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>material-ui</title>
-      <link>/tags/material-ui/</link>
-      <pubDate>Wed, 14 Apr 2021 19:33:42 +0530</pubDate>
-      
-      <guid>/tags/material-ui/</guid>
       <description></description>
       
     </item>

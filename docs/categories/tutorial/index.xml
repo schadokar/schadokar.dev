@@ -7,10 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Wed, 14 Apr 2021 19:33:42 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 16 Apr 2021 15:49:50 +0530</lastBuildDate>
     
         <atom:link href="/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create a Task List in Html</title>
+      <link>/posts/create-a-task-list-in-html/</link>
+      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
+      
+      <guid>/posts/create-a-task-list-in-html/</guid>
+      <description>In this post, we are building a task list in HTML using material css.
+The tasks will save in the browser local storage.
+In the end, the app can be hosted on GitHub Pages.
+The code is available on GitHub.
+Demo App
+The final app will look like this.
+Project Setup Create a html-task-list directory.
+1|- html-task-list 2	|- icons 3	|- index.html 4	|- style.css 5	|- tasks.js index.html Create a index.</description>
+      
+    </item>
     
     <item>
       <title>Create a Weather App in Html</title>

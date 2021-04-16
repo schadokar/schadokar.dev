@@ -157,7 +157,7 @@ Open `index.html` and paste the below code.
             <a href="https://materializecss.com/">material ui</a>
           </div>
           <div class="container">
-            <a href="https://github.com/schadokar"
+            <a href="https://github.com/day-to-day-coding/html-weather-app"
               ><i class="material-icons">code</i></a
             >
           </div>
