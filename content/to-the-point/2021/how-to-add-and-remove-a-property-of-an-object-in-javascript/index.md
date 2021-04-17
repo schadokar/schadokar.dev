@@ -1,5 +1,5 @@
 ---
-title: "How to Add and Remove a Property of an Object"
+title: "How to Add and Remove a Property of an Object in Javascript"
 date: 2021-04-17T10:48:17+05:30
 description: ""
 categories: ["Javascript", "2021", "to-the-point"]
