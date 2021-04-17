@@ -6,10 +6,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Convert an Array to a String in Javascript&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.7c93b038dc3a90b0083f9777c93f5fab25ce2d2a2363105514ba0d58d9536f05606f49fe7d05afe5d9e33cb24b22005a.css" integrity="sha384-fJOwONw6kLAIP5d3yT9fqyXOLSojYxBVFLoNWNlTbwVgb0n&#43;fQWv5dnjPLJLIgBa">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Add and Remove a Property of an Object&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.7c93b038dc3a90b0083f9777c93f5fab25ce2d2a2363105514ba0d58d9536f05606f49fe7d05afe5d9e33cb24b22005a.css" integrity="sha384-fJOwONw6kLAIP5d3yT9fqyXOLSojYxBVFLoNWNlTbwVgb0n&#43;fQWv5dnjPLJLIgBa">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="How to Convert an Array to a String in Javascript" /><meta name="twitter:image" content="https://schadokar.dev/images/basic.png" /><body><section id="header">
+<meta name="twitter:title" content="How to Add and Remove a Property of an Object" /><meta name="twitter:image" content="https://schadokar.dev/images/basic.png" /><body><section id="header">
     <div class="container">        
         <nav class="navbar navbar-expand-md navbar-light site-nav">
 
@@ -40,33 +40,34 @@
 </section>
 
     <section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">How to Convert an Array to a String in Javascript</h1><p class="article date">Tuesday, April 13, 2021<span class="reading-time"> • One minute to read</span></p><section class="article labels"><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/javascript/>Javascript</a><a class="category" href=/categories/2021/>2021</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section>
+    <h1 class="article title">How to Add and Remove a Property of an Object</h1><p class="article date">Saturday, April 17, 2021<span class="reading-time"> • One minute to read</span></p><section class="article labels"><a class="category" href=/categories/javascript/>Javascript</a><a class="category" href=/categories/2021/>2021</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/2021/>2021</a></section>
 </section>
 <article class="article markdown-body">
         
         
-        <p>This post will answer the below questions</p>
-<ul>
-<li>How to convert an array to a string?</li>
-<li>How to convert an array to a string with a character in between the elements?</li>
-</ul>
-<p>Use <code>join</code> method to convert the array to a string with a separator.</p>
-<h3 id="syntax">Syntax</h3>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">array</span>.<span style="color:#268bd2">join</span>(<span style="color:#268bd2">separator</span>(<span style="color:#268bd2">optional</span>))
-</code></pre></div><blockquote>
-<p><code>,</code>(comma) is the default separator. Separator is a string not a character. <code>-</code> or <code>namaste</code> both are valid separator.</p>
-</blockquote>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">const</span> <span style="color:#268bd2">dateArray</span> = [<span style="color:#2aa198">&#34;Sun&#34;</span>, <span style="color:#2aa198;font-weight:bold">11</span>, <span style="color:#2aa198">&#34;Apr&#34;</span>, <span style="color:#2aa198;font-weight:bold">2021</span>, <span style="color:#2aa198">&#34;12:59:48&#34;</span>, <span style="color:#2aa198">&#34;GMT&#34;</span>];
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#859900">const</span> <span style="color:#268bd2">dateString</span> = <span style="color:#268bd2">dateArray</span>.<span style="color:#268bd2">join</span>();
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#859900">const</span> <span style="color:#268bd2">dateStringHyphen</span> = <span style="color:#268bd2">dateArray</span>.<span style="color:#268bd2">join</span>(<span style="color:#2aa198">&#34;-&#34;</span>);
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">dateString</span>);
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#268bd2">dateStringHyphen</span>);
-</code></pre></div><h4 id="output">Output</h4>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">Sun</span>,<span style="color:#2aa198;font-weight:bold">11</span>,<span style="color:#268bd2">Apr</span>,<span style="color:#2aa198;font-weight:bold">2021</span>,<span style="color:#2aa198;font-weight:bold">12</span>:<span style="color:#2aa198;font-weight:bold">59</span>:<span style="color:#2aa198;font-weight:bold">48</span>,<span style="color:#268bd2">GMT</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">Sun</span>-<span style="color:#2aa198;font-weight:bold">11</span>-<span style="color:#268bd2">Apr</span>-<span style="color:#2aa198;font-weight:bold">2021</span>-<span style="color:#2aa198;font-weight:bold">12</span>:<span style="color:#2aa198;font-weight:bold">59</span>:<span style="color:#2aa198;font-weight:bold">48</span>-<span style="color:#268bd2">GMT</span>
+        <p>Javascript object is a collection of properties and a property is a key-value pair.</p>
+<p>The value can be anything like any data type, object and even a function. When a value is a function then it is known as method.</p>
+<h2 id="add-a-property-to-an-object">Add a property to an object</h2>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">const</span> <span style="color:#268bd2">obj</span> = {};
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#93a1a1;font-style:italic">// syntax 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#268bd2">obj</span>.<span style="color:#268bd2">property1</span> = <span style="color:#2aa198">&#34;first property&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span style="color:#93a1a1;font-style:italic">// or syntax 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#268bd2">obj</span>.<span style="color:#268bd2">property2</span> = <span style="color:#2aa198">&#34;second property&#34;</span>
+</code></pre></div><h2 id="remove-or-delete-a-property-of-an--object">Remove or delete a property of an  Object</h2>
+<p>Use <code>delete</code> keyword to remove or delete a property.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">const</span> <span style="color:#268bd2">obj</span> = {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>    <span style="color:#2aa198">&#34;property1&#34;</span>: <span style="color:#2aa198">&#34;first property&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    <span style="color:#2aa198">&#34;property2&#34;</span>: <span style="color:#2aa198">&#34;second property&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>    <span style="color:#2aa198">&#34;property3&#34;</span>: <span style="color:#2aa198">&#34;third property&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>};
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#93a1a1;font-style:italic">// delete second property
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">delete</span> <span style="color:#268bd2">obj</span>.<span style="color:#268bd2">property2</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span style="color:#93a1a1;font-style:italic">// delete third property
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">delete</span> <span style="color:#268bd2">obj</span>[<span style="color:#2aa198">&#34;property3&#34;</span>];
 </code></pre></div><hr>
-</article><section class="article labels"><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="category" href=/categories/javascript/>Javascript</a><a class="category" href=/categories/2021/>2021</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-add-and-remove-a-property-of-an-object/"><span class="">Previous</span>How to Add and Remove a Property of an Object</a></p><p><a class="link" href="/to-the-point/how-to-sort-an-array-of-objects-in-javascript/"><span class="">Next</span>How to Sort an Array of Objects in Javascript</a></p></section></div></section>
+</article><section class="article labels"><a class="category" href=/categories/javascript/>Javascript</a><a class="category" href=/categories/2021/>2021</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/to-the-point/>to-the-point</a><a class="tag" href=/tags/2021/>2021</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-convert-an-array-to-a-string-in-javascript/"><span class="">Next</span>How to Convert an Array to a String in Javascript</a></p></section></div></section>
 <section id="footer">
     <div class="footer wrap mt-5">
         <div class="container">

@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Tue, 13 Apr 2021 14:21:35 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 17 Apr 2021 10:48:17 +0530</lastBuildDate>
     
         <atom:link href="/categories/to-the-point/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Add and Remove a Property of an Object</title>
+      <link>/to-the-point/how-to-add-and-remove-a-property-of-an-object/</link>
+      <pubDate>Sat, 17 Apr 2021 10:48:17 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-add-and-remove-a-property-of-an-object/</guid>
+      <description>Javascript object is a collection of properties and a property is a key-value pair.
+The value can be anything like any data type, object and even a function. When a value is a function then it is known as method.
+Add a property to an object 1const obj = {}; 2// syntax 1 3obj.property1 = &amp;#34;first property&amp;#34; 4// or syntax 2 5obj.property2 = &amp;#34;second property&amp;#34; Remove or delete a property of an Object Use delete keyword to remove or delete a property.</description>
+      
+    </item>
     
     <item>
       <title>How to Convert an Array to a String in Javascript</title>

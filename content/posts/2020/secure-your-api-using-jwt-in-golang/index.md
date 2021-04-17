@@ -7,6 +7,7 @@ tags: ["golang", "jwt"]
 cover: https://schadokar.dev/images/golang-basic.png #image show on top
 readingTime: true # show reading time after article date
 published: true
+popular: true
 ---
 
 In this tutorial, we will learn how to secure the APIs using the JWT authentication in Golang.  

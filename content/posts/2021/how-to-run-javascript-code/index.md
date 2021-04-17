@@ -9,6 +9,7 @@ readingTime: true # show reading time after article date
 toc: true
 comments: true
 published: true
+popular: true
 ---
 
 In this post, I will try to document the different ways to run the javascript code.  

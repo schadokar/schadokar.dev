@@ -1,10 +1,10 @@
 <section id="latest" class="space">
     <div class="artheader">
-        <h3>To The Points</h3>
+        <h3>To The Point</h3>
         <a class="pill" href="/to-the-point/">View all</a>
     </div>
     <div class="posts">
-        {{- range ( where site.RegularPages "Section" "to-the-point" | first 5 ) }}
+        {{- range ( where site.RegularPages "Section" "to-the-point" | first 10 ) }}
             <div class="post">
                 <a href="{{.URL}}">
                     <div class="post-row">

@@ -8,7 +8,6 @@ cover: images/go-serverless-aws.png #image show on top
 readingTime: true # show reading time after article date
 published: true
 popular: true
-popular: true
 ---
 
 In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.
