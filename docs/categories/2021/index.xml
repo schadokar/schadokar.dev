@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Sat, 17 Apr 2021 10:48:17 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 18 Apr 2021 19:52:16 +0530</lastBuildDate>
     
         <atom:link href="/categories/2021/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Check if Object Is Empty in Javascript</title>
+      <link>/to-the-point/how-to-check-if-object-is-empty-in-javascript/</link>
+      <pubDate>Sun, 18 Apr 2021 19:52:16 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-check-if-object-is-empty-in-javascript/</guid>
+      <description>There are many ways to check if an Object is empty or not. But in this post we will document only which is recommended and has fast execution compared to others.
+for loop Iteration is best way to check if Object is empty or not and it will work on all the browsers.
+1const obj = {}; 2 3for(let key in obj) { 4 if(obj.hasOwnProperty(key)) { 5 return false; 6 }; 7}; 8return true; Using Object.</description>
+      
+    </item>
     
     <item>
       <title>How to Add and Remove a Property of an Object in Javascript</title>
