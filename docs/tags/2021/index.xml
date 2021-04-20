@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Mon, 19 Apr 2021 20:06:56 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 20 Apr 2021 13:54:31 +0530</lastBuildDate>
     
         <atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create a Cryptocurrency Exchange Rate in Html Part 1</title>
+      <link>/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</link>
+      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
+      
+      <guid>/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</guid>
+      <description>This is a series of 3 tutorials in which we will build a cryptocurrency exchange rate dashboard in HTML using materialize css and coinbase free api.
+ Part 1: Simple Cryptocurrency Exchange Rate Dashboard Part 2: Add pagination in cryptocurrency exchange rate Part 3: Change base currency BTC to other currencies like USD, EUR INR.  Project Setup Create a cryptocurrency-exchange-rate directory.
+1|- cryptocurrency-exchange-rate 2	|- icons 3	|- exchange-rates.js 4	|- index.</description>
+      
+    </item>
     
     <item>
       <title>How to Get the Length of an Object in Javascript</title>

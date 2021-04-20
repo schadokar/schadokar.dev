@@ -307,7 +307,7 @@ You can host it on GitHub Pages.
 
 Create a `html-task-list` repository on the GitHub. You can name it anything.
 
-Open the terminal or cmd in the project and instantiate git init.
+Open the terminal or cmd in the project and instantiate `git init`.
 
 Stage and commit the code.
 

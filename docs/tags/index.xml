@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Mon, 19 Apr 2021 20:06:56 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 20 Apr 2021 13:54:31 +0530</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>2021</title>
       <link>/tags/2021/</link>
-      <pubDate>Mon, 19 Apr 2021 20:06:56 +0530</pubDate>
+      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
       
       <guid>/tags/2021/</guid>
       <description></description>
@@ -23,9 +23,29 @@
     </item>
     
     <item>
+      <title>cryptocurrency</title>
+      <link>/tags/cryptocurrency/</link>
+      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
+      
+      <guid>/tags/cryptocurrency/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>/tags/html/</link>
+      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
+      
+      <guid>/tags/html/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>javascript</title>
       <link>/tags/javascript/</link>
-      <pubDate>Mon, 19 Apr 2021 20:06:56 +0530</pubDate>
+      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
       
       <guid>/tags/javascript/</guid>
       <description></description>
@@ -48,16 +68,6 @@
       <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
       
       <guid>/tags/github-pages/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>/tags/html/</link>
-      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
-      
-      <guid>/tags/html/</guid>
       <description></description>
       
     </item>

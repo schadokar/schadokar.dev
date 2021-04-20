@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create a Cryptocurrency Exchange Rate in Html Part 1&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.7c93b038dc3a90b0083f9777c93f5fab25ce2d2a2363105514ba0d58d9536f05606f49fe7d05afe5d9e33cb24b22005a.css" integrity="sha384-fJOwONw6kLAIP5d3yT9fqyXOLSojYxBVFLoNWNlTbwVgb0n&#43;fQWv5dnjPLJLIgBa">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Create a Cryptocurrency Exchange Rate in Html Part 1" /><meta name="twitter:image" content="https://schadokar.dev//posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/exchange.png" /><body><section id="header">
+    <div class="container">        
+        <nav class="navbar navbar-expand-md navbar-light site-nav">
+
+            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+        <a class="nav item nav-link" href="/to-the-point">To-The-Point</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="https://github%2ecom/schadokar/resume/blob/main/ShubhamChadokar_Resume%2epdf"target="_blank">Resume</a>
+        </li></ul>
+    
+</nav>
+</div></div>
+        </nav>
+    </div>
+    
+</section>
+
+    <section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Create a Cryptocurrency Exchange Rate in Html Part 1</h1><p class="article date">Tuesday, April 20, 2021<span class="reading-time"> • 5 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/javascript/>Javascript</a><a class="category" href=/categories/html/>HTML</a><a class="category" href=/categories/2021/>2021</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/html/>html</a><a class="tag" href=/tags/2021/>2021</a><a class="tag" href=/tags/cryptocurrency/>cryptocurrency</a></section>
+</section>
+<article class="article markdown-body">
+        
+        
+        <p>This is a  series of 3 tutorials in which we will build a cryptocurrency exchange rate dashboard in HTML using materialize css and coinbase free api.</p>
+<ul>
+<li><strong>Part 1</strong>: Simple Cryptocurrency Exchange Rate Dashboard</li>
+<li><strong>Part 2</strong>: Add pagination in cryptocurrency exchange rate</li>
+<li><strong>Part 3</strong>: Change base currency BTC to other currencies like USD, EUR INR.</li>
+</ul>
+<p><img  src="./exchange.PNG"
+        alt="exchange"/></p>
+<h2 id="project-setup">Project Setup</h2>
+<p>Create a <code>cryptocurrency-exchange-rate</code> directory.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>|- cryptocurrency-exchange-rate
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>	|- icons
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>	|- exchange-rates.js
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>	|- index.html
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>	|- style.css
+</code></pre></div><h2 id="coinbase-api">Coinbase API</h2>
+<p>We are using coinbase free to use APIs which don't require any sign up and secret key.</p>
+<p><a href="https://developers.coinbase.com/api/v2"target="_blank">Coinbase Developer API</a></p>
+<p>We are using <a href="https://developers.coinbase.com/api/v2#exchange-rates"target="_blank">Exchange Rates</a> API for our use case.</p>
+<pre><code class="language-curl" data-lang="curl">curl https://api.coinbase.com/v2/exchange-rates?currency=BTC
+</code></pre><p><strong>Example Response</strong></p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#268bd2;font-weight:bold">&#34;data&#34;</span>: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    <span style="color:#268bd2;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#2aa198">&#34;BTC&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>    <span style="color:#268bd2;font-weight:bold">&#34;rates&#34;</span>: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>      <span style="color:#268bd2;font-weight:bold">&#34;AED&#34;</span>: <span style="color:#2aa198">&#34;36.73&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>      <span style="color:#268bd2;font-weight:bold">&#34;AFN&#34;</span>: <span style="color:#2aa198">&#34;589.50&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>      <span style="color:#268bd2;font-weight:bold">&#34;ALL&#34;</span>: <span style="color:#2aa198">&#34;1258.82&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>      <span style="color:#268bd2;font-weight:bold">&#34;AMD&#34;</span>: <span style="color:#2aa198">&#34;4769.49&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>      <span style="color:#268bd2;font-weight:bold">&#34;ANG&#34;</span>: <span style="color:#2aa198">&#34;17.88&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>      ...
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>}
+</code></pre></div><blockquote>
+<p>Default base currency is BTC</p>
+</blockquote>
+<h2 id="indexhtml">index.html</h2>
+<p>Create an <code>index.html</code> file and paste the code.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span style="color:#93a1a1;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span>&lt;<span style="color:#268bd2;font-weight:bold">html</span> <span style="color:#268bd2">lang</span>=<span style="color:#2aa198">&#34;en&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3</span>  &lt;<span style="color:#268bd2;font-weight:bold">head</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4</span>    &lt;<span style="color:#268bd2;font-weight:bold">meta</span> <span style="color:#268bd2">charset</span>=<span style="color:#2aa198">&#34;UTF-8&#34;</span> /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5</span>    &lt;<span style="color:#268bd2;font-weight:bold">meta</span> <span style="color:#268bd2">http-equiv</span>=<span style="color:#2aa198">&#34;X-UA-Compatible&#34;</span> <span style="color:#268bd2">content</span>=<span style="color:#2aa198">&#34;IE=edge&#34;</span> /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6</span>    &lt;<span style="color:#268bd2;font-weight:bold">meta</span> <span style="color:#268bd2">name</span>=<span style="color:#2aa198">&#34;viewport&#34;</span> <span style="color:#268bd2">content</span>=<span style="color:#2aa198">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7</span>    &lt;<span style="color:#268bd2;font-weight:bold">link</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8</span>      <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;apple-touch-icon&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9</span>      <span style="color:#268bd2">sizes</span>=<span style="color:#2aa198">&#34;180x180&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10</span>      <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;/icons/apple-touch-icon.png&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11</span>    /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12</span>    &lt;<span style="color:#268bd2;font-weight:bold">link</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13</span>      <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;icon&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14</span>      <span style="color:#268bd2">type</span>=<span style="color:#2aa198">&#34;image/png&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15</span>      <span style="color:#268bd2">sizes</span>=<span style="color:#2aa198">&#34;32x32&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16</span>      <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;/icons/favicon-32x32.png&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17</span>    /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18</span>    &lt;<span style="color:#268bd2;font-weight:bold">link</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19</span>      <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;icon&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20</span>      <span style="color:#268bd2">type</span>=<span style="color:#2aa198">&#34;image/png&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21</span>      <span style="color:#268bd2">sizes</span>=<span style="color:#2aa198">&#34;16x16&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22</span>      <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;/icons/favicon-16x16.png&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23</span>    /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24</span>    &lt;<span style="color:#268bd2;font-weight:bold">link</span> <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;manifest&#34;</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;/icons/site.webmanifest&#34;</span> /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25</span>    <span style="color:#93a1a1;font-style:italic">&lt;!--</span><span style="color:#93a1a1;font-style:italic"> Compiled and minified CSS </span><span style="color:#93a1a1;font-style:italic">--&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26</span>    &lt;<span style="color:#268bd2;font-weight:bold">link</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27</span>      <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;stylesheet&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28</span>      <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29</span>    /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30</span>    &lt;<span style="color:#268bd2;font-weight:bold">link</span> <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;preconnect&#34;</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;https://fonts.gstatic.com&#34;</span> /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31</span>    &lt;<span style="color:#268bd2;font-weight:bold">link</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32</span>      <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;https://fonts.googleapis.com/icon?family=Material+Icons&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33</span>      <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;stylesheet&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34</span>    /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36</span>    &lt;<span style="color:#268bd2;font-weight:bold">link</span> <span style="color:#268bd2">rel</span>=<span style="color:#2aa198">&#34;stylesheet&#34;</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;./style.css&#34;</span> /&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38</span>    <span style="color:#93a1a1;font-style:italic">&lt;!--</span><span style="color:#93a1a1;font-style:italic"> Compiled and minified JavaScript </span><span style="color:#93a1a1;font-style:italic">--&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39</span>    &lt;<span style="color:#268bd2;font-weight:bold">script</span> <span style="color:#268bd2">src</span>=<span style="color:#2aa198">&#34;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js&#34;</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40</span>    &lt;<span style="color:#268bd2;font-weight:bold">script</span> <span style="color:#268bd2">src</span>=<span style="color:#2aa198">&#34;./exchange-rates.js&#34;</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41</span>    &lt;<span style="color:#268bd2;font-weight:bold">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42</span>      <span style="color:#93a1a1;font-style:italic">// onload
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#cb4b16">window</span>.<span style="color:#268bd2">addEventListener</span>(<span style="color:#2aa198">&#34;load&#34;</span>, <span style="color:#268bd2">getExchangeRates</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44</span>    &lt;/<span style="color:#268bd2;font-weight:bold">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45</span>    &lt;<span style="color:#268bd2;font-weight:bold">title</span>&gt;Cryptocurrency Exchage Rates&lt;/<span style="color:#268bd2;font-weight:bold">title</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46</span>  &lt;/<span style="color:#268bd2;font-weight:bold">head</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47</span>  &lt;<span style="color:#268bd2;font-weight:bold">body</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48</span>    &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;container&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49</span>      &lt;<span style="color:#268bd2;font-weight:bold">span</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50</span>        &lt;<span style="color:#268bd2;font-weight:bold">header</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51</span>          &lt;<span style="color:#268bd2;font-weight:bold">i</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;large material-icons&#34;</span> <span style="color:#268bd2">style</span>=<span style="color:#2aa198">&#34;vertical-align: text-bottom&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52</span>            &gt;compare_arrows&lt;/<span style="color:#268bd2;font-weight:bold">i</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53</span>          &gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54</span>          Cryptocurrency Exchage Rates
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55</span>        &lt;/<span style="color:#268bd2;font-weight:bold">header</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">span</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56</span>      &gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57</span>      &lt;<span style="color:#268bd2;font-weight:bold">main</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58</span>        &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;row&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59</span>          &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;col s4&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60</span>            &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;card-panel purple lighten-1&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61</span>              &lt;<span style="color:#268bd2;font-weight:bold">span</span> <span style="color:#268bd2">id</span>=<span style="color:#2aa198">&#34;usd&#34;</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;white-text&#34;</span>&gt; &lt;/<span style="color:#268bd2;font-weight:bold">span</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62</span>            &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63</span>          &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64</span>          &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;col s4&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65</span>            &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;card-panel purple lighten-1&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66</span>              &lt;<span style="color:#268bd2;font-weight:bold">span</span> <span style="color:#268bd2">id</span>=<span style="color:#2aa198">&#34;inr&#34;</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;white-text&#34;</span>&gt; &lt;/<span style="color:#268bd2;font-weight:bold">span</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67</span>            &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68</span>          &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69</span>          &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;col s4&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70</span>            &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;card-panel purple lighten-1&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71</span>              &lt;<span style="color:#268bd2;font-weight:bold">span</span> <span style="color:#268bd2">id</span>=<span style="color:#2aa198">&#34;eur&#34;</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;white-text&#34;</span>&gt; &lt;/<span style="color:#268bd2;font-weight:bold">span</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72</span>            &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73</span>          &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74</span>        &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76</span>        &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;row&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77</span>          &lt;<span style="color:#268bd2;font-weight:bold">table</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78</span>            &lt;<span style="color:#268bd2;font-weight:bold">thead</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79</span>              <span style="color:#93a1a1;font-style:italic">&lt;!--</span><span style="color:#93a1a1;font-style:italic"> &lt;th&gt;#&lt;/th&gt; </span><span style="color:#93a1a1;font-style:italic">--&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80</span>              &lt;<span style="color:#268bd2;font-weight:bold">th</span>&gt;Currency&lt;/<span style="color:#268bd2;font-weight:bold">th</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81</span>              &lt;<span style="color:#268bd2;font-weight:bold">th</span>&gt;Rate&lt;/<span style="color:#268bd2;font-weight:bold">th</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82</span>            &lt;/<span style="color:#268bd2;font-weight:bold">thead</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83</span>            &lt;<span style="color:#268bd2;font-weight:bold">tbody</span> <span style="color:#268bd2">id</span>=<span style="color:#2aa198">&#34;ratetable&#34;</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">tbody</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84</span>          &lt;/<span style="color:#268bd2;font-weight:bold">table</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85</span>        &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86</span>      &lt;/<span style="color:#268bd2;font-weight:bold">main</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88</span>      &lt;<span style="color:#268bd2;font-weight:bold">footer</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;center&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89</span>        &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;footer-copyright&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90</span>          &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;container&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91</span>            Made with &lt;<span style="color:#268bd2;font-weight:bold">span</span> <span style="color:#268bd2">style</span>=<span style="color:#2aa198">&#34;color: red&#34;</span>&gt;❤️&lt;/<span style="color:#268bd2;font-weight:bold">span</span>&gt; by
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92</span>            &lt;<span style="color:#268bd2;font-weight:bold">a</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;https://schadokar.dev&#34;</span>&gt;schadokar&lt;/<span style="color:#268bd2;font-weight:bold">a</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93</span>          &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94</span>          &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;container&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95</span>            Ingredients &lt;<span style="color:#268bd2;font-weight:bold">span</span>&gt; 🧪&lt;/<span style="color:#268bd2;font-weight:bold">span</span>&gt; html, css and
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96</span>            &lt;<span style="color:#268bd2;font-weight:bold">a</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;https://materializecss.com/&#34;</span>&gt;material ui&lt;/<span style="color:#268bd2;font-weight:bold">a</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97</span>          &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98</span>          &lt;<span style="color:#268bd2;font-weight:bold">div</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;container&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99</span>            &lt;<span style="color:#268bd2;font-weight:bold">a</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100</span>              <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;https://github.com/day-to-day-coding/html-cryptocurrency-rates/&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101</span>              &gt;&lt;<span style="color:#268bd2;font-weight:bold">i</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;material-icons&#34;</span>&gt;developer_mode&lt;/<span style="color:#268bd2;font-weight:bold">i</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">a</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102</span>            &gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103</span>          &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104</span>        &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105</span>      &lt;/<span style="color:#268bd2;font-weight:bold">footer</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106</span>    &lt;/<span style="color:#268bd2;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107</span>  &lt;/<span style="color:#268bd2;font-weight:bold">body</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108</span>&lt;/<span style="color:#268bd2;font-weight:bold">html</span>&gt;
+</code></pre></div><h2 id="stylecss">style.css</h2>
+<p>Create a <code>style.css</code> and paste the code.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#268bd2;font-weight:bold">body</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#859900">background-color</span>: <span style="color:#859900;font-weight:bold">white</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>  <span style="color:#859900">color</span>: <span style="color:#859900;font-weight:bold">black</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  <span style="color:#859900">background-size</span>: <span style="color:#859900;font-weight:bold">auto</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>  <span style="color:#859900">background-repeat</span>: <span style="color:#859900;font-weight:bold">no-repeat</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>  <span style="color:#859900">display</span>: <span style="color:#859900;font-weight:bold">flex</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>  <span style="color:#859900">flex-direction</span>: <span style="color:#859900;font-weight:bold">column</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#268bd2;font-weight:bold">header</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>  <span style="color:#859900">font-size</span>: <span style="color:#859900;font-weight:bold">xx-large</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>  <span style="color:#859900">margin-bottom</span>: <span style="color:#2aa198;font-weight:bold">50</span><span style="color:#859900;font-weight:bold">px</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span style="color:#268bd2;font-weight:bold">main</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>  <span style="color:#859900">flex</span>: <span style="color:#2aa198;font-weight:bold">1</span> <span style="color:#2aa198;font-weight:bold">0</span> <span style="color:#859900;font-weight:bold">auto</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span style="color:#268bd2;font-weight:bold">input</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>  <span style="color:#859900">font-family</span>: <span style="color:#2aa198">&#34;Pacifico&#34;</span>, <span style="color:#859900;font-weight:bold">cursive</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>.<span style="color:#cb4b16">vertical-divider</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>  <span style="color:#859900">border-left</span>: <span style="color:#2aa198;font-weight:bold">1</span><span style="color:#859900;font-weight:bold">px</span> <span style="color:#859900;font-weight:bold">solid</span> <span style="color:#859900;font-weight:bold">gray</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>.<span style="color:#cb4b16">page-footer</span> .<span style="color:#cb4b16">footer-copyright</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>  <span style="color:#859900">background-color</span>: <span style="color:#859900;font-weight:bold">white</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>}
+</code></pre></div><h2 id="exchange-ratesjs">exchange-rates.js</h2>
+<p>Create a <code>exchange-rates.js</code> for the logic and paste the code.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#859900">function</span> <span style="color:#268bd2">getExchangeRates</span>(<span style="color:#268bd2">event</span>, <span style="color:#268bd2">baseCurrency</span> = <span style="color:#2aa198">&#34;BTC&#34;</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#859900">var</span> <span style="color:#268bd2">requestOptions</span> = {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    <span style="color:#268bd2">method</span>: <span style="color:#2aa198">&#34;GET&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>    <span style="color:#268bd2">redirect</span>: <span style="color:#2aa198">&#34;follow&#34;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>  };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>    <span style="color:#93a1a1;font-style:italic">// call the api
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#93a1a1;font-style:italic"></span>  <span style="color:#268bd2">fetch</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>    <span style="color:#2aa198">`</span><span style="color:#2aa198">http://api.coinbase.com/v2/exchange-rates?currency=</span><span style="color:#2aa198">${</span><span style="color:#268bd2">baseCurrency</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>    <span style="color:#268bd2">requestOptions</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>  )
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>    .<span style="color:#268bd2">then</span>((<span style="color:#268bd2">response</span>) =&gt; <span style="color:#268bd2">response</span>.<span style="color:#268bd2">json</span>())
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>    .<span style="color:#268bd2">then</span>((<span style="color:#268bd2">result</span>) =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>      <span style="color:#93a1a1;font-style:italic">// render cards
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">renderCards</span>(<span style="color:#268bd2">result</span>.<span style="color:#268bd2">data</span>.<span style="color:#268bd2">rates</span>, <span style="color:#268bd2">baseCurrency</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>      <span style="color:#93a1a1;font-style:italic">// render currency table
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span style="color:#93a1a1;font-style:italic"></span>      <span style="color:#268bd2">renderCurrencyTable</span>(<span style="color:#268bd2">result</span>.<span style="color:#268bd2">data</span>.<span style="color:#268bd2">rates</span>, <span style="color:#268bd2">baseCurrency</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>    })
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>    .<span style="color:#859900">catch</span>((<span style="color:#268bd2">error</span>) =&gt; <span style="color:#268bd2">console</span>.<span style="color:#268bd2">log</span>(<span style="color:#2aa198">&#34;error&#34;</span>, <span style="color:#268bd2">error</span>));
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span style="color:#859900">function</span> <span style="color:#268bd2">renderCards</span>(<span style="color:#268bd2">rates</span>, <span style="color:#268bd2">baseCurrency</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>  <span style="color:#93a1a1;font-style:italic">// Get the usd card
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span style="color:#93a1a1;font-style:italic"></span>  <span style="color:#cb4b16">document</span>.<span style="color:#268bd2">getElementById</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>    <span style="color:#2aa198">&#34;usd&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>  ).<span style="color:#268bd2">innerHTML</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">1 </span><span style="color:#2aa198">${</span><span style="color:#268bd2">baseCurrency</span><span style="color:#2aa198">}</span><span style="color:#2aa198"> </span>\<span style="color:#2aa198">t=</span>\<span style="color:#2aa198">t &amp;#36 </span><span style="color:#2aa198">${</span><span style="color:#268bd2">rates</span>[<span style="color:#2aa198">&#34;USD&#34;</span>]<span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>  <span style="color:#93a1a1;font-style:italic">// Get the inr card
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span style="color:#93a1a1;font-style:italic"></span>  <span style="color:#cb4b16">document</span>.<span style="color:#268bd2">getElementById</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>    <span style="color:#2aa198">&#34;inr&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>  ).<span style="color:#268bd2">innerHTML</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">1 </span><span style="color:#2aa198">${</span><span style="color:#268bd2">baseCurrency</span><span style="color:#2aa198">}</span><span style="color:#2aa198"> </span>\<span style="color:#2aa198">t=</span>\<span style="color:#2aa198">t &amp;#x20B9 </span><span style="color:#2aa198">${</span><span style="color:#268bd2">rates</span>[<span style="color:#2aa198">&#34;INR&#34;</span>]<span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>  <span style="color:#93a1a1;font-style:italic">// Get the eur card
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span style="color:#93a1a1;font-style:italic"></span>  <span style="color:#cb4b16">document</span>.<span style="color:#268bd2">getElementById</span>(
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>    <span style="color:#2aa198">&#34;eur&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span>  ).<span style="color:#268bd2">innerHTML</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">1 </span><span style="color:#2aa198">${</span><span style="color:#268bd2">baseCurrency</span><span style="color:#2aa198">}</span><span style="color:#2aa198"> </span>\<span style="color:#2aa198">t=</span>\<span style="color:#2aa198">t &amp;#8364 </span><span style="color:#2aa198">${</span><span style="color:#268bd2">rates</span>[<span style="color:#2aa198">&#34;EUR&#34;</span>]<span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span style="color:#859900">function</span> <span style="color:#268bd2">renderCurrencyTable</span>(<span style="color:#268bd2">rates</span>, <span style="color:#268bd2">baseCurrency</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span>  <span style="color:#93a1a1;font-style:italic">// get the tbody element
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span style="color:#93a1a1;font-style:italic"></span>  <span style="color:#859900">const</span> <span style="color:#268bd2">tbodyElement</span> = <span style="color:#cb4b16">document</span>.<span style="color:#268bd2">getElementById</span>(<span style="color:#2aa198">&#34;ratetable&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span>  <span style="color:#268bd2">tbodyElement</span>.<span style="color:#268bd2">textContent</span> = <span style="color:#2aa198">&#34;&#34;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span>  <span style="color:#859900">for</span> (<span style="color:#859900">let</span> <span style="color:#268bd2">i</span> = <span style="color:#2aa198;font-weight:bold">0</span>; <span style="color:#268bd2">i</span> &lt; <span style="color:#cb4b16">Object</span>.<span style="color:#268bd2">keys</span>(<span style="color:#268bd2">rates</span>).<span style="color:#268bd2">length</span>; <span style="color:#268bd2">i</span>++) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>    <span style="color:#859900">const</span> <span style="color:#268bd2">currency</span> = <span style="color:#cb4b16">Object</span>.<span style="color:#268bd2">keys</span>(<span style="color:#268bd2">rates</span>)[<span style="color:#268bd2">i</span>];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span>    <span style="color:#93a1a1;font-style:italic">// create a new table row element
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">const</span> <span style="color:#268bd2">tr</span> = <span style="color:#cb4b16">document</span>.<span style="color:#268bd2">createElement</span>(<span style="color:#2aa198">&#34;tr&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span>    <span style="color:#268bd2">tr</span>.<span style="color:#268bd2">id</span> = <span style="color:#268bd2">currency</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span>    <span style="color:#93a1a1;font-style:italic">// create currency column
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">const</span> <span style="color:#268bd2">currencyTd</span> = <span style="color:#cb4b16">document</span>.<span style="color:#268bd2">createElement</span>(<span style="color:#2aa198">&#34;td&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span>    <span style="color:#268bd2">currencyTd</span>.<span style="color:#268bd2">textContent</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">1 </span><span style="color:#2aa198">${</span><span style="color:#268bd2">baseCurrency</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span>    <span style="color:#93a1a1;font-style:italic">// create rate column
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span style="color:#93a1a1;font-style:italic"></span>    <span style="color:#859900">const</span> <span style="color:#268bd2">rateTd</span> = <span style="color:#cb4b16">document</span>.<span style="color:#268bd2">createElement</span>(<span style="color:#2aa198">&#34;td&#34;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span>    <span style="color:#268bd2">rateTd</span>.<span style="color:#268bd2">textContent</span> = <span style="color:#2aa198">`</span><span style="color:#2aa198">${</span><span style="color:#268bd2">rates</span>[<span style="color:#268bd2">currency</span>]<span style="color:#2aa198">}</span><span style="color:#2aa198"> </span><span style="color:#2aa198">${</span><span style="color:#268bd2">currency</span><span style="color:#2aa198">}</span><span style="color:#2aa198">`</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span>    <span style="color:#268bd2">tr</span>.<span style="color:#268bd2">appendChild</span>(<span style="color:#268bd2">currencyTd</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span>    <span style="color:#268bd2">tr</span>.<span style="color:#268bd2">appendChild</span>(<span style="color:#268bd2">rateTd</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span>    <span style="color:#268bd2">tbodyElement</span>.<span style="color:#268bd2">appendChild</span>(<span style="color:#268bd2">tr</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span>}
+</code></pre></div><h3 id="favicons">favicons</h3>
+<p>You can create custom favicon on <a href="https://favicon.io"target="_blank">favicon.io</a> and save in icons folder.</p>
+<p>You can download this app's icons from <a href="https://github.com/day-to-day-coding/html-cryptocurrency-rates/"target="_blank">GitHub</a>.</p>
+<h2 id="run">Run</h2>
+<p>Open the <code>index.html</code> in the browser and test it.</p>
+<p>To run it as server, install <code>serve</code> using <code>npm install --global serve</code>. Install nodejs first to run <code>npm</code> command.</p>
+<p>Open the terminal or cmd in the project and run <code>serve</code>.</p>
+<p>This will start a server at <code>localhost:5000</code> and serve <code>index.html</code>.</p>
+<h2 id="host-it">Host it</h2>
+<p>You can host it on GitHub Pages.</p>
+<p>Create a <code>cryptocurrency-exchange-rate</code> repository on the GitHub. You can name it anything.</p>
+<p>Open the terminal or cmd in the project and instantiate <code>git init</code>.</p>
+<p>Stage and commit the code.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>git init
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>git add .
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>git commit -m <span style="color:#2aa198">&#39;crypto exchange part 1 is complete&#39;</span>
+</code></pre></div><p>Open GitHub repo and copy the repo URL. Add it as <code>origin</code> and push the code to the GitHub.</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>git remote add origin https://github.com/&lt;Your username&gt;/&lt;repo name&gt;.git
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>git branch -M main
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>git push -u origin main
+</code></pre></div><p>Open the GitHub repo settings and go to <code>pages</code>.</p>
+<p>Under <code>Source</code>, select the <code>main</code> branch, <code>/root</code> folder and <strong>save</strong> it.</p>
+<p>The app is now live at</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">https</span>:<span style="color:#93a1a1;font-style:italic">//&lt;Your Username&gt;.github.io/&lt;your repo name&gt;/
+</span></code></pre></div><hr>
+</article><section class="article labels"><a class="category" href=/categories/javascript/>Javascript</a><a class="category" href=/categories/html/>HTML</a><a class="category" href=/categories/2021/>2021</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/html/>html</a><a class="tag" href=/tags/2021/>2021</a><a class="tag" href=/tags/cryptocurrency/>cryptocurrency</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/create-a-task-list-in-html/"><span class="">Next</span>Create a Task List in Html</a></p></section></div></section>
+<section id="footer">
+    <div class="footer wrap mt-5">
+        <div class="container">
+            <div class="nav wrap mb-3">
+                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
+                  <a class="nav item" href="/to-the-point">To-The-Point</a>
+                  <a class="nav item" href="/projects">Projects</a>
+                  <a class="nav item" href="/ebooks">Ebook</a>
+                  <a class="nav item" href="/about">About</a>
+                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer flex justify-center social-icon">
+                
+                    <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
+                        <span
+                            class="icon"><i class='fab fa-github'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
+                        <span
+                            class="icon"><i class='fab fa-medium'></i>
+                        </span>
+                    </a>
+                
+                    <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
+                        <span
+                            class="icon"><i class='fab fa-twitter'></i>
+                        </span>
+                    </a>
+                <div class="footer-wrap">
+    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2020</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
+        target="_blank">Hugo</a><span>
+    </p>
+</div>
+</div>
+        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
+
+
+
+
+    
+<nav class="nav">
+    <ul class="navbar-nav "><li class="nav-item">
+                <a class="nav item nav-link" href="/categories/">Categories</a>
+            </li><li class="nav-item">
+            <a class="nav item nav-link" href="/tags/">Tags</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/newsletter">Newsletter</a>
+        </li><li class="nav-item">
+        <a class="nav item nav-link" href="/contact">Contact</a>
+        </li></ul>
+    
+</nav>
+</div></span>
+        
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
+<script src="https://schadokar.dev/js/search.js"></script></body>
+
+</html>
