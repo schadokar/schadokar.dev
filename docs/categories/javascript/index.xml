@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Tue, 20 Apr 2021 13:54:31 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 21 Apr 2021 15:55:10 +0530</lastBuildDate>
     
         <atom:link href="/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Remove Falsy Values From an Array in Javascript</title>
+      <link>/to-the-point/how-to-remove-falsy-values-from-an-array-in-javascript/</link>
+      <pubDate>Wed, 21 Apr 2021 15:55:10 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-remove-falsy-values-from-an-array-in-javascript/</guid>
+      <description>Falsy Values in the Javascript In Javascript, in the context of Boolean all the values are either true or false.
+For Example
+   Boolean Values     True 1,2,3, &amp;ldquo;any string&amp;rdquo;, {} , true, 1.0, &amp;lsquo;false&amp;rsquo;, Infinity   False 0, -0, false, 0n, &amp;ldquo;&amp;quot;, &amp;lsquo;&#39;,``, null, undefined, NaN |     &amp;lsquo;false&amp;rsquo; is a string.
+ Demo Use filter to remove all the falsy values from an array.</description>
+      
+    </item>
     
     <item>
       <title>Create a Cryptocurrency Exchange Rate in Html Part 1</title>
