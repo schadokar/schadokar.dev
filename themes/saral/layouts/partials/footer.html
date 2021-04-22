@@ -13,13 +13,13 @@
             </div>
         </div>
         <div class="footer flex justify-center social-icon">
-                {{ range .Site.Menus.social }}
-                    <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}">
-                        <span
-                            class="icon">{{ .Pre }}
-                        </span>
-                    </a>
-                {{ end }}
+            {{ range .Site.Menus.social }}
+                <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}">
+                    <span
+                        class="icon">{{ .Pre }}
+                    </span>
+                </a>
+            {{ end }}
             {{- $copyright := site.Copyright -}}
             {{- if not $copyright -}}
                 {{- $copyright = site.Title | safeHTML -}}
@@ -29,7 +29,7 @@
         <span class="footer right-side d-none">
             {{- partial "navigation-items.html" site.Params.footer -}}
         </span>
-        
+
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

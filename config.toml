@@ -2,7 +2,7 @@ baseurl = "https://schadokar.dev"
 languageCode = "en"
 title = "Shubham Chadokar"
 theme = "saral"
-copyright = "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2020"
+copyright = "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2021"
 # disqusShortname = "schadokar"
 googleAnalytics = "UA-158088106-1"
 
@@ -64,10 +64,14 @@ showTags = true       # /tags/
 title = "To-The-Point"
 url = "/to-the-point"
 
-[[params.nav.custom]]
-title = "Resume"
-url = "https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf"
+# [[params.nav.custom]]
+# title = "Resume"
+# url = "https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf"
 
+[[params.nav.custom]]
+title = "RSS"
+url = "https://schadokar.dev/index.xml"
+pre = "<i class='fa fa-rss'></i>"
 # custom footer navigation items
 
 [[params.footer.custom]]
@@ -93,6 +97,10 @@ url = "/contact"
     url = "https://twitter.com/schadokar1"
     pre = "<i class='fab fa-twitter'></i>"
 
+[[menu.social]]
+    name = "RSS"
+    url = "https://schadokar.dev/index.xml"
+    pre = "<i class='fa fa-rss'></i>"
 
 [markup]
   [markup.goldmark]
