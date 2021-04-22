@@ -6,10 +6,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>How to Remove Falsy Values From an Array in Javascript&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.7c93b038dc3a90b0083f9777c93f5fab25ce2d2a2363105514ba0d58d9536f05606f49fe7d05afe5d9e33cb24b22005a.css" integrity="sha384-fJOwONw6kLAIP5d3yT9fqyXOLSojYxBVFLoNWNlTbwVgb0n&#43;fQWv5dnjPLJLIgBa">
+<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Tags&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.7c93b038dc3a90b0083f9777c93f5fab25ce2d2a2363105514ba0d58d9536f05606f49fe7d05afe5d9e33cb24b22005a.css" integrity="sha384-fJOwONw6kLAIP5d3yT9fqyXOLSojYxBVFLoNWNlTbwVgb0n&#43;fQWv5dnjPLJLIgBa">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="How to Remove Falsy Values From an Array in Javascript" /><meta name="twitter:image" content="https://schadokar.dev/images/basic.png" /><body><section id="header">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><link rel="alternate" type="application/rss+xml" href="/tags/index.xml" title="Shubham Chadokar" /><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tags" /><body><section id="header">
     <div class="container">        
         <nav class="navbar navbar-expand-md navbar-light site-nav">
 
@@ -39,45 +39,10 @@
     
 </section>
 
-    <section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">How to Remove Falsy Values From an Array in Javascript</h1><p class="article date">Wednesday, April 21, 2021<span class="reading-time"> • One minute to read</span></p><section class="article labels"><a class="category" href=/categories/javascript/>Javascript</a><a class="category" href=/categories/2021/>2021</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/2021/>2021</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section>
-</section>
-<article class="article markdown-body">
-        
-        
-        <h2 id="falsy-values-in-the-javascript">Falsy Values in the Javascript</h2>
-<p>In Javascript, in the context of Boolean all the values are either <code>true</code> or <code>false</code>.</p>
-<p>For Example</p>
-<table>
-<thead>
-<tr>
-<th>Boolean</th>
-<th>Values</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>True</td>
-<td>1,2,3, &ldquo;any string&rdquo;, {} , true, 1.0, &lsquo;false&rsquo;, Infinity</td>
-</tr>
-<tr>
-<td>False</td>
-<td>0, -0, false, 0n, &ldquo;&quot;, &lsquo;',``, null, undefined, NaN      |</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>&lsquo;false&rsquo; is a string.</p>
-</blockquote>
-<h2 id="demo">Demo</h2>
-<p>Use <code>filter</code> to remove all the falsy values from an array.</p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#859900">const</span> <span style="color:#268bd2">arr</span> = [<span style="color:#2aa198">&#34;hi&#34;</span>, <span style="color:#2aa198">&#39;&#39;</span>, <span style="color:#859900;font-weight:bold">false</span>, <span style="color:#2aa198;font-weight:bold">123</span>, {}, [], <span style="color:#2aa198">&#34;false&#34;</span>, <span style="color:#2aa198;font-weight:bold">0</span>];
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#93a1a1;font-style:italic">// falsy values are &#39;&#39; false 0
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">const</span> <span style="color:#268bd2">newArr</span> = <span style="color:#268bd2">arr</span>.<span style="color:#268bd2">filter</span>(<span style="color:#cb4b16">Boolean</span>); <span style="color:#93a1a1;font-style:italic">// [&#34;hi&#34;, 123, {}, [], &#34;false&#34;]
-</span></code></pre></div><p><code>filter</code> returns a new array instead of updating the original array.</p>
-<hr>
-</article><section class="article labels"><a class="category" href=/categories/javascript/>Javascript</a><a class="category" href=/categories/2021/>2021</a><a class="category" href=/categories/to-the-point/>to-the-point</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/2021/>2021</a><a class="tag" href=/tags/to-the-point/>to-the-point</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/"><span class="">Previous</span>How to Convert Nested Arrays Into 1d Array in Javascript</a></p><p><a class="link" href="/to-the-point/how-to-get-the-length-of-an-object-in-javascript/"><span class="">Next</span>How to Get the Length of an Object in Javascript</a></p></section></div></section>
+    <section id="content"><section class="article header"><h1>Tags</h1></section><ul class="note list ref"><li class="item"><a class="note" href="/tags/js/">
+            <p class="note title">js</p><p class="note date">Thursday, February 13, 2020</p></a></li></ul><div class="pagination">
+    <ul><li><a class="" href="/tags/">1</a></li><li><a class="" href="/tags/page/2/">2</a></li><li><a class="active" href="/tags/page/3/">3</a></li></ul>
+</div></section>
 <section id="footer">
     <div class="footer wrap mt-5">
         <div class="container">

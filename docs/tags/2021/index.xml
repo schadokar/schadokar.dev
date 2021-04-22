@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Wed, 21 Apr 2021 15:55:10 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 22 Apr 2021 16:23:30 +0530</lastBuildDate>
     
         <atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Convert Nested Arrays Into 1d Array in Javascript</title>
+      <link>/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/</link>
+      <pubDate>Thu, 22 Apr 2021 16:23:30 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/</guid>
+      <description>In ES2019, Array.prototype.flat method was introduced which converts the multi-dimensional array to one-dimensional array upto a defined nested depth.
+For Example:
+1const nestedArr = [&amp;#34;e1&amp;#34;, [&amp;#34;e2&amp;#34;, &amp;#34;e3&amp;#34;, [&amp;#34;e4&amp;#34;, &amp;#34;e5&amp;#34;, [&amp;#34;e6&amp;#34;, &amp;#34;e7&amp;#34;]]]]; 2// default depth is 1 means it will flated only 1 nested array 3nestedArr.flat(); // [&amp;#34;e1&amp;#34;, &amp;#34;e2&amp;#34;, &amp;#34;e3&amp;#34;, [&amp;#34;e4&amp;#34;, &amp;#34;e5&amp;#34;, [&amp;#34;e6&amp;#34;, &amp;#34;e7&amp;#34;]]] 4 5// depth = 2 6nestedArr.flat(2); // [&amp;#34;e1&amp;#34;, &amp;#34;e2&amp;#34;, &amp;#34;e3&amp;#34;, &amp;#34;e4&amp;#34;, &amp;#34;e5&amp;#34;, [&amp;#34;e6&amp;#34;, &amp;#34;e7&amp;#34;]] 7 8// for all the way down to the last nested array use Infinity 9nestedArr.</description>
+      
+    </item>
     
     <item>
       <title>How to Remove Falsy Values From an Array in Javascript</title>

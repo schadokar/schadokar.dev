@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Wed, 21 Apr 2021 15:55:10 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 22 Apr 2021 16:23:30 +0530</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,29 @@
     <item>
       <title>2021</title>
       <link>/tags/2021/</link>
-      <pubDate>Wed, 21 Apr 2021 15:55:10 +0530</pubDate>
+      <pubDate>Thu, 22 Apr 2021 16:23:30 +0530</pubDate>
       
       <guid>/tags/2021/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>javscript</title>
+      <link>/tags/javscript/</link>
+      <pubDate>Thu, 22 Apr 2021 16:23:30 +0530</pubDate>
+      
+      <guid>/tags/javscript/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>to-the-point</title>
+      <link>/tags/to-the-point/</link>
+      <pubDate>Thu, 22 Apr 2021 16:23:30 +0530</pubDate>
+      
+      <guid>/tags/to-the-point/</guid>
       <description></description>
       
     </item>
@@ -28,16 +48,6 @@
       <pubDate>Wed, 21 Apr 2021 15:55:10 +0530</pubDate>
       
       <guid>/tags/javascript/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>to-the-point</title>
-      <link>/tags/to-the-point/</link>
-      <pubDate>Wed, 21 Apr 2021 15:55:10 +0530</pubDate>
-      
-      <guid>/tags/to-the-point/</guid>
       <description></description>
       
     </item>
