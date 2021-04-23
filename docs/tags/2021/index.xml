@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Thu, 22 Apr 2021 16:23:30 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 23 Apr 2021 14:01:13 +0530</lastBuildDate>
     
         <atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Add RSS feed to Hugo Website</title>
+      <link>/to-the-point/how-to-add-rss-feed-to-hugo-website/</link>
+      <pubDate>Fri, 23 Apr 2021 14:01:13 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-add-rss-feed-to-hugo-website/</guid>
+      <description>What is RSS feed? How do you keep yourself updated with your favorite websites or bloggers? By visiting their websites or subscribing to the newsletter.
+Using rss feed you can get all the updates of different websites at 1 place, provided that website should have rss feed enabled in it.
+If it is enabled then you can copy the RSS feed link and paste it any RSS reader application.
+RSS feed supports xml format.</description>
+      
+    </item>
     
     <item>
       <title>How to Convert Nested Arrays Into 1d Array in Javascript</title>
