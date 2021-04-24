@@ -21,7 +21,7 @@ If it is enabled then you can copy the RSS feed link and paste it any RSS reader
 
 RSS feed supports xml format.
 
-> **RSS** (**[RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) Site Summary** or **Really Simple Syndication**)[[2\]](https://en.wikipedia.org/wiki/RSS#cite_note-powers-2003-1-2) is a [web feed](https://en.wikipedia.org/wiki/Web_feed)[[3\]](https://en.wikipedia.org/wiki/RSS#cite_note-Netsc99-3) that allows users and applications to access updates to websites in a standardized, computer-readable format. These feeds can, for example, allow a user to keep track of many different websites in a single [news aggregator](https://en.wikipedia.org/wiki/News_aggregator). - [Wikipedia]()
+> **RSS** (**[RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) Site Summary** or **Really Simple Syndication**)[[2\]](https://en.wikipedia.org/wiki/RSS#cite_note-powers-2003-1-2) is a [web feed](https://en.wikipedia.org/wiki/Web_feed)[[3\]](https://en.wikipedia.org/wiki/RSS#cite_note-Netsc99-3) that allows users and applications to access updates to websites in a standardized, computer-readable format. These feeds can, for example, allow a user to keep track of many different websites in a single [news aggregator](https://en.wikipedia.org/wiki/News_aggregator). - [Wikipedia](https://en.wikipedia.org/wiki/RSS)
 
 ## Add RSS feed to Hugo Website
 

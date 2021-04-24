@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Fri, 23 Apr 2021 14:01:13 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 24 Apr 2021 11:11:31 +0530</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,19 @@
     <item>
       <title>2021</title>
       <link>/tags/2021/</link>
-      <pubDate>Fri, 23 Apr 2021 14:01:13 +0530</pubDate>
+      <pubDate>Sat, 24 Apr 2021 11:11:31 +0530</pubDate>
       
       <guid>/tags/2021/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>rss-feed</title>
+      <link>/tags/rss-feed/</link>
+      <pubDate>Sat, 24 Apr 2021 11:11:31 +0530</pubDate>
+      
+      <guid>/tags/rss-feed/</guid>
       <description></description>
       
     </item>

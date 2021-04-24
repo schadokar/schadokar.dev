@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>rss-feed on Shubham Chadokar</title>
+    <link>/tags/rss-feed/</link>
+    <description>Recent content in rss-feed on Shubham Chadokar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
+    <lastBuildDate>Sat, 24 Apr 2021 11:11:31 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/rss-feed/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is RSS feed, RSS reader and Should I use it</title>
+      <link>/posts/what-is-rss-feed-rss-reader-and-should-i-use-it/</link>
+      <pubDate>Sat, 24 Apr 2021 11:11:31 +0530</pubDate>
+      
+      <guid>/posts/what-is-rss-feed-rss-reader-and-should-i-use-it/</guid>
+      <description>What is RSS feed, RSS reader and Do I need it? In simple words, you can consider this as a subscription of a website. Unlike newsletters and other subscriptions where format varies from one platform to another, RSS feed is coded in XML.
+All the websites who want to support RSS feed has to convert their content in XML format. Now as a reader, you don&#39;t have to go to all your favorite websites.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
