@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Sat, 24 Apr 2021 11:11:31 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 25 Apr 2021 16:48:05 +0530</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>To-the-points</title>
+      <link>/to-the-point/</link>
+      <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
+      
+      <guid>/to-the-point/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Posts</title>
@@ -18,16 +28,6 @@
       <pubDate>Sat, 24 Apr 2021 11:11:31 +0530</pubDate>
       
       <guid>/posts/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>To-the-points</title>
-      <link>/to-the-point/</link>
-      <pubDate>Fri, 23 Apr 2021 14:01:13 +0530</pubDate>
-      
-      <guid>/to-the-point/</guid>
       <description></description>
       
     </item>

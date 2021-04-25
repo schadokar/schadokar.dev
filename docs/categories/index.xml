@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Sat, 24 Apr 2021 11:11:31 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 25 Apr 2021 16:48:05 +0530</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,29 @@
     <item>
       <title>2021</title>
       <link>/categories/2021/</link>
-      <pubDate>Sat, 24 Apr 2021 11:11:31 +0530</pubDate>
+      <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
       
       <guid>/categories/2021/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>/categories/golang/</link>
+      <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
+      
+      <guid>/categories/golang/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>to-the-point</title>
+      <link>/categories/to-the-point/</link>
+      <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
+      
+      <guid>/categories/to-the-point/</guid>
       <description></description>
       
     </item>
@@ -28,16 +48,6 @@
       <pubDate>Fri, 23 Apr 2021 14:01:13 +0530</pubDate>
       
       <guid>/categories/hugo/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>to-the-point</title>
-      <link>/categories/to-the-point/</link>
-      <pubDate>Fri, 23 Apr 2021 14:01:13 +0530</pubDate>
-      
-      <guid>/categories/to-the-point/</guid>
       <description></description>
       
     </item>
@@ -88,16 +98,6 @@
       <pubDate>Fri, 01 Jan 2021 12:41:41 +0530</pubDate>
       
       <guid>/categories/casual/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>/categories/golang/</link>
-      <pubDate>Wed, 23 Dec 2020 22:45:35 +0530</pubDate>
-      
-      <guid>/categories/golang/</guid>
       <description></description>
       
     </item>

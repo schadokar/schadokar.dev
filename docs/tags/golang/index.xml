@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Wed, 23 Dec 2020 22:45:35 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 25 Apr 2021 16:48:05 +0530</lastBuildDate>
     
         <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Sort an Array of Int Float and String in Golang</title>
+      <link>/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</link>
+      <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
+      
+      <guid>/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</guid>
+      <description>The golang provides a sort package to sort slices of primitives types and user-defined.
+Sort Ints 1intArr := []int{23, 12, 11, 90} 2// Sort in Increasing Order 3sort.Ints(intArr) // [11, 12, 23, 90] 4// Sort in Decreasing Order 5sort.Sort(sort.Reverse(sort.IntSlice(intArr))) // [90, 23, 12, 11] Sort Float 1floatArr := []float64{23.1, 12.1, 111.1, 91.0} 2// Sort in Increasing Order 3sort.Float64s(floatArr) // [12.1 23.1 91 111.1] 4// Sort in Decreasing Order 5sort.Sort(sort.Reverse(sort.Float64Slice(floatArr))) // [111.</description>
+      
+    </item>
     
     <item>
       <title>How to Format Golang Project</title>
