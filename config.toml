@@ -64,6 +64,10 @@ showTags = true       # /tags/
 title = "To-The-Point"
 url = "/to-the-point"
 
+[[params.nav.custom]]
+title = "Schedule"
+url = "/schedule"
+
 # [[params.nav.custom]]
 # title = "Resume"
 # url = "https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf"
