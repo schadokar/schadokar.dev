@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Sun, 25 Apr 2021 16:48:05 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 28 Apr 2021 18:03:25 +0530</lastBuildDate>
     
         <atom:link href="/tags/to-the-point/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create a Mars Weather App</title>
+      <link>/to-the-point/create-a-mars-weather-app/</link>
+      <pubDate>Wed, 28 Apr 2021 18:03:25 +0530</pubDate>
+      
+      <guid>/to-the-point/create-a-mars-weather-app/</guid>
+      <description>MAAS2 is a REST API that provides the latest weather data transmitted by the Curiosity Rover on Mars. This API is built upon the REMS (Rover Environmental Monitoring Station). MAAS2 responds in JSON formatted data.
+API
+Project Setup 1|- mars-weather-app 2 |- index.html 3 |- style.css 4 |- weather.js index.html Create a index.html and paste the code.
+1&amp;lt;!DOCTYPE html&amp;gt; 2&amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; 3 &amp;lt;head&amp;gt; 4 &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34; /&amp;gt; 5 &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34; /&amp;gt; 6 &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
+      
+    </item>
     
     <item>
       <title>How to Sort an Array of Int Float and String in Golang</title>

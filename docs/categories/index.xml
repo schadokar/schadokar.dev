@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Sun, 25 Apr 2021 16:48:05 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 28 Apr 2021 18:03:25 +0530</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,19 @@
     <item>
       <title>2021</title>
       <link>/categories/2021/</link>
-      <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
+      <pubDate>Wed, 28 Apr 2021 18:03:25 +0530</pubDate>
       
       <guid>/categories/2021/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>to-the-point</title>
+      <link>/categories/to-the-point/</link>
+      <pubDate>Wed, 28 Apr 2021 18:03:25 +0530</pubDate>
+      
+      <guid>/categories/to-the-point/</guid>
       <description></description>
       
     </item>
@@ -28,16 +38,6 @@
       <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
       
       <guid>/categories/golang/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>to-the-point</title>
-      <link>/categories/to-the-point/</link>
-      <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
-      
-      <guid>/categories/to-the-point/</guid>
       <description></description>
       
     </item>
