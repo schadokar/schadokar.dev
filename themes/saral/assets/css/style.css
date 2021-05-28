@@ -810,6 +810,9 @@ b {
   margin-top: 1rem;
 }
 
+ol {
+  padding-left: revert;
+}
 /* header section */
 
 #header {
@@ -1272,14 +1275,14 @@ blockquote  {
   padding: 1em 2em;
   position: relative;
   transition: .2s border ease-in-out;
-} 
+}
 
 cite  {
   display: block;
   font-size: 0.75em;
   line-height: 1.8em;
   margin-top: 1em;
-} 
+}
 
 /* publication section */
 .publications h3 {
