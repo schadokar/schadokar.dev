@@ -3,5 +3,4 @@ layout: newsletter
 title:  📰 Newsletter
 ---
 
-Subscribe to my newsletter get the latest article and tutorial right into your inbox.
-Every Wednesday all the posts and to-the-point articles. :smile:
+Subscribe to the newsletter to get the latest articles, tutorials and curated list of articles right into your inbox.
