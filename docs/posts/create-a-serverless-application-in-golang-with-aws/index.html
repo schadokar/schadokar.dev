@@ -1,66 +1,269 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<html
+  lang="en"
+  
+><head>
+  <meta charset="utf-8" />
+  
+    <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Create a Serverless Application in Golang With AWS &middot; schadokar.dev</title>
+    <meta name="title" content="Create a Serverless Application in Golang With AWS &middot; schadokar.dev" />
+  
+  <meta name="description" content="Deploy the golang serverless application on AWS Lambda service." />
+  
+  
+  
+  <link rel="canonical" href="https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/" />
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css"
+    integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK&#43;uxc8yk2csLelasbP&#43;FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA=="
+  />
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/compiled/main.min.810ea9a5336b89bef8a72ead10f90e489f72a2716ada0c121c5aba8c499f32956b0eee84e7422826b4718c639027fb12d1a22fda7a7d4182de72da92d898f4b7.css"
+    integrity="sha512-gQ6ppTNrib74py6tEPkOSJ9yonFq2gwSHFq6jEmfMpVrDu6E50IoJrRxjGOQJ/sS0aIv2np9QYLectqS2Jj0tw=="
+  />
+  
+  
+  
+    <script>
+      function loadPreferredAppearance() {
+        if (localStorage.preferredAppearance === "dark" || (!("preferredAppearance" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+      function setPreferredAppearance(scheme) {
+        if (scheme == "default") {
+          localStorage.removeItem("preferredAppearance");
+        } else {
+          localStorage.preferredAppearance = scheme;
+        }
+        loadPreferredAppearance();
+      }
+      loadPreferredAppearance();
+      window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance);
+    </script>
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Create a Serverless Application in Golang With AWS" />
+<meta property="og:description" content="Deploy the golang serverless application on AWS Lambda service." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-10T23:19:26+05:30" />
+<meta property="article:modified_time" content="2020-08-10T23:19:26+05:30" />
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Create a Serverless Application in Golang With AWS&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.230278cb62d16ae8816a509dcb928fb36c2ee0bbc912a73233619ac052aedc8ff9ab5bf4d1bccfb3c26e79c1167337cd.css" integrity="sha384-IwJ4y2LRauiBalCdy5KPs2wu4LvJEqcyM2GawFKu3I/5q1v00bzPs8JuecEWczfN">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Create a Serverless Application in Golang With AWS" /><meta name="twitter:image" content="https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/images/go-serverless-aws.png" /><body><section id="header">
-    <div class="container">        
-        <nav class="navbar navbar-expand-md navbar-light site-nav">
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Create a Serverless Application in Golang With AWS"/>
+<meta name="twitter:description" content="Deploy the golang serverless application on AWS Lambda service."/>
 
-            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "Posts",
+    "name": "Create a Serverless Application in Golang With AWS",
+    "headline": "Create a Serverless Application in Golang With AWS",
+    "description": "Deploy the golang serverless application on AWS Lambda service.",
+    "inLanguage": "en",
+    "author" : {
+      "@type": "Person",
+      "name": "Shubham Chadokar"
+    },
+    "creator" : {
+      "@type": "Person",
+      "name": "Shubham Chadokar"
+    },
+    "copyrightHolder": "Shubham Chadokar",
+    "copyrightYear": "2020",
+    "dateCreated": "2020-08-10T23:19:26\u002b05:30",
+    "datePublished": "2020-08-10T23:19:26\u002b05:30",
+    "dateModified": "2020-08-10T23:19:26\u002b05:30",
+    "url" : "https:\/\/schadokar.dev\/posts\/create-a-serverless-application-in-golang-with-aws\/",
+    "wordCount": "778",
+    "keywords": ["golang","cloud",]
+  }
+  </script>
 
-            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
-  <nav class="nav">
-      <ul class="navbar-nav "><li class="nav-item">
-            
-            <a class="nav item nav-link" href="/to-the-point">
-                To-The-Point
-            </a>
-            
 
-          </li><li class="nav-item">
-            
-            <a class="nav item nav-link" href="/schedule">
-                Schedule
-            </a>
-            
-
-          </li><li class="nav-item">
-            
-              <a class="nav item nav-link" href="https://schadokar.dev/index.xml"
-                target="_blank"
-                title="RSS"
-                >
-                <i class='fa fa-rss'></i>
-              </a>
-            
-
-          </li></ul>
-
-  </nav>
-</div></div>
-        </nav>
-    </div>
+  
+  
+    <meta name="generator" content="Hugo 0.91.2" />
+  
+  
+  <meta name="author" content="Shubham Chadokar" />
+  
     
-</section>
+      <link href="mailto:hello@schadokar.dev" rel="me" />
+    
+      <link href="https://twitter.com/schadokar1" rel="me" />
+    
+      <link href="https://github.com/schadokar" rel="me" />
+    
+      <link href="https://linkedin.com/in/schadokar" rel="me" />
+    
+      <link href="https://medium.com/schadokar" rel="me" />
+    
+  
+  
+  
 
-    <section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Create a Serverless Application in Golang With AWS</h1><p class="article date">Monday, August 10, 2020<span class="reading-time"> • 4 minutes to read</span></p><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/serverless/>Serverless</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/cloud/>cloud</a></section>
-</section>
-<article class="article markdown-body">
+
+
+
+
+
+  
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+  ><header
+  class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-900 dark:text-neutral"
+>
+  
+  <div>
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+        rel="me"
+        href="/"
+        >schadokar.dev</a
+      >
+  </div>
+  
+  
+    <nav>
+      <ul class="flex flex-col list-none sm:flex-row">
         
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/posts/"
+              title="Posts"
+              >Blog</a
+            >
+          </li>
         
-        <p>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.</p>
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/to-the-point/"
+              title="To-the-points"
+              >To The Point</a
+            >
+          </li>
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/about/"
+              title="About Me"
+              >About Me</a
+            >
+          </li>
+        
+      </ul>
+    </nav>
+  
+</header>
+<main class="flex-grow">
+  <article class="max-w-prose">
+    <header>
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Create a Serverless Application in Golang With AWS
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-08-10 23:19:26 &#43;0530 IST">10 August 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+
+      </div>
+    </header>
+    <section class="prose dark:prose-light">
+      <p>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.</p>
 <p><strong>Table of Content</strong></p>
 <ul>
 <li><a href="#prerequisites">Prerequisites</a></li>
@@ -79,242 +282,462 @@
 <li><a href="#test-the-application">Test the application</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 </ul>
-<h1 id="prerequisites">Prerequisites</h1>
+<h1 id="prerequisites">Prerequisites <a class="heading-anchor" href="#prerequisites" aria-label="Anchor">#</a></h1>
 <ul>
 <li>Serverless Installed</li>
 <li>AWS account</li>
 <li>Connect AWS account to serverless</li>
 </ul>
-<p>All these are covered in detail in <a href="https://schadokar.dev/posts/create-your-first-serverless-application/"target="_blank">the last tutorial</a>.</p>
-<h1 id="getting-started">Getting Started</h1>
+<p>All these are covered in detail in <a href="https://schadokar.dev/posts/create-your-first-serverless-application/">the last tutorial</a>.</p>
+<h1 id="getting-started">Getting Started <a class="heading-anchor" href="#getting-started" aria-label="Anchor">#</a></h1>
 <p>Create a new directory <code>hello-go-serverless</code>.<br>
 Open the terminal inside the project.</p>
 <p>Run the below command to initiate the serverless application using <code>aws-go-mod</code> template.<br>
 This will create a basic scaffolding of the serverless project.</p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">serverless</span> <span style="color:#268bd2">create</span> --<span style="color:#268bd2">template</span> <span style="color:#268bd2">aws</span>-<span style="color:#268bd2">go</span>-<span style="color:#268bd2">mod</span>
-</code></pre></div><p><img  src="./images/boilerplate.PNG"
-        alt="boilerplate"/></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">serverless</span> <span class="nx">create</span> <span class="o">--</span><span class="nx">template</span> <span class="nx">aws</span><span class="o">-</span><span class="nx">go</span><span class="o">-</span><span class="nx">mod</span>
+</code></pre></div><p><img src="./images/boilerplate.PNG" alt="boilerplate"></p>
 <p>This template has created 2 application <code>hello</code> and <code>world</code>, and <code>serverless.yml</code> where serverless deployment configuration is defined. It also created a couple of deployment scripts.</p>
-<h3 id="open-hellomaingo">Open hello/main.go</h3>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#dc322f;font-weight:bold">package</span> <span style="color:#268bd2">main</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#dc322f;font-weight:bold">import</span> (
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>    <span style="color:#2aa198">&#34;bytes&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>    <span style="color:#2aa198">&#34;context&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>    <span style="color:#2aa198">&#34;encoding/json&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>    <span style="color:#2aa198">&#34;github.com/aws/aws-lambda-go/events&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>    <span style="color:#2aa198">&#34;github.com/aws/aws-lambda-go/lambda&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>)
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span style="color:#93a1a1;font-style:italic">// Response is of type APIGatewayProxyResponse since we&#39;re leveraging the
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#93a1a1;font-style:italic">// AWS Lambda Proxy Request functionality (default behavior)
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#93a1a1;font-style:italic">//
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#93a1a1;font-style:italic">// https://serverless.com/framework/docs/providers/aws/events/apigateway/#lambda-proxy-integration
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">type</span> <span style="color:#268bd2">Response</span> <span style="color:#268bd2">events</span>.<span style="color:#268bd2">APIGatewayProxyResponse</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span style="color:#93a1a1;font-style:italic">// Handler is our lambda handler invoked by the `lambda.Start` function call
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#859900">func</span> <span style="color:#268bd2">Handler</span>(<span style="color:#268bd2">ctx</span> <span style="color:#268bd2">context</span>.<span style="color:#268bd2">Context</span>) (<span style="color:#268bd2">Response</span>, <span style="color:#859900;font-weight:bold">error</span>) {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>    <span style="color:#859900">var</span> <span style="color:#268bd2">buf</span> <span style="color:#268bd2">bytes</span>.<span style="color:#268bd2">Buffer</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>    <span style="color:#268bd2">body</span>, <span style="color:#268bd2">err</span> := <span style="color:#268bd2">json</span>.<span style="color:#268bd2">Marshal</span>(<span style="color:#859900">map</span>[<span style="color:#859900;font-weight:bold">string</span>]<span style="color:#859900">interface</span>{}{
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>        <span style="color:#2aa198">&#34;message&#34;</span>: <span style="color:#2aa198">&#34;Go Serverless v1.0! Your function executed successfully!&#34;</span>,
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>    })
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>    <span style="color:#859900">if</span> <span style="color:#268bd2">err</span> != <span style="color:#859900;font-weight:bold">nil</span> {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>        <span style="color:#859900">return</span> <span style="color:#268bd2">Response</span>{<span style="color:#268bd2">StatusCode</span>: <span style="color:#2aa198;font-weight:bold">404</span>}, <span style="color:#268bd2">err</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>    }
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>    <span style="color:#268bd2">json</span>.<span style="color:#268bd2">HTMLEscape</span>(&amp;<span style="color:#268bd2">buf</span>, <span style="color:#268bd2">body</span>)
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>    <span style="color:#268bd2">resp</span> := <span style="color:#268bd2">Response</span>{
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>        <span style="color:#268bd2">StatusCode</span>:      <span style="color:#2aa198;font-weight:bold">200</span>,
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span>        <span style="color:#268bd2">IsBase64Encoded</span>: <span style="color:#859900;font-weight:bold">false</span>,
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>        <span style="color:#268bd2">Body</span>:            <span style="color:#268bd2">buf</span>.<span style="color:#268bd2">String</span>(),
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>        <span style="color:#268bd2">Headers</span>: <span style="color:#859900">map</span>[<span style="color:#859900;font-weight:bold">string</span>]<span style="color:#859900;font-weight:bold">string</span>{
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>            <span style="color:#2aa198">&#34;Content-Type&#34;</span>:           <span style="color:#2aa198">&#34;application/json&#34;</span>,
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span>            <span style="color:#2aa198">&#34;X-MyCompany-Func-Reply&#34;</span>: <span style="color:#2aa198">&#34;hello-handler&#34;</span>,
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span>        },
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span>    }
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span>    <span style="color:#859900">return</span> <span style="color:#268bd2">resp</span>, <span style="color:#859900;font-weight:bold">nil</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span>}
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span style="color:#859900">func</span> <span style="color:#268bd2">main</span>() {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span>    <span style="color:#268bd2">lambda</span>.<span style="color:#268bd2">Start</span>(<span style="color:#268bd2">Handler</span>)
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>}
+<h3 id="open-hellomaingo">Open hello/main.go <a class="heading-anchor" href="#open-hellomaingo" aria-label="Anchor">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&#34;bytes&#34;</span>
+    <span class="s">&#34;context&#34;</span>
+    <span class="s">&#34;encoding/json&#34;</span>
+
+    <span class="s">&#34;github.com/aws/aws-lambda-go/events&#34;</span>
+    <span class="s">&#34;github.com/aws/aws-lambda-go/lambda&#34;</span>
+<span class="p">)</span>
+
+<span class="c1">// Response is of type APIGatewayProxyResponse since we&#39;re leveraging the
+</span><span class="c1">// AWS Lambda Proxy Request functionality (default behavior)
+</span><span class="c1">//
+</span><span class="c1">// https://serverless.com/framework/docs/providers/aws/events/apigateway/#lambda-proxy-integration
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">Response</span> <span class="nx">events</span><span class="p">.</span><span class="nx">APIGatewayProxyResponse</span>
+
+<span class="c1">// Handler is our lambda handler invoked by the `lambda.Start` function call
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">Handler</span><span class="p">(</span><span class="nx">ctx</span> <span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="p">(</span><span class="nx">Response</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">buf</span> <span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span>
+
+    <span class="nx">body</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+        <span class="s">&#34;message&#34;</span><span class="p">:</span> <span class="s">&#34;Go Serverless v1.0! Your function executed successfully!&#34;</span><span class="p">,</span>
+    <span class="p">})</span>
+    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">Response</span><span class="p">{</span><span class="nx">StatusCode</span><span class="p">:</span> <span class="mi">404</span><span class="p">},</span> <span class="nx">err</span>
+    <span class="p">}</span>
+    <span class="nx">json</span><span class="p">.</span><span class="nf">HTMLEscape</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">buf</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span>
+
+    <span class="nx">resp</span> <span class="o">:=</span> <span class="nx">Response</span><span class="p">{</span>
+        <span class="nx">StatusCode</span><span class="p">:</span>      <span class="mi">200</span><span class="p">,</span>
+        <span class="nx">IsBase64Encoded</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">Body</span><span class="p">:</span>            <span class="nx">buf</span><span class="p">.</span><span class="nf">String</span><span class="p">(),</span>
+        <span class="nx">Headers</span><span class="p">:</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span>
+            <span class="s">&#34;Content-Type&#34;</span><span class="p">:</span>           <span class="s">&#34;application/json&#34;</span><span class="p">,</span>
+            <span class="s">&#34;X-MyCompany-Func-Reply&#34;</span><span class="p">:</span> <span class="s">&#34;hello-handler&#34;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">resp</span><span class="p">,</span> <span class="kc">nil</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">lambda</span><span class="p">.</span><span class="nf">Start</span><span class="p">(</span><span class="nx">Handler</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div><p>This function is creating a JSON object using <code>json.Marshal</code> and then sent as a response.<br>
 The <code>lambda</code> package is initiating the <code>Handler</code> function and <code>events</code> package is used to create aws <code>APIGatewayProxyResponse</code> object.</p>
 <p>This function is exposed as an API using the AWS APIGateway service. These APIs are configured in the <code>serverless.yml</code> file.</p>
 <blockquote>
-<p>Check this to learn more about <a href="https://schadokar.dev/posts/how-to-use-json-in-golang/"target="_blank">JSON in golang</a>.</p>
+<p>Check this to learn more about <a href="https://schadokar.dev/posts/how-to-use-json-in-golang/">JSON in golang</a>.</p>
 </blockquote>
-<h3 id="open-serverlessyml">Open serverless.yml</h3>
+<h3 id="open-serverlessyml">Open serverless.yml <a class="heading-anchor" href="#open-serverlessyml" aria-label="Anchor">#</a></h3>
 <p>In the provider section, the provider is <code>aws</code>, the runtime is <code>go1.x</code>, by default its region is <code>us-east-1</code> and stage is <code>dev</code>. Using the staging option, you can deploy the project in different environments like dev, prod or test.</p>
 <p>Update the provider section.</p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>provider:
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  name: aws
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>  runtime: go1.x
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>  stage: dev
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>  region: us-east<span style="color:#2aa198;font-weight:bold">-1</span>
-</code></pre></div><blockquote>
-<p>You don't have to if you're okay with the defaults. It is just good practice.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">provider</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">aws</span><span class="w">
+</span><span class="w">  </span><span class="nt">runtime</span><span class="p">:</span><span class="w"> </span><span class="l">go1.x</span><span class="w">
+</span><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l">dev</span><span class="w">
+</span><span class="w">  </span><span class="nt">region</span><span class="p">:</span><span class="w"> </span><span class="l">us-east-1</span><span class="w">
+</span></code></pre></div><blockquote>
+<p>You don&rsquo;t have to if you&rsquo;re okay with the defaults. It is just good practice.</p>
 </blockquote>
 <p>In the package section, it is configuring what to include and exclude in the lambda function deployment.<br>
 It is excluding all the files except <code>bin</code> folder. After building the application, the function binary will save in the <code>bin</code> folder.</p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>package:
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  exclude:
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>    - ./<span style="color:#93a1a1;font-style:italic">**</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>  include:
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>    - ./bin/<span style="color:#93a1a1;font-style:italic">**</span>
-</code></pre></div><p>In the functions, <code>bin/hello</code> is the entry point of hello function. The function can be triggered using the <code>hello</code> route. After deployment, it will create a new route in the AWS API gateway and link it to the AWS lambda function in which <code>hello</code> function will deploy.</p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>functions:
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  hello:
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>    handler: bin/hello
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>    events:
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>      - http:
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>          path: hello
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>          method: get
-</code></pre></div><p><code>world</code> function is the same as <code>hello</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">package</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">exclude</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">./**</span><span class="w">
+</span><span class="w">  </span><span class="nt">include</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">./bin/**</span><span class="w">
+</span></code></pre></div><p>In the functions, <code>bin/hello</code> is the entry point of hello function. The function can be triggered using the <code>hello</code> route. After deployment, it will create a new route in the AWS API gateway and link it to the AWS lambda function in which <code>hello</code> function will deploy.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">functions</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">hello</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">handler</span><span class="p">:</span><span class="w"> </span><span class="l">bin/hello</span><span class="w">
+</span><span class="w">    </span><span class="nt">events</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">http</span><span class="p">:</span><span class="w">
+</span><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">hello</span><span class="w">
+</span><span class="w">          </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l">get</span><span class="w">
+</span></code></pre></div><p><code>world</code> function is the same as <code>hello</code>.</p>
 <blockquote>
 <p>You can use the <code>Makefile</code> for the below steps. It is a deployment script, which will run all the below steps for you.</p>
 </blockquote>
-<h1 id="build-the-application">Build the application</h1>
+<h1 id="build-the-application">Build the application <a class="heading-anchor" href="#build-the-application" aria-label="Anchor">#</a></h1>
 <p>Open the terminal in the project and execute the <code>gomod.sh</code> file.</p>
 <p><strong>Windows User</strong></p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>sh gomod.sh
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">sh gomod.sh
 </code></pre></div><p><strong>Linux User or other UNIX based OS users</strong>
 First, make it executable and then run it.</p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>chmod u+x gomod.sh
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>./gomod.sh
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">chmod u+x gomod.sh
+./gomod.sh
 </code></pre></div><p>This will initiate go modules <code>go.mod</code> in the project and add all the project dependencies in it. It is similar to the <code>package.json</code> in the node.js.</p>
-<h2 id="build">Build</h2>
+<h2 id="build">Build <a class="heading-anchor" href="#build" aria-label="Anchor">#</a></h2>
 <p>Create binaries of <code>hello</code> and <code>world</code> application for <strong>Linux</strong> OS.</p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#268bd2">export</span> <span style="color:#268bd2">GO111MODULE</span>=<span style="color:#268bd2">on</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#268bd2">env</span> <span style="color:#268bd2">GOOS</span>=<span style="color:#268bd2">linux</span> <span style="color:#859900">go</span> <span style="color:#268bd2">build</span> -<span style="color:#268bd2">ldflags</span>=<span style="color:#2aa198">&#34;-s -w&#34;</span> -<span style="color:#268bd2">o</span> <span style="color:#268bd2">bin</span>/<span style="color:#268bd2">hello</span> <span style="color:#268bd2">hello</span>/<span style="color:#268bd2">main</span>.<span style="color:#859900">go</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#268bd2">env</span> <span style="color:#268bd2">GOOS</span>=<span style="color:#268bd2">linux</span> <span style="color:#859900">go</span> <span style="color:#268bd2">build</span> -<span style="color:#268bd2">ldflags</span>=<span style="color:#2aa198">&#34;-s -w&#34;</span> -<span style="color:#268bd2">o</span> <span style="color:#268bd2">bin</span>/<span style="color:#268bd2">world</span> <span style="color:#268bd2">world</span>/<span style="color:#268bd2">main</span>.<span style="color:#859900">go</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">export</span> <span class="nx">GO111MODULE</span><span class="p">=</span><span class="nx">on</span>
+<span class="nx">env</span> <span class="nx">GOOS</span><span class="p">=</span><span class="nx">linux</span> <span class="k">go</span> <span class="nx">build</span> <span class="o">-</span><span class="nx">ldflags</span><span class="p">=</span><span class="s">&#34;-s -w&#34;</span> <span class="o">-</span><span class="nx">o</span> <span class="nx">bin</span><span class="o">/</span><span class="nx">hello</span> <span class="nx">hello</span><span class="o">/</span><span class="nx">main</span><span class="p">.</span><span class="k">go</span>
+<span class="nx">env</span> <span class="nx">GOOS</span><span class="p">=</span><span class="nx">linux</span> <span class="k">go</span> <span class="nx">build</span> <span class="o">-</span><span class="nx">ldflags</span><span class="p">=</span><span class="s">&#34;-s -w&#34;</span> <span class="o">-</span><span class="nx">o</span> <span class="nx">bin</span><span class="o">/</span><span class="nx">world</span> <span class="nx">world</span><span class="o">/</span><span class="nx">main</span><span class="p">.</span><span class="k">go</span>
 </code></pre></div><p>It will generate binaries of the application and save them in the bin folder.</p>
-<h1 id="deploy">Deploy</h1>
+<h1 id="deploy">Deploy <a class="heading-anchor" href="#deploy" aria-label="Anchor">#</a></h1>
 <p>I am assuming that you have an AWS account and it is connected to the Serverless.<br>
-If you not <a href="https://schadokar.dev/posts/create-your-first-serverless-application/"target="_blank">check this to setup</a>.</p>
+If you not <a href="https://schadokar.dev/posts/create-your-first-serverless-application/">check this to setup</a>.</p>
 <p>Run the below command to deploy it to the AWS lambda.</p>
-<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>serverless deploy
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">serverless deploy
 </code></pre></div><blockquote>
 <p>You can use <code>sls</code> for <code>serverless</code>. It is a shorthand notation.</p>
 </blockquote>
-<p><img  src="./images/deploy.PNG"
-        alt="deploy"/></p>
-<h1 id="test-the-application">Test the application</h1>
+<p><img src="./images/deploy.PNG" alt="deploy"></p>
+<h1 id="test-the-application">Test the application <a class="heading-anchor" href="#test-the-application" aria-label="Anchor">#</a></h1>
 <p>Copy the endpoint from the deployment output and either try it on a browser or use the curl command to check.</p>
-<pre><code class="language-curl" data-lang="curl">$ curl https://616fr92us4.execute-api.us-east-1.amazonaws.com/dev/hello
+<pre tabindex="0"><code class="language-curl" data-lang="curl">$ curl https://616fr92us4.execute-api.us-east-1.amazonaws.com/dev/hello
 </code></pre><p>Output</p>
-<pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+<pre tabindex="0"><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    70  100    70    0     0     63      0  0:00:01  0:00:01 --:--:--    63
 {&quot;message&quot;:&quot;Go Serverless v1.0! Your function executed successfully!&quot;}
 </code></pre><p>World</p>
-<pre><code class="language-curl" data-lang="curl">$ curl https://616fr92us4.execute-api.us-east-1.amazonaws.com/dev/world
+<pre tabindex="0"><code class="language-curl" data-lang="curl">$ curl https://616fr92us4.execute-api.us-east-1.amazonaws.com/dev/world
 </code></pre><p>Output</p>
-<pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+<pre tabindex="0"><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    69  100    69    0     0     76      0 --:--:-- --:--:-- --:--:--    76
 {&quot;message&quot;:&quot;Okay so your other function also executed successfully!&quot;}
 
-</code></pre><h1 id="conclusion">Conclusion</h1>
+</code></pre><h1 id="conclusion">Conclusion <a class="heading-anchor" href="#conclusion" aria-label="Anchor">#</a></h1>
 <p>Serverless is the perfect companion for the golang. In the upcoming tutorials, we will integrate multiple services in serverless like DB, SNS etc.</p>
 <p>Thanks for reading.</p>
 <blockquote>
-<p>Cover is designed in <a href="https://canva.7eqqol.net/KD6B9"target="_blank">Canva</a></p>
+<p>Cover is designed in <a href="https://canva.7eqqol.net/KD6B9">Canva</a></p>
 </blockquote>
 <hr>
-</article><section class="article labels"><a class="category" href=/categories/golang/>Golang</a><a class="category" href=/categories/serverless/>Serverless</a><a class="category" href=/categories/2020/>2020</a><a class="tag" href=/tags/golang/>golang</a><a class="tag" href=/tags/cloud/>cloud</a></section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/basic-validations-every-nodejs-developer-should-know/"><span class="">Previous</span>Basic validations every nodejs developer should know</a></p><p><a class="link" href="/posts/create-your-first-serverless-application/"><span class="">Next</span>Create your first Serverless application</a></p></section></div></section>
-<section id="footer">
-    <div class="footer wrap mt-5">
-        <div class="container">
-            <div class="nav wrap mb-3">
-                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
-                  <a class="nav item" href="/to-the-point">To-The-Point</a>
-                  <a class="nav item" href="/projects">Projects</a>
-                  <a class="nav item" href="/ebooks">Ebook</a>
-                  <a class="nav item" href="/about">About</a>
-                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
-                </nav>
-            </div>
+
+    </section>
+    <footer class="pt-8">
+      
+  <div class="flex">
+    
+      <img
+        class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full"
+        width="96"
+        height="96"
+        alt="Author"
+        src="/images/pic.png"
+      />
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+          Author
         </div>
-        <div class="footer flex justify-center social-icon">
-            
-                <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
-                    <span
-                        class="icon"><i class='fab fa-github'></i>
-                    </span>
-                </a>
-            
-                <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
-                    <span
-                        class="icon"><i class='fab fa-medium'></i>
-                    </span>
-                </a>
-            
-                <a href="https://schadokar.dev/index.xml" class="navbar-item is-hidden-desktop" title="RSS">
-                    <span
-                        class="icon"><i class='fa fa-rss'></i>
-                    </span>
-                </a>
-            
-                <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
-                    <span
-                        class="icon"><i class='fab fa-twitter'></i>
-                    </span>
-                </a>
-            <div class="footer-wrap">
-    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2021</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
-        target="_blank">Hugo</a><span>
-    </p>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Shubham Chadokar
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">I&rsquo;m a software engineer and a learner. This is a documentation website of my learnings for my future self.</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hello@schadokar.dev"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at" class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://twitter.com/schadokar1"
+          target="_blank"
+          aria-label="Twitter"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/schadokar"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/schadokar"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://medium.com/schadokar"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="medium" class="svg-inline--fa fa-medium fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+  </div>
+
 </div>
-</div>
-        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
-  <nav class="nav">
-      <ul class="navbar-nav "><li class="nav-item">
-                  <a class="nav item nav-link" href="/categories/">Categories</a>
-              </li><li class="nav-item">
-              <a class="nav item nav-link" href="/tags/">Tags</a>
-          </li><li class="nav-item">
-            
-            <a class="nav item nav-link" href="/newsletter">
-                Newsletter
-            </a>
-            
-
-          </li><li class="nav-item">
-            
-            <a class="nav item nav-link" href="/contact">
-                Contact
-            </a>
-            
-
-          </li></ul>
-
-  </nav>
-</div></span>
-
     </div>
-</section>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-158088106-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+  </div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
-<script src="https://schadokar.dev/js/search.js"></script></body>
+      
+  
+  <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+    
+      
+        <a
+          class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/&amp;quote=Create%20a%20Serverless%20Application%20in%20Golang%20With%20AWS"
+          title="Share on Facebook"
+          aria-label="Share on Facebook"
+          >
 
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
+          href="https://twitter.com/intent/tweet/?url=https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/&amp;text=Create%20a%20Serverless%20Application%20in%20Golang%20With%20AWS"
+          title="Tweet on Twitter"
+          aria-label="Tweet on Twitter"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
+          href="https://pinterest.com/pin/create/bookmarklet/?url=https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/&amp;description=Create%20a%20Serverless%20Application%20in%20Golang%20With%20AWS"
+          title="Pin on Pinterest"
+          aria-label="Pin on Pinterest"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest" class="svg-inline--fa fa-pinterest fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
+          href="https://reddit.com/submit/?url=https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/&amp;resubmit=true&amp;title=Create%20a%20Serverless%20Application%20in%20Golang%20With%20AWS"
+          title="Submit to Reddit"
+          aria-label="Submit to Reddit"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="reddit" class="svg-inline--fa fa-reddit fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/&amp;title=Create%20a%20Serverless%20Application%20in%20Golang%20With%20AWS"
+          title="Share on LinkedIn"
+          aria-label="Share on LinkedIn"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
+          href="mailto:?body=https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/&amp;subject=Create%20a%20Serverless%20Application%20in%20Golang%20With%20AWS"
+          title="Send via email"
+          aria-label="Send via email"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at" class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path></svg>
+  </span>
+
+</a
+        >
+      
+    
+  </section>
+
+
+      
+  
+    <div class="pt-8 article-pagination">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex" href="/posts/basic-validations-every-nodejs-developer-should-know/">
+              <span class="mr-3 article-pagination-direction">&larr;</span>
+              <span class="flex flex-col">
+                <span class="article-pagination-title mt-[0.1rem] leading-6"
+                  >Basic validations every nodejs developer should know</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2020-09-06 11:51:52 &#43;0530 IST">6 September 2020</time>
+
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right" href="/posts/create-your-first-serverless-application/">
+              <span class="flex flex-col">
+                <span class="article-pagination-title mt-[0.1rem] leading-6"
+                  >Create your first Serverless application</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2020-08-09 16:04:50 &#43;0530 IST">9 August 2020</time>
+
+                  
+                </span>
+              </span>
+              <span class="ml-3 article-pagination-direction">&rarr;</span>
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    </footer>
+    
+  </article>
+</main><footer class="py-10">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+          <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href=""
+              title=""
+              >Archive</a
+            >
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex justify-between">
+    <div>
+      
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          © <a href="https://schadokar.dev">Shubham Chadokar</a> 2021
+      </p>
+      
+      
+        <p class="text-xs text-neutral-400 dark:text-neutral-600">
+          
+          
+          Powered by <a class="hover:underline hover:underline-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:underline-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+  </div>
+  
+  
+</footer>
+</body>
 </html>

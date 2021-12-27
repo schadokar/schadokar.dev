@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <article class="max-w-prose">
+    <header>
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title | emojify }}
+      </h1>
+    </header>
+  </br>
+  </br>
+    <section class="prose dark:prose-light">
+      {{ .Content | emojify }}
+    </section>
+    <footer class="pt-8">
+      {{ partial "author.html" . }}
+    </footer>
+  </article>
+{{ end }}

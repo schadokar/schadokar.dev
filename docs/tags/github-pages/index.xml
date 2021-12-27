@@ -1,48 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github-pages on Shubham Chadokar</title>
-    <link>/tags/github-pages/</link>
-    <description>Recent content in github-pages on Shubham Chadokar</description>
+    <title>github-pages on schadokar.dev</title>
+    <link>https://schadokar.dev/tags/github-pages/</link>
+    <description>Recent content in github-pages on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Fri, 16 Apr 2021 15:49:50 +0530</lastBuildDate>
-    
-        <atom:link href="/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 16 Apr 2021 15:49:50 +0530</lastBuildDate><atom:link href="https://schadokar.dev/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a Task List in Html</title>
-      <link>/posts/create-a-task-list-in-html/</link>
+      <link>https://schadokar.dev/posts/create-a-task-list-in-html/</link>
       <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
       
-      <guid>/posts/create-a-task-list-in-html/</guid>
-      <description>In this post, we are building a task list in HTML using material css.
-The tasks will save in the browser local storage.
-In the end, the app can be hosted on GitHub Pages.
-The code is available on GitHub.
-Demo App
-The final app will look like this.
-Project Setup Create a html-task-list directory.
-1|- html-task-list 2	|- icons 3	|- index.html 4	|- style.css 5	|- tasks.js index.html Create a index.</description>
-      
+      <guid>https://schadokar.dev/posts/create-a-task-list-in-html/</guid>
+      <description>In this post, we are building a task list in HTML using material css.</description>
     </item>
     
     <item>
       <title>Create a Weather App in Html</title>
-      <link>/posts/create-a-weather-app-in-html/</link>
+      <link>https://schadokar.dev/posts/create-a-weather-app-in-html/</link>
       <pubDate>Wed, 14 Apr 2021 19:33:42 +0530</pubDate>
       
-      <guid>/posts/create-a-weather-app-in-html/</guid>
-      <description>In this post, we are creating a weather app in html using material and openweathermap api.
-The final app will look like this.
-The code is available on GitHub.
-Openweathermap API Go to Openweathermap.org and create an account. We are utilizing free tier api.
-In free tier, we can call 60 calls/minute 1,000,000 calls/month.
-Checkout the available APIs for free tier.
-Login to your account and go to My API Keys from the top-right menu.</description>
-      
+      <guid>https://schadokar.dev/posts/create-a-weather-app-in-html/</guid>
+      <description>In this post, we are creating a weather app in html using material and openweathermap api.</description>
     </item>
     
   </channel>

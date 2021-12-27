@@ -9,6 +9,7 @@ readingTime: true # show reading time after article date
 toc: true
 comments: true
 published: true
+badge: New Article
 ---
 
 ## What is RSS feed, RSS reader and Do I need it?

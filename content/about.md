@@ -1,10 +1,9 @@
 ---
 layout: about
+title: About Me
 ---
 
-## About Me
-
-{{< connect >}}
+<img title="" alt="" src="/images/setup.jpg">
 
 *Hi there, I am Shubham Kumar Chadokar, I am a Software Engineer 👓.*
 > This is a documentation website of my learnings for my future self.
@@ -17,7 +16,7 @@ I love to do photography :camera: in my me time.
 I like philosophical and mythological novels :books:.  
 My favourites are Meluha and The Kite Runner.
 
-### Talks
+## Talks
 
 **2020**
 
@@ -26,7 +25,7 @@ A note-taking web app for developers.
 - **Build a CLI in golang with Cobra** @ [Pune Gophers](https://twitter.com/punegophers?lang=en) - [Presentation](https://docs.google.com/presentation/d/1knPYGk3SWjssZ9DBVfkUurATVoHJ9WkGyU_htBam-as/edit?usp=sharing)
 - [July London Gophers](https://www.youtube.com/watch?v=RMuSLjRracc) @ [London Gophers](https://twitter.com/LondonGophers) - [Presentation](https://docs.google.com/presentation/d/1YfE729FYfMggoT0__htseG3r6UOm2vDwMVSK0Ydy9S0/edit?usp=sharing)
 
-### Publications
+## Publications
 
 **freecodecamp**
 
@@ -47,7 +46,6 @@ A note-taking web app for developers.
 
 ## 
 > Subscribe to my [Newsletter](/newsletter) to get my new articles directly in your mailbox.  
-> If you have any queries, you can [contact me](/contact).  
-> *This website is a Hugo version of [Tania's](https://taniarascia.com) website.*
+
 
 

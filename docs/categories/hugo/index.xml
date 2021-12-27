@@ -1,28 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Shubham Chadokar</title>
-    <link>/categories/hugo/</link>
-    <description>Recent content in Hugo on Shubham Chadokar</description>
+    <title>Hugo on schadokar.dev</title>
+    <link>https://schadokar.dev/categories/hugo/</link>
+    <description>Recent content in Hugo on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Fri, 23 Apr 2021 14:01:13 +0530</lastBuildDate>
-    
-        <atom:link href="/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 23 Apr 2021 14:01:13 +0530</lastBuildDate><atom:link href="https://schadokar.dev/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Add RSS feed to Hugo Website</title>
-      <link>/to-the-point/how-to-add-rss-feed-to-hugo-website/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-add-rss-feed-to-hugo-website/</link>
       <pubDate>Fri, 23 Apr 2021 14:01:13 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-add-rss-feed-to-hugo-website/</guid>
-      <description>What is RSS feed? How do you keep yourself updated with your favorite websites or bloggers? By visiting their websites or subscribing to the newsletter.
-Using rss feed you can get all the updates of different websites at 1 place, provided that website should have rss feed enabled in it.
-If it is enabled then you can copy the RSS feed link and paste it any RSS reader application.
-RSS feed supports xml format.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-add-rss-feed-to-hugo-website/</guid>
+      <description>What is RSS feed?</description>
     </item>
     
   </channel>

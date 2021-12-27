@@ -1,39 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Serverless on Shubham Chadokar</title>
-    <link>/categories/serverless/</link>
-    <description>Recent content in Serverless on Shubham Chadokar</description>
+    <title>Serverless on schadokar.dev</title>
+    <link>https://schadokar.dev/categories/serverless/</link>
+    <description>Recent content in Serverless on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Mon, 10 Aug 2020 23:19:26 +0530</lastBuildDate>
-    
-        <atom:link href="/categories/serverless/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 10 Aug 2020 23:19:26 +0530</lastBuildDate><atom:link href="https://schadokar.dev/categories/serverless/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a Serverless Application in Golang With AWS</title>
-      <link>/posts/create-a-serverless-application-in-golang-with-aws/</link>
+      <link>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</link>
       <pubDate>Mon, 10 Aug 2020 23:19:26 +0530</pubDate>
       
-      <guid>/posts/create-a-serverless-application-in-golang-with-aws/</guid>
-      <description>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.
-Table of Content
- Prerequisites Getting Started  Open hello/main.go Open serverless.yml   Build the application  Build   Deploy Test the application Conclusion  Prerequisites  Serverless Installed AWS account Connect AWS account to serverless  All these are covered in detail in the last tutorial.
-Getting Started Create a new directory hello-go-serverless.</description>
-      
+      <guid>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</guid>
+      <description>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.</description>
     </item>
     
     <item>
       <title>Create your first Serverless application</title>
-      <link>/posts/create-your-first-serverless-application/</link>
+      <link>https://schadokar.dev/posts/create-your-first-serverless-application/</link>
       <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
       
-      <guid>/posts/create-your-first-serverless-application/</guid>
-      <description>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resources consumed by an application, rather than on pre-purchased units of capacity. - Wikipedia
-In simple language, serverless means pay only for what you use. You might think there is already a Pay-as-you-go model provided by the cloud providers.</description>
-      
+      <guid>https://schadokar.dev/posts/create-your-first-serverless-application/</guid>
+      <description>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources.</description>
     </item>
     
   </channel>

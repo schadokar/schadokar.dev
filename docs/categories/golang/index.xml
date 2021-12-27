@@ -1,209 +1,146 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on Shubham Chadokar</title>
-    <link>/categories/golang/</link>
-    <description>Recent content in Golang on Shubham Chadokar</description>
+    <title>Golang on schadokar.dev</title>
+    <link>https://schadokar.dev/categories/golang/</link>
+    <description>Recent content in Golang on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Sun, 25 Apr 2021 16:48:05 +0530</lastBuildDate>
-    
-        <atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 25 Apr 2021 16:48:05 +0530</lastBuildDate><atom:link href="https://schadokar.dev/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Sort an Array of Int Float and String in Golang</title>
-      <link>/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</link>
       <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</guid>
-      <description>The golang provides a sort package to sort slices of primitives types and user-defined.
-Sort Ints 1intArr := []int{23, 12, 11, 90} 2// Sort in Increasing Order 3sort.Ints(intArr) // [11, 12, 23, 90] 4// Sort in Decreasing Order 5sort.Sort(sort.Reverse(sort.IntSlice(intArr))) // [90, 23, 12, 11] Sort Float 1floatArr := []float64{23.1, 12.1, 111.1, 91.0} 2// Sort in Increasing Order 3sort.Float64s(floatArr) // [12.1 23.1 91 111.1] 4// Sort in Decreasing Order 5sort.Sort(sort.Reverse(sort.Float64Slice(floatArr))) // [111.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</guid>
+      <description>The golang provides a sort package to sort slices of primitives types and user-defined.</description>
     </item>
     
     <item>
       <title>How to Format Golang Project</title>
-      <link>/to-the-point/how-to-format-golang-project/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-format-golang-project/</link>
       <pubDate>Wed, 23 Dec 2020 22:45:35 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-format-golang-project/</guid>
-      <description>Golang is a strictly typed language. It tells you hw to write clean code and it takes care of formatting.
-Unlike many languages where formatting style is opinionated, in Golang it is defined by design.
-Formatting Golang CLI command fmt is used to format the file or files.
-Format 1 file Open the terminal in the golang project.
-Run the below command.
-1go fmt main.go Format all the files in the folder Use .</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-format-golang-project/</guid>
+      <description>Golang is a strictly typed language.</description>
     </item>
     
     <item>
       <title>Check if Key Exists in Map in Golang</title>
-      <link>/to-the-point/check-if-key-exists-in-map-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/check-if-key-exists-in-map-in-golang/</link>
       <pubDate>Mon, 21 Dec 2020 10:38:27 +0530</pubDate>
       
-      <guid>/to-the-point/check-if-key-exists-in-map-in-golang/</guid>
-      <description>Map Map is a data structure which implements a hash table.
-Map is a simple key-value storage. Map offers fast lookups, adds and deletes.
-Zero Value Table Map don&#39;t explicitly check if a key is created or not, instead if a key doesn&#39;t exists it returns the default value of value type.
-Data type and their Default Value
-   Type Default Value     Numeric type(int, float) 0   Boolean false   String &amp;quot;&amp;rdquo; (empty string)    For Ex.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/check-if-key-exists-in-map-in-golang/</guid>
+      <description>Map # Map is a data structure which implements a hash table.</description>
     </item>
     
     <item>
       <title>Golang String Replace</title>
-      <link>/to-the-point/golang-string-replace/</link>
+      <link>https://schadokar.dev/to-the-point/golang-string-replace/</link>
       <pubDate>Sat, 19 Dec 2020 21:15:35 +0530</pubDate>
       
-      <guid>/to-the-point/golang-string-replace/</guid>
-      <description>Golang package strings provides Replace and ReplaceAll functions to replace the substring in the string.
-Replace Syntax
-1func Replace(s, old, new string, n int) string n is the number of first occurrence of the substring.
-Replace n first occurrence of the substring.
-If n &amp;lt; 0, then it will replace all the occurrence.
-1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;strings&amp;#34; 6) 7 8func main() { 9 str := &amp;#34;Th0is is an en0c0oded 0000 message&amp;#34; 10 11	newStr := strings.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/golang-string-replace/</guid>
+      <description>Golang package strings provides Replace and ReplaceAll functions to replace the substring in the string.</description>
     </item>
     
     <item>
       <title>Check if a character is a number in Golang</title>
-      <link>/to-the-point/check-if-a-character-is-a-number-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/check-if-a-character-is-a-number-in-golang/</link>
       <pubDate>Sat, 19 Dec 2020 15:04:55 +0530</pubDate>
       
-      <guid>/to-the-point/check-if-a-character-is-a-number-in-golang/</guid>
-      <description>Unicode is a computing standard for the consistent encoding symbols.
-All the characters and symbols assigned a code.
-For ex.
-1A U+0041 2अ U+0905 All the Unicode is divided into various categories. Browse all the categories.
- Ll Lowercase Letters (a, b, µ, ɸ) Nl Letter Number (Ⅰ, ᛯ) Lo Other Letter (अ, ƻ)  Golang package unicode provides a wide range of validation methods on different set of Unicode.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/check-if-a-character-is-a-number-in-golang/</guid>
+      <description>Unicode is a computing standard for the consistent encoding symbols.</description>
     </item>
     
     <item>
       <title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</title>
-      <link>/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</link>
       <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
       
-      <guid>/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</guid>
-      <description>Decimal Number System Decimal number system is the standard system for denoting integers and non-integers numbers.
-This is also known as base 10 number system.
-0 1 2 3 4 5 6 7 8 9 Hexadecimal Number System Hexadecimal (mostly used as hex) number system use 16 symbols. It is known as base 16 number system, where 10 symbols are same as decimal and value greater than 9 represent as A=10, B=11, C=12, D=13, E=14, F=15.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</guid>
+      <description>Decimal Number System # Decimal number system is the standard system for denoting integers and non-integers numbers.</description>
     </item>
     
     <item>
       <title>String Split in Golang</title>
-      <link>/to-the-point/string-split-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/string-split-in-golang/</link>
       <pubDate>Tue, 15 Dec 2020 10:10:29 +0530</pubDate>
       
-      <guid>/to-the-point/string-split-in-golang/</guid>
-      <description>Golang library has provided the split function in strings package to split the string by a separator and return the slice of substrings.
-Split Syntax 1func Split(s, sep string) []string Split the string by separator , . Don&#39;t forget the white space.
-1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;strings&amp;#34; 6) 7 8func main() { 9	var greeting string = &amp;#34;Namaste, India&amp;#34; 10 11	// separate string using &amp;#39;, &amp;#39; 12	arr := strings.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/string-split-in-golang/</guid>
+      <description>Golang library has provided the split function in strings package to split the string by a separator and return the slice of substrings.</description>
     </item>
     
     <item>
       <title>Create a Serverless Application in Golang With AWS</title>
-      <link>/posts/create-a-serverless-application-in-golang-with-aws/</link>
+      <link>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</link>
       <pubDate>Mon, 10 Aug 2020 23:19:26 +0530</pubDate>
       
-      <guid>/posts/create-a-serverless-application-in-golang-with-aws/</guid>
-      <description>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.
-Table of Content
- Prerequisites Getting Started  Open hello/main.go Open serverless.yml   Build the application  Build   Deploy Test the application Conclusion  Prerequisites  Serverless Installed AWS account Connect AWS account to serverless  All these are covered in detail in the last tutorial.
-Getting Started Create a new directory hello-go-serverless.</description>
-      
+      <guid>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</guid>
+      <description>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.</description>
     </item>
     
     <item>
       <title>Secure Your Api Using Jwt in Golang</title>
-      <link>/posts/secure-your-api-using-jwt-in-golang/</link>
+      <link>https://schadokar.dev/posts/secure-your-api-using-jwt-in-golang/</link>
       <pubDate>Thu, 30 Jul 2020 11:17:11 +0530</pubDate>
       
-      <guid>/posts/secure-your-api-using-jwt-in-golang/</guid>
-      <description>In this tutorial, we will learn how to secure the APIs using the JWT authentication in Golang.
-In any application, APIs are the bridge between two services. These services can be anything, like a backend service or a frontend service.
-To secure the application, bridge security is important.
-JWT is a JSON web token. In which, a token is generated by 1 service and shared with another service. Whenever the 2nd service make a request to the 1st service, it will send the token with the request.</description>
-      
+      <guid>https://schadokar.dev/posts/secure-your-api-using-jwt-in-golang/</guid>
+      <description>In this tutorial, we will learn how to secure the APIs using the JWT authentication in Golang.</description>
     </item>
     
     <item>
       <title>Convert Byte to Hex and Hex to Byte in Golang</title>
-      <link>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</link>
       <pubDate>Sat, 18 Jul 2020 13:33:52 +0530</pubDate>
       
-      <guid>/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
-      <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa. For this, we&#39;re going to use the encoding/hex package provided by the golang. Package hex implements hexadecimal encoding and decoding.
-byte array to hex string To convert a byte array to hex string, we will encode the byte array to the hexadecimal string.
-Syntax 1func EncodeToString(src []byte) string First we will convert a string to a byte array.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
+      <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa.</description>
     </item>
     
     <item>
       <title>How to Send Email in Golang</title>
-      <link>/posts/how-to-send-email-in-golang/</link>
+      <link>https://schadokar.dev/posts/how-to-send-email-in-golang/</link>
       <pubDate>Thu, 11 Jun 2020 11:07:11 +0530</pubDate>
       
-      <guid>/posts/how-to-send-email-in-golang/</guid>
-      <description>This is a series of tutorials: sending email in golang. We&#39;ll first start with the basic sending an email using the go command.
-In the upcoming tutorials, we will create an API and a frontend using which we will send emails.
-In this tutorial, we will send an email using the main.go file.
-Pre-requisites  go v1.11 or greater - I am using go1.14.3 Code Editor (VSCode, Atom) - I am using VS Code Sendinblue account - link   Check out this step by step tutorial Create an account in sendinblue.</description>
-      
+      <guid>https://schadokar.dev/posts/how-to-send-email-in-golang/</guid>
+      <description>This is a series of tutorials: sending email in golang.</description>
     </item>
     
     <item>
       <title>How to Read and Write a File in Golang?</title>
-      <link>/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
       <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
-      <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.
-Write a file using WriteFile The WriteFile function takes 3 arguments, filename, data in a byte array, and filemode.
-1func WriteFile(filename string, data []byte, perm os.FileMode) error A FileMode represents a file&#39;s mode and permission bits. Learn more
-1package main 2 3import ( 4 &amp;#34;io/ioutil&amp;#34; 5 &amp;#34;log&amp;#34; 6) 7 8func main() { 9 // create a byte array of a string 10 data := []byte(&amp;#34;Hello Gopher!</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
+      <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.</description>
     </item>
     
     <item>
       <title>Json in Golang</title>
-      <link>/posts/json-in-golang/</link>
+      <link>https://schadokar.dev/posts/json-in-golang/</link>
       <pubDate>Mon, 23 Mar 2020 11:23:56 +0530</pubDate>
       
-      <guid>/posts/json-in-golang/</guid>
-      <description>When you start a project which interacts with the outer world, it requires data exchange. To make a project successful this interaction must be simple and efficient.
-What is Data Exchange?  Data exchange is the process of taking data structured under a source schema and transforming it into data structured under a target schema, so that the target data is an accurate representation of the source data. - Wikipedia</description>
-      
+      <guid>https://schadokar.dev/posts/json-in-golang/</guid>
+      <description>When you start a project which interacts with the outer world, it requires data exchange.</description>
     </item>
     
     <item>
       <title>Convert String to Int and Int to String in Golang</title>
-      <link>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</link>
       <pubDate>Tue, 03 Mar 2020 08:25:25 +0530</pubDate>
       
-      <guid>/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
-      <description>Golang standard library has provided 2 functions Atoi and Itoa to convert string to int and int to string respectively.
-These 2 functions placed inside the strconv package.
- Package strconv implements conversions to and from string representations of basic data types.
- String to Int The strconv.Atoi function takes a string and returns an int and an error.
-func Atoi(s string) (int, error) It will return type int and type int is system dependent.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/convert-string-to-int-and-int-to-string-in-golang/</guid>
+      <description>Golang standard library has provided 2 functions Atoi and Itoa to convert string to int and int to string respectively.</description>
     </item>
     
     <item>
       <title>How to use Swapper in Golang?</title>
-      <link>/to-the-point/how-to-use-swapper-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-use-swapper-in-golang/</link>
       <pubDate>Tue, 03 Mar 2020 08:17:07 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-use-swapper-in-golang/</guid>
-      <description>Swapper is a function defined in the reflect package. This function takes a slice and returns a swap function. This swap function takes 2 indexes as arguments and swaps the values at index position in the slice.
-Function Definition 1func Swapper(slice interface{}) func(i, j int) Let&#39;s try
-1package main 2 3import ( 4	&amp;#34;fmt&amp;#34; 5	&amp;#34;reflect&amp;#34; 6) 7 8func main() { 9	s := []int{1, 2, 3} 10	fmt.Printf(&amp;#34;Before swap: %v\n&amp;#34;, s) 11 12	swapF := reflect.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-use-swapper-in-golang/</guid>
+      <description>Swapper is a function defined in the reflect package.</description>
     </item>
     
   </channel>

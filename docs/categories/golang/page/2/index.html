@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  
+><head>
+  <meta charset="utf-8" />
+  
+    <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Golang &middot; schadokar.dev</title>
+    <meta name="title" content="Golang &middot; schadokar.dev" />
+  
+  <meta name="description" content="as My awesome website" />
+  
+  
+  
+  <link rel="canonical" href="https://schadokar.dev/categories/golang/" />
+  <link rel="alternate" type="application/rss+xml" href="/categories/golang/index.xml" title="schadokar.dev" />
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css"
+    integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK&#43;uxc8yk2csLelasbP&#43;FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA=="
+  />
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/compiled/main.min.810ea9a5336b89bef8a72ead10f90e489f72a2716ada0c121c5aba8c499f32956b0eee84e7422826b4718c639027fb12d1a22fda7a7d4182de72da92d898f4b7.css"
+    integrity="sha512-gQ6ppTNrib74py6tEPkOSJ9yonFq2gwSHFq6jEmfMpVrDu6E50IoJrRxjGOQJ/sS0aIv2np9QYLectqS2Jj0tw=="
+  />
+  
+  
+  
+    <script>
+      function loadPreferredAppearance() {
+        if (localStorage.preferredAppearance === "dark" || (!("preferredAppearance" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+      function setPreferredAppearance(scheme) {
+        if (scheme == "default") {
+          localStorage.removeItem("preferredAppearance");
+        } else {
+          localStorage.preferredAppearance = scheme;
+        }
+        loadPreferredAppearance();
+      }
+      loadPreferredAppearance();
+      window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance);
+    </script>
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Golang" />
+<meta property="og:description" content="as My awesome website" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://schadokar.dev/categories/golang/" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Golang"/>
+<meta name="twitter:description" content="as My awesome website"/>
+
+  
+  
+
+  
+  
+    <meta name="generator" content="Hugo 0.91.2" />
+  
+  
+  <meta name="author" content="Shubham Chadokar" />
+  
+    
+      <link href="mailto:hello@schadokar.dev" rel="me" />
+    
+      <link href="https://twitter.com/schadokar1" rel="me" />
+    
+      <link href="https://github.com/schadokar" rel="me" />
+    
+      <link href="https://linkedin.com/in/schadokar" rel="me" />
+    
+      <link href="https://medium.com/schadokar" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-158088106-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+  ><header
+  class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-900 dark:text-neutral"
+>
+  
+  <div>
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+        rel="me"
+        href="/"
+        >schadokar.dev</a
+      >
+  </div>
+  
+  
+    <nav>
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/posts/"
+              title="Posts"
+              >Blog</a
+            >
+          </li>
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/to-the-point/"
+              title="To-the-points"
+              >To The Point</a
+            >
+          </li>
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/about/"
+              title="About Me"
+              >About Me</a
+            >
+          </li>
+        
+      </ul>
+    </nav>
+  
+</header>
+<main class="flex-grow">
+  <header>
+  
+  <section class="prose dark:prose-light">
+    <h1 class="mb-3 text-4xl font-extrabold text-neutral-800">Golang</h1>
+    <section></section>
+  </section>
+</header>
+
+  <section>
+    
+      <h2 class="mt-12 text-2xl font-bold first:mt-8">2020</h2>
+      <hr class="border-dotted border-neutral-400 w-36" />
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/posts/how-to-send-email-in-golang/"
+        >How to Send Email in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-06-11 11:07:11 &#43;0530 IST">11 June 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/how-to-read-and-write-a-file-in-golang/"
+        >How to Read and Write a File in Golang?</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-03-24 11:13:24 &#43;0530 IST">24 March 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/posts/json-in-golang/"
+        >Json in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-03-23 11:23:56 &#43;0530 IST">23 March 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/convert-string-to-int-and-int-to-string-in-golang/"
+        >Convert String to Int and Int to String in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-03-03 08:25:25 &#43;0530 IST">3 March 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/how-to-use-swapper-in-golang/"
+        >How to use Swapper in Golang?</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-03-03 08:17:07 &#43;0530 IST">3 March 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+    
+  </section>
+  
+
+  <ul class="flex flex-row mt-8">
+    
+      <li>
+        <a
+          href="/categories/golang/"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded"
+          rel="prev"
+        >
+          &larr;
+        </a>
+      </li>
+    
+    
+      <li>
+        <a
+          href="/categories/golang/"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded "
+        >
+          1
+        </a>
+      </li>
+    
+      <li>
+        <a
+          href="/categories/golang/page/2/"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded 
+            bg-primary-200 dark:bg-primary-400 dark:text-neutral-800
+          "
+        >
+          2
+        </a>
+      </li>
+    
+    
+  </ul>
+
+
+</main><footer class="py-10">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+          <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href=""
+              title=""
+              >Archive</a
+            >
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex justify-between">
+    <div>
+      
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          © <a href="https://schadokar.dev">Shubham Chadokar</a> 2021
+      </p>
+      
+      
+        <p class="text-xs text-neutral-400 dark:text-neutral-600">
+          
+          
+          Powered by <a class="hover:underline hover:underline-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:underline-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+  </div>
+  
+  
+</footer>
+</body>
+</html>

@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ebooks on Shubham Chadokar</title>
-    <link>/ebooks/</link>
-    <description>Recent content in Ebooks on Shubham Chadokar</description>
+    <title>Ebooks on schadokar.dev</title>
+    <link>https://schadokar.dev/ebooks/</link>
+    <description>Recent content in Ebooks on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    
-        <atom:link href="/ebooks/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 23 Sep 2020 13:54:31 +0530</lastBuildDate><atom:link href="https://schadokar.dev/ebooks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Playtime with Hyperleder Composer</title>
-      <link>/ebooks/playtime-with-hyperledger-composer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://schadokar.dev/ebooks/playtime-with-hyperledger-composer/</link>
+      <pubDate>Wed, 23 Sep 2020 13:54:31 +0530</pubDate>
       
-      <guid>/ebooks/playtime-with-hyperledger-composer/</guid>
-      <description></description>
-      
+      <guid>https://schadokar.dev/ebooks/playtime-with-hyperledger-composer/</guid>
+      <description>Create a supplychain management project in Blockchain using Hyperledger Composer.</description>
     </item>
     
   </channel>

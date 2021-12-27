@@ -1,163 +1,838 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=VT323&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/4872e84fa1.js" crossorigin="anonymous"></script>
+<html
+  lang="en"
+  
+><head>
+  <meta charset="utf-8" />
+  
+    <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Golang &middot; schadokar.dev</title>
+    <meta name="title" content="Golang &middot; schadokar.dev" />
+  
+  <meta name="description" content="as My awesome website" />
+  
+  
+  
+  <link rel="canonical" href="https://schadokar.dev/categories/golang/" />
+  <link rel="alternate" type="application/rss+xml" href="/categories/golang/index.xml" title="schadokar.dev" />
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css"
+    integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK&#43;uxc8yk2csLelasbP&#43;FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA=="
+  />
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/compiled/main.min.810ea9a5336b89bef8a72ead10f90e489f72a2716ada0c121c5aba8c499f32956b0eee84e7422826b4718c639027fb12d1a22fda7a7d4182de72da92d898f4b7.css"
+    integrity="sha512-gQ6ppTNrib74py6tEPkOSJ9yonFq2gwSHFq6jEmfMpVrDu6E50IoJrRxjGOQJ/sS0aIv2np9QYLectqS2Jj0tw=="
+  />
+  
+  
+  
+    <script>
+      function loadPreferredAppearance() {
+        if (localStorage.preferredAppearance === "dark" || (!("preferredAppearance" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+      function setPreferredAppearance(scheme) {
+        if (scheme == "default") {
+          localStorage.removeItem("preferredAppearance");
+        } else {
+          localStorage.preferredAppearance = scheme;
+        }
+        loadPreferredAppearance();
+      }
+      loadPreferredAppearance();
+      window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance);
+    </script>
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Golang" />
+<meta property="og:description" content="as My awesome website" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://schadokar.dev/categories/golang/" />
 
-<script data-ad-client="ca-pub-4573306041548212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>Golang&nbsp;&ndash;&nbsp;Shubham Chadokar</title><link rel="stylesheet" href="/css/core.min.230278cb62d16ae8816a509dcb928fb36c2ee0bbc912a73233619ac052aedc8ff9ab5bf4d1bccfb3c26e79c1167337cd.css" integrity="sha384-IwJ4y2LRauiBalCdy5KPs2wu4LvJEqcyM2GawFKu3I/5q1v00bzPs8JuecEWczfN">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><link rel="alternate" type="application/rss+xml" href="/categories/golang/index.xml" title="Shubham Chadokar" /><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Golang" /><body><section id="header">
-    <div class="container">        
-        <nav class="navbar navbar-expand-md navbar-light site-nav">
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Golang"/>
+<meta name="twitter:description" content="as My awesome website"/>
 
-            <a class="navbar-brand site home" href="/"><span class="site name">Shubham Chadokar</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+  
+  
 
-            <div class="collapse navbar-collapse" id="navbarsExample04"><div class="nav wrap ml-auto">
-  <nav class="nav">
-      <ul class="navbar-nav "><li class="nav-item">
-            
-            <a class="nav item nav-link" href="/to-the-point">
-                To-The-Point
-            </a>
-            
-
-          </li><li class="nav-item">
-            
-            <a class="nav item nav-link" href="/schedule">
-                Schedule
-            </a>
-            
-
-          </li><li class="nav-item">
-            
-              <a class="nav item nav-link" href="https://schadokar.dev/index.xml"
-                target="_blank"
-                title="RSS"
-                >
-                <i class='fa fa-rss'></i>
-              </a>
-            
-
-          </li></ul>
-
-  </nav>
-</div></div>
-        </nav>
-    </div>
+  
+  
+    <meta name="generator" content="Hugo 0.91.2" />
+  
+  
+  <meta name="author" content="Shubham Chadokar" />
+  
     
-</section>
+      <link href="mailto:hello@schadokar.dev" rel="me" />
+    
+      <link href="https://twitter.com/schadokar1" rel="me" />
+    
+      <link href="https://github.com/schadokar" rel="me" />
+    
+      <link href="https://linkedin.com/in/schadokar" rel="me" />
+    
+      <link href="https://medium.com/schadokar" rel="me" />
+    
+  
+  
+  
 
-    <section id="content"><section class="article header"><h1>Golang</h1></section><ul class="note list ref"><li class="item"><a class="note" href="/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/">
-            <p class="note title">How to Sort an Array of Int Float and String in Golang</p><p class="note date">Sunday, April 25, 2021</p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="category" href="/categories/2021/">2021</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/to-the-point/">to-the-point</a><a class="tag" href="/tags/2021/">2021</a></p></li><li class="item"><a class="note" href="/to-the-point/how-to-format-golang-project/">
-            <p class="note title">How to Format Golang Project</p><p class="note date">Wednesday, December 23, 2020</p><p class="note content">Golang comes with an inbuilt package which format the complete project or a file.<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/2020/">2020</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="tag" href="/tags/golang/">golang</a></p></li><li class="item"><a class="note" href="/to-the-point/check-if-key-exists-in-map-in-golang/">
-            <p class="note title">Check if Key Exists in Map in Golang</p><p class="note date">Monday, December 21, 2020</p><p class="note content">Check if Key Exists in Map in Golang<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/2020/">2020</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="tag" href="/tags/golang/">golang</a></p></li><li class="item"><a class="note" href="/to-the-point/golang-string-replace/">
-            <p class="note title">Golang String Replace</p><p class="note date">Saturday, December 19, 2020</p><p class="note content">How to replace a substring in the string?<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/2020/">2020</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="tag" href="/tags/golang/">golang</a></p></li><li class="item"><a class="note" href="/to-the-point/check-if-a-character-is-a-number-in-golang/">
-            <p class="note title">Check if a character is a number in Golang</p><p class="note date">Saturday, December 19, 2020</p><p class="note content">Check if a character is a Number in the string<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/2020/">2020</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="tag" href="/tags/golang/">golang</a></p></li><li class="item"><a class="note" href="/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/">
-            <p class="note title">Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</p><p class="note date">Thursday, December 17, 2020</p><p class="note content">Convert Hexadecimal to Decimal and Decimal to Hexadecimal<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/2020/">2020</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="tag" href="/tags/conversion/">conversion</a><a class="tag" href="/tags/golang/">golang</a></p></li><li class="item"><a class="note" href="/to-the-point/string-split-in-golang/">
-            <p class="note title">String Split in Golang</p><p class="note date">Tuesday, December 15, 2020</p><p class="note content">String split in golang<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/string/">string</a></p></li><li class="item"><a class="note" href="/posts/create-a-serverless-application-in-golang-with-aws/">
-            <p class="note title">Create a Serverless Application in Golang With AWS</p><p class="note date">Monday, August 10, 2020</p><p class="note content">Deploy the golang serverless application on AWS Lambda service.<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/serverless/">Serverless</a><a class="category" href="/categories/2020/">2020</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/cloud/">cloud</a></p></li><li class="item"><a class="note" href="/posts/secure-your-api-using-jwt-in-golang/">
-            <p class="note title">Secure Your Api Using Jwt in Golang</p><p class="note date">Thursday, July 30, 2020</p><p class="note content">Learn how to implement jwt in your api in golang.<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/2020/">2020</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/jwt/">jwt</a></p></li><li class="item"><a class="note" href="/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/">
-            <p class="note title">Convert Byte to Hex and Hex to Byte in Golang</p><p class="note date">Saturday, July 18, 2020</p><p class="note content">Conversion between byte array to hex string and hex string to byte array.<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/tutorial/">Tutorial</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="category" href="/categories/2020/">2020</a><a class="category" href="/categories/golang/">Golang</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/to-the-point/">to-the-point</a><a class="tag" href="/tags/conversion/">conversion</a></p></li><li class="item"><a class="note" href="/posts/how-to-send-email-in-golang/">
-            <p class="note title">How to Send Email in Golang</p><p class="note date">Thursday, June 11, 2020</p><p class="note content">Learn how to easy it is to send an email in golang.<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/tutorial/">Tutorial</a><a class="category" href="/categories/2020/">2020</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/sendemail/">sendemail</a><a class="tag" href="/tags/sendinblue/">sendinblue</a></p></li><li class="item"><a class="note" href="/to-the-point/how-to-read-and-write-a-file-in-golang/">
-            <p class="note title">How to Read and Write a File in Golang?</p><p class="note date">Tuesday, March 24, 2020</p><p class="note content">In this tutorial, we will learn how to read and write files in the file system using the `io/ioutil` package.<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/tutorial/">Tutorial</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="category" href="/categories/golang/">Golang</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/to-the-point/">to-the-point</a></p></li><li class="item"><a class="note" href="/posts/json-in-golang/">
-            <p class="note title">Json in Golang</p><p class="note date">Monday, March 23, 2020</p><p class="note content">In this tutorial we'll learn how to use json in golang.<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/tutorial/">Tutorial</a><a class="category" href="/categories/golang/">Golang</a><a class="category" href="/categories/2020/">2020</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/json/">json</a></p></li><li class="item"><a class="note" href="/to-the-point/convert-string-to-int-and-int-to-string-in-golang/">
-            <p class="note title">Convert String to Int and Int to String in Golang</p><p class="note date">Tuesday, March 3, 2020</p><p class="note content">Strconv package comes with 2 handy functions Atoi and Itoa<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/tutorial/">Tutorial</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="category" href="/categories/golang/">Golang</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/to-the-point/">to-the-point</a></p></li><li class="item"><a class="note" href="/to-the-point/how-to-use-swapper-in-golang/">
-            <p class="note title">How to use Swapper in Golang?</p><p class="note date">Tuesday, March 3, 2020</p><p class="note content">Learn how to Swapper function, to swap the array elements.<span class="mldr">&mldr;</span></p></a><p class="note labels"><a class="category" href="/categories/tutorial/">Tutorial</a><a class="category" href="/categories/to-the-point/">to-the-point</a><a class="category" href="/categories/golang/">Golang</a><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/to-the-point/">to-the-point</a></p></li></ul></section>
-<section id="footer">
-    <div class="footer wrap mt-5">
-        <div class="container">
-            <div class="nav wrap mb-3">
-                <nav class="nav w-100 d-flex text-center align-items-center justify-content-center">
-                  <a class="nav item" href="/to-the-point">To-The-Point</a>
-                  <a class="nav item" href="/projects">Projects</a>
-                  <a class="nav item" href="/ebooks">Ebook</a>
-                  <a class="nav item" href="/about">About</a>
-                  <a class="nav item" href="https://github.com/schadokar/resume/blob/main/ShubhamChadokar_Resume.pdf" target="_blank">Resume</a>
-                </nav>
-            </div>
-        </div>
-        <div class="footer flex justify-center social-icon">
-            
-                <a href="https://github.com/schadokar" class="navbar-item is-hidden-desktop" title="GitHub">
-                    <span
-                        class="icon"><i class='fab fa-github'></i>
-                    </span>
-                </a>
-            
-                <a href="https://medium.com/@schadokar" class="navbar-item is-hidden-desktop" title="Medium">
-                    <span
-                        class="icon"><i class='fab fa-medium'></i>
-                    </span>
-                </a>
-            
-                <a href="https://schadokar.dev/index.xml" class="navbar-item is-hidden-desktop" title="RSS">
-                    <span
-                        class="icon"><i class='fa fa-rss'></i>
-                    </span>
-                </a>
-            
-                <a href="https://twitter.com/schadokar1" class="navbar-item is-hidden-desktop" title="Twitter">
-                    <span
-                        class="icon"><i class='fab fa-twitter'></i>
-                    </span>
-                </a>
-            <div class="footer-wrap">
-    <p class="copyright">&copy; <a href="https://schadokar.dev">Shubham Chadokar</a> 2021</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io"
-        target="_blank">Hugo</a><span>
-    </p>
-</div>
-</div>
-        <span class="footer right-side d-none"><div class="nav wrap ml-auto">
-  <nav class="nav">
-      <ul class="navbar-nav "><li class="nav-item">
-                  <a class="nav item nav-link" href="/categories/">Categories</a>
-              </li><li class="nav-item">
-              <a class="nav item nav-link" href="/tags/">Tags</a>
-          </li><li class="nav-item">
-            
-            <a class="nav item nav-link" href="/newsletter">
-                Newsletter
-            </a>
-            
 
-          </li><li class="nav-item">
-            
-            <a class="nav item nav-link" href="/contact">
-                Contact
-            </a>
-            
 
-          </li></ul>
 
-  </nav>
-</div></span>
 
-    </div>
-</section>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  
+  
+  
+  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-158088106-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
-<script src="https://schadokar.dev/js/search.js"></script></body>
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+  ><header
+  class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-900 dark:text-neutral"
+>
+  
+  <div>
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+        rel="me"
+        href="/"
+        >schadokar.dev</a
+      >
+  </div>
+  
+  
+    <nav>
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/posts/"
+              title="Posts"
+              >Blog</a
+            >
+          </li>
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/to-the-point/"
+              title="To-the-points"
+              >To The Point</a
+            >
+          </li>
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/about/"
+              title="About Me"
+              >About Me</a
+            >
+          </li>
+        
+      </ul>
+    </nav>
+  
+</header>
+<main class="flex-grow">
+  <header>
+  
+  <section class="prose dark:prose-light">
+    <h1 class="mb-3 text-4xl font-extrabold text-neutral-800">Golang</h1>
+    <section></section>
+  </section>
+</header>
 
+  <section>
+    
+      <h2 class="mt-12 text-2xl font-bold first:mt-8">2021</h2>
+      <hr class="border-dotted border-neutral-400 w-36" />
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/"
+        >How to Sort an Array of Int Float and String in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2021-04-25 16:48:05 &#43;0530 IST">25 April 2021</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+    
+      <h2 class="mt-12 text-2xl font-bold first:mt-8">2020</h2>
+      <hr class="border-dotted border-neutral-400 w-36" />
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/how-to-format-golang-project/"
+        >How to Format Golang Project</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-12-23 22:45:35 &#43;0530 IST">23 December 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/check-if-key-exists-in-map-in-golang/"
+        >Check if Key Exists in Map in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-12-21 10:38:27 &#43;0530 IST">21 December 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/golang-string-replace/"
+        >Golang String Replace</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-12-19 21:15:35 &#43;0530 IST">19 December 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/check-if-a-character-is-a-number-in-golang/"
+        >Check if a character is a number in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-12-19 15:04:55 &#43;0530 IST">19 December 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/"
+        >Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-12-17 22:58:00 &#43;0530 IST">17 December 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/string-split-in-golang/"
+        >String Split in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-12-15 10:10:29 &#43;0530 IST">15 December 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/posts/create-a-serverless-application-in-golang-with-aws/"
+        >Create a Serverless Application in Golang With AWS</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-08-10 23:19:26 &#43;0530 IST">10 August 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/posts/secure-your-api-using-jwt-in-golang/"
+        >Secure Your Api Using Jwt in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-07-30 11:17:11 &#43;0530 IST">30 July 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+        <article>
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/"
+        >Convert Byte to Hex and Hex to Byte in Golang</a
+      >
+      
+    
+    
+    
+  </h3>
+  <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row items-center">
+    
+    
+      <time datetime="2020-07-18 13:33:52 &#43;0530 IST">18 July 2020</time>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+
+  </div>
+  
+</article>
+
+      
+    
+  </section>
+  
+
+  <ul class="flex flex-row mt-8">
+    
+    
+      <li>
+        <a
+          href="/categories/golang/"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded 
+            bg-primary-200 dark:bg-primary-400 dark:text-neutral-800
+          "
+        >
+          1
+        </a>
+      </li>
+    
+      <li>
+        <a
+          href="/categories/golang/page/2/"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded "
+        >
+          2
+        </a>
+      </li>
+    
+    
+      <li>
+        <a
+          href="/categories/golang/page/2/"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded"
+          rel="next"
+        >
+          &rarr;
+        </a>
+      </li>
+    
+  </ul>
+
+
+</main><footer class="py-10">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+          <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href=""
+              title=""
+              >Archive</a
+            >
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex justify-between">
+    <div>
+      
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          © <a href="https://schadokar.dev">Shubham Chadokar</a> 2021
+      </p>
+      
+      
+        <p class="text-xs text-neutral-400 dark:text-neutral-600">
+          
+          
+          Powered by <a class="hover:underline hover:underline-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:underline-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+  </div>
+  
+  
+</footer>
+</body>
 </html>

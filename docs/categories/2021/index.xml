@@ -1,222 +1,155 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2021 on Shubham Chadokar</title>
-    <link>/categories/2021/</link>
-    <description>Recent content in 2021 on Shubham Chadokar</description>
+    <title>2021 on schadokar.dev</title>
+    <link>https://schadokar.dev/categories/2021/</link>
+    <description>Recent content in 2021 on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Wed, 28 Apr 2021 18:03:25 +0530</lastBuildDate>
-    
-        <atom:link href="/categories/2021/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 28 Apr 2021 18:03:25 +0530</lastBuildDate><atom:link href="https://schadokar.dev/categories/2021/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a Mars Weather App</title>
-      <link>/to-the-point/create-a-mars-weather-app/</link>
+      <link>https://schadokar.dev/to-the-point/create-a-mars-weather-app/</link>
       <pubDate>Wed, 28 Apr 2021 18:03:25 +0530</pubDate>
       
-      <guid>/to-the-point/create-a-mars-weather-app/</guid>
-      <description>MAAS2 is a REST API that provides the latest weather data transmitted by the Curiosity Rover on Mars. This API is built upon the REMS (Rover Environmental Monitoring Station). MAAS2 responds in JSON formatted data.
-API
-Project Setup 1|- mars-weather-app 2 |- index.html 3 |- style.css 4 |- weather.js index.html Create a index.html and paste the code.
-1&amp;lt;!DOCTYPE html&amp;gt; 2&amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; 3 &amp;lt;head&amp;gt; 4 &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34; /&amp;gt; 5 &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34; /&amp;gt; 6 &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/create-a-mars-weather-app/</guid>
+      <description>MAAS2 is a REST API that provides the latest weather data transmitted by the Curiosity Rover on Mars.</description>
     </item>
     
     <item>
       <title>How to Sort an Array of Int Float and String in Golang</title>
-      <link>/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</link>
       <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</guid>
-      <description>The golang provides a sort package to sort slices of primitives types and user-defined.
-Sort Ints 1intArr := []int{23, 12, 11, 90} 2// Sort in Increasing Order 3sort.Ints(intArr) // [11, 12, 23, 90] 4// Sort in Decreasing Order 5sort.Sort(sort.Reverse(sort.IntSlice(intArr))) // [90, 23, 12, 11] Sort Float 1floatArr := []float64{23.1, 12.1, 111.1, 91.0} 2// Sort in Increasing Order 3sort.Float64s(floatArr) // [12.1 23.1 91 111.1] 4// Sort in Decreasing Order 5sort.Sort(sort.Reverse(sort.Float64Slice(floatArr))) // [111.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-sort-an-array-of-int-float-and-string-in-golang/</guid>
+      <description>The golang provides a sort package to sort slices of primitives types and user-defined.</description>
     </item>
     
     <item>
       <title>What is RSS feed, RSS reader and Should I use it</title>
-      <link>/posts/what-is-rss-feed-rss-reader-and-should-i-use-it/</link>
+      <link>https://schadokar.dev/posts/what-is-rss-feed-rss-reader-and-should-i-use-it/</link>
       <pubDate>Sat, 24 Apr 2021 11:11:31 +0530</pubDate>
       
-      <guid>/posts/what-is-rss-feed-rss-reader-and-should-i-use-it/</guid>
-      <description>What is RSS feed, RSS reader and Do I need it? In simple words, you can consider this as a subscription of a website. Unlike newsletters and other subscriptions where format varies from one platform to another, RSS feed is coded in XML.
-All the websites who want to support RSS feed has to convert their content in XML format. Now as a reader, you don&#39;t have to go to all your favorite websites.</description>
-      
+      <guid>https://schadokar.dev/posts/what-is-rss-feed-rss-reader-and-should-i-use-it/</guid>
+      <description>What is RSS feed, RSS reader and Do I need it?</description>
     </item>
     
     <item>
       <title>How to Add RSS feed to Hugo Website</title>
-      <link>/to-the-point/how-to-add-rss-feed-to-hugo-website/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-add-rss-feed-to-hugo-website/</link>
       <pubDate>Fri, 23 Apr 2021 14:01:13 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-add-rss-feed-to-hugo-website/</guid>
-      <description>What is RSS feed? How do you keep yourself updated with your favorite websites or bloggers? By visiting their websites or subscribing to the newsletter.
-Using rss feed you can get all the updates of different websites at 1 place, provided that website should have rss feed enabled in it.
-If it is enabled then you can copy the RSS feed link and paste it any RSS reader application.
-RSS feed supports xml format.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-add-rss-feed-to-hugo-website/</guid>
+      <description>What is RSS feed?</description>
     </item>
     
     <item>
       <title>How to Convert Nested Arrays Into 1d Array in Javascript</title>
-      <link>/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/</link>
       <pubDate>Thu, 22 Apr 2021 16:23:30 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/</guid>
-      <description>In ES2019, Array.prototype.flat method was introduced which converts the multi-dimensional array to one-dimensional array upto a defined nested depth.
-For Example:
-1const nestedArr = [&amp;#34;e1&amp;#34;, [&amp;#34;e2&amp;#34;, &amp;#34;e3&amp;#34;, [&amp;#34;e4&amp;#34;, &amp;#34;e5&amp;#34;, [&amp;#34;e6&amp;#34;, &amp;#34;e7&amp;#34;]]]]; 2// default depth is 1 means it will flated only 1 nested array 3nestedArr.flat(); // [&amp;#34;e1&amp;#34;, &amp;#34;e2&amp;#34;, &amp;#34;e3&amp;#34;, [&amp;#34;e4&amp;#34;, &amp;#34;e5&amp;#34;, [&amp;#34;e6&amp;#34;, &amp;#34;e7&amp;#34;]]] 4 5// depth = 2 6nestedArr.flat(2); // [&amp;#34;e1&amp;#34;, &amp;#34;e2&amp;#34;, &amp;#34;e3&amp;#34;, &amp;#34;e4&amp;#34;, &amp;#34;e5&amp;#34;, [&amp;#34;e6&amp;#34;, &amp;#34;e7&amp;#34;]] 7 8// for all the way down to the last nested array use Infinity 9nestedArr.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/</guid>
+      <description>In ES2019, Array.</description>
     </item>
     
     <item>
       <title>How to Remove Falsy Values From an Array in Javascript</title>
-      <link>/to-the-point/how-to-remove-falsy-values-from-an-array-in-javascript/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-remove-falsy-values-from-an-array-in-javascript/</link>
       <pubDate>Wed, 21 Apr 2021 15:55:10 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-remove-falsy-values-from-an-array-in-javascript/</guid>
-      <description>Falsy Values in the Javascript In Javascript, in the context of Boolean all the values are either true or false.
-For Example
-   Boolean Values     True 1,2,3, &amp;ldquo;any string&amp;rdquo;, {} , true, 1.0, &amp;lsquo;false&amp;rsquo;, Infinity   False 0, -0, false, 0n, &amp;ldquo;&amp;quot;, &amp;lsquo;&#39;,``, null, undefined, NaN |     &amp;lsquo;false&amp;rsquo; is a string.
- Demo Use filter to remove all the falsy values from an array.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-remove-falsy-values-from-an-array-in-javascript/</guid>
+      <description>Falsy Values in the Javascript # In Javascript, in the context of Boolean all the values are either true or false.</description>
     </item>
     
     <item>
       <title>Create a Cryptocurrency Exchange Rate in Html Part 1</title>
-      <link>/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</link>
+      <link>https://schadokar.dev/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</link>
       <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
       
-      <guid>/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</guid>
-      <description>This is a series of 3 tutorials in which we will build a cryptocurrency exchange rate dashboard in HTML using materialize css and coinbase free api.
- Part 1: Simple Cryptocurrency Exchange Rate Dashboard Part 2: Add pagination in cryptocurrency exchange rate Part 3: Change base currency BTC to other currencies like USD, EUR INR.  Project Setup Create a cryptocurrency-exchange-rate directory.
-1|- cryptocurrency-exchange-rate 2	|- icons 3	|- exchange-rates.js 4	|- index.</description>
-      
+      <guid>https://schadokar.dev/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</guid>
+      <description>This is a series of 3 tutorials in which we will build a cryptocurrency exchange rate dashboard in HTML using materialize css and coinbase free api.</description>
     </item>
     
     <item>
       <title>How to Get the Length of an Object in Javascript</title>
-      <link>/to-the-point/how-to-get-the-length-of-an-object-in-javascript/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-get-the-length-of-an-object-in-javascript/</link>
       <pubDate>Mon, 19 Apr 2021 20:06:56 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-get-the-length-of-an-object-in-javascript/</guid>
-      <description>The Javascript Object is a collection of key value pair.
-1const obj = { 2 key1: value1, 3 key2: value2, 4 length: 10 5}; 6 7Object.keys(obj).length // 3 [&amp;#34;key1&amp;#34;, &amp;#34;key2&amp;#34;, &amp;#34;length&amp;#34;] 8obj.length // 10 The Object.keys(obj) returns the array of the keys of the object.
-.length is the function available of array.
- If you will try to use .length property then object will find length property or key in the object.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-get-the-length-of-an-object-in-javascript/</guid>
+      <description>The Javascript Object is a collection of key value pair.</description>
     </item>
     
     <item>
       <title>How to Check if Object Is Empty in Javascript</title>
-      <link>/to-the-point/how-to-check-if-object-is-empty-in-javascript/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-check-if-object-is-empty-in-javascript/</link>
       <pubDate>Sun, 18 Apr 2021 19:52:16 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-check-if-object-is-empty-in-javascript/</guid>
-      <description>There are many ways to check if an Object is empty or not. But in this post we will document only which is recommended and has fast execution compared to others.
-for loop Iteration is best way to check if Object is empty or not and it will work on all the browsers.
-1const obj = {}; 2 3for(let key in obj) { 4 if(obj.hasOwnProperty(key)) { 5 return false; 6 }; 7}; 8return true; Using Object.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-check-if-object-is-empty-in-javascript/</guid>
+      <description>There are many ways to check if an Object is empty or not.</description>
     </item>
     
     <item>
       <title>How to Add and Remove a Property of an Object in Javascript</title>
-      <link>/to-the-point/how-to-add-and-remove-a-property-of-an-object-in-javascript/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-add-and-remove-a-property-of-an-object-in-javascript/</link>
       <pubDate>Sat, 17 Apr 2021 10:48:17 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-add-and-remove-a-property-of-an-object-in-javascript/</guid>
-      <description>Javascript object is a collection of properties and a property is a key-value pair.
-The value can be anything like any data type, object and even a function. When a value is a function then it is known as method.
-Add a property to an object 1const obj = {}; 2// syntax 1 3obj.property1 = &amp;#34;first property&amp;#34; 4// or syntax 2 5obj.property2 = &amp;#34;second property&amp;#34; Remove or delete a property of an Object Use delete keyword to remove or delete a property.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-add-and-remove-a-property-of-an-object-in-javascript/</guid>
+      <description>Javascript object is a collection of properties and a property is a key-value pair.</description>
     </item>
     
     <item>
       <title>Create a Task List in Html</title>
-      <link>/posts/create-a-task-list-in-html/</link>
+      <link>https://schadokar.dev/posts/create-a-task-list-in-html/</link>
       <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
       
-      <guid>/posts/create-a-task-list-in-html/</guid>
-      <description>In this post, we are building a task list in HTML using material css.
-The tasks will save in the browser local storage.
-In the end, the app can be hosted on GitHub Pages.
-The code is available on GitHub.
-Demo App
-The final app will look like this.
-Project Setup Create a html-task-list directory.
-1|- html-task-list 2	|- icons 3	|- index.html 4	|- style.css 5	|- tasks.js index.html Create a index.</description>
-      
+      <guid>https://schadokar.dev/posts/create-a-task-list-in-html/</guid>
+      <description>In this post, we are building a task list in HTML using material css.</description>
     </item>
     
     <item>
       <title>How to Run Javascript Code</title>
-      <link>/posts/how-to-run-javascript-code/</link>
+      <link>https://schadokar.dev/posts/how-to-run-javascript-code/</link>
       <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
       
-      <guid>/posts/how-to-run-javascript-code/</guid>
-      <description>In this post, I will try to document the different ways to run the javascript code.
-As a beginner, you always need a simple way to run the code and test it.
-Browser Console The best way to test a piece of code is Browser console.
-Open any browser except Internet Explorer as it doesn&#39;t support many modern javascript feature.
-Press ctrl+shift+I or right click and select Inspect.
-In the console tab you can write the javascript code and run.</description>
-      
+      <guid>https://schadokar.dev/posts/how-to-run-javascript-code/</guid>
+      <description>In this post, I will try to document the different ways to run the javascript code.</description>
     </item>
     
     <item>
       <title>Create a Weather App in Html</title>
-      <link>/posts/create-a-weather-app-in-html/</link>
+      <link>https://schadokar.dev/posts/create-a-weather-app-in-html/</link>
       <pubDate>Wed, 14 Apr 2021 19:33:42 +0530</pubDate>
       
-      <guid>/posts/create-a-weather-app-in-html/</guid>
-      <description>In this post, we are creating a weather app in html using material and openweathermap api.
-The final app will look like this.
-The code is available on GitHub.
-Openweathermap API Go to Openweathermap.org and create an account. We are utilizing free tier api.
-In free tier, we can call 60 calls/minute 1,000,000 calls/month.
-Checkout the available APIs for free tier.
-Login to your account and go to My API Keys from the top-right menu.</description>
-      
+      <guid>https://schadokar.dev/posts/create-a-weather-app-in-html/</guid>
+      <description>In this post, we are creating a weather app in html using material and openweathermap api.</description>
     </item>
     
     <item>
       <title>How to Convert an Array to a String in Javascript</title>
-      <link>/to-the-point/how-to-convert-an-array-to-a-string-in-javascript/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-convert-an-array-to-a-string-in-javascript/</link>
       <pubDate>Tue, 13 Apr 2021 14:21:35 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-convert-an-array-to-a-string-in-javascript/</guid>
-      <description>This post will answer the below questions
- How to convert an array to a string? How to convert an array to a string with a character in between the elements?  Use join method to convert the array to a string with a separator.
-Syntax 1array.join(separator(optional))  ,(comma) is the default separator. Separator is a string not a character. - or namaste both are valid separator.
- 1const dateArray = [&amp;#34;Sun&amp;#34;, 11, &amp;#34;Apr&amp;#34;, 2021, &amp;#34;12:59:48&amp;#34;, &amp;#34;GMT&amp;#34;]; 2const dateString = dateArray.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-convert-an-array-to-a-string-in-javascript/</guid>
+      <description>This post will answer the below questions</description>
     </item>
     
     <item>
       <title>How to Sort an Array of Objects in Javascript</title>
-      <link>/to-the-point/how-to-sort-an-array-of-objects-in-javascript/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-sort-an-array-of-objects-in-javascript/</link>
       <pubDate>Mon, 12 Apr 2021 16:20:56 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-sort-an-array-of-objects-in-javascript/</guid>
-      <description>Using the sort method, we can sort the array of objects by the property of the object.
-The sort method will change the persons array instead of creating a copy of it. sort works by reference not by value.
-1const persons = [ 2 {name: &amp;#34;John&amp;#34;, age: 35}, 3 {name: &amp;#34;Steve&amp;#34;, age: 24}, 4 {name: &amp;#34;Ben&amp;#34;, age: 49} 5] Syntax 1array.sort(function (arg1, arg2) { 2	// arg1 is smaller than arg2 3	// example: (2-4) = negative (less than 0) 4	if(arg1 &amp;lt; arg2) { 5	return -1; // in ascending order 6 // return 1; // in descening order 7	} 8	// arg1 is larger than arg2 9	// example: (6-2) = positive (greater than 0) 10	else if (arg1 &amp;gt; arg2) { 11	return 1; // in ascending order 12 // return -1; // in descening order 13	} 14	// arg1 is equal to arg2 15	return 0; 16} ) Sort the object by name 1persons.</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-sort-an-array-of-objects-in-javascript/</guid>
+      <description>Using the sort method, we can sort the array of objects by the property of the object.</description>
     </item>
     
     <item>
       <title>How to Remove Consecutive Characters From a String</title>
-      <link>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</link>
+      <link>https://schadokar.dev/to-the-point/how-to-remove-consecutive-characters-from-a-string/</link>
       <pubDate>Sat, 20 Feb 2021 00:42:58 +0530</pubDate>
       
-      <guid>/to-the-point/how-to-remove-consecutive-characters-from-a-string/</guid>
-      <description>Problem Statement Remove n consecutive characters from a string and return the final string.
-For example:
-1Input String: abccdeeef 2 3Output String: abdf Solution 1const str = &amp;#34;abccdeeef&amp;#34;; 2//-----------012345678 3let finalStr = &amp;#34;&amp;#34;; 4 5let isConsecutive = false; 6 7for (let i = 0; i &amp;lt; str.length - 1; i++) { 8 // check if characters are consecutive 9 if (str[i] === str[i + 1]) { 10 isConsecutive = true; 11 } else { 12 // check if the last character was consecutive 13 if (!</description>
-      
+      <guid>https://schadokar.dev/to-the-point/how-to-remove-consecutive-characters-from-a-string/</guid>
+      <description>Problem Statement # Remove n consecutive characters from a string and return the final string.</description>
     </item>
     
   </channel>
