@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://schadokar.dev/sitemap.xml
