@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
 ><head>
   <meta charset="utf-8" />
   
@@ -13,7 +16,7 @@
   <title>Json in Golang &middot; schadokar.dev</title>
     <meta name="title" content="Json in Golang &middot; schadokar.dev" />
   
-  <meta name="description" content="In this tutorial we&#39;ll learn how to use json in golang." />
+  <meta name="description" content="as My awesome website" />
   
   
   
@@ -22,42 +25,24 @@
   
   
   
+  
+  
+  
+  
+  
+  
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css"
-    integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK&#43;uxc8yk2csLelasbP&#43;FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA=="
+    href="/css/main.bundle.min.ef7a9fdb75ef30487639fd3b23143121e9ef038e1cd587f82d423be6ba9f4f4b54230400783b957d9ac291184d75cc3dabfe031cdd8e68e15a38b1f003e5cbf5.css"
+    integrity="sha512-73qf23XvMEh2Of07IxQxIenvA44c1Yf4LUI75rqfT0tUIwQAeDuVfZrCkRhNdcw9q/4DHN2OaOFaOLHwA&#43;XL9Q=="
   />
   
   
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="/css/compiled/main.min.810ea9a5336b89bef8a72ead10f90e489f72a2716ada0c121c5aba8c499f32956b0eee84e7422826b4718c639027fb12d1a22fda7a7d4182de72da92d898f4b7.css"
-    integrity="sha512-gQ6ppTNrib74py6tEPkOSJ9yonFq2gwSHFq6jEmfMpVrDu6E50IoJrRxjGOQJ/sS0aIv2np9QYLectqS2Jj0tw=="
-  />
+  <script type="text/javascript" src="/js/appearance.min.12e98742cd283574d030a7fe55f29597df4ee214f7ff7075b4d19a64d046a602753c715295550be7899b661619cec89c679049d36c624681671a8013c1249896.js" integrity="sha512-EumHQs0oNXTQMKf&#43;VfKVl99O4hT3/3B1tNGaZNBGpgJ1PHFSlVUL54mbZhYZzsicZ5BJ02xiRoFnGoATwSSYlg=="></script>
   
   
   
-    <script>
-      function loadPreferredAppearance() {
-        if (localStorage.preferredAppearance === "dark" || (!("preferredAppearance" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
-      }
-      function setPreferredAppearance(scheme) {
-        if (scheme == "default") {
-          localStorage.removeItem("preferredAppearance");
-        } else {
-          localStorage.preferredAppearance = scheme;
-        }
-        loadPreferredAppearance();
-      }
-      loadPreferredAppearance();
-      window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance);
-    </script>
   
   
   
@@ -86,38 +71,34 @@
 
   
   <script type="application/ld+json">
-  {
+  [{
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "Article",
     "articleSection": "Posts",
     "name": "Json in Golang",
     "headline": "Json in Golang",
     "description": "In this tutorial we\u0027ll learn how to use json in golang.",
+    "abstract": "When you start a project which interacts with the outer world, it requires data exchange.",
     "inLanguage": "en",
+    "url" : "https:\/\/schadokar.dev\/posts\/json-in-golang\/",
     "author" : {
       "@type": "Person",
       "name": "Shubham Chadokar"
     },
-    "creator" : {
-      "@type": "Person",
-      "name": "Shubham Chadokar"
-    },
-    "copyrightHolder": "Shubham Chadokar",
     "copyrightYear": "2020",
     "dateCreated": "2020-03-23T11:23:56\u002b05:30",
     "datePublished": "2020-03-23T11:23:56\u002b05:30",
+    
     "dateModified": "2020-03-23T11:23:56\u002b05:30",
-    "url" : "https:\/\/schadokar.dev\/posts\/json-in-golang\/",
-    "wordCount": "1535",
-    "keywords": ["golang","json",]
-  }
+    
+    "keywords": ["golang","json"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1535"
+  }]
   </script>
 
 
-  
-  
-    <meta name="generator" content="Hugo 0.91.2" />
-  
   
   <meta name="author" content="Shubham Chadokar" />
   
@@ -130,7 +111,7 @@
     
       <link href="https://linkedin.com/in/schadokar" rel="me" />
     
-      <link href="https://medium.com/schadokar" rel="me" />
+      <link href="https://medium.com/@schadokar" rel="me" />
     
   
   
@@ -164,63 +145,82 @@ if (!doNotTrack) {
 </head>
 <body
     class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
-  ><header
-  class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-900 dark:text-neutral"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        href="#main-content"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
+          >&darr;</span
+        >Skip to main content</a
+      >
+    </div><header
+  class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-900 dark:text-neutral print:hidden"
 >
   
   <div>
     
       <a
-        class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+        class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
         rel="me"
         href="/"
         >schadokar.dev</a
       >
+    
+
   </div>
   
   
     <nav>
       <ul class="flex flex-col list-none sm:flex-row">
         
-          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="/posts/"
               title="Posts"
               >Blog</a
             >
           </li>
         
-          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="/to-the-point/"
               title="To-the-points"
               >To The Point</a
             >
           </li>
         
-          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="/about/"
               title="About Me"
               >About Me</a
             >
           </li>
         
+        
       </ul>
     </nav>
   
 </header>
-<main class="flex-grow">
-  <article class="max-w-prose">
-    <header>
+<div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+  <article>
+    <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         Json in Golang
       </h1>
-      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
 
 
@@ -242,64 +242,111 @@ if (!doNotTrack) {
   
 
   
+
+  
     
   
 
   
 
 
-  <div class="flex flex-row items-center">
+  <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2020-03-23 11:23:56 &#43;0530 IST">23 March 2020</time>
-<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+      <time datetime="2020-03-23 11:23:56 &#43;0530 IST">March 23, 2020</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
     
 
     
     
   </div>
 
+  
+  
+
 
       </div>
     </header>
-    <section class="prose dark:prose-light">
-      <p>When you start a project which interacts with the outer world, it requires data exchange.
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+      
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10 print:hidden">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#what-is-data-exchange">What is Data Exchange?</a></li>
+        <li><a href="#what-is-json">What is JSON?</a></li>
+      </ul>
+    </li>
+    <li><a href="#parse-json-in-golang-">Parse JSON in Golang ⚙️</a>
+      <ul>
+        <li><a href="#encode-marshal-">Encode (Marshal) 👨‍💻</a></li>
+        <li><a href="#omitempty">Omitempty</a></li>
+        <li><a href="#decode-unmarshal-">Decode (Unmarshal) 👨‍💻</a></li>
+      </ul>
+    </li>
+    <li><a href="#decoding-the-arbitrary-json-">Decoding the arbitrary JSON 👨‍💻</a></li>
+    <li><a href="#streaming-encoders-and-decoders">Streaming Encoders and Decoders</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        <p>When you start a project which interacts with the outer world, it requires data exchange.
 To make a project successful this interaction must be simple and efficient.</p>
-<h3 id="what-is-data-exchange">What is Data Exchange? <a class="heading-anchor" href="#what-is-data-exchange" aria-label="Anchor">#</a></h3>
+<h3 id="what-is-data-exchange" class="relative group">What is Data Exchange? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#what-is-data-exchange" aria-label="Anchor">#</a></span></h3>
 <blockquote>
 <p><strong>Data exchange</strong> is the process of taking data structured under a source schema and transforming it into data structured under a target schema, so that the target data is an accurate representation of the source data. - <a href="https://en.wikipedia.org/wiki/Data_exchange">Wikipedia</a></p>
 </blockquote>
 <p>In simple terms, convert the data in the format which the receiver understands.</p>
 <p>There are many data exchange formats like XML, JSON, HTML, CSV etc. Among all, JSON has become ubiquitous for web applications.</p>
-<h3 id="what-is-json">What is JSON? <a class="heading-anchor" href="#what-is-json" aria-label="Anchor">#</a></h3>
+<h3 id="what-is-json" class="relative group">What is JSON? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#what-is-json" aria-label="Anchor">#</a></span></h3>
 <p><strong>JSON (JavaScript Object Notation) is a lightweight format that is used for data interchanging.</strong> It is based on a subset of Javascript language. An object is an unordered set of name/value pairs.</p>
 <p>An Example of JSON</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;How to use JSON in golang?&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;Tutorial&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;publisher&#34;</span><span class="p">:</span> <span class="s2">&#34;codesource.io&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;golang&#34;</span><span class="p">,</span> <span class="s2">&#34;json&#34;</span><span class="p">],</span>
-  <span class="nt">&#34;published&#34;</span><span class="p">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;How to use JSON in golang?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;Tutorial&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;publisher&#34;</span><span class="p">:</span> <span class="s2">&#34;codesource.io&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;golang&#34;</span><span class="p">,</span> <span class="s2">&#34;json&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;published&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><hr>
 <p>Now, we know what is JSON. It is time to use it with golang.
 In this tutorial, we will explore different golang types like string, int, struct, array, slice, maps.</p>
-<h2 id="parse-json-in-golang-">Parse JSON in Golang ⚙️ <a class="heading-anchor" href="#parse-json-in-golang-" aria-label="Anchor">#</a></h2>
+<h2 id="parse-json-in-golang-" class="relative group">Parse JSON in Golang ⚙️ <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#parse-json-in-golang-" aria-label="Anchor">#</a></span></h2>
 <p>JSON is JavaScript Object Notation and golang can&rsquo;t use it in its original format.
 For this, golang has provided an <code>encoding/json</code> package in the <a href="https://golang.org/pkg/encoding/json/">standard library</a>.</p>
 <p>In golang, we use <code>struct</code> to represent <code>json</code>.</p>
 <p>For example:
 In golang</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Employer</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">Name</span> <span class="kt">string</span>
-    <span class="nx">Employee</span> <span class="p">[]</span><span class="kt">int</span>
-<span class="p">}</span>
-</code></pre></div><p>In JSON</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;string&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;employee&#34;</span><span class="p">:</span> <span class="p">[]</span>
-<span class="p">}</span>
-</code></pre></div><p>We will use <code>encode/json</code> package to convert <code>json</code> into <code>struct</code> and <code>struct</code> into <code>json</code>. For this we will use 2 functions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Employer</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Name</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Employee</span> <span class="p">[]</span><span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In JSON</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;string&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;employee&#34;</span><span class="p">:</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>We will use <code>encode/json</code> package to convert <code>json</code> into <code>struct</code> and <code>struct</code> into <code>json</code>. For this we will use 2 functions:</p>
 <ol>
 <li>Marshal (Encode) : Convert golang <code>struct</code> into <code>json</code> format.</li>
 <li>Unmarshal (Decode): Convert <code>json</code> into golang <code>struct</code></li>
@@ -311,44 +358,44 @@ In golang</p>
 <li>int/float64 for JSON number</li>
 <li>nil for JSON null</li>
 </ul>
-<h3 id="encode-marshal-">Encode (Marshal) 👨‍💻 <a class="heading-anchor" href="#encode-marshal-" aria-label="Anchor">#</a></h3>
+<h3 id="encode-marshal-" class="relative group">Encode (Marshal) 👨‍💻 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#encode-marshal-" aria-label="Anchor">#</a></span></h3>
 <p>To encode JSON data we use the <a href="https://golang.org/pkg/encoding/json/#Marshal">Marshal</a> function.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">Marshal</span><span class="p">(</span><span class="nx">v</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">([]</span><span class="kt">byte</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span>
-</code></pre></div><p>Marshal function accepts an empty interface and returns an array of byte and error message.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-    <span class="s">&#34;encoding/json&#34;</span>
-    <span class="s">&#34;fmt&#34;</span>
-    <span class="s">&#34;log&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Name</span>     <span class="kt">string</span>
-        <span class="nx">Age</span>      <span class="kt">int64</span>
-        <span class="nx">Location</span> <span class="kt">string</span>
-    <span class="p">}</span>
-
-    <span class="nx">person</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span>
-        <span class="s">&#34;Jon&#34;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="s">&#34;London&#34;</span><span class="p">,</span>
-    <span class="p">}</span>
-
-    <span class="c1">// encode into JSON
-</span><span class="c1"></span>    <span class="nx">b</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;Unable to encode&#34;</span><span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Marshal returns []byte
-</span><span class="c1"></span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
-<span class="p">}</span>
-</code></pre></div><p><a href="https://play.golang.org/p/a7GJlbd_Ddq">Try It</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">Marshal</span><span class="p">(</span><span class="nx">v</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">([]</span><span class="kt">byte</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span>
+</span></span></code></pre></div><p>Marshal function accepts an empty interface and returns an array of byte and error message.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;encoding/json&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Name</span>     <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Age</span>      <span class="kt">int64</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Location</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">person</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Jon&#34;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="s">&#34;London&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// encode into JSON
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">b</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;Unable to encode&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Marshal returns []byte
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/a7GJlbd_Ddq">Try It</a></p>
 <p>Output</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span> <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon&#34;</span><span class="p">,</span> <span class="nt">&#34;Age&#34;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="nt">&#34;Location&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span> <span class="p">}</span>
-</code></pre></div><p>We are encoding <code>Person</code> struct in JSON format. First, create a new object of <code>Person</code> as <code>person</code>.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span> <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon&#34;</span><span class="p">,</span> <span class="nt">&#34;Age&#34;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="nt">&#34;Location&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span> <span class="p">}</span>
+</span></span></code></pre></div><p>We are encoding <code>Person</code> struct in JSON format. First, create a new object of <code>Person</code> as <code>person</code>.
 Then, encode the <code>person</code> in JSON using <code>json.Marshal</code>.
 If everything goes well, then the <code>err</code> will be <code>nil</code> and <code>b</code> is the representation of <code>person</code> in <code>[]byte</code> format.</p>
 <p>Only data structures that can be represented as valid JSON will be encoded:</p>
@@ -356,93 +403,93 @@ If everything goes well, then the <code>err</code> will be <code>nil</code> and 
 <li>JSON objects only support strings as keys; to encode a Go map type it must be of the form map[string]T (where T is any Go type supported by the json package).</li>
 <li>Only the exported fields (those that begin with an uppercase letter) of the struct can be encoded in JSON.</li>
 <li>Cyclic data structures are not supported; they will cause Marshal to go into an infinite loop.</li>
-<li>Pointers will be encoded as the values they point to (or &lsquo;null&rsquo; if the pointer is nil).</li>
+<li>Pointers will be encoded as the values they point to (or &rsquo;null&rsquo; if the pointer is nil).</li>
 </ul>
 <blockquote>
 <p>In golang Uppercase represent that a field is exported or public.</p>
 </blockquote>
 <p>Take a look at the <code>Person</code> struct,</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Name</span>     <span class="kt">string</span>
-        <span class="nx">Age</span>      <span class="kt">int64</span>
-        <span class="nx">Location</span> <span class="kt">string</span>
-    <span class="p">}</span>
-</code></pre></div><p>Change the <code>Location</code> field to lowercase <code>location</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Name</span>     <span class="kt">string</span>
-        <span class="nx">Age</span>      <span class="kt">int64</span>
-        <span class="nx">location</span> <span class="kt">string</span>
-    <span class="p">}</span>
-</code></pre></div><p><a href="https://play.golang.org/p/BEtHJkVw6ca">Try it</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Name</span>     <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Age</span>      <span class="kt">int64</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Location</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p>Change the <code>Location</code> field to lowercase <code>location</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Name</span>     <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Age</span>      <span class="kt">int64</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">location</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/BEtHJkVw6ca">Try it</a></p>
 <p>Output</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span> <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon&#34;</span><span class="p">,</span> <span class="nt">&#34;Age&#34;</span><span class="p">:</span> <span class="mi">27</span> <span class="p">}</span>
-</code></pre></div><h4 id="to-map-the-struct-field-to-the-json-tag">To map the struct field to the <code>json</code> tag. <a class="heading-anchor" href="#to-map-the-struct-field-to-the-json-tag" aria-label="Anchor">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span> <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon&#34;</span><span class="p">,</span> <span class="nt">&#34;Age&#34;</span><span class="p">:</span> <span class="mi">27</span> <span class="p">}</span>
+</span></span></code></pre></div><h4 id="to-map-the-struct-field-to-the-json-tag" class="relative group">To map the struct field to the <code>json</code> tag. <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#to-map-the-struct-field-to-the-json-tag" aria-label="Anchor">#</a></span></h4>
 <p>For example, you have <code>struct</code> field as <code>Name</code> but you want to map it as <code>firstName</code> in <code>json</code>.
 To do this, you can tag the struct field.</p>
 <p>Syntax</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">FieldName</span> <span class="kd">type</span> <span class="s">`json:&#34;tagname&#34;`</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">FieldName</span> <span class="kd">type</span> <span class="s">`json:&#34;tagname&#34;`</span>
+</span></span></code></pre></div><blockquote>
 <p>⚠️ Don&rsquo;t give any space between <code>json:&quot;tagname&quot;</code>, else it will throw an error.
 <code>struct field tag json: &quot;firstName&quot; not compatible with reflect.StructTag.Get: bad syntax for struct tag value</code></p>
 </blockquote>
 <p>Tag the <code>Name</code> field as <code>firstName</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Name</span>     <span class="kt">string</span> <span class="s">`json:&#34;firstName&#34;`</span>
-        <span class="nx">Age</span>      <span class="kt">int64</span>
-        <span class="nx">Location</span> <span class="kt">string</span>
-    <span class="p">}</span>
-</code></pre></div><p><a href="https://play.golang.org/p/f32foy7ULIC">Try it</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Name</span>     <span class="kt">string</span> <span class="s">`json:&#34;firstName&#34;`</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Age</span>      <span class="kt">int64</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Location</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/f32foy7ULIC">Try it</a></p>
 <p>Output</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span> <span class="nt">&#34;firstName&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon&#34;</span><span class="p">,</span> <span class="nt">&#34;Age&#34;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="nt">&#34;Location&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span> <span class="p">}</span>
-</code></pre></div><h3 id="omitempty">Omitempty <a class="heading-anchor" href="#omitempty" aria-label="Anchor">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span> <span class="nt">&#34;firstName&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon&#34;</span><span class="p">,</span> <span class="nt">&#34;Age&#34;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="nt">&#34;Location&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span> <span class="p">}</span>
+</span></span></code></pre></div><h3 id="omitempty" class="relative group">Omitempty <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#omitempty" aria-label="Anchor">#</a></span></h3>
 <p>We have a special json tag as <code>omitempty</code>. If a field is set as <code>omitempty</code> then it will not encode that field to json if it is empty.</p>
 <p>For example, set <code>Location</code> field as <code>omitempty</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Name</span>     <span class="kt">string</span> <span class="s">`json:&#34;firstName&#34;`</span>
-        <span class="nx">Age</span>      <span class="kt">int64</span>
-        <span class="nx">Location</span> <span class="kt">string</span> <span class="s">`json:&#34;location, omitempty&#34;`</span>
-    <span class="p">}</span>
-
-<span class="nx">person</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span>
-		<span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;Jon&#34;</span><span class="p">,</span>
-		<span class="nx">Age</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
-	<span class="p">}</span>
-</code></pre></div><p><a href="https://play.golang.org/p/29npD-Qv96E">Try it</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Name</span>     <span class="kt">string</span> <span class="s">`json:&#34;firstName&#34;`</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Age</span>      <span class="kt">int64</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Location</span> <span class="kt">string</span> <span class="s">`json:&#34;location, omitempty&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">person</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;Jon&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">Age</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/29npD-Qv96E">Try it</a></p>
 <p>Output</p>
-<pre tabindex="0"><code>{&quot;firstName&quot;:&quot;Jon&quot;,&quot;Age&quot;:27}
+<pre tabindex="0"><code>{&#34;firstName&#34;:&#34;Jon&#34;,&#34;Age&#34;:27}
 </code></pre><hr>
-<h3 id="decode-unmarshal-">Decode (Unmarshal) 👨‍💻 <a class="heading-anchor" href="#decode-unmarshal-" aria-label="Anchor">#</a></h3>
+<h3 id="decode-unmarshal-" class="relative group">Decode (Unmarshal) 👨‍💻 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#decode-unmarshal-" aria-label="Anchor">#</a></span></h3>
 <p>To decode JSON data we use the <a href="https://golang.org/pkg/encoding/json/#Unmarshal">Unmarshal</a> function.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">data</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">v</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">error</span>
-</code></pre></div><p>Unmarshal accepts an array of byte and an interface and returns the error message. This interface is the struct to which the JSON decode.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-    <span class="s">&#34;encoding/json&#34;</span>
-    <span class="s">&#34;fmt&#34;</span>
-    <span class="s">&#34;log&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Name</span>     <span class="kt">string</span>
-        <span class="nx">Age</span>      <span class="kt">int64</span>
-        <span class="nx">Location</span> <span class="kt">string</span>
-    <span class="p">}</span>
-
-    <span class="nx">j</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">`{&#34;name&#34;:&#34;Jon&#34;,&#34;age&#34;:27,&#34;location&#34;:&#34;London&#34;}`</span><span class="p">)</span>
-
-    <span class="kd">var</span> <span class="nx">p</span> <span class="nx">Person</span>
-
-    <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">j</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;Unable to decode the json&#34;</span><span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div><p><a href="https://play.golang.org/p/k25DaMXEQLD">Try it</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">data</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">v</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">error</span>
+</span></span></code></pre></div><p>Unmarshal accepts an array of byte and an interface and returns the error message. This interface is the struct to which the JSON decode.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;encoding/json&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Name</span>     <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Age</span>      <span class="kt">int64</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Location</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">j</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">`{&#34;name&#34;:&#34;Jon&#34;,&#34;age&#34;:27,&#34;location&#34;:&#34;London&#34;}`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">p</span> <span class="nx">Person</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">j</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;Unable to decode the json&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/k25DaMXEQLD">Try it</a></p>
 <p>Output</p>
 <pre tabindex="0"><code>{Jon 27 London}
 </code></pre><blockquote>
@@ -451,14 +498,14 @@ To do this, you can tag the struct field.</p>
 <p>Similar, to encoding you can add json tag to the struct field.
 For example:</p>
 <p>Tag the <code>Name</code> field with <code>json:&quot;firstName&quot;</code>. Now, it will map <code>firstName</code> to the <code>Name</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Name</span>     <span class="kt">string</span> <span class="s">`json:&#34;firstName&#34;`</span>
-        <span class="nx">Age</span>      <span class="kt">int64</span>
-        <span class="nx">Location</span> <span class="kt">string</span>
-    <span class="p">}</span>
-</code></pre></div><p><a href="https://play.golang.org/p/0m7vo90yM8H">Try it</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Name</span>     <span class="kt">string</span> <span class="s">`json:&#34;firstName&#34;`</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Age</span>      <span class="kt">int64</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Location</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/0m7vo90yM8H">Try it</a></p>
 <hr>
-<h2 id="decoding-the-arbitrary-json-">Decoding the arbitrary JSON 👨‍💻 <a class="heading-anchor" href="#decoding-the-arbitrary-json-" aria-label="Anchor">#</a></h2>
+<h2 id="decoding-the-arbitrary-json-" class="relative group">Decoding the arbitrary JSON 👨‍💻 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#decoding-the-arbitrary-json-" aria-label="Anchor">#</a></span></h2>
 <p>In the above examples, we knew the JSON structure and we mapped it to the struct.</p>
 <p><strong>What if you don&rsquo;t know the JSON structure?</strong> 🤔</p>
 <p>In the json all the keys must be <code>string</code>. It means we can use the <code>map</code> type for arbitrary data.</p>
@@ -476,82 +523,82 @@ For example:</p>
 <li>nil for JSON null.</li>
 </ul>
 <p>Consider the JSON object as</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;location&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;country&#34;</span><span class="p">:</span> <span class="s2">&#34;England&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;city&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span>
-  <span class="p">},</span>
-  <span class="nt">&#34;hobbies&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;photography&#34;</span><span class="p">,</span> <span class="s2">&#34;writing&#34;</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><p>The <code>Unmarshal</code> function will parse it into a map whose keys are string and values are empty interface.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
-    <span class="s">&#34;Name&#34;</span><span class="p">:</span> <span class="s">&#34;Jon&#34;</span><span class="p">,</span>
-    <span class="s">&#34;Location&#34;</span><span class="p">:</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
-        <span class="s">&#34;Country&#34;</span><span class="p">:</span> <span class="s">&#34;England&#34;</span><span class="p">,</span>
-        <span class="s">&#34;City&#34;</span><span class="p">:</span> <span class="s">&#34;London&#34;</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s">&#34;Hobbies&#34;</span><span class="p">:</span> <span class="p">[]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
-        <span class="s">&#34;photography&#34;</span><span class="p">,</span>
-        <span class="s">&#34;writing&#34;</span><span class="p">,</span>
-    <span class="p">},</span>
-<span class="p">}</span>
-</code></pre></div><p>All the values are of type <code>interface{}</code>. To access the underlying type of interface, we have to use <strong>type assertion</strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;location&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;country&#34;</span><span class="p">:</span> <span class="s2">&#34;England&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;city&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;hobbies&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;photography&#34;</span><span class="p">,</span> <span class="s2">&#34;writing&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The <code>Unmarshal</code> function will parse it into a map whose keys are string and values are empty interface.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Name&#34;</span><span class="p">:</span> <span class="s">&#34;Jon&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Location&#34;</span><span class="p">:</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Country&#34;</span><span class="p">:</span> <span class="s">&#34;England&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;City&#34;</span><span class="p">:</span> <span class="s">&#34;London&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Hobbies&#34;</span><span class="p">:</span> <span class="p">[]</span><span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;photography&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;writing&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>All the values are of type <code>interface{}</code>. To access the underlying type of interface, we have to use <strong>type assertion</strong>.</p>
 <p>For example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">name</span> <span class="kd">interface</span><span class="p">{}</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s">&#34;Jon&#34;</span>
-
-<span class="nx">result</span> <span class="o">:=</span> <span class="nx">name</span><span class="p">.(</span><span class="kt">string</span><span class="p">)</span>
-<span class="nx">fmt</span><span class="p">.</span><span class="nf">PrintF</span><span class="p">(</span><span class="s">&#34;Type is %T, value is %s&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">,</span> <span class="nx">result</span><span class="err">&#34;</span><span class="p">)</span>
-</code></pre></div><p><a href="https://play.golang.org/p/Vd6zPbtj_9T">Try it</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-    <span class="s">&#34;encoding/json&#34;</span>
-    <span class="s">&#34;fmt&#34;</span>
-    <span class="s">&#34;log&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-
-    <span class="nx">jsonObj</span> <span class="o">:=</span> <span class="s">`{
-</span><span class="s">                &#34;name&#34;: &#34;Jon&#34;,
-</span><span class="s">            &#34;age&#34; : 27,
-</span><span class="s">                &#34;location&#34;: {
-</span><span class="s">                        &#34;country&#34;: &#34;England&#34;,
-</span><span class="s">                  &#34;city&#34;: &#34;London&#34;
-</span><span class="s">                },
-</span><span class="s">               &#34;hobbies&#34;: [ &#34;photography&#34;, &#34;writing&#34;]
-</span><span class="s">        }`</span>
-
-    <span class="kd">var</span> <span class="nx">person</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span>
-
-    <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">jsonObj</span><span class="p">),</span> <span class="o">&amp;</span><span class="nx">person</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;Unable to encode&#34;</span><span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">person</span> <span class="p">{</span>
-        <span class="k">switch</span> <span class="nx">v</span> <span class="o">:=</span> <span class="nx">v</span><span class="p">.(</span><span class="kd">type</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="kt">string</span><span class="p">:</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
-        <span class="k">case</span> <span class="kt">float64</span><span class="p">:</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
-        <span class="k">case</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}:</span>
-            <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">ival</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">v</span> <span class="p">{</span>
-                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">ival</span><span class="p">)</span>
-            <span class="p">}</span>
-        <span class="k">case</span> <span class="p">[]</span><span class="kd">interface</span><span class="p">{}:</span>
-            <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">ival</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">v</span> <span class="p">{</span>
-                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">ival</span><span class="p">)</span>
-            <span class="p">}</span>
-        <span class="k">default</span><span class="p">:</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p><a href="https://play.golang.org/p/eadXK7Kstkw">Try it</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">name</span> <span class="kd">interface</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s">&#34;Jon&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">result</span> <span class="o">:=</span> <span class="nx">name</span><span class="p">.(</span><span class="kt">string</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">PrintF</span><span class="p">(</span><span class="s">&#34;Type is %T, value is %s&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">,</span> <span class="nx">result</span><span class="err">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/Vd6zPbtj_9T">Try it</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;encoding/json&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">jsonObj</span> <span class="o">:=</span> <span class="s">`{
+</span></span></span><span class="line"><span class="cl"><span class="s">                &#34;name&#34;: &#34;Jon&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s">            &#34;age&#34; : 27,
+</span></span></span><span class="line"><span class="cl"><span class="s">                &#34;location&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="s">                        &#34;country&#34;: &#34;England&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s">                  &#34;city&#34;: &#34;London&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">                },
+</span></span></span><span class="line"><span class="cl"><span class="s">               &#34;hobbies&#34;: [ &#34;photography&#34;, &#34;writing&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="s">        }`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">person</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">jsonObj</span><span class="p">),</span> <span class="o">&amp;</span><span class="nx">person</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;Unable to encode&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">person</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span> <span class="nx">v</span> <span class="o">:=</span> <span class="nx">v</span><span class="p">.(</span><span class="kd">type</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="kt">string</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="kt">float64</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">ival</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">v</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">ival</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="p">[]</span><span class="kd">interface</span><span class="p">{}:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">ival</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">v</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">ival</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/eadXK7Kstkw">Try it</a></p>
 <p>Output</p>
 <pre tabindex="0"><code>country England
 city London
@@ -563,83 +610,79 @@ age 27
 <p>Map is not indexed, so the order will always be different.</p>
 </blockquote>
 <hr>
-<h2 id="streaming-encoders-and-decoders">Streaming Encoders and Decoders <a class="heading-anchor" href="#streaming-encoders-and-decoders" aria-label="Anchor">#</a></h2>
+<h2 id="streaming-encoders-and-decoders" class="relative group">Streaming Encoders and Decoders <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#streaming-encoders-and-decoders" aria-label="Anchor">#</a></span></h2>
 <p>The <code>encoding/json</code> provides <code>Decoder</code> and <code>Encoder</code> types to support the common operation of reading and writing streams of JSON data.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">NewDecoder</span><span class="p">(</span><span class="nx">r</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Reader</span><span class="p">)</span> <span class="o">*</span><span class="nx">Decoder</span>
-<span class="kd">func</span> <span class="nf">NewEncoder</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">)</span> <span class="o">*</span><span class="nx">Encoder</span>
-</code></pre></div><p>In the below example,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">NewDecoder</span><span class="p">(</span><span class="nx">r</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Reader</span><span class="p">)</span> <span class="o">*</span><span class="nx">Decoder</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">NewEncoder</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">)</span> <span class="o">*</span><span class="nx">Encoder</span>
+</span></span></code></pre></div><p>In the below example,</p>
 <ul>
 <li>It will read the stream of JSON data from an <code>io.Reader</code></li>
 <li>removes the <code>Age</code> field from each object</li>
 <li>writes the objects to an <code>io.Writer</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-	<span class="s">&#34;encoding/json&#34;</span>
-	<span class="s">&#34;log&#34;</span>
-	<span class="s">&#34;os&#34;</span>
-	<span class="s">&#34;strings&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-
-	<span class="nx">jsonStream</span> <span class="o">:=</span> <span class="s">`{&#34;Name&#34;:&#34;Jon&#34;, &#34;Age&#34;:27, &#34;Location&#34;: &#34;London&#34;}
-</span><span class="s">		{&#34;Name&#34;:&#34;Bruce&#34;, &#34;Age&#34;:35, &#34;Location&#34;: &#34;Gotham&#34;}`</span>
-
-	<span class="nx">reader</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">jsonStream</span><span class="p">)</span>
-	<span class="nx">writer</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span>
-
-	<span class="nx">dec</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewDecoder</span><span class="p">(</span><span class="nx">reader</span><span class="p">)</span>
-	<span class="nx">enc</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewEncoder</span><span class="p">(</span><span class="nx">writer</span><span class="p">)</span>
-
-	<span class="k">for</span> <span class="p">{</span>
-		<span class="kd">var</span> <span class="nx">v</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span>
-		<span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">dec</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">v</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-			<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-			<span class="k">return</span>
-		<span class="p">}</span>
-		<span class="k">for</span> <span class="nx">k</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">v</span> <span class="p">{</span>
-			<span class="k">if</span> <span class="nx">k</span> <span class="o">==</span> <span class="s">&#34;Age&#34;</span> <span class="p">{</span>
-				<span class="nb">delete</span><span class="p">(</span><span class="nx">v</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-		<span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">enc</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">v</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-			<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p><a href="https://play.golang.org/p/N9kuKqybSox">Try it</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;encoding/json&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;os&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;strings&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">jsonStream</span> <span class="o">:=</span> <span class="s">`{&#34;Name&#34;:&#34;Jon&#34;, &#34;Age&#34;:27, &#34;Location&#34;: &#34;London&#34;}
+</span></span></span><span class="line"><span class="cl"><span class="s">		{&#34;Name&#34;:&#34;Bruce&#34;, &#34;Age&#34;:35, &#34;Location&#34;: &#34;Gotham&#34;}`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">reader</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">jsonStream</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">writer</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">dec</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewDecoder</span><span class="p">(</span><span class="nx">reader</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">enc</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewEncoder</span><span class="p">(</span><span class="nx">writer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">var</span> <span class="nx">v</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">dec</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">v</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="nx">k</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">v</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="nx">k</span> <span class="o">==</span> <span class="s">&#34;Age&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nb">delete</span><span class="p">(</span><span class="nx">v</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">enc</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">v</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://play.golang.org/p/N9kuKqybSox">Try it</a></p>
 <p>Output</p>
-<pre tabindex="0"><code>{&quot;Location&quot;:&quot;London&quot;,&quot;Name&quot;:&quot;Jon&quot;}
-{&quot;Location&quot;:&quot;Gotham&quot;,&quot;Name&quot;:&quot;Bruce&quot;}
+<pre tabindex="0"><code>{&#34;Location&#34;:&#34;London&#34;,&#34;Name&#34;:&#34;Jon&#34;}
+{&#34;Location&#34;:&#34;Gotham&#34;,&#34;Name&#34;:&#34;Bruce&#34;}
 2009/11/10 23:00:00 EOF
-</code></pre><h4 id="code-walkthrough">Code Walkthrough <a class="heading-anchor" href="#code-walkthrough" aria-label="Anchor">#</a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">reader</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">jsonStream</span><span class="p">)</span>
-</code></pre></div><p>Create a type of <code>io.Reader</code> using the <a href="https://golang.org/pkg/strings/#NewReader">strings</a> package.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">dec</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewDecoder</span><span class="p">(</span><span class="nx">reader</span><span class="p">)</span>
-<span class="nx">enc</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewEncoder</span><span class="p">(</span><span class="nx">writer</span><span class="p">)</span>
-</code></pre></div><p>Create a new decoder which reads the data from the <code>reader</code>.
+</code></pre><h4 id="code-walkthrough" class="relative group">Code Walkthrough <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#code-walkthrough" aria-label="Anchor">#</a></span></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">reader</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">jsonStream</span><span class="p">)</span>
+</span></span></code></pre></div><p>Create a type of <code>io.Reader</code> using the <a href="https://golang.org/pkg/strings/#NewReader">strings</a> package.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">dec</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewDecoder</span><span class="p">(</span><span class="nx">reader</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">enc</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewEncoder</span><span class="p">(</span><span class="nx">writer</span><span class="p">)</span>
+</span></span></code></pre></div><p>Create a new decoder which reads the data from the <code>reader</code>.
 Create a new encoder which writes the data to the <code>writer</code>.</p>
 <p>Rest of the code is self-explanatory.
 Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
 <hr>
-<h2 id="conclusion">Conclusion <a class="heading-anchor" href="#conclusion" aria-label="Anchor">#</a></h2>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2>
 <p>In this tutorial, we explored the <code>json</code> package. There are many other amazing functions provided by the <code>encoding/json</code>. Like <code>MarshalIndent</code>, it will indent the encoded <code>json</code>. Please check out the official website to <a href="https://golang.org/pkg/encoding/json/">learn more</a>.</p>
 <hr>
 
+      </div>
     </section>
-    <footer class="pt-8">
+    <footer class="pt-8 max-w-prose print:hidden">
       
   <div class="flex">
     
-      <img
-        class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full"
-        width="96"
-        height="96"
-        alt="Author"
-        src="/images/pic.png"
-      />
+      
+      
     
     <div class="place-self-center">
       
@@ -666,7 +709,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at" class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
   </span>
 
 </a
@@ -683,7 +727,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+
   </span>
 
 </a
@@ -700,7 +745,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
   </span>
 
 </a
@@ -717,7 +763,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
   </span>
 
 </a
@@ -727,14 +774,15 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
       
         <a
           class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
-          href="https://medium.com/schadokar"
+          href="https://medium.com/@schadokar"
           target="_blank"
           aria-label="Medium"
           rel="me noopener noreferrer"
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="medium" class="svg-inline--fa fa-medium fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+
   </span>
 
 </a
@@ -761,7 +809,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+
   </span>
 
 </a
@@ -777,7 +826,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+
   </span>
 
 </a
@@ -793,7 +843,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest" class="svg-inline--fa fa-pinterest fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"/></svg>
+
   </span>
 
 </a
@@ -809,7 +860,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="reddit" class="svg-inline--fa fa-reddit fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+
   </span>
 
 </a
@@ -825,7 +877,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
   </span>
 
 </a
@@ -841,7 +894,8 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
           >
 
   <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at" class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
   </span>
 
 </a
@@ -853,21 +907,31 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
 
       
   
-    <div class="pt-8 article-pagination">
+    
+    
+    
+    <div class="pt-8">
       <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex" href="/posts/how-to-send-email-in-golang/">
-              <span class="mr-3 article-pagination-direction">&larr;</span>
+            <a class="flex group" href="/posts/understand-quicksort-the-easy-way/">
+              <span
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
               <span class="flex flex-col">
-                <span class="article-pagination-title mt-[0.1rem] leading-6"
-                  >How to Send Email in Golang</span
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Understand Quicksort the easy way</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2020-06-11 11:07:11 &#43;0530 IST">11 June 2020</time>
-
+                    <time datetime="2020-02-13 23:25:31 &#43;0530 IST">February 13, 2020</time>
                   
                 </span>
               </span>
@@ -876,19 +940,26 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
         </span>
         <span>
           
-            <a class="flex text-right" href="/posts/understand-quicksort-the-easy-way/">
+            <a class="flex text-right group" href="/posts/how-to-send-email-in-golang/">
               <span class="flex flex-col">
-                <span class="article-pagination-title mt-[0.1rem] leading-6"
-                  >Understand Quicksort the easy way</span
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >How to Send Email in Golang</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2020-02-13 23:25:31 &#43;0530 IST">13 February 2020</time>
-
+                    <time datetime="2020-06-11 11:07:11 &#43;0530 IST">June 11, 2020</time>
                   
                 </span>
               </span>
-              <span class="ml-3 article-pagination-direction">&rarr;</span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
             </a>
           
         </span>
@@ -900,15 +971,32 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
     </footer>
     
   </article>
-</main><footer class="py-10">
+
+        
+          <div
+            class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+          >
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
   
   
     <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
       <ul class="flex flex-col list-none sm:flex-row">
         
-          <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href=""
               title=""
               >Archive</a
@@ -922,15 +1010,17 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
     <div>
       
       <p class="text-sm text-neutral-500 dark:text-neutral-400">
-          © <a href="https://schadokar.dev">Shubham Chadokar</a> 2021
+          &copy;
+          2022
+          Shubham Chadokar
       </p>
       
       
-        <p class="text-xs text-neutral-400 dark:text-neutral-600">
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
           
           
-          Powered by <a class="hover:underline hover:underline-primary-400 hover:text-primary-500"
-            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:underline-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
         </p>
       
     </div>
@@ -940,5 +1030,7 @@ Decode the arbitrary json in <code>map[string]interface{}</code>.</p>
   
   
 </footer>
-</body>
+
+    </div>
+  </body>
 </html>

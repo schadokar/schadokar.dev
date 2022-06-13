@@ -25,6 +25,7 @@ mainSections = ["posts", "projects"]
   showBreadcrumbs = false
   showDraftLabel = true
   showEdit = false
+  showTableOfContents=true
   # editURL = "https://github.com/username/repo/"
   editAppendPath = true
   showHeadingAnchors = true

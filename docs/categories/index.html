@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
 ><head>
   <meta charset="utf-8" />
   
@@ -23,42 +26,24 @@
   
   
   
+  
+  
+  
+  
+  
+  
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css"
-    integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK&#43;uxc8yk2csLelasbP&#43;FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA=="
+    href="/css/main.bundle.min.ef7a9fdb75ef30487639fd3b23143121e9ef038e1cd587f82d423be6ba9f4f4b54230400783b957d9ac291184d75cc3dabfe031cdd8e68e15a38b1f003e5cbf5.css"
+    integrity="sha512-73qf23XvMEh2Of07IxQxIenvA44c1Yf4LUI75rqfT0tUIwQAeDuVfZrCkRhNdcw9q/4DHN2OaOFaOLHwA&#43;XL9Q=="
   />
   
   
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="/css/compiled/main.min.810ea9a5336b89bef8a72ead10f90e489f72a2716ada0c121c5aba8c499f32956b0eee84e7422826b4718c639027fb12d1a22fda7a7d4182de72da92d898f4b7.css"
-    integrity="sha512-gQ6ppTNrib74py6tEPkOSJ9yonFq2gwSHFq6jEmfMpVrDu6E50IoJrRxjGOQJ/sS0aIv2np9QYLectqS2Jj0tw=="
-  />
+  <script type="text/javascript" src="/js/appearance.min.12e98742cd283574d030a7fe55f29597df4ee214f7ff7075b4d19a64d046a602753c715295550be7899b661619cec89c679049d36c624681671a8013c1249896.js" integrity="sha512-EumHQs0oNXTQMKf&#43;VfKVl99O4hT3/3B1tNGaZNBGpgJ1PHFSlVUL54mbZhYZzsicZ5BJ02xiRoFnGoATwSSYlg=="></script>
   
   
   
-    <script>
-      function loadPreferredAppearance() {
-        if (localStorage.preferredAppearance === "dark" || (!("preferredAppearance" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
-      }
-      function setPreferredAppearance(scheme) {
-        if (scheme == "default") {
-          localStorage.removeItem("preferredAppearance");
-        } else {
-          localStorage.preferredAppearance = scheme;
-        }
-        loadPreferredAppearance();
-      }
-      loadPreferredAppearance();
-      window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance);
-    </script>
   
   
   
@@ -87,10 +72,6 @@
   
 
   
-  
-    <meta name="generator" content="Hugo 0.91.2" />
-  
-  
   <meta name="author" content="Shubham Chadokar" />
   
     
@@ -102,7 +83,7 @@
     
       <link href="https://linkedin.com/in/schadokar" rel="me" />
     
-      <link href="https://medium.com/schadokar" rel="me" />
+      <link href="https://medium.com/@schadokar" rel="me" />
     
   
   
@@ -136,76 +117,92 @@ if (!doNotTrack) {
 </head>
 <body
     class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
-  ><header
-  class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-900 dark:text-neutral"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        href="#main-content"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
+          >&darr;</span
+        >Skip to main content</a
+      >
+    </div><header
+  class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-900 dark:text-neutral print:hidden"
 >
   
   <div>
     
       <a
-        class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+        class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
         rel="me"
         href="/"
         >schadokar.dev</a
       >
+    
+
   </div>
   
   
     <nav>
       <ul class="flex flex-col list-none sm:flex-row">
         
-          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="/posts/"
               title="Posts"
               >Blog</a
             >
           </li>
         
-          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="/to-the-point/"
               title="To-the-points"
               >To The Point</a
             >
           </li>
         
-          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="/about/"
               title="About Me"
               >About Me</a
             >
           </li>
         
+        
       </ul>
     </nav>
   
 </header>
-<main class="flex-grow">
+<div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
   <header>
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Categories</h1>
+  </header>
   
-  <section class="prose dark:prose-light">
-    <h1 class="mb-3 text-4xl font-extrabold text-neutral-800">Categories</h1>
-    <section></section>
-  </section>
-</header>
-
   <section class="flex flex-wrap -mx-2 overflow-hidden">
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/2020/"
             >2020</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               17
             </span>
           
@@ -213,15 +210,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/2021/"
             >2021</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               16
             </span>
           
@@ -229,15 +226,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/algorithm/"
             >Algorithm</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               1
             </span>
           
@@ -245,15 +242,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/article/"
             >Article</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               1
             </span>
           
@@ -261,15 +258,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/casual/"
             >Casual</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               1
             </span>
           
@@ -277,15 +274,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/cloud/"
             >Cloud</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               5
             </span>
           
@@ -293,15 +290,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/gcp/"
             >GCP</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               2
             </span>
           
@@ -309,15 +306,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/golang/"
             >Golang</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               15
             </span>
           
@@ -325,15 +322,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/html/"
             >HTML</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               1
             </span>
           
@@ -341,15 +338,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/hugo/"
             >Hugo</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               1
             </span>
           
@@ -357,15 +354,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/javascript/"
             >Javascript</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               9
             </span>
           
@@ -373,15 +370,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/js/"
             >JS</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               1
             </span>
           
@@ -389,15 +386,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/nodejs/"
             >Nodejs</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               4
             </span>
           
@@ -405,15 +402,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/serverless/"
             >Serverless</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               2
             </span>
           
@@ -421,15 +418,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/to-the-point/"
             >to-the-point</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               27
             </span>
           
@@ -437,15 +434,15 @@ if (!doNotTrack) {
       </article>
     
       <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <h2>
+        <h2 class="flex items-center">
           <a
-            class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
+            class="text-xl font-medium hover:underline decoration-primary-500 hover:underline-offset-2"
             href="/categories/tutorial/"
             >Tutorial</a
           >
           
+            <span class="px-2 text-base text-primary-500">&middot;</span>
             <span class="text-base text-neutral-400">
-              <span class="px-1 text-primary-500">&middot;</span>
               16
             </span>
           
@@ -453,15 +450,19 @@ if (!doNotTrack) {
       </article>
     
   </section>
-</main><footer class="py-10">
+
+        
+      </main><footer class="py-10 print:hidden">
   
   
     <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
       <ul class="flex flex-col list-none sm:flex-row">
         
-          <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href=""
               title=""
               >Archive</a
@@ -475,15 +476,17 @@ if (!doNotTrack) {
     <div>
       
       <p class="text-sm text-neutral-500 dark:text-neutral-400">
-          © <a href="https://schadokar.dev">Shubham Chadokar</a> 2021
+          &copy;
+          2022
+          Shubham Chadokar
       </p>
       
       
-        <p class="text-xs text-neutral-400 dark:text-neutral-600">
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
           
           
-          Powered by <a class="hover:underline hover:underline-primary-400 hover:text-primary-500"
-            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:underline-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
         </p>
       
     </div>
@@ -493,5 +496,7 @@ if (!doNotTrack) {
   
   
 </footer>
-</body>
+
+    </div>
+  </body>
 </html>

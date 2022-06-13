@@ -405,15 +405,6 @@
     </item>
     
     <item>
-      <title>About Me</title>
-      <link>https://schadokar.dev/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://schadokar.dev/about/</guid>
-      <description>Hi there, I am Shubham Kumar Chadokar, I am a Software Engineer 👓.</description>
-    </item>
-    
-    <item>
       <title>📮 Contact</title>
       <link>https://schadokar.dev/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -429,6 +420,15 @@
       
       <guid>https://schadokar.dev/newsletter/</guid>
       <description>Subscribe to the newsletter to get the latest articles, tutorials and curated list of articles right into your inbox.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://schadokar.dev/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://schadokar.dev/about/</guid>
+      <description>Hi there, I am Shubham Kumar Chadokar, I am a Software Engineer 👓.</description>
     </item>
     
   </channel>

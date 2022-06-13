@@ -441,12 +441,6 @@
   
     
       <url>
-            <loc>https://schadokar.dev/about/</loc>
-          </url>
-    
-  
-    
-      <url>
             <loc>https://schadokar.dev/contact/</loc>
           </url>
     
@@ -454,6 +448,12 @@
     
       <url>
             <loc>https://schadokar.dev/newsletter/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://schadokar.dev/about/</loc>
           </url>
     
   

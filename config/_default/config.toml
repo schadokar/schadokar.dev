@@ -32,7 +32,7 @@ googleAnalytics = "UA-158088106-1"
     { twitter = "https://twitter.com/schadokar1" },
     { github = "https://github.com/schadokar" },
     { linkedin = "https://linkedin.com/in/schadokar" },
-    { medium = "https://medium.com/schadokar" },
+    { medium = "https://medium.com/@schadokar" },
   ]
 
   #   { link = "https://link-to-some-website.com/" },
