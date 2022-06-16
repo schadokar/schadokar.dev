@@ -30,12 +30,14 @@
   
   
   
+    
+  
   
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.ef7a9fdb75ef30487639fd3b23143121e9ef038e1cd587f82d423be6ba9f4f4b54230400783b957d9ac291184d75cc3dabfe031cdd8e68e15a38b1f003e5cbf5.css"
-    integrity="sha512-73qf23XvMEh2Of07IxQxIenvA44c1Yf4LUI75rqfT0tUIwQAeDuVfZrCkRhNdcw9q/4DHN2OaOFaOLHwA&#43;XL9Q=="
+    href="/css/main.bundle.min.a33dee489ac952147738e79eb6e986d06025649922d685bec01691e0bec336642fb937e544342c7ff6d58894162954251e7629757ad0049afc63f5ecfb820903.css"
+    integrity="sha512-oz3uSJrJUhR3OOeetumG0GAlZJki1oW&#43;wBaR4L7DNmQvuTflRDQsf/bViJQWKVQlHnYpdXrQBJr8Y/Xs&#43;4IJAw=="
   />
   
   
@@ -207,6 +209,17 @@ if (!doNotTrack) {
             >
           </li>
         
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
+            <a
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+              href="https://schadokar.substack.com"
+              title=""
+              >Newsletter</a
+            >
+          </li>
+        
         
       </ul>
     </nav>
@@ -283,24 +296,36 @@ if (!doNotTrack) {
   <ul>
     <li>
       <ul>
-        <li><a href="#what-is-data-exchange">What is Data Exchange?</a></li>
-        <li><a href="#what-is-json">What is JSON?</a></li>
+        <li>
+          <ul>
+            <li><a href="#what-is-data-exchange">What is Data Exchange?</a></li>
+            <li><a href="#what-is-json">What is JSON?</a></li>
+          </ul>
+        </li>
+        <li><a href="#parse-json-in-golang-">Parse JSON in Golang ⚙️</a>
+          <ul>
+            <li><a href="#encode-marshal-">Encode (Marshal) 👨‍💻</a>
+              <ul>
+                <li><a href="#to-map-the-struct-field-to-the-json-tag">To map the struct field to the <code>json</code> tag.</a></li>
+              </ul>
+            </li>
+            <li><a href="#omitempty">Omitempty</a></li>
+            <li><a href="#decode-unmarshal-">Decode (Unmarshal) 👨‍💻</a></li>
+          </ul>
+        </li>
+        <li><a href="#decoding-the-arbitrary-json-">Decoding the arbitrary JSON 👨‍💻</a></li>
+        <li><a href="#streaming-encoders-and-decoders">Streaming Encoders and Decoders</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#code-walkthrough">Code Walkthrough</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#conclusion">Conclusion</a></li>
       </ul>
     </li>
-    <li><a href="#parse-json-in-golang-">Parse JSON in Golang ⚙️</a>
-      <ul>
-        <li><a href="#encode-marshal-">Encode (Marshal) 👨‍💻</a></li>
-        <li><a href="#omitempty">Omitempty</a></li>
-        <li><a href="#decode-unmarshal-">Decode (Unmarshal) 👨‍💻</a></li>
-      </ul>
-    </li>
-    <li><a href="#decoding-the-arbitrary-json-">Decoding the arbitrary JSON 👨‍💻</a></li>
-    <li><a href="#streaming-encoders-and-decoders">Streaming Encoders and Decoders</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
   </div>

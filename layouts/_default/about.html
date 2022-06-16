@@ -7,10 +7,13 @@
     </header>
   </br>
   </br>
-    <section class="prose dark:prose-light">
+    <section class="prose dark:prose-invert">
       {{ .Content | emojify }}
     </section>
-    <footer class="pt-8">
+    <section>
+      <iframe src="https://schadokar.substack.com/embed" width="700" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
       {{ partial "author.html" . }}
     </footer>
   </article>
