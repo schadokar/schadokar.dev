@@ -16,7 +16,7 @@ mainSections = ["posts", "projects"]
 [homepage]
   layout = "custom" # valid options: page, profile, custom
   showRecent = true
-  recent = 10
+  recent = 5
 
 [article]
   showDate = true
