@@ -22,10 +22,11 @@ In this tutorial, we will send an email using the `main.go` file.
 
 1. go v1.11 or greater - I am using go1.14.3
 2. Code Editor (VSCode, Atom) - I am using VS Code
-3. Sendinblue account - [link](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
+3. Brevo (formerly Sendinblue) account - [link](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
-> Check out this step by step tutorial [Create an account in sendinblue](https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/).
+> Check out this step by step tutorial [Create an account in Brevo (formerly Sendinblue)](https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/).
 
+> 
 # Getting Started
 
 Create a new directory `go-sendinblue`.
@@ -52,7 +53,7 @@ Learn more about [how to use environment variables in the golang](https://schado
 
 ## Create a new SMTP Key
 
-Sign in to your Sendinblue account and click on SMTP & API from the top-right menu.
+Sign in to your Brevo (formerly Sendinblue) account and click on SMTP & API from the top-right menu.
 
 Go to **SMTP** tab and click on _CREATE A NEW SMTP KEY_.  
 Copy the key and paste it somewhere safe.
@@ -107,7 +108,7 @@ func main() {
         "From: hello@schadokar.dev\r\n" +
         "Subject: Hello Gophers!\r\n" +
         "\r\n" +
-        "This is the email is sent using golang and sendinblue.\r\n")
+        "This is the email is sent using golang and Brevo (formerly Sendinblue).\r\n")
 
     // Call the sendEmail function
     status := sendEmail(from, to, msg)
@@ -152,11 +153,11 @@ func sendEmail(from string, to []string, msg []byte) bool {
 Let's understand the code piece by piece.
 
 In the `main` function we're first declaring the **from**, **to**, and **msg**.  
-**from** is the address from which you created the sendinblue account.
+**from** is the address from which you created the Brevo (formerly Sendinblue).
 **to** is an array of string.  
 **msg** is an array of bytes.
 
-> ⚠️ You must define the **From** field in the msg. It is not mentioned in the smtp package documentation. Maybe it is only required for sendinblue. I have not tested with other mail service providers.
+> ⚠️ You must define the **From** field in the msg. It is not mentioned in the smtp package documentation. Maybe it is only required for Brevo (formerly Sendinblue). I have not tested with other mail service providers.
 
 In the `sendEmail` function, it is taking **from**, **to**, and **msg** as arguments and returning a `bool` status.
 
@@ -203,7 +204,7 @@ Check your mailbox. You have received a mail. If you could not find the mail che
 The `smtp` package does not provide enough information of delivery of the mail. It only confirms if mail sent to server or not.
 
 From server side, there can be many reasons if it is delivered or not. To check if sent successfully or not.  
-Open the sendinblue account and click on the **Transactional** tab.
+Open the Brevo (formerly Sendinblue) account and click on the **Transactional** tab.
 
 In this tab, you can check the status of the mail.
 The common reason can be an incorrect mail address. For this it raise a **Hard bounce** event.

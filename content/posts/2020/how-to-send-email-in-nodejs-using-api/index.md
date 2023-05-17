@@ -22,7 +22,7 @@ In this section, we will use the Expressjs and expose the functionality as an AP
 
 - Node.js (>v6.0.0 for nodemailer module)
 - Code Editor (For Ex. VS Code, Atom)
-- An account in [Sendinblue](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
+- An account in [Sendinblue](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
 > Check out this step by step tutorial to [Create an account in sendinblue](https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/).
 

@@ -23,7 +23,7 @@ There are only 3 easy steps to create an account in Sendinblue.
 
 Click on the below **Get started** link. It will redirect you to the signup page.  
 
-[![Sendinblue](./images/sendinblue-getstarted.png)](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
+[![Sendinblue](./images/sendinblue-getstarted.png)](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
 ![sendinblue-landing-page](./images/sendinblue-signup-1.PNG)
 
@@ -51,6 +51,6 @@ Once the sign up process, your dashboard will look similar to this.
 
 # Next Steps
 
-Now, you have a sendinblue account. Try these tutorials to send an email using Golang or Nodejs. [Tutorials](https://schadokar.dev/tags/sendinblue/)
+Now, you have a Brevo (formerly Sendinblue). Try these tutorials to send an email using Golang or Nodejs. [Tutorials](https://schadokar.dev/tags/sendinblue/)
 
 ---

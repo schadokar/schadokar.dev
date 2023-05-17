@@ -41,7 +41,7 @@
   />
   
   
-  <script type="text/javascript" src="/js/appearance.min.12e98742cd283574d030a7fe55f29597df4ee214f7ff7075b4d19a64d046a602753c715295550be7899b661619cec89c679049d36c624681671a8013c1249896.js" integrity="sha512-EumHQs0oNXTQMKf&#43;VfKVl99O4hT3/3B1tNGaZNBGpgJ1PHFSlVUL54mbZhYZzsicZ5BJ02xiRoFnGoATwSSYlg=="></script>
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
   
   
   
@@ -65,7 +65,6 @@
 <meta property="og:url" content="https://schadokar.dev/posts/how-to-send-email-in-golang/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-06-11T11:07:11+05:30" />
 <meta property="article:modified_time" content="2020-06-11T11:07:11+05:30" />
-
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Send Email in Golang"/>
@@ -96,7 +95,7 @@
     "keywords": ["golang","sendemail","sendinblue"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1011"
+    "wordCount": "1024"
   }]
   </script>
 
@@ -330,10 +329,12 @@ We&rsquo;ll first start with the basic sending an email using the <code>go</code
 <ol>
 <li>go v1.11 or greater - I am using go1.14.3</li>
 <li>Code Editor (VSCode, Atom) - I am using VS Code</li>
-<li>Sendinblue account - <a href="https://www.sendinblue.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc">link</a></li>
+<li>Brevo (formerly Sendinblue) account - <a href="https://www.brevo.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc">link</a></li>
 </ol>
 <blockquote>
-<p>Check out this step by step tutorial <a href="https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/">Create an account in sendinblue</a>.</p>
+<p>Check out this step by step tutorial <a href="https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/">Create an account in Brevo (formerly Sendinblue)</a>.</p>
+</blockquote>
+<blockquote>
 </blockquote>
 <h1 id="getting-started" class="relative group">Getting Started <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#getting-started" aria-label="Anchor">#</a></span></h1>
 <p>Create a new directory <code>go-sendinblue</code>.</p>
@@ -347,7 +348,7 @@ A module is a collection of dependency modules used in the project. This will li
 </span></span></code></pre></div><p>This package is simple and clean.<br>
 Learn more about <a href="https://schadokar.dev/posts/use-environment-variable-in-your-next-golang-project/">how to use environment variables in the golang</a>.</p>
 <h2 id="create-a-new-smtp-key" class="relative group">Create a new SMTP Key <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#create-a-new-smtp-key" aria-label="Anchor">#</a></span></h2>
-<p>Sign in to your Sendinblue account and click on SMTP &amp; API from the top-right menu.</p>
+<p>Sign in to your Brevo (formerly Sendinblue) account and click on SMTP &amp; API from the top-right menu.</p>
 <p>Go to <strong>SMTP</strong> tab and click on <em>CREATE A NEW SMTP KEY</em>.<br>
 Copy the key and paste it somewhere safe.</p>
 <blockquote>
@@ -394,7 +395,7 @@ We are going to use <code>smtp</code> package provided by golang.</p>
 </span></span><span class="line"><span class="cl">        <span class="s">&#34;From: hello@schadokar.dev\r\n&#34;</span> <span class="o">+</span>
 </span></span><span class="line"><span class="cl">        <span class="s">&#34;Subject: Hello Gophers!\r\n&#34;</span> <span class="o">+</span>
 </span></span><span class="line"><span class="cl">        <span class="s">&#34;\r\n&#34;</span> <span class="o">+</span>
-</span></span><span class="line"><span class="cl">        <span class="s">&#34;This is the email is sent using golang and sendinblue.\r\n&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;This is the email is sent using golang and Brevo (formerly Sendinblue).\r\n&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// Call the sendEmail function
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">status</span> <span class="o">:=</span> <span class="nf">sendEmail</span><span class="p">(</span><span class="nx">from</span><span class="p">,</span> <span class="nx">to</span><span class="p">,</span> <span class="nx">msg</span><span class="p">)</span>
@@ -436,11 +437,11 @@ We are going to use <code>smtp</code> package provided by golang.</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Let&rsquo;s understand the code piece by piece.</p>
 <p>In the <code>main</code> function we&rsquo;re first declaring the <strong>from</strong>, <strong>to</strong>, and <strong>msg</strong>.<br>
-<strong>from</strong> is the address from which you created the sendinblue account.
+<strong>from</strong> is the address from which you created the Brevo (formerly Sendinblue).
 <strong>to</strong> is an array of string.<br>
 <strong>msg</strong> is an array of bytes.</p>
 <blockquote>
-<p>⚠️ You must define the <strong>From</strong> field in the msg. It is not mentioned in the smtp package documentation. Maybe it is only required for sendinblue. I have not tested with other mail service providers.</p>
+<p>⚠️ You must define the <strong>From</strong> field in the msg. It is not mentioned in the smtp package documentation. Maybe it is only required for Brevo (formerly Sendinblue). I have not tested with other mail service providers.</p>
 </blockquote>
 <p>In the <code>sendEmail</code> function, it is taking <strong>from</strong>, <strong>to</strong>, and <strong>msg</strong> as arguments and returning a <code>bool</code> status.</p>
 <p>In the import, we have imported the <code>github.com/joho/godotenv</code> package to load the <code>.env</code> file. To load the <code>.env</code> file, use <code>Load</code> method of <code>godoenv</code>.
@@ -476,7 +477,7 @@ We&rsquo;re going to use the <code>PlainAuth</code> method.</p>
 </p>
 <p>The <code>smtp</code> package does not provide enough information of delivery of the mail. It only confirms if mail sent to server or not.</p>
 <p>From server side, there can be many reasons if it is delivered or not. To check if sent successfully or not.<br>
-Open the sendinblue account and click on the <strong>Transactional</strong> tab.</p>
+Open the Brevo (formerly Sendinblue) account and click on the <strong>Transactional</strong> tab.</p>
 <p>In this tab, you can check the status of the mail.
 The common reason can be an incorrect mail address. For this it raise a <strong>Hard bounce</strong> event.</p>
 <h1 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h1>
@@ -820,7 +821,7 @@ The common reason can be an incorrect mail address. For this it raise a <strong>
       
       <p class="text-sm text-neutral-500 dark:text-neutral-400">
           &copy;
-          2022
+          2023
           Shubham Chadokar
       </p>
       

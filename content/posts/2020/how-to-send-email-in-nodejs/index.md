@@ -26,7 +26,7 @@ Sending emails in nodejs have only 2 requirements:
 # Prerequisites
 - Node.js (>v6.0.0 for nodemailer module)
 - Code Editor (For Ex. VS Code, Atom)
-- An account in [Sendinblue](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
+- An account in [Sendinblue](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
 > Check out this step by step tutorial to [Create an account in sendinblue](https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/).
 
@@ -42,7 +42,7 @@ For this series, we are going to use `nodemailer` package. It is an open source 
 - Supports SMTP as default transport method. Other supported transport methods are SES, Sendmail, Stream.
 - OAuth2 authentication
 
-For the mailing service, we are going to use [Sendinblue](https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc).
+For the mailing service, we are going to use [Sendinblue](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc).
 This mailing service offers many different solutions other than emails, for ex. SMS.  
 It provide **300 mails/day** for a free account and paid account is also very cheap and offer more features compared to many other available mailing service provider.
 
@@ -63,9 +63,9 @@ npm install --save nodemailer
 
 ### Create a new SMTP Key in Sendinblue
 
-This key will be used for authentication and sending the email via your sendinblue account.
+This key will be used for authentication and sending the email via your Brevo (formerly Sendinblue).
 
-Sign in to your Sendinblue account and click on SMTP & API from the top-right menu.
+Sign in to your Brevo (formerly Sendinblue) and click on SMTP & API from the top-right menu.
 
 Go to **SMTP** tab and click on _CREATE A NEW SMTP KEY_.
 Copy the key and paste it somewhere safe.
@@ -132,9 +132,9 @@ sendEmail(mailObj).then((res) => {
 });
 ```
 
-In the `auth` object, `user` will be your email address of sendinblue account and `pass` will be your SMTP KEY.
+In the `auth` object, `user` will be your email address of Brevo (formerly Sendinblue) and `pass` will be your SMTP KEY.
 
-In the `mailObj`, `from` will be your email address of sendinblue account, `recipients` is an array of email addresses, `subject` is subject of email and `message` is plain text message.
+In the `mailObj`, `from` will be your email address of Brevo (formerly Sendinblue), `recipients` is an array of email addresses, `subject` is subject of email and `message` is plain text message.
 
 Open the terminal and run the file.
 

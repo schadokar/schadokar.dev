@@ -41,7 +41,7 @@
   />
   
   
-  <script type="text/javascript" src="/js/appearance.min.12e98742cd283574d030a7fe55f29597df4ee214f7ff7075b4d19a64d046a602753c715295550be7899b661619cec89c679049d36c624681671a8013c1249896.js" integrity="sha512-EumHQs0oNXTQMKf&#43;VfKVl99O4hT3/3B1tNGaZNBGpgJ1PHFSlVUL54mbZhYZzsicZ5BJ02xiRoFnGoATwSSYlg=="></script>
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
   
   
   
@@ -65,7 +65,6 @@
 <meta property="og:url" content="https://schadokar.dev/to-the-point/check-if-a-character-is-a-number-in-golang/" /><meta property="article:section" content="to-the-point" />
 <meta property="article:published_time" content="2020-12-19T15:04:55+05:30" />
 <meta property="article:modified_time" content="2020-12-19T15:04:55+05:30" />
-
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Check if a character is a number in Golang"/>
@@ -314,7 +313,7 @@ if (!doNotTrack) {
 <p>All the characters and symbols assigned a code.</p>
 <p>For ex.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">A</span> <span class="nx">U</span><span class="o">+</span><span class="mo">0041</span>
-</span></span><span class="line"><span class="cl"><span class="nx">अ</span> <span class="nx">U</span><span class="o">+</span><span class="mi">0905</span>
+</span></span><span class="line"><span class="cl"><span class="err">अ</span> <span class="nx">U</span><span class="o">+</span><span class="mi">0905</span>
 </span></span></code></pre></div><p>All the Unicode is divided into various categories. Browse all the <a href="https://www.compart.com/en/unicode/category">categories</a>.</p>
 <ul>
 <li><a href="https://www.compart.com/en/unicode/category/Ll">Ll</a> Lowercase Letters (a, b, µ, ɸ)</li>
@@ -346,7 +345,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p><strong>Output</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="mi">1</span> <span class="mi">49</span> <span class="nx">is</span> <span class="nx">number</span> <span class="kt">rune</span>
 </span></span><span class="line"><span class="cl"><span class="nx">b</span> <span class="mi">98</span> <span class="nx">is</span> <span class="nx">not</span> <span class="nx">a</span> <span class="nx">number</span> <span class="kt">rune</span>
-</span></span><span class="line"><span class="cl"><span class="nx">१</span> <span class="mi">2407</span> <span class="nx">is</span> <span class="nx">number</span> <span class="kt">rune</span>
+</span></span><span class="line"><span class="cl"><span class="err">१</span> <span class="mi">2407</span> <span class="nx">is</span> <span class="nx">number</span> <span class="kt">rune</span>
 </span></span><span class="line"><span class="cl"><span class="err">Ⅰ</span> <span class="mi">8544</span> <span class="nx">is</span> <span class="nx">number</span> <span class="kt">rune</span>
 </span></span><span class="line"><span class="cl"><span class="err">¼</span> <span class="mi">188</span> <span class="nx">is</span> <span class="nx">number</span> <span class="kt">rune</span>
 </span></span></code></pre></div><p><a href="https://play.golang.org/p/AtA1yCbAvcj">Try it</a></p>
@@ -375,7 +374,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p><strong>Output</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="mi">1</span> <span class="mi">49</span> <span class="nx">is</span> <span class="nx">digit</span> <span class="kt">rune</span>
 </span></span><span class="line"><span class="cl"><span class="nx">b</span> <span class="mi">98</span> <span class="nx">is</span> <span class="nx">not</span> <span class="nx">a</span> <span class="nx">digit</span> <span class="kt">rune</span>
-</span></span><span class="line"><span class="cl"><span class="nx">१</span> <span class="mi">2407</span> <span class="nx">is</span> <span class="nx">digit</span> <span class="kt">rune</span>
+</span></span><span class="line"><span class="cl"><span class="err">१</span> <span class="mi">2407</span> <span class="nx">is</span> <span class="nx">digit</span> <span class="kt">rune</span>
 </span></span><span class="line"><span class="cl"><span class="err">Ⅰ</span> <span class="mi">8544</span> <span class="nx">is</span> <span class="nx">not</span> <span class="nx">a</span> <span class="nx">digit</span> <span class="kt">rune</span>
 </span></span><span class="line"><span class="cl"><span class="err">¼</span> <span class="mi">188</span> <span class="nx">is</span> <span class="nx">not</span> <span class="nx">a</span> <span class="nx">digit</span> <span class="kt">rune</span>
 </span></span></code></pre></div><h2 id="final-words" class="relative group">Final Words <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#final-words" aria-label="Anchor">#</a></span></h2>
@@ -719,7 +718,7 @@ If <code>&gt;=</code> 30 and <code>&lt;=</code> 39.</p>
       
       <p class="text-sm text-neutral-500 dark:text-neutral-400">
           &copy;
-          2022
+          2023
           Shubham Chadokar
       </p>
       
