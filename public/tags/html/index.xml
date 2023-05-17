@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on schadokar.dev</title>
+    <link>https://schadokar.dev/tags/html/</link>
+    <description>Recent content in html on schadokar.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
+    <lastBuildDate>Tue, 20 Apr 2021 13:54:31 +0530</lastBuildDate><atom:link href="https://schadokar.dev/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a Cryptocurrency Exchange Rate in Html Part 1</title>
+      <link>https://schadokar.dev/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</link>
+      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</guid>
+      <description>This is a series of 3 tutorials in which we will build a cryptocurrency exchange rate dashboard in HTML using materialize css and coinbase free api.</description>
+    </item>
+    
+    <item>
+      <title>Create a Task List in Html</title>
+      <link>https://schadokar.dev/posts/create-a-task-list-in-html/</link>
+      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/posts/create-a-task-list-in-html/</guid>
+      <description>In this post, we are building a task list in HTML using material css.</description>
+    </item>
+    
+    <item>
+      <title>Create a Weather App in Html</title>
+      <link>https://schadokar.dev/posts/create-a-weather-app-in-html/</link>
+      <pubDate>Wed, 14 Apr 2021 19:33:42 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/posts/create-a-weather-app-in-html/</guid>
+      <description>In this post, we are creating a weather app in html using material and openweathermap api.</description>
+    </item>
+    
+  </channel>
+</rss>

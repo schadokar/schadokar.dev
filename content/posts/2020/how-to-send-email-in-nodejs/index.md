@@ -26,9 +26,9 @@ Sending emails in nodejs have only 2 requirements:
 # Prerequisites
 - Node.js (>v6.0.0 for nodemailer module)
 - Code Editor (For Ex. VS Code, Atom)
-- An account in [Sendinblue](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
+- An account in [Brevo (formerly Sendinblue)](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
-> Check out this step by step tutorial to [Create an account in sendinblue](https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/).
+> Check out this step by step tutorial to [Create an account in brevo](https://schadokar.dev/to-the-point/create-an-account-in-brevo/).
 
 # Getting Started
 
@@ -61,7 +61,7 @@ Install `nodemailer` package.
 npm install --save nodemailer
 ```
 
-### Create a new SMTP Key in Sendinblue
+### Create a new SMTP Key in Brevo (formerly Sendinblue)
 
 This key will be used for authentication and sending the email via your Brevo (formerly Sendinblue).
 

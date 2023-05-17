@@ -24,7 +24,7 @@ In this tutorial, we will send an email using the `main.go` file.
 2. Code Editor (VSCode, Atom) - I am using VS Code
 3. Brevo (formerly Sendinblue) account - [link](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
-> Check out this step by step tutorial [Create an account in Brevo (formerly Sendinblue)](https://schadokar.dev/to-the-point/create-an-account-in-sendinblue/).
+> Check out this step by step tutorial [Create an account in Brevo (formerly Sendinblue)](https://schadokar.dev/to-the-point/create-an-account-in-brevo/).
 
 > 
 # Getting Started

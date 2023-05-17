@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data structures on schadokar.dev</title>
+    <link>https://schadokar.dev/tags/data-structures/</link>
+    <description>Recent content in data structures on schadokar.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
+    <lastBuildDate>Sat, 20 Feb 2021 00:42:58 +0530</lastBuildDate><atom:link href="https://schadokar.dev/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Remove Consecutive Characters From a String</title>
+      <link>https://schadokar.dev/to-the-point/how-to-remove-consecutive-characters-from-a-string/</link>
+      <pubDate>Sat, 20 Feb 2021 00:42:58 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/to-the-point/how-to-remove-consecutive-characters-from-a-string/</guid>
+      <description>Problem Statement # Remove n consecutive characters from a string and return the final string.</description>
+    </item>
+    
+  </channel>
+</rss>

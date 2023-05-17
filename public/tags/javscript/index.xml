@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javscript on schadokar.dev</title>
+    <link>https://schadokar.dev/tags/javscript/</link>
+    <description>Recent content in javscript on schadokar.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
+    <lastBuildDate>Thu, 22 Apr 2021 16:23:30 +0530</lastBuildDate><atom:link href="https://schadokar.dev/tags/javscript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Convert Nested Arrays Into 1d Array in Javascript</title>
+      <link>https://schadokar.dev/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/</link>
+      <pubDate>Thu, 22 Apr 2021 16:23:30 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/to-the-point/how-to-convert-nested-arrays-into-1d-array-in-javascript/</guid>
+      <description>In ES2019, Array.</description>
+    </item>
+    
+  </channel>
+</rss>
