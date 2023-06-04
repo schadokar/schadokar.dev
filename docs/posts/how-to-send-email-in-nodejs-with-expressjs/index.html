@@ -3,7 +3,7 @@
   lang="en"
   dir="ltr"
   class="scroll-smooth"
-  data-default-appearance="light"
+  data-default-appearance="dark"
   data-auto-appearance="true"
 ><head>
   <meta charset="utf-8" />
@@ -36,15 +36,25 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.a33dee489ac952147738e79eb6e986d06025649922d685bec01691e0bec336642fb937e544342c7ff6d58894162954251e7629757ad0049afc63f5ecfb820903.css"
-    integrity="sha512-oz3uSJrJUhR3OOeetumG0GAlZJki1oW&#43;wBaR4L7DNmQvuTflRDQsf/bViJQWKVQlHnYpdXrQBJr8Y/Xs&#43;4IJAw=="
+    href="/css/main.bundle.min.717089d7443ccad794cf5c2992a2b95e81df0c6bdde235eeb5e97864c51eaba8a5151314ee6c2eabec0d1fe250dc87724df58a206329437a8f64d769072cebb4.css"
+    integrity="sha512-cXCJ10Q8yteUz1wpkqK5XoHfDGvd4jXutel4ZMUeq6ilFRMU7mwuq&#43;wNH&#43;JQ3IdyTfWKIGMpQ3qPZNdpByzrtA=="
   />
   
   
   <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
   
+    
+    
+    
   
   
+    
+    
+  
+  
+  
+    
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.4114b922b00b111f9abc1122a10f7534bf2a386dbdce8b4ed5b65f71b4b62a39a8f47b23d9e311129f84b4fdd698f62cb3333887a698f678586e736dd047a155.js" integrity="sha512-QRS5IrALER&#43;avBEioQ91NL8qOG29zotO1bZfcbS2Kjmo9Hsj2eMREp&#43;EtP3WmPYsszM4h6aY9nhYbnNt0EehVQ==" data-copy="Copy" data-copied="Copied"></script>
   
   
   
@@ -219,6 +229,25 @@ if (!doNotTrack) {
           </li>
         
         
+          <li
+            class="ltr:text-right rtl:text-left ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
+            <button
+              id="search-button"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+              title="Search (/)"
+            >
+              
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+          </li>
+        
       </ul>
     </nav>
   
@@ -349,7 +378,7 @@ if (!doNotTrack) {
 <li>dotenv - To access the .env file which we are going to use to save the credentials</li>
 </ul>
 <p>Open the terminal inside the project and run the below command.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span> <span class="nx">express</span> <span class="nx">body</span><span class="o">-</span><span class="nx">parser</span> <span class="nx">cors</span> <span class="nx">dotenv</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>npm install <span style="color:#ff7b72;font-weight:bold">--</span>save express body<span style="color:#ff7b72;font-weight:bold">-</span>parser cors dotenv
 </span></span></code></pre></div><h2 id="project-directory-structure" class="relative group">Project Directory Structure <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#project-directory-structure" aria-label="Anchor">#</a></span></h2>
 <pre tabindex="0"><code>node-email
   |- routes
@@ -368,54 +397,54 @@ Create a new file <code>.env</code> and paste your email and SMTP_KEY.</p>
 PASS=SMTP_KEY
 </code></pre><h3 id="src" class="relative group">src <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#src" aria-label="Anchor">#</a></span></h3>
 <p>In the <code>src</code> folder, create a new file <code>send-mail.js</code> and paste the below code.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="s2">&#34;use strict&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;dotenv&#34;</span><span class="p">).</span><span class="nx">config</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">nodemailer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;nodemailer&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;path&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * sendEmail
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {Object} mailObj - Email information
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {String} from - Email address of the sender
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {Array} to - Array of receipents email address
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {String} subject - Subject of the email
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {String} text - Email body
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sendEmail</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">mailObj</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">from</span><span class="p">,</span> <span class="nx">to</span><span class="p">,</span> <span class="nx">subject</span><span class="p">,</span> <span class="nx">text</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">mailObj</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Create a transporter
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">transporter</span> <span class="o">=</span> <span class="nx">nodemailer</span><span class="p">.</span><span class="nx">createTransport</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">host</span><span class="o">:</span> <span class="s2">&#34;smtp-relay.sendinblue.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">port</span><span class="o">:</span> <span class="mi">587</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">auth</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">user</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">USER</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">pass</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PASS</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// send mail with defined transport object
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">info</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">transporter</span><span class="p">.</span><span class="nx">sendMail</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">from</span><span class="o">:</span> <span class="nx">from</span><span class="p">,</span> <span class="c1">// sender address
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">to</span><span class="o">:</span> <span class="nx">to</span><span class="p">,</span> <span class="c1">// list of receivers
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">subject</span><span class="o">:</span> <span class="nx">subject</span><span class="p">,</span> <span class="c1">// Subject line
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">text</span><span class="o">:</span> <span class="nx">text</span><span class="p">,</span> <span class="c1">// plain text body
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">html</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">path</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">&#34;../template/mail.html&#34;</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="c1">// html body
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Message sent: </span><span class="si">${</span><span class="nx">info</span><span class="p">.</span><span class="nx">messageId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="sb">`Message sent: </span><span class="si">${</span><span class="nx">info</span><span class="p">.</span><span class="nx">messageId</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">      <span class="sb">`Something went wrong in the sendmail method. Error: </span><span class="si">${</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="si">}</span><span class="sb">`</span>
-</span></span><span class="line"><span class="cl">    <span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">sendEmail</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a5d6ff">&#34;use strict&#34;</span>;
+</span></span><span style="display:flex;"><span>require(<span style="color:#a5d6ff">&#34;dotenv&#34;</span>).config();
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> nodemailer <span style="color:#ff7b72;font-weight:bold">=</span> require(<span style="color:#a5d6ff">&#34;nodemailer&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> path <span style="color:#ff7b72;font-weight:bold">=</span> require(<span style="color:#a5d6ff">&#34;path&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"> * sendEmail
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"> * @param {Object} mailObj - Email information
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"> * @param {String} from - Email address of the sender
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"> * @param {Array} to - Array of receipents email address
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"> * @param {String} subject - Subject of the email
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"> * @param {String} text - Email body
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> sendEmail <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">async</span> (mailObj) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">const</span> { from, to, subject, text } <span style="color:#ff7b72;font-weight:bold">=</span> mailObj;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Create a transporter
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#ff7b72">let</span> transporter <span style="color:#ff7b72;font-weight:bold">=</span> nodemailer.createTransport({
+</span></span><span style="display:flex;"><span>      host<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;smtp-relay.sendinblue.com&#34;</span>,
+</span></span><span style="display:flex;"><span>      port<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">587</span>,
+</span></span><span style="display:flex;"><span>      auth<span style="color:#ff7b72;font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>        user<span style="color:#ff7b72;font-weight:bold">:</span> process.env.USER,
+</span></span><span style="display:flex;"><span>        pass<span style="color:#ff7b72;font-weight:bold">:</span> process.env.PASS,
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// send mail with defined transport object
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#ff7b72">let</span> info <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> transporter.sendMail({
+</span></span><span style="display:flex;"><span>      from<span style="color:#ff7b72;font-weight:bold">:</span> from, <span style="color:#8b949e;font-style:italic">// sender address
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      to<span style="color:#ff7b72;font-weight:bold">:</span> to, <span style="color:#8b949e;font-style:italic">// list of receivers
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      subject<span style="color:#ff7b72;font-weight:bold">:</span> subject, <span style="color:#8b949e;font-style:italic">// Subject line
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      text<span style="color:#ff7b72;font-weight:bold">:</span> text, <span style="color:#8b949e;font-style:italic">// plain text body
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      html<span style="color:#ff7b72;font-weight:bold">:</span> {
+</span></span><span style="display:flex;"><span>        path<span style="color:#ff7b72;font-weight:bold">:</span> path.resolve(__dirname, <span style="color:#a5d6ff">&#34;../template/mail.html&#34;</span>),
+</span></span><span style="display:flex;"><span>      }, <span style="color:#8b949e;font-style:italic">// html body
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    console.log(<span style="color:#a5d6ff">`Message sent: </span><span style="color:#a5d6ff">${</span>info.messageId<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">`Message sent: </span><span style="color:#a5d6ff">${</span>info.messageId<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">`</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#ff7b72">catch</span> (error) {
+</span></span><span style="display:flex;"><span>    console.error(error);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">throw</span> <span style="color:#ff7b72">new</span> Error(
+</span></span><span style="display:flex;"><span>      <span style="color:#a5d6ff">`Something went wrong in the sendmail method. Error: </span><span style="color:#a5d6ff">${</span>error.message<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">`</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>module.exports <span style="color:#ff7b72;font-weight:bold">=</span> sendEmail;
 </span></span></code></pre></div><p>Let&rsquo;s understand the code</p>
 <ul>
 <li><code>require(&quot;dotenv&quot;).config();</code> is used to load the <code>.env</code> file, so that using <code>process.env.{KEY}</code> we can access the environment variables defined in the <code>.env</code> file.</li>
@@ -427,75 +456,75 @@ PASS=SMTP_KEY
 <p>Open the <code>routes</code> folder and create a new file <code>mail-api.js</code>. In this file, we will create a send email route.<br>
 This endpoint then triggers the <code>sendEmail</code> function, defined in the <code>src</code> directory.</p>
 <p>Copy and paste the below code in the file.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;express&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sendMailMethod</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../src/send-mail&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Post request to send an email
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&#34;/sendmail&#34;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">sendMailMethod</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// send the response
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">status</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">payload</span><span class="o">:</span> <span class="nx">result</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">status</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">payload</span><span class="o">:</span> <span class="s2">&#34;Something went wrong in Sendmail Route.&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">router</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#ff7b72">const</span> express <span style="color:#ff7b72;font-weight:bold">=</span> require(<span style="color:#a5d6ff">&#34;express&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> router <span style="color:#ff7b72;font-weight:bold">=</span> express.Router();
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> sendMailMethod <span style="color:#ff7b72;font-weight:bold">=</span> require(<span style="color:#a5d6ff">&#34;../src/send-mail&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Post request to send an email
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>router.post(<span style="color:#a5d6ff">&#34;/sendmail&#34;</span>, <span style="color:#ff7b72">async</span> (req, res) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">const</span> result <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> sendMailMethod(req.body);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// send the response
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    res.json({
+</span></span><span style="display:flex;"><span>      status<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>      payload<span style="color:#ff7b72;font-weight:bold">:</span> result,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  } <span style="color:#ff7b72">catch</span> (error) {
+</span></span><span style="display:flex;"><span>    console.error(error.message);
+</span></span><span style="display:flex;"><span>    res.json({
+</span></span><span style="display:flex;"><span>      status<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#79c0ff">false</span>,
+</span></span><span style="display:flex;"><span>      payload<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;Something went wrong in Sendmail Route.&#34;</span>,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>module.exports <span style="color:#ff7b72;font-weight:bold">=</span> router;
 </span></span></code></pre></div><p>Instead of taking out the variables from the <code>req.body</code>, we directly send this to the function as it is accepting an object.<br>
 This approach is optional, if the application requires the input validation, then validate it at route end, instead of at method end. As it is for education purpose not for production.</p>
 <h3 id="template" class="relative group">template <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#template" aria-label="Anchor">#</a></span></h3>
 <p>In the <code>html</code> field of <code>sendMail</code> method, it can read the pure <code>html</code> code. But this is not recommended.<br>
 Instead you can create a <code>mail.html</code> template and give its path to it.<br>
 Create a new file <code>mail.html</code> and paste the below code in it.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;text-align: center;&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #3584c8;&#34;</span><span class="p">&gt;</span>Nodemailer Example<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    This is an example html template to demonstrate the sending email using
-</span></span><span class="line"><span class="cl">    html.
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">    🤗 🤗 🤗 🤗 🤗 🤗
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> style<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;text-align: center;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">h1</span> style<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;color: #3584c8;&#34;</span>&gt;Nodemailer Example&lt;/<span style="color:#7ee787">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">p</span>&gt;
+</span></span><span style="display:flex;"><span>    This is an example html template to demonstrate the sending email using
+</span></span><span style="display:flex;"><span>    html.
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">br</span> /&gt;
+</span></span><span style="display:flex;"><span>    🤗 🤗 🤗 🤗 🤗 🤗
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
 </span></span></code></pre></div><p>You can use a dynamic html template, in which you pass the arguments. But that is out of the scope for this tutorial.</p>
 <h3 id="indexjs" class="relative group">index.js <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#indexjs" aria-label="Anchor">#</a></span></h3>
 <p>Open the <code>index.js</code> and paste the below code. This <code>index.js</code> is the entry point for this application. It is importing all the application route and creating a express server to host the application on <code>4444</code> port.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="s2">&#34;use strict&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;express&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;body-parser&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">cors</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;cors&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">mailAPI</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./routes/mail-api.js&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Express body parser
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cors</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">bodyParser</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">limit</span><span class="o">:</span> <span class="s2">&#34;50mb&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">extended</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">parameterLimit</span><span class="o">:</span> <span class="mi">50000</span>
-</span></span><span class="line"><span class="cl">  <span class="p">})</span>
-</span></span><span class="line"><span class="cl"><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// use the routes specified in route folder
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s2">&#34;/api/v1&#34;</span><span class="p">,</span> <span class="nx">mailAPI</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">4444</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//listen to the server
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`listening to the port </span><span class="si">${</span><span class="nx">port</span><span class="si">}</span><span class="sb"> .....`</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a5d6ff">&#34;use strict&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> express <span style="color:#ff7b72;font-weight:bold">=</span> require(<span style="color:#a5d6ff">&#34;express&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> bodyParser <span style="color:#ff7b72;font-weight:bold">=</span> require(<span style="color:#a5d6ff">&#34;body-parser&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> cors <span style="color:#ff7b72;font-weight:bold">=</span> require(<span style="color:#a5d6ff">&#34;cors&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> app <span style="color:#ff7b72;font-weight:bold">=</span> express();
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> mailAPI <span style="color:#ff7b72;font-weight:bold">=</span> require(<span style="color:#a5d6ff">&#34;./routes/mail-api.js&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Express body parser
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>app.use(cors());
+</span></span><span style="display:flex;"><span>app.use(bodyParser.json());
+</span></span><span style="display:flex;"><span>app.use(
+</span></span><span style="display:flex;"><span>  bodyParser.urlencoded({
+</span></span><span style="display:flex;"><span>    limit<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;50mb&#34;</span>,
+</span></span><span style="display:flex;"><span>    extended<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#79c0ff">false</span>,
+</span></span><span style="display:flex;"><span>    parameterLimit<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">50000</span>
+</span></span><span style="display:flex;"><span>  })
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// use the routes specified in route folder
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>app.use(<span style="color:#a5d6ff">&#34;/api/v1&#34;</span>, mailAPI);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> port <span style="color:#ff7b72;font-weight:bold">=</span> process.env.PORT <span style="color:#ff7b72;font-weight:bold">||</span> <span style="color:#a5d6ff">4444</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//listen to the server
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>app.listen(port, <span style="color:#ff7b72">function</span> () {
+</span></span><span style="display:flex;"><span>  console.log(<span style="color:#a5d6ff">`listening to the port </span><span style="color:#a5d6ff">${</span>port<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> .....`</span>);
+</span></span><span style="display:flex;"><span>});
 </span></span></code></pre></div><h2 id="run-time" class="relative group">Run Time <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#run-time" aria-label="Anchor">#</a></span></h2>
 <p>Now, the fun part. Let&rsquo;s send some emails.<br>
 Open the terminal inside the project directory and run the below command.</p>
@@ -503,14 +532,14 @@ Open the terminal inside the project directory and run the below command.</p>
 </code></pre><p>This will start the server at <code>4444</code> if no <code>PORT</code> environment variable defined.</p>
 <p>Open the Postman and create a <code>POST</code> request to <code>localhost:4444/api/v1/sendmail</code>.<br>
 In the <code>Body</code> tab, select the <code>JSON</code> option. Modify the body accordingly.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;from&#34;</span><span class="o">:</span> <span class="s2">&#34;hello@schadokar.dev&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;to&#34;</span><span class="o">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;shubham@schadokar.dev&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;subject&#34;</span><span class="o">:</span> <span class="s2">&#34;Mail from Nodemailer&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;message&#34;</span><span class="o">:</span> <span class="s2">&#34;Sending an email using nodemailer package.&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;from&#34;</span><span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;hello@schadokar.dev&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;to&#34;</span><span style="color:#ff7b72;font-weight:bold">:</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;shubham@schadokar.dev&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;subject&#34;</span><span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;Mail from Nodemailer&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;message&#34;</span><span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;Sending an email using nodemailer package.&#34;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Hit Send.</p>
 <p>
 
@@ -921,10 +950,89 @@ Thanks for reading.</p>
     </div>
     
     
+      <div
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-14 rtl:ml-14"
+      >
+        <button
+          id="appearance-switcher"
+          class="w-12 h-12 "
+          type="button"
+          title="Switch to dark appearance"
+        >
+          <span class="inline dark:hidden">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+</span>
+          <span class="hidden dark:inline">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+</span>
+        </button>
+      </div>
+    
   </div>
   
   
 </footer>
+<div
+  id="search-wrapper"
+  class="fixed inset-0 z-50 flex flex-col p-4 sm:p-6 md:p-[10vh] lg:p-[12vh] w-screen h-screen cursor-default bg-neutral-500/50 backdrop-blur-sm dark:bg-neutral-900/50 invisible"
+  data-url="https://schadokar.dev/"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg border-neutral-200 top-20 bg-neutral dark:bg-neutral-800 dark:border-neutral-700"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-transparent focus:outline-2"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
 
     </div>
   </body>

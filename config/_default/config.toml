@@ -18,11 +18,14 @@ summaryLength = 0
 # version 4
 googleAnalytics = "G-FQRDVY1Q17"
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 # content management
 [permalinks]
-    enable = true
-    posts = "/posts/:title/"
-    to-the-point = "/to-the-point/:title/"
+  enable = true
+  posts = "/posts/:title/"
+  to-the-point = "/to-the-point/:title/"
 
 [author]
   name = "Shubham Chadokar"

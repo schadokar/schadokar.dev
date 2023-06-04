@@ -5,13 +5,20 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
-colorScheme = "fire"
-# darkMode = "auto"
-# darkToggle = false
+colorScheme = "ocean"
+# light / dark
+defaultAppearance= "dark"
+
 # logo = "img/logo.jpg"
 description = "as My awesome website"
 mainSections = ["posts", "projects"]
 # robots = ""
+showAppearanceSwitcher = true
+
+enableSearch = true
+showScrollToTop = true
+enableCodeCopy = true
+
 
 [homepage]
   layout = "custom" # valid options: page, profile, custom
@@ -38,6 +45,7 @@ mainSections = ["posts", "projects"]
   showBreadcrumbs = false
   showSummary = false
   groupByYear = true
+  showTableOfContents = true
 
 [taxonomy]
   showTermCount = true
