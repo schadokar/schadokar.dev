@@ -15,7 +15,8 @@ enableRobotsTXT = true
 
 summaryLength = 0
 
-googleAnalytics = "UA-158088106-1"
+# version 4
+googleAnalytics = "G-FQRDVY1Q17"
 
 # content management
 [permalinks]
