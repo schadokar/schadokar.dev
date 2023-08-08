@@ -13,12 +13,9 @@ defaultAppearance= "dark"
 description = "as My awesome website"
 mainSections = ["posts", "projects"]
 # robots = ""
-showAppearanceSwitcher = true
 
 enableSearch = true
-showScrollToTop = true
 enableCodeCopy = true
-
 
 [homepage]
   layout = "custom" # valid options: page, profile, custom
@@ -62,3 +59,7 @@ enableCodeCopy = true
   # bing = ""
   # pinterest = ""
   # yandex = ""
+
+[footer]
+  showScrollToTop = true
+  showAppearanceSwitcher = true
