@@ -295,10 +295,10 @@ func login(w http.ResponseWriter, r *http.Request) {
 ```
 
 In the `init` function, using the `godotenv` package load the `.env` file to read the `SECRET_KEY`.  
-Check this to learn more on [environment variables in Golang](https://schadokar.dev/posts/use-environment-variable-in-your-next-golang-project/).
+Check this to learn more on [environment variables in Golang](https://medium.com/towards-data-science/use-environment-variable-in-your-next-golang-project-39e17c3aaa66).
 
 In the `login` function, first read the request body to get the `username` and `password`. The request body is in JSON format. Read the JSON using the `encoding/json` package.  
-Check this to learn more on [how to use JSON in Golang](https://schadokar.dev/posts/how-to-use-json-in-golang/).
+Check this to learn more on [how to use JSON in Golang](https://schadokar.dev/posts/json-in-golang/).
 
 In the `userdb`, we have created a dummy user. It will validate the user using the `userdb`.
 

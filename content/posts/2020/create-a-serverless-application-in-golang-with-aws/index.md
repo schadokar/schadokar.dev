@@ -16,8 +16,8 @@ In this tutorial, we are going to create a golang serverless application and dep
 
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-    - [Open hello/main.go](#open-hellomaingo)
-    - [Open serverless.yml](#open-serverlessyml)
+  - [Open hello/main.go](#open-hellomaingo)
+  - [Open serverless.yml](#open-serverlessyml)
 - [Build the application](#build-the-application)
   - [Build](#build)
 - [Deploy](#deploy)
@@ -103,7 +103,7 @@ The `lambda` package is initiating the `Handler` function and `events` package i
 
 This function is exposed as an API using the AWS APIGateway service. These APIs are configured in the `serverless.yml` file.
 
-> Check this to learn more about [JSON in golang](https://schadokar.dev/posts/how-to-use-json-in-golang/).
+> Check this to learn more about [JSON in golang](https://schadokar.dev/posts/json-in-golang/).
 
 ### Open serverless.yml
 

@@ -6,7 +6,7 @@
     <description>Recent content in 2020 on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2023</copyright>
     <lastBuildDate>Fri, 01 Jan 2021 12:41:41 +0530</lastBuildDate><atom:link href="https://schadokar.dev/categories/2020/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flashback 2020</title>
@@ -15,42 +15,6 @@
       
       <guid>https://schadokar.dev/posts/flashback-2020/</guid>
       <description>Finally, an another year ends with lots of memory and lost days.</description>
-    </item>
-    
-    <item>
-      <title>How to Format Golang Project</title>
-      <link>https://schadokar.dev/to-the-point/how-to-format-golang-project/</link>
-      <pubDate>Wed, 23 Dec 2020 22:45:35 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/to-the-point/how-to-format-golang-project/</guid>
-      <description>Golang is a strictly typed language.</description>
-    </item>
-    
-    <item>
-      <title>Check if Key Exists in Map in Golang</title>
-      <link>https://schadokar.dev/to-the-point/check-if-key-exists-in-map-in-golang/</link>
-      <pubDate>Mon, 21 Dec 2020 10:38:27 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/to-the-point/check-if-key-exists-in-map-in-golang/</guid>
-      <description>Map # Map is a data structure which implements a hash table.</description>
-    </item>
-    
-    <item>
-      <title>Golang String Replace</title>
-      <link>https://schadokar.dev/to-the-point/golang-string-replace/</link>
-      <pubDate>Sat, 19 Dec 2020 21:15:35 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/to-the-point/golang-string-replace/</guid>
-      <description>Golang package strings provides Replace and ReplaceAll functions to replace the substring in the string.</description>
-    </item>
-    
-    <item>
-      <title>Check if a character is a number in Golang</title>
-      <link>https://schadokar.dev/to-the-point/check-if-a-character-is-a-number-in-golang/</link>
-      <pubDate>Sat, 19 Dec 2020 15:04:55 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/to-the-point/check-if-a-character-is-a-number-in-golang/</guid>
-      <description>Unicode is a computing standard for the consistent encoding symbols.</description>
     </item>
     
     <item>
@@ -69,15 +33,6 @@
       
       <guid>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</guid>
       <description>Validations are the key things to prevent the application&amp;rsquo;s unexpected behaviour.</description>
-    </item>
-    
-    <item>
-      <title>Remove an Element From an Array Using Filter in Nodejs</title>
-      <link>https://schadokar.dev/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/</link>
-      <pubDate>Fri, 04 Sep 2020 09:29:51 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/to-the-point/remove-an-element-from-an-array-using-filter-in-nodejs/</guid>
-      <description>In nodejs, there are many options to remove an element from an array, one of them is using the filter.</description>
     </item>
     
     <item>
@@ -132,15 +87,6 @@
       
       <guid>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
       <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa.</description>
-    </item>
-    
-    <item>
-      <title>Create an Account in Brevo</title>
-      <link>https://schadokar.dev/to-the-point/create-an-account-in-brevo/</link>
-      <pubDate>Sat, 20 Jun 2020 17:43:00 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/to-the-point/create-an-account-in-brevo/</guid>
-      <description>Sendinblue is a SaaS solution for relationship marketing.</description>
     </item>
     
     <item>

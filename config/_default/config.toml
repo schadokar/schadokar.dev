@@ -1,17 +1,13 @@
 # -- Site Configuration --
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/congo/docs/getting-started/
-[[imports]]
-path = "github.com/jpanther/congo/v2"
-
-theme = "congo"
 
 baseURL = "https://schadokar.dev/"
 languageCode = "en"
 defaultContentLanguage = "en"
 
 title = "schadokar.dev"
-copyright =  "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2021"
+copyright =  "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2023"
 
 enableEmoji = true
 enableRobotsTXT = true

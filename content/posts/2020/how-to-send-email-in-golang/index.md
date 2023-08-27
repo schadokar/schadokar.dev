@@ -26,7 +26,8 @@ In this tutorial, we will send an email using the `main.go` file.
 
 > Check out this step by step tutorial [Create an account in Brevo (formerly Sendinblue)](https://schadokar.dev/to-the-point/create-an-account-in-brevo/).
 
-> 
+>
+
 # Getting Started
 
 Create a new directory `go-sendinblue`.
@@ -49,7 +50,7 @@ go get github.com/joho/godotenv
 ```
 
 This package is simple and clean.  
-Learn more about [how to use environment variables in the golang](https://schadokar.dev/posts/use-environment-variable-in-your-next-golang-project/).
+Learn more about [how to use environment variables in the golang](https://medium.com/towards-data-science/use-environment-variable-in-your-next-golang-project-39e17c3aaa66).
 
 ## Create a new SMTP Key
 

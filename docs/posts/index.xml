@@ -6,35 +6,8 @@
     <description>Recent content in Posts on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Sat, 24 Apr 2021 11:11:31 +0530</lastBuildDate><atom:link href="https://schadokar.dev/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What is RSS feed, RSS reader and Should I use it</title>
-      <link>https://schadokar.dev/posts/what-is-rss-feed-rss-reader-and-should-i-use-it/</link>
-      <pubDate>Sat, 24 Apr 2021 11:11:31 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/posts/what-is-rss-feed-rss-reader-and-should-i-use-it/</guid>
-      <description>What is RSS feed, RSS reader and Do I need it?</description>
-    </item>
-    
-    <item>
-      <title>Create a Cryptocurrency Exchange Rate in Html Part 1</title>
-      <link>https://schadokar.dev/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</link>
-      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/posts/create-a-cryptocurrency-exchange-rate-in-html-part-1/</guid>
-      <description>This is a series of 3 tutorials in which we will build a cryptocurrency exchange rate dashboard in HTML using materialize css and coinbase free api.</description>
-    </item>
-    
-    <item>
-      <title>Create a Task List in Html</title>
-      <link>https://schadokar.dev/posts/create-a-task-list-in-html/</link>
-      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/posts/create-a-task-list-in-html/</guid>
-      <description>In this post, we are building a task list in HTML using material css.</description>
-    </item>
-    
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2023</copyright>
+    <lastBuildDate>Thu, 15 Apr 2021 16:01:12 +0530</lastBuildDate><atom:link href="https://schadokar.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Run Javascript Code</title>
       <link>https://schadokar.dev/posts/how-to-run-javascript-code/</link>
@@ -42,15 +15,6 @@
       
       <guid>https://schadokar.dev/posts/how-to-run-javascript-code/</guid>
       <description>In this post, I will try to document the different ways to run the javascript code.</description>
-    </item>
-    
-    <item>
-      <title>Create a Weather App in Html</title>
-      <link>https://schadokar.dev/posts/create-a-weather-app-in-html/</link>
-      <pubDate>Wed, 14 Apr 2021 19:33:42 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/posts/create-a-weather-app-in-html/</guid>
-      <description>In this post, we are creating a weather app in html using material and openweathermap api.</description>
     </item>
     
     <item>

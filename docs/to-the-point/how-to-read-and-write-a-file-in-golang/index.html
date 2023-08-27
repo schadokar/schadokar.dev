@@ -8,7 +8,7 @@
   lang="en"
   dir="ltr"
   class="scroll-smooth"
-  data-default-appearance="dark"
+  data-default-appearance="light"
   data-auto-appearance="true"
 ><head>
   <meta charset="utf-8" />
@@ -355,7 +355,7 @@ if (!doNotTrack) {
         <li><a href="#read-a-file-using-readfile">Read a file using ReadFile</a></li>
         <li><a href="#write-to-an-existing-file">Write to an existing file</a>
           <ul>
-            <li><a href="#1--using-ioutil">1.  using ioutil</a></li>
+            <li><a href="#1-using-ioutil">1. using ioutil</a></li>
             <li><a href="#2-using-os-package">2. using os package</a></li>
           </ul>
         </li>
@@ -423,7 +423,7 @@ if (!doNotTrack) {
 0444     read
 0555     read &amp; execute
 0666     read &amp; write
-0740     owner can read, write, &amp; execute; group can only read; others have no permissions 
+0740     owner can read, write, &amp; execute; group can only read; others have no permissions
 </code></pre><hr>
 <h2 id="read-a-file-using-readfile" class="relative group">Read a file using ReadFile <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#read-a-file-using-readfile" aria-label="Anchor">#</a></span></h2>
 <p>The <code>ReadFile</code> function reads the file by its filename and returns the file data in array of byte.</p>
@@ -453,7 +453,7 @@ if (!doNotTrack) {
 <pre tabindex="0"><code>Hello Gopher!
 </code></pre><hr>
 <h2 id="write-to-an-existing-file" class="relative group">Write to an existing file <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#write-to-an-existing-file" aria-label="Anchor">#</a></span></h2>
-<h3 id="1--using-ioutil" class="relative group">1.  using ioutil <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1--using-ioutil" aria-label="Anchor">#</a></span></h3>
+<h3 id="1-using-ioutil" class="relative group">1. using ioutil <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-using-ioutil" aria-label="Anchor">#</a></span></h3>
 <p>First using <code>ReadFile</code>, we will read the content and then we will append the new content.</p>
 <div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">package</span> main
 </span></span><span style="display:flex;"><span>
@@ -469,10 +469,10 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> err <span style="color:#ff7b72;font-weight:bold">!=</span> <span style="color:#79c0ff">nil</span> {
 </span></span><span style="display:flex;"><span>        log.<span style="color:#d2a8ff;font-weight:bold">Fatalf</span>(<span style="color:#a5d6ff">&#34;error while reading the file. %v&#34;</span>, err)
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">//  new content
 </span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    newText <span style="color:#ff7b72;font-weight:bold">:=</span> []byte(<span style="color:#a5d6ff">&#34;\nAppended text.&#34;</span>)
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// append the content
 </span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    content = append(content, newText<span style="color:#ff7b72;font-weight:bold">...</span>)
 </span></span><span style="display:flex;"><span>
@@ -610,7 +610,7 @@ if (!doNotTrack) {
 1| Name: Go in Action                             | Author: William Kennedy
 2| Name: The way to Go                            | Author: IVO BALBAERT
 </code></pre><p>The output is formatted because we used a little string formatting.<br>
-In the <code>Printf</code>, we have used <code>%-40s</code>.  <code>40</code> is the width. <code>-</code> align the data to left. <a
+In the <code>Printf</code>, we have used <code>%-40s</code>. <code>40</code> is the width. <code>-</code> align the data to left. <a
   href="https://gobyexample.com/string-formatting"
   
   target="_blank" rel="noreferrer noopener"
@@ -792,7 +792,7 @@ After update
 <h2 id="references" class="relative group">References <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#references" aria-label="Anchor">#</a></span></h2>
 <ul>
 <li><a
-  href="https://schadokar.dev/posts/how-to-use-json-in-golang/"
+  href="https://schadokar.dev/posts/json-in-golang/"
   
   target="_blank" rel="noreferrer noopener"
 >How to use JSON in Golang?</a></li>
@@ -995,37 +995,18 @@ After update
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/to-the-point/convert-string-to-int-and-int-to-string-in-golang/">
-              <span
-                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&larr;</span
-                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Convert String to Int and Int to String in Golang</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2020-03-03 08:25:25 &#43;0530 IST">March 3, 2020</time>
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="group flex text-right" href="/to-the-point/how-to-create-a-linux-vm-in-aws/">
+            <a class="group flex text-right" href="/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >How to create a Linux VM in AWS?</span
+                  >Convert Byte to Hex and Hex to Byte in Golang</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2020-03-25 09:45:45 &#43;0530 IST">March 25, 2020</time>
+                    <time datetime="2020-07-18 13:33:52 &#43;0530 IST">July 18, 2020</time>
                   
                 </span>
               </span>
@@ -1087,7 +1068,7 @@ After update
       
       
         <p class="text-sm text-neutral-500 dark:text-neutral-400">
-            © <a href="https://schadokar.dev">Shubham Chadokar</a> 2021
+            © <a href="https://schadokar.dev">Shubham Chadokar</a> 2023
         </p>
       
       
@@ -1101,27 +1082,6 @@ After update
       
     </div>
     
-    
-      <div
-        class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-      >
-        <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
-          <div
-            class="flex h-12 w-12 items-center justify-center dark:hidden"
-            title="Switch to dark appearance"
-          >
-            <span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
-</span>
-          </div>
-          <div
-            class="hidden h-12 w-12 items-center justify-center dark:flex"
-            title="Switch to light appearance"
-          >
-            <span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
-</span>
-          </div>
-        </button>
-      </div>
     
   </div>
   

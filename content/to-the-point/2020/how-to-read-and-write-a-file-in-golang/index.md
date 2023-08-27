@@ -3,7 +3,7 @@ title: "How to Read and Write a File in Golang?"
 date: 2020-03-24T11:13:24+05:30
 description: "In this tutorial, we will learn how to read and write files in the file system using the `io/ioutil` package."
 categories: ["Tutorial", "to-the-point", "Golang"]
-tags: ["golang","to-the-point"]
+tags: ["golang", "to-the-point"]
 cover: https://schadokar.dev/images/golang-basic.png
 published: true
 ---
@@ -44,9 +44,10 @@ func main() {
 This will create a new file `hello.txt` in the current directory.
 
 ### File mode
+
 Most file systems have methods to assign permissions or access rights to specific users and groups of users. These permissions control the ability of the users to view, change, navigate, and execute the contents of the file system. -- [wikipedia](https://en.wikipedia.org/wiki/File_system_permissions)
 
-A few examples of filemode number notation. 
+A few examples of filemode number notation.
 
 ```
 0000     no permissions
@@ -59,8 +60,9 @@ A few examples of filemode number notation.
 0444     read
 0555     read & execute
 0666     read & write
-0740     owner can read, write, & execute; group can only read; others have no permissions 
+0740     owner can read, write, & execute; group can only read; others have no permissions
 ```
+
 ---
 
 ## Read a file using ReadFile
@@ -95,17 +97,20 @@ func main() {
     fmt.Println(string(content))
 }
 ```
+
 Output
+
 ```
 Hello Gopher!
 ```
+
 ---
 
 ## Write to an existing file
 
-### 1.  using ioutil
+### 1. using ioutil
 
-First using `ReadFile`, we will read the content and then we will append the new content.  
+First using `ReadFile`, we will read the content and then we will append the new content.
 
 ```go
 package main
@@ -122,10 +127,10 @@ func main() {
     if err != nil {
         log.Fatalf("error while reading the file. %v", err)
     }
-    
+
     //  new content
     newText := []byte("\nAppended text.")
-    
+
     // append the content
     content = append(content, newText...)
 
@@ -137,9 +142,11 @@ func main() {
     }
 }
 ```
+
 The 3 dots after `newText...` is a variadic argument. In simple terms it will extract all the array elements. [Learn more](https://medium.com/rungo/variadic-function-in-go-5d9b23f4c01a)
 
 For Example:
+
 ```go
 if a = [1,2,3,4]
 
@@ -149,11 +156,13 @@ func (a...) => func (1, 2, 3, 4)
 ### 2. using os package
 
 Using [OpenFile](https://golang.org/pkg/os/#OpenFile) in the [os](https://golang.org/pkg/os/) package we can open the file and append the data in it.
-> Package os provides a platform-independent interface to operating system functionality. 
+
+> Package os provides a platform-independent interface to operating system functionality.
 
 ```go
 func OpenFile(name string, flag int, perm FileMode) (*File, error)
 ```
+
 The [flag](https://golang.org/pkg/os/#pkg-constants) parameter defines the operation on the file. The available flags are:
 
 ```
@@ -218,6 +227,7 @@ type library struct {
 ```
 
 Create books and library
+
 ```go
     // create some books
     books := []book{
@@ -231,6 +241,7 @@ Create books and library
 ```
 
 ### Write JSON
+
 The library is in golang struct format. To convert it JSON we need to marshal it.
 
 ```go
@@ -250,6 +261,7 @@ Save it in `library.json`
 ```
 
 ### Read JSON
+
 Read the `library.json`.
 
 ```go
@@ -280,6 +292,7 @@ The data is in byte. Unmarshal it to access the data.
         fmt.Printf("%v| Name: %-40s | Author: %s\n", i, book.Name, book.Author)
     }
 ```
+
 Output
 
 ```
@@ -287,11 +300,12 @@ Output
 1| Name: Go in Action                             | Author: William Kennedy
 2| Name: The way to Go                            | Author: IVO BALBAERT
 ```
-The output is formatted because we used a little string formatting.  
-In the `Printf`, we have used `%-40s`.  `40` is the width. `-` align the data to left. [Learn more](https://gobyexample.com/string-formatting) about string formatting.  
 
-> Width is measured in units of Unicode code points, that is, runes.   
-> For most values, width is the minimum number of runes to output, padding the formatted form with spaces if necessary. 
+The output is formatted because we used a little string formatting.  
+In the `Printf`, we have used `%-40s`. `40` is the width. `-` align the data to left. [Learn more](https://gobyexample.com/string-formatting) about string formatting.
+
+> Width is measured in units of Unicode code points, that is, runes.  
+> For most values, width is the minimum number of runes to output, padding the formatted form with spaces if necessary.
 
 The complete code will look like this
 
@@ -460,7 +474,8 @@ func main() {
 }
 ```
 
-Output 
+Output
+
 ```
 Before Update
 0| Name: An Introduction to programming in Go     | Author: Caleb Doxsey
@@ -477,7 +492,8 @@ After update
 ---
 
 ## References
-- [How to use JSON in Golang?](https://schadokar.dev/posts/how-to-use-json-in-golang/)
+
+- [How to use JSON in Golang?](https://schadokar.dev/posts/json-in-golang/)
 - [Golang documentation](https://golang.org/pkg/io/ioutil/)
 
 ---

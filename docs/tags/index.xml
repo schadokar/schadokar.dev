@@ -6,104 +6,23 @@
     <description>Recent content in Tags on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2021</copyright>
-    <lastBuildDate>Wed, 28 Apr 2021 18:03:25 +0530</lastBuildDate><atom:link href="https://schadokar.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2023</copyright>
+    <lastBuildDate>Thu, 15 Apr 2021 16:01:12 +0530</lastBuildDate><atom:link href="https://schadokar.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2021</title>
       <link>https://schadokar.dev/tags/2021/</link>
-      <pubDate>Wed, 28 Apr 2021 18:03:25 +0530</pubDate>
+      <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/2021/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>to-the-point</title>
-      <link>https://schadokar.dev/tags/to-the-point/</link>
-      <pubDate>Wed, 28 Apr 2021 18:03:25 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/to-the-point/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://schadokar.dev/tags/golang/</link>
-      <pubDate>Sun, 25 Apr 2021 16:48:05 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rss-feed</title>
-      <link>https://schadokar.dev/tags/rss-feed/</link>
-      <pubDate>Sat, 24 Apr 2021 11:11:31 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/rss-feed/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://schadokar.dev/tags/hugo/</link>
-      <pubDate>Fri, 23 Apr 2021 14:01:13 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javscript</title>
-      <link>https://schadokar.dev/tags/javscript/</link>
-      <pubDate>Thu, 22 Apr 2021 16:23:30 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/javscript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>javascript</title>
       <link>https://schadokar.dev/tags/javascript/</link>
-      <pubDate>Wed, 21 Apr 2021 15:55:10 +0530</pubDate>
+      <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cryptocurrency</title>
-      <link>https://schadokar.dev/tags/cryptocurrency/</link>
-      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/cryptocurrency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://schadokar.dev/tags/html/</link>
-      <pubDate>Tue, 20 Apr 2021 13:54:31 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github-pages</title>
-      <link>https://schadokar.dev/tags/github-pages/</link>
-      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/github-pages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>material-ui</title>
-      <link>https://schadokar.dev/tags/material-ui/</link>
-      <pubDate>Fri, 16 Apr 2021 15:49:50 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/material-ui/</guid>
       <description></description>
     </item>
     
@@ -113,15 +32,6 @@
       <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/tips/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data structures</title>
-      <link>https://schadokar.dev/tags/data-structures/</link>
-      <pubDate>Sat, 20 Feb 2021 00:42:58 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/data-structures/</guid>
       <description></description>
     </item>
     
@@ -144,11 +54,11 @@
     </item>
     
     <item>
-      <title>string</title>
-      <link>https://schadokar.dev/tags/string/</link>
-      <pubDate>Tue, 15 Dec 2020 10:10:29 +0530</pubDate>
+      <title>golang</title>
+      <link>https://schadokar.dev/tags/golang/</link>
+      <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
       
-      <guid>https://schadokar.dev/tags/string/</guid>
+      <guid>https://schadokar.dev/tags/golang/</guid>
       <description></description>
     </item>
     
@@ -158,15 +68,6 @@
       <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/good-practice/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>array</title>
-      <link>https://schadokar.dev/tags/array/</link>
-      <pubDate>Fri, 04 Sep 2020 09:29:51 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/array/</guid>
       <description></description>
     </item>
     
@@ -252,29 +153,20 @@
     </item>
     
     <item>
+      <title>to-the-point</title>
+      <link>https://schadokar.dev/tags/to-the-point/</link>
+      <pubDate>Sat, 18 Jul 2020 13:33:52 +0530</pubDate>
+      
+      <guid>https://schadokar.dev/tags/to-the-point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>sendinblue</title>
       <link>https://schadokar.dev/tags/sendinblue/</link>
-      <pubDate>Sat, 20 Jun 2020 17:43:00 +0530</pubDate>
+      <pubDate>Thu, 11 Jun 2020 11:07:11 +0530</pubDate>
       
       <guid>https://schadokar.dev/tags/sendinblue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gcp</title>
-      <link>https://schadokar.dev/tags/gcp/</link>
-      <pubDate>Mon, 13 Apr 2020 22:50:46 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/gcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>azure</title>
-      <link>https://schadokar.dev/tags/azure/</link>
-      <pubDate>Fri, 27 Mar 2020 14:56:35 +0530</pubDate>
-      
-      <guid>https://schadokar.dev/tags/azure/</guid>
       <description></description>
     </item>
     
