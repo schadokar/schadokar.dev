@@ -20,15 +20,15 @@ Sending emails in nodejs have only 2 requirements:
 - Middleware to connect with mail service (For ex. nodemailer)
 
 # Series:
-- [How to Send Email in Nodejs - Part 1](https://schadokar.dev/posts/how-to-send-email-in-nodejs/)  
+
+- [How to Send Email in Nodejs - Part 1](https://schadokar.dev/posts/how-to-send-email-in-nodejs/)
 - [How to Send Email in Nodejs with Expressjs - Part 2](https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/)
 
 # Prerequisites
+
 - Node.js (>v6.0.0 for nodemailer module)
 - Code Editor (For Ex. VS Code, Atom)
 - An account in [Brevo (formerly Sendinblue)](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
-
-> Check out this step by step tutorial to [Create an account in brevo](https://schadokar.dev/to-the-point/create-an-account-in-brevo/).
 
 # Getting Started
 

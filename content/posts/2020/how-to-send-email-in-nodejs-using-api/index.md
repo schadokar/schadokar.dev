@@ -10,12 +10,13 @@ toc: true
 published: true
 ---
 
-This is the 2nd part of the ***How to send email in Nodejs*** series. In the last section, we created the function to send the email using node cli.  
+This is the 2nd part of the **_How to send email in Nodejs_** series. In the last section, we created the function to send the email using node cli.
 
-In this section, we will use the Expressjs and expose the functionality as an API. To test the api, we're going to use 2 options Curl command and Postman.  
+In this section, we will use the Expressjs and expose the functionality as an API. To test the api, we're going to use 2 options Curl command and Postman.
 
 # Series:
-- [How to Send Email in Nodejs - Part 1](https://schadokar.dev/posts/how-to-send-email-in-nodejs/)  
+
+- [How to Send Email in Nodejs - Part 1](https://schadokar.dev/posts/how-to-send-email-in-nodejs/)
 - [How to Send Email in Nodejs with Expressjs - Part 2](https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/)
 
 # Pre-requisite
@@ -24,17 +25,17 @@ In this section, we will use the Expressjs and expose the functionality as an AP
 - Code Editor (For Ex. VS Code, Atom)
 - An account in [Brevo (formerly Sendinblue) ](https://www.brevo.com/?tap_a=30591-fb13f0&tap_s=956728-d372bc)
 
-> Check out this step by step tutorial to [Create an account in brevo](https://schadokar.dev/to-the-point/create-an-account-in-brevo/).
-
 # Getting Started
 
 Let's first install all the dependencies.
+
 - express - To create routes
 - body-parser - To access the parameters passed with API request
 - cors - To handle the cross origin resource sharing
 - dotenv - To access the .env file which we are going to use to save the credentials
 
 Open the terminal inside the project and run the below command.
+
 ```js
 npm install --save express body-parser cors dotenv
 ```
@@ -120,6 +121,7 @@ module.exports = sendEmail;
 ```
 
 Let's understand the code
+
 - `require("dotenv").config();` is used to load the `.env` file, so that using `process.env.{KEY}` we can access the environment variables defined in the `.env` file.
 - The function takes an object with `to`, `from`, `subject` and `text` arguments.
 - `nodemailer.createTransport` creating a transport object with all the required details of the message service provider and user access to that.
@@ -167,6 +169,7 @@ This approach is optional, if the application requires the input validation, the
 In the `html` field of `sendMail` method, it can read the pure `html` code. But this is not recommended.  
 Instead you can create a `mail.html` template and give its path to it.  
 Create a new file `mail.html` and paste the below code in it.
+
 ```html
 <div style="text-align: center;">
   <h1 style="color: #3584c8;">Nodemailer Example</h1>
@@ -179,9 +182,9 @@ Create a new file `mail.html` and paste the below code in it.
 </div>
 ```
 
-You can use a dynamic html template, in which you pass the arguments. But that is out of the scope for this tutorial.  
+You can use a dynamic html template, in which you pass the arguments. But that is out of the scope for this tutorial.
 
-### index.js  
+### index.js
 
 Open the `index.js` and paste the below code. This `index.js` is the entry point for this application. It is importing all the application route and creating a express server to host the application on `4444` port.
 
@@ -200,7 +203,7 @@ app.use(
   bodyParser.urlencoded({
     limit: "50mb",
     extended: false,
-    parameterLimit: 50000
+    parameterLimit: 50000,
   })
 );
 
@@ -216,8 +219,10 @@ app.listen(port, function () {
 ```
 
 ## Run Time
+
 Now, the fun part. Let's send some emails.  
 Open the terminal inside the project directory and run the below command.
+
 ```
 node index.js
 ```
@@ -225,7 +230,8 @@ node index.js
 This will start the server at `4444` if no `PORT` environment variable defined.
 
 Open the Postman and create a `POST` request to `localhost:4444/api/v1/sendmail`.  
-In the `Body` tab, select the `JSON` option. Modify the body accordingly.  
+In the `Body` tab, select the `JSON` option. Modify the body accordingly.
+
 ```js
 {
     "from": "hello@schadokar.dev",
@@ -235,7 +241,8 @@ In the `Body` tab, select the `JSON` option. Modify the body accordingly.
     "subject": "Mail from Nodemailer",
     "message": "Sending an email using nodemailer package."
 }
-```  
+```
+
 Hit Send.
 
 ![Postman](./images/postman-test.PNG)
@@ -245,7 +252,8 @@ Hit Send.
 Open you email and check the inbox. If you could not find it in inbox try to check in promotion.
 
 ### Text email
-If you haven't used the `html` field in the `sendMail` then your mail will look like this.  
+
+If you haven't used the `html` field in the `sendMail` then your mail will look like this.
 
 ![txt](./images/mail-text.PNG)
 
@@ -256,8 +264,9 @@ When you are using `html` field then it ignores the `text` field and only send t
 ![html](./images/mail-html.PNG)
 
 # Conclusion
+
 We have finished the api part of this application and with this our backend is completed.  
-Now, you can use any frontend framework to utilize this API.  
+Now, you can use any frontend framework to utilize this API.
 
 You can find the complete code on the [GitHub](https://github.com/schadokar/nodemailer-app).  
 Thanks for reading.
