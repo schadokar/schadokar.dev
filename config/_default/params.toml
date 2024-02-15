@@ -6,9 +6,9 @@
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
 
-colorScheme = "ocean"
+colorScheme = "fire"
 defaultAppearance = "light" # valid options: light or dark
-autoSwitchAppearance = true
+autoSwitchAppearance = false
 
 enableSearch = true
 enableCodeCopy = true
@@ -78,5 +78,5 @@ enableCodeCopy = true
 [footer]
   showCopyright = true
   showThemeAttribution = true
-  showAppearanceSwitcher = false
+  showAppearanceSwitcher = true
   showScrollToTop = true

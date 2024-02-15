@@ -6,16 +6,15 @@
     <description>Recent content in Algorithm on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2023</copyright>
-    <lastBuildDate>Thu, 13 Feb 2020 23:25:31 +0530</lastBuildDate><atom:link href="https://schadokar.dev/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2024</copyright>
+    <lastBuildDate>Thu, 13 Feb 2020 23:25:31 +0530</lastBuildDate>
+    <atom:link href="https://schadokar.dev/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understand Quicksort the easy way</title>
       <link>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</link>
       <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
-      
       <guid>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</guid>
       <description>Photo by Iñaki del Olmo on Unsplash</description>
     </item>
-    
   </channel>
 </rss>

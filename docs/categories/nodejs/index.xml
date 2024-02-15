@@ -6,34 +6,29 @@
     <description>Recent content in Nodejs on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2023</copyright>
-    <lastBuildDate>Sun, 06 Sep 2020 11:51:52 +0530</lastBuildDate><atom:link href="https://schadokar.dev/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2024</copyright>
+    <lastBuildDate>Sun, 06 Sep 2020 11:51:52 +0530</lastBuildDate>
+    <atom:link href="https://schadokar.dev/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basic validations every nodejs developer should know</title>
       <link>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</link>
       <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
-      
       <guid>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</guid>
       <description>Validations are the key things to prevent the application&amp;rsquo;s unexpected behaviour.</description>
     </item>
-    
     <item>
       <title>How to Send Email in Nodejs with Expressjs</title>
       <link>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</link>
       <pubDate>Sun, 26 Jul 2020 09:21:13 +0530</pubDate>
-      
       <guid>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</guid>
       <description>This is the 2nd part of the How to send email in Nodejs series.</description>
     </item>
-    
     <item>
       <title>How to Send Email in Nodejs</title>
       <link>https://schadokar.dev/posts/how-to-send-email-in-nodejs/</link>
       <pubDate>Sun, 19 Jul 2020 18:16:06 +0530</pubDate>
-      
       <guid>https://schadokar.dev/posts/how-to-send-email-in-nodejs/</guid>
       <description>This is a series of articles on how to send an email in nodejs.</description>
     </item>
-    
   </channel>
 </rss>

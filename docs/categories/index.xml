@@ -6,124 +6,99 @@
     <description>Recent content in Categories on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2023</copyright>
-    <lastBuildDate>Thu, 15 Apr 2021 16:01:12 +0530</lastBuildDate><atom:link href="https://schadokar.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2024</copyright>
+    <lastBuildDate>Thu, 15 Apr 2021 16:01:12 +0530</lastBuildDate>
+    <atom:link href="https://schadokar.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2021</title>
       <link>https://schadokar.dev/categories/2021/</link>
       <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/2021/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Javascript</title>
       <link>https://schadokar.dev/categories/javascript/</link>
       <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/javascript/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>2020</title>
       <link>https://schadokar.dev/categories/2020/</link>
       <pubDate>Fri, 01 Jan 2021 12:41:41 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/2020/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Casual</title>
       <link>https://schadokar.dev/categories/casual/</link>
       <pubDate>Fri, 01 Jan 2021 12:41:41 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/casual/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Golang</title>
       <link>https://schadokar.dev/categories/golang/</link>
       <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/golang/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>to-the-point</title>
       <link>https://schadokar.dev/categories/to-the-point/</link>
       <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/to-the-point/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Article</title>
       <link>https://schadokar.dev/categories/article/</link>
       <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/article/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Nodejs</title>
       <link>https://schadokar.dev/categories/nodejs/</link>
       <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/nodejs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Serverless</title>
       <link>https://schadokar.dev/categories/serverless/</link>
       <pubDate>Mon, 10 Aug 2020 23:19:26 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/serverless/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Cloud</title>
       <link>https://schadokar.dev/categories/cloud/</link>
       <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/cloud/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tutorial</title>
       <link>https://schadokar.dev/categories/tutorial/</link>
       <pubDate>Sun, 26 Jul 2020 09:21:13 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/tutorial/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Algorithm</title>
       <link>https://schadokar.dev/categories/algorithm/</link>
       <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/algorithm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>JS</title>
       <link>https://schadokar.dev/categories/js/</link>
       <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
-      
       <guid>https://schadokar.dev/categories/js/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

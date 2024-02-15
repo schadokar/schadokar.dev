@@ -7,7 +7,7 @@ languageCode = "en"
 defaultContentLanguage = "en"
 
 title = "schadokar.dev"
-copyright =  "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2023"
+copyright =  "&copy; <a href=\"https://schadokar.dev\">Shubham Chadokar</a> 2024"
 
 enableEmoji = true
 enableRobotsTXT = true
@@ -22,11 +22,11 @@ googleAnalytics = "G-FQRDVY1Q17"
 
 # content management
 [permalinks]
-  enable = true
+  #enable = false
   posts = "/posts/:title/"
   to-the-point = "/to-the-point/:title/"
 
-[author]
+[params.author]
   name = "Shubham Chadokar"
   image = "images/pic.png"
   bio = "I'm a software engineer and a learner. This is a documentation website of my learnings for my future self."
@@ -36,6 +36,7 @@ googleAnalytics = "G-FQRDVY1Q17"
     { github = "https://github.com/schadokar" },
     { linkedin = "https://linkedin.com/in/schadokar" },
     { medium = "https://medium.com/@schadokar" },
+    { youtube = "https://youtube.com/@practicego" },
   ]
 
   #   { link = "https://link-to-some-website.com/" },

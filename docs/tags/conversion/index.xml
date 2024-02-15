@@ -6,25 +6,22 @@
     <description>Recent content in conversion on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2023</copyright>
-    <lastBuildDate>Thu, 17 Dec 2020 22:58:00 +0530</lastBuildDate><atom:link href="https://schadokar.dev/tags/conversion/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2024</copyright>
+    <lastBuildDate>Thu, 17 Dec 2020 22:58:00 +0530</lastBuildDate>
+    <atom:link href="https://schadokar.dev/tags/conversion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Convert Hexadecimal to Decimal and Decimal to Hexadecimal in Golang</title>
       <link>https://schadokar.dev/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</link>
       <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
-      
       <guid>https://schadokar.dev/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</guid>
-      <description>Decimal Number System # Decimal number system is the standard system for denoting integers and non-integers numbers.</description>
+      <description>Decimal Number System #Decimal number system is the standard system for denoting integers and non-integers numbers.</description>
     </item>
-    
     <item>
       <title>Convert Byte to Hex and Hex to Byte in Golang</title>
       <link>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</link>
       <pubDate>Sat, 18 Jul 2020 13:33:52 +0530</pubDate>
-      
       <guid>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
       <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,16 +6,15 @@
     <description>Recent content in Ebooks on schadokar.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2023</copyright>
-    <lastBuildDate>Wed, 23 Sep 2020 13:54:31 +0530</lastBuildDate><atom:link href="https://schadokar.dev/ebooks/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2024</copyright>
+    <lastBuildDate>Wed, 23 Sep 2020 13:54:31 +0530</lastBuildDate>
+    <atom:link href="https://schadokar.dev/ebooks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Playtime with Hyperleder Composer</title>
       <link>https://schadokar.dev/ebooks/playtime-with-hyperledger-composer/</link>
       <pubDate>Wed, 23 Sep 2020 13:54:31 +0530</pubDate>
-      
       <guid>https://schadokar.dev/ebooks/playtime-with-hyperledger-composer/</guid>
       <description>Create a supplychain management project in Blockchain using Hyperledger Composer.</description>
     </item>
-    
   </channel>
 </rss>
