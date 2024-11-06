@@ -11,32 +11,32 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "YouTube"
+  name = "youtube"
   url = "https://youtube.com/@practicego"
   weight = 10
 
 [[main]]
-  name = "Blog"
+  name = "blog"
   pageRef = "posts"
   weight = 20
 
 [[main]]
-  name = "To The Point"
+  name = "to the point"
   pageRef = "to-the-point"
   weight = 30
 
 #[[main]]
-#  name = "About Me"
+#  name = "about me"
 #  pageRef = "about"
 #  weight = 40
 
 #[[main]]
-#  name = "Newsletter"
+#  name = "newsletter"
 #  url = "https://schadokar.substack.com"
 #  weight = 30
 
 [[main]]
-  name = "Archive"
+  name = "archive"
   url = "https://schadokar.github.io/archive/"
   weight = 40
 
@@ -46,6 +46,6 @@
 # the copyright notice. Configure as per the main menu above.
 
 #[[footer]]
-#  name = "Archive"
+#  name = "archive"
 #  pageRef = "https://schadokar.github.io/archive/"
 #  weight = 10

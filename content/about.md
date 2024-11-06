@@ -20,7 +20,7 @@ My favourites are Meluha and The Kite Runner.
 
 **2022**
 
-- **How to Dockerize an Ethereum Decentralized Application** @ [DockerCon 2022](https://docker.events.cube365.net/dockercon/2022/content/Videos/DyAzcd5YSn6NvEhHs) - [Presentation](https://docs.google.com/presentation/d/1Ll9ZippmL1ELZXDWD1EalI79O2L11hT6Y9Fv-5D4Ty0/edit?usp=sharing)
+- **How to Dockerize an Ethereum Decentralized Application** @ [DockerCon 2022](https://youtu.be/HEjGn3CQ1Ms?si=tTfmavGt7lCZx6aV) - [Presentation](https://docs.google.com/presentation/d/1Ll9ZippmL1ELZXDWD1EalI79O2L11hT6Y9Fv-5D4Ty0/edit?usp=sharing)
 
 **2020**
 

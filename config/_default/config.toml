@@ -28,7 +28,7 @@ googleAnalytics = "G-FQRDVY1Q17"
 
 [params.author]
   name = "Shubham Chadokar"
-  image = "images/t1.png"
+  image = "images/pic3.jpg"
   bio = "I'm a software engineer and a learner. This is a documentation website of my learnings for my future self."
   links = [
     { email = "mailto:hello@schadokar.dev" },
