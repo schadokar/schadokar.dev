@@ -36,7 +36,7 @@ googleAnalytics = "G-FQRDVY1Q17"
     { github = "https://github.com/schadokar" },
     { linkedin = "https://linkedin.com/in/schadokar" },
     { medium = "https://medium.com/@schadokar" },
-    { youtube = "https://youtube.com/@practicego" },
+  #  { youtube = "https://youtube.com/@practicego" },
   ]
 
   #   { link = "https://link-to-some-website.com/" },
