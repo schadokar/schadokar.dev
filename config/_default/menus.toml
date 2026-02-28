@@ -1,7 +1,7 @@
 # -- Main Menu --
 # The main menu is displayed in the header at the top of the page.
 # Acceptable parameters are name, pageRef, page, url, title, weight.
-# 
+#
 # The simplest menu configuration is to provide:
 #   name = The name to be displayed for this menu link
 #   pageRef = The identifier of the page or section to link to
@@ -10,42 +10,22 @@
 # overridden by providing a weight value. The menu will then be
 # ordered by weight from lowest to highest.
 
-#[[main]]
-#  name = "youtube"
-#  url = "https://youtube.com/@practicego"
-#  weight = 10
-
 [[main]]
   name = "blog"
   pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "notes"
+  pageRef = "notes"
   weight = 20
 
 [[main]]
-  name = "to the point"
-  pageRef = "to-the-point"
+  name = "about"
+  pageRef = "about"
   weight = 30
-
-#[[main]]
-#  name = "about me"
-#  pageRef = "about"
-#  weight = 40
-
-#[[main]]
-#  name = "newsletter"
-#  url = "https://schadokar.substack.com"
-#  weight = 30
-
-[[main]]
-  name = "archive"
-  url = "https://schadokar.github.io/archive/"
-  weight = 40
 
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
-
-#[[footer]]
-#  name = "archive"
-#  pageRef = "https://schadokar.github.io/archive/"
-#  weight = 10
