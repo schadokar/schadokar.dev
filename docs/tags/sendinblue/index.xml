@@ -4,7 +4,7 @@
     <title>Sendinblue on schadokar.dev</title>
     <link>https://schadokar.dev/tags/sendinblue/</link>
     <description>Recent content in Sendinblue on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Thu, 11 Jun 2020 11:07:11 +0530</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://schadokar.dev/posts/how-to-send-email-in-golang/</link>
       <pubDate>Thu, 11 Jun 2020 11:07:11 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-send-email-in-golang/</guid>
-      <description>This is a series of tutorials: sending email in golang.</description>
+      <description></description>
     </item>
   </channel>
 </rss>

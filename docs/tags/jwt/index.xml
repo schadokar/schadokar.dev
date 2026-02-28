@@ -4,7 +4,7 @@
     <title>Jwt on schadokar.dev</title>
     <link>https://schadokar.dev/tags/jwt/</link>
     <description>Recent content in Jwt on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Thu, 30 Jul 2020 11:17:11 +0530</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://schadokar.dev/posts/secure-your-api-using-jwt-in-golang/</link>
       <pubDate>Thu, 30 Jul 2020 11:17:11 +0530</pubDate>
       <guid>https://schadokar.dev/posts/secure-your-api-using-jwt-in-golang/</guid>
-      <description>In this tutorial, we will learn how to secure the APIs using the JWT authentication in Golang.</description>
+      <description></description>
     </item>
   </channel>
 </rss>

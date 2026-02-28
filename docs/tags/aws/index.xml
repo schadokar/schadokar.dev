@@ -4,7 +4,7 @@
     <title>Aws on schadokar.dev</title>
     <link>https://schadokar.dev/tags/aws/</link>
     <description>Recent content in Aws on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Sun, 09 Aug 2020 16:04:50 +0530</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://schadokar.dev/posts/create-your-first-serverless-application/</link>
       <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
       <guid>https://schadokar.dev/posts/create-your-first-serverless-application/</guid>
-      <description>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources.</description>
+      <description></description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
     <title>Email on schadokar.dev</title>
     <link>https://schadokar.dev/tags/email/</link>
     <description>Recent content in Email on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Sun, 26 Jul 2020 09:21:13 +0530</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</link>
       <pubDate>Sun, 26 Jul 2020 09:21:13 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</guid>
-      <description>This is the 2nd part of the How to send email in Nodejs series.</description>
+      <description></description>
     </item>
   </channel>
 </rss>

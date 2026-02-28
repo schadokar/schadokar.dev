@@ -4,7 +4,7 @@
     <title>Serverless on schadokar.dev</title>
     <link>https://schadokar.dev/categories/serverless/</link>
     <description>Recent content in Serverless on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Mon, 10 Aug 2020 23:19:26 +0530</lastBuildDate>
@@ -14,14 +14,14 @@
       <link>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</link>
       <pubDate>Mon, 10 Aug 2020 23:19:26 +0530</pubDate>
       <guid>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</guid>
-      <description>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.</description>
+      <description></description>
     </item>
     <item>
       <title>Create your first Serverless application</title>
       <link>https://schadokar.dev/posts/create-your-first-serverless-application/</link>
       <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
       <guid>https://schadokar.dev/posts/create-your-first-serverless-application/</guid>
-      <description>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources.</description>
+      <description></description>
     </item>
   </channel>
 </rss>

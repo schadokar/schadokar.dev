@@ -4,7 +4,6 @@
 
 
 
-
 <!doctype html>
 <html
   lang="en"
@@ -15,7 +14,7 @@
 ><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="rgb(255,255,255)" />
+  <meta name="theme-color" content="#FFFFFF" />
   
   <title>Understand Quicksort the easy way &middot; schadokar.dev</title>
     <meta name="title" content="Understand Quicksort the easy way &middot; schadokar.dev" />
@@ -26,8 +25,8 @@
   
   <script
     type="text/javascript"
-    src="/js/appearance.min.022d0ebc3b46a335eb1c7ef79b7f2de143d7cd5156d433638592ef1ce5f8554e.js"
-    integrity="sha256-Ai0OvDtGozXrHH73m38t4UPXzVFW1DNjhZLvHOX4VU4="
+    src="https://schadokar.dev/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
   ></script>
   
   
@@ -42,8 +41,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.a6c6a6e12df5bdd53036d0796e756aaf9db98be8cf037b952a7f69f135dd1735.css"
-    integrity="sha256-psam4S31vdUwNtB5bnVqr525i&#43;jPA3uVKn9p8TXdFzU="
+    href="https://schadokar.dev/css/main.bundle.min.9b30f4828872d41c5ecb4c918bada07702391b4bbc6d8b03bd405e28e6ddebe3.css"
+    integrity="sha256-mzD0gohy1Bxey0yRi62gdwI5G0u8bYsDvUBeKObd6&#43;M="
   />
   
     
@@ -63,8 +62,8 @@
       defer
       type="text/javascript"
       id="script-bundle"
-      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
-      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      src="https://schadokar.dev/js/main.bundle.min.167efd96c29259046e711c52c0db66536f497aad73a774cd6f28fc408f2d2688.js"
+      integrity="sha256-Fn79lsKSWQRucRxSwNtmU29Jeq1zp3TNbyj8QI8tJog="
       data-copy="Copy"
       data-copied="Copied"
     ></script>
@@ -79,7 +78,9 @@
   
   
   
-  <link rel="canonical" href="https://schadokar.dev/posts/understand-quicksort-the-easy-way/" />
+  
+    <link rel="canonical" href="https://schadokar.dev/posts/understand-quicksort-the-easy-way/" />
+  
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -89,22 +90,32 @@
   
   
   
+    <meta name="google-site-verification" content="3dSuAe8l4Kidk83Q7KqDQmOOrRxts0hG3QSzbpD8DUE" />
   
   
   
   
   
-  <meta property="og:title" content="Understand Quicksort the easy way" />
-<meta property="og:description" content="Quicksort is one of the efficient sorting algorithms and the average complexity is `O(n log n)`." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://schadokar.dev/posts/understand-quicksort-the-easy-way/" /><meta property="og:image" content="https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic.jpg" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-02-13T23:25:31+05:30" />
-<meta property="article:modified_time" content="2020-02-13T23:25:31+05:30" />
+  
+  <meta property="og:url" content="https://schadokar.dev/posts/understand-quicksort-the-easy-way/">
+  <meta property="og:site_name" content="schadokar.dev">
+  <meta property="og:title" content="Understand Quicksort the easy way">
+  <meta property="og:description" content="Quicksort is one of the efficient sorting algorithms and the average complexity is `O(n log n)`.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-02-13T23:25:31+05:30">
+    <meta property="article:modified_time" content="2020-02-13T23:25:31+05:30">
+    <meta property="article:tag" content="Algorithm">
+    <meta property="article:tag" content="Js">
+    <meta property="article:tag" content="Tutorial">
+    <meta property="og:image" content="https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic.jpg">
 
-
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic.jpg" /><meta name="twitter:title" content="Understand Quicksort the easy way"/>
-<meta name="twitter:description" content="Quicksort is one of the efficient sorting algorithms and the average complexity is `O(n log n)`."/>
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic.jpg">
+  <meta name="twitter:title" content="Understand Quicksort the easy way">
+  <meta name="twitter:description" content="Quicksort is one of the efficient sorting algorithms and the average complexity is `O(n log n)`.">
 
   
   <script type="application/ld+json">
@@ -115,7 +126,7 @@
     "name": "Understand Quicksort the easy way",
     "headline": "Understand Quicksort the easy way",
     "description": "Quicksort is one of the efficient sorting algorithms and the average complexity is \u0060O(n log n)\u0060.",
-    "abstract": "Photo by Iñaki del Olmo on Unsplash",
+    
     "inLanguage": "en",
     "url" : "https:\/\/schadokar.dev\/posts\/understand-quicksort-the-easy-way\/",
     "author" : {
@@ -134,10 +145,43 @@
     "wordCount": "1255"
   }
   </script>
-
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://schadokar.dev/",
+       "name": "Schadokar.dev",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://schadokar.dev/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://schadokar.dev/categories/tutorial/",
+       "name": "Tutorial",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Understand Quicksort the Easy Way",
+       "position": 4
+     }
+   ]
+ }
+  </script>
 
   
-  <meta name="author" content="Shubham Chadokar" />
+  
+    <meta name="author" content="Shubham Chadokar" />
+  
   
     
       <link href="mailto:hello@schadokar.dev" rel="me" />
@@ -159,22 +203,27 @@
 
 
 
-  
-  
-  
-  
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FQRDVY1Q17"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-FQRDVY1Q17', { 'anonymize_ip': false });
-}
-</script>
 
+  
+  
+  
+  
+  
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQRDVY1Q17"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FQRDVY1Q17');
+        }
+      </script>
 
 
   
@@ -185,7 +234,7 @@ if (!doNotTrack) {
   
 </head>
 <body
-    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral"
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
   >
     <div id="the-top" class="absolute flex self-center">
       <a
@@ -197,7 +246,7 @@ if (!doNotTrack) {
     </div>
     
     
-      <header class="py-6 font-semibold text-neutral-900 print:hidden sm:py-10 dark:text-neutral">
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
   <nav class="flex items-start justify-between sm:items-center">
     
     <div class="flex flex-row items-center">
@@ -220,7 +269,8 @@ if (!doNotTrack) {
               
                 <a
                   href="/posts/"
-                  title=""
+                  title="Posts"
+                  
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -236,7 +286,8 @@ if (!doNotTrack) {
               
                 <a
                   href="/to-the-point/"
-                  title=""
+                  title="To-the-Points"
+                  
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -253,6 +304,7 @@ if (!doNotTrack) {
                 <a
                   href="https://schadokar.github.io/archive/"
                   title=""
+                  
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -288,11 +340,11 @@ if (!doNotTrack) {
   <article>
     <header class="max-w-prose">
       
-      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         Understand Quicksort the easy way
       </h1>
       
-        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
           
 
 
@@ -354,7 +406,7 @@ if (!doNotTrack) {
 
   
     <picture
-      class="mb-6 -mt-4 rounded-md"
+      class="mb-6 rounded-md"
       
     >
       
@@ -363,12 +415,12 @@ if (!doNotTrack) {
       
         <source
           
-            srcset="/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_330x0_resize_q75_h2_box.webp 330w,/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_660x0_resize_q75_h2_box.webp 660w
+            srcset="https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_ceb0565e61fd913c.webp 330w,https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_18cc4f990e9d58bb.webp 660w
             
-              ,/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_1024x0_resize_q75_h2_box.webp 1024w
+              ,https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_c6285448a233c9e.webp 1024w
             
             
-              ,/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_1320x0_resize_q75_h2_box.webp 1320w
+              ,https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_6c136b90b639abdf.webp 1320w
             "
           
           sizes="100vw"
@@ -378,17 +430,16 @@ if (!doNotTrack) {
       <img
         width="4744"
         height="3163"
-        class="mb-6 -mt-4 rounded-md"
+        class="mb-6 rounded-md"
         
         
         
-          src="/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_660x0_resize_q75_box.jpg"
-          srcset="/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_330x0_resize_q75_box.jpg 330w,/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_660x0_resize_q75_box.jpg 660w
+          src="https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_d7dee97496ad3512.jpg" srcset="https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_c9641bd9b29c373a.jpg 330w,https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_d7dee97496ad3512.jpg 660w
           
-            ,/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_1024x0_resize_q75_box.jpg 1024w
+            ,https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_7d67ee522612a96.jpg 1024w
           
           
-            ,/posts/understand-quicksort-the-easy-way/cover-pic_hu3d03a01dcc18bc5be0e67db3d8d209a6_3993387_1320x0_resize_q75_box.jpg 1320w
+            ,https://schadokar.dev/posts/understand-quicksort-the-easy-way/cover-pic_hu_8ba7e101fb624c7d.jpg 1320w
           "
           sizes="100vw"
         
@@ -404,14 +455,14 @@ if (!doNotTrack) {
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
         <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
-          <div class="toc pe-5 print:hidden lg:sticky lg:top-10">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
             <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
   <summary
-    class="-ms-5 block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 lg:hidden dark:bg-neutral-700 dark:text-neutral-100"
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
   >
     Table of Contents
   </summary>
-  <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
     <li>
@@ -449,9 +500,7 @@ if (!doNotTrack) {
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <p>Photo by 
-<a href="https://unsplash.com/@inakihxz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noreferrer">Iñaki del Olmo</a> on 
-<a href="https://unsplash.com/s/photos/bookshelf?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></p>
+        <p>Photo by <a href="https://unsplash.com/@inakihxz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noreferrer">Iñaki del Olmo</a> on <a href="https://unsplash.com/s/photos/bookshelf?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></p>
 <p>Data structures and Algorithms are the key skills for a software developer. Recently when I was preparing for a job change, learning sorting algorithms was not smooth.<br>
 The theory is simple and straight but its implementation is just the opposite.</p>
 <blockquote>
@@ -467,8 +516,7 @@ There are only 3 worst cases when its complexity is <code>O(n^2)</code>.</p>
 <li>All elements are identical in the array <code>[4,4,4]</code></li>
 </ol>
 <blockquote>
-<p>Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm. Developed by British computer scientist Tony Hoare in 1959 and published in 1961, it is still a commonly used algorithm for sorting. &ndash; 
-<a href="https://en.wikipedia.org/wiki/Quicksort" target="_blank" rel="noreferrer">Wikipedia</a></p>
+<p>Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm. Developed by British computer scientist Tony Hoare in 1959 and published in 1961, it is still a commonly used algorithm for sorting. &ndash; <a href="https://en.wikipedia.org/wiki/Quicksort" target="_blank" rel="noreferrer">Wikipedia</a></p>
 </blockquote>
 <h2 id="how-quicksort-works-thinking" class="relative group">How quicksort works? &#x1f914; <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#how-quicksort-works-thinking" aria-label="Anchor">#</a></span></h2><p>
 
@@ -496,24 +544,6 @@ There are only 3 worst cases when its complexity is <code>O(n^2)</code>.</p>
       
       
       
-        <source
-          
-            srcset="/posts/understand-quicksort-the-easy-way/Quicksort_hu166b54c5f3d6ebbe97ac34a16eb43e6e_776000_330x0_resize_q75_h2_box_1.webp 330w,/posts/understand-quicksort-the-easy-way/Quicksort_hu166b54c5f3d6ebbe97ac34a16eb43e6e_776000_660x0_resize_q75_h2_box_1.webp 660w
-            
-              
-                ,/posts/understand-quicksort-the-easy-way/Quicksort_hu166b54c5f3d6ebbe97ac34a16eb43e6e_776000_973x271_resize_q75_h2_box_1.webp 973w
-              
-            
-            
-              
-                ,/posts/understand-quicksort-the-easy-way/Quicksort_hu166b54c5f3d6ebbe97ac34a16eb43e6e_776000_973x271_resize_q75_h2_box_1.webp 973w
-              
-            "
-          
-          sizes="100vw"
-          type="image/webp"
-        />
-      
       <img
         width="973"
         height="271"
@@ -521,13 +551,12 @@ There are only 3 worst cases when its complexity is <code>O(n^2)</code>.</p>
         
         loading="lazy" decoding="async"
         
-          src="/posts/understand-quicksort-the-easy-way/Quicksort_hu166b54c5f3d6ebbe97ac34a16eb43e6e_776000_660x0_resize_box_1.gif"
-          srcset="/posts/understand-quicksort-the-easy-way/Quicksort_hu166b54c5f3d6ebbe97ac34a16eb43e6e_776000_330x0_resize_box_1.gif 330w,/posts/understand-quicksort-the-easy-way/Quicksort_hu166b54c5f3d6ebbe97ac34a16eb43e6e_776000_660x0_resize_box_1.gif 660w
+          src="https://schadokar.dev/posts/understand-quicksort-the-easy-way/Quicksort_hu_400136e47ec5f14c.gif" srcset="https://schadokar.dev/posts/understand-quicksort-the-easy-way/Quicksort_hu_bbd29f354464e652.gif 330w,https://schadokar.dev/posts/understand-quicksort-the-easy-way/Quicksort_hu_400136e47ec5f14c.gif 660w
           
-            ,/posts/understand-quicksort-the-easy-way/Quicksort.gif 973w
+            ,https://schadokar.dev/posts/understand-quicksort-the-easy-way/Quicksort.gif 973w
           
           
-            ,/posts/understand-quicksort-the-easy-way/Quicksort.gif 973w
+            ,https://schadokar.dev/posts/understand-quicksort-the-easy-way/Quicksort.gif 973w
           "
           sizes="100vw"
         
@@ -538,53 +567,52 @@ There are only 3 worst cases when its complexity is <code>O(n^2)</code>.</p>
 
 </figure>
 
-Gif by 
-<a href="https://commons.wikimedia.org/wiki/File:Quicksort.gif" target="_blank" rel="noreferrer">Wikimedia</a></p>
+Gif by <a href="https://commons.wikimedia.org/wiki/File:Quicksort.gif" target="_blank" rel="noreferrer">Wikimedia</a></p>
 <p>Quicksort works on the <strong><em>divide and conquer algorithm</em></strong>.</p>
 <p>Select any element in the array and this element is known as <strong><code>pivot</code></strong>.<br>
 Quicksort is all about finding the correct position(index) of this <code>pivot</code> in the array.<br>
 Elements less than pivot must be in the left side of the pivot and elements greater than the pivot must be in the right side of the pivot.</p>
 <h3 id="example-explains-better-wink" class="relative group">Example explains better &#x1f609; <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#example-explains-better-wink" aria-label="Anchor">#</a></span></h3><p>We have an array</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">7</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">7</span>];
 </span></span></code></pre></div><p>Any element can be selected as a pivot.<br>
 For this example, the first element of the array is the <code>pivot</code> &#x2693;</p>
 <p>The <code>pivot</code> is <code>3</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>pivot<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">3</span>, [<span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">7</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>pivot<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">3</span>, [<span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">7</span>];
 </span></span></code></pre></div><p>Elements less than pivot: 2, 1<br>
 Elements greater than pivot: 6, 5, 4, 7</p>
 <p>Move the elements less than pivot to the left side of pivot and elements greater than pivot to the right side of the pivot.
 Now, the correct position of the pivot (3) in the array is at index 2.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">7</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">7</span>];
 </span></span></code></pre></div><p>Once, the pivot is in the correct position, divide the array. The elements on the left and the right side of the pivot will be the sub-array.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">7</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">7</span>];
 </span></span><span style="display:flex;"><span>       <span style="color:#ff7b72;font-weight:bold">^</span> last pivot at the correct position
 </span></span><span style="display:flex;"><span>[<span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">1</span>]   [<span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">7</span>];
 </span></span></code></pre></div><p>Sub-array 1: <code>[2, 1]</code><br>
 Sub-array 2: <code>[6, 5, 4, 7]</code></p>
 <h4 id="sub-array-1" class="relative group">Sub-array 1 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sub-array-1" aria-label="Anchor">#</a></span></h4><p>Select the first element <code>2</code> as <code>pivot</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>pivot<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">2</span>, [<span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">1</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>pivot<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">2</span>, [<span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">1</span>];
 </span></span></code></pre></div><p>Elements less than the pivot: 1<br>
 Elements greater than the pivot: No elements</p>
 <p>Again, move the elements less than pivot to the left side of pivot and elements greater than pivot to the right side of the pivot.
 The correct position of the pivot (2) in the sub-array is at index 1.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>];
 </span></span></code></pre></div><p>Now, again divide the array. Elements on the left side and the right side will be sub-array.</p>
 <p>There is no need to create a sub-array if there is only 1 element in the sub-array. It means pivot is already at the correct position in the array.</p>
 <h4 id="sub-array-2" class="relative group">Sub-array 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sub-array-2" aria-label="Anchor">#</a></span></h4><p>Select the first element <code>6</code> as <code>pivot</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>pivot<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">6</span>, [<span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">7</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>pivot<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">6</span>, [<span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">7</span>];
 </span></span></code></pre></div><p>Elements less than the pivot: 5, 4<br>
 Elements greater than the pivot: 7</p>
 <p>Again, move the elements less than pivot to the left side of pivot and elements greater than pivot to the right side of the pivot.
 The correct position of the pivot (6) in the sub-array is at index 2.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">7</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">7</span>];
 </span></span></code></pre></div><p>Now, again divide the array. Elements on the left side and the right side of the pivot will be sub-array.</p>
 <p>Sub-array 21: [5, 4]<br>
 Sub-array 22: [7]</p>
 <p>We have to keep dividing the array by the time all the pivot will be on its correct index.</p>
 <p>After finding the correct position of pivot in <code>sub-array 21</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">5</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">5</span>];
 </span></span></code></pre></div><p>The final array with all its pivot at the correct position.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">7</span>];
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>[<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">7</span>];
 </span></span></code></pre></div><p>Now, we understood the quicksort&rsquo;s process, let&rsquo;s implement it in <code>javascript</code>.</p>
 <hr>
 <h2 id="js-implementation" class="relative group">JS implementation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-implementation" aria-label="Anchor">#</a></span></h2><p>The process has the following steps:</p>
@@ -603,12 +631,9 @@ Sub-array 22: [7]</p>
 <p>If, index <code>i</code> cross-index <code>j</code> then stop there and swap the element at <code>j</code> index with the <code>pivot</code>.</p>
 <p>The index <code>j</code> is the sorted position of the <code>pivot</code> in the array.</p>
 <blockquote>
-<p>The complete code is available on gist. 
-<a href="https://gist.github.com/schadokar/bd991d73d4579da7540227a9ada7f066" target="_blank" rel="noreferrer">js</a> and 
-<a href="https://gist.github.com/schadokar/354a4a1114b29a83f633c5c8424145e0" target="_blank" rel="noreferrer">golang</a> implementation.</p>
+<p>The complete code is available on gist. <a href="https://gist.github.com/schadokar/bd991d73d4579da7540227a9ada7f066" target="_blank" rel="noreferrer">js</a> and <a href="https://gist.github.com/schadokar/354a4a1114b29a83f633c5c8424145e0" target="_blank" rel="noreferrer">golang</a> implementation.</p>
 </blockquote>
 <script src="https://gist.github.com/schadokar/bd991d73d4579da7540227a9ada7f066.js"></script>
-
 <p>&#x1f4a1; Roll up your sleeves</p>
 <ul>
 <li><strong>Line 33:</strong> Check the length of the array. If the length of the array is 1 or less than one, return the array as it is. It means the array is already in sorted order.</li>
@@ -648,7 +673,7 @@ Sub-array 22: [7]</p>
         <source
           
             
-              srcset="/posts/understand-quicksort-the-easy-way/asset1_huff1df9004f11d0c1c122a6d9c9ea6ad5_8154_651x171_resize_q75_h2_box_3.webp"
+              srcset="https://schadokar.dev/posts/understand-quicksort-the-easy-way/asset1_hu_8b004366c765ef6c.webp"
             
           
           sizes="100vw"
@@ -662,7 +687,7 @@ Sub-array 22: [7]</p>
         
         loading="lazy" decoding="async"
         
-          src="/posts/understand-quicksort-the-easy-way/asset1.png"
+          src="https://schadokar.dev/posts/understand-quicksort-the-easy-way/asset1.png"
         
       />
     </picture>
@@ -685,15 +710,12 @@ Sub-array 22: [7]</p>
 </ul>
 <p>A recursive function is a function that calls itself until a predefined condition satisfy.</p>
 <blockquote>
-<p>Recursion in computer science is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem. &ndash; 
-<a href="https://en.wikipedia.org/wiki/Recursion_%28computer_science%29" target="_blank" rel="noreferrer">wikipedia</a></p>
+<p>Recursion in computer science is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem. &ndash; <a href="https://en.wikipedia.org/wiki/Recursion_%28computer_science%29" target="_blank" rel="noreferrer">wikipedia</a></p>
 </blockquote>
 <hr>
 <h2 id="references" class="relative group">References <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#references" aria-label="Anchor">#</a></span></h2><ul>
-<li>
-<a href="https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/" target="_blank" rel="noreferrer">Hackerearth</a></li>
-<li>
-<a href="https://www.youtube.com/watch?v=7h1s2SojIRw&amp;t=440s" target="_blank" rel="noreferrer">Quicksort Algorithm By Abdul Bari</a></li>
+<li><a href="https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/" target="_blank" rel="noreferrer">Hackerearth</a></li>
+<li><a href="https://www.youtube.com/watch?v=7h1s2SojIRw&amp;t=440s" target="_blank" rel="noreferrer">Quicksort Algorithm By Abdul Bari</a></li>
 </ul>
 <hr>
 
@@ -893,7 +915,7 @@ Sub-array 22: [7]</p>
         </span>
         <span>
           
-            <a class="group flex text-right" href="/posts/json-in-golang/">
+            <a class="group flex text-right" href="https://schadokar.dev/posts/json-in-golang/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -906,7 +928,7 @@ Sub-array 22: [7]</p>
                 </span>
               </span>
               <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&rarr;</span
                 ><span class="ltr:hidden rtl:inline">&larr;</span></span
               >
@@ -922,19 +944,23 @@ Sub-array 22: [7]</p>
     </footer>
   </article>
 
-        
-          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
-            <a
-              href="#the-top"
-              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-              aria-label="Scroll to top"
-              title="Scroll to top"
-            >
-              &uarr;
-            </a>
-          </div>
-        
-      </main><footer class="py-10 print:hidden">
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
   
   
   <div class="flex items-center justify-between">
@@ -988,7 +1014,7 @@ Sub-array 22: [7]</p>
 </footer>
 <div
   id="search-wrapper"
-  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm sm:p-6 md:p-[10vh] lg:p-[12vh] dark:bg-neutral-900/50"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
   data-url="https://schadokar.dev/"
 >
   <div

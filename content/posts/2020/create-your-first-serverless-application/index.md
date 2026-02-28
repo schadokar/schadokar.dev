@@ -8,7 +8,6 @@ cover: images/serverless-aws.png #image show on top
 readingTime: true # show reading time after article date
 toc: true
 comments: true
-published: true
 popular: true
 ---
 

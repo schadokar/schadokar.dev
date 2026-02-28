@@ -4,7 +4,7 @@
     <title>To-the-Points on schadokar.dev</title>
     <link>https://schadokar.dev/to-the-point/</link>
     <description>Recent content in To-the-Points on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Thu, 17 Dec 2020 22:58:00 +0530</lastBuildDate>
@@ -14,21 +14,21 @@
       <link>https://schadokar.dev/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</link>
       <pubDate>Thu, 17 Dec 2020 22:58:00 +0530</pubDate>
       <guid>https://schadokar.dev/to-the-point/convert-hexadecimal-to-decimal-and-decimal-to-hexadecimal-in-golang/</guid>
-      <description>Decimal Number System #Decimal number system is the standard system for denoting integers and non-integers numbers.</description>
+      <description></description>
     </item>
     <item>
       <title>Convert Byte to Hex and Hex to Byte in Golang</title>
       <link>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</link>
       <pubDate>Sat, 18 Jul 2020 13:33:52 +0530</pubDate>
       <guid>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
-      <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa.</description>
+      <description></description>
     </item>
     <item>
       <title>How to Read and Write a File in Golang?</title>
       <link>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
       <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
       <guid>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
-      <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.</description>
+      <description></description>
     </item>
   </channel>
 </rss>

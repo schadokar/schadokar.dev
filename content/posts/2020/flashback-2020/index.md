@@ -8,7 +8,6 @@ cover: https://schadokar.dev/images/writing-cover.jpg #image show on top
 readingTime: true # show reading time after article date
 toc: true
 comments: true
-published: true
 ---
 
 Finally, an another year ends with lots of memory and lost days. Unlike many years, this year was an exception.

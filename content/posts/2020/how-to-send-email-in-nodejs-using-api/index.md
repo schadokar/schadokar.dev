@@ -7,7 +7,6 @@ tags: ["tutorial", "email"]
 cover: https://schadokar.dev/images/node-basic.png #image show on top
 readingTime: true # show reading time after article date
 toc: true
-published: true
 ---
 
 This is the 2nd part of the **_How to send email in Nodejs_** series. In the last section, we created the function to send the email using node cli.

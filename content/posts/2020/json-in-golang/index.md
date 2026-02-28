@@ -5,7 +5,6 @@ description: "In this tutorial we'll learn how to use json in golang."
 categories: ["Tutorial", "Golang", "2020"]
 tags: ["golang", "json"]
 cover: https://schadokar.dev/images/golang-basic.png
-published: true
 ---
 
 When you start a project which interacts with the outer world, it requires data exchange.

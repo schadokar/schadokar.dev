@@ -79,7 +79,7 @@ enableCodeCopy = true
   #      e.g. from: <meta name="google-site-verification" content="abc123XYZ">
   #           copy: abc123XYZ
   #   4. Paste it below and uncomment the line
-google = "<meta name="google-site-verification" content="3dSuAe8l4Kidk83Q7KqDQmOOrRxts0hG3QSzbpD8DUE" />"
+google = "3dSuAe8l4Kidk83Q7KqDQmOOrRxts0hG3QSzbpD8DUE"
 
   # BING WEBMASTER TOOLS
   #   1. Visit https://bing.com/webmasters and click "Import" from Google, OR

@@ -4,7 +4,7 @@
     <title>Tutorial on schadokar.dev</title>
     <link>https://schadokar.dev/categories/tutorial/</link>
     <description>Recent content in Tutorial on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Sun, 26 Jul 2020 09:21:13 +0530</lastBuildDate>
@@ -14,49 +14,49 @@
       <link>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</link>
       <pubDate>Sun, 26 Jul 2020 09:21:13 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</guid>
-      <description>This is the 2nd part of the How to send email in Nodejs series.</description>
+      <description></description>
     </item>
     <item>
       <title>How to Send Email in Nodejs</title>
       <link>https://schadokar.dev/posts/how-to-send-email-in-nodejs/</link>
       <pubDate>Sun, 19 Jul 2020 18:16:06 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-send-email-in-nodejs/</guid>
-      <description>This is a series of articles on how to send an email in nodejs.</description>
+      <description></description>
     </item>
     <item>
       <title>Convert Byte to Hex and Hex to Byte in Golang</title>
       <link>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</link>
       <pubDate>Sat, 18 Jul 2020 13:33:52 +0530</pubDate>
       <guid>https://schadokar.dev/to-the-point/convert-byte-to-hex-and-hex-to-byte-in-golang/</guid>
-      <description>In this post of to-the-point series, we will convert a hex string to a byte array and vice-versa.</description>
+      <description></description>
     </item>
     <item>
       <title>How to Send Email in Golang</title>
       <link>https://schadokar.dev/posts/how-to-send-email-in-golang/</link>
       <pubDate>Thu, 11 Jun 2020 11:07:11 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-send-email-in-golang/</guid>
-      <description>This is a series of tutorials: sending email in golang.</description>
+      <description></description>
     </item>
     <item>
       <title>How to Read and Write a File in Golang?</title>
       <link>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</link>
       <pubDate>Tue, 24 Mar 2020 11:13:24 +0530</pubDate>
       <guid>https://schadokar.dev/to-the-point/how-to-read-and-write-a-file-in-golang/</guid>
-      <description>In this tutorial, we will learn how to read and write files in the file system using the io/ioutil package.</description>
+      <description></description>
     </item>
     <item>
       <title>Json in Golang</title>
       <link>https://schadokar.dev/posts/json-in-golang/</link>
       <pubDate>Mon, 23 Mar 2020 11:23:56 +0530</pubDate>
       <guid>https://schadokar.dev/posts/json-in-golang/</guid>
-      <description>When you start a project which interacts with the outer world, it requires data exchange.</description>
+      <description></description>
     </item>
     <item>
       <title>Understand Quicksort the easy way</title>
       <link>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</link>
       <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
       <guid>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</guid>
-      <description>Photo by Iñaki del Olmo on Unsplash</description>
+      <description></description>
     </item>
   </channel>
 </rss>

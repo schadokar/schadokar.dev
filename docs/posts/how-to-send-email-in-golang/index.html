@@ -4,7 +4,6 @@
 
 
 
-
 <!doctype html>
 <html
   lang="en"
@@ -15,7 +14,7 @@
 ><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="rgb(255,255,255)" />
+  <meta name="theme-color" content="#FFFFFF" />
   
   <title>How to Send Email in Golang &middot; schadokar.dev</title>
     <meta name="title" content="How to Send Email in Golang &middot; schadokar.dev" />
@@ -26,8 +25,8 @@
   
   <script
     type="text/javascript"
-    src="/js/appearance.min.022d0ebc3b46a335eb1c7ef79b7f2de143d7cd5156d433638592ef1ce5f8554e.js"
-    integrity="sha256-Ai0OvDtGozXrHH73m38t4UPXzVFW1DNjhZLvHOX4VU4="
+    src="https://schadokar.dev/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
   ></script>
   
   
@@ -42,8 +41,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.a6c6a6e12df5bdd53036d0796e756aaf9db98be8cf037b952a7f69f135dd1735.css"
-    integrity="sha256-psam4S31vdUwNtB5bnVqr525i&#43;jPA3uVKn9p8TXdFzU="
+    href="https://schadokar.dev/css/main.bundle.min.9b30f4828872d41c5ecb4c918bada07702391b4bbc6d8b03bd405e28e6ddebe3.css"
+    integrity="sha256-mzD0gohy1Bxey0yRi62gdwI5G0u8bYsDvUBeKObd6&#43;M="
   />
   
     
@@ -63,8 +62,8 @@
       defer
       type="text/javascript"
       id="script-bundle"
-      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
-      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      src="https://schadokar.dev/js/main.bundle.min.167efd96c29259046e711c52c0db66536f497aad73a774cd6f28fc408f2d2688.js"
+      integrity="sha256-Fn79lsKSWQRucRxSwNtmU29Jeq1zp3TNbyj8QI8tJog="
       data-copy="Copy"
       data-copied="Copied"
     ></script>
@@ -79,7 +78,9 @@
   
   
   
-  <link rel="canonical" href="https://schadokar.dev/posts/how-to-send-email-in-golang/" />
+  
+    <link rel="canonical" href="https://schadokar.dev/posts/how-to-send-email-in-golang/" />
+  
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -89,21 +90,30 @@
   
   
   
+    <meta name="google-site-verification" content="3dSuAe8l4Kidk83Q7KqDQmOOrRxts0hG3QSzbpD8DUE" />
   
   
   
   
   
-  <meta property="og:title" content="How to Send Email in Golang" />
-<meta property="og:description" content="Learn how to easy it is to send an email in golang." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://schadokar.dev/posts/how-to-send-email-in-golang/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-06-11T11:07:11+05:30" />
-<meta property="article:modified_time" content="2020-06-11T11:07:11+05:30" />
+  
+  <meta property="og:url" content="https://schadokar.dev/posts/how-to-send-email-in-golang/">
+  <meta property="og:site_name" content="schadokar.dev">
+  <meta property="og:title" content="How to Send Email in Golang">
+  <meta property="og:description" content="Learn how to easy it is to send an email in golang.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-06-11T11:07:11+05:30">
+    <meta property="article:modified_time" content="2020-06-11T11:07:11+05:30">
+    <meta property="article:tag" content="Golang">
+    <meta property="article:tag" content="Sendemail">
+    <meta property="article:tag" content="Sendinblue">
 
-
-  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="How to Send Email in Golang"/>
-<meta name="twitter:description" content="Learn how to easy it is to send an email in golang."/>
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Send Email in Golang">
+  <meta name="twitter:description" content="Learn how to easy it is to send an email in golang.">
 
   
   <script type="application/ld+json">
@@ -114,7 +124,7 @@
     "name": "How to Send Email in Golang",
     "headline": "How to Send Email in Golang",
     "description": "Learn how to easy it is to send an email in golang.",
-    "abstract": "This is a series of tutorials: sending email in golang.",
+    
     "inLanguage": "en",
     "url" : "https:\/\/schadokar.dev\/posts\/how-to-send-email-in-golang\/",
     "author" : {
@@ -133,10 +143,43 @@
     "wordCount": "1002"
   }
   </script>
-
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://schadokar.dev/",
+       "name": "Schadokar.dev",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://schadokar.dev/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://schadokar.dev/categories/golang/",
+       "name": "Golang",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "How to Send Email in Golang",
+       "position": 4
+     }
+   ]
+ }
+  </script>
 
   
-  <meta name="author" content="Shubham Chadokar" />
+  
+    <meta name="author" content="Shubham Chadokar" />
+  
   
     
       <link href="mailto:hello@schadokar.dev" rel="me" />
@@ -158,22 +201,27 @@
 
 
 
-  
-  
-  
-  
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FQRDVY1Q17"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-FQRDVY1Q17', { 'anonymize_ip': false });
-}
-</script>
 
+  
+  
+  
+  
+  
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQRDVY1Q17"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FQRDVY1Q17');
+        }
+      </script>
 
 
   
@@ -184,7 +232,7 @@ if (!doNotTrack) {
   
 </head>
 <body
-    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral"
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
   >
     <div id="the-top" class="absolute flex self-center">
       <a
@@ -196,7 +244,7 @@ if (!doNotTrack) {
     </div>
     
     
-      <header class="py-6 font-semibold text-neutral-900 print:hidden sm:py-10 dark:text-neutral">
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
   <nav class="flex items-start justify-between sm:items-center">
     
     <div class="flex flex-row items-center">
@@ -219,7 +267,8 @@ if (!doNotTrack) {
               
                 <a
                   href="/posts/"
-                  title=""
+                  title="Posts"
+                  
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -235,7 +284,8 @@ if (!doNotTrack) {
               
                 <a
                   href="/to-the-point/"
-                  title=""
+                  title="To-the-Points"
+                  
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -252,6 +302,7 @@ if (!doNotTrack) {
                 <a
                   href="https://schadokar.github.io/archive/"
                   title=""
+                  
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -287,11 +338,11 @@ if (!doNotTrack) {
   <article>
     <header class="max-w-prose">
       
-      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         How to Send Email in Golang
       </h1>
       
-        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
           
 
 
@@ -342,14 +393,14 @@ if (!doNotTrack) {
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
         <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
-          <div class="toc pe-5 print:hidden lg:sticky lg:top-10">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
             <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
   <summary
-    class="-ms-5 block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 lg:hidden dark:bg-neutral-700 dark:text-neutral-100"
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
   >
     Table of Contents
   </summary>
-  <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#pre-requisites">Pre-requisites</a></li>
@@ -387,19 +438,17 @@ We&rsquo;ll first start with the basic sending an email using the <code>go</code
 <h1 id="pre-requisites" class="relative group">Pre-requisites <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pre-requisites" aria-label="Anchor">#</a></span></h1><ol>
 <li>go v1.11 or greater - I am using go1.14.3</li>
 <li>Code Editor (VSCode, Atom) - I am using VS Code</li>
-<li>Brevo (formerly Sendinblue) account - 
-<a href="https://www.brevo.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc" target="_blank" rel="noreferrer">link</a></li>
+<li>Brevo (formerly Sendinblue) account - <a href="https://www.brevo.com/?tap_a=30591-fb13f0&amp;tap_s=956728-d372bc" target="_blank" rel="noreferrer">link</a></li>
 </ol>
 <h1 id="getting-started" class="relative group">Getting Started <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#getting-started" aria-label="Anchor">#</a></span></h1><p>Create a new directory <code>go-sendinblue</code>.</p>
 <p>Open the terminal inside the directory and run the below command.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">go</span> mod init <span style="color:#ff7b72">go</span><span style="color:#ff7b72;font-weight:bold">-</span>sendinblue
-</span></span></code></pre></div><p>This command will initiate a module <code>go.mod</code>.<br>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">go</span><span style="color:#6e7681"> </span>mod<span style="color:#6e7681"> </span>init<span style="color:#6e7681"> </span><span style="color:#ff7b72">go</span><span style="color:#ff7b72;font-weight:bold">-</span>sendinblue<span style="color:#6e7681">
+</span></span></span></code></pre></div><p>This command will initiate a module <code>go.mod</code>.<br>
 A module is a collection of dependency modules used in the project. This will list all the dependencies with their version in the <code>go.mod</code> file.</p>
 <h2 id="add-the-dependency" class="relative group">Add the Dependency <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#add-the-dependency" aria-label="Anchor">#</a></span></h2><p>In this project, we are going to use the environment variables from the <code>.env</code> file. To access the <code>.env</code> file and use it we have to add a dependency <code>godotenv</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">go</span> get github.com<span style="color:#ff7b72;font-weight:bold">/</span>joho<span style="color:#ff7b72;font-weight:bold">/</span>godotenv
-</span></span></code></pre></div><p>This package is simple and clean.<br>
-Learn more about 
-<a href="https://medium.com/towards-data-science/use-environment-variable-in-your-next-golang-project-39e17c3aaa66" target="_blank" rel="noreferrer">how to use environment variables in the golang</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">go</span><span style="color:#6e7681"> </span>get<span style="color:#6e7681"> </span>github.com<span style="color:#ff7b72;font-weight:bold">/</span>joho<span style="color:#ff7b72;font-weight:bold">/</span>godotenv<span style="color:#6e7681">
+</span></span></span></code></pre></div><p>This package is simple and clean.<br>
+Learn more about <a href="https://medium.com/towards-data-science/use-environment-variable-in-your-next-golang-project-39e17c3aaa66" target="_blank" rel="noreferrer">how to use environment variables in the golang</a>.</p>
 <h2 id="create-a-new-smtp-key" class="relative group">Create a new SMTP Key <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#create-a-new-smtp-key" aria-label="Anchor">#</a></span></h2><p>Sign in to your Brevo (formerly Sendinblue) account and click on SMTP &amp; API from the top-right menu.</p>
 <p>Go to <strong>SMTP</strong> tab and click on <em>CREATE A NEW SMTP KEY</em>.<br>
 Copy the key and paste it somewhere safe.</p>
@@ -408,7 +457,7 @@ Copy the key and paste it somewhere safe.</p>
 </blockquote>
 <h2 id="environment-variable" class="relative group">Environment Variable <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#environment-variable" aria-label="Anchor">#</a></span></h2><p>Create a new <code>.env</code> file inside the <code>go-sendinblue</code> project.<br>
 Open the file and enter the following keys and values.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>PASSWORD<span style="color:#ff7b72;font-weight:bold">=</span>Enter your Sendinblue SMTP Key
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>PASSWORD<span style="color:#ff7b72;font-weight:bold">=</span>Enter your Sendinblue SMTP Key
 </span></span><span style="display:flex;"><span>SMTP_HOST<span style="color:#ff7b72;font-weight:bold">=</span>smtp<span style="color:#ff7b72;font-weight:bold">-</span>relay.sendinblue.com
 </span></span><span style="display:flex;"><span>SMTP_PORT<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">587</span>
 </span></span></code></pre></div><p>Verify the <code>SMTP_HOST</code> and <code>SMTP_PORT</code> from the <strong>SMTP &amp; API</strong> section of your account.</p>
@@ -421,71 +470,71 @@ We are going to use <code>smtp</code> package provided by golang.</p>
 <blockquote>
 <p>Package smtp implements the Simple Mail Transfer Protocol as defined in RFC 5321.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">package</span> main
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;log&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;net/smtp&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;os&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Import godotenv
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#a5d6ff">&#34;github.com/joho/godotenv&#34;</span>
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// From address
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    from <span style="color:#ff7b72;font-weight:bold">:=</span> <span style="color:#a5d6ff">&#34;hello@schadokar.dev&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Array of recipients address
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    to <span style="color:#ff7b72;font-weight:bold">:=</span> []<span style="color:#ff7b72">string</span>{<span style="color:#a5d6ff">&#34;shubham@schadokar.dev&#34;</span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Create a message and convert it into bytes
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    msg <span style="color:#ff7b72;font-weight:bold">:=</span> []byte(<span style="color:#a5d6ff">&#34;To: shubham@schadokar.dev\r\n&#34;</span> <span style="color:#ff7b72;font-weight:bold">+</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;From: hello@schadokar.dev\r\n&#34;</span> <span style="color:#ff7b72;font-weight:bold">+</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;Subject: Hello Gophers!\r\n&#34;</span> <span style="color:#ff7b72;font-weight:bold">+</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;\r\n&#34;</span> <span style="color:#ff7b72;font-weight:bold">+</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;This is the email is sent using golang and Brevo (formerly Sendinblue).\r\n&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Call the sendEmail function
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    status <span style="color:#ff7b72;font-weight:bold">:=</span> <span style="color:#d2a8ff;font-weight:bold">sendEmail</span>(from, to, msg)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// check if email sent successfully or not
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#ff7b72">if</span> status {
-</span></span><span style="display:flex;"><span>        fmt.<span style="color:#d2a8ff;font-weight:bold">Printf</span>(<span style="color:#a5d6ff">&#34;Email sent successfully.&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#ff7b72">else</span> {
-</span></span><span style="display:flex;"><span>        fmt.<span style="color:#d2a8ff;font-weight:bold">Printf</span>(<span style="color:#a5d6ff">&#34;Email sent failed.&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// send mail function
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">sendEmail</span>(from <span style="color:#ff7b72">string</span>, to []<span style="color:#ff7b72">string</span>, msg []<span style="color:#ff7b72">byte</span>) <span style="color:#ff7b72">bool</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Load .env file to use the environment variable
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    err <span style="color:#ff7b72;font-weight:bold">:=</span> godotenv.<span style="color:#d2a8ff;font-weight:bold">Load</span>(<span style="color:#a5d6ff">&#34;.env&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> err <span style="color:#ff7b72;font-weight:bold">!=</span> <span style="color:#79c0ff">nil</span> {
-</span></span><span style="display:flex;"><span>        log.<span style="color:#d2a8ff;font-weight:bold">Fatalf</span>(<span style="color:#a5d6ff">&#34;Error loading .env file&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Set up authentication information.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    auth <span style="color:#ff7b72;font-weight:bold">:=</span> smtp.<span style="color:#d2a8ff;font-weight:bold">PlainAuth</span>(<span style="color:#a5d6ff">&#34;&#34;</span>, from, os.<span style="color:#d2a8ff;font-weight:bold">Getenv</span>(<span style="color:#a5d6ff">&#34;PASSWORD&#34;</span>), os.<span style="color:#d2a8ff;font-weight:bold">Getenv</span>(<span style="color:#a5d6ff">&#34;SMTP_HOST&#34;</span>))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// format smtp address
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    smtpAddress <span style="color:#ff7b72;font-weight:bold">:=</span> fmt.<span style="color:#d2a8ff;font-weight:bold">Sprintf</span>(<span style="color:#a5d6ff">&#34;%s:%v&#34;</span>, os.<span style="color:#d2a8ff;font-weight:bold">Getenv</span>(<span style="color:#a5d6ff">&#34;SMTP_HOST&#34;</span>), os.<span style="color:#d2a8ff;font-weight:bold">Getenv</span>(<span style="color:#a5d6ff">&#34;SMTP_PORT&#34;</span>))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Connect to the server, authenticate, set the sender and recipient,
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#8b949e;font-style:italic">// and send the email all in one step.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    err = smtp.<span style="color:#d2a8ff;font-weight:bold">SendMail</span>(smtpAddress, auth, from, to, msg)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> err <span style="color:#ff7b72;font-weight:bold">!=</span> <span style="color:#79c0ff">nil</span> {
-</span></span><span style="display:flex;"><span>        log.<span style="color:#d2a8ff;font-weight:bold">Fatal</span>(err)
-</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">false</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// return true on success
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">true</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Let&rsquo;s understand the code piece by piece.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">package</span><span style="color:#6e7681"> </span>main<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span><span style="color:#6e7681"> </span>(<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#a5d6ff">&#34;fmt&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#a5d6ff">&#34;log&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#a5d6ff">&#34;net/smtp&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#a5d6ff">&#34;os&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// Import godotenv</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#a5d6ff">&#34;github.com/joho/godotenv&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span>)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">func</span><span style="color:#6e7681"> </span><span style="color:#d2a8ff;font-weight:bold">main</span>()<span style="color:#6e7681"> </span>{<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// From address</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>from<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">:=</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#34;hello@schadokar.dev&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// Array of recipients address</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>to<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">:=</span><span style="color:#6e7681"> </span>[]<span style="color:#ff7b72">string</span>{<span style="color:#a5d6ff">&#34;shubham@schadokar.dev&#34;</span>}<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// Create a message and convert it into bytes</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>msg<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">:=</span><span style="color:#6e7681"> </span>[]byte(<span style="color:#a5d6ff">&#34;To: shubham@schadokar.dev\r\n&#34;</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">+</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#a5d6ff">&#34;From: hello@schadokar.dev\r\n&#34;</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">+</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#a5d6ff">&#34;Subject: Hello Gophers!\r\n&#34;</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">+</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#a5d6ff">&#34;\r\n&#34;</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">+</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#a5d6ff">&#34;This is the email is sent using golang and Brevo (formerly Sendinblue).\r\n&#34;</span>)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// Call the sendEmail function</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>status<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">:=</span><span style="color:#6e7681"> </span><span style="color:#d2a8ff;font-weight:bold">sendEmail</span>(from,<span style="color:#6e7681"> </span>to,<span style="color:#6e7681"> </span>msg)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// check if email sent successfully or not</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#ff7b72">if</span><span style="color:#6e7681"> </span>status<span style="color:#6e7681"> </span>{<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span>fmt.<span style="color:#d2a8ff;font-weight:bold">Printf</span>(<span style="color:#a5d6ff">&#34;Email sent successfully.&#34;</span>)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>}<span style="color:#6e7681"> </span><span style="color:#ff7b72">else</span><span style="color:#6e7681"> </span>{<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span>fmt.<span style="color:#d2a8ff;font-weight:bold">Printf</span>(<span style="color:#a5d6ff">&#34;Email sent failed.&#34;</span>)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>}<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span>}<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// send mail function</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">func</span><span style="color:#6e7681"> </span><span style="color:#d2a8ff;font-weight:bold">sendEmail</span>(from<span style="color:#6e7681"> </span><span style="color:#ff7b72">string</span>,<span style="color:#6e7681"> </span>to<span style="color:#6e7681"> </span>[]<span style="color:#ff7b72">string</span>,<span style="color:#6e7681"> </span>msg<span style="color:#6e7681"> </span>[]<span style="color:#ff7b72">byte</span>)<span style="color:#6e7681"> </span><span style="color:#ff7b72">bool</span><span style="color:#6e7681"> </span>{<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// Load .env file to use the environment variable</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>err<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">:=</span><span style="color:#6e7681"> </span>godotenv.<span style="color:#d2a8ff;font-weight:bold">Load</span>(<span style="color:#a5d6ff">&#34;.env&#34;</span>)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#ff7b72">if</span><span style="color:#6e7681"> </span>err<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">!=</span><span style="color:#6e7681"> </span><span style="color:#79c0ff">nil</span><span style="color:#6e7681"> </span>{<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span>log.<span style="color:#d2a8ff;font-weight:bold">Fatalf</span>(<span style="color:#a5d6ff">&#34;Error loading .env file&#34;</span>)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>}<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// Set up authentication information.</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>auth<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">:=</span><span style="color:#6e7681"> </span>smtp.<span style="color:#d2a8ff;font-weight:bold">PlainAuth</span>(<span style="color:#a5d6ff">&#34;&#34;</span>,<span style="color:#6e7681"> </span>from,<span style="color:#6e7681"> </span>os.<span style="color:#d2a8ff;font-weight:bold">Getenv</span>(<span style="color:#a5d6ff">&#34;PASSWORD&#34;</span>),<span style="color:#6e7681"> </span>os.<span style="color:#d2a8ff;font-weight:bold">Getenv</span>(<span style="color:#a5d6ff">&#34;SMTP_HOST&#34;</span>))<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// format smtp address</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>smtpAddress<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">:=</span><span style="color:#6e7681"> </span>fmt.<span style="color:#d2a8ff;font-weight:bold">Sprintf</span>(<span style="color:#a5d6ff">&#34;%s:%v&#34;</span>,<span style="color:#6e7681"> </span>os.<span style="color:#d2a8ff;font-weight:bold">Getenv</span>(<span style="color:#a5d6ff">&#34;SMTP_HOST&#34;</span>),<span style="color:#6e7681"> </span>os.<span style="color:#d2a8ff;font-weight:bold">Getenv</span>(<span style="color:#a5d6ff">&#34;SMTP_PORT&#34;</span>))<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// Connect to the server, authenticate, set the sender and recipient,</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// and send the email all in one step.</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>err<span style="color:#6e7681"> </span>=<span style="color:#6e7681"> </span>smtp.<span style="color:#d2a8ff;font-weight:bold">SendMail</span>(smtpAddress,<span style="color:#6e7681"> </span>auth,<span style="color:#6e7681"> </span>from,<span style="color:#6e7681"> </span>to,<span style="color:#6e7681"> </span>msg)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#ff7b72">if</span><span style="color:#6e7681"> </span>err<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">!=</span><span style="color:#6e7681"> </span><span style="color:#79c0ff">nil</span><span style="color:#6e7681"> </span>{<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span>log.<span style="color:#d2a8ff;font-weight:bold">Fatal</span>(err)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#ff7b72">return</span><span style="color:#6e7681"> </span><span style="color:#79c0ff">false</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>}<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">// return true on success</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#ff7b72">return</span><span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span>}<span style="color:#6e7681">
+</span></span></span></code></pre></div><p>Let&rsquo;s understand the code piece by piece.</p>
 <p>In the <code>main</code> function we&rsquo;re first declaring the <strong>from</strong>, <strong>to</strong>, and <strong>msg</strong>.<br>
 <strong>from</strong> is the address from which you created the Brevo (formerly Sendinblue).
 <strong>to</strong> is an array of string.<br>
@@ -496,11 +545,10 @@ We are going to use <code>smtp</code> package provided by golang.</p>
 <p>In the <code>sendEmail</code> function, it is taking <strong>from</strong>, <strong>to</strong>, and <strong>msg</strong> as arguments and returning a <code>bool</code> status.</p>
 <p>In the import, we have imported the <code>github.com/joho/godotenv</code> package to load the <code>.env</code> file. To load the <code>.env</code> file, use <code>Load</code> method of <code>godoenv</code>.
 From the <code>.env</code> file, we will load <strong>PASSWORD</strong>, <strong>SMTP_HOST</strong> and <strong>SMTP_PORT</strong>.</p>
-<p>The <code>smtp</code> package has 2 methods to authenticate the mail server. 
-<a href="https://golang.org/pkg/net/smtp/#Auth" target="_blank" rel="noreferrer">Read more</a><br>
+<p>The <code>smtp</code> package has 2 methods to authenticate the mail server. <a href="https://golang.org/pkg/net/smtp/#Auth" target="_blank" rel="noreferrer">Read more</a><br>
 We&rsquo;re going to use the <code>PlainAuth</code> method.</p>
-<h4 id="syntax" class="relative group">Syntax <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#syntax" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">PlainAuth</span>(identity, username, password, host <span style="color:#ff7b72">string</span>) Auth
-</span></span></code></pre></div><blockquote>
+<h4 id="syntax" class="relative group">Syntax <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#syntax" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">func</span><span style="color:#6e7681"> </span><span style="color:#d2a8ff;font-weight:bold">PlainAuth</span>(identity,<span style="color:#6e7681"> </span>username,<span style="color:#6e7681"> </span>password,<span style="color:#6e7681"> </span>host<span style="color:#6e7681"> </span><span style="color:#ff7b72">string</span>)<span style="color:#6e7681"> </span>Auth<span style="color:#6e7681">
+</span></span></span></code></pre></div><blockquote>
 <p>PlainAuth returns an Auth that implements the PLAIN authentication mechanism as defined in RFC 4616. The returned Auth uses the given username and password to authenticate to host and act as identity. Usually, identity should be the empty string, to act as username.</p>
 </blockquote>
 <blockquote>
@@ -508,12 +556,12 @@ We&rsquo;re going to use the <code>PlainAuth</code> method.</p>
 </blockquote>
 <p>Now, as the <code>.env</code> is loaded by the <code>godotenv</code> package. We can use <code>os</code> package to read the environment variables.</p>
 <p>Format an SMTP Address.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#f85149">smtp-relay.sendinblue.com:</span><span style="color:#a5d6ff">587</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#f85149">smtp-relay.sendinblue.com:</span><span style="color:#a5d6ff">587</span>
 </span></span></code></pre></div><p>Use <code>os</code> package to read <strong>PASSWORD</strong>, <strong>SMTP_HOST</strong> and <strong>SMTP_PORT</strong>.</p>
 <p>Using the <code>SendMail</code> method of <code>smtp</code> package, it can connect to the server, authenticate and send the email the message to all the recipients by the sender.</p>
 <h2 id="send-the-email" class="relative group">Send the email <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#send-the-email" aria-label="Anchor">#</a></span></h2><p>Open the project in the terminal and run the below command.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">go</span> run main.<span style="color:#ff7b72">go</span>
-</span></span></code></pre></div><p>Check your mailbox. You have received a mail. If you could not find the mail check in the promotion.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">go</span><span style="color:#6e7681"> </span>run<span style="color:#6e7681"> </span>main.<span style="color:#ff7b72">go</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p>Check your mailbox. You have received a mail. If you could not find the mail check in the promotion.</p>
 <p>
 
 
@@ -531,8 +579,7 @@ We&rsquo;re going to use the <code>PlainAuth</code> method.</p>
 Open the Brevo (formerly Sendinblue) account and click on the <strong>Transactional</strong> tab.</p>
 <p>In this tab, you can check the status of the mail.
 The common reason can be an incorrect mail address. For this it raise a <strong>Hard bounce</strong> event.</p>
-<h1 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h1><p>Hope, you find this tutorial helpful. The complete code is available on my 
-<a href="https://github.com/schadokar/go-sendmail" target="_blank" rel="noreferrer">GitHub</a> repository.</p>
+<h1 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h1><p>Hope, you find this tutorial helpful. The complete code is available on my <a href="https://github.com/schadokar/go-sendmail" target="_blank" rel="noreferrer">GitHub</a> repository.</p>
 <p>In the upcoming tutorials, we are going to create API and a frontend.</p>
 <hr>
 
@@ -729,7 +776,7 @@ The common reason can be an incorrect mail address. For this it raise a <strong>
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/posts/json-in-golang/">
+            <a class="group flex" href="https://schadokar.dev/posts/json-in-golang/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -751,7 +798,7 @@ The common reason can be an incorrect mail address. For this it raise a <strong>
         </span>
         <span>
           
-            <a class="group flex text-right" href="/posts/how-to-send-email-in-nodejs/">
+            <a class="group flex text-right" href="https://schadokar.dev/posts/how-to-send-email-in-nodejs/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -764,7 +811,7 @@ The common reason can be an incorrect mail address. For this it raise a <strong>
                 </span>
               </span>
               <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&rarr;</span
                 ><span class="ltr:hidden rtl:inline">&larr;</span></span
               >
@@ -780,19 +827,23 @@ The common reason can be an incorrect mail address. For this it raise a <strong>
     </footer>
   </article>
 
-        
-          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
-            <a
-              href="#the-top"
-              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-              aria-label="Scroll to top"
-              title="Scroll to top"
-            >
-              &uarr;
-            </a>
-          </div>
-        
-      </main><footer class="py-10 print:hidden">
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
   
   
   <div class="flex items-center justify-between">
@@ -846,7 +897,7 @@ The common reason can be an incorrect mail address. For this it raise a <strong>
 </footer>
 <div
   id="search-wrapper"
-  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm sm:p-6 md:p-[10vh] lg:p-[12vh] dark:bg-neutral-900/50"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
   data-url="https://schadokar.dev/"
 >
   <div

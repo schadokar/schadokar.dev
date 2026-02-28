@@ -4,7 +4,7 @@
     <title>Posts on schadokar.dev</title>
     <link>https://schadokar.dev/posts/</link>
     <description>Recent content in Posts on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Thu, 15 Apr 2021 16:01:12 +0530</lastBuildDate>
@@ -14,77 +14,77 @@
       <link>https://schadokar.dev/posts/how-to-run-javascript-code/</link>
       <pubDate>Thu, 15 Apr 2021 16:01:12 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-run-javascript-code/</guid>
-      <description>In this post, I will try to document the different ways to run the javascript code.</description>
+      <description></description>
     </item>
     <item>
       <title>Flashback 2020</title>
       <link>https://schadokar.dev/posts/flashback-2020/</link>
       <pubDate>Fri, 01 Jan 2021 12:41:41 +0530</pubDate>
       <guid>https://schadokar.dev/posts/flashback-2020/</guid>
-      <description>Finally, an another year ends with lots of memory and lost days.</description>
+      <description></description>
     </item>
     <item>
       <title>Basic validations every nodejs developer should know</title>
       <link>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</link>
       <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
       <guid>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</guid>
-      <description>Validations are the key things to prevent the application&amp;rsquo;s unexpected behaviour.</description>
+      <description></description>
     </item>
     <item>
       <title>Create a Serverless Application in Golang With AWS</title>
       <link>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</link>
       <pubDate>Mon, 10 Aug 2020 23:19:26 +0530</pubDate>
       <guid>https://schadokar.dev/posts/create-a-serverless-application-in-golang-with-aws/</guid>
-      <description>In this tutorial, we are going to create a golang serverless application and deploy it to the AWS cloud.</description>
+      <description></description>
     </item>
     <item>
       <title>Create your first Serverless application</title>
       <link>https://schadokar.dev/posts/create-your-first-serverless-application/</link>
       <pubDate>Sun, 09 Aug 2020 16:04:50 +0530</pubDate>
       <guid>https://schadokar.dev/posts/create-your-first-serverless-application/</guid>
-      <description>Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and dynamically manages the allocation of machine resources.</description>
+      <description></description>
     </item>
     <item>
       <title>Secure Your Api Using Jwt in Golang</title>
       <link>https://schadokar.dev/posts/secure-your-api-using-jwt-in-golang/</link>
       <pubDate>Thu, 30 Jul 2020 11:17:11 +0530</pubDate>
       <guid>https://schadokar.dev/posts/secure-your-api-using-jwt-in-golang/</guid>
-      <description>In this tutorial, we will learn how to secure the APIs using the JWT authentication in Golang.</description>
+      <description></description>
     </item>
     <item>
       <title>How to Send Email in Nodejs with Expressjs</title>
       <link>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</link>
       <pubDate>Sun, 26 Jul 2020 09:21:13 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-send-email-in-nodejs-with-expressjs/</guid>
-      <description>This is the 2nd part of the How to send email in Nodejs series.</description>
+      <description></description>
     </item>
     <item>
       <title>How to Send Email in Nodejs</title>
       <link>https://schadokar.dev/posts/how-to-send-email-in-nodejs/</link>
       <pubDate>Sun, 19 Jul 2020 18:16:06 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-send-email-in-nodejs/</guid>
-      <description>This is a series of articles on how to send an email in nodejs.</description>
+      <description></description>
     </item>
     <item>
       <title>How to Send Email in Golang</title>
       <link>https://schadokar.dev/posts/how-to-send-email-in-golang/</link>
       <pubDate>Thu, 11 Jun 2020 11:07:11 +0530</pubDate>
       <guid>https://schadokar.dev/posts/how-to-send-email-in-golang/</guid>
-      <description>This is a series of tutorials: sending email in golang.</description>
+      <description></description>
     </item>
     <item>
       <title>Json in Golang</title>
       <link>https://schadokar.dev/posts/json-in-golang/</link>
       <pubDate>Mon, 23 Mar 2020 11:23:56 +0530</pubDate>
       <guid>https://schadokar.dev/posts/json-in-golang/</guid>
-      <description>When you start a project which interacts with the outer world, it requires data exchange.</description>
+      <description></description>
     </item>
     <item>
       <title>Understand Quicksort the easy way</title>
       <link>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</link>
       <pubDate>Thu, 13 Feb 2020 23:25:31 +0530</pubDate>
       <guid>https://schadokar.dev/posts/understand-quicksort-the-easy-way/</guid>
-      <description>Photo by Iñaki del Olmo on Unsplash</description>
+      <description></description>
     </item>
   </channel>
 </rss>

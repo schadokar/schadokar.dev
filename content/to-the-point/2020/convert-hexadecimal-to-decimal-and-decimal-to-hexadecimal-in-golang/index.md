@@ -8,7 +8,6 @@ cover: https://schadokar.dev/images/golang-basic.png #image show on top
 readingTime: true # show reading time after article date
 toc: true
 comments: true
-published: true
 ---
 
 ## Decimal Number System

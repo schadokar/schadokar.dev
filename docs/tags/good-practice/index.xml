@@ -4,7 +4,7 @@
     <title>Good-Practice on schadokar.dev</title>
     <link>https://schadokar.dev/tags/good-practice/</link>
     <description>Recent content in Good-Practice on schadokar.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://schadokar.dev&#34;&gt;Shubham Chadokar&lt;/a&gt; 2025</copyright>
     <lastBuildDate>Sun, 06 Sep 2020 11:51:52 +0530</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</link>
       <pubDate>Sun, 06 Sep 2020 11:51:52 +0530</pubDate>
       <guid>https://schadokar.dev/posts/basic-validations-every-nodejs-developer-should-know/</guid>
-      <description>Validations are the key things to prevent the application&amp;rsquo;s unexpected behaviour.</description>
+      <description></description>
     </item>
   </channel>
 </rss>

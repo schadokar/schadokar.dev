@@ -6,7 +6,6 @@ categories: ["Golang", "Serverless", "2020"]
 tags: ["golang", "cloud"]
 cover: images/go-serverless-aws.png #image show on top
 readingTime: true # show reading time after article date
-published: true
 popular: true
 ---
 

@@ -6,7 +6,6 @@ categories: ["Golang", "2020"]
 tags: ["golang", "jwt"]
 cover: https://schadokar.dev/images/golang-basic.png #image show on top
 readingTime: true # show reading time after article date
-published: true
 popular: true
 ---
 

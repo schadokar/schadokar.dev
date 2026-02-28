@@ -7,7 +7,6 @@ tags: ["golang", "to-the-point", "conversion"]
 cover: https://schadokar.dev/images/golang-basic.png #image show on top
 readingTime: true # show reading time after article date
 comments: true
-published: true
 ---
 
 In this post of **_to-the-point_** series, we will convert a hex string to a byte array and vice-versa. For this, we're going to use the `encoding/hex` package provided by the golang. Package `hex` implements hexadecimal encoding and decoding.

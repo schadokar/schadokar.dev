@@ -8,7 +8,6 @@ cover: https://schadokar.dev/images/sendinblue/go-sendinblue-cover.png #image sh
 readingTime: true # show reading time after article date
 toc: true
 comments: true
-published: true
 ---
 
 This is a series of tutorials: sending email in golang.
