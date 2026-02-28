@@ -70,8 +70,26 @@ enableCodeCopy = true
   # domain = "llama.yoursite.com"
 
 [verification]
-  # google = ""
-  # bing = ""
+  # ── Phase 1: Foundation & Discovery ─────────────────────────────────────────
+  #
+  # GOOGLE SEARCH CONSOLE
+  #   1. Visit https://search.google.com/search-console and add your property
+  #   2. Choose "HTML tag" as the verification method
+  #   3. Copy ONLY the value of the `content` attribute from the meta tag
+  #      e.g. from: <meta name="google-site-verification" content="abc123XYZ">
+  #           copy: abc123XYZ
+  #   4. Paste it below and uncomment the line
+  # google = "paste-your-google-verification-code-here"
+
+  # BING WEBMASTER TOOLS
+  #   1. Visit https://bing.com/webmasters and click "Import" from Google, OR
+  #      add your site manually and choose "Meta Tag" verification
+  #   2. Copy the value of the `content` attribute
+  #   3. Paste it below and uncomment the line
+  #   TIP: After verifying, navigate to Configure My Site → IndexNow
+  #        and save the generated API key for Phase 6.
+  # bing = "paste-your-bing-verification-code-here"
+
   # pinterest = ""
   # yandex = ""
 
