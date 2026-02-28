@@ -24,7 +24,7 @@ googleAnalytics = "G-FQRDVY1Q17"
 [permalinks]
   #enable = false
   posts = "/posts/:title/"
-  to-the-point = "/to-the-point/:title/"
+  notes = "/notes/:title/"
 
 [params.author]
   name = "Shubham Chadokar"
