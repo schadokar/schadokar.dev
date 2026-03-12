@@ -88,7 +88,7 @@ google = "3dSuAe8l4Kidk83Q7KqDQmOOrRxts0hG3QSzbpD8DUE"
   #   3. Paste it below and uncomment the line
   #   TIP: After verifying, navigate to Configure My Site → IndexNow
   #        and save the generated API key for Phase 6.
-  # bing = "paste-your-bing-verification-code-here"
+  bing = "5BB13B184FEDD21A7A46D58073BFC7CD"
 
   # pinterest = ""
   # yandex = ""
