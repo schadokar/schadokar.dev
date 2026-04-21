@@ -44,7 +44,7 @@ Favourites: Meluha and The Kite Runner.
 
 ## eBook
 
-**[Playtime with Hyperledger Composer](https://schadokar.dev/pdfs/playtime-with-hyperledger-composer.pdf)** — A guide to building a supply chain management application on the Hyperledger Composer blockchain platform.
+**[Playtime with Hyperledger Composer](https://schadokar.github.io/playtime-with-hyperledger-composer/)** — A guide to building a supply chain management application on the Hyperledger Composer blockchain platform.
 
 ## Archive
 
